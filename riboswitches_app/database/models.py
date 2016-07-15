@@ -2,14 +2,14 @@ from django.db import models
 
 
 class Record(models.Model):
-	family = models.ForeignKey('RiboFamily')
-	gene = models.OneToOneField('Gene')
-	structure = models.ForeignKey('Structure')
-	organism = models.ForeignKey('Organism')
-	ligand = models.OneToOneField('Ligand')
-	terminator = models.OneToOneField('Terminator')
-	promoter = models.OneToOneField('Promoter')
-	article = models.ManyToManyField('Article')
+	family = models.ForeignKey('RiboFamily', null=True)
+	gene = models.OneToOneField('Gene', null=True)
+	structure = models.ForeignKey('Structure', null=True)
+	organism = models.ForeignKey('Organism', null=True)
+	ligand = models.OneToOneField('Ligand', null=True)
+	terminator = models.OneToOneField('Terminator', null=True)
+	promoter = models.OneToOneField('Promoter', null=True)
+	article = models.ManyToManyField('Article', null=True)
 	name = models.CharField('nazwa', max_length=20)
 	sequence = models.TextField('sekwencja')
 	start_pos = models.IntegerField()
@@ -66,7 +66,7 @@ class RiboClass(models.Model):
 
 
 class Gene(models.Model):
-	organism = models.ManyToManyField('Organism')
+	organism = models.ManyToManyField('Organism', null=True)
 	accession_number = models.CharField('numer_dostepu', max_length=15, primary_key=True)
 	name = models.CharField('nazwa', max_length=20)
 	start_pos = models.IntegerField()
@@ -87,7 +87,7 @@ class Ligand_class(models.Model):
 
 
 class Ligand(models.Model):
-	ligand_class = models.ForeignKey('Ligand_class')
+	ligand_class = models.ForeignKey('Ligand_class', null=True)
 	name = models.CharField('nazwa', max_length=20)
 	#OBRAZEK - DOPYTAC ?
 	description = models.TextField('opis')
