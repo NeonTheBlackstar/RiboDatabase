@@ -1,7 +1,8 @@
 from database.models import RiboFamily, RiboClass
+from django.conf import settings
 
+settings.configure()
 
-'''
 for i in RiboClass.objects.all():
 	i.delete()
 
@@ -18,7 +19,7 @@ c = RiboClass(name = 'NazwaC2', description = 'OpisC2', alignment = 'AlajC2')
 c.save()
 f = RiboFamily(ribo_class = c, name = 'NazwaF2', description = 'OpisF2', alignment = 'AlajF2')
 f.save()
-'''
+
 
 
 print(RiboFamily.objects.all())
