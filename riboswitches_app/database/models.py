@@ -19,18 +19,19 @@ class Record(models.Model):
 	terminator = models.OneToOneField('Terminator', null = True)
 	promoter = models.OneToOneField('Promoter', null = True)
 	article = models.ManyToManyField('Article')
+
 	name = models.CharField('nazwa', max_length = 20, default = 'UNKNOWN')
 	sequence = models.TextField('sekwencja', default = 'NONE')
 	start_pos = models.IntegerField(default = 0)
 	end_pos = models.IntegerField(default = 0)
-	genes_under_operon_regulation = models.CharField('geny_pod_regulacja_operonu', max_length = 30, default = 'NONE')
+	genes_under_operon_regulation = models.CharField('geny_pod_regulacja_operonu', max_length = 3000, default = 'NONE')
 	_3D_structure = models.TextField('struktura 3D', default = 'NONE')
 	EFFECT_CHOICES = ( 
 		(1, 'ACTIVATION'),
 		(0, 'UNKNOWN'),
 		(-1, 'SILECING'),
 	)
-	effect = models.IntegerField(choices = EFFECT_CHOICES)
+	effect = models.IntegerField(choices = EFFECT_CHOICES, default = 0)
 	MECHANISM_CHOICES = (
 		('TRN', 'TRANSCRIPTION'),
 		('TRL', 'TRANSLATION'),
@@ -53,7 +54,7 @@ class Structure(models.Model):
 
 
 class Article(models.Model):
-	pmid = models.IntegerField(default = 0)
+	pmid = models.IntegerField(default = 0, primary_key = True)
 
 
 class RiboFamily(models.Model):
