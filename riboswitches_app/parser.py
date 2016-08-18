@@ -16,5 +16,5 @@ l[4][7] is an effect which has eight switch in csv file
 '''
 def csvParser(fileName):
 	spamReader = csv.reader(open(fileName, newline = ''), delimiter = '\t') #construction for Python3
-	return [list(row) for row in spamReader]
-	#l = l[1:] - if you want to delete first list which contains names of the colums
+	return [list(row) for row in spamReader] # [1:] - if you want to delete first list which contains names of the colums
+	#l = l[1:] - 

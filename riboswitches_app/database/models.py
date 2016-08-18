@@ -1,11 +1,11 @@
 from django.db import models
 
 '''
-
 This are Django models which we use to create our database. Each database table is a class.
 ForeignKey, OneToOneField and ManyToManyField refer connections in database.
 We use default values temporary - they help us to fill database with sample values.
 __str__ functions also will be deleted - they are only for our convenience :)
+
 
 '''
 
@@ -59,7 +59,7 @@ class Article(models.Model):
 
 class RiboFamily(models.Model):
 	ribo_class = models.ForeignKey('RiboClass', null = True)
-	name = models.CharField('nazwa', max_length = 10, default = 'NONE')
+	name = models.CharField('nazwa', max_length = 10, primary_key = True, default = None) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
 	description = models.TextField('opis', default = 'NONE')
 	alignment = models.TextField(default = 'NONE')
 
@@ -68,7 +68,7 @@ class RiboFamily(models.Model):
 
 
 class RiboClass(models.Model):
-	name = models.CharField('nazwa', max_length = 10)
+	name = models.CharField('nazwa', max_length = 10, primary_key = True, default = None) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
 	description = models.TextField('opis', default = 'NONE')
 	alignment = models.TextField(default = 'NONE')
 
