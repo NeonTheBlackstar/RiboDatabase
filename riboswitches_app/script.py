@@ -12,6 +12,8 @@
 from parser import csvParser
 import os
 from sys import argv
+from django.db import IntegrityError
+from re import match
 
 ''' This tells Django where to look for our project's settings '''
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "riboswitches_app.settings")
@@ -22,91 +24,141 @@ application = get_wsgi_application()
 from database.models import *
 ''' To use managing functions inside script: '''
 from django.core.management import execute_from_command_line
-execute_from_command_line([argv[0], 'flush', '--noinput']) # Function argument is like sys.argv - a list
+''' Removes whole data from database. Comment following line if it's not necessary '''
+execute_from_command_line([argv[0], 'flush', '--noinput'])
+
+# For text fields with NOT NULL integrity constraint (mostly primary keys) we replace empty strings with None value, so an exception (NOT NULL INTEGRITY ERROR) will be called and such object won't be added to database 
+def emptyToNone(text):
+	return None if text == '' else text
 
 csv_data = csvParser(argv[1])
-#row = csv_data[1]
-#v_riboclass = RiboClass.objects.create(name = row[1])
-
-#print(csv_data)
-#print(RiboClass.objects.all())
-
 
 for row in csv_data[1:]:
-	row = [None if element == '' else element for element in row]
-	print(row)
-	v_riboclass = RiboClass.objects.create(name = row[1])
+	row = [element.strip() for element in row]
+	
+	''' CREATING NEW OBJECTS '''
+	v_riboclass = None # Pointer for RiboClass object
+	v_ribofamily = None
+	v_organism = None
+	v_gene = None
+	v_structure = None
+	v_ligand = None
+	v_article = [] # List of pointers for Article objects
+
+	''' RiboClass '''
 	'''
-	v_ribofamily = RiboFamily.objects.create(ribo_class = v_riboclass, name = row[1])
+	try:
+		v_riboclass = RiboClass.objects.create(emptyToNone(name = row[1]))
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_riboclass = RiboClass.objects.get(name = row[1])
+		elif match("NOT NULL", str(e)):
+			v_riboclass = None
+	'''
+
+	''' RiboFamily '''
+	try:
+		v_ribofamily = RiboFamily.objects.create(ribo_class = v_riboclass, name = emptyToNone(row[1]))
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_ribofamily = RiboFamily.objects.get(name = row[1])
+		elif match("NOT NULL", str(e)):
+			v_ribofamily = None
+
+	''' Organism '''
+	try:
+		v_organism = Organism.objects.create(scientific_name = emptyToNone(row[3]))
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_organism = Organism.objects.get(scientific_name = row[3])
+		elif match("NOT NULL", str(e)):
+			v_organism = None
+
+	''' Gene '''
+	try:
+		v_gene = Gene.objects.create(organism = v_organism, name = emptyToNone(row[4]))
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_gene = Gene.objects.get(organism = v_organism, name = row[4])
+		elif match("NOT NULL", str(e)):
+			v_gene = None
 	
-	
-	v_organism = Organism.objects.create(common_name = row[3], scientific_name = row[3])
-	v_gene = Gene.objects.create(organism = v_organism, name = row[4])
-	
-	v_structure = Structure.objects.create(predicted = row[11])
-	v_ligand = Ligand.objects.create(name = row[0])
-	v_article = Article.objects.create(pmid = int(row[8]))
+	''' Structure '''
+	try:
+		v_structure = Structure.objects.create(predicted = row[11])
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_structure = Structure.objects.get(predicted = row[11])
+		elif match("NOT NULL", str(e)):
+			v_structure = None
+
+	''' Ligand '''
+	try:
+		v_ligand = Ligand.objects.create(name = emptyToNone(row[0]))
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_ligand = Ligand.objects.get(name = row[0])
+		elif match("NOT NULL", str(e)):
+			v_ligand = None
+
+	''' Article - ManyToMany relation '''
+	article_ids = row[13].split(', ')
+	temp_art = None
+
+	for art in article_ids:
+		try:
+			if art != '': # NOT NULL exception is not threw in IntegerField, so I prevented adding wrong data this way
+				temp_art = Article.objects.create(pmid = art)
+				v_article.append(temp_art)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				temp_art = Article.objects.get(pmid = art)
+				v_article.append(temp_art)
 
 	_mechanism = 'UN'
 	if row[6] == 'translation':
 		_mechanism = 'TRL'
 	elif row[6] == 'transcription':
-		_mechanism = 'TRN':
+		_mechanism = 'TRN'
 	elif row[6] == 'degradation':
 		_mechanism = 'DG'
- 	
+
+	_effect = 1 if row[7] == '+' else '-' if row[7] == '-' else 0
+	
 	v_record = Record.objects.create(
 		family = v_ribofamily,
 		gene = v_gene,
 		structure = v_structure,
 		organism = v_organism,
 		ligand = v_ligand,
-		article = v_article,
 		name = row[2],
 		sequence = row[10],
-		start_pos = int(row[9]),
-		end_pos = int(row[9]) + len(int(row[10])) if row[9] != '' and row[10] != '' else 0, # Ribo end position is start position add length of sequence IF both are given
+		#start_pos = 0, #int(row[9]),
+		#end_pos = 0, #int(row[9]) + len(int(row[10])) if row[9] != '' and row[10] != '' else 0, # Ribo end position is start position add length of sequence IF both are given
 		genes_under_operon_regulation = row[5],
 		_3D_structure = row[12],
-		effect = row[7],
-		mechanism = _mechanism
-	)'''
+		effect = _effect,
+		mechanism = _mechanism,
+	)
+	''' Add ManyToMany relations '''
+	# Articles #
+	for it in v_article:
+		v_record.articles.add(it)
+
+for e in Record.objects.all():
+	print('\n\n')
+	print(e)
+	print('\n\n')
 
 '''
 for i in RiboClass.objects.all():
 	i.delete()
 
-for i in RiboFamily.objects.all():
-	i.delete()
-
-
 c = RiboClass(name = 'NazwaC', description = 'OpisC', alignment = 'AlajC')
 c.save()
-f = RiboFamily(ribo_class = c, name = 'NazwaF', description = 'OpisF', alignment = 'AlajF')
-f.save()
-
-c = RiboClass(name = 'NazwaC2', description = 'OpisC2', alignment = 'AlajC2')
-c.save()
-f = RiboFamily(ribo_class = c, name = 'NazwaF2', description = 'OpisF2', alignment = 'AlajF2')
-f.save()
-
-
 
 print(RiboFamily.objects.all())
-print(RiboClass.objects.all())
-c = RiboClass.objects.all()[0]
-print(c.ribofamily_set.all())
-
-glycine	B	glycine	Bacillus subtilis	gcvT	gcvPA, gcvPB	transcription	+	15472076		AUAUGAGCGAAUGACAGCAAGGGGAGAGACCUGACCGAAAACCUCGGGAUACAGGCGCCGAAGGAGCAAACUGCGGAGUGAAUCUCUCAGGCAAAAGAACUCUUGCUCGACGCAACUCUGGAGAGUGUUUGUGCGGAUGCGCAAACCACCAAAGGGGACGUCUUUGCGUAUGCAAAGUAAACUUUCAGGUGCCAGGACAGAGAACCUUCAUUUUACAUGAGGUGUUUCUCUGUCCUUUUUU	……………((((((((……((((.((((…..))))….)))).(((…((((…(((….)))….))))..)))…….))))))))……..(((((……((((((((….)))))))).(((…((((…(.(((((….))))))….))))..)))…….)))))…((((((…..))))))……………….		23249744, 23721735
-glycine	C	glycine	SAR11 - Cand. P. ubique (Pelagibacter ubique)	glcB		transcription	+	19125817		UAAUUGAUAUCGGGAGAGACCAUUAAUAAUAGCGCCGAAGGAGCAACCACCCCGGAAACUCUCAGGCAAAUGGACCGAUAACAACAAUAACACUCUGGAAAGAGAUUUAUCUCGCCGAUGGAGCAAAACUCUCAGGCAAAAAUACAGAUGGGGUAAA	……..(((((……((((…..)))).(((…((((…((…..))…))))..)))…….)))))…………..((((….((((….))))(((…((((…..))))..)))…….))))………		
-glycine	D	glycine	Granulibacter bethesdensis CGDNIH1	glcB		transcription	+	homology					19125817
-glycine	E	glycine	Streptomyces griseus	gcvP		transcription	+	24443533		UGGCUGCUGACCCCGUGCGGGAGAGUCCUCCGGUCCAGAAUCCGGAGGCGCCGAAGGAGCAACUCCUCCCCGGAAUCUCUCAGGCCCCCGUACCGCACGGACGAGGUCACUCUGGAAAGCAGGGCGGUUCCGUGCGGGCGCAGGCCCGGGUGGAUUCGACCCUCACCGACGGUGAAAGCCGGCACGCCCCCGGGCGGGCCGGUGAAGCUCUCAGGUUGAGAUGACAGAGGGG	…………((((((((……(((((((……..))))))).(((…((((….(((…..)))..))))..)))…….))))))))………(((((……(((((((.(((((.(((((….))))).))))).))).)))).(.(…((.(….(((((.((((….)))).)))))…..).))…).)…….)))))…		
-glycine	F	glycine	Streptomyces griseus	gcvT	gcvH	transcription	+	24443533		GAAUCCGCGCGGGAGAGUUCCGGCCACACUGUGAGCCGGGCGCCGAAGGAGCAAGAUCCUCCCUUGAAUCUCUCAGGCCCCGUACCGCGCGGAUGAGGCAGAUCUGAAAAGCGAGCCGUUCCACGGCUCCACCCAAGGUGCAAGCCGAGCCCCCUGAUCCGGGGCGCCCUCCAGGGGCAUACCCCGUCGGGGGCUAUCGGCGAACCUCUCAGGUUCCGAUGACAGAUGGGG	..(((((((.(((…..((((((……….)))))).(((..(((((…..((…….))..))))).)))……))))))))))…….(((((……(((((((…))))))).(.((..((.(……….((((((……………))))))……………………….).))..)).)…….)))))….		
-glycine	G	glycine	Fusobacterium nucleatum			transcription	+	18042658	AE009951.2	GAUAUGAGGAGAGAUUUCAUUUUAAUGAAACACCGAAGAAGUAAAUCUUUCAGGUAAAAAGGACUCAUAUUGGACGAACCUCUGGAGAGCUUAUCUAAGAGAUAACACCGAAGGAGCAAAGCUAAUUUUAGCCUAAACUCUCAGGUAAAAGCACGGAG	((((((((……((((((((….)))))).(((…((((…..))))..)))……..))))))))……..(((((……(((((…..))))).(((…((((….((((….))))…..))))..)))…….)))))	3P49	21439473, 22192063, 23060425, 23249744, 24318897
-
-
-
 '''
 
-print(RiboClass.objects.all())
+#print(RiboClass.objects.all())
 #print(RiboFamily.objects.all())
