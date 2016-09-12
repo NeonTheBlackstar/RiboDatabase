@@ -6,11 +6,9 @@ ForeignKey, OneToOneField and ManyToManyField refer connections in database.
 We use default values temporary - they help us to fill database with sample values.
 __str__ functions also will be deleted - they are only for our convenience :)
 
-
 '''
 
 class Record(models.Model):
-	#By setting the parameter null to value True we can insert None values to database
 	family = models.ForeignKey('RiboFamily', null = True)
 	gene = models.OneToOneField('Gene', null = True)
 	organism = models.ForeignKey('Organism', null = True)
@@ -67,7 +65,7 @@ class Article(models.Model):
 
 class RiboFamily(models.Model):
 	ribo_class = models.ForeignKey('RiboClass', null = True)
-	name = models.CharField('nazwa', max_length = 10, primary_key = True, default = None) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
+	name = models.CharField('nazwa', max_length = 10, primary_key = True) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
 	description = models.TextField('opis', default = '')
 	alignment = models.TextField(default = 'Undefined')
 
@@ -76,44 +74,44 @@ class RiboFamily(models.Model):
 
 
 class RiboClass(models.Model):
-	name = models.CharField('nazwa', max_length = 10, primary_key = True, default = None) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
+	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis', default = 'None')
 	alignment = models.TextField(default = 'Undefined')
 
 	def __str__(self):
 		return 'RCl: {} {} {}'.format(self.name, self.description, self.alignment)
 
-class Gene(models.Model): # MANY TO MANY ; Duplikacja genów w jednym organizmie. Jeden gen może posiadać więcej niż jedną nazwę ; Co powinno być kluczem głównym? Tylko accession_number, wszystko lub nic?
+class Gene(models.Model): # Duplikacja genów w jednym organizmie. Jeden gen może posiadać więcej niż jedną nazwę ; Co powinno być kluczem głównym? Tylko accession_number, wszystko lub nic?
 # Tymczasowo dopóki nie ogarnę wczytywania accession number kluczem głównym jest domyślny atrybut ID.
 	organism = models.ForeignKey('Organism') 
-	name = models.CharField('nazwa', max_length = 20, default = None, null = False)
+	name = models.CharField('nazwa', max_length = 20, null = False)
 	accession_number = models.CharField('numer_dostepu', max_length = 15, default = 'Undefined') # primary_key = True, Tu powinien być klucz główny, ale wczytując z pliku nie ma podanego numeru dostępu, więc na razie usuwam. Tymczasowo.
-	start_pos = models.IntegerField(default = 0)
-	end_pos = models.IntegerField(default = 0)
+	position = models.OneToOneField('Position', null = True, related_name = 'gene_position')
+	taxonomy_id = models.IntegerField('taxid', default = 0)
 	# Dodać atrybut z numerem chromosomu?
 	# Żeby rekord był prawdziwie unikalny trzeba by zrobić primary key na pozycje w genomie, organizm oraz opcjonalnie chromosom
 	def __str__(self):
-		return 'Gene: |{}| {} {} {} {}'.format(self.organism, self.name, self.accession_number, self.start_pos, self.end_pos)
+		return 'Gene: |{}| {} {} |{}| {}'.format(self.organism, self.name, self.accession_number, self.position, self.taxonomy_id)
 
 
 class Organism(models.Model):
-	scientific_name = models.CharField('nazwa_naukowa', max_length = 250, default = None, primary_key = True)
+	scientific_name = models.CharField('nazwa_naukowa', max_length = 250, primary_key = True)
 	common_name = models.CharField('nazwa_zwyczajowa', max_length = 250, default = 'Undefined')
 	accession_number = models.CharField('numer_dostepu', max_length = 15, default = 'Undefined') # Czy to jest potrzebne? Z jakiej bazy to pobrać? NCBI Genome?
 
 	def __str__(self):
 		return 'Or: {} {} {}'.format(self.scientific_name, self.common_name, self.accession_number)
 
-class Ligand_class(models.Model):
-	name = models.CharField('nazwa', max_length = 20, default = None, primary_key = True)
+class LigandClass(models.Model):
+	name = models.CharField('nazwa', max_length = 20, primary_key = True)
 	description = models.TextField(default = 'None')
 
 	def __str__(self):
 		return 'LiC: {} {}'.format(self.name, self.description)
 
 class Ligand(models.Model):
-	ligand_class = models.ForeignKey('Ligand_class', null = True)
-	name = models.CharField('nazwa', max_length = 20, default = None, primary_key = True)
+	ligand_class = models.ForeignKey('LigandClass', null = True)
+	name = models.CharField('nazwa', max_length = 20, primary_key = True)
 	#OBRAZEK - DOPYTAC ?
 	description = models.TextField('opis', default = 'None')
 
@@ -126,20 +124,3 @@ class Position(models.Model):
 
 	def __str__(self):
 		return 'Tr: {} {}'.format(self.start, self.end)
-
-''' Ze względu na tę samą strukturę encji, zastępuję obie poniższe jedną encją Position
-class Terminator(models.Model):
-	start = models.IntegerField(default = 0)
-	end = models.IntegerField(default = 0)
-
-	def __str__(self):
-		return 'Tr: {} {}'.format(self.start, self.end)
-
-
-class Promoter(models.Model):
-	start = models.IntegerField(default = 0)
-	end = models.IntegerField(default = 0)
-
-	def __str__(self):
-		return 'Pr: {} {}'.format(self.start, self.end)
-'''
