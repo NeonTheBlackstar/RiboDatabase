@@ -5,7 +5,8 @@
 This file should require superuser privilages
 '''
 
-import os, sys
+import os
+import sys
 import re
 import datetime
 

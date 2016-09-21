@@ -9,10 +9,11 @@
 	from database.models import RiboFamily, RiboClass
 '''
 
-from parser import csvParser, loadDataToDictionary
+from parser import loadDataToDictionary
 import os
 from sys import argv, exit
 from django.db import IntegrityError
+from django.core.exceptions import ObjectDoesNotExist
 from re import match
 
 ''' This tells Django where to look for our project's settings '''
@@ -39,31 +40,36 @@ for row in dList:
 	v_ligandclass = None
 	v_ligand = None
 	v_article = [] # List of pointers for Article objects
+	v_operon_genes = []
+	v_structures3d = []
+
 
 	''' RiboClass '''
 	try:
-		if row['rcl_name'] != '':
+		if row['class_name'] != '':
 			v_riboclass = RiboClass.objects.create(
-				name = row['rcl_name'], # Primary Key
-				description = row['rcl_description'],
-				alignment = row['rcl_alignment'],
+				name = row['class_name'], # Primary Key
+				description = row['class_description'],
+				alignment = row['class_alignment'],
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_riboclass = RiboClass.objects.get(name = row['rcl_name'])
+			v_riboclass = RiboClass.objects.get(name = row['class_name'])
+
 
 	''' RiboFamily '''
 	try:
-		if row['rfam_name'] != '':
+		if row['family_name'] != '':
 			v_ribofamily = RiboFamily.objects.create(
 				ribo_class = v_riboclass,
-				name = row['rfam_name'], # Primary Key
-				description = row['rfam_description'],
-				alignment = row['rfam_alignment'],
+				name = row['family_name'], # Primary Key
+				description = row['family_description'],
+				alignment = row['family_alignment'],
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_ribofamily = RiboFamily.objects.get(name = row['rfam_name'])
+			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
+
 
 	''' Organism '''
 	try:
@@ -71,11 +77,13 @@ for row in dList:
 			v_organism = Organism.objects.create(
 				scientific_name = row['scientific_name'],
 				common_name = row['common_name'],
-				accession_number = row['or_accession_number'],
+				accession_number = row['organism_accession_number'],
+				taxonomy_id = row['taxonomy_id'],
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_organism = Organism.objects.get(scientific_name = row['scientific_name'])
+
 
 	''' Gene '''
 	try:
@@ -84,7 +92,6 @@ for row in dList:
 				organism = v_organism, 
 				name = row['gene_name'],
 				accession_number = row['gene_accession_number'],
-				taxonomy_id = row['taxonomy_id'],
 			)
 
 			if row['gene_start'] != 0 or row['gene_end'] != 0:
@@ -96,6 +103,7 @@ for row in dList:
 		if match("UNIQUE", str(e)):
 			v_gene = Gene.objects.get(organism = v_organism, name = row['gene_name'])
 	
+
 	''' Structure '''
 	if row['without_ligand'] != '' or row['with_ligand'] != '' or row['predicted'] != '':
 		v_structure = Structure.objects.create(
@@ -104,31 +112,35 @@ for row in dList:
 			without_ligand = row['without_ligand'],
 		)
 
+
 	''' LigandClass '''
 	try:
-		if row['lic_name'] != '':
+		if row['ligand_class_name'] != '':
 			v_ligandclass = LigandClass.objects.create(
-				name = row['lic_name'],
-				description = row['lic_description'],
+				name = row['ligand_class_name'],
+				description = row['ligand_class_description'],
 				)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_ligandclass = LigandClass.objects.get(name = row['lic_name'])
 
+
 	''' Ligand '''
 	try:
-		if row['li_name'] != '':
+		if row['ligand_name'] != '':
 			v_ligand = Ligand.objects.create(
 				ligand_class = v_ligandclass,
-				name = row['li_name'],
-				description = row['li_description'],
+				name = row['ligand_name'],
+				description = row['ligand_description'],
 				)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_ligand = Ligand.objects.get(name = row['li_name'])
+			v_ligand = Ligand.objects.get(name = row['ligand_name'])
+
 
 	''' Article - ManyToMany relation '''
-	article_ids = row['articles'].split(', ')
+	article_ids = row['articles'].split(',')
+	article_ids = [elem.strip() for elem in article_ids]
 	temp_art = None
 
 	for art in article_ids:
@@ -141,6 +153,41 @@ for row in dList:
 				temp_art = Article.objects.get(pmid = art)
 				v_article.append(temp_art)
 
+
+	''' Operon Genes - ManyToMany relation '''
+	operon_list = row['operon_genes'].split(',')
+	operon_list = [elem.strip() for elem in operon_list]
+	temp_gene = None
+
+	for gene in operon_list:
+		try:
+			temp_gene = Gene.objects.get(organism = v_organism, name = gene)
+		except ObjectDoesNotExist: 
+			temp_gene = Gene.objects.create(
+				organism = v_organism, 
+				name = gene,
+				position = None,
+			)
+		v_operon_genes.append(temp_gene)
+
+
+	''' Structure 3D - ManyToMany relation '''
+	pdb_ids = row['structure_3d'].split(',')
+	pdb_ids = [elem.strip() for elem in pdb_ids]
+	temp_pdb = None
+
+	for pdb in pdb_ids:
+		try:
+			if pdb != '': # NOT NULL exception is not threw in IntegerField, so I prevented adding wrong data this way
+				temp_pdb = Structure3D.objects.create(pdbid = pdb)
+				v_structures3d.append(temp_pdb)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				temp_pdb = Structure3D.objects.get(pdbid = pdb)
+				v_structures3d.append(temp_pdb)
+
+
+	''' Mechanism '''
 	_mechanism = 'UN'
 	if row['mechanism'] == 'translation':
 		_mechanism = 'TRL'
@@ -149,8 +196,8 @@ for row in dList:
 	elif row['mechanism'] == 'degradation':
 		_mechanism = 'DG'
 
-	_effect = 1 if row['effect'] == '+' else '-' if row['effect'] == '-' else 0
-	
+
+	''' Switch '''
 	v_record = Record.objects.create(
 		family = v_ribofamily,
 		gene = v_gene,
@@ -159,25 +206,43 @@ for row in dList:
 		ligand = v_ligand,
 		name = row['switch_name'],
 		sequence = row['switch_sequence'],
-		genes_under_operon_regulation = row['operon_genes'],
-		_3D_structure = row['3d_structure'],
-		effect = _effect,
+		#structure_3d = row['structure_3d'],
+		effect = row['effect'],
 		mechanism = _mechanism,
 		strand = row['strand'],
 	)
+
+	#myfield = Record._meta.get_field('mechanism')
+	#print('\n\n|'+str(myfield.get_default())+'|\n\n')
+
 	if row['switch_start'] != 0 or row['switch_end'] != 0:
 		v_record.switch_position = Position.objects.create(start = row['switch_start'], end = row['switch_end'])
-	if row['tr_start'] != 0 or row['tr_end'] != 0:
-		v_record.terminator = Position.objects.create(start = row['tr_start'], end = row['tr_end'])
-	if row['pr_start'] != 0 or row['pr_end'] != 0:
-		v_record.promoter = Position.objects.create(start = row['pr_start'], end = row['pr_end'])
+	else:
+		v_record.switch_position = None
+
+	if row['terminator_start'] != 0 or row['terminator_end'] != 0:
+		v_record.terminator = Position.objects.create(start = row['terminator_start'], end = row['terminator_end'])
+	else:
+		v_record.terminator = None
+		
+	if row['promoter_start'] != 0 or row['promoter_end'] != 0:
+		v_record.promoter = Position.objects.create(start = row['promoter_start'], end = row['promoter_end'])
+	else:
+		v_record.promoter = None
 	
 	v_record.save()
+
 
 	''' Add ManyToMany relations '''
 	# Articles #
 	for it in v_article:
 		v_record.articles.add(it)
+	# Operon genes #
+	for it in v_operon_genes:
+		v_record.genes_under_operon_regulation.add(it)
+	# Structures 3D #
+	for it in v_structures3d:
+		v_record.structure_3d.add(it)
 
 for e in Record.objects.all():
 	print('\n\n')

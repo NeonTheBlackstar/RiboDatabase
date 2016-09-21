@@ -1,0 +1,64 @@
+<data>
+	<switch
+		name = "glycine"
+		articles = "17118400, 18042658, 20194520, 21145485, 21098652, 22279151, 23249744, 24849816, 25246650, 25092436" 
+		sequence = "GUUGAAGACUGCAGGAGAGUGGUUGUUAACCAGAUUUUAACAUCUGAGCCAAAUAACCCGCCGAAGAAGUAAAUCUUUACGGUGCAUUAUUCUUAGCCAUAUAUUGGCAACGAAUAAGCGAGGACUGUAGUUGGAGGAACCUCUGGAGAGAACCGUUUAAUCGGUCGCCGAAGGAGCAAGCUCUGCGCAUAUGCAGAGUGAAACUCU CAGGCAAAAGGACAGAGGA"
+		operon_genes = "gcvPA, gcvPB"
+		structure_3d = "3OWZ, 3OWI, 3OWW, 3OX0, 3OXB, 3OXD, 3OXE, 3OXM, 3OXJ"
+		effect = "+"
+		mechanism = "transcription"
+		strand = ''
+		start = "0"
+		end = "0" >
+
+		<family
+			name = "A"
+			description = ""
+			alignment = "">
+
+			<class
+				name = ""
+				description = ""
+				alignment = "" />
+		</family>
+
+		<gene
+			name = "gcvT"
+			accession_number = ""
+			start = ""
+			end = "" >
+
+			<organism
+				scientific_name = "Vibrio cholerae"
+				common_name = ""
+				or_accession_number = ""
+				taxonomy_id = "" />
+		</gene>
+
+
+		<ligand
+			name = "glycine"
+			description = "" >
+
+			<class
+				name = ""
+				description = "" />
+		</ligand>
+
+		<structure
+			without_ligand = ""
+			with_ligand = ""
+			predicted = "……((((((((……(((((((…(((((……)))))…..))))))).(((…((((…..))))..)))((.((((((…((((…..))))…))))))))…..))))))))…….((((((……((((……)))).(((…((((…((((((((….))))))))….))))..)))…….))))))." >
+		</structure>
+
+		<terminator
+			start = "0"
+			end = "0" >
+		</terminator>
+
+		<promoter
+			start = "0"
+			end = "0" >
+		</promoter>
+	</switch>
+</data>

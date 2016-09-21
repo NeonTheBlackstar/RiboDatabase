@@ -1,4 +1,6 @@
 import csv
+from re import match
+import xml.etree.ElementTree as ET
 
 '''
 This script reads csv file and divides it to lists. Every row in csv file is a single list. 
@@ -16,6 +18,16 @@ l[4][7] is an effect which has eight switch in csv file
 
 '''
 
+def readAttrb(value, default = None):
+	default = value if default == None else default
+
+	if (isinstance(default, int) and isinstance(value, str)) or value == '':
+		return(default)
+	elif isinstance(default, str) and isinstance(value, str):
+		return(value.strip())
+	elif isinstance(default, int) and isinstance(value, int):
+		return(int(value))
+
 
 def loadDataToDictionary(fileName):
 	'''
@@ -26,46 +38,46 @@ def loadDataToDictionary(fileName):
 		'switch_name': '',
 		'switch_sequence': '',
 		'operon_genes': '',
-		'3d_structure': '',
-		'effect': '',
-		'mechanism': '',
-		'strand': '0',
+		'structure_3d': '',
+		'effect': '.',
+		'mechanism': 'UN',
+		'strand': '.',
 		'switch_start': 0,
 		'switch_end': 0,
 			# RiboClass #
-		'rcl_name': '',
-		'rcl_description': '',
-		'rcl_alignment': '',
+		'class_name': '',
+		'class_description': '',
+		'class_alignment': '',
 			# RiboFamily #
-		'rfam_name': '',
-		'rfam_description': '',
-		'rfam_alignment': '',
+		'family_name': '',
+		'family_description': '',
+		'family_alignment': '',
 			# Gene #
 		'gene_name': '',
 		'gene_accession_number': '',
 		'gene_start': 0,
 		'gene_end': 0,
-		'taxonomy_id': 0,
 			# Organism #
 		'scientific_name': '',
 		'common_name': '',
-		'or_accession_number': '',
+		'organism_accession_number': '',
+		'taxonomy_id': 0,
 			# LigandClass #:
-		'lic_name': '',
-		'lic_description': '',
+		'ligand_class_name': '',
+		'ligand_class_description': '',
 			# Ligand #
-		'li_name': '',
-		'li_description': '',
+		'ligand_name': '',
+		'ligand_description': '',
 			# Structure 2D #
 		'without_ligand': '',
 		'with_ligand': '',
 		'predicted': '',
 			# Terminator #
-		'tr_start': 0,
-		'tr_end': 0,
-			# Promoter #
-		'pr_start': 0,
-		'pr_end': 0,
+		'terminator_start': 0,
+		'terminator_end': 0,
+			# Promoter # 
+		'promoter_start': 0,
+		'promoter_end': 0,
 			# Articles #
 		'articles': '',
 	}
@@ -73,20 +85,65 @@ def loadDataToDictionary(fileName):
 	extension = fileName.split('.')[1]
 	if extension == 'csv':
 		return csvParser(d, fileName)
+	elif extension == 'xml':
+		return xmlParser(d, fileName)
 
 def csvParser(d, fileName):
 	dList = [] # List of row data dictionaries
-	spamReader = csv.reader(open(fileName, newline = ''), delimiter = '\t') # Construction for Python3
-		data = [list(row) for row in spamReader]
-		labels = data[0]
-		for row in data[1:]:
-			dic = d.copy()
-			for id in range(0, len(labels)):
-				label_name = labels[id].lower().strip() # Lowercase all letters to prevent case sensitivity
-				elem_data = row[id]
-				if label_name in d:
-					dic[label_name] = elem_data.strip()
-				elif label_name.replace(' ', '_') in d: # Underscores in label names can be replaced with spaces for readability
-					dic[label_name.replace(' ', '_')] = elem_data.strip()
-			dList.append(dic)
+	spamReader = []
+	file = open(fileName, newline = '')
+	# Determine a type of delimiter #
+	first_line = file.readline()
+	semicolon = match("[a-zA-Z0-9_ ]+;", first_line)
+	tab = match("[a-zA-Z0-9_ ]+\t", first_line)
+	file.seek(0)
+
+	if tab != None:
+		spamReader = csv.reader(file, delimiter = '\t')
+	elif semicolon != None:
+		spamReader = csv.reader(file, delimiter = ';')
+
+	data = [list(row) for row in spamReader]
+	labels = data[0]
+	for row in data[1:]:
+		dic = d.copy()
+		for id in range(0, len(labels)):
+			label_name = labels[id].lower().strip() # Lowercase all letters to prevent case sensitivity
+			elem_data = row[id]
+			if label_name in d:
+				dic[label_name] = elem_data.strip()
+			elif label_name.replace(' ', '_') in d: # Underscores in label names can be replaced with spaces for readability
+				dic[label_name.replace(' ', '_')] = elem_data.strip()
+		dList.append(dic)
+
+	return(dList)
+
+
+def readSwitchFromXML(dic, root, parent):
+
+	for elem_key in root.attrib:
+		alternative_name = "{}_{}_{}".format(parent.tag, root.tag, elem_key)
+		alternative_name2 = "{}_{}".format(root.tag, elem_key)
+
+		if elem_key in dic:
+			dic[elem_key] = readAttrb( root.attrib[elem_key] , dic[elem_key])
+		elif alternative_name in dic:
+			dic[alternative_name] = readAttrb( root.attrib[elem_key] , dic[alternative_name])
+		elif alternative_name2 in dic:
+			dic[alternative_name2] = readAttrb( root.attrib[elem_key] , dic[alternative_name2])
+
+	for elem in root:
+		readSwitchFromXML(dic, elem, root)
+
+	return(dic)
+
+def xmlParser(d, fileName):
+	tree = ET.parse(fileName)
+	root = tree.getroot()
+	dList = []
+
+	for switch in root:
+		dic = d.copy()
+		dList.append( readSwitchFromXML(dic, switch, root) )
+		
 	return(dList)
