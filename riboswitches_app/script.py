@@ -28,6 +28,18 @@ from django.core.management import execute_from_command_line
 ''' Removes whole data from database. Comment following line if it's not necessary ''' ###################################
 execute_from_command_line([argv[0], 'flush', '--noinput'])
 
+
+def imageValidation(name):
+	rasterFormats = ['jpeg', 'jpg', 'jfif', 'gif', 'bmp', 'png', 'tiff']
+	temp = name.split('.')
+	extension = name.split('.')[1] if len(temp) == 2 else ""
+	
+	if extension in rasterFormats:
+		return(True)
+	else:
+		return(False)
+
+
 dList = loadDataToDictionary(argv[1])
 
 for row in dList:
@@ -91,7 +103,7 @@ for row in dList:
 			v_gene = Gene.objects.create(
 				organism = v_organism, 
 				name = row['gene_name'],
-				accession_number = row['gene_accession_number'],
+				locus_tag = row['locus_tag'],
 			)
 
 			if row['gene_start'] != 0 or row['gene_end'] != 0:
@@ -133,6 +145,9 @@ for row in dList:
 				name = row['ligand_name'],
 				description = row['ligand_description'],
 				)
+			if imageValidation(row['image_name']):
+				v_ligand.image_name = row['image_name']
+				v_ligand.save()
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_ligand = Ligand.objects.get(name = row['ligand_name'])
@@ -178,7 +193,7 @@ for row in dList:
 
 	for pdb in pdb_ids:
 		try:
-			if pdb != '': # NOT NULL exception is not threw in IntegerField, so I prevented adding wrong data this way
+			if pdb != '':
 				temp_pdb = Structure3D.objects.create(pdbid = pdb)
 				v_structures3d.append(temp_pdb)
 		except IntegrityError as e:
@@ -206,14 +221,10 @@ for row in dList:
 		ligand = v_ligand,
 		name = row['switch_name'],
 		sequence = row['switch_sequence'],
-		#structure_3d = row['structure_3d'],
 		effect = row['effect'],
 		mechanism = _mechanism,
 		strand = row['strand'],
 	)
-
-	#myfield = Record._meta.get_field('mechanism')
-	#print('\n\n|'+str(myfield.get_default())+'|\n\n')
 
 	if row['switch_start'] != 0 or row['switch_end'] != 0:
 		v_record.switch_position = Position.objects.create(start = row['switch_start'], end = row['switch_end'])

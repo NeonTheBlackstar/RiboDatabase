@@ -13,16 +13,16 @@ class Record(models.Model):
 	gene = models.OneToOneField('Gene', null = True, related_name = 'gene')
 	genes_under_operon_regulation = models.ManyToManyField('Gene', related_name = 'operon_gene') # MANY TO MANY
 	organism = models.ForeignKey('Organism', null = True)
-	ligand = models.ForeignKey('Ligand', null = True) # Zmieniam na ForeignKey, bo przecież ten sam ligand może należeć do dwóch ryboprzełączników, które mimo takiej samej struktury należą do dwóch różnych organizmów i w bazie danych tworzą dwa różne rekordy.
-	structure = models.OneToOneField('Structure', null = True)
+	ligand = models.ForeignKey('Ligand', null = True) ###???### Zmieniam na ForeignKey, bo przecież ten sam ligand może należeć do dwóch ryboprzełączników, które mimo takiej samej struktury należą do dwóch różnych organizmów i w bazie danych tworzą dwa różne rekordy.
+	structure = models.OneToOneField('Structure', null = True) ###???###
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
-	switch_position = models.OneToOneField('Position', null = True, related_name = 'switch_position')
+	switch_position = models.OneToOneField('Position', null = True, related_name = 'switch_position') ###???###
 	articles = models.ManyToManyField('Article') # MANY TO MANY
-	structure_3d = models.ManyToManyField('Structure3D') # MANY TO MANY 
+	structure_3d = models.ManyToManyField('Structure3D') # MANY TO MANY ###???###
 	
 	name = models.CharField('nazwa', max_length = 20)
-	sequence = models.TextField('sekwencja')
+	sequence = models.TextField('sekwencja') ###???###
 	EFFECT_CHOICES = ( 
 		('+', 'ACTIVATION'),
 		('.', 'UNKNOWN'),
@@ -45,6 +45,10 @@ class Record(models.Model):
 
 	def __str__(self):
 		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| |{}| |{}| |{}| {} {} |{}| |{}| {} {} {}'.format(self.family, self.gene, self.organism, self.ligand, self.structure, self.terminator, self.promoter, self.switch_position, self.articles.all(), self.name, self.sequence, self.genes_under_operon_regulation.all(), self.structure_3d.all(), self.effect, self.mechanism, self.strand)
+
+
+#class Aptamer(models.Model):
+#	sequence =
 
 
 class Structure(models.Model):
@@ -89,16 +93,15 @@ class RiboClass(models.Model):
 		return 'RCl: {} {} {}'.format(self.name, self.description, self.alignment)
 
 
-class Gene(models.Model): # Duplikacja genów w jednym organizmie. Jeden gen może posiadać więcej niż jedną nazwę ; Co powinno być kluczem głównym? Tylko accession_number, wszystko lub nic?
-# Tymczasowo dopóki nie ogarnę wczytywania accession number kluczem głównym jest domyślny atrybut ID.
+class Gene(models.Model):
 	organism = models.ForeignKey('Organism') 
 	name = models.CharField('nazwa', max_length = 20, null = False)
-	accession_number = models.CharField('numer_dostepu', max_length = 15) # primary_key = True, Tu powinien być klucz główny, ale wczytując z pliku nie ma podanego numeru dostępu, więc na razie usuwam. Tymczasowo.
+	locus_tag = models.CharField(max_length = 15)
 	position = models.OneToOneField('Position', null = True, related_name = 'gene_position')
 	# Dodać atrybut z numerem chromosomu?
 	# Żeby rekord był prawdziwie unikalny trzeba by zrobić primary key na pozycje w genomie, organizm oraz opcjonalnie chromosom
 	def __str__(self):
-		return 'Gene: |{}| {} {} |{}|'.format(self.organism, self.name, self.accession_number, self.position)
+		return 'Gene: |{}| {} {} |{}|'.format(self.organism, self.name, self.locus_tag, self.position)
 
 
 class Organism(models.Model):
@@ -122,11 +125,11 @@ class LigandClass(models.Model):
 class Ligand(models.Model):
 	ligand_class = models.ForeignKey('LigandClass', null = True)
 	name = models.CharField('nazwa', max_length = 20, primary_key = True)
-	#OBRAZEK - DOPYTAC ?
 	description = models.TextField('opis')
+	image_name = models.TextField('nazwa pliku')
 
 	def __str__(self):
-		return 'Li: |{}| {} {}'.format(self.ligand_class, self.name, self.description)
+		return 'Li: |{}| {} {} {}'.format(self.ligand_class, self.name, self.description, self.image_name)
 
 
 class Position(models.Model):

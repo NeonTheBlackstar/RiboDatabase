@@ -7,9 +7,9 @@
 		structure_3d = "3OWZ, 3OWI, 3OWW, 3OX0, 3OXB, 3OXD, 3OXE, 3OXM, 3OXJ"
 		effect = "+"
 		mechanism = "transcription"
-		strand = ''
-		start = "0"
-		end = "0" >
+		strand = ""
+		start = "10"
+		end = "20" >
 
 		<family
 			name = "A"
@@ -24,7 +24,7 @@
 
 		<gene
 			name = "gcvT"
-			accession_number = ""
+			locus_tag = ""
 			start = ""
 			end = "" >
 
@@ -38,7 +38,8 @@
 
 		<ligand
 			name = "glycine"
-			description = "" >
+			description = "" 
+			image_name = "" >
 
 			<class
 				name = ""
@@ -52,13 +53,13 @@
 		</structure>
 
 		<terminator
-			start = "0"
-			end = "0" >
+			start = ""
+			end = "" >
 		</terminator>
 
 		<promoter
-			start = "0"
-			end = "0" >
+			start = ""
+			end = "" >
 		</promoter>
 	</switch>
 </data>
