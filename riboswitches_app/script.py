@@ -7,6 +7,8 @@
 	ModelName.objects.all().delete()
 # To import only a few models:
 	from database.models import RiboFamily, RiboClass
+
+	!!! NIE ZAPOMNIJ ZRESETOWAĆ COUNTERA DLA ID REKORDÓW W DBSHELLU JAK ZACZNIESZ WRZUCAĆ DANE DO BAZY NA STAŁE !!!
 '''
 
 from parser import loadDataToDictionary

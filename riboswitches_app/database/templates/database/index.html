@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Tutorial</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		{% load static %}
+
+		<style>
+			body {
+				margin-left: 0;
+				margin-right: 0;
+				font-family: "Helvetica", "Arial", sans-serif;
+				line-height: 1.5;
+				color: #333;
+			}
+			
+			h1, h2, h3, h4, h5, strong {
+				color: #222;
+			}
+		
+			header {
+				height: 500px;
+				width: 90%;
+				margin: 0 auto 30px auto;
+				border-bottom: 4px solid white;
+				box-shadow: 0 8px 6px -6px #ccc;
+			}
+			
+			header > #logo {
+				width: 50%;
+				position: relative;
+				display: block;
+				top: 80px;
+				margin: 0 auto;
+			}
+		
+			#content {
+				/*width: 90%;
+				margin: 0 auto;*/
+			}
+		
+			.wrap {
+				display: inline-block;
+			}
+			
+			.col {
+				/*border: 1px solid #f00;*/
+				padding: 20px;
+				background-color: #ddd;
+				text-align: left;
+				max-width: 280px;
+				min-height: 350px;
+				font-size: 20px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.wrap > .col {
+				margin-right: 20px;
+			}
+			
+			.wrap > .col:last-child {
+				margin-right: 0;
+			}
+			
+			.wrap h3 {
+				margin: 10px 0 20px 0;
+			}
+			
+			.box-left {
+				height: 250px;
+				background-color: #222;
+				margin-bottom: 50px;
+				padding: 30px;
+				color: #ddd;
+			}
+			
+			.box-left *, .box-right * {
+				vertical-align: top;
+			}
+			
+			.box-left img {
+				float: left;
+				margin: 0 30px 30px 0;
+				max-height: 180px;
+			}
+			
+			.box-left p, .box-right p {
+				display: inline;
+				font-size: 30px;
+				vertical-align: middle;
+			}
+			
+			.box-right {
+				height: 250px;
+				background-color: #eca;
+				margin-bottom: 50px;
+				padding: 30px;
+			}
+			
+			.box-right img {
+				float: right;
+				margin: 0 30px 30px;
+				max-height: 180px;
+			}
+			
+			.line {
+				height: 2px;
+				width: 40%;
+				margin: 0 auto 50px;
+				border-bottom: 4px solid white;
+				box-shadow: 0 3px 2px -2px #ccc;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 style='text-align: center'>### Welcome to the main page! ###</h1>
+			<img src="{% static "database/img/header.jpg" %}" id=logo></img>
+		</header>
+		<div id=content>
+			<div style='text-align: center; margin-bottom: 40px;'>
+			<div class=wrap>
+				<div class=col style='background-color: #ecc'>
+					<h3>Title text</h3>
+					<p>Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus.</p>
+				</div>
+				<div class=col style='background-color: #cec'>
+					<h3>Title text</h3>
+					<p>Lorem ipsum, deus deus kosmadeus</p>
+				</div>
+				<div class=col style='background-color: #cce'>
+					<h3>Title text</h3>
+					<p>Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus.</p>
+				</div>
+			</div>
+			</div>
+			
+			<div class='box-left'>
+				<img src="{% static "database/img/moon.jpg" %}"></img>
+				<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+			</div>
+			<div class='line'></div>
+			
+			<div class='box-right'>
+				<img src="{% static "database/img/murzyn.jpg" %}"></img>
+				<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+			</div>
+			<div class='line'></div>
+			
+		</div>
+	</body>
+</html>
