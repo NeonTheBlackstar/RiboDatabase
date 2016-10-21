@@ -78,7 +78,7 @@
 			}
 
 			#searcher {
-				width: 50%;
+				width: 55%;
 				height: 50px;
 				line-height: 50px;
 				background-color: #eee;
@@ -100,7 +100,7 @@
 
 			#content {
 				min-height: 500px;
-				padding: 50px 50px 30px;
+				padding: 80px 50px 50px;
 			}
 
 			#search-icon {
@@ -118,6 +118,25 @@
 
     			color: #999;
     			font-style: italic;
+			}
+
+			table {
+				width: 55%;
+				border-spacing: 5px;
+				margin: 0 auto;
+			}
+
+			th {
+				background-color: #7B83AE;
+			}
+
+			td {
+				background-color: #e8e8e8;
+			}
+
+			td, th {
+				padding: 10px;
+				border-width: 5px;
 			}
 		</style>
 
@@ -139,9 +158,22 @@
 			</div>
 		</header>
 		<div id="content">
-			{% for it in recordList %}
-			{{it.id}} | {{it.ligand}} | {{it.organism}} | {{it.ligand}} <br>
-			{% endfor %}
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>Gene</th>
+					<th>Organism</th>
+					<th>Ligand</th>
+				</tr>
+				{% for it in recordList %}
+				<tr>
+					<td>{{it.id}}</td>
+					<td>{{it.gene}}</td>
+					<td><i>{{it.organism}}</i></td>
+					<td>{{it.ligand}}</td>
+				</tr>
+				{% endfor %}
+			</table>
 		</div>
 
 		<script>

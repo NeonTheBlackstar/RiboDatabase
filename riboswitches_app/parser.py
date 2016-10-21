@@ -121,7 +121,7 @@ def csvParser(d, fileName):
 	labels = data[0]
 	for row in data[1:]:
 		dic = d.copy()
-		for id in range(0, len(labels)):
+		for id in range(0, len(labels) - 1):
 			label_name = labels[id].lower().strip() # Lowercase all letters to prevent case sensitivity
 			elem_data = row[id]
 			if label_name in d:
