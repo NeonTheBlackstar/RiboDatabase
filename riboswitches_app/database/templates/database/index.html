@@ -1,157 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>jQuery Tutorial</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		{% load static %}
+<head>
+  <meta charset="utf-8" />
+  <title>Test</title>
 
-		<style>
-			body {
-				margin-left: 0;
-				margin-right: 0;
-				font-family: "Helvetica", "Arial", sans-serif;
-				line-height: 1.5;
-				color: #333;
-			}
-			
-			h1, h2, h3, h4, h5, strong {
-				color: #222;
-			}
-		
-			header {
-				height: 500px;
-				width: 90%;
-				margin: 0 auto 30px auto;
-				border-bottom: 4px solid white;
-				box-shadow: 0 8px 6px -6px #ccc;
-			}
-			
-			header > #logo {
-				width: 50%;
-				position: relative;
-				display: block;
-				top: 80px;
-				margin: 0 auto;
-			}
-		
-			#content {
-				/*width: 90%;
-				margin: 0 auto;*/
-			}
-		
-			.wrap {
-				display: inline-block;
-			}
-			
-			.col {
-				/*border: 1px solid #f00;*/
-				padding: 20px;
-				background-color: #ddd;
-				text-align: left;
-				max-width: 280px;
-				min-height: 350px;
-				font-size: 20px;
-				display: inline-block;
-				vertical-align: top;
-			}
-			
-			.wrap > .col {
-				margin-right: 20px;
-			}
-			
-			.wrap > .col:last-child {
-				margin-right: 0;
-			}
-			
-			.wrap h3 {
-				margin: 10px 0 20px 0;
-			}
-			
-			.box-left {
-				height: 250px;
-				background-color: #222;
-				margin-bottom: 50px;
-				padding: 30px;
-				color: #ddd;
-			}
-			
-			.box-left *, .box-right * {
-				vertical-align: top;
-			}
-			
-			.box-left img {
-				float: left;
-				margin: 0 30px 30px 0;
-				max-height: 180px;
-			}
-			
-			.box-left p, .box-right p {
-				display: inline;
-				font-size: 30px;
-				vertical-align: middle;
-			}
-			
-			.box-right {
-				height: 250px;
-				background-color: #eca;
-				margin-bottom: 50px;
-				padding: 30px;
-			}
-			
-			.box-right img {
-				float: right;
-				margin: 0 30px 30px;
-				max-height: 180px;
-			}
-			
-			.line {
-				height: 2px;
-				width: 40%;
-				margin: 0 auto 50px;
-				border-bottom: 4px solid white;
-				box-shadow: 0 3px 2px -2px #ccc;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<header>
-			<h1 style='text-align: center'>### Welcome to the main page! ###</h1>
-			<img src="{% static "database/img/header.jpg" %}" id=logo></img>
-		</header>
-		<div id=content>
-			<div style='text-align: center; margin-bottom: 40px;'>
-			<div class=wrap>
-				<div class=col style='background-color: #ecc'>
-					<h3>Title text</h3>
-					<p>Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus.</p>
-				</div>
-				<div class=col style='background-color: #cec'>
-					<h3>Title text</h3>
-					<p>Lorem ipsum, deus deus kosmadeus</p>
-				</div>
-				<div class=col style='background-color: #cce'>
-					<h3>Title text</h3>
-					<p>Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus. Lorem ipsum, deus deus kosmadeus.</p>
-				</div>
-			</div>
-			</div>
-			
-			<div class='box-left'>
-				<img src="{% static "database/img/moon.jpg" %}"></img>
-				<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
-			</div>
-			<div class='line'></div>
-			
-			<div class='box-right'>
-				<img src="{% static "database/img/murzyn.jpg" %}"></img>
-				<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
-			</div>
-			<div class='line'></div>
-			
-		</div>
-	</body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Browser</a></li>
+            <li><a href="#">Searcher</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-check"></span> Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>  
+
+
+  <div class="container" id="search-field">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-xs-10 com-xs-offset-1">
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-xs-12" align="center">
+        <div class="jumbotron" id="A">
+          <h2>H1</h2>
+          <p>1.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-xs-12" align="center">
+        <div class="jumbotron" id="B">
+          <h2>H2</h2>
+          <p>2.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-xs-12" align="center">
+        <div class="jumbotron" id="C">
+          <h2>H3</h2>
+          <p>3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
 </html>
