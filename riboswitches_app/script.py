@@ -41,41 +41,118 @@ def imageValidation(name):
 	else:
 		return(False)
 
+def convertToList(line, delimiter = ','):
+	if line != '':
+		line = line.split(delimiter)
+		return([elem.strip() for elem in line])
+	else:
+		return([])
+
+def convertToListForInt(line, delimiter = ','):
+	if not isinstance(line, int):
+		if line != '':
+			line = line.split(delimiter)
+			return([int(elem.strip()) for elem in line])
+		else:
+			return([])
+	else:
+		return([line])
+
+def minimumButNotZero(*args):
+	if len(args) > 0:
+		return( min(l for l in args if l > 0) )
+	else:
+		return(0)
+
+def maximum(*args):
+	if len(args) > 0:
+		return( max(l for l in args) )
+	else:
+		return(0)
+
+def indexOutOfRange(_list, id):
+	isIt = False if id < len(_list) else True
+	return(isIt)
 
 dList = loadDataToDictionary(argv[1])
 
 for row in dList:
 	''' CREATING NEW OBJECTS '''
-	v_riboclass = None # Pointer for RiboClass object
+	v_record = None
+	v_riboclass = None # Pointer for RiboClass object 123
 	v_ribofamily = None
 	v_organism = None
 	v_gene = None
-	v_structure = None
-	v_ligandclass = None
-	v_ligand = None
-	v_article = [] # List of pointers for Article objects
+	#v_ligandclass = None
+	v_taxonomy = None
+	v_mech_conf = None
+	#v_ligand = None
+
+	v_articles = [] # List of pointers for Article objects
 	v_operon_genes = []
 	v_structures3d = []
+	v_ligands = [] # ManyToMany
+	v_ligandclasses = []
+	# Aptamers #
+	v_aptamers = []
+	v_structures2d = []
+	#v_aptamers_positions = []
 
 
-	''' RiboClass '''
-	try:
-		if row['class_name'] != '':
-			v_riboclass = RiboClass.objects.create(
-				name = row['class_name'], # Primary Key
-				description = row['class_description'],
-				alignment = row['class_alignment'],
-			)
-	except IntegrityError as e:
-		if match("UNIQUE", str(e)):
-			v_riboclass = RiboClass.objects.get(name = row['class_name'])
+	''' LigandClass '''
+	v_ligandclass_name = convertToList(row['ligand_class_name'])
+	v_ligandclass_desc = convertToList(row['ligand_class_description'])
+
+	lc_count = len(v_ligandclass_name)
+
+	for id in range(0, lc_count):
+		try:
+			if v_ligandclass_name[id] != '':
+				temp_ligandclass = LigandClass.objects.create(
+					name = v_ligandclass_name[id],
+					)
+				if not indexOutOfRange(v_ligandclass_desc, id):
+					temp_ligandclass.description = v_ligandclass_desc[id]
+					temp_ligandclass.save()
+				v_ligandclasses.append(temp_ligandclass)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				temp_ligandclass = LigandClass.objects.get(name = v_ligandclass_name[id])
+				v_ligandclasses.append(temp_ligandclass)
+
+
+	''' Ligand - ManyToMany'''
+	v_ligand_name = convertToList(row['ligand_name'])
+	v_ligand_desc = convertToList(row['ligand_description'])
+	v_ligand_img = convertToList(row['image_name'])
+
+	ligand_count = len(v_ligand_name)
+
+	for id in range(0, ligand_count):
+		try:
+			if v_ligand_name[id] != '':
+				temp_ligand = Ligand.objects.create(
+					name = v_ligand_name[id],
+					)
+				if not indexOutOfRange(v_ligandclasses, id):
+					temp_ligand.ligand_class = v_ligandclasses[id]
+				if not indexOutOfRange(v_ligand_desc, id):
+					temp_ligand.description = v_ligand_desc[id]
+				if not indexOutOfRange(v_ligand_img, id) and imageValidation(v_ligand_img[id]):
+					temp_ligand.image_name = v_ligand_img[id]
+
+				temp_ligand.save()
+				v_ligands.append(temp_ligand)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				temp_ligand = Ligand.objects.get(name = v_ligand_name[id])
+				v_ligands.append(temp_ligand)
 
 
 	''' RiboFamily '''
 	try:
 		if row['family_name'] != '':
 			v_ribofamily = RiboFamily.objects.create(
-				ribo_class = v_riboclass,
 				name = row['family_name'], # Primary Key
 				description = row['family_description'],
 				alignment = row['family_alignment'],
@@ -85,6 +162,49 @@ for row in dList:
 			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
 
 
+	''' RiboClass '''
+	try:
+		if row['class_name'] != '':
+			v_riboclass = RiboClass.objects.create(
+				ribo_family = v_ribofamily,
+				name = row['class_name'], # Primary Key
+				description = row['class_description'],
+				alignment = row['class_alignment'],
+			)
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_riboclass = RiboClass.objects.get(name = row['class_name'])
+
+
+	''' Structure 3D '''
+	pdb_ids = convertToList(row['structure_3d'])
+
+	for pdb in pdb_ids:
+		try:
+			if pdb != '':
+				Structure3D.objects.create(
+					pdbid = pdb,
+					ribo_family = v_ribofamily,
+				)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				print('Error. Object Structure3D has been already assigned to RiboFamily. {}'.format(str(e)) )
+			else:
+				print(e)
+
+
+	''' Taxonomy '''
+	try:
+		if row['taxonomy_id'] != '':
+			v_taxonomy = Taxonomy.objects.create(
+				name = row['taxonomy_name'],
+				taxonomy_id = row['taxonomy_id'],
+			)
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_id'])
+
+
 	''' Organism '''
 	try:
 		if row['scientific_name'] != '':
@@ -92,7 +212,7 @@ for row in dList:
 				scientific_name = row['scientific_name'],
 				common_name = row['common_name'],
 				accession_number = row['organism_accession_number'],
-				taxonomy_id = row['taxonomy_id'],
+				taxonomy = v_taxonomy,
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
@@ -109,7 +229,12 @@ for row in dList:
 			)
 
 			if row['gene_start'] != 0 or row['gene_end'] != 0:
-				v_gene.position = Position.objects.create(start = row['gene_start'], end = row['gene_end'])
+				v_gene.position = Position.objects.create(
+					start = row['gene_start'],
+					end = row['gene_end'],
+					strand = row['strand'],
+					location = row['location'],
+				)
 			else:
 				v_gene.position = None
 			v_gene.save()
@@ -118,62 +243,39 @@ for row in dList:
 			v_gene = Gene.objects.get(organism = v_organism, name = row['gene_name'])
 	
 
-	''' Structure '''
-	if row['without_ligand'] != '' or row['with_ligand'] != '' or row['predicted'] != '':
-		v_structure = Structure.objects.create(
-			predicted = row['predicted'],
-			with_ligand = row['with_ligand'],
-			without_ligand = row['without_ligand'],
+	''' Structure2D '''
+	v_predicted = convertToList(row['predicted'])
+	v_with_ligand = convertToList(row['with_ligand'])
+	v_without_ligand = convertToList(row['without_ligand'])
+
+	biggest_length = maximum(len(v_predicted), len(v_with_ligand), len(v_without_ligand))
+
+	for id in range(0, biggest_length):
+		temp_struc = Structure2D.objects.create(
+			without_ligand = Structure2D._meta.get_field('without_ligand').get_default() if indexOutOfRange(v_without_ligand, id) else v_without_ligand[id],
+			with_ligand = Structure2D._meta.get_field('with_ligand').get_default() if indexOutOfRange(v_with_ligand, id) else v_with_ligand[id],
+			predicted = Structure2D._meta.get_field('predicted').get_default() if indexOutOfRange(v_predicted, id) else v_predicted[id],
 		)
-
-
-	''' LigandClass '''
-	try:
-		if row['ligand_class_name'] != '':
-			v_ligandclass = LigandClass.objects.create(
-				name = row['ligand_class_name'],
-				description = row['ligand_class_description'],
-				)
-	except IntegrityError as e:
-		if match("UNIQUE", str(e)):
-			v_ligandclass = LigandClass.objects.get(name = row['lic_name'])
-
-
-	''' Ligand '''
-	try:
-		if row['ligand_name'] != '':
-			v_ligand = Ligand.objects.create(
-				ligand_class = v_ligandclass,
-				name = row['ligand_name'],
-				description = row['ligand_description'],
-				)
-			if imageValidation(row['image_name']):
-				v_ligand.image_name = row['image_name']
-				v_ligand.save()
-	except IntegrityError as e:
-		if match("UNIQUE", str(e)):
-			v_ligand = Ligand.objects.get(name = row['ligand_name'])
+		v_structures2d.append(temp_struc)
 
 
 	''' Article - ManyToMany relation '''
-	article_ids = row['articles'].split(',')
-	article_ids = [elem.strip() for elem in article_ids]
+	article_ids = convertToList(row['articles'])
 	temp_art = None
 
 	for art in article_ids:
 		try:
 			if art != '': # NOT NULL exception is not threw in IntegerField, so I prevented adding wrong data this way
 				temp_art = Article.objects.create(pmid = art)
-				v_article.append(temp_art)
+				v_articles.append(temp_art)
 		except IntegrityError as e:
 			if match("UNIQUE", str(e)):
 				temp_art = Article.objects.get(pmid = art)
-				v_article.append(temp_art)
+				v_articles.append(temp_art)
 
 
 	''' Operon Genes - ManyToMany relation '''
-	operon_list = row['operon_genes'].split(',')
-	operon_list = [elem.strip() for elem in operon_list]
+	operon_list = convertToList(row['operon_genes'])
 	temp_gene = None
 
 	for gene in operon_list:
@@ -186,22 +288,6 @@ for row in dList:
 				position = None,
 			)
 		v_operon_genes.append(temp_gene)
-
-
-	''' Structure 3D - ManyToMany relation '''
-	pdb_ids = row['structure_3d'].split(',')
-	pdb_ids = [elem.strip() for elem in pdb_ids]
-	temp_pdb = None
-
-	for pdb in pdb_ids:
-		try:
-			if pdb != '':
-				temp_pdb = Structure3D.objects.create(pdbid = pdb)
-				v_structures3d.append(temp_pdb)
-		except IntegrityError as e:
-			if match("UNIQUE", str(e)):
-				temp_pdb = Structure3D.objects.get(pdbid = pdb)
-				v_structures3d.append(temp_pdb)
 
 
 	''' Mechanism '''
@@ -218,44 +304,89 @@ for row in dList:
 	v_record = Record.objects.create(
 		family = v_ribofamily,
 		gene = v_gene,
-		organism = v_organism,
-		structure = v_structure,
-		ligand = v_ligand,
 		name = row['switch_name'],
-		sequence = row['switch_sequence'],
 		effect = row['effect'],
 		mechanism = _mechanism,
-		strand = row['strand'],
 	)
 
-	if row['switch_start'] != 0 or row['switch_end'] != 0:
-		v_record.switch_position = Position.objects.create(start = row['switch_start'], end = row['switch_end'])
+
+	''' Mechanism Confirmation '''
+	if row['confirmation'] != '' and row['confirmation'] != None: ###########3 POPRAWIĆ !!!
+		try:
+			v_mech_conf = Article.objects.create(pmid = row['confirmation'])
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				v_mech_conf = Article.objects.get(pmid = row['confirmation'])
+		v_mech_conf.save()
+		v_record.mechanism_confirmation = v_mech_conf
 	else:
-		v_record.switch_position = None
+		v_record.mechanism_confirmation = None
 
 	if row['terminator_start'] != 0 or row['terminator_end'] != 0:
-		v_record.terminator = Position.objects.create(start = row['terminator_start'], end = row['terminator_end'])
+		v_record.terminator = Position.objects.create(
+			start = row['terminator_start'], 
+			end = row['terminator_end'],
+			location = row['location'],
+			strand = row['strand'],
+			)
 	else:
 		v_record.terminator = None
 		
 	if row['promoter_start'] != 0 or row['promoter_end'] != 0:
-		v_record.promoter = Position.objects.create(start = row['promoter_start'], end = row['promoter_end'])
+		v_record.promoter = Position.objects.create(
+			start = row['promoter_start'], 
+			end = row['promoter_end'],
+			location = row['location'],
+			strand = row['strand'],
+			)
 	else:
 		v_record.promoter = None
 	
 	v_record.save()
 
 
+	''' Aptamer '''
+	v_ap_sequence = convertToList(row['aptamer_sequence'])
+	v_ap_start = convertToListForInt(row['aptamer_start'])
+	v_ap_end = convertToListForInt(row['aptamer_end'])
+	v_ap_temp = None
+	#v_structures2d
+
+	complete_coordinates = minimumButNotZero( len(v_ap_start), len(v_ap_end) ) # It's a number of complete pairs of values [start, end]
+	biggest_length = maximum( len(v_ap_sequence), complete_coordinates )
+
+	for id in range(0, biggest_length):
+		v_ap_temp = Aptamer.objects.create(switch = v_record)
+
+		v_ap_temp.position = Position.objects.create(
+			start = Position._meta.get_field('start').get_default() if indexOutOfRange(v_ap_start, id) else v_ap_start[id], 
+			end = Position._meta.get_field('end').get_default() if indexOutOfRange(v_ap_end, id) else v_ap_end[id],
+			location = row['location'],
+			strand = row['strand'],
+		)
+
+		if not indexOutOfRange(v_structures2d, id):
+			v_ap_temp.structure = v_structures2d[id]
+
+		if not indexOutOfRange(v_ap_sequence, id):
+			v_ap_temp.sequence = v_ap_sequence[id]
+
+		v_ap_temp.save()
+
+
 	''' Add ManyToMany relations '''
 	# Articles #
-	for it in v_article:
+	for it in v_articles:
 		v_record.articles.add(it)
+	v_record.save()
 	# Operon genes #
 	for it in v_operon_genes:
 		v_record.genes_under_operon_regulation.add(it)
-	# Structures 3D #
-	for it in v_structures3d:
-		v_record.structure_3d.add(it)
+	v_record.save()
+	# Ligands #
+	for it in v_ligands:
+		v_ribofamily.ligands.add(it)
+
 
 for e in Record.objects.all():
 	print('\n\n')

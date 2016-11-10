@@ -4,25 +4,19 @@ from django.db import models
 This are Django models which we use to create our database. Each database table is a class.
 ForeignKey, OneToOneField and ManyToManyField refer connections in database.
 We use default values temporary - they help us to fill database with sample values.
-__str__ functions also will be deleted - they are only for our convenience :)
 
 '''
 
 class Record(models.Model):
+	''' Encja Switch podlinkowana '''
 	family = models.ForeignKey('RiboFamily', null = True)
 	gene = models.OneToOneField('Gene', null = True, related_name = 'gene')
 	genes_under_operon_regulation = models.ManyToManyField('Gene', related_name = 'operon_gene') # MANY TO MANY
-	organism = models.ForeignKey('Organism', null = True)
-	ligand = models.ForeignKey('Ligand', null = True) ###???### Zmieniam na ForeignKey, bo przecież ten sam ligand może należeć do dwóch ryboprzełączników, które mimo takiej samej struktury należą do dwóch różnych organizmów i w bazie danych tworzą dwa różne rekordy.
-	structure = models.OneToOneField('Structure', null = True) ###???###
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
-	switch_position = models.OneToOneField('Position', null = True, related_name = 'switch_position') ###???###
-	articles = models.ManyToManyField('Article') # MANY TO MANY
-	structure_3d = models.ManyToManyField('Structure3D') # MANY TO MANY ###???###
+	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
 	
 	name = models.CharField('nazwa', max_length = 20)
-	sequence = models.TextField('sekwencja') ###???###
 	EFFECT_CHOICES = ( 
 		('+', 'ACTIVATION'),
 		('.', 'UNKNOWN'),
@@ -36,22 +30,23 @@ class Record(models.Model):
 		('DG', 'DEGRADATION'),
 	)
 	mechanism = models.CharField(max_length = 3, choices = MECHANISM_CHOICES, default = 'UN')
-	STRAND_CHOICES = (
-		('+', 'LEADING STRAND'),
-		('.', 'UNKNOWN'),
-		('-', 'LAGGING STRAND'),
-	)
-	strand = models.CharField(max_length = 1, choices = STRAND_CHOICES, default = '.')
+	mechanism_confirmation = models.ForeignKey('Article', related_name = 'confirmation', null = True)
 
 	def __str__(self):
-		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| |{}| |{}| |{}| {} {} |{}| |{}| {} {} {}'.format(self.family, self.gene, self.organism, self.ligand, self.structure, self.terminator, self.promoter, self.switch_position, self.articles.all(), self.name, self.sequence, self.genes_under_operon_regulation.all(), self.structure_3d.all(), self.effect, self.mechanism, self.strand)
+		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| {} |{}| {} {} |{}|'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.name, self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation)
 
 
-#class Aptamer(models.Model):
-#	sequence =
+class Aptamer(models.Model): #14 dodaję nową encję
+	sequence = models.TextField('sekwencja')
+	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')
+	structure = models.OneToOneField('Structure2D', null = True)
+	switch = models.ForeignKey('Record')#, related_name = "aptamer")
+
+	def __str__(self):
+		return 'Apt: {} |{}| |{}|'.format(self.sequence, self.position, self.structure)
 
 
-class Structure(models.Model):
+class Structure2D(models.Model):
 	without_ligand = models.TextField('bez_ligandu')
 	with_ligand = models.TextField('z_ligandem')
 	predicted = models.TextField('przewidziana')
@@ -61,7 +56,7 @@ class Structure(models.Model):
 
 
 class Article(models.Model):
-	pmid = models.IntegerField(primary_key = True) # PubMed ID
+	pmid = models.IntegerField(primary_key = True)
 
 	def __str__(self):
 		return 'Art: {}'.format(self.pmid)
@@ -69,22 +64,27 @@ class Article(models.Model):
 
 class Structure3D(models.Model):
 	pdbid = models.CharField(max_length = 10, primary_key = True) # Protein Data Bank ID
+	ribo_family = models.ForeignKey('RiboFamily')
 
 	def __str__(self):
 		return 'Str3D: {}'.format(self.pdbid)
 
 
 class RiboFamily(models.Model):
-	ribo_class = models.ForeignKey('RiboClass', null = True)
-	name = models.CharField('nazwa', max_length = 10, primary_key = True) # Default = None, bo ten typ danych zamienia automatycznie None/Null na pusty string (domyślnie default='' dla CharField), przez co nie wywala wyjątku przy wczytywaniu Nulli/Nonów związanego z null = False
+	''' RiboClass podlinkowane '''
+	''' Structure3D podlinkowane '''
+	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
+	ligands = models.ManyToManyField('Ligand')
+	#ligand = models.ForeignKey('Ligand', null = True)
 
 	def __str__(self):
-		return 'RFam: |{}| {} {} {}'.format(self.ribo_class, self.name, self.description, self.alignment)
+		return 'RFam: |{}| {} {} {} |{}|'.format(self.riboclass_set.all(), self.name, self.description, self.alignment, self.ligands.all())#, self.structure3D.all())
 
 
 class RiboClass(models.Model):
+	ribo_family = models.ForeignKey('RiboFamily', null = True)#, related_name = 'riboclass')
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
@@ -94,12 +94,10 @@ class RiboClass(models.Model):
 
 
 class Gene(models.Model):
-	organism = models.ForeignKey('Organism') 
+	organism = models.ForeignKey('Organism', null = True) 
 	name = models.CharField('nazwa', max_length = 20, null = False)
 	locus_tag = models.CharField(max_length = 15)
 	position = models.OneToOneField('Position', null = True, related_name = 'gene_position')
-	# Dodać atrybut z numerem chromosomu?
-	# Żeby rekord był prawdziwie unikalny trzeba by zrobić primary key na pozycje w genomie, organizm oraz opcjonalnie chromosom
 	def __str__(self):
 		return 'Gene: |{}| {} {} |{}|'.format(self.organism, self.name, self.locus_tag, self.position)
 
@@ -108,10 +106,20 @@ class Organism(models.Model):
 	scientific_name = models.CharField('nazwa_naukowa', max_length = 250, primary_key = True)
 	common_name = models.CharField('nazwa_zwyczajowa', max_length = 250)
 	accession_number = models.CharField('numer_dostepu', max_length = 15)
-	taxonomy_id = models.IntegerField('taxid', default = 0)
+	taxonomy = models.ForeignKey('Taxonomy', null = True)
 
 	def __str__(self):
-		return 'Or: {} {} {}'.format(self.scientific_name, self.common_name, self.accession_number, self.taxonomy_id)
+		return 'Or: {} {} {} |{}|'.format(self.scientific_name, self.common_name, self.accession_number, self.taxonomy)
+
+
+class Taxonomy(models.Model): #2 zmiana: dodaje nową encję Taxonomy
+	name = models.CharField('nazwa', max_length = 20, null = False)
+	taxonomy_id = models.IntegerField('taxid', default = 0)#, primary_key = True)
+	parent = models.ForeignKey('Taxonomy', null = True)
+
+	def __str__(self):
+		return 'Tax: {} {}'.format(self.name, self.taxonomy_id)
+	# do napisania skrypt, ktory bedzie to ladowal do bazy rekurencyjnie
 
 
 class LigandClass(models.Model):
@@ -135,6 +143,13 @@ class Ligand(models.Model):
 class Position(models.Model):
 	start = models.IntegerField(default = 0)
 	end = models.IntegerField(default = 0)
+	location = models.TextField('opis') # Jednak atrybut
+	STRAND_CHOICES = (
+		('+', 'LEADING STRAND'),
+		('.', 'UNKNOWN'),
+		('-', 'LAGGING STRAND'),
+	)
+	strand = models.CharField(max_length = 1, choices = STRAND_CHOICES, default = '.')
 
 	def __str__(self):
-		return 'Tr: {} {}'.format(self.start, self.end)
+		return 'Pos: {} {} |{}| {}'.format(self.start, self.end, self.location, self.strand)

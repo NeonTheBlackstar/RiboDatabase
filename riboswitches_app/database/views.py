@@ -16,13 +16,13 @@ def searcher(request):
 	for e in Record.objects.order_by('id'):
 		dic = {
 			'id': e.id,
-			'gene': 'None',
-			'organism': 'None',
-			'ligand': 'None',
+			'gene': None,
+			'organism': None,
+			'ligand': None,
 		}
 		dic['gene'] = e.gene.name if e.gene != None else dic['gene']
-		dic['organism'] = e.organism.scientific_name if e.organism != None else dic['organism']
-		dic['ligand'] = e.ligand.name if e.ligand != None else dic['ligand']
+		dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+		dic['ligand'] = e.family.ligands.all()[0].name if e.family.ligands.all() != None else dic['ligand']
 		recordList.append(dic.copy())
 
 	context = {

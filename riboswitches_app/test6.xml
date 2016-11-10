@@ -5,13 +5,13 @@
 		operon_genes = "gcvPA, gcvPB"
 		effect = "+"
 		mechanism = "transcription"
-		confirmation = "123456789" >
+		confirmation = "123456789"
 
 		<aptamer
 			sequence = "GUUGAAGACUGCAGGAGAGUGGUUGUUAACCAGAUUUUAACAUCUGAGCCAAAUAACCCGCCGAAGAAGUAAAUCUUUACGGUGCAUUAUUCUUAGCCAUAUAUUGGCAACGAAUAAGCGAGGACUGUAGUUGGAGGAACCUCUGGAGAGAACCGUUUAAUCGGUCGCCGAAGGAGCAAGCUCUGCGCAUAUGCAGAGUGAAACUCU, 
 			CAGGCAAAAGGACAGAGGA"
 			start = "10, 20"
-			end = "5, 60" >
+			end = "5, 60"
 			<structure
 				without_ligand = ""
 				with_ligand = ""
@@ -52,7 +52,7 @@
 			<organism
 				scientific_name = "Vibrio cholerae"
 				common_name = ""
-				accession_number = "" >
+				accession_number = ""
 
 				<taxonomy
 					id = ""
