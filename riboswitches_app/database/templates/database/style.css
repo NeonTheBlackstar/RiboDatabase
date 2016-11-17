@@ -1,15 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
-.snip1519 {
+.bottom-blocks {
   font-family: 'Roboto', Arial, sans-serif;
   position: relative;
-  float: left;
   overflow: hidden;
-  margin: 10px 1%;
+  margin-right: auto;
+  margin-left: auto;
   min-width: 250px;
   max-width: 310px;
-  width: 100%;
   background-color: #ffffff;
   border-radius: 5px;
   border-top: 5px solid #70ad77;
@@ -19,19 +18,19 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.snip1519 *,
-.snip1519 *:before {
+.bottom-blocks *,
+.bottom-blocks *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.snip1519 figcaption {
+.bottom-blocks figcaption {
   padding: 12% 10% 14%;
 }
 
-.snip1519 i {
+.bottom-blocks i {
   font-size: 54px;
   color: #fff;
   width: 80px;
@@ -44,7 +43,7 @@
   display: inline-block;
 }
 
-.snip1519 h3 {
+.bottom-blocks h3 {
   color: #3c3c3c;
   font-size: 20px;
   font-weight: 300;
@@ -52,13 +51,13 @@
   margin: 10px 0;
 }
 
-.snip1519 p {
+.bottom-blocks p {
   font-size: 0.9em;
   font-weight: 300;
   margin: 0 0 20px;
 }
 
-.snip1519 .button {
+.bottom-blocks .button {
   text-decoration: none;
   color: #777;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -69,7 +68,7 @@
   z-index: 1;
 }
 
-.snip1519 .button:before {
+.bottom-blocks .button:before {
   background-color: #70ad77;
   position: absolute;
   top: 100%;
@@ -81,17 +80,13 @@
   opacity: 0;
 }
 
-.snip1519 .button:hover {
+.bottom-blocks .button:hover {
   color: #fff;
 }
 
-.snip1519 .button:hover:before {
+.bottom-blocks .button:hover:before {
   top: 0;
   opacity: 1;
-}
-
-body {
-	background-color: white;
 }
 
 .page {
@@ -99,15 +94,16 @@ body {
 }
 
 #search-field {
-	padding: 70px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+#advanced-search-btn {
+	padding-top: 10px;
 }
 
 .jumbotron {
 	background-color: white;
-}
-
-#adv-btn {
-	padding-top: 10px;
 }
 
 #footer {
@@ -116,6 +112,46 @@ body {
 }
 
 #notes {
-	margin-top: -30px;
 	padding-bottom: 40px;
+}	
+
+#lorem {
+  padding-bottom: 100px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+#placeholder {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 1px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    background-color: #dedfe0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
