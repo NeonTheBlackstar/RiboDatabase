@@ -4,74 +4,112 @@
   <meta charset="utf-8" />
   <title>Test</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Browser</a></li>
-            <li><a href="#">Searcher</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-check"></span> Register</a></li>
-          </ul>
+  <div class="page">
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Browser</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-check"></span> Register</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>  
+      </nav>
+    </header>  
 
-
-  <div class="container" id="search-field">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 col-xs-10 com-xs-offset-1">
-        <div class="input-group input-group-lg">
-          <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
+    <div class="jumbotron">
+      <div class="container" id="search-field">
+        <div class="col-md-8 col-md-offset-2 col-xs-10 com-xs-offset-1">
+          <div class="input-group input-group-lg" id="test">
+            <input type="text" class="form-control" placeholder="Search for..." />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+          </div>
+          <div class="container" id="adv-btn">
+            <div class="row">
+              <div id="filter-panel" class="collapse filter-panel">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <form class="form-inline" role="form">
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label><input type="checkbox"> First option</label>
+                        </div>
+                        <div class="checkbox" style="margin-left: 10px; margin-right: 10px;">
+                          <label><input type="checkbox"> Second option</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Thrid option</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#filter-panel" id="adv-search-btn">
+                  <span class="glyphicon glyphicon-cog"></span> Advanced Search
+                </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 col-md-xs-12" align="center">
-        <div class="jumbotron" id="A">
-          <h2>H1</h2>
-          <p>1.</p>
-        </div>
+    <div class="container" id="notes">
+      <div class="col-md-4">
+        <figure class="snip1519">
+          <figcaption><i class="fa fa-info"></i>
+            <h3>About</h3>
+            <p>You can read about the project.</p><a href="#" class="button">More</a>
+          </figcaption>
+        </figure>
       </div>
-      <div class="col-md-4 col-md-xs-12" align="center">
-        <div class="jumbotron" id="B">
-          <h2>H2</h2>
-          <p>2.</p>
-        </div>
+      <div class="col-md-4">
+        <figure class="snip1519">
+          <figcaption><i class="fa fa-database"></i>
+            <h3>Database</h3>
+            <p>Informations about riboswitches</p><a href="#" class="button">Browse</a>
+          </figcaption>
+        </figure>
       </div>
-      <div class="col-md-4 col-md-xs-12" align="center">
-        <div class="jumbotron" id="C">
-          <h2>H3</h2>
-          <p>3</p>
-        </div>
+      <div class="col-md-4">
+        <figure class="snip1519">
+          <figcaption><i class="fa fa-envelope-o"></i>
+            <h3>Contact</h3>
+            <p>Stay in touch with us.</p><a href="#" class="button">Contact</a>
+          </figcaption>
+        </figure>        
       </div>
     </div>
+
+    <div class="footer navbar-fixed">
+    <footer id="footer">
+        <div class="container text-center">
+          Copyrights &copy; 2016 All Rights Reserved
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </body>
 </html>
