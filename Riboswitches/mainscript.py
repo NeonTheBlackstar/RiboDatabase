@@ -55,6 +55,7 @@ def aptamers(genome):
     bedfile = open("./Results/{0}.aptamers.bed".format(genome), "w")
 
     for i in range(0, len(lista)):
+        
         os.system("./Programs/cmsearch ./Alignments/{0} ./Genomes/{1}.fasta > ./Results/processing.txt".format(lista[i], genome))
 
         processingfile = open("./Results/processing.txt", "r")
@@ -71,7 +72,7 @@ def aptamers(genome):
         processingfile.close()
     bedfile.close()
     
-    os.system("rm ./Results/processing.txt")
+    #os.system("rm ./Results/processing.txt")
     os.system('sort -nk2,2 ./Results/{0}.aptamers.bed -o ./Results/aptamers.sorted.bed'.format(genome))
     os.system('rm ./Results/{0}.aptamers.bed'.format(genome))
     os.system('mv ./Results/aptamers.sorted.bed ./Results/{0}.aptamers.bed'.format(genome))
@@ -261,10 +262,10 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 
         
 
-#aptamers(sys.argv[1])
+aptamers(sys.argv[1])
 #promoters(sys.argv[1])
 #terminators(sys.argv[1])
-__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
+#__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
 #bedtools(sys.argv[1])
 #comparison(sys.argv[1])
 

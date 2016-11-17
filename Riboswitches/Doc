@@ -16,3 +16,8 @@ Do wyszukiwania promotorów użyty został program PromPredict. Jego skutecznoś
 Po otrzymaniu wyników z programu PromPredict wycyiągnęliśmy dane odnośnie promotora: pozycję startu, pozycję końca, numer identyfikacyjny (który był jednocześnie miejscem startu) oraz poziom jakości wyniku (PromPredict ocenia wyniki w skali 1-5). Tak otrzymane dane zapisywane są do bliku bed.
 
 Nowoutworzony plik bed jest używany w programie bedtools closest. 
+
+
+Aptamery
+
+Na począku uruchamiamy program (cmbuild) wczytujący alignmenty (?) rodzin ryboprzełączników w celu zbudowania dla każdej modelu kowariancyjnego. Kowariancja to wartość określająca stopień korelacji pomiędzy dwoma zmiennymi losowymi. Jeśli kowariancja jest duża (wartości 1-0) to jest to sygnał dla nas, że możem używać wartości jednej zmiennej losowej do przewidywania wartości drugiej. 
