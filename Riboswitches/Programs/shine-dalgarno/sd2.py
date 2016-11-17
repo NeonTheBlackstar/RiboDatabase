@@ -45,6 +45,14 @@ def printToFasta(handle, seq, x, y, strand, id, additional, len_arg):
 		
 	handle.write(seq.split('\t')[0]+'\n')
 
+'''
+Arguments:
+1. GFF file
+2. Genom sequence in Fasta
+3. Nucleotides before Start
+4. Nucleotides after Start
+5. Meme output file to extract subsequence basing on motifs' positions
+'''
 def getFasta(*arg):
 	doFilter = False
 	fromAptamers = False
