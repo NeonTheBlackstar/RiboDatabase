@@ -1,17 +1,20 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
 
 from .models import Record
 
 
 def index(request):
-	template = loader.get_template('database/index.html')
-	return HttpResponse(template.render(request))
-
+	return render(request, 'database/index.html')
 
 def searcher(request):
+	return render(request, 'database/searcher.html')
+
+
+
  
-	recordList = []
+	'''recordList = []
 	
 	for e in Record.objects.order_by('id'):
 		dic = {
@@ -30,4 +33,4 @@ def searcher(request):
 	}
 
 	template = loader.get_template('database/searcher.html')
-	return HttpResponse(template.render(context, request))
+	return HttpResponse(template.render(context, request))'''
