@@ -4,6 +4,7 @@ import sys
 import linecache
 sys.path.insert(0, './Programs/shine-dalgarno')
 import __init__
+from datetime import datetime, timedelta
 # python3 mainscript.py NC_000964.3
 
 def promoters(promoter_id):
@@ -261,8 +262,11 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
             final.write('Unknown\n')
 
         
-
+a = datetime.now()
 aptamers(sys.argv[1])
+b = datetime.now()
+c = b - a
+print(c.microseconds)
 #promoters(sys.argv[1])
 #terminators(sys.argv[1])
 #__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
