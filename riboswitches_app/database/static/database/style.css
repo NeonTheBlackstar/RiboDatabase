@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
+@media screen and (min-width: 768px) {
+    .dropdown-menu a {
+    color: black !important;
+    }
+}
+
 .bottom-blocks {
     font-family: 'Roboto', Arial, sans-serif;
     position: relative;
@@ -108,4 +114,33 @@
 #placeholder {
     margin-top: 50px;
     width: 100%;
+}
+
+#myNavbar ul li a {
+    position: relative;
+    text-decoration: none;
+    -webkit-transition: 0.15s ease;
+    transition: 0.15s ease;
+}
+
+#myNavbar ul li a:hover {
+    color: white;
+}
+
+#myNavbar ul li a:before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.15s ease-in-out 0s;
+
+}
+
+#myNavbar ul li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
 }
