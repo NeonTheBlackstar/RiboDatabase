@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Ligand
+from .models import Ligand, RiboFamily, Record
 
 def index(request):
 
@@ -15,6 +15,11 @@ def browser(request):
 
 	return render(request, 'database/browser.html', context)
 
-def detail(request, name):
+def detail(request, ligand_name):
 
-	l = Ligand.objects.get()
+	riboswitch_ligand = Ligand.objects.get(name = ligand_name)
+	context = {
+		'riboswitch_ligand': riboswitch_ligand,
+	}
+
+	return render(request, 'database/detail.html', context)
