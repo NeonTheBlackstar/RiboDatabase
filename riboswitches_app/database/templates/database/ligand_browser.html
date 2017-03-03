@@ -1,0 +1,18 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}
+  Browse
+{% endblock %}
+
+{% block content %}
+
+
+	<div class="col-xs-12">
+		{% for ligand in ligand_list %}
+			<h1><a href="{% url 'database:ligand_detail' ligand.name %}">{{ligand.name}}</a></h1>
+		{% endfor %}
+	</div>
+
+
+{% endblock %}

@@ -3,29 +3,63 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Test</title>
-    <link rel="stylesheet" type="text/css" href="{% static "database/css/bootstrap.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "database/css/bootstrap-theme.css" %}">
+    <title>RiboDB | {% block _title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static "database/style.css" %}" />
     <script src="{% static "database/script.js" %}"></script>
   </head>
   <body>
-    <div class="page">
+    <div id="wrapper">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="{% url 'database:index' %}">RiboDB</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'database:searcher' %}">Search</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Browse
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'database:ligand_browser' %}">By ligand</a></li>
+                  <li><a href="{% url 'database:organism_browser' %}">By organism</a></li>
+                  <li><a href="#">By aptamer</a></li>
+                </ul>
+              </li>
+              <li><a href="#" id="about">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      {% block content %} 
 
-      {% include "database/navbar.html" %}
-      {% block index_content %} {% endblock %}
+      {% endblock %}
 
-      <div class="footer navbar-fixed">
-        <footer id="footer">
-          <div class="container text-center">
-            2016 &copy; Szymon Świergosz
+       <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                  <p class="text-muted">2017 &copy; Combio</p>
+                </div>
+            </div>
           </div>
         </footer>
-      </div>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

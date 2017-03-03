@@ -1,10 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
-@media screen and (min-width: 768px) {
-    .dropdown-menu a {
-    color: black !important;
-    }
+html {
+   height: 100%;
+}
+
+body {
+    padding-top: 60px;
+    height: 100%;
+}
+
+#wrapper {
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    background-color: #eaecef;
+    position:absolute;
+    bottom:0;
+    width:100%;
 }
 
 .bottom-blocks {
@@ -85,9 +101,7 @@
     top: 0;
     opacity: 1;
 }
-.page {
-    margin-top: 20px;
-}
+
 #search-field {
     padding-top: 80px;
     padding-bottom: 50px;
@@ -98,10 +112,7 @@
 .jumbotron {
     background-color: white;
 }
-#footer {
-    background-color: #eaecef;
-    padding: 10px;
-}
+
 #notes {
     padding-bottom: 40px;
 }
@@ -121,11 +132,7 @@
     text-decoration: none;
     -webkit-transition: 0.15s ease;
     transition: 0.15s ease;
-}
-
-#myNavbar ul li a:hover {
-    color: white;
-}
+} 
 
 #myNavbar ul li a:before {
     position: absolute;

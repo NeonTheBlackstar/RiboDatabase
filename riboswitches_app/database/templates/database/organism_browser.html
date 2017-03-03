@@ -1,0 +1,17 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}
+  Browse
+{% endblock %}
+
+{% block content %}
+
+	<div class="col-xs-12">
+		{% for organism in organism_list %}
+			<h1><a href="{% url 'database:organism_detail' organism.scientific_name %}">{{ organism.scientific_name }}</a></h1>
+		{% endfor %}
+	</div>
+
+
+{% endblock %}

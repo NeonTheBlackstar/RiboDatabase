@@ -1,0 +1,30 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}
+  Details
+{% endblock %}
+
+{% block content %}
+		<div class="container">
+			<div class="col-xs-12">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Gene</th>
+						</tr>
+					</thead>
+					{% for rr in riboswitch_record %}
+						<tbody>
+							<tr>
+								<td>{{ rr.family.name }}</td>
+								<td>{{ rr.gene.name }}</td>	
+							</tr>
+						</tbody>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+
+{% endblock %}

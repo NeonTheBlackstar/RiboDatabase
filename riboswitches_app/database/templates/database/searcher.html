@@ -1,7 +1,12 @@
+{% extends 'database/base.html' %}
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static "database/css/bootstrap.min.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "database/css/bootstrap-theme.min.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "database/style.css" %}" />
 
-{% include "database/navbar.html" %}
-{% include "database/searcher_bar.html" %}
+{% block _title %}
+  Search
+{% endblock %}
+
+{% block content %}
+
+	{% include "database/searcher_bar.html" %}
+
+{% endblock %}
