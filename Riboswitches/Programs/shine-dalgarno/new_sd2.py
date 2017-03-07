@@ -19,12 +19,36 @@ def printSeq(seq, x, y, strand, beforeStart, afterStart): # Zabezpieczyc przed w
 	shdl = ''
 	if strand == '+':
 	# In + strand start codon is at x
-		shdl += seq[x-beforeStart:x+afterStart]
+		if x-beforeStart < 0:
+			shdl += seq[0:x+afterStart]
+
+			#print("1[{}, {}]".format(0, x+afterStart))
+		elif x+afterStart >= len(seq):
+			shdl += seq[x-beforeStart:len(seq) - 1]
+
+			#print("2[{}, {}]".format(x-beforeStart, len(seq) - 1))
+		else:
+			shdl += seq[x-beforeStart:x+afterStart]	
+
+			#print("3[{}, {}]".format(x-beforeStart,x+afterStart))	
 	if strand == '-':
 	# In - strand start codon is at y
-		shdl += seq[y-afterStart:y+beforeStart]
+		if y-afterStart < 0:
+			shdl += seq[0:y+beforeStart]
+
+			#print("1[{}, {}]".format(0, y+beforeStart))
+		elif y+beforeStart >= len(seq):
+			shdl += seq[y-afterStart:len(seq) - 1]
+
+			#print("2[{}, {}]".format(y-afterStart, len(seq) - 1))
+		else:
+			shdl += seq[y-afterStart:y+beforeStart]
+
+			#print("3[{}, {}]".format(y-afterStart,y+beforeStart))
+
 		shdl = translate(shdl)
 		shdl = shdl[::-1]
+
 	shdl += '\t'+str(x)+'\t'+str(y)+'\t'+strand
 	return shdl
 
@@ -94,17 +118,16 @@ def getFasta(*arg):
 	for record in GFF.parse(handle):
 		for feature in record.features:
 			if feature.type == 'gene':
-				### PREVIOUS GENE ###
-				if aptamerInterval != None:
-					previous_gene = feature
-				
+				### Reset modified values ###
+				beforeStart = getParamValue('-before',arg)
+				afterStart = getParamValue('-after',arg)
+
 				# Start and end values are related to GFF notation, it does not represent the real direction of a strand.
-				start = feature.location.start
+				start = feature.location.start # Automatically substract 1, so it matches ID array notation
 				end = feature.location.end
 				seqSymbol = '+' if feature.strand == 1 else '-'
 
-				#print("debug")
-				#input()
+				preBefore = beforeStart
 
 				if previous_gene != None:
 					previous_strand = '+' if previous_gene.strand == 1 else '-'
@@ -113,12 +136,15 @@ def getFasta(*arg):
 
 					if seqSymbol == previous_strand:
 						if seqSymbol == '+':
-							if previous_start + aptamerInterval > start - beforeStart:
+							if previous_start + aptamerInterval > start - beforeStart: # Cos jest zle???
 								beforeStart = start - previous_start + aptamerInterval
 
 						if seqSymbol == '-':
-							if previous_start - aptamerInterval > start + beforeStart:
+							if previous_end - aptamerInterval < end + beforeStart:
 								beforeStart = previous_end - aptamerInterval - end
+
+				#if seqSymbol == '+' and beforeStart > 500:
+				#	print("previous {} now {}".format(preBefore,beforeStart))
 
 				if gene_filter != None:
 					filterFound = False
@@ -147,8 +173,13 @@ def getFasta(*arg):
 							break 
 					if found == False:
 						continue
+
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
 				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], '', exhead)
-				counter += 1			
+				counter += 1
+
+				### PREVIOUS GENE ###
+				if aptamerInterval != None:
+					previous_gene = feature
 	handle.close()
 	out_fasta.close()

@@ -24,13 +24,16 @@ def aptamers(genome):
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
 	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
+	# Remove previous file if there's any
+	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 	# Sorted by ascending start position on strand +
 	os.system("awk '$7 == \"+\"' ./Genomes/byStrand.gff | sort -k4,4n >> ./Genomes/{0}_sorted.gff".format(genome))
 	# Sorted by descending start position on strand -
 	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k4,4nr >> ./Genomes/{0}_sorted.gff".format(genome))
 
 	''' Create multiple fasta file of propable aptamer regions '''
-	new_sd2.getFasta("-gff", "./Genomes/{0}.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
+	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
+	#new_sd2.getFasta("-gff", "./Genomes/temp.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
 	
 	print("debug") ### TU SKONCZYLEM
 	return
@@ -57,7 +60,7 @@ def aptamers(genome):
 	#os.system("rm ./Results/processing.txt")
 	os.system('sort -k2,2n ./Results/{0}.aptamers.bed -o ./Results/aptamers.sorted.bed'.format(genome))
 	os.system('rm ./Genomes/byStrand.gff')
-	os.system('rm ./Genomes/{1}_sorted.gff')
+	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 	os.system('rm ./Results/{0}.aptamers.bed'.format(genome))
 	os.system('mv ./Results/aptamers.sorted.bed ./Results/{0}.aptamers.bed'.format(genome))
 
