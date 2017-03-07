@@ -33,31 +33,32 @@ def aptamers(genome):
 
 	''' Create multiple fasta file of propable aptamer regions '''
 	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
-	#new_sd2.getFasta("-gff", "./Genomes/temp.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
-	
-	print("debug") ### TU SKONCZYLEM
-	return
 
 	for i in range(0, len(lista)):
 		
 		#os.system("./Programs/cmsearch  --toponly ./Alignments/{0} ./out.fasta".format(lista[i], genome))
-		os.system("./Programs/cmsearch -o ./Results/processing.txt ./Alignments/{0} ./Genomes/{1}.fasta".format(lista[i], genome))
+		os.system("./Programs/cmsearch -o ./Results/processing.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome))
 
 		processingfile = open("./Results/processing.txt", "r")
 
 		for line in processingfile:
 			temp = line.split()
 			if len(temp) > 5:
-				if temp[1] == "!" and temp[5][0:1] == "g":
+				if temp[1] == "!" and temp[5][0:1] == "g": # Ten warunek nie dziala
 					if temp[8] == "-":
 						bedfile.write("{5}\t{1}\t{0}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[8], genome))
 					else:
 						bedfile.write("{5}\t{0}\t{1}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[8], genome))
 		counter = counter + 1
 		processingfile.close()
+
 	bedfile.close()
+
+	print("debug") ### TU SKONCZYLEM
+	return
 	
 	#os.system("rm ./Results/processing.txt")
+	#os.system("rm ./aptamer_windows.fasta")
 	os.system('sort -k2,2n ./Results/{0}.aptamers.bed -o ./Results/aptamers.sorted.bed'.format(genome))
 	os.system('rm ./Genomes/byStrand.gff')
 	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))

@@ -93,6 +93,7 @@ def getFasta(*arg):
 	meme_path = getParamValue('-meme',arg)					# ValueType: String
 	exhead = getParamValue('-exhead',arg)					# ValueType: Boolean
 	aptamerInterval = getParamValue('-aptamer',arg)			# ValueType: Integer
+	additional = ''	# Additional info for fasta header
 	meme = None
 	handle = None
 	h_fasta = None
@@ -110,6 +111,9 @@ def getFasta(*arg):
 	else:
 		fileName = 'ribsw_pos_window'
 
+	if aptamerInterval != None:
+		fileName = 'aptamer_windows'
+
 	out_fasta = open(fileName + '.fasta', 'w')
 	sequence = getSeq(h_fasta)
 	h_fasta.close()
@@ -121,6 +125,7 @@ def getFasta(*arg):
 				### Reset modified values ###
 				beforeStart = getParamValue('-before',arg)
 				afterStart = getParamValue('-after',arg)
+				additional = ''
 
 				# Start and end values are related to GFF notation, it does not represent the real direction of a strand.
 				start = feature.location.start # Automatically substract 1, so it matches ID array notation
@@ -137,14 +142,18 @@ def getFasta(*arg):
 					if seqSymbol == previous_strand:
 						if seqSymbol == '+':
 							if previous_start + aptamerInterval > start - beforeStart: # Cos jest zle???
-								beforeStart = start - previous_start + aptamerInterval
+								beforeStart = start - (previous_start + aptamerInterval)
 
 						if seqSymbol == '-':
 							if previous_end - aptamerInterval < end + beforeStart:
-								beforeStart = previous_end - aptamerInterval - end
+								beforeStart = (previous_end - aptamerInterval) - end
 
-				#if seqSymbol == '+' and beforeStart > 500:
-				#	print("previous {} now {}".format(preBefore,beforeStart))
+						additional = '{}|{}'.format(beforeStart, afterStart)
+
+				'''if seqSymbol == '+' and beforeStart > 500:
+					print("PREV Start {} End {} Symbol {}".format(previous_start, previous_end, previous_strand))
+					print("ACTUAL Start {} End {} Symbol {}".format(start, end, seqSymbol))
+					print("previous before {} now before {}\n".format(preBefore,beforeStart))'''
 
 				if gene_filter != None:
 					filterFound = False
@@ -175,7 +184,7 @@ def getFasta(*arg):
 						continue
 
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
-				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], '', exhead)
+				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead)
 				counter += 1
 
 				### PREVIOUS GENE ###
