@@ -17,6 +17,7 @@ class Record(models.Model):
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
 	
 	name = models.CharField('nazwa', max_length = 20)
+	#id dodac
 	EFFECT_CHOICES = ( 
 		('+', 'ACTIVATION'),
 		('.', 'UNKNOWN'),
@@ -41,6 +42,7 @@ class Aptamer(models.Model): #14 dodaję nową encję
 	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')
 	structure = models.OneToOneField('Structure2D', null = True)
 	switch = models.ForeignKey('Record')#, related_name = "aptamer")
+	# pole id aptameru w ryboswitchu
 
 	def __str__(self):
 		return 'Apt: {} |{}| |{}|'.format(self.sequence, self.position, self.structure)
@@ -70,7 +72,7 @@ class Structure3D(models.Model):
 		return 'Str3D: {}'.format(self.pdbid)
 
 
-class RiboFamily(models.Model):
+class RiboFamily(models.Model): # w record taka sama nazwa !
 	''' RiboClass podlinkowane '''
 	''' Structure3D podlinkowane '''
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
@@ -135,6 +137,7 @@ class Ligand(models.Model):
 	name = models.CharField('nazwa', max_length = 20, primary_key = True)
 	description = models.TextField('opis')
 	image_name = models.TextField('nazwa pliku')
+	# baza ligandow
 
 	def __str__(self):
 		return 'Li: |{}| {} {} {}'.format(self.ligand_class, self.name, self.description, self.image_name)

@@ -1,0 +1,296 @@
+# cmsearch :: search CM(s) against a sequence database
+# INFERNAL 1.1.1 (July 2014)
+# Copyright (C) 2014 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query CM file:                         ./Alignments/RF00162.cm
+# target sequence database:              ./Genomes/NC_000964.3.fasta
+# output directed to file:               ./Results/processing2.txt
+# number of worker threads:              4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       SAM  [CLEN=108]
+Accession:   RF00162
+Description: SAM riboswitch (S box leader)
+Hit scores:
+ rank     E-value  score  bias  sequence                       start     end   mdl trunc   gc  description
+ ----   --------- ------ -----  ---------------------------- ------- -------   --- ----- ----  -----------
+  (1) !     1e-21   98.0   0.0  gi|225184640|emb|AL009126.3| 1180802 1180685 -  cm    no 0.50  Bacillus subtilis subsp. subtilis str. 168 comp
+  (2) !   4.7e-21   95.6   0.0  gi|225184640|emb|AL009126.3| 1258304 1258424 +  cm    no 0.46  Bacillus subtilis subsp. subtilis str. 168 comp
+  (3) !   5.6e-20   91.5   0.0  gi|225184640|emb|AL009126.3| 3364503 3364397 -  cm    no 0.49  Bacillus subtilis subsp. subtilis str. 168 comp
+  (4) !   1.1e-19   90.4   0.0  gi|225184640|emb|AL009126.3| 3997775 3997881 +  cm    no 0.49  Bacillus subtilis subsp. subtilis str. 168 comp
+  (5) !   1.9e-18   85.7   0.0  gi|225184640|emb|AL009126.3| 2025251 2025160 -  cm    no 0.48  Bacillus subtilis subsp. subtilis str. 168 comp
+  (6) !   1.3e-17   82.6   0.0  gi|225184640|emb|AL009126.3| 3999166 3999272 +  cm    no 0.48  Bacillus subtilis subsp. subtilis str. 168 comp
+  (7) !   2.9e-17   81.2   0.0  gi|225184640|emb|AL009126.3| 1426876 1426976 +  cm    no 0.51  Bacillus subtilis subsp. subtilis str. 168 comp
+  (8) !   5.4e-17   80.2   0.0  gi|225184640|emb|AL009126.3| 1630115 1630220 +  cm    no 0.45  Bacillus subtilis subsp. subtilis str. 168 comp
+  (9) !   8.6e-16   75.6   0.0  gi|225184640|emb|AL009126.3| 3129333 3129195 -  cm    no 0.48  Bacillus subtilis subsp. subtilis str. 168 comp
+ (10) !   1.5e-14   71.0   0.0  gi|225184640|emb|AL009126.3| 1385891 1385736 -  cm    no 0.51  Bacillus subtilis subsp. subtilis str. 168 comp
+ (11) !   1.8e-12   63.1   0.0  gi|225184640|emb|AL009126.3| 1424683 1424527 -  cm    no 0.49  Bacillus subtilis subsp. subtilis str. 168 comp
+ ------ inclusion threshold ------
+ (12) ?       1.2   18.4   0.0  gi|225184640|emb|AL009126.3| 1844849 1844958 +  cm    no 0.45  Bacillus subtilis subsp. subtilis str. 168 comp
+
+
+Hit alignments:
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (1) !     1e-21   98.0   0.0  cm        1      108 []     1180802     1180685 - .. 0.98    no 0.50
+
+                                                                                                                 NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______..........___>> CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau..........auagg 63     
+                                       :UCUUAUCAAGAGA:GC+GAGGGACUGGCCC+A GAAGC:UC:GCAACC::: ++A+           AU ::
+  gi|225184640|emb|AL009126.3| 1180802 UUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGgcgaucagccAUGAC 1180730
+                                       ****************************************************9999889999999999889** PP
+
+                                                                                     NC
+                                       >-->>>>>>,,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                           SAM      64 gAaGGUGCcAAuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108    
+                                       :AAGGUGC:AA+UCC+GC::G U  ++ + C::G+AAGAUAAGA:
+  gi|225184640|emb|AL009126.3| 1180729 CAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAA 1180685
+                                       ********************************************* PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (2) !   4.7e-21   95.6   0.0  cm        1      108 []     1258304     1258424 + .. 0.96    no 0.46
+
+                                                                                                                 NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______...........___> CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau...........auag 62     
+                                       :UCUUAUC  GAGAGG:GGAGGGACUGGCCCU  GAA:CCUC:GCAACC::CU+ ++U           A  G
+  gi|225184640|emb|AL009126.3| 1258304 UUCUUAUCGUGAGAGGUGGAGGGACUGGCCCUUAGAAACCUCAGCAACCGGCUUGUUUugcauuugcaaAGCG 1258376
+                                       *****************************************************9999889999999888888* PP
+
+                                                                                        NC
+                                       >>-->>>>>>,,,,,,,,<<<<_______..__>>>>,,,)))))))) CS
+                           SAM      63 ggAaGGUGCcAAuUCCugCcggauauuuu..uuccgGaaAgAUaAgag 108    
+                                       ::AAGGUGC:AA+UCC+GC::G  +UUUU  U C::G+AAGAUAAGA:
+  gi|225184640|emb|AL009126.3| 1258377 CCAAGGUGCUAAAUCCAGCAAGCGUUUUUuaUGCUUGGAAGAUAAGAA 1258424
+                                       **********************99977777799*************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (3) !   5.6e-20   91.5   0.0  cm        1      108 []     3364503     3364397 - .. 1.00    no 0.49
+
+                                                                                        v             v          NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>, CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcA 73     
+                                       CUCU:AUCAAGAGAGG:GGAGGGA+  GCCCUAUGAA:CC CGGCAACC :C+A A U U+G: A GGUGCCA
+  gi|225184640|emb|AL009126.3| 3364503 CUCUUAUCAAGAGAGGUGGAGGGAAGUGCCCUAUGAAGCC-CGGCAACCAUCAACACUGUUGAAAUGGUGCCA 3364432
+                                       ****************************************.******************************** PP
+
+                                                                           NC
+                                       ,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                           SAM      74 AuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108    
+                                       AUUC   C ::   UU +  :: GAAAGAU:AGAG
+  gi|225184640|emb|AL009126.3| 3364431 AUUCACACGAAGCGUUCAGCUUUGAAAGAUGAGAG 3364397
+                                       *********************************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (4) !   1.1e-19   90.4   0.0  cm        1      108 []     3997775     3997881 + .. 0.99    no 0.49
+
+                                       v                                                v             v          NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>, CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcA 73     
+                                        :CU:AUCAAGAGAGG:GGAGGGACUGGCCCUAUGA :CC C:GCAACC C: +U+ +A+ :G A GGUGC:A
+  gi|225184640|emb|AL009126.3| 3997775 ACCUUAUCAAGAGAGGUGGAGGGACUGGCCCUAUGAUACC-CGGCAACCGCUGUUUCAAACAGAAUGGUGCUA 3997846
+                                       ****************************************.******************************** PP
+
+                                                                         v NC
+                                       ,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                           SAM      74 AuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108    
+                                       A+UCCU ::G:A AUU   U:C::+ AGAU:AG: 
+  gi|225184640|emb|AL009126.3| 3997847 AAUCCUUAAGAACAUUGCGUUCUUGCAGAUGAGGC 3997881
+                                       *********************************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (5) !   1.9e-18   85.7   0.0  cm        1      108 []     2025251     2025160 - .. 0.95    no 0.48
+
+                                                                                                                 NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<~~~~~~-->>>>>>,,,,,,,,<< CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACC*[15]*AaGGUGCcAAuUCCugCc 82     
+                                       :U :UAUC+AGAGAGG:GGAGGGACUGGCCCUAUGAA:CCUCGGCAAC:      A :GUGCCAAUUCC+GC:
+  gi|225184640|emb|AL009126.3| 2025251 UUUCUAUCCAGAGAGGUGGAGGGACUGGCCCUAUGAAACCUCGGCAACA*[ 2]*AUUGUGCCAAUUCCAGCA 2025183
+                                       ************************************************9...4..669*************** PP
+
+                                                                  NC
+                                       <<_________>>>>,,,)))))))) CS
+                           SAM      83 ggauauuuuuuccgGaaAgAUaAgag 108    
+                                       :G      U+ C::GAAAGAUA: A:
+  gi|225184640|emb|AL009126.3| 2025182 AGC---GCUAGCUUGAAAGAUAGGAA 2025160
+                                       **9...55567*************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (6) !   1.3e-17   82.6   0.0  cm        1      108 []     3999166     3999272 + .. 0.94    no 0.48
+
+                                       v                                                v             v          NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>, CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcA 73     
+                                        :CUUAUCAAGAGAGG:GGAGGGACUGGCCCU  GA :CC C:GCAACC C: +U+  A+ :G A GGUGC:A
+  gi|225184640|emb|AL009126.3| 3999166 UCCUUAUCAAGAGAGGUGGAGGGACUGGCCCUGCGAUACC-CGGCAACCGCUGUUU--AACAGAAUGGUGCUA 3999235
+                                       ****************************************.********9998887..77888999******* PP
+
+                                              v                 v          v NC
+                                       ,,,,,,,<<<<_______..__>>>>,,,)))))))) CS
+                           SAM      74 AuUCCugCcggauauuuu..uuccgGaaAgAUaAgag 108    
+                                       A+UCCU  :G:  A+U +    :C: +AAGAUAAG: 
+  gi|225184640|emb|AL009126.3| 3999236 AAUCCUUUAGAGCAAUGAuuGCUCUUGAAGAUAAGGU 3999272
+                                       *********99988655566889************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (7) !   2.9e-17   81.2   0.0  cm        1      108 []     1426876     1426976 + .. 0.92    no 0.51
+
+                                       v                                                  vv         vv          NC
+                                       ((((((((,,,,,.,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>> CS
+                           SAM       1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCc 72     
+                                        UCUUAUCAAGAG AGGC+GAGGGAC  GCCC+AUGAAGCC C:GCAACC:  U+++   +A  :A GGUGC:
+  gi|225184640|emb|AL009126.3| 1426876 UUCUUAUCAAGAGcAGGCAGAGGGACGAGCCCGAUGAAGCC-CGGCAACCGACUUAU---AAAGCACGGUGCU 1426944
+                                       *****************************************.********6544443...2577999****** PP
+
+                                                                          v NC
+                                       ,,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                           SAM      73 AAuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108    
+                                       AAUUC UGC:G:+    +   :C:GA AGAUAAGA 
+  gi|225184640|emb|AL009126.3| 1426945 AAUUCUUGCAGCU----AGCGGCUGAGAGAUAAGAU 1426976
+                                       ************8....5567*************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (8) !   5.4e-17   80.2   0.0  cm        1      108 []     1630115     1630220 + .. 0.93    no 0.45
+
+                                       vv                    v     v                                             NC
+                                       ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>, CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcA 73     
+                                         CUUAUCAAGAG GGC GAGG ACUGG CCUAUGAAGCC C:GCAACC: C+++   +U+G :A GGUGC:A
+  gi|225184640|emb|AL009126.3| 1630115 AACUUAUCAAGAGCGGCUGAGGGACUGGACCUAUGAAGCC-CGGCAACCUGCAUAG--UUUGUAA-GGUGCUA 1630183
+                                       ****************************************.********7766665..5566666.******* PP
+
+                                                                          vv NC
+                                       ,,,,,,,<<<<_______..__>>>>,,,)))))))) CS
+                           SAM      74 AuUCCugCcggauauuuu..uuccgGaaAgAUaAgag 108    
+                                        UUCC+GC:::AU ++UU  +U:::GAAAGAUAAG  
+  gi|225184640|emb|AL009126.3| 1630184 CUUCCAGCAAAAUGAAUUccAUUUUGAAAGAUAAGGG 1630220
+                                       ************9988888899*************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (9) !   8.6e-16   75.6   0.0  cm        1      108 []     3129333     3129195 - .. 0.92    no 0.48
+
+                                                                                                                 NC
+                                       ((((((((,,,,,.,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______.............. CS
+                           SAM       1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau.............. 58     
+                                       CUCUUAUC+ GAG +GGCGGAGGGAC+GGCCCUAUGAAGCC C:GCAACC:::U+ + U              
+  gi|225184640|emb|AL009126.3| 3129333 CUCUUAUCCCGAGcUGGCGGAGGGACAGGCCCUAUGAAGCC-CAGCAACCGGUUUCUCUguuauuuauuaugu 3129262
+                                       *****************************************.***********99998888888888888888 PP
+
+                                                                                                           NC
+                                       .............___>>>-->>>>>>,,,,,.,,,<<<<_______...__>>>>,,,)))))))) CS
+                           SAM      59 .............auagggAaGGUGCcAAuUC.CugCcggauauuuu...uuccgGaaAgAUaAgag 108    
+                                                    A A:::AAGGUGC:AA     UGC::G U+ U+U   U C::GA  GAUAAGAG
+  gi|225184640|emb|AL009126.3| 3129261 ucaacugagugagACAACCAAGGUGCUAACCUgUUGCAAGGUUGUAUgauUCCUUGAGCGAUAAGAG 3129195
+                                       8888888888888778*************9876999****999777778899*************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+ (10) !   1.5e-14   71.0   0.0  cm        1      108 []     1385891     1385736 - .. 0.89    no 0.51
+
+                                                                                           v                     NC
+                                       ((((((((,,,,,.,<<<---<<<_____>>>------>>>.,,<<<-<<<<<<______............. CS
+                           SAM       1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCC.uCgGCAACCcccuauaau............. 58     
+                                       CUCU:AUC AGAG +GG: GA GGA+UGGCC U UGA :CC +C:GCAACC: C+ UAAU             
+  gi|225184640|emb|AL009126.3| 1385891 CUCUUAUCGAGAGuUGGGCGAGGGAUUGGCCUUUUGACCCCaACAGCAACCGACCGUAAUaccauugugaaau 1385819
+                                       *************88888********************88878********9999998887888888888888 PP
+
+                                                                                v                                NC
+                                       .....................................___>>>-->>>>>>,,,,,,,,<<<<_________> CS
+                           SAM      59 .....................................auagggAaGGUGCcAAuUCCugCcggauauuuuuuc 94     
+                                                                            ++AG :A GGUGC:AAUUCC+ C:G:+    U U :
+  gi|225184640|emb|AL009126.3| 1385818 ggggcgcacugcuuuucgcgccgagacugaugucucaUAAGGCACGGUGCUAAUUCCAUCAGAU----UGUGU 1385750
+                                       8888888888888888888888888888888888888777***********************8....4567* PP
+
+                                                      NC
+                                       >>>,,,)))))))) CS
+                           SAM      95 cgGaaAgAUaAgag 108    
+                                       C:GA AGAU:AGAG
+  gi|225184640|emb|AL009126.3| 1385749 CUGAGAGAUGAGAG 1385736
+                                       ************** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+ (11) !   1.8e-12   63.1   0.0  cm        1      108 []     1424683     1424527 - .. 0.85    no 0.49
+
+                                                                                            v                    NC
+                                       ((((((((,,,,,.,<<<---<<<_.____>>>------>>>.,,<<<-<<<<<<______............ CS
+                           SAM       1 cucUuAUcaAGAG.aGGcgGAGGGA.cuGGCCCuaUGAAgCC.uCgGCAACCcccuauaau............ 58     
+                                       CUCUUAUC AGAG +GG: GA GGA +UGGCC U UGA :CC + :GCAACC: C+ UAAU            
+  gi|225184640|emb|AL009126.3| 1424683 CUCUUAUCGAGAGuUGGGCGAGGGAuUUGGCCUUUUGACCCCaAAAGCAACCGACCGUAAUuccauugugaaa 1424611
+                                       *************88899*********************998679*******999998888788888888888 PP
+
+                                                                                v                                NC
+                                       .....................................___>>>-->>>>>>,,,,,,,,.<<<<_________ CS
+                           SAM      59 .....................................auagggAaGGUGCcAAuUCCug.Ccggauauuuuuu 93     
+                                                                            ++AG :A GGUGC:AAUUCC+  C:G:+     U +
+  gi|225184640|emb|AL009126.3| 1424610 uggggcgcauuuuuuucgcgccgagacgcuggucucuUAAGGCACGGUGCUAAUUCCAUuCAGAU----CUGA 1424542
+                                       8888888888888888888888888888888888888777****************877266654....3344 PP
+
+                                                       NC
+                                       >>>>,,,)))))))) CS
+                           SAM      94 ccgGaaAgAUaAgag 108    
+                                       :C:GA AGAUAAGAG
+  gi|225184640|emb|AL009126.3| 1424541 UCUGAGAGAUAAGAG 1424527
+                                       5666689******** PP
+
+>> gi|225184640|emb|AL009126.3|  Bacillus subtilis subsp. subtilis str. 168 complete genome
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+ (12) ?       1.2   18.4   0.0  cm        1      108 []     1844849     1844958 + .. 0.81    no 0.45
+
+                                         v                                     v v             v v               NC
+                                       ((((((((,,,,,,<<<---~~~~~~-->>>,,<<<-<<<<<<______....___>>>-->>>>>>,,     CS
+                           SAM       1 cucUuAUcaAGAGaGGcgGA*[15]*AAgCCuCgGCAACCcccuauaau....auagggAaGGUGCcAA     74     
+                                       :U U: U:+AGAG :GC+GA      A GC:  GGCAACC : ++ ++U     +A :   GGUGCC A
+  gi|225184640|emb|AL009126.3| 1844849 UUAUCUUUCAGAGCAGCAGA*[31]*ACGCU--GGCAACCCUGAUGUUUgaag-AAAAAUGGGUGCCCA     1844939
+                                       *******************9...8..45777..*******6555555556664.3333445******76     PP
+
+                                                     v   NC
+                                       ~~~~~~,,,)))))))) CS
+                           SAM      75 *[23]*aaAgAUaAgag 108    
+                                             AAA:A :A A:
+  gi|225184640|emb|AL009126.3| 1844940 *[ 8]*AAAAAAGAAAG 1844958
+                                       ...7..*********** PP
+
+
+
+Internal CM pipeline statistics summary:
+----------------------------------------
+Query model(s):                                                  1  (108 consensus positions)
+Target sequences:                                                1  (8431212 residues searched)
+Target sequences re-searched for truncated hits:                 1  (1088 residues re-searched)
+Windows   passing  local HMM SSV           filter:            8884  (0.3409); expected (0.35)
+Windows   passing  local HMM Viterbi       filter:                  (off)
+Windows   passing  local HMM Viterbi  bias filter:                  (off)
+Windows   passing  local HMM Forward       filter:             180  (0.008157); expected (0.005)
+Windows   passing  local HMM Forward  bias filter:             170  (0.007738); expected (0.005)
+Windows   passing glocal HMM Forward       filter:              95  (0.005059); expected (0.005)
+Windows   passing glocal HMM Forward  bias filter:              91  (0.004803); expected (0.005)
+Envelopes passing glocal HMM envelope defn filter:              92  (0.001737); expected (0.005)
+Envelopes passing  local CM  CYK           filter:              15  (0.0002026); expected (0.0001)
+Total CM hits reported:                                         12  (0.0001685); includes 0 truncated hit(s)
+
+# CPU time: 7.12u 0.02s 00:00:07.14 Elapsed: 00:00:01.82
+//
+[ok]
