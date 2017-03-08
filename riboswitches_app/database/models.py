@@ -4,7 +4,6 @@ from django.db import models
 This are Django models which we use to create our database. Each database table is a class.
 ForeignKey, OneToOneField and ManyToManyField refer connections in database.
 We use default values temporary - they help us to fill database with sample values.
-
 '''
 
 class Record(models.Model):
@@ -17,6 +16,8 @@ class Record(models.Model):
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
 	
 	name = models.CharField('nazwa', max_length = 20)
+	#riboswitch_id = models.CharField('id', max_length = 20, primary_key = True)
+	#id dodac
 	EFFECT_CHOICES = ( 
 		('+', 'ACTIVATION'),
 		('.', 'UNKNOWN'),
@@ -41,6 +42,9 @@ class Aptamer(models.Model): #14 dodaję nową encję
 	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')
 	structure = models.OneToOneField('Structure2D', null = True)
 	switch = models.ForeignKey('Record')#, related_name = "aptamer")
+	# aptamer_id = models.CharField('id', max_length = 20, primary_key = True)
+	# RDB000008.1?
+	# pole id aptameru w ryboswitchu
 
 	def __str__(self):
 		return 'Apt: {} |{}| |{}|'.format(self.sequence, self.position, self.structure)
@@ -70,7 +74,7 @@ class Structure3D(models.Model):
 		return 'Str3D: {}'.format(self.pdbid)
 
 
-class RiboFamily(models.Model):
+class RiboFamily(models.Model): # w record taka sama nazwa !
 	''' RiboClass podlinkowane '''
 	''' Structure3D podlinkowane '''
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
@@ -84,7 +88,7 @@ class RiboFamily(models.Model):
 
 
 class RiboClass(models.Model):
-	ribo_family = models.ForeignKey('RiboFamily', null = True)#, related_name = 'riboclass')
+	ribo_family = models.ForeignKey('RiboFamily', null = True)
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
@@ -112,14 +116,14 @@ class Organism(models.Model):
 		return 'Or: {} {} {} |{}|'.format(self.scientific_name, self.common_name, self.accession_number, self.taxonomy)
 
 
-class Taxonomy(models.Model): #2 zmiana: dodaje nową encję Taxonomy
+class Taxonomy(models.Model):
 	name = models.CharField('nazwa', max_length = 20, null = False)
 	taxonomy_id = models.IntegerField('taxid', default = 0)#, primary_key = True)
 	parent = models.ForeignKey('Taxonomy', null = True)
 
 	def __str__(self):
 		return 'Tax: {} {}'.format(self.name, self.taxonomy_id)
-	# do napisania skrypt, ktory bedzie to ladowal do bazy rekurencyjnie
+	# do napisania skrypt, ktory bedzie to ladowal do bazy rekurencyjnie - To zrobi Szymon
 
 
 class LigandClass(models.Model):
@@ -135,6 +139,7 @@ class Ligand(models.Model):
 	name = models.CharField('nazwa', max_length = 20, primary_key = True)
 	description = models.TextField('opis')
 	image_name = models.TextField('nazwa pliku')
+	# baza ligandow
 
 	def __str__(self):
 		return 'Li: |{}| {} {} {}'.format(self.ligand_class, self.name, self.description, self.image_name)
@@ -143,7 +148,7 @@ class Ligand(models.Model):
 class Position(models.Model):
 	start = models.IntegerField(default = 0)
 	end = models.IntegerField(default = 0)
-	location = models.TextField('opis') # Jednak atrybut
+	location = models.TextField('opis')
 	STRAND_CHOICES = (
 		('+', 'LEADING STRAND'),
 		('.', 'UNKNOWN'),

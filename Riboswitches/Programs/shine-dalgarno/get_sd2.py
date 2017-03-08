@@ -1,6 +1,7 @@
 import sys
 import re
 
+# Gets motives' postions
 def getSdFromMeme(*arg):
 	f_meme = open(arg[0], 'r') #argv[1]
 	f_out = open('meme_output.txt','w')

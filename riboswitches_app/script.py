@@ -160,7 +160,7 @@ for row in dList:
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
-
+	print(row['family_name'])
 
 	''' RiboClass '''
 	try:

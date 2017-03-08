@@ -52,6 +52,7 @@ Arguments:
 3. Nucleotides before Start
 4. Nucleotides after Start
 5. Meme output file to extract subsequence basing on motifs' positions
+6. Filter
 '''
 def getFasta(*arg):
 	doFilter = False
@@ -66,20 +67,24 @@ def getFasta(*arg):
 
 	handle = open(arg[0], "r") # GFF file | sys.argv[0]
 	h_fasta = open(arg[1], "r") # Inout fasta genome | file sys.argv[1]
-	if len(arg) >= 5:
+
+
+	if len(arg) >= 5 and not isinstance(arg[4], int):
 		meme = open(arg[4], "r") # Meme output file if given | sys.argv[4]
 		fileName = 'rnafold_seqs'
 	else:
 		meme = ''
-		fileName = 'shi-dal_output'
+		fileName = 'ribsw_pos_window'
 	
+
+
 	if len(arg) >= 6 or len(arg) >= 4:
-		if not is_number(str(arg[3])):
+		if not isinstance(arg[3], int):
 			gene_filter = arg[3]
-		else:
+		elif len(arg) >= 6:
 			gene_filter = arg[5]
 			fromAptamers = True
-		doFilter = True
+			doFilter = True
 
 	out_fasta = open(fileName + '.fasta', 'w')
 	sequence = getSeq(h_fasta)
@@ -89,6 +94,7 @@ def getFasta(*arg):
 	for record in GFF.parse(handle): # We have only one record in the file, so the loop is uneccessary
 		for feature in record.features:
 			if feature.type == 'gene':
+
 				start = int(str(feature.location)[1:].split(':')[0]) # Get codon start position (in +)
 				end = int(str(feature.location)[1:].split(':')[1].split(']')[0])
 				seqSymbol = str(feature.location).split('(')[1][0] # Get strand symbol - or +
