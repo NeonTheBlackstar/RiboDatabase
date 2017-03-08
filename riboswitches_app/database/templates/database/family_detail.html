@@ -11,17 +11,13 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>Gene</th>
-							<th>Organism</th>
-							<th>Ligand</th>
+							<th>Klasa</th>
 						</tr>
 					</thead>
-					{% for rr in recordList %}
+					{% for rl in record_list %}
 						<tbody>
 							<tr>
-								<td>{{ rr.gene }}</td>
-								<td>{{ rr.organism }}</td>
-								<td>{{ rr.ligand }}</td>
+								<td>{{ rl.name }}</td>
 							</tr>
 						</tbody>
 					{% endfor %}

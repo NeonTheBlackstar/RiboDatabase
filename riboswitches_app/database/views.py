@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
-from .models import Gene, Organism, Ligand, RiboFamily, Record
+from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass
+
+
+#TODO: urls, collapse, jquery datatables, ajax
+
 
 def index(request):
 
@@ -9,6 +13,33 @@ def index(request):
 def searcher(request):
 
 	return render(request, 'database/searcher.html')
+
+def family_browser(request):
+
+	class_list = RiboClass.objects.all()
+	context = {
+		'class_list': class_list,
+	}
+
+	return render(request, 'database/family_browser.html', context)
+
+def family_detail(request, class_name):
+
+	record_list = []
+
+	for i in RiboFamily.objects.all():
+		if class_name in str(i.name):
+			dic = {
+				'name': None,
+			}
+			dic['name'] = i.name
+			record_list.append(dic.copy())
+
+	context = {
+		'record_list': record_list,
+	}
+
+	return render(request, 'database/family_detail.html', context)
 
 def ligand_browser(request):
 
@@ -21,13 +52,27 @@ def ligand_browser(request):
 
 def ligand_detail(request, ligand_name):
 
-	riboswitch_ligand = Ligand.objects.filter(name = ligand_name)
-	riboswitch_family = RiboFamily.objects.filter(ligands = riboswitch_ligand)
-	riboswitch_record = Record.objects.filter(family = riboswitch_family)
+	recordList = []
+
+	for e in Record.objects.all():
+		if ligand_name in str(e.family.ligands.all()):
+			dic = {
+				'id': e.id,
+				'gene': None,
+				'organism': None,
+				'ligand': None,
+			}
+			dic['gene'] = e.gene.name if e.gene != None else dic['gene']
+			dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+			dic['ligand'] = e.family.ligands.all()[0].name if e.family.ligands.all() != None else dic['ligand']
+			recordList.append(dic.copy())
+
 	context = {
-		'riboswitch_ligand': riboswitch_ligand,
-		'riboswitch_record': riboswitch_record,
+		'recordList': recordList,
 	}
+
+	#riboswitch_family = RiboFamily.objects.filter(ligands = riboswitch_ligand)
+	#riboswitch_record = Record.objects.filter(family = riboswitch_family)
 
 	return render(request, 'database/ligand_detail.html', context)
 

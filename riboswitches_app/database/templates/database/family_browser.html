@@ -9,8 +9,8 @@
 
 
 	<div class="col-xs-12">
-		{% for ligand in ligand_list %}
-			<h1><a href="{% url 'database:ligand_detail' ligand.name %}">{{ ligand.name }}</a></h1>
+		{% for class in class_list %}
+			<h1><a href="{% url 'database:family_detail' class.name %}">{{ class.name }}</a></h1>
 		{% endfor %}
 	</div>
 
