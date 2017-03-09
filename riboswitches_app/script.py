@@ -153,6 +153,7 @@ for row in dList:
 	try:
 		if row['family_name'] != '':
 			v_ribofamily = RiboFamily.objects.create(
+				ribo_class = v_riboclass,
 				name = row['family_name'], # Primary Key
 				description = row['family_description'],
 				alignment = row['family_alignment'],
@@ -166,7 +167,7 @@ for row in dList:
 	try:
 		if row['class_name'] != '':
 			v_riboclass = RiboClass.objects.create(
-				ribo_family = v_ribofamily,
+				#ribo_family = v_ribofamily,
 				name = row['class_name'], # Primary Key
 				description = row['class_description'],
 				alignment = row['class_alignment'],

@@ -77,6 +77,7 @@ class Structure3D(models.Model):
 class RiboFamily(models.Model): # w record taka sama nazwa !
 	''' RiboClass podlinkowane '''
 	''' Structure3D podlinkowane '''
+	ribo_class = models.ForeignKey('RiboClass', null = True)
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
@@ -84,17 +85,16 @@ class RiboFamily(models.Model): # w record taka sama nazwa !
 	#ligand = models.ForeignKey('Ligand', null = True)
 
 	def __str__(self):
-		return 'RFam: |{}| {} {} {} |{}|'.format(self.riboclass_set.all(), self.name, self.description, self.alignment, self.ligands.all())#, self.structure3D.all())
+		return 'RFam: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ligands.all())#, self.structure3D.all())
 
 
 class RiboClass(models.Model):
-	ribo_family = models.ForeignKey('RiboFamily', null = True)
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
 
 	def __str__(self):
-		return 'RCl: {} {} {}'.format(self.name, self.description, self.alignment)
+		return 'RCl: |{}| {} {} {}'.format(self.riboclass_set.all(), self.name, self.description, self.alignment)
 
 
 class Gene(models.Model):

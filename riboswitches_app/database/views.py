@@ -27,12 +27,14 @@ def family_detail(request, class_name):
 
 	record_list = []
 
-	for i in RiboFamily.objects.all():
+	for i in RiboClass.objects.all():
 		if class_name in str(i.name):
 			dic = {
 				'name': None,
+				'organism': None,
 			}
-			dic['name'] = i.name
+			dic['name'] = i.ribo_family.name
+			dic['organism'] = i.gene.organism.scientific_name
 			record_list.append(dic.copy())
 
 	context = {
