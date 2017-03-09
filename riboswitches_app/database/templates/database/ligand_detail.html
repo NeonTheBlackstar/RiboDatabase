@@ -17,15 +17,15 @@
 								<th>Ligand</th>
 							</tr>
 						</thead>
-						{% for rr in recordList %}
 							<tbody>
+							{% for rr in recordList %}
 								<tr role="row">
 									<td>{{ rr.gene }}</td>
 									<td>{{ rr.organism }}</td>
 									<td>{{ rr.ligand }}</td>
 								</tr>
+							{% endfor %}
 							</tbody>
-						{% endfor %}
 					</table>
 				</div>
 	
