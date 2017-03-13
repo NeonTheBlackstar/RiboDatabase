@@ -5,19 +5,15 @@
     <meta charset="utf-8" />
     <title>RiboDB | {% block _title %} {% endblock %}</title>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- own css -->
+    <link href="{% static "database/css/style.css" %}" rel="stylesheet"> 
+    <!-- Bootstrap -->
+    <link href="{% static "database/css/bootstrap.css" %}" rel="stylesheet">
+    <!-- dataTables for Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static "database/css/dataTables.bootstrap.min.css" %}">
+    <!-- font-awesome icons -->
+    <link href="{% static "database/css/font-awesome.css" %}" rel="stylesheet" type="text/css" >
 
-    <link rel="stylesheet" type="text/css" ref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static "database/css/style.css" %}" />
-
-    <script type="text/javascript" src="script.js"></script>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="{% static "database/js/tables.js" %}"></script>
-    
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
 
   </head>
   <body>
@@ -70,7 +66,13 @@
         </footer>
     </div>
 
+    <!-- jQuery required before Bootstrap.js -->
+    <script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Own js script -->
+    <script src="{% static "database/js/tables.js" %}"></script>
+    
+    <script src="{% static "database/js/datatables.min.js" %}"></script>
+    <script src="{% static "database/js/bootstrap.min.js" %}"></script>
   </body>
 </html>
