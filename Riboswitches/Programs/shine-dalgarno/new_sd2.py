@@ -1,5 +1,6 @@
 from BCBio import GFF
 import sys
+import os
 
 def getSeq(h_fasta):
 	sq = ''
@@ -15,7 +16,35 @@ def translate(seq):
 		new_seq += dic[seq[id]]
 	return new_seq
 
-def printSeq(seq, x, y, strand, beforeStart, afterStart): # Zabezpieczyc przed wyjechaniem poza sekwencje!
+# For Genome Browser vizualization
+def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag):
+	start = 0
+	end = 0
+	if strand == '+':
+		if x-beforeStart < 0:
+			start = 0
+			end = x + afterStart
+		elif x+afterStart >= len(seq):
+			start = x - beforeStart
+			end = len(seq) - 1
+		else:
+			start = x - beforeStart
+			end = x + afterStart
+
+	elif strand == '-':
+		if y-afterStart < 0:
+			end = y + beforeStart
+			start = 0
+		elif y+beforeStart >= len(seq):
+			end = len(seq) - 1
+			start = y - afterStart
+		else:
+			end = y + beforeStart
+			start = y - afterStart	
+
+	os.system("echo \'{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, strand, locus_tag))
+
+def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl = ''
 	if strand == '+':
 	# In + strand start codon is at x
@@ -83,6 +112,7 @@ Arguments:
 6. -filter = Filter
 7. -exhead = Print extended fasta header including position and strand info
 8. -aptamer = Exclusive parameter for extracting subseqs for aptamer finding. Value is how many nucleotides after preceding gene START to take as a left interval boundary, if preceding gene STAR postion starts before earlier than -500 nucs from STAR of our gene
+9. -bed = Create bed file of window postion for Genome Browser vizualization
 '''
 def getFasta(*arg):
 	gene_filter = getParamValue('-filter',arg)				# ValueType: Dictionary { key: list(2) }
@@ -93,6 +123,7 @@ def getFasta(*arg):
 	meme_path = getParamValue('-meme',arg)					# ValueType: String
 	exhead = getParamValue('-exhead',arg)					# ValueType: Boolean
 	aptamerInterval = getParamValue('-aptamer',arg)			# ValueType: Integer
+	makeBed = getParamValue('-bed',arg)						# ValueType: Boolean
 	additional = ''	# Additional info for fasta header
 	meme = None
 	handle = None
@@ -113,6 +144,9 @@ def getFasta(*arg):
 
 	if aptamerInterval != None:
 		fileName = 'aptamer_windows'
+
+	if makeBed != None:
+		os.system('rm ./window.bed > /dev/null 2>&1')
 
 	out_fasta = open(fileName + '.fasta', 'w')
 	sequence = getSeq(h_fasta)
@@ -190,5 +224,7 @@ def getFasta(*arg):
 				### PREVIOUS GENE ###
 				if aptamerInterval != None:
 					previous_gene = feature
+				if makeBed != None:
+					printBed(sequence, start, end, seqSymbol, beforeStart, afterStart, feature.qualifiers['locus_tag'][0])
 	handle.close()
 	out_fasta.close()

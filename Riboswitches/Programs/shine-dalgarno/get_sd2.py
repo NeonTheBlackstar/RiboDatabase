@@ -24,16 +24,6 @@ def getSdFromMeme(*arg):
 			formated = re.sub('\s+','\t', line.strip())
 			temp = formated.split('\t')
 			motif_pos = temp[0]			
-
-			#if re.search('\+',temp[0]) or re.search('-',temp[0]):
-			#	_from = initial_window - (int(temp[1]) - 1) # Because in meme position starts from 1, temp[1] is position of SD in window
-			#	_to = _from - len(temp[4]) # temp[4] is a length of motif			
-			#	motif_pos += '|' + str(_from) + '|' + str(_to) 
-				#print(description)
-			#elsif re.search('-',temp[0]):
-			#	_from = initial_window - (int(temp[1]) - 1) # Because in meme position starts from 1, temp[1] is position of SD in window
-			#	_to = _from + len(temp[4]) # temp[4] is a length of motif			
-			#	description = temp[0] + '|' + str(_from) + '|' + str(_to) 
 			
 			_from = initial_window - (int(temp[1]) - 1) # Because in meme position starts from 1, temp[1] is position of SD in window
 			_to = _from - len(temp[4]) # temp[4] is a length of motif			
@@ -45,5 +35,16 @@ def getSdFromMeme(*arg):
 	f_meme.close()
 	f_out.close()
 
+
+
 # _from and _to are offset positions of SD motif due to position of codon start
 
+			#if re.search('\+',temp[0]) or re.search('-',temp[0]):
+			#	_from = initial_window - (int(temp[1]) - 1) # Because in meme position starts from 1, temp[1] is position of SD in window
+			#	_to = _from - len(temp[4]) # temp[4] is a length of motif			
+			#	motif_pos += '|' + str(_from) + '|' + str(_to) 
+				#print(description)
+			#elsif re.search('-',temp[0]):
+			#	_from = initial_window - (int(temp[1]) - 1) # Because in meme position starts from 1, temp[1] is position of SD in window
+			#	_to = _from + len(temp[4]) # temp[4] is a length of motif			
+			#	description = temp[0] + '|' + str(_from) + '|' + str(_to) 
