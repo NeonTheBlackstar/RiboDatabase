@@ -42,7 +42,7 @@ def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag):
 			end = y + beforeStart
 			start = y - afterStart	
 
-	os.system("echo \'{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, strand, locus_tag))
+	os.system("echo \'{}\t{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, locus_tag, '0', strand))
 
 def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl = ''

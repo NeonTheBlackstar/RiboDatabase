@@ -12,21 +12,24 @@ from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
 # python3 mainscript.py NC_000964.3
 
-# Sprawdzic czy ktorys program wymaga instalacji
+# Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
 
 ### HELPER FUNCTIONS ###
 
 # Pole do optymalizacji: już w nagłówku fasta zawrzeć wszystkie potrzebne info LUB nie otwierać i nie zamykać parsera GFF przy kazdym aptamerze, tylko zrobić to raz w jednej funkcji.
 
 # Czy gene_biotype tylko protein coding?
+# BSU11010
 
-# dorobić dla minus
+# dorobić dla minus ZROBIONE
 
-# Wyszło więcej niż wcześniej dla całego fasta
+# Wyszło więcej aptamerów niż wcześniej dla całego fasta
 
-# Zrobic bedy z widelkami
+# Zrobic bedy z widelkami ZROBIONE
 
-# Gen BSU20040 nie dziala!
+# Gen BSU20040 nie dziala! ZROBIONE
+
+# Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
 
 def getGeneInfo(locus_tag, gff):
 	handle = open(gff)
@@ -85,13 +88,13 @@ def aptamers(genome):
 
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
-	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
+	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome)) # Mógblym tego nie sortowac i przejsc tylko raz przez plik
 	# Remove previous file if there's any
 	os.system('rm ./Genomes/{0}_sorted.gff > /dev/null 2>&1'.format(genome))
 	# Sorted by ascending start position on strand +
 	os.system("awk '$7 == \"+\"' ./Genomes/byStrand.gff | sort -k4,4n >> ./Genomes/{0}_sorted.gff".format(genome))
 	# Sorted by descending start position on strand -
-	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k4,4nr >> ./Genomes/{0}_sorted.gff".format(genome))
+	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k5,5nr >> ./Genomes/{0}_sorted.gff".format(genome))
 
 	''' Create multiple fasta file of propable aptamer regions '''
 	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50, "-bed", True)
