@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass
 
 
-#TODO: urls, collapse, jquery datatables, ajax
+#TODO: jquery datatables, ajax
 
 
 def index(request):
@@ -14,31 +14,27 @@ def searcher(request):
 
 	return render(request, 'database/searcher.html')
 
-def family_browser(request):
+def class_family_detail(request):
 
+	result = []
+	families = []
 	class_list = RiboClass.objects.all()
-	context = {
-		'class_list': class_list,
-	}
-
-	return render(request, 'database/family_browser.html', context)
-
-def family_detail(request, class_name):
-
-	record_list = []
 
 	for i in RiboClass.objects.all():
-		if class_name in str(i.name):
-			dic = {
-				'name': None,
-				'organism': None,
-			}
-			dic['name'] = i.ribo_family.name
-			dic['organism'] = i.gene.organism.scientific_name
-			record_list.append(dic.copy())
+		dic = {
+			'name': None,
+			'families': None,
+		}
+		dic['name'] = i.name
+		for j in RiboFamily.objects.all():
+			if j.ribo_class.name == i.name:
+				families.append(j.name)
+			dic['families'] = families
+		families = []
+		result.append(dic.copy())
 
 	context = {
-		'record_list': record_list,
+		'result': result,
 	}
 
 	return render(request, 'database/family_detail.html', context)
@@ -72,9 +68,6 @@ def ligand_detail(request, ligand_name):
 	context = {
 		'recordList': recordList,
 	}
-
-	#riboswitch_family = RiboFamily.objects.filter(ligands = riboswitch_ligand)
-	#riboswitch_record = Record.objects.filter(family = riboswitch_family)
 
 	return render(request, 'database/ligand_detail.html', context)
 

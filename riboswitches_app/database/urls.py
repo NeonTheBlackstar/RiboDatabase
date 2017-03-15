@@ -10,8 +10,7 @@ urlpatterns = [
     url(r'^browser/organism/$', views.organism_browser, name='organism_browser'),
     url(r'^browser/organism/(?P<organism_name>([-\w\s.()])+)/$', views.organism_detail, name='organism_detail'),
 
-    url(r'^browser/family/$', views.family_browser, name="family_browser"),
-    url(r'^browser/family/(?P<class_name>([-\w\s.()])+)/$', views.family_detail, name='family_detail'),
-
+    url(r'^browser/class/$', views.class_family_detail, name="class_family_detail"),
+    #url(r'^browser/class/(?P<class_name>([-\w\s.()])+)/$', views.class_family_detail, name='class_family_detail'),
     url(r'^searcher/', views.searcher, name='searcher'),
 ]

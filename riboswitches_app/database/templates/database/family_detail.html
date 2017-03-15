@@ -6,23 +6,27 @@
 {% endblock %}
 
 {% block content %}
-		<div class="container">
-			<div class="col-xs-12">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Klasa</th>
-						</tr>
-					</thead>
-					{% for rl in record_list %}
-						<tbody>
-							<tr>
-								<td>{{ rl.name }}</td>
-							</tr>
-						</tbody>
-					{% endfor %}
-				</table>
-			</div>
-		</div>
+  <div class="container">
 
+    <!-- Loop through a list of dicts -->
+    {% for class in result %}
+      <div class="panel panel-default">
+        <div class="panel-body"> 
+          Klasa: {{ class.name }} <br>
+          Rodziny:
+          
+          <!-- Loop through all the families --> 
+          {% for family in class.families %}
+            <ul>
+              <li>{{ family }}</li>
+            </ul>
+          {% endfor %}
+          <!-- End loop -->
+
+        </div>
+      </div>
+    {% endfor %}
+    <!-- End loop -->
+
+  </div>
 {% endblock %}
