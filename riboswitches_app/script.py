@@ -83,10 +83,8 @@ for row in dList:
 	v_ribofamily = None
 	v_organism = None
 	v_gene = None
-	#v_ligandclass = None
 	v_taxonomy = None
 	v_mech_conf = None
-	#v_ligand = None
 
 	v_articles = [] # List of pointers for Article objects
 	v_operon_genes = []
@@ -96,7 +94,6 @@ for row in dList:
 	# Aptamers #
 	v_aptamers = []
 	v_structures2d = []
-	#v_aptamers_positions = []
 
 
 	''' LigandClass '''
@@ -148,7 +145,20 @@ for row in dList:
 				temp_ligand = Ligand.objects.get(name = v_ligand_name[id])
 				v_ligands.append(temp_ligand)
 
-	######################## UNDER COSNTRUCTION ########################
+
+	''' RiboClass '''
+	try:
+		if row['class_name'] != '':
+			v_riboclass = RiboClass.objects.create(
+				name = row['class_name'], # Primary Key
+				description = row['class_description'],
+				alignment = row['class_alignment'],
+			)
+	except IntegrityError as e:
+		if match("UNIQUE", str(e)):
+			v_riboclass = RiboClass.objects.get(name = row['class_name'])
+
+
 	''' RiboFamily '''
 	try:
 		if row['family_name'] != '':
@@ -158,25 +168,17 @@ for row in dList:
 				description = row['family_description'],
 				alignment = row['family_alignment'],
 			)
-	except IntegrityError as e:
-		if match("UNIQUE", str(e)):
-			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
-	print(row['family_name'])
-
-	''' RiboClass '''
-	try:
-		if row['class_name'] != '':
-			v_riboclass = RiboClass.objects.create(
-				#ribo_family = v_ribofamily,
+		else:
+			v_ribofamily = RiboFamily.objects.create(
+				ribo_class = v_riboclass,
 				name = row['class_name'], # Primary Key
-				description = row['class_description'],
-				alignment = row['class_alignment'],
+				description = '',
+				alignment = '',
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_riboclass = RiboClass.objects.get(name = row['class_name'])
+			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
 
-	#####################################################################
 
 	''' Structure 3D '''
 	pdb_ids = convertToList(row['structure_3d'])
@@ -206,7 +208,6 @@ for row in dList:
 		if match("UNIQUE", str(e)):
 			v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_id'])
 
-	print(row['scientific_name'])
 
 	''' Organism '''
 	try:
@@ -217,7 +218,6 @@ for row in dList:
 				accession_number = row['organism_accession_number'],
 				taxonomy = v_taxonomy,
 			)
-			print(v_organism.__str__())
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_organism = Organism.objects.get(scientific_name = row['scientific_name'])
@@ -389,10 +389,10 @@ for row in dList:
 	v_record.save()
 	# Ligands #
 	for it in v_ligands:
-		v_ribofamily.ligands.add(it) # Zmienić na klasę
+		v_riboclass.ligands.add(it) # Zmienić na klasę
 
 
-for e in Record.objects.all():
+'''for e in Record.objects.all():
 	print('\n\n')
 	print(e)
-	print('\n\n')
+	print('\n\n')'''

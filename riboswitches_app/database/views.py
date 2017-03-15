@@ -57,7 +57,7 @@ def ligand_detail(request, ligand_name):
 	recordList = []
 
 	for e in Record.objects.all():
-		if ligand_name in str(e.family.ligands.all()):
+		if ligand_name in str(e.family.ribo_class.ligands.all()):
 			dic = {
 				'id': e.id,
 				'gene': None,
@@ -66,7 +66,7 @@ def ligand_detail(request, ligand_name):
 			}
 			dic['gene'] = e.gene.name if e.gene != None else dic['gene']
 			dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
-			dic['ligand'] = e.family.ligands.all()[0].name if e.family.ligands.all() != None else dic['ligand']
+			dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
 			recordList.append(dic.copy())
 
 	context = {

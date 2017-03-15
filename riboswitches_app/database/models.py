@@ -90,7 +90,7 @@ class RiboFamily(models.Model): # w record taka sama nazwa !
 	#ligand = models.ForeignKey('Ligand', null = True)
 
 	def __str__(self):
-		return 'RFam: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ligands.all())#, self.structure3D.all())
+		return 'RFam: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ribo_class)#, self.structure3D.all())
 
 '''
 Klasa jest bardziej ogólna od rodziny u nas! (czyli klasą jest np. SAM I, SAM II itd.) !!!
@@ -104,7 +104,7 @@ class RiboClass(models.Model):
 	ligands = models.ManyToManyField('Ligand')
 
 	def __str__(self):
-		return 'RCl: |{}| {} {} {}'.format(self.riboclass_set.all(), self.name, self.description, self.alignment)
+		return 'RCl: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ligands.all())
 
 
 class Gene(models.Model):
