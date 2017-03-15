@@ -1,3 +1,4 @@
+from BCBio import GFF
 from glob import glob
 import os
 import re
@@ -11,7 +12,71 @@ from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
 # python3 mainscript.py NC_000964.3
 
-# Sprawdzic czy ktorys program wymaga instalacji
+# Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
+
+### HELPER FUNCTIONS ###
+
+# Pole do optymalizacji: już w nagłówku fasta zawrzeć wszystkie potrzebne info LUB nie otwierać i nie zamykać parsera GFF przy kazdym aptamerze, tylko zrobić to raz w jednej funkcji.
+
+# Czy gene_biotype tylko protein coding?
+# BSU11010
+
+# dorobić dla minus ZROBIONE
+
+# Wyszło więcej aptamerów niż wcześniej dla całego fasta
+
+# Zrobic bedy z widelkami ZROBIONE
+
+# Gen BSU20040 nie dziala! ZROBIONE
+
+# Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
+
+def getGeneInfo(locus_tag, gff):
+	handle = open(gff)
+	for record in GFF.parse(handle): # We have only one record in the file, so the loop is uneccessary
+		for feature in record.features:
+			if feature.type == 'gene' and feature.qualifiers['locus_tag'][0] == locus_tag:
+				start = feature.location.start # Automatically substract 1, so it matches ID array notation
+				end = feature.location.end
+				strand = '+' if feature.strand == 1 else '-'
+
+				handle.close()
+				return {'start': start, 'end': end, 'strand': strand}
+	return None
+
+def getAbsolutePositions(genome):
+	f = open("./Results/{0}.result".format(genome))
+	out = open("./Results/apt.bed", 'w')
+
+
+	for line in f:
+		line = line.strip().split('\t')
+
+		locus_tag = line[5].split('|')[0]
+		aptamer_start = int(line[1])
+		aptamer_end = int(line[2])
+		before_interval = int(line[5].split('|')[1])
+		gene = getGeneInfo(locus_tag, "./Genomes/{0}.gff".format(genome)) 
+
+		if gene['strand'] == '+':
+			before_pos = gene['start'] - before_interval
+			start = before_pos + aptamer_start - 1 # -1 because counting starts from 1
+			end = before_pos + aptamer_end - 1 # -1 because counting starts from 1
+			#out.write("{}\t{}\t{}\t{}\n".format(locus_tag, start, end, gene['strand']))
+			out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format('chr', start, end, locus_tag, '0', gene['strand']))
+
+		elif gene['strand'] == '-':
+			before_pos = gene['end'] + before_interval
+			# Invert start and end
+			start = before_pos - aptamer_end - 1 # -1 because counting starts from 1
+			end = before_pos - aptamer_start - 1 # -1 because counting starts from 1
+			out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format('chr', start, end, locus_tag, '0', gene['strand']))
+
+	f.close()
+	out.close()
+
+
+########################
 
 def aptamers(genome):
 	#Aptamery - Jakub
@@ -19,51 +84,53 @@ def aptamers(genome):
 	lista = os.listdir('Alignments')
 	counter = 0
 
-	bedfile = open("./Results/{0}.aptamers.bed".format(genome), "w")
+	finalFile = open("./Results/{0}.result".format(genome), "w")
 
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
-	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
+	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome)) # Mógblym tego nie sortowac i przejsc tylko raz przez plik
 	# Remove previous file if there's any
-	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
+	os.system('rm ./Genomes/{0}_sorted.gff > /dev/null 2>&1'.format(genome))
 	# Sorted by ascending start position on strand +
 	os.system("awk '$7 == \"+\"' ./Genomes/byStrand.gff | sort -k4,4n >> ./Genomes/{0}_sorted.gff".format(genome))
 	# Sorted by descending start position on strand -
-	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k4,4nr >> ./Genomes/{0}_sorted.gff".format(genome))
+	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k5,5nr >> ./Genomes/{0}_sorted.gff".format(genome))
 
 	''' Create multiple fasta file of propable aptamer regions '''
-	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50)
+	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50, "-bed", True)
 
 	for i in range(0, len(lista)):
 		
-		#os.system("./Programs/cmsearch  --toponly ./Alignments/{0} ./out.fasta".format(lista[i], genome))
-		os.system("./Programs/cmsearch -o ./Results/processing.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome))
+		os.system("./Programs/cmsearch --toponly -o ./Results/processing.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome))
 
 		processingfile = open("./Results/processing.txt", "r")
 
 		for line in processingfile:
-			temp = line.split()
+			temp = line.strip().split()
 			if len(temp) > 5:
-				if temp[1] == "!" and temp[5][0:1] == "g": # Ten warunek nie dziala
+				if temp[1] == "!" and temp[5].startswith("BSU"): # Ten warunek nie dziala
 					if temp[8] == "-":
-						bedfile.write("{5}\t{1}\t{0}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[8], genome))
+						finalFile.write("{5}\t{1}\t{0}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome))
 					else:
-						bedfile.write("{5}\t{0}\t{1}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[8], genome))
+						finalFile.write("{5}\t{0}\t{1}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome))
 		counter = counter + 1
 		processingfile.close()
 
-	bedfile.close()
+	finalFile.close()
+
+	getAbsolutePositions(genome) # zajmuje az 20 sekund!
+	
+	os.system("rm ./Results/processing.txt")
+	os.system("rm ./aptamer_windows.fasta")
+	os.system('rm ./Genomes/byStrand.gff')
+	#os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
+
+	os.system('sort -k2,2n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
+	os.system('mv ./Results/{0}.sorted ./Results/{0}.result'.format(genome))
+	#os.system('rm ./Results/{0}.sorted'.format(genome))
 
 	print("debug") ### TU SKONCZYLEM
 	return
-	
-	#os.system("rm ./Results/processing.txt")
-	#os.system("rm ./aptamer_windows.fasta")
-	os.system('sort -k2,2n ./Results/{0}.aptamers.bed -o ./Results/aptamers.sorted.bed'.format(genome))
-	os.system('rm ./Genomes/byStrand.gff')
-	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
-	os.system('rm ./Results/{0}.aptamers.bed'.format(genome))
-	os.system('mv ./Results/aptamers.sorted.bed ./Results/{0}.aptamers.bed'.format(genome))
 
 
 def promoters(
@@ -91,7 +158,6 @@ def promoters(
 	os.system('rm ./*_PPde.txt')
 	os.system('rm ./*_stb.txt')
 	os.system('rm ./*_GCstat.txt')
-
 
 
 def terminators(genome):
