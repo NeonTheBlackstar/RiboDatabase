@@ -82,10 +82,7 @@ Rodzina jest mniej ogólna niż klasa. Rodzina to będzie to, co my przewidzimy!
 class RiboFamily(models.Model): # w record taka sama nazwa !
 	''' RiboClass podlinkowane '''
 	''' Structure3D podlinkowane '''
-<<<<<<< HEAD
 	# Accesion number???
-=======
->>>>>>> cdff7a5c936b53e67b73c8bca3d3a7529d6f924f
 	ribo_class = models.ForeignKey('RiboClass', null = True)
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
@@ -95,17 +92,12 @@ class RiboFamily(models.Model): # w record taka sama nazwa !
 	def __str__(self):
 		return 'RFam: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ligands.all())#, self.structure3D.all())
 
-<<<<<<< HEAD
 '''
 Klasa jest bardziej ogólna od rodziny u nas! (czyli klasą jest np. SAM I, SAM II itd.) !!!
 Relacja jeden do wielu odwrotnie!
 '''
-class RiboClass(models.Model): # SAM I, SAM II itd.
-	#ribo_family = models.ForeignKey('RiboFamily', null = True)
-=======
 
 class RiboClass(models.Model):
->>>>>>> cdff7a5c936b53e67b73c8bca3d3a7529d6f924f
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
