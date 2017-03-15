@@ -2,10 +2,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta tags -->
     <meta charset="utf-8" />
-    <title>RiboDB | {% block _title %} {% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- own css -->
+    <title>RiboDB | {% block _title %} {% endblock %}</title>
+    
+    <!-- Custom css -->
     <link href="{% static "database/css/style.css" %}" rel="stylesheet"> 
     <!-- Bootstrap -->
     <link href="{% static "database/css/bootstrap.css" %}" rel="stylesheet">
@@ -13,11 +17,15 @@
     <link rel="stylesheet" type="text/css" href="{% static "database/css/dataTables.bootstrap.min.css" %}">
     <!-- font-awesome icons -->
     <link href="{% static "database/css/font-awesome.css" %}" rel="stylesheet" type="text/css" >
-
-
+    <!-- Roboto google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
   </head>
   <body>
+    <!-- Document wrapper -->
     <div id="wrapper">
+
+      <!-- Navbar -->
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -50,28 +58,37 @@
           </div>
         </div>
       </nav>
-      
-      {% block content %} 
+      <!-- End navbar -->
 
-      {% endblock %}
+      <!-- Main contet from other templates -->
+      <main>
+        {% block content %} 
+        {% endblock %}
+      <main>
+      <!-- End content -->
 
-       <footer id="footer">
+      <!-- Footer -->
+      <footer id="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                  <p class="text-muted">2017 &copy; Combio</p>
-                </div>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <p class="text-muted">2017 &copy; Combio</p>
             </div>
           </div>
-        </footer>
+        </div>
+      </footer> 
+      <!-- End footer -->
+
     </div>
+    <!-- End wrapper -->
 
     <!-- jQuery required before Bootstrap.js -->
     <script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
 
-    <!-- Own js script -->
+    <!-- Custom js script -->
     <script src="{% static "database/js/tables.js" %}"></script>
-    
+
+    <!-- Bootstrap and dataTables js -->
     <script src="{% static "database/js/datatables.min.js" %}"></script>
     <script src="{% static "database/js/bootstrap.min.js" %}"></script>
   </body>

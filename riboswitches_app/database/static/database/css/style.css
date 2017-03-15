@@ -1,6 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-
 html {
    height: 100%;
 }
@@ -16,6 +13,7 @@ body {
     position: relative;
 }
 
+/* Always on the bottom of the site */
 #footer {
     background-color: #eaecef;
     position:absolute;
@@ -23,8 +21,9 @@ body {
     width:100%;
 }
 
+/* Figures on the end of index page */
 .bottom-blocks {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
     overflow: hidden;
     margin-right: auto;
@@ -102,52 +101,33 @@ body {
     opacity: 1;
 }
 
+#notes {
+    padding-bottom: 60px;
+}
+/* End figures*/
+
 #search-field {
     padding-top: 80px;
     padding-bottom: 50px;
 }
+
+/* Advanced search button - under the search bar */
 #advanced-search-btn {
     padding-top: 10px;
 }
-.jumbotron {
-    background-color: white;
+
+div.jumbotron {
+    background-color: white !important;
+    padding-bottom: 0px;
 }
 
-#notes {
-    padding-bottom: 40px;
+#hamburger {
+    color: white;
 }
+
 #lorem {
     padding-bottom: 100px;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: justify;
-}
-#placeholder {
-    margin-top: 50px;
-    width: 100%;
-}
-
-#myNavbar ul li a {
-    position: relative;
-    text-decoration: none;
-    -webkit-transition: 0.15s ease;
-    transition: 0.15s ease;
-} 
-
-#myNavbar ul li a:before {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.15s ease-in-out 0s;
-
-}
-
-#myNavbar ul li a:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
 }
