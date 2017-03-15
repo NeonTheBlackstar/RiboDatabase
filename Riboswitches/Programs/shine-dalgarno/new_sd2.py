@@ -17,7 +17,7 @@ def translate(seq):
 	return new_seq
 
 # For Genome Browser vizualization
-def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag):
+def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag, biotype = ''):
 	start = 0
 	end = 0
 	if strand == '+':
@@ -42,7 +42,7 @@ def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag):
 			end = y + beforeStart
 			start = y - afterStart	
 
-	os.system("echo \'{}\t{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, locus_tag, '0', strand))
+	os.system("echo \'{}\t{}\t{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, locus_tag, '0', strand, biotype))
 
 def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl = ''
@@ -86,7 +86,7 @@ def printToFasta(handle, seq, x, y, strand, id, additional, exhead):
 		additional = '|' + additional
 
 	if exhead == True:
-		handle.write('>'+id+'|'+str(x)+'|'+str(y)+'|'+strand+additional+'\n')
+		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'\n')
 	else:
 		handle.write('>'+id+additional+'\n')
 		
@@ -113,6 +113,9 @@ Arguments:
 7. -exhead = Print extended fasta header including position and strand info
 8. -aptamer = Exclusive parameter for extracting subseqs for aptamer finding. Value is how many nucleotides after preceding gene START to take as a left interval boundary, if preceding gene STAR postion starts before earlier than -500 nucs from STAR of our gene
 9. -bed = Create bed file of window postion for Genome Browser vizualization
+10. -biotype = Filter on gene biotype
+
+gene_biotype=protein_coding
 '''
 def getFasta(*arg):
 	gene_filter = getParamValue('-filter',arg)				# ValueType: Dictionary { key: list(2) }
@@ -124,6 +127,8 @@ def getFasta(*arg):
 	exhead = getParamValue('-exhead',arg)					# ValueType: Boolean
 	aptamerInterval = getParamValue('-aptamer',arg)			# ValueType: Integer
 	makeBed = getParamValue('-bed',arg)						# ValueType: Boolean
+	bioType = getParamValue('-biotype',arg)					# ValueType: String
+	
 	additional = ''	# Additional info for fasta header
 	meme = None
 	handle = None
@@ -155,7 +160,7 @@ def getFasta(*arg):
 
 	for record in GFF.parse(handle):
 		for feature in record.features:
-			if feature.type == 'gene':
+			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == bioType or bioType == None):
 				### Reset modified values ###
 				beforeStart = getParamValue('-before',arg)
 				afterStart = getParamValue('-after',arg)
@@ -225,6 +230,6 @@ def getFasta(*arg):
 				if aptamerInterval != None:
 					previous_gene = feature
 				if makeBed != None:
-					printBed(sequence, start, end, seqSymbol, beforeStart, afterStart, feature.qualifiers['locus_tag'][0])
+					printBed(sequence, start, end, seqSymbol, beforeStart, afterStart, feature.qualifiers['locus_tag'][0], feature.qualifiers['gene_biotype'][0])
 	handle.close()
 	out_fasta.close()
