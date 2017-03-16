@@ -37,7 +37,7 @@ def class_family_detail(request):
 		'result': result,
 	}
 
-	return render(request, 'database/family_detail.html', context)
+	return render(request, 'database/class-family_detail.html', context)
 
 def ligand_browser(request):
 
