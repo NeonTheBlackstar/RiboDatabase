@@ -1,0 +1,32 @@
+Wczytujemy całą taksonomię:
+d = {
+	taxid: parentId,
+	taxid: parentId,
+}
+
+Budujemy ścieżki dla każdego TaxID:
+- Na razie mogę sciągnąć ręcznie z NCBI
+- Trzeba dodać do plików testowych TaxID
+
+d2 = {
+	3702:[78273, 2378236, 2389823],
+	3701: [37287, 237823, 2378237],
+}
+
+#Przykład ścieżki
+>>> d['666']
+'662'
+>>> d['662']
+'641'
+>>> d['641']
+'135623'
+>>> d['135623']
+'1236'
+>>> d['1236']
+'1224'
+>>> d['1224']
+'2'
+>>> d['2']
+'131567'
+>>> d['131567']
+'1'
