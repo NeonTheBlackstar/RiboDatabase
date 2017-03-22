@@ -16,59 +16,38 @@ from time import sleep, localtime, strftime
 
 ### HELPER FUNCTIONS ###
 
-# Pole do optymalizacji: już w nagłówku fasta zawrzeć wszystkie potrzebne info LUB nie otwierać i nie zamykać parsera GFF przy kazdym aptamerze, tylko zrobić to raz w jednej funkcji.
-
 # Wyszło więcej aptamerów niż wcześniej dla całego fasta
 
 # Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
 
-# po filtrowaniu po biotype jest wiecej wynikow z kodujacymi białkami. chyba powinno byc tyle samo co przed filtrowaniem?
+# Struktura drugorzedowa aptamerow w pliku proccessing?
 
-def getAbsolutePositions(genome):
-	f = open("./Results/{0}.result".format(genome))
-	out = open("./Results/apt.bed", 'w')
+# Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury
 
-	for line in f:
-		line = line.strip().split('\t')
+# Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie
 
-		locus_tag = line[5].split('|')[0]
-		aptamer_start = int(line[1])
-		aptamer_end = int(line[2])
-		before_interval = int(line[5].split('|')[1])
-		gene = {
-			'start': int(line[5].split('|')[3]),
-			'end': int(line[5].split('|')[4]),
-			'strand': line[5].split('|')[5],
-		}
+# Zapisywac do pliku score czy e-value?
 
-		if gene['strand'] == '+':
-			before_pos = gene['start'] - before_interval
-			start = before_pos + aptamer_start - 1 # -1 because counting starts from 1
-			end = before_pos + aptamer_end - 1 # -1 because counting starts from 1
-			out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format('chr', start, end, locus_tag, '0', gene['strand']))
+# Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
 
-		elif gene['strand'] == '-':
-			before_pos = gene['end'] + before_interval
-			# Invert start and end
-			start = before_pos - aptamer_end - 1 # -1 because counting starts from 1
-			end = before_pos - aptamer_start - 1 # -1 because counting starts from 1
-			out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format('chr', start, end, locus_tag, '0', gene['strand']))
-
-	f.close()
-	out.close()
+def makeAptamersBed(genome): # Zastąpić to AWK!
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $4, $5, $2, $9, $6}\' ./Results/"+genome+".result > ./Results/apt.bed") # POPRAWIC NUMERY ZCZYTYWANYCH POL!
 
 
-def aptamers(genome):
+def aptamers(
+	genome,				# Genome ID
+	e_value = 0.001, 	# Maximum e-value for aptamer to ?evaluate?
+	):
+
 	#Aptamery - Jakub
 	lista = []
 	lista = os.listdir('Alignments')
-	counter = 0
 
 	finalFile = open("./Results/{0}.result".format(genome), "w")
 
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
-	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome)) # Mógblym tego nie sortowac i przejsc tylko raz przez plik
+	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
 	# Remove previous file if there's any
 	os.system('rm ./Genomes/{0}_sorted.gff > /dev/null 2>&1'.format(genome))
 	# Sorted by ascending start position on strand +
@@ -81,77 +60,78 @@ def aptamers(genome):
 	
 	for i in range(0, len(lista)):
 		
-		os.system("./Programs/cmsearch --toponly -o ./Results/processing.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome))
-
-		processingfile = open("./Results/processing.txt", "r")
+		family_id = lista[i].split('.')[0]
+		os.system("./Programs/cmsearch --toponly -o ./Results/processing_{1}_{2}.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome, family_id))
+		processingfile = open("./Results/processing_{1}_{2}.txt".format(lista[i], genome, family_id), "r")	
+		start_scanning = False
+		d = {}
 
 		for line in processingfile:
 			temp = line.strip().split()
-			if len(temp) > 5:
-				if temp[1] == "!" and temp[5].startswith("BSU"):
-					if temp[8] == "-":		
+			
+			if len(temp) == 0:
+				continue
 
-						#finalFile.write("{5}\t{1}\t{0}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome)) # temp[5] {4}
-						print("!NIE HARAMBE!")
-					else:
-						print("!HARAMBE!")
-						
-						# ''' Get data ''' #
-						locus_tag = temp[5].split('|')[0]
-						aptamer_start = int(temp[6])
-						aptamer_end = int(temp[7])
-						before_interval = int(temp[5].split('|')[1])
-						score = float(temp[3])
-						gene = {
-							'start': int(temp[5].split('|')[3]),
-							'end': int(temp[5].split('|')[4]),
-							'strand': temp[5].split('|')[5],
+			if temp[0].startswith('>>'):
+					start_scanning = True
+					continue
+
+			if start_scanning == False:
+				if len(temp) > 5 and temp[5].startswith("BSU") and temp[12] == "-":	
+					''' Filter outputed aptamers '''
+					# E-value
+					apt_e_value = float(temp[2])
+					if apt_e_value >= e_value:
+						continue
+
+					# Prepare data #
+					d[temp[0]] = {
+							'locus_tag': 			temp[5].split('|')[0],
+							'aptamer_start': 		int(temp[6]),
+							'aptamer_end': 			int(temp[7]),
+							'before_interval': 		int(temp[5].split('|')[1]),
+							'score': 				float(temp[3]),
+							'gene': {
+								'start': 		int(temp[5].split('|')[3]),
+								'end': 			int(temp[5].split('|')[4]),
+								'strand': 		temp[5].split('|')[5],
+							}
 						}
 
-						if gene['strand'] == '+':
-							before_pos = gene['start'] - before_interval
-							start = before_pos + aptamer_start - 1 # -1 because counting starts from 1
-							end = before_pos + aptamer_end - 1 # -1 because counting starts from 1
-							finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, locus_tag, start, end, gene['strand'], start, end, score)) # Dowalic tutaj nazwe aptameru!
+			elif start_scanning == True:# and len(temp) >= 12:
+				if temp[0] in d and temp[8] == '[]': # If aptamer covers whole model
+					key = temp[0]
 
-						elif gene['strand'] == '-':
-							before_pos = gene['end'] + before_interval
-							# Invert start and end
-							start = before_pos - aptamer_end - 1 # -1 because counting starts from 1
-							end = before_pos - aptamer_start - 1 # -1 because counting starts from 1
-							finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, locus_tag, start, end, gene['strand'], start, end, score))
+					if d[key]['gene']['strand'] == '+':
+						before_pos = d[key]['gene']['start'] - d[key]['before_interval']
+						start = before_pos + d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
+						end = before_pos + d[key]['aptamer_end'] - 1 # -1 because counting starts from 1
 
-						#finalFile.write("{5}\t{0}\t{1}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome))
-		counter = counter + 1
+					elif d[key]['gene']['strand'] == '-':
+						before_pos = d[key]['gene']['end'] + d[key]['before_interval']
+						# Invert start and end
+						start = before_pos - d[key]['aptamer_end'] - 1 # -1 because counting starts from 1
+						end = before_pos - d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
+							
+					switch_name = family_id + '_' + str(start)
+					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
+
 		processingfile.close()
 
 	finalFile.close()
-	'''
-		for line in processingfile:
-			temp = line.strip().split()
-			if len(temp) > 5:
-				if temp[1] == "!" and temp[5].startswith("BSU"):
-					if temp[8] == "-":
-						finalFile.write("{5}\t{1}\t{0}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome)) # temp[5] {4}
-					else:
-						finalFile.write("{5}\t{0}\t{1}\t{2}_{0}\t{3}\t{4}\n".format(temp[6], temp[7], lista[counter][0:-3], temp[3], temp[5], genome))
-		counter = counter + 1
-		processingfile.close()
 
-	finalFile.close()
-	'''
-
-	#getAbsolutePositions(genome) # zajmuje az 20 sekund!
+	print(d)
 	
-	#os.system("rm ./Results/processing.txt")
 	os.system('rm ./Genomes/byStrand.gff')
-	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
-	os.system('sort -k2,2n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
+	os.system('sort -k3,3n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
 	os.system('mv ./Results/{0}.sorted ./Results/{0}.result'.format(genome))
-	#os.system("rm ./aptamer_windows.fasta") # mam tego nie usuwac dla promotorow
 
-	print("debug") ### TU SKONCZYLEM
-	return
+	# Pliki, ktore moga sie pozniej przydac #
+	#os.system("rm ./aptamer_windows.fasta") # mam tego nie usuwac dla promotorow
+	#os.system("rm ./Results/processing.txt") # nie usuwac tych plikow
+	#os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
+
+	#makeAptamersBed(genome) # Poprawic dzialanie funkcji
 
 '''
 Szukamy na tych samych oknach co aptamery, zeby dwa razy tego nie ekstrahowac.
@@ -165,6 +145,9 @@ def promoters(
 	):
 	
 	# Bede musial podac GC% calego analizowanego genomu. Do wyciągnięcia z Ensmbla. Mają API
+
+	print("debug") ### TU SKONCZYLEM
+	return
 
 	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
 
