@@ -5,28 +5,39 @@
   Details
 {% endblock %}
 
+{% block css_plugins %}
+<!-- Js tree styles -->
+<link href="{% static "database/plugins/jstree/themes/default/style_jstree.css" %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-  <div class="container">
+<div class="container">
   
-    <!-- Start of jstree list -->
-    <div id="jstree">
-      <ul>
+  <!-- Start of jstree list -->
+  <div id="jstree">
+    <ul>
       
-        <!-- loop through all classes -->
-        {% for class in result %}
-          <li>{{ class.name }}
-            <ul>
+      <!-- loop through all classes -->
+      {% for class in result %}
+        <li>{{ class.name }}
+          <ul>
 
-            <!-- loop through families for a class -->
-              {% for family in class.families %}
-                <li>{{ family }}</li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>  
-    <!-- End of jstree -->  
+          <!-- loop through families for a class -->
+            {% for family in class.families %}
+              <li>{{ family }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>  
+  <!-- End of jstree list -->  
 
-  </div>
+</div>
+{% endblock %}
+
+{% block js_plugins %}
+<!-- jstree script -->
+<script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
+<script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
 {% endblock %}

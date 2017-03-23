@@ -5,6 +5,11 @@
   Details
 {% endblock %}
 
+{% block css_plugins %}
+<!-- dataTables for Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static "database/plugins/datatables/styles/datatables.bootstrap.min.css" %}">
+{% endblock %}
+
 {% block content %}
 		<div class="container">
 			<div id="table_wrapper" class="dataTables wrapper form-inline dt-bootstrap no-footer">
@@ -32,4 +37,9 @@
 			</div>
 		</div>
 
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
+<script src="{% static "database/plugins/datatables/scripts/datatables_custom.js" %}"></script>
 {% endblock %}
