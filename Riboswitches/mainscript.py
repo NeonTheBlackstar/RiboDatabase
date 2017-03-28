@@ -24,14 +24,14 @@ from time import sleep, localtime, strftime
 
 # Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury
 
-# Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie
+# Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie ZROBIONE
 
 # Zapisywac do pliku score czy e-value?
 
 # Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
 
-def makeAptamersBed(genome): # Zastąpić to AWK!
-	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $4, $5, $2, $9, $6}\' ./Results/"+genome+".result > ./Results/apt.bed") # POPRAWIC NUMERY ZCZYTYWANYCH POL!
+def makeAptamersBed(genome):
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $3, $5, $2, $9, $6}\' ./Results/"+genome+".result > ./Results/apt.bed")
 
 
 def aptamers(
@@ -39,7 +39,6 @@ def aptamers(
 	e_value = 0.001, 	# Maximum e-value for aptamer to ?evaluate?
 	):
 
-	#Aptamery - Jakub
 	lista = []
 	lista = os.listdir('Alignments')
 
@@ -115,12 +114,10 @@ def aptamers(
 							
 					switch_name = family_id + '_' + str(start)
 					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
-
+					
 		processingfile.close()
 
 	finalFile.close()
-
-	print(d)
 	
 	os.system('rm ./Genomes/byStrand.gff')
 	os.system('sort -k3,3n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
@@ -131,7 +128,7 @@ def aptamers(
 	#os.system("rm ./Results/processing.txt") # nie usuwac tych plikow
 	#os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
-	#makeAptamersBed(genome) # Poprawic dzialanie funkcji
+	#makeAptamersBed(genome)
 
 '''
 Szukamy na tych samych oknach co aptamery, zeby dwa razy tego nie ekstrahowac.
@@ -145,6 +142,7 @@ def promoters(
 	):
 	
 	# Bede musial podac GC% calego analizowanego genomu. Do wyciągnięcia z Ensmbla. Mają API
+	# GC content dla ramki, czy dla calego genomu?
 
 	print("debug") ### TU SKONCZYLEM
 	return
