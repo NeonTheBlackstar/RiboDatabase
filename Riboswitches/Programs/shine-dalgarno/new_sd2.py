@@ -109,16 +109,17 @@ Arguments:
 3. -before = Nucleotides before Start
 4. -after = Nucleotides after Start
 5. -meme = Meme output file to extract subsequence basing on motifs' positions
-6. -filter = Filter
+6. -filterSD = Filter for Shine Dalgarno
 7. -exhead = Print extended fasta header including position and strand info
 8. -aptamer = Exclusive parameter for extracting subseqs for aptamer finding. Value is how many nucleotides after preceding gene START to take as a left interval boundary, if preceding gene STAR postion starts before earlier than -500 nucs from STAR of our gene
 9. -bed = Create bed file of window postion for Genome Browser vizualization
 10. -biotype = Filter on gene biotype
+11. -filterProm = Filter for promoters. Look for promoters only before that genes, where any aptamers where found. List of locus tags
 
 gene_biotype=protein_coding
 '''
 def getFasta(*arg):
-	gene_filter = getParamValue('-filter',arg)				# ValueType: Dictionary { key: list(2) }
+	sd_filter = getParamValue('-filterSD',arg)				# ValueType: Dictionary { key: list(2) }
 	beforeStart = getParamValue('-before',arg)				# ValueType: Integer
 	afterStart = getParamValue('-after',arg)				# ValueType: Integer
 	gff_path = getParamValue('-gff',arg)					# ValueType: String
@@ -128,6 +129,7 @@ def getFasta(*arg):
 	aptamerInterval = getParamValue('-aptamer',arg)			# ValueType: Integer
 	makeBed = getParamValue('-bed',arg)						# ValueType: Boolean
 	bioType = getParamValue('-biotype',arg)					# ValueType: String
+	prom_filter = getParamValue('-filterPR',arg)			# ValueType: String List
 	
 	additional = ''	# Additional info for fasta header
 	meme = None
@@ -149,6 +151,9 @@ def getFasta(*arg):
 
 	if aptamerInterval != None:
 		fileName = 'aptamer_windows'
+
+	if prom_filter != None:
+		fileName = 'promoter_windows'
 
 	if makeBed != None:
 		os.system('rm ./window.bed > /dev/null 2>&1')
@@ -189,26 +194,32 @@ def getFasta(*arg):
 
 						additional = '{}|{}'.format(beforeStart, afterStart)
 
-				'''if seqSymbol == '+' and beforeStart > 500:
-					print("PREV Start {} End {} Symbol {}".format(previous_start, previous_end, previous_strand))
-					print("ACTUAL Start {} End {} Symbol {}".format(start, end, seqSymbol))
-					print("previous before {} now before {}\n".format(preBefore,beforeStart))'''
 
-				if gene_filter != None:
+				if sd_filter != None:
 					filterFound = False
-					for key in sorted(gene_filter):
+					for key in sorted(sd_filter):
 						if key == feature.qualifiers['locus_tag'][0]:
 							# GET POSITIONS HERE #
-							if(start > gene_filter[key][0]):
-								beforeStart = start - gene_filter[key][0]
+							if(start > sd_filter[key][0]):
+								beforeStart = start - sd_filter[key][0]
 							else:
-								beforeStart = gene_filter[key][1] - end
+								beforeStart = sd_filter[key][1] - end
 							afterStart = 20
 							
 							filterFound = True
 							break
 					if filterFound == False: # If not found in filter, then don't add it to output file
 						continue
+
+				if prom_filter != None:
+					filterFound = False
+					for lt in prom_filter:
+						if lt == feature.qualifiers['locus_tag'][0]:
+							filterFound = True
+							break
+					if filterFound == False: # If not found in filter, then don't add it to output file
+						continue
+
 				if meme != None: #for current record if it's in meme output file, if yes, then pass it to the output fasta
 					meme.seek(0,0)
 					found = False

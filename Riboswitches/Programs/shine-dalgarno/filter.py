@@ -26,6 +26,15 @@ def createGffFilter(ptt_file, bed_file):
 				filter_matrix.pop(gene_id, None)
 	return(filter_matrix)
 
+def createPromoterFilter(result_file):
+	filter_list = []
+	with open(result_file) as result_handle:
+		for line in result_handle:
+			line = line.strip().split('\t')
+			filter_list.append(line[1]) # Append locus tag
+	return(filter_list)
+
+
 def prepareSample(filter_matrix, gff_path):
 	random.seed()
 	candidate_list = []

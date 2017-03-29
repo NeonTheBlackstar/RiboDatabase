@@ -11,5 +11,6 @@ for line in f:
 				gc += 1
 			count += 1
 
+print(count)
 result = 100 * gc / count
 print("{}%".format(result))

@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import linecache
+import subprocess
 sys.path.insert(0, './Programs/shine-dalgarno')
 import __init__
 import sd2
@@ -13,8 +14,6 @@ from time import sleep, localtime, strftime
 # python3 mainscript.py NC_000964.3
 
 # Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
-
-### HELPER FUNCTIONS ###
 
 # Wyszło więcej aptamerów niż wcześniej dla całego fasta
 
@@ -30,8 +29,22 @@ from time import sleep, localtime, strftime
 
 # Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
 
+'''_______________________________________________________________________'''
+
+### HELPER FUNCTIONS ###
+
 def makeAptamersBed(genome):
 	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $3, $5, $2, $9, $6}\' ./Results/"+genome+".result > ./Results/apt.bed")
+
+def createPromoterFilter(result_file):
+	filter_list = []
+	with open(result_file) as result_handle:
+		for line in result_handle:
+			line = line.strip().split('\t')
+			filter_list.append(line[1]) # Append locus tag
+	return(filter_list)
+
+### END ###
 
 
 def aptamers(
@@ -141,13 +154,23 @@ def promoters(
 	gccontent = 'default'										# GC-content of the whole genome
 	):
 	
-	# Bede musial podac GC% calego analizowanego genomu. Do wyciągnięcia z Ensmbla. Mają API
+	# Bede musial podac GC% calego analizowanego genomu. Do wyciągnięcia z Ensmbla. Mają API. [UPDATE] Sprawdzałem, dla bakterii nie ma Biomartu. Napisałem program w Cpp
 	# GC content dla ramki, czy dla calego genomu?
+	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru?
+	# Robić filtrowanie dla znalezionych promotorów?
+
+	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/NC_000964.3.fasta", shell=True))
+	# Create filter with genes, around which an aptamer was found
+	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
+	# Generate multifasta file with windows for promoters search
+	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(genome_id), "-fasta", "./Genomes/{0}.fasta".format(genome_id), "-before", 500, "-after", 0, "-biotype", "protein_coding", "-exhead", True, "-filterPR", filter_list)
+
+	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
+	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("./promoter_windows.fasta", window, gccontent)) 
+	# Nie wiedziec czemu program skleja multiple fasta w jedną sekwencję i tak też odnosi się do pozycji znalezionych promotorów w oknach. Może podwać mu te okna w pojedynczej faście?
 
 	print("debug") ### TU SKONCZYLEM
 	return
-
-	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
 
 	PP_output_path = glob('./*_PPde.txt')[0]
 	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
@@ -359,7 +382,7 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 
 a = datetime.now()
 aptamers(sys.argv[1])
-#promoters()
+promoters()
 #terminators(sys.argv[1])
 #__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
 #bedtools(sys.argv[1])
