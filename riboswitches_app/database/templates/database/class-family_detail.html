@@ -12,26 +12,50 @@
 
 {% block content %}
 <div class="container">
-  
-  <!-- Start of jstree list -->
-  <div id="jstree">
-    <ul>
-      
-      <!-- loop through all classes -->
-      {% for class in result %}
-        <li>{{ class.name }}
-          <ul>
 
-          <!-- loop through families for a class -->
-            {% for family in class.families %}
-              <li>{{ family }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
+<div class="bs-example">
+    <ul class="breadcrumb">
+        <li><a href="{% url 'database:index' %}">Home</a></li>
+        <li class="active">Browse</li>
+        <li class="active">By class/family</li>
     </ul>
-  </div>  
-  <!-- End of jstree list -->  
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#filterPanel">Browse classes and families</a>
+            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                <i class="glyphicon glyphicon-chevron-down"></i>
+            </span>
+        </h4>
+    </div>
+    <div id="filterPanel" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <!-- Start of jstree list -->
+              <div id="jstree">
+                <ul>
+                  
+                  <!-- loop through all classes -->
+                  {% for class in result %}
+                    <li>{{ class.name }}<span class="badge progress-bar-success">{{ class.families|length }} </span>
+                      <ul>
+                      <!-- loop through families for a class -->
+                        {% for family in class.families %}
+                          <li>{{ family }}</li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>  
+              <!-- End of jstree list -->  
+        </div>
+    </div>
+</div>
+
+  
+  
 
 </div>
 {% endblock %}

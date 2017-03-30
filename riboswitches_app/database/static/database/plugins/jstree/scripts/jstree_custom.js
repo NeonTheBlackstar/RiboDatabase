@@ -5,10 +5,10 @@ $(document).ready( function () {
 	  $('#jstree').jstree({
 		"types" : {
 	      "default" : {
-	        "icon" : "fa fa-folder"
+	        "icon" : "fa fa-folder-o"
 	      },
 	      "folder-open" : {
-	      	"icon" : "fa fa-folder-open"
+	      	"icon" : "fa fa-folder-open-o"
 	      },
 	    },
 	    "plugins" : [ "types" ]
