@@ -15,19 +15,21 @@ from time import sleep, localtime, strftime
 
 # Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
 
-# Wyszło więcej aptamerów niż wcześniej dla całego fasta
-
 # Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
 
 # Struktura drugorzedowa aptamerow w pliku proccessing?
 
-# Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury
+# Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury ZROBIONE
 
 # Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie ZROBIONE
 
-# Zapisywac do pliku score czy e-value?
+# Zapisywac do pliku score czy e-value? E-value
 
 # Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
+
+# Porównać działanie PromPredicta z BPromem!
+# Dać ramkę jak w aptamerach dla promotorów
+# Podawać te okna pojedynczo - pliki w RAMie? JEST PROMPREDICT MULTISEQ!
 
 '''_______________________________________________________________________'''
 
@@ -163,14 +165,36 @@ def promoters(
 	# Create filter with genes, around which an aptamer was found
 	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
 	# Generate multifasta file with windows for promoters search
-	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(genome_id), "-fasta", "./Genomes/{0}.fasta".format(genome_id), "-before", 500, "-after", 0, "-biotype", "protein_coding", "-exhead", True, "-filterPR", filter_list)
+	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(genome_id), "-fasta", "./Genomes/{0}.fasta".format(genome_id), "-before", 500, "-after", 200, "-biotype", "protein_coding", "-exhead", True, "-filterPR", filter_list)
 
-	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("./promoter_windows.fasta", window, gccontent)) 
-	# Nie wiedziec czemu program skleja multiple fasta w jedną sekwencję i tak też odnosi się do pozycji znalezionych promotorów w oknach. Może podwać mu te okna w pojedynczej faście?
+	# Split multifasta file into single fasta files
+	'''temp_window = ''
+	with open('./promoter_windows.fasta') as prom_windows:
+		for line in prom_windows:
+			if line.startswith('>'):
 
+				if temp_window != '':
+					with open('./temp_prom.fasta', 'w') as temp_prom:
+						temp_prom.write(temp_window)
+						temp_window = ''
+					os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("./temp_prom.fasta", window, gccontent)) 
+
+			temp_window += line
+
+		else:
+			with open('./temp_prom.fasta', 'w') as temp_prom:
+				temp_prom.write(temp_window)
+				temp_prom = ''
+	'''
+
+	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
 	print("debug") ### TU SKONCZYLEM
 	return
+
+
+	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
+	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("promoter_windows.fasta", window, gccontent)) 
+	# Nie wiedziec czemu program skleja multiple fasta w jedną sekwencję i tak też odnosi się do pozycji znalezionych promotorów w oknach. Może podwać mu te okna w pojedynczej faście? TAK
 
 	PP_output_path = glob('./*_PPde.txt')[0]
 	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
@@ -182,6 +206,8 @@ def promoters(
 				_id = start 							#id = start
 				level = temp_list[-1][-1] 				#jakosc
 				result.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(genome_id, start, end, _id, level))
+
+	# BEDTOOLS
 
 	os.system('rm ./*_PPde.txt')
 	os.system('rm ./*_stb.txt')
