@@ -31,6 +31,8 @@ from time import sleep, localtime, strftime
 # Dać ramkę jak w aptamerach dla promotorów
 # Podawać te okna pojedynczo - pliki w RAMie? JEST PROMPREDICT MULTISEQ!
 
+# Dla dokladnie tych samych ramek co aptamery? (przekaznik -apt)
+
 '''_______________________________________________________________________'''
 
 ### HELPER FUNCTIONS ###
@@ -156,46 +158,39 @@ def promoters(
 	gccontent = 'default'										# GC-content of the whole genome
 	):
 	
-	# Bede musial podac GC% calego analizowanego genomu. Do wyciągnięcia z Ensmbla. Mają API. [UPDATE] Sprawdzałem, dla bakterii nie ma Biomartu. Napisałem program w Cpp
-	# GC content dla ramki, czy dla calego genomu?
-	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru?
-	# Robić filtrowanie dla znalezionych promotorów?
+	# GC content dla ramki, czy dla calego genomu? DLA CALEGO GENOMU
+	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru? TAKA SAMA RAMKA JAK DLA APTAMERU
+	# Robić filtrowanie dla znalezionych promotorów? OGARNĄĆ JAK OBLICZYĆ TE LEVELE
 
 	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/NC_000964.3.fasta", shell=True))
 	# Create filter with genes, around which an aptamer was found
 	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
 	# Generate multifasta file with windows for promoters search
 	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(genome_id), "-fasta", "./Genomes/{0}.fasta".format(genome_id), "-before", 500, "-after", 200, "-biotype", "protein_coding", "-exhead", True, "-filterPR", filter_list)
-
-	# Split multifasta file into single fasta files
-	'''temp_window = ''
-	with open('./promoter_windows.fasta') as prom_windows:
-		for line in prom_windows:
-			if line.startswith('>'):
-
-				if temp_window != '':
-					with open('./temp_prom.fasta', 'w') as temp_prom:
-						temp_prom.write(temp_window)
-						temp_window = ''
-					os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("./temp_prom.fasta", window, gccontent)) 
-
-			temp_window += line
-
-		else:
-			with open('./temp_prom.fasta', 'w') as temp_prom:
-				temp_prom.write(temp_window)
-				temp_prom = ''
-	'''
-
+	# Use PromPredictMultiseq to find promoters in multifasta file
 	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
+	
 	print("debug") ### TU SKONCZYLEM
 	return
 
+	# Zrobic parametr w getfasta do printowania intervali w headerze
 
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent))
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format("promoter_windows.fasta", window, gccontent)) 
-	# Nie wiedziec czemu program skleja multiple fasta w jedną sekwencję i tak też odnosi się do pozycji znalezionych promotorów w oknach. Może podwać mu te okna w pojedynczej faście? TAK
+	PP_output_path = glob('./*_PPde.txt')[0]
+	ID_line = None
+	d = {}
+	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
+		for line in PPout:
+			line = line.strip().split('\t')
+				if line[0] == 'ID':
+					if ID_line != None:
+						pass
 
+					ID_line = line[1].split('|')
+					locus_tag = ID_line[0]
+
+
+
+	'''
 	PP_output_path = glob('./*_PPde.txt')[0]
 	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
 		for line in PPout:
@@ -206,6 +201,7 @@ def promoters(
 				_id = start 							#id = start
 				level = temp_list[-1][-1] 				#jakosc
 				result.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(genome_id, start, end, _id, level))
+	'''
 
 	# BEDTOOLS
 
