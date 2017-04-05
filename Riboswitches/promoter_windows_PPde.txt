@@ -2,45 +2,45 @@
 #ID	seq identifier	%GC of sequence
 #>pstart..pend	length of the promoter	promoter seq	lsp	lspe	Dmax pos	Dmax	Dave
 ###################################################################################################
-ID	BSU06370|694661|695984|+	40.43
-ID	BSU06420|698611|699100|+	41.71
+ID	BSU06370|500|200|694661|695984|+	40.43
+ID	BSU06420|500|200|698611|699100|+	41.71
 >186..255	70	acattagtagaatgaatttttgtatcgttcgataatatcgttgacattatccatgtccgttgttaagata	195	-14.85	216	2.55	2.10
-ID	BSU11870|1258491|1259613|+	41.43
+ID	BSU11870|500|200|1258491|1259613|+	41.43
 >182..271	90	cattttcaattattgtaccatgaattattagaaatttctctctttaaacggttcggcacacgaagaaaaaagtgttgaaataaactgtga	211	-13.38	219	3.18	2.31
-ID	BSU13590|1427033|1428278|+	46.29
+ID	BSU13590|500|200|1427033|1428278|+	46.29
 >287..326	40	attgacaagaccttataacgatgggataattcaaaataat	326	-12.38	300	2.54	2.10
-ID	BSU15570|1630381|1631083|+	37.86
+ID	BSU15570|500|200|1630381|1631083|+	37.86
 >185..204	20	tcgggttgacttatgttaga	200	-15.11	185	1.66	1.47
-ID	BSU38950|3997963|3999097|+	42.29
+ID	BSU38950|500|200|3997963|3999097|+	42.29
 >223..296	74	gatgaagatgaaagtattttctaaaaagcattgacaattgatccaaaagtaataatattaagataattgaaatc	280	-12.42	251	3.49	2.67
-ID	BSU38960|3999349|4000486|+	45.71
+ID	BSU38960|500|200|3999349|4000486|+	45.71
 >258..288	31	gacagaaatagaaaatgtgtgaataatagat	286	-13.14	268	1.57	1.49
-ID	BSU39020|4005751|4006945|+	34.86
+ID	BSU39020|500|200|4005751|4006945|+	34.86
 >206..330	125	ttttattattgtgaaaatagttaaaaaggttgattttcaaaaagtgaaaggataaaatactgctatcatcttagaaaaagacattcttgtatatgatcagtaatatggtctgattgtttctacct	206	-11.84	247	1.84	1.35
-ID	BSU32750|3363265|3364291|-	39.00
+ID	BSU32750|500|200|3363265|3364291|-	39.00
 >147..258	112	attttttcagaggattttaaaaaattaaaaaataataaattattataatagtaaaagttgacatcatttattttattgacatttaatcattcgccgtgctattctacattaa	186	-11.42	192	4.55	3.18
-ID	BSU30550|3127824|3129027|-	38.14
+ID	BSU30550|500|200|3127824|3129027|-	38.14
 >58..112	55	ttttcaaatagtctatactatttattgttttttgtgtgtgcatttccattgtttt	60	-13.01	99	3.41	3.14
 >414..427	14	tataactgtacatt	416	-14.27	427	1.75	1.55
-ID	BSU24570|2548244|2549333|-	42.29
+ID	BSU24570|500|200|2548244|2549333|-	42.29
 >76..197	122	ttcttattcttcgattcttaagatgaataatataagaaaaatctgcccaaattgctgttgcccagcatatagtgatgatggtaggatatgagtatgtatttgatgtaagatattgctatagt	108	-12.96	136	3.74	3.04
-ID	BSU23280|2430257|2431343|-	42.29
+ID	BSU23280|500|200|2430257|2431343|-	42.29
 >129..201	73	aagggtgatgttttgtttttctcaaattgtaagtttatttcattgcgtactttaaaaaggatcgctataataa	201	-13.69	184	3.84	3.25
 >429..440	12	cctaaagccccg	429	-15.7	431	3.67	3.55
-ID	BSU23060|2410694|2410859|-	38.86
+ID	BSU23060|500|200|2410694|2410859|-	38.86
 >323..354	32	atattctcaaaagagtgtcaacgtgtattgac	323	-14.57	349	2.39	1.99
 >409..459	51	taatatatttaatttgaagcaattctctatacagccaaccagttatcgttt	416	-11.84	412	3.99	3.22
-ID	BSU22070|2319439|2320024|-	38.57
+ID	BSU22070|500|200|2319439|2320024|-	38.57
 >243..315	73	aaacaaaattaaagttcgggaatttttattttcagcctatgcaagagattagaatcttgatataatttattac	308	-12.58	270	4.02	3.18
-ID	BSU18560|2024041|2025076|-	40.86
+ID	BSU18560|500|200|2024041|2025076|-	40.86
 >206..303	98	tttgtaagaattataacatttccgatgataacgtcaattctgaaaaaaagagattgacatcaatctgagtcttctttatgataaacgtattcttcatt	217	-13.85	243	3.58	2.73
-ID	BSU13560|1423240|1424440|-	42.29
+ID	BSU13560|500|200|1423240|1424440|-	42.29
 >147..242	96	cgatgatatcagaaaagatttatattaaaaaatatattgacaactaactaaattacctgttaccatgttcatcaactgataaattagaattgtcaa	174	-11.84	188	4.57	3.68
-ID	BSU13180|1383319|1385608|-	39.29
+ID	BSU13180|500|200|1383319|1385608|-	39.29
 >84..194	111	aagattatttttcttatataatatacaccacatcatgtaaataaaaatttcaaattctatgttgacaatgaatttgaattactgttaagattaccaacaaatgattcaact	101	-12	130	5.41	4.08
-ID	BSU11010|1178756|1180595|-	42.00
+ID	BSU11010|500|200|1178756|1180595|-	42.00
 >168..239	72	aatttataaatttcagataaattttctgattcctattgattattgtctttattttcggtaaatttggagaaa	172	-13.55	204	3.94	3.06
 >439..474	36	tcttaagaggactttttttatttctcttttttcctt	460	-14.62	442	2.64	2.19
-ID	BSU05800|625124|626291|-	36.57
+ID	BSU05800|500|200|625124|626291|-	36.57
 >202..273	72	attgattattatagtcatttaattttaaatgtctatacttttataaaataaatataatcatatttttttccg	250	-11.42	218	2.09	1.75
 >387..485	99	gtttgagggtgtctaccaggaaccgtaaaatcctgattacaaaatttgtttatgacattttttgtaatcaggattttttttatttatcaaaacatttaa	466	-12.8	469	3.79	2.67

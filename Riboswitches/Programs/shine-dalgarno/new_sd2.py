@@ -115,6 +115,7 @@ Arguments:
 9. -bed = Create bed file of window postion for Genome Browser vizualization
 10. -biotype = Filter on gene biotype
 11. -filterProm = Filter for promoters. Look for promoters only before that genes, where any aptamers where found. List of locus tags
+12. -intervals = Print window boundaries X nuleotides BEFORE gene start position and Y AFTER to fasta header
 
 gene_biotype=protein_coding
 '''
@@ -130,6 +131,7 @@ def getFasta(*arg):
 	makeBed = getParamValue('-bed',arg)						# ValueType: Boolean
 	bioType = getParamValue('-biotype',arg)					# ValueType: String
 	prom_filter = getParamValue('-filterPR',arg)			# ValueType: String List
+	printIntervals = getParamValue('-intervals', arg)
 	
 	additional = ''	# Additional info for fasta header
 	meme = None
@@ -192,24 +194,26 @@ def getFasta(*arg):
 							if previous_end - aptamerInterval < end + beforeStart:
 								beforeStart = (previous_end - aptamerInterval) - end
 
-						additional = '{}|{}'.format(beforeStart, afterStart)
+						#additional = '{}|{}'.format(beforeStart, afterStart)
 
 
+				# Co z tym zrobic? Wywalic? Bo to jest do SD
 				if sd_filter != None:
 					filterFound = False
 					for key in sorted(sd_filter):
 						if key == feature.qualifiers['locus_tag'][0]:
 							# GET POSITIONS HERE #
 							if(start > sd_filter[key][0]):
-								beforeStart = start - sd_filter[key][0]
+								beforeStart = start - sd_filter[key][0] # ???
 							else:
-								beforeStart = sd_filter[key][1] - end
+								beforeStart = sd_filter[key][1] - end # ???
 							afterStart = 20
 							
 							filterFound = True
 							break
 					if filterFound == False: # If not found in filter, then don't add it to output file
 						continue
+				###
 
 				if prom_filter != None:
 					filterFound = False
@@ -232,6 +236,10 @@ def getFasta(*arg):
 							break 
 					if found == False:
 						continue
+
+				### Additional ###
+				if printIntervals != None:
+					additional = '{}|{}'.format(beforeStart, afterStart)
 
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
 				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead)

@@ -33,12 +33,41 @@ from time import sleep, localtime, strftime
 
 # Dla dokladnie tych samych ramek co aptamery? (przekaznik -apt)
 
+'''
+Znalezc publikacje z doswiadczalnie potwierdzonymi miejscai startu transkrycji, promotorami TRUE POSITIVES
+Potem poszukać genów operonowych, które wiemy, ze nie maja promotorow FALSE POSITIVES
+Wyekstrahowac ramki poszukiwania dla tych genow i sprawdzic specyficznosc i dzialanie 
+
+RocR - pakiet R - do okreslacia specyficznosci i czulosci dzialania programu, poczytac sobie o krzywej Roca
+
+Poczytac sobie publikacje
+https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btq577
+
+ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredicta multiseq !
+
+
+'''
+
+# Moze filtrowac jakos te promotory jesli jest wiecej na aptamer?
+
 '''_______________________________________________________________________'''
 
 ### HELPER FUNCTIONS ###
 
 def makeAptamersBed(genome):
-	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $3, $5, $2, $9, $6}\' ./Results/"+genome+".result > ./Results/apt.bed")
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $7, $8, $2, $9, $5}\' ./Results/"+genome+".result > ./Results/apt.bed")
+
+#chr, {6}, {7}, {1}, {8}, {4} // liczone od 0
+
+def makePromotersBed(genome):
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $10, 0, $5}\' ./Results/"+genome+".result > ./Results/prom.bed")
+
+
+#chr, {10}, {11}, {9}, 0, {4} // liczone od 0
+
+'''
+"awk  \'BEGIN {OFS = \"\\t\"}; {if({0} == "scientific_name") print $5, '\t' ,$3;}\'".format('xD')
+'''
 
 def createPromoterFilter(result_file):
 	filter_list = []
@@ -72,7 +101,15 @@ def aptamers(
 	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k5,5nr >> ./Genomes/{0}_sorted.gff".format(genome))
 
 	''' Create multiple fasta file of propable aptamer regions '''
-	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), "-fasta", "./Genomes/{0}.fasta".format(genome), "-before", 500, "-after", 200, "-aptamer", 50, "-biotype", "protein_coding", "-exhead", True)
+	new_sd2.getFasta(
+		"-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), 
+		"-fasta", "./Genomes/{0}.fasta".format(genome), 
+		"-before", 500, 
+		"-after", 200, 
+		"-aptamer", 50, 
+		"-biotype", "protein_coding", 
+		"-exhead", True, 
+		"-intervals", True)
 	
 	for i in range(0, len(lista)):
 		
@@ -145,7 +182,7 @@ def aptamers(
 	#os.system("rm ./Results/processing.txt") # nie usuwac tych plikow
 	#os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
-	#makeAptamersBed(genome)
+	makeAptamersBed(genome)
 
 '''
 Szukamy na tych samych oknach co aptamery, zeby dwa razy tego nie ekstrahowac.
@@ -166,27 +203,78 @@ def promoters(
 	# Create filter with genes, around which an aptamer was found
 	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
 	# Generate multifasta file with windows for promoters search
-	new_sd2.getFasta("-gff", "./Genomes/{0}_sorted.gff".format(genome_id), "-fasta", "./Genomes/{0}.fasta".format(genome_id), "-before", 500, "-after", 200, "-biotype", "protein_coding", "-exhead", True, "-filterPR", filter_list)
+	new_sd2.getFasta(
+		"-gff", "./Genomes/{0}_sorted.gff".format(genome_id), 
+		"-fasta", "./Genomes/{0}.fasta".format(genome_id), 
+		"-before", 500, 
+		"-after", 200, 
+		"-biotype", "protein_coding", 
+		"-exhead", True, 
+		"-filterPR", filter_list,
+		"-intervals", True)
+
 	# Use PromPredictMultiseq to find promoters in multifasta file
 	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
-	
-	print("debug") ### TU SKONCZYLEM
-	return
-
-	# Zrobic parametr w getfasta do printowania intervali w headerze
 
 	PP_output_path = glob('./*_PPde.txt')[0]
 	ID_line = None
 	d = {}
-	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
+
+	# Read whole final file #
+	finalFile = ""
+
+	with open("./Results/{0}.result".format(genome_id), "r") as handle:
+		finalLines = handle.readlines()
+
+	with open("./Results/{0}.result".format(genome_id), 'w') as finalFile, open(PP_output_path) as PPout:
 		for line in PPout:
 			line = line.strip().split('\t')
-				if line[0] == 'ID':
-					if ID_line != None:
-						pass
+			if line[0] == 'ID':
+				ID_line = line[1].split('|')
 
-					ID_line = line[1].split('|')
-					locus_tag = ID_line[0]
+				'''locus_tag = ID_line[0]
+				before_interval = ID_line[1]
+				gene_start = ID_line[3]
+				gene_end = ID_line[4]
+				strand = ID_line[5]'''
+
+				d = {
+					'locus_tag': ID_line[0],
+					'before_interval': int(ID_line[1]),
+					'gene': {
+						'start': 		int(ID_line[3]),
+						'end': 			int(ID_line[4]),
+						'strand': 		ID_line[5],
+					}
+				}
+
+			elif line[0].startswith('>'):
+				pos = line[0]
+				promoter_start = int(pos[1:].split("..")[0])
+				promoter_end = int(pos[1:].split("..")[1])
+
+				if d['gene']['strand'] == '+':
+					before_pos = d['gene']['start'] - d['before_interval']
+					start = before_pos + promoter_start - 1 # -1 because counting starts from 1
+					end = before_pos + promoter_end - 1 # -1 because counting starts from 1
+
+				elif d['gene']['strand'] == '-':
+					before_pos = d['gene']['end'] + d['before_interval']
+					# Invert start and end
+					start = before_pos - promoter_end - 1 # -1 because counting starts from 1
+					end = before_pos - promoter_start - 1 # -1 because counting starts from 1
+
+				promoter_name = 'PR_' + str(start)
+				for line in finalLines:
+					line = line.strip()
+					if line.split('\t')[1] == d['locus_tag']:
+						finalFile.write("{}\t{}\t{}\t{}\n".format(line, promoter_name, start, end))
+						break
+
+	makePromotersBed(genome_id)
+
+	print("debug") ### TU SKONCZYLEM
+	return
 
 
 
