@@ -42,11 +42,13 @@ def imageValidation(name):
 		return(False)
 
 def convertToList(line, delimiter = ','):
-	if line != '':
-		line = line.split(delimiter)
-		return([elem.strip() for elem in line])
-	else:
-		return([])
+	if not type(line) == int:
+		if line != '':
+			line = line.split(delimiter)
+			return([elem.strip() for elem in line])
+		else:
+			return([])
+
 
 def convertToListForInt(line, delimiter = ','):
 	if not isinstance(line, int):
@@ -196,8 +198,10 @@ for row in dList:
 			else:
 				print(e)
 
+#################################################################################################################################################################################################
 
 	''' Taxonomy '''
+	'''
 	try:
 		if row['taxonomy_id'] != '':
 			v_taxonomy = Taxonomy.objects.create(
@@ -207,7 +211,36 @@ for row in dList:
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_id'])
+	'''
 
+	tax_ids = convertToList(row['taxonomy_name'])
+	print(row['taxonomy_id'])
+	tax_names = convertToList(row['taxonomy_id'])
+	v_taxonomies = []
+	v_taxonomy = None
+
+	complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
+
+	for id in range(0, complete_coordinates):
+		try:
+			if not id > 0:
+				v_taxonomy = Taxonomy.objects.create(
+					taxonomy_id = tax_ids[id],
+					name = tax_names[id],
+				)
+			else:
+				v_taxonomy = Taxonomy.objects.create(
+					taxonomy_id = tax_ids[id],
+					name = tax_names[id],
+					parent = v_taxonomies[id - 1].taxonomy_id
+				)
+		except IntegrityError as e:
+			if match("UNIQUE", str(e)):
+				v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_name'])
+
+		v_taxonomies.append(v_taxonomy)
+
+#################################################################################################################################################################################################
 
 	''' Organism '''
 	try:
@@ -216,7 +249,7 @@ for row in dList:
 				scientific_name = row['scientific_name'],
 				common_name = row['common_name'],
 				accession_number = row['organism_accession_number'],
-				taxonomy = v_taxonomy,
+				taxonomy = v_taxonomies[0],
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):

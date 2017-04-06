@@ -48,7 +48,7 @@ ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredict
 
 '''
 
-# Moze filtrowac jakos te promotory jesli jest wiecej na aptamer?
+# Moze filtrowac jakos te promotory jesli jest
 
 '''_______________________________________________________________________'''
 
@@ -199,7 +199,7 @@ def promoters(
 	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru? TAKA SAMA RAMKA JAK DLA APTAMERU
 	# Robić filtrowanie dla znalezionych promotorów? OGARNĄĆ JAK OBLICZYĆ TE LEVELE
 
-	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/NC_000964.3.fasta", shell=True))
+	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/{0}.fasta".format(genome_id), shell=True))
 	# Create filter with genes, around which an aptamer was found
 	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
 	# Generate multifasta file with windows for promoters search
@@ -214,7 +214,12 @@ def promoters(
 		"-intervals", True)
 
 	# Use PromPredictMultiseq to find promoters in multifasta file
-	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
+	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
+	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
+
+
+	print("debug") ### TU SKONCZYLEM
+	return
 
 	PP_output_path = glob('./*_PPde.txt')[0]
 	ID_line = None
@@ -273,23 +278,7 @@ def promoters(
 
 	makePromotersBed(genome_id)
 
-	print("debug") ### TU SKONCZYLEM
-	return
-
-
-
-	'''
-	PP_output_path = glob('./*_PPde.txt')[0]
-	with open('./Results/{0}.promoters.bed'.format(genome_id), 'w') as result, open(PP_output_path) as PPout:
-		for line in PPout:
-			if not line.startswith('#'):
-				temp_list = line.strip().split('\t')
-				start = temp_list[2] 					#pozycja startu
-				end = temp_list[3] 						#pozycja konca
-				_id = start 							#id = start
-				level = temp_list[-1][-1] 				#jakosc
-				result.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(genome_id, start, end, _id, level))
-	'''
+	
 
 	# BEDTOOLS
 

@@ -130,6 +130,7 @@ class Taxonomy(models.Model):
 	name = models.CharField('nazwa', max_length = 20, null = False)
 	taxonomy_id = models.IntegerField('taxid', default = 0)#, primary_key = True)
 	parent = models.ForeignKey('Taxonomy', null = True)
+	# Type of taxonomy unit
 
 	def __str__(self):
 		return 'Tax: {} {}'.format(self.name, self.taxonomy_id)
