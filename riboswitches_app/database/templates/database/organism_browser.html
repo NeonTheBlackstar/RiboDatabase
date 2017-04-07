@@ -5,13 +5,56 @@
   Browse
 {% endblock %}
 
+{% block css_plugins %}
+<!-- Js tree styles -->
+<link href="{% static "database/plugins/jstree/themes/default/style_jstree.css" %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 
-	<div class="col-xs-12">
+	<!--<div class="col-xs-12">
 		{% for organism in organism_list %}
 			<h1><a href="{% url 'database:organism_detail' organism.scientific_name %}">{{ organism.scientific_name }}</a></h1>
 		{% endfor %}
+	</div>-->
+
+<div class="container">
+	<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h4 class="panel-title">
+	            <a data-toggle="collapse" data-parent="#accordion" href="#filterPanel">Browse organisms</a>
+	            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+	                <i class="glyphicon glyphicon-chevron-down"></i>
+	            </span>
+	        </h4>
+	    </div>
+	    <div id="filterPanel" class="panel-collapse collapse in">
+	        <div class="panel-body">
+	            <!-- Start of jstree list -->
+	              <div id="jstree-organism">
+	                <ul>
+	                  
+	                  <!-- loop through all classes -->
+	                  {% for tax in tax_list_tree %}
+	                    <li>{{ tax }}
+	                      <ul>
+	                      	<li> DUPA </li>
+	                      </ul>
+	                    </li>
+	                  {% endfor %}
+
+	                </ul>
+	              </div>  
+	              <!-- End of jstree list -->  
+	        </div>
+	    </div>
 	</div>
+</div>
 
+{% endblock %}
 
+{% block js_plugins %}
+<!-- jstree script -->
+<script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
+<script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass
+from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy
 
 
 #TODO: jquery datatables, ajax
@@ -53,17 +53,18 @@ def ligand_detail(request, ligand_name):
 	recordList = []
 
 	for e in Record.objects.all():
-		if ligand_name in str(e.family.ribo_class.ligands.all()):
-			dic = {
-				'id': e.id,
-				'gene': None,
-				'organism': None,
-				'ligand': None,
-			}
-			dic['gene'] = e.gene.name if e.gene != None else dic['gene']
-			dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
-			dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
-			recordList.append(dic.copy())
+		if e.family != None:
+			if ligand_name in str(e.family.ribo_class.ligands.all()):
+				dic = {
+					'id': e.id,
+					'gene': None,
+					'organism': None,
+					'ligand': None,
+				}
+				dic['gene'] = e.gene.name if e.gene != None else dic['gene']
+				dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+				dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
+				recordList.append(dic.copy())
 
 	context = {
 		'recordList': recordList,
@@ -71,14 +72,34 @@ def ligand_detail(request, ligand_name):
 
 	return render(request, 'database/ligand_detail.html', context)
 
+##########################################################################################
+
+
+
 def organism_browser(request):
 
-	organism_list = Organism.objects.all()
+
+
+	tax_list_tree = []
+	current_tax = Taxonomy.objects.get(name = 'Bacteria')
+	tax_list_tree.append(current_tax.name)
+
+	while(current_tax.taxonomy_set.all().exists()):
+		print(current_tax.taxonomy_set.all()[0])
+		current_tax = current_tax.taxonomy_set.all()[0]
+		tax_list_tree.append(current_tax.name)
+
 	context = {
-		'organism_list': organism_list,
+		'tax_list_tree': tax_list_tree,
 	}
-	
+
+	print(tax_list_tree)
 	return render(request, 'database/organism_browser.html', context)
+
+
+
+##########################################################################################
+
 
 def organism_detail(request, organism_name):
 

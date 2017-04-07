@@ -28,7 +28,7 @@ from database.models import *
 ''' To use managing functions inside script: '''
 from django.core.management import execute_from_command_line
 ''' Removes whole data from database. Comment following line if it's not necessary ''' ###################################
-execute_from_command_line([argv[0], 'flush', '--noinput'])
+#execute_from_command_line([argv[0], 'flush', '--noinput'])
 
 
 def imageValidation(name):
