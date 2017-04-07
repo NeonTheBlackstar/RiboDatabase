@@ -220,9 +220,9 @@ for row in dList:
 
 	tax_names = convertToList(row['taxonomy_name'])
 
-	if row['taxonomy_id'] != int:
+	if not isinstance(row['taxonomy_id'], int):
 		tax_ids = convertToListForInt(row['taxonomy_id'])
-	elif row['taxonomy_id'] <= 0:
+	elif isinstance(row['taxonomy_id'], int): #and row['taxonomy_id'] <= 0:
 		tax_ids = []
 
 	complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
@@ -230,7 +230,11 @@ for row in dList:
 	tax_ids = tax_ids[::-1]
 	tax_names = tax_names[::-1]
 
+	print(tax_ids)
+	print(tax_names)
+
 	for id in range(0, complete_coordinates):
+
 
 		v_taxonomy = None
 		try:
@@ -443,7 +447,7 @@ for row in dList:
 		v_riboclass.ligands.add(it) # Zmienić na klasę
 
 
-'''
+
 for e in Organism.objects.all():
 	print('\n\n')
 	print(e)
@@ -453,4 +457,4 @@ for e in Taxonomy.objects.all():
 	print('\n\n')
 	print(e)
 	print('\n\n')
-'''
+

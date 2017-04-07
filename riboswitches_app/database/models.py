@@ -133,7 +133,8 @@ class Taxonomy(models.Model):
 	# Type of taxonomy unit
 
 	def __str__(self):
-		return 'Tax: {} {}'.format(self.name, self.taxonomy_id)
+		#return 'Tax: {} {}'.format(self.name, self.taxonomy_id)
+		return 'Tax: {} {} |{}|'.format(self.name, self.taxonomy_id, self.parent)
 	# do napisania skrypt, ktory bedzie to ladowal do bazy rekurencyjnie - To zrobi Szymon
 
 
