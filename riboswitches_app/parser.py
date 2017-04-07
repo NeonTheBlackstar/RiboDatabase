@@ -90,8 +90,8 @@ def loadDataToDictionary(fileName):
 		# ''' Linked with Taxonomy ''' #
 
 			# Taxonomy #
-		'taxonomy_name':				Taxonomy._meta.get_field('name').get_default(),
-		'taxonomy_id':					Taxonomy._meta.get_field('taxonomy_id').get_default(),
+		'taxonomy_name':				Taxonomy._meta.get_field('name').get_default(),							# [ Array ]
+		'taxonomy_id':					Taxonomy._meta.get_field('taxonomy_id').get_default(),					# [ Array ]
 
 			# LigandClass #
 		'ligand_class_name':			LigandClass._meta.get_field('name').get_default(),						# [ Array ] ?

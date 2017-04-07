@@ -42,12 +42,11 @@ def imageValidation(name):
 		return(False)
 
 def convertToList(line, delimiter = ','):
-	if not type(line) == int:
-		if line != '':
-			line = line.split(delimiter)
-			return([elem.strip() for elem in line])
-		else:
-			return([])
+	if line != '':
+		line = line.split(delimiter)
+		return([elem.strip() for elem in line])
+	else:
+		return([])
 
 
 def convertToListForInt(line, delimiter = ','):
@@ -62,7 +61,11 @@ def convertToListForInt(line, delimiter = ','):
 
 def minimumButNotZero(*args):
 	if len(args) > 0:
-		return( min(l for l in args if l > 0) )
+		li = [l for l in args if l > 0]
+		if li != []:
+			return( min(li) ) 
+		else: 
+			return(0)
 	else:
 		return(0)
 
@@ -88,11 +91,13 @@ for row in dList:
 	v_taxonomy = None
 	v_mech_conf = None
 
+	''' ARRAYS '''
 	v_articles = [] # List of pointers for Article objects
 	v_operon_genes = []
 	v_structures3d = []
 	v_ligands = [] # ManyToMany
 	v_ligandclasses = []
+	v_taxonomies = []
 	# Aptamers #
 	v_aptamers = []
 	v_structures2d = []
@@ -213,15 +218,21 @@ for row in dList:
 			v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_id'])
 	'''
 
-	tax_ids = convertToList(row['taxonomy_name'])
-	print(row['taxonomy_id'])
-	tax_names = convertToList(row['taxonomy_id'])
-	v_taxonomies = []
-	v_taxonomy = None
+	tax_names = convertToList(row['taxonomy_name'])
+
+	if row['taxonomy_id'] != int:
+		tax_ids = convertToListForInt(row['taxonomy_id'])
+	elif row['taxonomy_id'] <= 0:
+		tax_ids = []
 
 	complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
 
+	tax_ids = tax_ids[::-1]
+	tax_names = tax_names[::-1]
+
 	for id in range(0, complete_coordinates):
+
+		v_taxonomy = None
 		try:
 			if not id > 0:
 				v_taxonomy = Taxonomy.objects.create(
@@ -232,7 +243,7 @@ for row in dList:
 				v_taxonomy = Taxonomy.objects.create(
 					taxonomy_id = tax_ids[id],
 					name = tax_names[id],
-					parent = v_taxonomies[id - 1].taxonomy_id
+					parent = v_taxonomies[id - 1]
 				)
 		except IntegrityError as e:
 			if match("UNIQUE", str(e)):
@@ -245,12 +256,19 @@ for row in dList:
 	''' Organism '''
 	try:
 		if row['scientific_name'] != '':
-			v_organism = Organism.objects.create(
-				scientific_name = row['scientific_name'],
-				common_name = row['common_name'],
-				accession_number = row['organism_accession_number'],
-				taxonomy = v_taxonomies[0],
-			)
+			if v_taxonomies != []:
+				v_organism = Organism.objects.create(
+					scientific_name = row['scientific_name'],
+					common_name = row['common_name'],
+					accession_number = row['organism_accession_number'],
+					taxonomy = v_taxonomies[-1],
+				)
+			else:
+				v_organism = Organism.objects.create(
+					scientific_name = row['scientific_name'],
+					common_name = row['common_name'],
+					accession_number = row['organism_accession_number'],
+				)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_organism = Organism.objects.get(scientific_name = row['scientific_name'])
@@ -425,7 +443,14 @@ for row in dList:
 		v_riboclass.ligands.add(it) # Zmienić na klasę
 
 
-'''for e in Record.objects.all():
+'''
+for e in Organism.objects.all():
 	print('\n\n')
 	print(e)
-	print('\n\n')'''
+	print('\n\n')
+
+for e in Taxonomy.objects.all():
+	print('\n\n')
+	print(e)
+	print('\n\n')
+'''
