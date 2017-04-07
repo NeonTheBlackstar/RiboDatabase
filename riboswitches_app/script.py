@@ -175,7 +175,7 @@ for row in dList:
 				description = row['family_description'],
 				alignment = row['family_alignment'],
 			)
-		else:
+		elif row['family_name'] == '' and row['class_name'] != '':
 			v_ribofamily = RiboFamily.objects.create(
 				ribo_class = v_riboclass,
 				name = row['class_name'], # Primary Key
@@ -276,6 +276,9 @@ for row in dList:
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
 			v_organism = Organism.objects.get(scientific_name = row['scientific_name'])
+			if v_taxonomies != []: # If an organism already exists and taxonomy was given, assign the taxonomy to the organism
+				v_organism.taxonomy = v_taxonomies[-1]
+				v_organism.save()
 
 
 	''' Gene '''
@@ -454,6 +457,13 @@ for e in Organism.objects.all():
 	print('\n\n')
 
 for e in Taxonomy.objects.all():
+	print('\n\n')
+	print(e)
+	print('\n\n')
+
+print("\n\n------------------------\n\n")
+
+for e in Record.objects.all():
 	print('\n\n')
 	print(e)
 	print('\n\n')
