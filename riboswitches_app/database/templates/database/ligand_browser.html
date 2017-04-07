@@ -7,12 +7,32 @@
 
 {% block content %}
 
-
-	<div class="col-xs-12">
-		{% for ligand in ligand_list %}
-			<h1><a href="{% url 'database:ligand_detail' ligand.name %}">{{ ligand.name }}</a></h1>
-		{% endfor %}
+<div class="container">
+	
+	<div class="bs-example">
+	    <ul class="breadcrumb">
+	        <li><a href="{% url 'database:index' %}">Home</a></li>
+	        <li class="active">Browse</li>
+	        <li class="active">By ligand</li>
+	    </ul>
 	</div>
+
+	{% for ligand in ligand_list %}
+
+		<div class="col-xs-4" style="padding: 1px !important;">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center ligand-name">{{ ligand.name }} </div>
+		  		<div class="panel-body">
+					<a href="{% url 'database:ligand_detail' ligand.name %}">
+						<img class="ligand-img" src="{% static "database/images/" %}{{ ligand.image_name }}">
+					</a>
+		  		</div>
+			</div>
+		</div>
+	{% endfor %}
+
+</div>
+
 
 
 {% endblock %}

@@ -9,4 +9,6 @@ $(document).ready( function () {
         $(".panel-collapse-clickable").find('i').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
     });
 
+    $('main').removeClass('fade-out');
+
 } );

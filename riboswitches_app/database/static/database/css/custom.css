@@ -7,6 +7,16 @@ body {
     height: 100%;
 }
 
+main {
+    opacity: 1;
+    transition: 0.3s opacity;
+}
+
+main.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 .fa-folder-o {
     font-size: 19px !important;
 }
@@ -152,4 +162,24 @@ div.jumbotron {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: justify;
+}
+
+.ligand-img {
+    box-shadow: 0;
+    transition: box-shadow 0.4s;
+    transition: -webkit-filter: grayscale(100%) 0.4s;
+    transition: opacity 0.4s;
+    width: 100%;
+    height: auto;
+}
+
+.ligand-img:hover {
+    -webkit-filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.ligand-name {
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
