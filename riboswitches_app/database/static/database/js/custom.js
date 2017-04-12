@@ -12,4 +12,32 @@ $(document).ready( function () {
 
     $('main').removeClass('fade-out');
 
+
+
+
+    $(window).load(function(){
+    var $container = $('.ligand-container');
+    $container.isotope({
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.ligand-filter a').click(function(){
+ 
+        var selector = $(this).attr('data-filter'); 
+        $container.isotope({ 
+            filter: selector, 
+            animationOptions: { 
+                duration: 750, 
+                easing: 'linear', 
+                queue: false, 
+            } 
+        }); 
+      return false; 
+   		}); 
+	});
 } );
+
