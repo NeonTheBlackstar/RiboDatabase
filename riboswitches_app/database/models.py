@@ -127,8 +127,8 @@ class Organism(models.Model):
 
 
 class Taxonomy(models.Model):
-	name = models.CharField('nazwa', max_length = 20, null = False)
-	taxonomy_id = models.IntegerField('taxid', default = 0)#, primary_key = True)
+	name = models.CharField('nazwa', max_length = 20, null = True)
+	taxonomy_id = models.IntegerField('taxid', default = 0, primary_key = True)
 	parent = models.ForeignKey('Taxonomy', null = True) # related_name = 'confirmation'
 	# Type of taxonomy unit
 

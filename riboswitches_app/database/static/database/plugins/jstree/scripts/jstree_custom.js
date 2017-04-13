@@ -39,12 +39,12 @@ $(document).ready( function () {
 
 	  });
 
-		$("#jstree-organism").on('open_node.jstree', function (event, data) {
+		/*$("#jstree-organism").on('open_node.jstree', function (event, data) {
     		data.instance.set_type(data.node,'folder-open');
 		});
 		$("#jstree-organism").on('close_node.jstree', function (event, data) {
     		data.instance.set_type(data.node,'default');
-		});
+		});*/
 
 	});
 

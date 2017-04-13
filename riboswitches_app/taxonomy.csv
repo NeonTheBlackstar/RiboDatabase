@@ -1,2 +1,3 @@
 scientific_name	taxonomy_name	taxonomy_id
-Escherichia coli	Escherichia coli O1:H-,Escherichia coli,Escherichia,Enterobacteriaceae,Enterobacterales,Gammaproteobacteria,Proteobacteria,Bacteria,cellular organisms	1963779,562,561,543,91347,1236,1224,2,131567
+Escherichia coli	Escherichia coli,Escherichia,Enterobacteriaceae,Enterobacterales,Gammaproteobacteria,Proteobacteria,Bacteria,cellular organisms	562,561,543,91347,1236,1224,2,131567
+Bacillus subtilis	Bacillus subtilis,Bacillus subtilis group,Bacillus,Bacillaceae,Bacillales,Bacilli,Firmicutes,Terrabacteria group,Bacteria,cellular organisms	562,561,543,91347,1236,1224,2,131567,1423,653685,1386,186817,1385,91061,1239,1783272,2,131567

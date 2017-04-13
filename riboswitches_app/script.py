@@ -251,7 +251,7 @@ for row in dList:
 				)
 		except IntegrityError as e:
 			if match("UNIQUE", str(e)):
-				v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_name'])
+				v_taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[id])
 
 		v_taxonomies.append(v_taxonomy)
 
