@@ -45,6 +45,48 @@ https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatic
 
 ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredicta multiseq !
 
+|lsp|	|lspe|	|Dmax pos|	|Dmax|	|Dave|{Average DE value for Predicted Promoter}
+
+DE to "relative stability between neighboring regions of 100 nt length with respect to every nucleotide position n"
+DE to "difference in free energy, czyli E1 - E2"
+
+Dave to PRAWDOPODOBNIE PP_DEave, czyli średnia wartość DE dla każdego przewidzianego promotora
+Sigma?
+Mikro?
+
+AFE to E1, czyli suma energii swobodnych nukleotydów od N do N+100 podzielona przez 100
+
+‘REav’, the AFE values calculated over the +100 to +500 nt regions downstream of the TSSs and TLSs
+
+E i D znamy, to wartości cutoffów dobrane dla poszczególnych cutoffów GC%
+
+The average free energy (AFE)
+
+gene translation start sites (TLSs)
+
+
+The values of E the AFE over −80 to +20 region and REav which is the AFE over the +100 to +500 region with respect to TLS are also shown for all %GC classes which have more than 100 sequences.
+D = E −REav
+
+ujemna wartosc to na pewna bedzie jakas energia swobodna
+
+TSS-based dataset (i.e. experimentally identified transcription start sites) 
+
+The average DE values for all predicted regions in a particular genome have also been calculated and denoted as WPP_DEave (μ)
+
+(σ = 8.3) recall value
+An average recall value of 72% (which indicates the percentage of protein and RNA coding genes with predicted promoter regions assigned to them)
+
+On an average, 86.4% (σ = 5.3) of DNA is transcribed as protein or RNA
+
+
+!!!
+
+tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
+
+!!!
+
+"Since no correlation was observed for PP_DEave based on %GC, in the current study we have chosen this as an unbiased parameter to define the reliability level for each prediction within whole genome."
 
 '''
 
