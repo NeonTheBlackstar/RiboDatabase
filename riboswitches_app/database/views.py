@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
-import json
+import json, os
 
 
 #TODO: jquery datatables, ajax

@@ -18,9 +18,11 @@
 	</div>
 
 	<div class="ligand-filter">
-		<a href="#" data-filter="*">all</a>
-		<a href="#" data-filter=".alanine">alanine</a>
-		<a href="#" data-filter=".glycine">glycine</a>
+		<ul>
+			<li data-filter="*">all</li>
+			<li data-filter=".alanine">alanine</li>
+			<li data-filter=".glycine">glycine</li>
+		</ul>
 	</div>
 
 	<div class="ligand-container">
@@ -28,7 +30,7 @@
 	{% for ligand in ligand_list %}
 	
 		<div class="col-xs-4 grid-item" style="padding: 1px !important;">
-			<div class="panel panel-default">
+			<div class="item {{ligand.name}} panel panel-default">
 				<div class="panel-heading text-center ligand-name">{{ ligand.name }} </div>
 		  		<div class="panel-body">
 					<a href="{% url 'database:ligand_detail' ligand.name %}">

@@ -18,6 +18,9 @@
     <!-- Roboto google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+    <!-- jQuery required before Bootstrap.js -->
+    <script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
+
     {% block css_plugins %}
     {% endblock %}
   
@@ -83,8 +86,7 @@
     </div>
     <!-- End wrapper -->
 
-    <!-- jQuery required before Bootstrap.js -->
-    <script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
+
 
     <!-- Custom js script -->
     <script src="{% static "database/js/custom.js" %}"></script>

@@ -12,9 +12,17 @@
 
 {% block content %}
 
-<script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
-
 <div class="container">
+
+	<div class="bs-example">
+	    <ul class="breadcrumb">
+	        <li><a href="{% url 'database:index' %}">Home</a></li>
+	        <li class="active">Browse</li>
+	        <li class="active">By organism</li>
+	    </ul>
+	</div>
+
+
 	<div class="panel panel-default">
 	    <div class="panel-heading">
 	        <h4 class="panel-title">
@@ -26,17 +34,12 @@
 	    </div>
 	    <div id="filterPanel" class="panel-collapse collapse in">
 	        <div class="panel-body">
+	        
 	            <!-- Start of jstree list -->
-	              <div id="jstree-organism">
+	            <div id="jstree-organism">
 
-
-
-	              </div>  
-	              <!-- End of jstree list -->  
-
-
-
-
+	            </div>  
+	            <!-- End of jstree list -->  
 
 	        </div>
 	    </div>

@@ -13,31 +13,17 @@ $(document).ready( function () {
     $('main').removeClass('fade-out');
 
 
-
-
-    $(window).load(function(){
-    var $container = $('.ligand-container');
-    $container.isotope({
-        animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-        }
+    $('.ligand-container').isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
     });
- 
-    $('.ligand-filter a').click(function(){
- 
+     
+    $('.ligand-filter ul li').click(function(){
         var selector = $(this).attr('data-filter'); 
-        $container.isotope({ 
-            filter: selector, 
-            animationOptions: { 
-                duration: 750, 
-                easing: 'linear', 
-                queue: false, 
-            } 
+        $('.ligand-container').isotope({ 
+            filter: selector,  
         }); 
-      return false; 
-   		}); 
-	});
+        return false; 
+    }); 
 } );
 

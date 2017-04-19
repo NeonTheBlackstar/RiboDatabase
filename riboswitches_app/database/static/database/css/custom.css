@@ -193,3 +193,21 @@ div.jumbotron {
     border-radius: 4px;
 }
 
+.ligand-filter ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #5274a9;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.ligand-filter ul li:hover {
+    background: #5274a9;
+    color: #fff;
+}
+
