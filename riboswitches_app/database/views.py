@@ -111,10 +111,10 @@ def organism_browser(request):
         },
         'types' : {
             "default" : {
-                "icon" : "fa fa-envelope-o"
+                "icon" : "/static/database/images/folder-24.png"
             },
             "folder-open" : {
-                "icon" : "open-folder-24.png"
+                "icon" : "/static/database/images/open-folder-24.png"
             },
         },
         "plugins" : [ "types" ] 

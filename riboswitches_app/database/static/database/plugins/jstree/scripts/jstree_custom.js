@@ -15,11 +15,11 @@ $(document).ready( function () {
 	  $('#jstree-class').jstree({
 		"types" : {
 	      "default" : {
-	        "icon" : "fa fa-folder-o"
-	      },
-	      "folder-open" : {
-	      	"icon" : "fa fa-folder-open-o"
-	      },
+                "icon" : "/static/database/images/folder-24.png"
+            },
+            "folder-open" : {
+                "icon" : "/static/database/images/open-folder-24.png"
+            },
 	    },
 	    "plugins" : [ "types" ]
 
