@@ -43,6 +43,10 @@ RocR - pakiet R - do okreslacia specyficznosci i czulosci dzialania programu, po
 Poczytac sobie publikacje
 https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btq577
 
+
+########################################################################################################################################################################################
+
+
 ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredicta multiseq !
 
 |lsp|	|lspe|	|Dmax pos|	|Dmax|	|Dave|{Average DE value for Predicted Promoter}
@@ -68,7 +72,7 @@ gene translation start sites (TLSs)
 The values of E the AFE over −80 to +20 region and REav which is the AFE over the +100 to +500 region with respect to TLS are also shown for all %GC classes which have more than 100 sequences.
 D = E −REav
 
-ujemna wartosc to na pewna bedzie jakas energia swobodna
+ujemna wartosc to na pewno bedzie jakas energia swobodna
 
 TSS-based dataset (i.e. experimentally identified transcription start sites) 
 
@@ -89,9 +93,11 @@ tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
 "Since no correlation was observed for PP_DEave based on %GC, in the current study we have chosen this as an unbiased parameter to define the reliability level for each prediction within whole genome."
 
 '''
+'''
+Filtrowanie bedzie do parametrze Dave.
+Napisać do tych gości i spytać się, co dokładnie oznaczają wszystkie parametry w pliku wynikowym _PPde, czy i jak można określić pozycję startu miejsca transkrypcji (TATA BOX), oraz czy dobrze rozumiem, jak to jest obliczane. Można spytać również o te "Supplementary data".
 
-# Moze filtrowac jakos te promotory jesli jest
-
+'''
 '''_______________________________________________________________________'''
 
 ### HELPER FUNCTIONS ###
@@ -255,10 +261,12 @@ def promoters(
 		"-filterPR", filter_list,
 		"-intervals", True)
 
-	# Use PromPredictMultiseq to find promoters in multifasta file
+	### Use PromPredictMultiseq to find promoters in multifasta file ###
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
-	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
+	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
 
+	### BProm ###
+	os.system('Programs/lin/bprom \"{0}.fasta\" \"{1}\"'.format(genome_fasta, "bprom_output.txt")) 
 
 	print("debug") ### TU SKONCZYLEM
 	return
