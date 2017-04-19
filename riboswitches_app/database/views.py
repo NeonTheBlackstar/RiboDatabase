@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
-import json, os
+import json
 
 
 #TODO: jquery datatables, ajax
@@ -75,12 +75,19 @@ def ligand_detail(request, ligand_name):
 
 ##########################################################################################
 
+### BEST BROWSER IN THE WHOLE UNIVERSE ###
+### KEEP CALM AND BROWSE THE TAXONOMY ###
+
 def create_tax(tax_list, parent_id, data):
 
     for tax in tax_list:
         tax_name = tax.name
-        data.append({"id": tax_name, "parent": parent_id, "text": tax_name})
-        create_tax(tax.taxonomy_set.all(), tax_name, data)
+        data.append({
+            "id": tax_name, "parent": parent_id, "text": tax_name
+        })
+        create_tax(
+            tax.taxonomy_set.all(), tax_name, data
+        )
 
 
 def organism_browser(request):
@@ -91,13 +98,26 @@ def organism_browser(request):
     tax_list_tree = []
     current_tax = Taxonomy.objects.get(name = 'Bacteria')
     tax_list_tree.append(current_tax.name)
-    data.append({"id": current_tax.name, "parent": "#", "text": current_tax.name})
+
+    data.append({
+        "id": current_tax.name, "parent": "#", "text": current_tax.name
+    })
 
     create_tax(current_tax.taxonomy_set.all(), current_tax.name, data)
 
-    d = { 'core' : {
-        'data' : data,
-        } 
+    d = { 
+        'core' : {
+            'data' : data,
+        },
+        'types' : {
+            "default" : {
+                "icon" : "fa fa-envelope-o"
+            },
+            "folder-open" : {
+                "icon" : "open-folder-24.png"
+            },
+        },
+        "plugins" : [ "types" ] 
     }
 
     ddumps = json.dumps(d)
@@ -107,10 +127,7 @@ def organism_browser(request):
         'd': ddumps,
     }
 
-    print(tax_list_tree)
     return render(request, 'database/organism_browser.html', context)
-
-
 
 
 

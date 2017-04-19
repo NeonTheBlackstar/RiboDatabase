@@ -18,9 +18,6 @@
     <!-- Roboto google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <!-- jQuery required before Bootstrap.js -->
-    <script src="{% static "database/js/jquery-1.12.4.min.js" %}"></script>
-
     {% block css_plugins %}
     {% endblock %}
   
@@ -87,6 +84,8 @@
     <!-- End wrapper -->
 
 
+    <!-- jQuery required before Bootstrap.js -->
+    <script src="{% static "database/js/jquery-3.2.1.min.js" %}"></script>
 
     <!-- Custom js script -->
     <script src="{% static "database/js/custom.js" %}"></script>
@@ -94,6 +93,7 @@
     <!-- Basic scripts -->
     <script src="{% static "database/plugins/bootstrap/scripts/bootstrap.min.js" %}"></script>
 
+    <!-- Specific plugins for particular site -->
     {% block js_plugins %}
     {% endblock %}
     

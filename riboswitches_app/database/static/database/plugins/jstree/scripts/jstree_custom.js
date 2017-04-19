@@ -2,18 +2,7 @@ $(document).ready( function () {
 
     $(function () {
 	  // create an instance when the DOM is ready
-	  $('#jstree-organism').jstree({
-		"types" : {
-	      "default" : {
-	        "icon" : "fa fa-folder-o"
-	      },
-	      "folder-open" : {
-	      	"icon" : "fa fa-folder-open-o"
-	      },
-	    },
-	    "plugins" : [ "types" ]
-
-	  });
+	  $('#jstree-organism').jstree();
 
 		$("#jstree-organism").on('open_node.jstree', function (event, data) {
     		data.instance.set_type(data.node,'folder-open');

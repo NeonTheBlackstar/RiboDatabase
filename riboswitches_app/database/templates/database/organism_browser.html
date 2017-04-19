@@ -11,9 +11,9 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container">
 
+	<!-- Nav helper -->
 	<div class="bs-example">
 	    <ul class="breadcrumb">
 	        <li><a href="{% url 'database:index' %}">Home</a></li>
@@ -46,17 +46,7 @@
 	</div>
 </div>
 
-<script>
 
-$(document).ready(function() {
-
-    $('#jstree-organism').jstree(
-        {{ d|safe }}
-    );
-});
-
-
-</script>
 
 {% endblock %}
 
@@ -64,5 +54,15 @@ $(document).ready(function() {
 <!-- jstree script -->
 <script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
 <script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
+
+<!--Safely pass json to jstree -->
+<script>
+$(document).ready(function() {
+    $('#jstree-organism').jstree(
+        {{ d|safe }}
+    );
+});
+</script>
+
 {% endblock %}
 

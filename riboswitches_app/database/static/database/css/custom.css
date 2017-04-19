@@ -1,3 +1,8 @@
+/* Elements are in three sections: HTML tags, classes and IDs.
+   They are sorted alphabetically in every section */
+
+/***** HTML tags *****/
+
 html {
    height: 100%;
 }
@@ -5,6 +10,11 @@ html {
 body {
     padding-top: 60px;
     height: 100%;
+}
+
+div.jumbotron {
+    background-color: white !important;
+    padding-bottom: 0px;
 }
 
 main {
@@ -17,40 +27,13 @@ main.fade-out {
     transition: none;
 }
 
-.fa-folder-o {
-    font-size: 19px !important;
-}
+/***** End of HTML tags *****/
 
-.fa-folder-open-o {
-    font-size: 19px !important;
-}
-
-.panel-collapse-clickable {
-    cursor: pointer;  
-}
-
+/***** Classes *****/
 .badge.progress-bar-success {
     background-color: #70ad77 !important;
     float: right;
     margin-top: 3px;
-}
-
-.jstree-anchor {
-    width: 85px !important;
-}
-
-#wrapper {
-    max-width: 100%;
-    min-height: 100%;
-    position: relative;
-}
-
-/* Always on the bottom of the site */
-#footer {
-    background-color: #eaecef;
-    position:absolute;
-    bottom:0;
-    width:100%;
 }
 
 /* Figures on the end of index page */
@@ -133,35 +116,20 @@ main.fade-out {
     opacity: 1;
 }
 
-#notes {
-    padding-bottom: 60px;
-}
-/* End figures*/
-
-#search-field {
-    padding-top: 80px;
-    padding-bottom: 50px;
+.fa-folder-o {
+    font-size: 19px !important;
 }
 
-/* Advanced search button - under the search bar */
-#advanced-search-btn {
-    padding-top: 10px;
+.fa-folder-open-o {
+    font-size: 19px !important;
 }
 
-div.jumbotron {
-    background-color: white !important;
-    padding-bottom: 0px;
+.grid-item {
+    padding: 1px !important;
 }
 
-#hamburger {
-    color: white;
-}
-
-#lorem {
-    padding-bottom: 100px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    text-align: justify;
+.jstree-anchor {
+    width: 85px !important;
 }
 
 .ligand-img {
@@ -184,15 +152,6 @@ div.jumbotron {
     font-size: 18px;
 }
 
-#ligands-filter {
-    position: relative;
-    margin: 0 0 40px 0;
-    list-style: none;
-    border: 1px solid rgba(0,0,0,0.07);
-    float: left;
-    border-radius: 4px;
-}
-
 .ligand-filter ul li {
     list-style: none;
     margin: 0;
@@ -211,3 +170,60 @@ div.jumbotron {
     color: #fff;
 }
 
+.panel-collapse-clickable {
+    cursor: pointer;  
+}
+
+/***** End of classes *****/
+
+/***** IDs *****/
+
+/* Advanced search button - under the search bar */
+#advanced-search-btn {
+    padding-top: 10px;
+}
+
+/* Always on the bottom of the site */
+#footer {
+    background-color: #eaecef;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+#hamburger {
+    color: white;
+}
+
+#ligands-filter {
+    position: relative;
+    margin: 0 0 40px 0;
+    list-style: none;
+    border: 1px solid rgba(0,0,0,0.07);
+    float: left;
+    border-radius: 4px;
+}
+
+#lorem {
+    padding-bottom: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#notes {
+    padding-bottom: 60px;
+}
+
+#search-field {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+#wrapper {
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+/***** End of IDs *****/
