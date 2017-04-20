@@ -1,4 +1,8 @@
 export TSS_DATA=data
+export TSS_DATA="Programs/lin/data"
+
+setenv TSS_DATA Programs/lin/data
+
 ./bprom seq.fa res.txt
 
 

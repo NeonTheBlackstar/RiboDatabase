@@ -265,8 +265,41 @@ def promoters(
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
 
-	### BProm ###
-	os.system('Programs/lin/bprom \"{0}.fasta\" \"{1}\"'.format(genome_fasta, "bprom_output.txt")) 
+	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
+
+
+	'''with open("./promoter_windows.fasta") as prom_handle:
+		for line in prom_handle:
+
+			os.system('Programs/lin/bprom \"{0}\" \"bpromout/output_{1}.txt\"'.format(genome_fasta, temp)) '''
+
+	counter = 1
+	temp_window = ''
+
+	if not os.path.exists("./bprom"):
+		os.makedirs("./bprom")
+
+	with open('./promoter_windows.fasta') as prom_windows:
+		for line in prom_windows:
+			if line.startswith('>'):
+				if temp_window != '':
+					with open('./temp_prom.fasta', 'w') as temp_prom:
+						temp_prom.write(temp_window)
+						temp_window = ''
+					os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
+					counter += 1
+			temp_window += line
+		else:
+			with open('./temp_prom.fasta', 'w') as temp_prom:
+				temp_prom.write(temp_window)
+			os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
+
+
+
+	############# BPROM END ################
+	### USAGE ###
+	# export TSS_DATA="Programs/lin/data"
+	# Programs/lin/bprom ./Genomes/NC_000964.3.fasta bprom_output.txt
 
 	print("debug") ### TU SKONCZYLEM
 	return
@@ -286,12 +319,6 @@ def promoters(
 			line = line.strip().split('\t')
 			if line[0] == 'ID':
 				ID_line = line[1].split('|')
-
-				'''locus_tag = ID_line[0]
-				before_interval = ID_line[1]
-				gene_start = ID_line[3]
-				gene_end = ID_line[4]
-				strand = ID_line[5]'''
 
 				d = {
 					'locus_tag': ID_line[0],
@@ -329,7 +356,6 @@ def promoters(
 	makePromotersBed(genome_id)
 
 	
-
 	# BEDTOOLS
 
 	os.system('rm ./*_PPde.txt')
