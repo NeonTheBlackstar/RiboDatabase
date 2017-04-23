@@ -211,6 +211,11 @@ main.fade-out {
     text-align: justify;
 }
 
+#middle-checkbox {
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
 #notes {
     padding-bottom: 60px;
 }

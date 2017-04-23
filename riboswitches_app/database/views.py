@@ -11,11 +11,21 @@ def index(request):
 
     return render(request, 'database/index.html')
 
+def search(request):
+
+    query = request.GET['term']
+
+    context = {
+        'query': query,
+    }
+
+    return render(request, 'database/search.html', context)
+
 def searcher(request):
 
     return render(request, 'database/searcher.html')
 
-def class_family_detail(request):
+def class_family_browser(request):
 
     result = []
     families = []
@@ -38,7 +48,33 @@ def class_family_detail(request):
         'result': result,
     }
 
-    return render(request, 'database/class-family_detail.html', context)
+    return render(request, 'database/class_family_browser.html', context)
+
+#########################################################################
+########################## TO DO ########################################
+def class_family_details(request, family_name):
+
+    families_list = []
+
+    for e in Record.objects.all():
+        if e.family != None:
+            if family_name in str(e.family.all()):
+                dic = {
+                    'id': e.id,
+                    'gene': None,
+                    'organism': None,
+                    'ligand': None,
+                }
+                dic['gene'] = e.gene.name if e.gene != None else dic['gene']
+                dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+                dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
+                families_list.append(dic.copy())
+
+    context = {
+        'families_list': families_list,
+    }
+
+    return render(request, 'database/class_family_details.html', context)
 
 def ligand_browser(request):
 
@@ -49,7 +85,7 @@ def ligand_browser(request):
 
     return render(request, 'database/ligand_browser.html', context)
 
-def ligand_detail(request, ligand_name):
+def ligand_details(request, ligand_name):
 
     recordList = []
 
@@ -71,7 +107,7 @@ def ligand_detail(request, ligand_name):
         'recordList': recordList,
     }
 
-    return render(request, 'database/ligand_detail.html', context)
+    return render(request, 'database/ligand_details.html', context)
 
 ##########################################################################################
 
@@ -134,7 +170,7 @@ def organism_browser(request):
 ##########################################################################################
 
 
-def organism_detail(request, organism_name):
+def organism_details(request, organism_name):
 
     organism = Organism.objects.filter(scientific_name = organism_name)
     gene = Gene.objects.filter(organism = organism)
@@ -143,4 +179,4 @@ def organism_detail(request, organism_name):
         'riboswitch_record': riboswitch_record,
     }
 
-    return render(request, 'database/organism_detail.html', context)
+    return render(request, 'database/organism_details.html', context)

@@ -16,7 +16,7 @@
   <!-- Nav helper -->
   <div class="bs-example">
       <ul class="breadcrumb">
-          <li><a href="{% url 'database:index' %}">Home</a></li>
+          <li><a href="{% url 'database:index' %}" id="test">Home</a></li>
           <li class="active">Browse</li>
           <li class="active">By class/family</li>
       </ul>
@@ -42,7 +42,7 @@
                         <ul>
                         <!-- loop through families for a class -->
                           {% for family in class.families %}
-                            <li>{{ family }}</li>
+                            <li><a href="{% url 'database:class_family_details' family_name %}">{{ family }}</a></li>
                           {% endfor %}
                         </ul>
                       </li>

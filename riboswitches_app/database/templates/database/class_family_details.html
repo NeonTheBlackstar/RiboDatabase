@@ -1,0 +1,51 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}
+  Details
+{% endblock %}
+
+{% block css_plugins %}
+<!-- dataTables for Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static "database/plugins/datatables/styles/datatables.bootstrap.min.css" %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <!-- Nav helper -->
+  <div class="bs-example">
+    <ul class="breadcrumb">
+      <li><a href="{% url 'database:index' %}">Home</a></li>
+      <li class="active">Browse</li>
+      <li class="active">By class/family</li>
+    </ul>
+  </div>
+
+  <div id="table_wrapper" class="dataTables wrapper form-inline dt-bootstrap no-footer">
+    <div class="col-xs-12">
+      <table id="family-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>test</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for detail in families_list %}
+            <tr role="row">
+              <td>{{ detail.organism }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
+<script src="{% static "database/plugins/datatables/scripts/datatables_custom.js" %}"></script>
+{% endblock %}
