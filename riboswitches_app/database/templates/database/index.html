@@ -5,6 +5,11 @@
   Home
 {% endblock %}
 
+{% block css_plugins %}
+<link rel="stylesheet" href="{% static 'search/plugins/typeahead-js/typeahead.css' %}">
+{% endblock %}
+
+
 {% block content %}
   
   <div class="container">
@@ -15,50 +20,57 @@
     </div>
   </div>
 
-  {% include "database/searcher_bar.html" %}
+  <div class="jumbotron">
+    <div class="container" id="search-field">
+      <div class="col-xs-12">
+        <form method="get" action="/search/">
+          <div class="input-group input-group-lg" id="test">
+            <input type="text" class="typeahead form-control" placeholder="Search for..." id="quicksearch" name="quicksearch" autocomplete="off" />
+            <span class="input-group-btn">
+              <input type="submit" class="btn btn-default" value="Go!">
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-  <div class="container" id="lorem">
+  <div class="container">
     <div class="col-xs-12">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-5">
+            Riboswitches database
+            <ul>
+              <li>This</li>
+              <li>is</li>
+              <li>a</li>
+              <li>basic</li>
+              <li>info</li>
+            </ul>
+          </div>
+          <div class="col-xs-7 text-center">
+            <p>Tutaj moze jakas fajna fotke strzelimy</p>
+            <img src="https://cdn.rcsb.org/pdb101/motm/images/mom130-1u8d.jpg" style="height: 300px; width:auto;"/>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="container" id="notes">
-    <div class="col-xs-4">
-      <figure class="bottom-blocks">
-        <figcaption>
-          <i class="fa fa-info"></i>
-          <h3>About</h3>
-          <p>You can read about the project.</p>
-          <a href="#" class="button">More</a>
-        </figcaption>
-      </figure>
-    </div>
-    <div class="col-xs-4">
-      <figure class="bottom-blocks">
-        <figcaption>
-          <i class="fa fa-database"></i>
-          <h3>Database</h3>
-          <p>Informations about riboswitches</p>
-          <a href="#" class="button">Browse</a>
-        </figcaption>
-      </figure>
-    </div>
-    <div class="col-xs-4 center-block">
-      <figure class="bottom-blocks">
-        <figcaption>
-          <i class="fa fa-envelope-o"></i>
-          <h3>Contact</h3>
-          <p>Stay in touch with us.</p>
-          <a href="#" class="button">Contact</a>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static 'search/plugins/typeahead-js/bloodhound.min.js' %}"></script>
+<script src="{% static 'search/plugins/typeahead-js/typeahead.jquery.min.js' %}"></script>
+<script src="{% static 'search/js/quicksearch.js' %}"></script>
+
+<script> var ROOT_URL = "{% url 'search:index' %}"; </script>
+
+<script>
+  $(document).ready(function() {
+    Quicksearch.init()
+  });
+</script>
+
 {% endblock %}

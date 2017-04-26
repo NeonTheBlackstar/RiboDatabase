@@ -11,7 +11,7 @@ $(document).ready( function () {
                 	"icon" : "/static/database/images/open-folder-24.png"
             	},
 	    	},
-	    	"plugins" : [ "types" ]
+	    	"plugins" : [ "types", ]
 
 	  	});
 
@@ -27,8 +27,13 @@ $(document).ready( function () {
     		data.instance.set_type(data.node,'default');
 		});
 
-	  // create an instance when the DOM is ready
-	  
+
+		$("#jstree-organism").on('open_node.jstree', function (event, data) {
+    		data.instance.set_type(data.node,'folder-open');
+		});
+		$("#jstree-organism").on('close_node.jstree', function (event, data) {
+    		data.instance.set_type(data.node,'default');
+		});
 
 	});
 

@@ -9,7 +9,8 @@ import json
 
 def index(request):
 
-    return render(request, 'database/index.html')
+    context = {'breadcrumbs': []}
+    return render(request, 'database/index.html', context)
 
 def search(request):
 
@@ -153,7 +154,7 @@ def organism_browser(request):
                 "icon" : "/static/database/images/open-folder-24.png"
             },
         },
-        "plugins" : [ "types" ] 
+        "plugins" : [ "types", "wholerow", ] 
     }
 
     ddumps = json.dumps(d)
