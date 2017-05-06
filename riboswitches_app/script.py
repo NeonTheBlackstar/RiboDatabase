@@ -28,7 +28,7 @@ from database.models import *
 ''' To use managing functions inside script: '''
 from django.core.management import execute_from_command_line
 ''' Removes whole data from database. Comment following line if it's not necessary ''' ###################################
-#execute_from_command_line([argv[0], 'flush', '--noinput'])
+execute_from_command_line([argv[0], 'flush', '--noinput'])
 
 
 def imageValidation(name):
@@ -42,7 +42,7 @@ def imageValidation(name):
 		return(False)
 
 def convertToList(line, delimiter = ','):
-	if line != '':
+	if line != '' and line != None:
 		line = line.split(delimiter)
 		return([elem.strip() for elem in line])
 	else:
@@ -206,54 +206,42 @@ for row in dList:
 #################################################################################################################################################################################################
 
 	''' Taxonomy '''
-	'''
-	try:
-		if row['taxonomy_id'] != '':
-			v_taxonomy = Taxonomy.objects.create(
-				name = row['taxonomy_name'],
-				taxonomy_id = row['taxonomy_id'],
-			)
-	except IntegrityError as e:
-		if match("UNIQUE", str(e)):
-			v_taxonomy = Taxonomy.objects.get(taxonomy_id = row['taxonomy_id'])
-	'''
-
 	tax_names = convertToList(row['taxonomy_name'])
 
-	if not isinstance(row['taxonomy_id'], int):
-		tax_ids = convertToListForInt(row['taxonomy_id'])
-	elif isinstance(row['taxonomy_id'], int): #and row['taxonomy_id'] <= 0:
-		tax_ids = []
+	if tax_names != []:
 
-	complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
+		if not isinstance(row['taxonomy_id'], int):
+			tax_ids = convertToListForInt(row['taxonomy_id'])
+		elif isinstance(row['taxonomy_id'], int): #and row['taxonomy_id'] <= 0:
+			tax_ids = []
 
-	tax_ids = tax_ids[::-1]
-	tax_names = tax_names[::-1]
+		complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
 
-	print(tax_ids)
-	print(tax_names)
+		tax_ids = tax_ids[::-1]
+		tax_names = tax_names[::-1]
 
-	for id in range(0, complete_coordinates):
+		print(tax_ids)
+		print(tax_names)
 
+		for id in range(0, complete_coordinates):
+			v_taxonomy = None
+			try:
+				if not id > 0:
+					v_taxonomy = Taxonomy.objects.create(
+						taxonomy_id = tax_ids[id],
+						name = tax_names[id],
+					)
+				else:
+					v_taxonomy = Taxonomy.objects.create(
+						taxonomy_id = tax_ids[id],
+						name = tax_names[id],
+						parent = v_taxonomies[id - 1]
+					)
+			except IntegrityError as e:
+				if match("UNIQUE", str(e)):
+					v_taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[id])
 
-		v_taxonomy = None
-		try:
-			if not id > 0:
-				v_taxonomy = Taxonomy.objects.create(
-					taxonomy_id = tax_ids[id],
-					name = tax_names[id],
-				)
-			else:
-				v_taxonomy = Taxonomy.objects.create(
-					taxonomy_id = tax_ids[id],
-					name = tax_names[id],
-					parent = v_taxonomies[id - 1]
-				)
-		except IntegrityError as e:
-			if match("UNIQUE", str(e)):
-				v_taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[id])
-
-		v_taxonomies.append(v_taxonomy)
+			v_taxonomies.append(v_taxonomy)
 
 #################################################################################################################################################################################################
 
