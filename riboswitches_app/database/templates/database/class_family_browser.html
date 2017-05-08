@@ -38,11 +38,18 @@
                   <ul>
                     <!-- loop through all classes -->
                     {% for class in result %}
-                      <li>{{ class.name }}<span class="badge progress-bar-success">{{ class.families|length }} </span>
+                      <li>{{ class.name }}
+                        <span class="badge progress-bar-success">
+                          {{ class.families|length }}
+                        </span>
                         <ul>
                         <!-- loop through families for a class -->
                           {% for family in class.families %}
-                            <li><a href="{% url 'database:class_family_details' family_name %}">{{ family }}</a></li>
+                            <li>
+                              <a href="{% url 'database:class_family_details' family %}">
+                                {{ family }}
+                              </a>
+                            </li>
                           {% endfor %}
                         </ul>
                       </li>

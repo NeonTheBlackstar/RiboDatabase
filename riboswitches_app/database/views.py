@@ -49,17 +49,19 @@ def class_family_browser(request):
         'result': result,
     }
 
+    print(context)
+
     return render(request, 'database/class_family_browser.html', context)
 
 #########################################################################
 ########################## TO DO ########################################
-def class_family_details(request, family_name):
+def class_family_details(request, family):
 
     families_list = []
 
     for e in Record.objects.all():
         if e.family != None:
-            if family_name in str(e.family.all()):
+            if family in str(e.family.all()):
                 dic = {
                     'id': e.id,
                     'gene': None,

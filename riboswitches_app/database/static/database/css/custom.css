@@ -57,8 +57,8 @@ main.fade-out {
     transition: box-shadow 0.4s;
     transition: -webkit-filter: grayscale(100%) 0.4s;
     transition: opacity 0.4s;
-    width: 100%;
-    height: auto;
+    height: 300px;
+    width: 300px;
 }
 
 .ligand-img:hover {

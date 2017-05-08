@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
+from database.models import *
+
 
 def index(request):
     context = {'breadcrumbs': []}
@@ -11,10 +13,9 @@ def riboswitches(request):
     term = request.GET['term']
     limit = request.GET['limit']
     print('riboswitches', term, limit)
+
     l = [
-      {'name':'ribo1', 'url':'http://www.google.com'},
-      {'name':'ribo2', 'url':'http://www.google.com'},
-      {'name':'ribo3', 'url':'http://www.google.com'},
+      {'name':term, 'url':'http://www.google.com'},
     ]
     return JsonResponse(l, safe=False)
 
