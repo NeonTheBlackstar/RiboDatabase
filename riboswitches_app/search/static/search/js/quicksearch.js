@@ -44,7 +44,7 @@ var Quicksearch = function() {
             templates: {
                 empty: [
                     '<h4 class="tt-header search-header">Riboswitches</h4>',
-                    '<div class="empty-message">',
+                    '<div class="empty-message" style="padding-left: 20px;">',
                     'No Results',
                     '</div>'
                 ].join('\n'),
