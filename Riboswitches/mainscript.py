@@ -86,6 +86,8 @@ On an average, 86.4% (σ = 5.3) of DNA is transcribed as protein or RNA
 
 !!!
 
+$11 D ave
+$12 Reliability
 tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
 
 !!!
@@ -96,6 +98,27 @@ tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
 '''
 Filtrowanie bedzie do parametrze Dave.
 Napisać do tych gości i spytać się, co dokładnie oznaczają wszystkie parametry w pliku wynikowym _PPde, czy i jak można określić pozycję startu miejsca transkrypcji (TATA BOX), oraz czy dobrze rozumiem, jak to jest obliczane. Można spytać również o te "Supplementary data".
+
+lsp - least stable position	
+lspe - least stable position energy
+
+### 10.05.17 ###
+
+Szukalem tych promotorow, ale wszystkie linki powygasaly, bo ostatni update tej bazy danych z Bacillusa jest z 2008 r... ;/
+
+To jest dla E. coli i wygląda całkiem spoko:
+http://regulondb.ccg.unam.mx/index.jsp
+
+Tutaj publikacje o tej bazie DBTBS, gdzie niby mialy by byc prmotory dla Bacillusa sub.:
+https://academic.oup.com/nar/article/29/1/278/1116240/DBTBS-a-database-of-Bacillus-subtilis-promoters
+https://www.ncbi.nlm.nih.gov/pubmed/14681362
+
+Sama strona DBTBS:
+http://dbtbs.hgc.jp/
+
+Tu niby cos jest, ale strasznie malo tych promotorow, bo tylko 20:
+http://microbes.ucsc.edu/cgi-bin/hgTables?hgsid=2707680_eeRoFcyRayQVESRA1SG6pYG48ah0&clade=bacteria-firmicutes&org=Bacillus+subtilis&db=baciSubt2&hgta_group=allTracks&hgta_track=ct_Promoter_7933&hgta_table=0&hgta_regionType=genome&position=chr%3A10001-35000&hgta_outputType=wigData&hgta_outFileName=
+
 
 '''
 '''_______________________________________________________________________'''
