@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from database.models import Organism, Ligand
+from database.models import Record, Ligand
 
 
 def index(request):
@@ -12,11 +12,10 @@ def index(request):
 def riboswitches(request):
     term = request.GET['term']
     limit = request.GET['limit']
-    names = []
     l = []
 
-    for o in Organism.objects.filter(scientific_name__contains=term):
-        l.append({'name':o.scientific_name, 'url':'http://www.google.com'},)
+    for r in Record.objects.filter(name__contains=term):
+        l.append({'name':r.name, 'url':"/search/record/{}".format(r.name)},)
 
     return JsonResponse(l, safe=False)
 
@@ -24,10 +23,13 @@ def riboswitches(request):
 def ligands(request):
     term = request.GET['term']
     limit = request.GET['limit']
-    names = []
     lig = []
 
     for l in Ligand.objects.filter(name__contains=term):
-        lig.append({'name':o.scientific_name, 'url':'http://www.google.com'},)
+        lig.append({'name':l.name, 'url':'http://www.google.com'},)
 
-    return JsonResponse(l, safe=False)
+    return JsonResponse(lig, safe=False)
+
+def record(request):
+
+    return render(request, 'search/record.html')

@@ -8,4 +8,5 @@ urlpatterns = [
   url(r'^riboswitches/$', views.riboswitches),
   url(r'^ligands/$', views.ligands),
   url(r'^$', db_views.index, name="index"),
+  url(r'^record/([A-Za-z0-9])+/$', views.record),
 ]
