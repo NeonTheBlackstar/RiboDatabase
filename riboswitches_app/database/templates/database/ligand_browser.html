@@ -30,18 +30,18 @@
   <div class="ligand-container">
 
   {% for ligand in ligand_list %}
-    <div class="col-xs-1 grid-item">
+  
       <div class="item {{ligand.name}} panel panel-default">
         <div class="panel-heading text-center ligand-name">
           {{ ligand.name }} 
         </div>
-        <div class="panel-body">
+        <div class="panel-body grid-item">
           <a href="{% url 'database:ligand_details' ligand.name %}">
             <img class="ligand-img" src="{% static "database/images/" %}{{ ligand.image_name }}">
           </a>
         </div>
       </div>
-    </div>
+
   {% endfor %}
   
   </div>

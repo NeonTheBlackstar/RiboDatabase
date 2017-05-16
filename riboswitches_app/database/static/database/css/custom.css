@@ -34,6 +34,7 @@ main.fade-out {
     background-color: #70ad77 !important;
     float: right;
     margin-top: 3px;
+    margin-left: 5px;
 }
 
 .fa-folder-o {
@@ -44,12 +45,8 @@ main.fade-out {
     font-size: 19px !important;
 }
 
-.grid-item {
-    padding: 1px !important;
-}
-
-.jstree-anchor {
-    width: 85px !important;
+.jstree-anchor:hover {
+    background-color: #e8eff7 !important;
 }
 
 .ligand-img {
@@ -72,6 +69,10 @@ main.fade-out {
     font-size: 18px;
 }
 
+.ligand-filter ul {
+    padding-left: 0;
+}
+
 .ligand-filter ul li {
     list-style: none;
     margin: 0;
@@ -92,6 +93,11 @@ main.fade-out {
 
 .panel-collapse-clickable {
     cursor: pointer;  
+}
+
+.panel.panel-default {
+    margin-right: 12px;
+    margin-bottom: 12px;
 }
 
 .search-header {

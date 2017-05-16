@@ -156,7 +156,10 @@ def organism_browser(request):
                 "icon" : "/static/database/images/open-folder-24.png"
             },
         },
-        "plugins" : [ "types", "wholerow", ] 
+        "themes": {
+            "dots": True
+        },
+        "plugins" : [ "types", ] 
     }
 
     ddumps = json.dumps(d)
