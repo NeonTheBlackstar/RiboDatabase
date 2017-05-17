@@ -1,4 +1,4 @@
->BSU13560|500|200|1423240|1424440|-                                             
+>BSU13560|500|200|mtnK|1423240|1424440|-                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU13590|500|200|1427033|1428278|+                                             
+>BSU13590|500|200|mtnW|1427033|1428278|+                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

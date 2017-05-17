@@ -119,6 +119,10 @@ http://dbtbs.hgc.jp/
 Tu niby cos jest, ale strasznie malo tych promotorow, bo tylko 20:
 http://microbes.ucsc.edu/cgi-bin/hgTables?hgsid=2707680_eeRoFcyRayQVESRA1SG6pYG48ah0&clade=bacteria-firmicutes&org=Bacillus+subtilis&db=baciSubt2&hgta_group=allTracks&hgta_track=ct_Promoter_7933&hgta_table=0&hgta_regionType=genome&position=chr%3A10001-35000&hgta_outputType=wigData&hgta_outFileName=
 
+############### 17.05.17 #############
+
+Nie potrafię zrozumieć notacji nazw genów w tym BioCycu. Nazwa często nie wskazuje na to, że jest to gen pojedynczy, czy jest to oznaczenie operonu.
+
 
 '''
 '''_______________________________________________________________________'''
@@ -282,19 +286,46 @@ def promoters(
 		"-biotype", "protein_coding", 
 		"-exhead", True, 
 		"-filterPR", filter_list,
-		"-intervals", True)
+		"-intervals", True,
+		"-genename", True)
 
 	### Use PromPredictMultiseq to find promoters in multifasta file ###
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
 
+	############# LOAD ALL GENES ##############
+
+	roca_dictionary = {}
+
+	handle = open('./Genomes/{}.gff'.format(genome_id))
+
+	for record in GFF.parse(handle):
+		for feature in record.features:
+			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == 'protein_coding'):
+				roca_dictionary[ feature.qualifiers['gene'][0] ] = {
+					'confirmed': False,
+					'bprom': False,
+					'ppred': False,
+				}
+
+	############# LOAD CONFIRMED PROMOTERS ############## confirmed_promoters.txt
+
+	with open('confirmed_promoters.txt') as conf_h:
+		for line in conf_h:
+			line = line.strip().split('\t')
+			
+			if line[3] != '':
+				gene_name = line[3].split('-')[0]
+				roca_dictionary[gene_name]['confirmed'] = True
+
+	print(roca_dictionary)
+
+	print("debug") ### TU SKONCZYLEM
+	return
+
 	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
 
-
-	'''with open("./promoter_windows.fasta") as prom_handle:
-		for line in prom_handle:
-
-			os.system('Programs/lin/bprom \"{0}\" \"bpromout/output_{1}.txt\"'.format(genome_fasta, temp)) '''
+	os.system('export TSS_DATA=\"Programs/lin/data\"')
 
 	counter = 1
 	temp_window = ''
@@ -317,12 +348,60 @@ def promoters(
 				temp_prom.write(temp_window)
 			os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
 
+		prom_windows.close()
 
+	### COLLECT DATA FOR ROC ###
+
+	for file in os.listdir('./bprom'):
+		if file.startswith('output'):
+			with open('./bprom/{}'.format(file)) as file_h:
+				gene_name = ''
+				locus_tag = ''
+				promoterExists = False
+
+				for line in file_h:
+					line = line.strip()
+					if line.startswith('>'):
+						gene_name = line.split('|')[3]
+						locus_tag = line.split('|')[0][1:]
+						continue
+
+					if line.startswith('Number'): 
+						if int( line.split('-')[1].strip() ) > 0:
+							roca_dictionary[gene_name]['bprom'] = True
+						else:
+							roca_dictionary[gene_name]['bprom'] = False
+						break
+
+	print(roca_dictionary)
 
 	############# BPROM END ################
 	### USAGE ###
 	# export TSS_DATA="Programs/lin/data"
 	# Programs/lin/bprom ./Genomes/NC_000964.3.fasta bprom_output.txt
+
+
+	############# PROMPREDICT START ################
+
+	PP_output_path = glob('./*_PPde.txt')[0]
+
+	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent))
+	
+	### COLLECT DATA FOR ROC ###
+
+	with open(PP_output_path) as PPout:
+		for line in PPout:
+			line = line.strip().split('\t')
+			if line[0] == 'ID':
+				ID_line = line[1].split('|')
+				gene_name = ID_line[3]
+				roca_dictionary[gene_name]['ppred'] = False
+			elif line[0].startswith('>'):
+				roca_dictionary[gene_name]['ppred'] = True
+
+	print(roca_dictionary)
+
+	############# PROMPREDICT END ################
 
 	print("debug") ### TU SKONCZYLEM
 	return

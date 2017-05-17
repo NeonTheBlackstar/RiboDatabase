@@ -131,7 +131,8 @@ def getFasta(*arg):
 	makeBed = getParamValue('-bed',arg)						# ValueType: Boolean
 	bioType = getParamValue('-biotype',arg)					# ValueType: String
 	prom_filter = getParamValue('-filterPR',arg)			# ValueType: String List
-	printIntervals = getParamValue('-intervals', arg)
+	printIntervals = getParamValue('-intervals', arg)		# ValueType: Boolean
+	printGeneName = getParamValue('-genename', arg)			# ValueType: Boolean
 	
 	additional = ''	# Additional info for fasta header
 	meme = None
@@ -239,7 +240,11 @@ def getFasta(*arg):
 
 				### Additional ###
 				if printIntervals != None:
-					additional = '{}|{}'.format(beforeStart, afterStart)
+					additional += '{}|{}'.format(beforeStart, afterStart)
+				if printGeneName != None:
+					if additional != '':
+						additional += '|'
+					additional += feature.qualifiers['gene'][0]
 
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
 				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead)

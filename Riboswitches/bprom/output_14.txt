@@ -1,4 +1,4 @@
->BSU22070|500|200|2319439|2320024|-                                             
+>BSU22070|500|200|xpt|2319439|2320024|-                                         
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

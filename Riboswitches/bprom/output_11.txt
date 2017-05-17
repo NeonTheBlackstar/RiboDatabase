@@ -1,4 +1,4 @@
->BSU24570|500|200|2548244|2549333|-                                             
+>BSU24570|500|200|gcvT|2548244|2549333|-                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

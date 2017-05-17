@@ -1,4 +1,4 @@
->BSU05800|500|200|625124|626291|-                                               
+>BSU05800|500|200|pbuE|625124|626291|-                                          
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1

@@ -1,4 +1,4 @@
->BSU15570|500|200|1630381|1631083|+                                             
+>BSU15570|500|200|cysH|1630381|1631083|+                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

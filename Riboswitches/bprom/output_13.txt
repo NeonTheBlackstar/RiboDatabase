@@ -1,4 +1,4 @@
->BSU23060|500|200|2410694|2410859|-                                             
+>BSU23060|500|200|ypzE|2410694|2410859|-                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1

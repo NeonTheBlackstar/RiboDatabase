@@ -1,4 +1,4 @@
->BSU30550|500|200|3127824|3129027|-                                             
+>BSU30550|500|200|metK|3127824|3129027|-                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1

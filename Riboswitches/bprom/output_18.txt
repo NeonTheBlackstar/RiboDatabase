@@ -1,4 +1,4 @@
->BSU11010|500|200|1178756|1180595|-                                             
+>BSU11010|500|200|yitJ|1178756|1180595|-                                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0
