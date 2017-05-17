@@ -3,24 +3,10 @@ from django.shortcuts import render
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
 import json
 
-
-#TODO: jquery datatables, ajax
-
-
 def index(request):
 
     context = {'breadcrumbs': []}
     return render(request, 'database/index.html', context)
-
-def search(request):
-
-    query = request.GET['term']
-
-    context = {
-        'query': query,
-    }
-
-    return render(request, 'database/search.html', context)
 
 def searcher(request):
 
@@ -91,24 +77,30 @@ def ligand_browser(request):
 def ligand_details(request, ligand_name):
 
     recordList = []
+    name = ligand_name
 
     for e in Record.objects.all():
         if e.family != None:
             if ligand_name in str(e.family.ribo_class.ligands.all()):
                 dic = {
                     'id': e.id,
-                    'gene': None,
-                    'organism': None,
+                    # 'gene': None,
+                    # 'organism': None,
+                    'name': e.name,
                     'ligand': None,
                 }
-                dic['gene'] = e.gene.name if e.gene != None else dic['gene']
-                dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+                # dic['gene'] = e.gene.name if e.gene != None else dic['gene']
+                # dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
+                dic['name'] = e.name if e.name != None else dic['name']
                 dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
                 recordList.append(dic.copy())
 
     context = {
         'recordList': recordList,
+        'name': name,
     }
+
+    print(recordList)
 
     return render(request, 'database/ligand_details.html', context)
 

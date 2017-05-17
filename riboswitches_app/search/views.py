@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from database.models import Record, Ligand
+from database.models import Record, Ligand, Gene, Organism
 
 
 def index(request):
@@ -30,6 +30,26 @@ def ligands(request):
 
     return JsonResponse(lig, safe=False)
 
-def record(request):
+def record(request, riboswitch_name):
+    l = []
+    context = {}
 
-    return render(request, 'search/record.html')
+    for r in Record.objects.filter(name=riboswitch_name):
+        context['name'] = r.name
+        context['organism'] = r.gene.organism.scientific_name
+        context['family'] = r.family.name
+        context['gene'] = r.gene.name
+        context['terminator'] = r.terminator
+        context['promoter'] = r.promoter
+        context['mechanism'] = r.mechanism
+        context['effect'] = r.effect
+
+    l.append(context)
+    test = {
+        'l': l,
+        'name': context['name'],
+    }
+
+    print(context)
+
+    return render(request, 'search/record.html', test)

@@ -78,8 +78,8 @@ main.fade-out {
     margin: 0;
     padding: 0;
     display: inline-block;
-    padding: 10px 15px;
-    border: 1px solid #5274a9;
+    padding: 5px 10px;
+    border: 1px solid #727272;
     cursor: pointer;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -87,8 +87,14 @@ main.fade-out {
     transition: all .5s ease;
 }
 .ligand-filter ul li:hover {
-    background: #5274a9;
+    background: #70ad77;
     color: #fff;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > 
+.active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #70ad77 !important;
+    border-color: #70ad77 !important;
 }
 
 .panel-collapse-clickable {
@@ -149,6 +155,10 @@ main.fade-out {
 #quicksearch {
     height: 46px;
     font-size: 20px;
+}
+
+#record-panel {
+    margin-right: 0;
 }
 
 #search-field {
