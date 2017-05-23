@@ -1,0 +1,51 @@
+NAME	LOCUS		PROMPREDICT	BPROM	CONF	OPERON	PP_GENOME	GENE_START	GENE_END	STRAND	START_PP	END_PP	LEVEL	TSS_START	TSS_DIST
+
+pbuG	BSU06370	-		-	P	-	.		694662		695984		+	691773		691781	2	.		.
+purE	BSU06420	X		-	X	X	X		698612		699100		+	698308		698377	2	698370		242
+yjcI	BSU11870	X		-	-	-	.		1258492		1259613		+	1258173		1258262	3	.		.
+mtnW	BSU13590	X		-	X	-	X		1427034		1428278		+	1426815		1426859	2	1426857		177
+cysH	BSU15570	X		-	X	-	X		1630382		1631083		+	1629998		1630077	2	1630103		279
+yxjH	BSU38950	X		-	-	-	.		3997964		3999097		+	3997678		3997759	3	.		.
+yxjG	BSU38960	X		-	-	-	.		3999350		4000486		+	3999107		3999137	2	.		.
+yxjA	BSU39020	X		-	-	-	.		4005752		4006945 	+	4005461		4005532	2	.		.
+metQ	BSU32750	X		-	-	-	.		3363266		3364291		-	3364525		3364535	2	.		.
+metK	BSU30550	X		X	-	-	.		3127825		3129027		-	3129097		3129169	3	.		.
+gcvT	BSU24570	X		-	-	-	.		2548245		2549333		-	2549651		2549779	2	.		.
+ribD	BSU23280	X		-	X	X	-		2430258		2431343		-	2431375		2431421	4	2431637		294
+ypzE	BSU23060	X		X	-	-	.		2410695		2410859		-	2411013		2411071	1	.		.
+xpt	BSU22070	X		-	X	-	X		2319440		2320024		-	2320225		2320240	2	2320210		186
+yoaD	BSU18560	X		-	-	-	.		2024042		2025076		-	2025262		2025366	3	.		.
+mtnK	BSU13560	X		-	X	X	X		1423241		1424440		-	1424697		1424798	5	1424721		281
+metE	BSU13180	X		X	-	-	.		1383320		1385608		-	1385912		1386035	4	.		.		
+yitJ	BSU11010	X		-	P	-	X		1178757		1180595 	-	1180842		1180932	2	1180830		235
+pbuE	BSU05800 	X		X	X	-	X		625125		626291		-	626486		626604	4	626457		166
+
+
+LEVEL 1 2 3 4 5
+źle   <------->   dobrze
+
+LEGENDA:
+	.	brak potrzebnych danych
+	-	wynik negatywny
+	X	wynik pozytywny
+	P	dane niepotwierdzone empirycznie (z przewidywania)
+
+19 MAX
+
+PROMPREDICT: 	
+True Positives:		8/19
+True Negatives:		0/19
+False Positives:	10/19
+False Negatives:	1/19
+
+BROM: 		
+True Positives:		1/19 
+True Negatives: 	7/19
+False Positives: 	3/19
+False Negatives: 	8/19
+
+___________________
+
+- odległości promotorów do genu
+- ogarnąć minusy
+- ogarnąć, które jeszcze były przewidywanie z tej bazy

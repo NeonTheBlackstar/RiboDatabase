@@ -11,6 +11,8 @@ import sd2
 import new_sd2
 from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
+#	argparse - do interfejsu programów terminalowych
+
 # python3 mainscript.py NC_000964.3
 
 # Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
@@ -119,10 +121,15 @@ http://dbtbs.hgc.jp/
 Tu niby cos jest, ale strasznie malo tych promotorow, bo tylko 20:
 http://microbes.ucsc.edu/cgi-bin/hgTables?hgsid=2707680_eeRoFcyRayQVESRA1SG6pYG48ah0&clade=bacteria-firmicutes&org=Bacillus+subtilis&db=baciSubt2&hgta_group=allTracks&hgta_track=ct_Promoter_7933&hgta_table=0&hgta_regionType=genome&position=chr%3A10001-35000&hgta_outputType=wigData&hgta_outFileName=
 
-############### 17.05.17 #############
+############### 17.05.17 ################
 
 Nie potrafię zrozumieć notacji nazw genów w tym BioCycu. Nazwa często nie wskazuje na to, że jest to gen pojedynczy, czy jest to oznaczenie operonu.
 
+############### 22.05.17 ################
+
+Zrobić terminatory na tych samych oknach co aptamery też od kodonu START. Terminator powinien być pomiędzy kodonem START a aptamerem, może lekko nachodzić na aptamer.
+Ogarnąć ręczną analizę tych promotorów.
+Czy PromPredict robię tę analizę z uwzględnieniem nici ujemnej? Bo tak to nie wygląda...
 
 '''
 '''_______________________________________________________________________'''
