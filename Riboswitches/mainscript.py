@@ -142,7 +142,7 @@ def makeAptamersBed(genome):
 #chr, {6}, {7}, {1}, {8}, {4} // liczone od 0
 
 def makePromotersBed(genome):
-	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $10, 0, $5}\' ./Results/"+genome+".result > ./Results/prom.bed")
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $2, 0, $5}\' ./Results/"+genome+".result > ./Results/prom.bed")
 
 
 #chr, {10}, {11}, {9}, 0, {4} // liczone od 0
@@ -301,7 +301,7 @@ def promoters(
 	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
 
 	############# LOAD ALL GENES ##############
-
+	'''
 	roca_dictionary = {}
 
 	handle = open('./Genomes/{}.gff'.format(genome_id))
@@ -314,9 +314,9 @@ def promoters(
 					'bprom': False,
 					'ppred': False,
 				}
-
+	'''
 	############# LOAD CONFIRMED PROMOTERS ############## confirmed_promoters.txt
-
+	'''
 	with open('confirmed_promoters.txt') as conf_h:
 		for line in conf_h:
 			line = line.strip().split('\t')
@@ -329,9 +329,9 @@ def promoters(
 
 	print("debug") ### TU SKONCZYLEM
 	return
-
+	'''
 	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
-
+	'''
 	os.system('export TSS_DATA=\"Programs/lin/data\"')
 
 	counter = 1
@@ -381,7 +381,7 @@ def promoters(
 						break
 
 	print(roca_dictionary)
-
+	'''
 	############# BPROM END ################
 	### USAGE ###
 	# export TSS_DATA="Programs/lin/data"
@@ -395,7 +395,7 @@ def promoters(
 	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent))
 	
 	### COLLECT DATA FOR ROC ###
-
+	'''
 	with open(PP_output_path) as PPout:
 		for line in PPout:
 			line = line.strip().split('\t')
@@ -407,13 +407,10 @@ def promoters(
 				roca_dictionary[gene_name]['ppred'] = True
 
 	print(roca_dictionary)
-
+	'''
 	############# PROMPREDICT END ################
 
-	print("debug") ### TU SKONCZYLEM
-	return
-
-	PP_output_path = glob('./*_PPde.txt')[0]
+	PP_output_path = glob('./promoter_windows_PPde.txt')[0]
 	ID_line = None
 	d = {}
 
@@ -428,7 +425,7 @@ def promoters(
 			line = line.strip().split('\t')
 			if line[0] == 'ID':
 				ID_line = line[1].split('|')
-
+				'''
 				d = {
 					'locus_tag': ID_line[0],
 					'before_interval': int(ID_line[1]),
@@ -436,6 +433,16 @@ def promoters(
 						'start': 		int(ID_line[3]),
 						'end': 			int(ID_line[4]),
 						'strand': 		ID_line[5],
+					}
+				}
+				'''
+				d = {
+					'locus_tag': ID_line[0],
+					'before_interval': int(ID_line[1]),
+					'gene': {
+						'start': 		int(ID_line[4]),
+						'end': 			int(ID_line[5]),
+						'strand': 		ID_line[6],
 					}
 				}
 
@@ -464,7 +471,9 @@ def promoters(
 
 	makePromotersBed(genome_id)
 
-	
+	print("debug") ### TU SKONCZYLEM
+	return
+
 	# BEDTOOLS
 
 	os.system('rm ./*_PPde.txt')
