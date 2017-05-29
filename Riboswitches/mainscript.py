@@ -129,7 +129,17 @@ Nie potrafię zrozumieć notacji nazw genów w tym BioCycu. Nazwa często nie ws
 
 Zrobić terminatory na tych samych oknach co aptamery też od kodonu START. Terminator powinien być pomiędzy kodonem START a aptamerem, może lekko nachodzić na aptamer.
 Ogarnąć ręczną analizę tych promotorów.
-Czy PromPredict robię tę analizę z uwzględnieniem nici ujemnej? Bo tak to nie wygląda...
+Czy PromPredict robi tę analizę z uwzględnieniem nici ujemnej? Bo tak to nie wygląda...
+
+############### 29.05.17 ################
+
+Im większy Dave tym lepiej.
+
+Do ogarnięcia odległości window pro predict od genu:
+
+awk '{if ($2 ~ /^BSU/ && $10 == "+" && $18 != ".") {print $2, " |", $10, "| ", $8 - $18;} else if ($2 ~ /^BSU/ && $10 == "-" && $18 != ".") {print $2, " |", $10, "| ", $17 - $9;} }' matched
+
+
 
 '''
 '''_______________________________________________________________________'''
