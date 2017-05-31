@@ -1,0 +1,135 @@
+#	argparse - do interfejsu programów terminalowych
+
+# python3 mainscript.py NC_000964.3
+
+# Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
+
+# Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
+
+# Struktura drugorzedowa aptamerow w pliku proccessing?
+
+# Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury ZROBIONE
+
+# Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie ZROBIONE
+
+# Zapisywac do pliku score czy e-value? E-value
+
+# Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
+
+# Porównać działanie PromPredicta z BPromem!
+# Dać ramkę jak w aptamerach dla promotorów
+# Podawać te okna pojedynczo - pliki w RAMie? JEST PROMPREDICT MULTISEQ!
+
+# Dla dokladnie tych samych ramek co aptamery? (przekaznik -apt)
+
+'''
+Znalezc publikacje z doswiadczalnie potwierdzonymi miejscai startu transkrycji, promotorami TRUE POSITIVES
+Potem poszukać genów operonowych, które wiemy, ze nie maja promotorow FALSE POSITIVES
+Wyekstrahowac ramki poszukiwania dla tych genow i sprawdzic specyficznosc i dzialanie 
+
+RocR - pakiet R - do okreslacia specyficznosci i czulosci dzialania programu, poczytac sobie o krzywej Roca
+
+Poczytac sobie publikacje
+https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btq577
+
+
+########################################################################################################################################################################################
+
+
+ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredicta multiseq !
+
+|lsp|	|lspe|	|Dmax pos|	|Dmax|	|Dave|{Average DE value for Predicted Promoter}
+
+DE to "relative stability between neighboring regions of 100 nt length with respect to every nucleotide position n"
+DE to "difference in free energy, czyli E1 - E2"
+
+Dave to PRAWDOPODOBNIE PP_DEave, czyli średnia wartość DE dla każdego przewidzianego promotora
+Sigma?
+Mikro?
+
+AFE to E1, czyli suma energii swobodnych nukleotydów od N do N+100 podzielona przez 100
+
+‘REav’, the AFE values calculated over the +100 to +500 nt regions downstream of the TSSs and TLSs
+
+E i D znamy, to wartości cutoffów dobrane dla poszczególnych cutoffów GC%
+
+The average free energy (AFE)
+
+gene translation start sites (TLSs)
+
+
+The values of E the AFE over −80 to +20 region and REav which is the AFE over the +100 to +500 region with respect to TLS are also shown for all %GC classes which have more than 100 sequences.
+D = E −REav
+
+ujemna wartosc to na pewno bedzie jakas energia swobodna
+
+TSS-based dataset (i.e. experimentally identified transcription start sites) 
+
+The average DE values for all predicted regions in a particular genome have also been calculated and denoted as WPP_DEave (μ)
+
+(σ = 8.3) recall value
+An average recall value of 72% (which indicates the percentage of protein and RNA coding genes with predicted promoter regions assigned to them)
+
+On an average, 86.4% (σ = 5.3) of DNA is transcribed as protein or RNA
+
+
+!!!
+
+$11 D ave
+$12 Reliability
+tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
+
+!!!
+
+"Since no correlation was observed for PP_DEave based on %GC, in the current study we have chosen this as an unbiased parameter to define the reliability level for each prediction within whole genome."
+
+'''
+'''
+Filtrowanie bedzie do parametrze Dave.
+Napisać do tych gości i spytać się, co dokładnie oznaczają wszystkie parametry w pliku wynikowym _PPde, czy i jak można określić pozycję startu miejsca transkrypcji (TATA BOX), oraz czy dobrze rozumiem, jak to jest obliczane. Można spytać również o te "Supplementary data".
+
+lsp - least stable position	
+lspe - least stable position energy
+
+### 10.05.17 ###
+
+Szukalem tych promotorow, ale wszystkie linki powygasaly, bo ostatni update tej bazy danych z Bacillusa jest z 2008 r... ;/
+
+To jest dla E. coli i wygląda całkiem spoko:
+http://regulondb.ccg.unam.mx/index.jsp
+
+Tutaj publikacje o tej bazie DBTBS, gdzie niby mialy by byc prmotory dla Bacillusa sub.:
+https://academic.oup.com/nar/article/29/1/278/1116240/DBTBS-a-database-of-Bacillus-subtilis-promoters
+https://www.ncbi.nlm.nih.gov/pubmed/14681362
+
+Sama strona DBTBS:
+http://dbtbs.hgc.jp/
+
+Tu niby cos jest, ale strasznie malo tych promotorow, bo tylko 20:
+http://microbes.ucsc.edu/cgi-bin/hgTables?hgsid=2707680_eeRoFcyRayQVESRA1SG6pYG48ah0&clade=bacteria-firmicutes&org=Bacillus+subtilis&db=baciSubt2&hgta_group=allTracks&hgta_track=ct_Promoter_7933&hgta_table=0&hgta_regionType=genome&position=chr%3A10001-35000&hgta_outputType=wigData&hgta_outFileName=
+
+############### 17.05.17 ################
+
+Nie potrafię zrozumieć notacji nazw genów w tym BioCycu. Nazwa często nie wskazuje na to, że jest to gen pojedynczy, czy jest to oznaczenie operonu.
+
+############### 22.05.17 ################
+
+Zrobić terminatory na tych samych oknach co aptamery też od kodonu START. Terminator powinien być pomiędzy kodonem START a aptamerem, może lekko nachodzić na aptamer.
+Ogarnąć ręczną analizę tych promotorów.
+Czy PromPredict robi tę analizę z uwzględnieniem nici ujemnej? Bo tak to nie wygląda...
+
+############### 29.05.17 ################
+
+Im większy Dave tym lepiej.
+
+Do ogarnięcia odległości window pro predict od genu:
+
+awk '{if ($2 ~ /^BSU/ && $10 == "+" && $18 != ".") {print $2, " |", $10, "| ", $8 - $18;} else if ($2 ~ /^BSU/ && $10 == "-" && $18 != ".") {print $2, " |", $10, "| ", $17 - $9;} }' matched
+
+
+############## 31.05.17 #################
+
+Transderm i bedtools są programami wymagającymi instalacji.
+
+'''
+'''_______________________________________________________________________'''

@@ -11,138 +11,7 @@ import sd2
 import new_sd2
 from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
-#	argparse - do interfejsu programów terminalowych
-
 # python3 mainscript.py NC_000964.3
-
-# Sprawdzic czy ktorys program wymaga instalacji TYLKO DO SD
-
-# Między window a results jest przesunięcie o 1 nukleotyd! Ogarnąć!
-
-# Struktura drugorzedowa aptamerow w pliku proccessing?
-
-# Zapisywać pliki proccessing, przydzaza sie do przewidywania struktury ZROBIONE
-
-# Filtrować po e-value granica: 0.001, i po pokryciu modelu: [] jest dopasowany kompletnie, .. jest niedopasowany calkowcie po obu stronach, ~] tylko po jednej stronie ZROBIONE
-
-# Zapisywac do pliku score czy e-value? E-value
-
-# Napisac programik do liczenia GC w C++/ANSI C (moze bedzie szybszy?)
-
-# Porównać działanie PromPredicta z BPromem!
-# Dać ramkę jak w aptamerach dla promotorów
-# Podawać te okna pojedynczo - pliki w RAMie? JEST PROMPREDICT MULTISEQ!
-
-# Dla dokladnie tych samych ramek co aptamery? (przekaznik -apt)
-
-'''
-Znalezc publikacje z doswiadczalnie potwierdzonymi miejscai startu transkrycji, promotorami TRUE POSITIVES
-Potem poszukać genów operonowych, które wiemy, ze nie maja promotorow FALSE POSITIVES
-Wyekstrahowac ramki poszukiwania dla tych genow i sprawdzic specyficznosc i dzialanie 
-
-RocR - pakiet R - do okreslacia specyficznosci i czulosci dzialania programu, poczytac sobie o krzywej Roca
-
-Poczytac sobie publikacje
-https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btq577
-
-
-########################################################################################################################################################################################
-
-
-ogarnac jak wyznaczyc ten relaiability level na podstawie wyników z Prompredicta multiseq !
-
-|lsp|	|lspe|	|Dmax pos|	|Dmax|	|Dave|{Average DE value for Predicted Promoter}
-
-DE to "relative stability between neighboring regions of 100 nt length with respect to every nucleotide position n"
-DE to "difference in free energy, czyli E1 - E2"
-
-Dave to PRAWDOPODOBNIE PP_DEave, czyli średnia wartość DE dla każdego przewidzianego promotora
-Sigma?
-Mikro?
-
-AFE to E1, czyli suma energii swobodnych nukleotydów od N do N+100 podzielona przez 100
-
-‘REav’, the AFE values calculated over the +100 to +500 nt regions downstream of the TSSs and TLSs
-
-E i D znamy, to wartości cutoffów dobrane dla poszczególnych cutoffów GC%
-
-The average free energy (AFE)
-
-gene translation start sites (TLSs)
-
-
-The values of E the AFE over −80 to +20 region and REav which is the AFE over the +100 to +500 region with respect to TLS are also shown for all %GC classes which have more than 100 sequences.
-D = E −REav
-
-ujemna wartosc to na pewno bedzie jakas energia swobodna
-
-TSS-based dataset (i.e. experimentally identified transcription start sites) 
-
-The average DE values for all predicted regions in a particular genome have also been calculated and denoted as WPP_DEave (μ)
-
-(σ = 8.3) recall value
-An average recall value of 72% (which indicates the percentage of protein and RNA coding genes with predicted promoter regions assigned to them)
-
-On an average, 86.4% (σ = 5.3) of DNA is transcribed as protein or RNA
-
-
-!!!
-
-$11 D ave
-$12 Reliability
-tail -n +4 _PPde.txt | sort -k11 | awk '{print $11, $12}' > prom_score.temp
-
-!!!
-
-"Since no correlation was observed for PP_DEave based on %GC, in the current study we have chosen this as an unbiased parameter to define the reliability level for each prediction within whole genome."
-
-'''
-'''
-Filtrowanie bedzie do parametrze Dave.
-Napisać do tych gości i spytać się, co dokładnie oznaczają wszystkie parametry w pliku wynikowym _PPde, czy i jak można określić pozycję startu miejsca transkrypcji (TATA BOX), oraz czy dobrze rozumiem, jak to jest obliczane. Można spytać również o te "Supplementary data".
-
-lsp - least stable position	
-lspe - least stable position energy
-
-### 10.05.17 ###
-
-Szukalem tych promotorow, ale wszystkie linki powygasaly, bo ostatni update tej bazy danych z Bacillusa jest z 2008 r... ;/
-
-To jest dla E. coli i wygląda całkiem spoko:
-http://regulondb.ccg.unam.mx/index.jsp
-
-Tutaj publikacje o tej bazie DBTBS, gdzie niby mialy by byc prmotory dla Bacillusa sub.:
-https://academic.oup.com/nar/article/29/1/278/1116240/DBTBS-a-database-of-Bacillus-subtilis-promoters
-https://www.ncbi.nlm.nih.gov/pubmed/14681362
-
-Sama strona DBTBS:
-http://dbtbs.hgc.jp/
-
-Tu niby cos jest, ale strasznie malo tych promotorow, bo tylko 20:
-http://microbes.ucsc.edu/cgi-bin/hgTables?hgsid=2707680_eeRoFcyRayQVESRA1SG6pYG48ah0&clade=bacteria-firmicutes&org=Bacillus+subtilis&db=baciSubt2&hgta_group=allTracks&hgta_track=ct_Promoter_7933&hgta_table=0&hgta_regionType=genome&position=chr%3A10001-35000&hgta_outputType=wigData&hgta_outFileName=
-
-############### 17.05.17 ################
-
-Nie potrafię zrozumieć notacji nazw genów w tym BioCycu. Nazwa często nie wskazuje na to, że jest to gen pojedynczy, czy jest to oznaczenie operonu.
-
-############### 22.05.17 ################
-
-Zrobić terminatory na tych samych oknach co aptamery też od kodonu START. Terminator powinien być pomiędzy kodonem START a aptamerem, może lekko nachodzić na aptamer.
-Ogarnąć ręczną analizę tych promotorów.
-Czy PromPredict robi tę analizę z uwzględnieniem nici ujemnej? Bo tak to nie wygląda...
-
-############### 29.05.17 ################
-
-Im większy Dave tym lepiej.
-
-Do ogarnięcia odległości window pro predict od genu:
-
-awk '{if ($2 ~ /^BSU/ && $10 == "+" && $18 != ".") {print $2, " |", $10, "| ", $8 - $18;} else if ($2 ~ /^BSU/ && $10 == "-" && $18 != ".") {print $2, " |", $10, "| ", $17 - $9;} }' matched
-
-
-
-'''
-'''_______________________________________________________________________'''
 
 ### HELPER FUNCTIONS ###
 
@@ -276,224 +145,10 @@ def aptamers(
 
 	makeAptamersBed(genome)
 
-'''
-Szukamy na tych samych oknach co aptamery, zeby dwa razy tego nie ekstrahowac.
-Jesli promotor zostanie znaleziony przed pozycją aptameru, to dodajemy go do wyniku.
-'''
-def promoters(
-	genome_id = sys.argv[1], 									# Genome ID
-	genome_fasta = './Genomes/{}.fasta'.format(sys.argv[1]),	# Genome fasta file path
-	window = '100', 											# Window size for the upstream region to be compared
-	gccontent = 'default'										# GC-content of the whole genome
-	):
-	
-	# GC content dla ramki, czy dla calego genomu? DLA CALEGO GENOMU
-	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru? TAKA SAMA RAMKA JAK DLA APTAMERU
-	# Robić filtrowanie dla znalezionych promotorów? OGARNĄĆ JAK OBLICZYĆ TE LEVELE
-
-	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/{0}.fasta".format(genome_id), shell=True))
-	# Create filter with genes, around which an aptamer was found
-	filter_list = createPromoterFilter("./Results/{0}.result".format(genome_id))
-	# Generate multifasta file with windows for promoters search
-	new_sd2.getFasta(
-		"-gff", "./Genomes/{0}_sorted.gff".format(genome_id), 
-		"-fasta", "./Genomes/{0}.fasta".format(genome_id), 
-		"-before", 500, 
-		"-after", 200, 
-		"-biotype", "protein_coding", 
-		"-exhead", True, 
-		"-filterPR", filter_list,
-		"-intervals", True,
-		"-genename", True)
-
-	### Use PromPredictMultiseq to find promoters in multifasta file ###
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
-
-	############# LOAD ALL GENES ##############
-	'''
-	roca_dictionary = {}
-
-	handle = open('./Genomes/{}.gff'.format(genome_id))
-
-	for record in GFF.parse(handle):
-		for feature in record.features:
-			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == 'protein_coding'):
-				roca_dictionary[ feature.qualifiers['gene'][0] ] = {
-					'confirmed': False,
-					'bprom': False,
-					'ppred': False,
-				}
-	'''
-	############# LOAD CONFIRMED PROMOTERS ############## confirmed_promoters.txt
-	'''
-	with open('confirmed_promoters.txt') as conf_h:
-		for line in conf_h:
-			line = line.strip().split('\t')
-			
-			if line[3] != '':
-				gene_name = line[3].split('-')[0]
-				roca_dictionary[gene_name]['confirmed'] = True
-
-	print(roca_dictionary)
-
-	print("debug") ### TU SKONCZYLEM
-	return
-	'''
-	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
-	'''
-	os.system('export TSS_DATA=\"Programs/lin/data\"')
-
-	counter = 1
-	temp_window = ''
-
-	if not os.path.exists("./bprom"):
-		os.makedirs("./bprom")
-
-	with open('./promoter_windows.fasta') as prom_windows:
-		for line in prom_windows:
-			if line.startswith('>'):
-				if temp_window != '':
-					with open('./temp_prom.fasta', 'w') as temp_prom:
-						temp_prom.write(temp_window)
-						temp_window = ''
-					os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
-					counter += 1
-			temp_window += line
-		else:
-			with open('./temp_prom.fasta', 'w') as temp_prom:
-				temp_prom.write(temp_window)
-			os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
-
-		prom_windows.close()
-
-	### COLLECT DATA FOR ROC ###
-
-	for file in os.listdir('./bprom'):
-		if file.startswith('output'):
-			with open('./bprom/{}'.format(file)) as file_h:
-				gene_name = ''
-				locus_tag = ''
-				promoterExists = False
-
-				for line in file_h:
-					line = line.strip()
-					if line.startswith('>'):
-						gene_name = line.split('|')[3]
-						locus_tag = line.split('|')[0][1:]
-						continue
-
-					if line.startswith('Number'): 
-						if int( line.split('-')[1].strip() ) > 0:
-							roca_dictionary[gene_name]['bprom'] = True
-						else:
-							roca_dictionary[gene_name]['bprom'] = False
-						break
-
-	print(roca_dictionary)
-	'''
-	############# BPROM END ################
-	### USAGE ###
-	# export TSS_DATA="Programs/lin/data"
-	# Programs/lin/bprom ./Genomes/NC_000964.3.fasta bprom_output.txt
-
-
-	############# PROMPREDICT START ################
-
-	PP_output_path = glob('./*_PPde.txt')[0]
-
-	os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent))
-	
-	### COLLECT DATA FOR ROC ###
-	'''
-	with open(PP_output_path) as PPout:
-		for line in PPout:
-			line = line.strip().split('\t')
-			if line[0] == 'ID':
-				ID_line = line[1].split('|')
-				gene_name = ID_line[3]
-				roca_dictionary[gene_name]['ppred'] = False
-			elif line[0].startswith('>'):
-				roca_dictionary[gene_name]['ppred'] = True
-
-	print(roca_dictionary)
-	'''
-	############# PROMPREDICT END ################
-
-	PP_output_path = glob('./promoter_windows_PPde.txt')[0]
-	ID_line = None
-	d = {}
-
-	# Read whole final file #
-	finalFile = ""
-
-	with open("./Results/{0}.result".format(genome_id), "r") as handle:
-		finalLines = handle.readlines()
-
-	with open("./Results/{0}.result".format(genome_id), 'w') as finalFile, open(PP_output_path) as PPout:
-		for line in PPout:
-			line = line.strip().split('\t')
-			if line[0] == 'ID':
-				ID_line = line[1].split('|')
-				'''
-				d = {
-					'locus_tag': ID_line[0],
-					'before_interval': int(ID_line[1]),
-					'gene': {
-						'start': 		int(ID_line[3]),
-						'end': 			int(ID_line[4]),
-						'strand': 		ID_line[5],
-					}
-				}
-				'''
-				d = {
-					'locus_tag': ID_line[0],
-					'before_interval': int(ID_line[1]),
-					'gene': {
-						'start': 		int(ID_line[4]),
-						'end': 			int(ID_line[5]),
-						'strand': 		ID_line[6],
-					}
-				}
-
-			elif line[0].startswith('>'):
-				pos = line[0]
-				promoter_start = int(pos[1:].split("..")[0])
-				promoter_end = int(pos[1:].split("..")[1])
-
-				if d['gene']['strand'] == '+':
-					before_pos = d['gene']['start'] - d['before_interval']
-					start = before_pos + promoter_start - 1 # -1 because counting starts from 1
-					end = before_pos + promoter_end - 1 # -1 because counting starts from 1
-
-				elif d['gene']['strand'] == '-':
-					before_pos = d['gene']['end'] + d['before_interval']
-					# Invert start and end
-					start = before_pos - promoter_end - 1 # -1 because counting starts from 1
-					end = before_pos - promoter_start - 1 # -1 because counting starts from 1
-
-				promoter_name = 'PR_' + str(start)
-				for line in finalLines:
-					line = line.strip()
-					if line.split('\t')[1] == d['locus_tag']:
-						finalFile.write("{}\t{}\t{}\t{}\n".format(line, promoter_name, start, end))
-						break
-
-	makePromotersBed(genome_id)
-
-	print("debug") ### TU SKONCZYLEM
-	return
-
-	# BEDTOOLS
-
-	os.system('rm ./*_PPde.txt')
-	os.system('rm ./*_stb.txt')
-	os.system('rm ./*_GCstat.txt')
-
 
 def terminators(genome):
-	#Terminatory - Pawel
-	fh1 = open('./Genomes/{0}.gff'.format(genome))
+
+	'''fh1 = open('./Genomes/{0}.gff'.format(genome))
 	fh2 = open('temp.gff', 'w')
 	semaphore=0
 	for line in fh1:
@@ -504,18 +159,48 @@ def terminators(genome):
 			else:
 				fh2.write(line)
 	fh1.close()
-	fh2.close()
+	fh2.close()'''
+
+	os.system("awk \'{ if($1 !~ /^#/){print}}\' Genomes/" + genome + ".gff | tail -n +2 > temp.gff")
+	os.system("sort -k4,4n temp.gff -o temp.gff")
 	os.system('bedtools closest -s -D a -io -iu -a ./Results/{0}.aptamers.bed -b temp.gff > bed_output.txt'.format(genome))
-	#os.system('rm temp.gff')
+	os.system('rm temp.gff')
 
 	fh1 = open('bed_output.txt')
 	fh2 = open('./Results/{0}.ptt'.format(genome), 'w')
 
 	fh2.write('Location\tStrand\tLength\tPID\tGene\tSynonym\tCode\tCOG\tProduct\n\n\n')
 
-	# Ptt creation #
+
+	### Ptt creation ###
+
+
+
+	'''location1=''
+	location2=''
+	strand=''
+	length1=''
+	length2=''
+	pid=''
+	gene1=''
+	gene2=''
+	synonym=''
+	product=''
+
+	1.1 Jeśli gen:
+		- zczytaj pozycje APTAMERU i GENU
+		- zczytaj nić
+		- zczytaj długość APTAMERU i GENU
+		- zczytać nazwę APTAMERU
+		- zczytać nazwę GENU
+			Jeśli brak to -
+
+	2.
+	3.
+
 	for line in fh1:
 		temp = line.split('\t')
+		print(line)
 		if (temp[8]=='gene'):
 			location1=temp[1]+'..'+temp[2]
 			location2=temp[9]+'..'+temp[10]
@@ -550,27 +235,36 @@ def terminators(genome):
 					product=product[8:]
 			fh2.write(location1+'\t'+strand+'\t'+length1+'\t'+pid+'\t>'+gene1+'\t>'+gene1+'\t-\t-\t'+gene2+';'+synonym+'\n')
 			fh2.write(location2+'\t'+strand+'\t'+length2+'\t'+pid+'\t'+gene2+'\t'+synonym+'\t-\t-\t'+product+'\n')
-	#os.system('rm bed_output.txt')
-	# End #
-
-	### DEBUG LINE ###
-	print("DEBUG")
-	input()
-	### ###
 
 	fh1.close()
-	fh2.close()
+	fh2.close()'''
+
+	# Po co są te oddzielne linijki dla aptamerów i genów w pliku PTT?
+
+	#os.system('rm bed_output.txt')
 	
-	fh1 = open('./Genomes/{0}.fasta'.format(genome))
+	### End ###
+
+	
+	### Zamien naglowek na >ID ###
+	os.system("awk \'{if(NR==1){print \">"+genome+"\";} else {print;} }\' ./Genomes/"+genome+".fasta > sequence.fasta")
+
+	'''fh1 = open('./Genomes/{0}.fasta'.format(genome))
 	fh2 = open('sequence.fasta', 'w')
 	for line in fh1:
 		if line[0]=='>':
 			fh2.write('>{0}\n'.format(genome))
 		else:
-			fh2.write(line)
-	
-	os.system('transterm -p ./Programs/transterm/expterm.dat sequence.fasta ./Results/{0}.ptt > output.tt'.format(genome))
+			fh2.write(line)'''
+	### End ###
+
+	os.system('./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat sequence.fasta ./Results/{0}.ptt > output.tt'.format(genome))
 	os.system('rm sequence.fasta')
+
+	### DEBUG LINE ###
+	print("DEBUG")
+	return
+	######
 
 	fh1 = open('output.tt')
 	fh2 = open('./Results/{0}.terminators.bed'.format(genome), 'w')
@@ -685,8 +379,8 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 
 a = datetime.now()
 aptamers(sys.argv[1])
-promoters()
-#terminators(sys.argv[1])
+#promoters()
+terminators(sys.argv[1])
 #__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
 #bedtools(sys.argv[1])
 #comparison(sys.argv[1])
@@ -694,7 +388,7 @@ promoters()
 print('Done ' + str(strftime("%a, %d %b %Y %H:%M:%S +0000", localtime())))
 b = datetime.now()
 c = b - a
-print("{} seconds {} microseconds".format(c.seconds, c.microseconds))
+print("{} seconds {} microseconds".format(c.seconds, c.microseconds % c.seconds))
 
 
 '''
