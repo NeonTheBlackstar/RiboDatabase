@@ -131,5 +131,23 @@ awk '{if ($2 ~ /^BSU/ && $10 == "+" && $18 != ".") {print $2, " |", $10, "| ", $
 
 Transderm i bedtools są programami wymagającymi instalacji.
 
+
+############## 05.06.17 #################
+
+xD
+
+Wywalam to co zrobił Paweł i robie od nowa po swojemu.
+Nie używam tego dziwnego .ptt, tylko użyję sobie formatu .coords jako inputu.
+Inputem do transterma są te same okna jak do promotorów
+
+./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat aptamer_windows.fasta termin_crd.coords 1> output.tt 2> rubbish.txt
+
+I plik coord, który na każdą sekwencję z pliku z oknami ma dwa "fake" geny. Jeden jest na samym początku krótki, drugi na samym końcu też krótki. Chodzi o to, że ten program jest nie ten tegies i on szuka terminatorów pomiędzy genami. Dlatego trzeba było stworzyć takie dwa sztuczne geny, żeby chciał w ogóle wyszukiwać po tym oknie cokolwiek.
+
+### WAZNE !!! ###
+#awk \'BEGIN { OFS=\"\\t\"; } { split(substr($0,2), t, \"|\"); split(substr($0,2), h, \" \"); if(t[2]+t[3] != ) { print $0 \"|1\", \"1\", \"2\", substr($0,2); } }
+
+DOKONCZYC! Sprawdzic, w jakich przypadkach suma dlugosci przedzialow nie jest rowna dlugosci sekwencji takiej jaka oblicza transterm.
+
 '''
 '''_______________________________________________________________________'''

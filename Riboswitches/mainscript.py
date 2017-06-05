@@ -148,19 +148,6 @@ def aptamers(
 
 def terminators(genome):
 
-	'''fh1 = open('./Genomes/{0}.gff'.format(genome))
-	fh2 = open('temp.gff', 'w')
-	semaphore=0
-	for line in fh1:
-		temp = line.split('\t')
-		if temp[0][0]!='#':
-			if (temp[2]=='region' and semaphore==0):
-				semaphore=1
-			else:
-				fh2.write(line)
-	fh1.close()
-	fh2.close()'''
-
 	os.system("awk \'{ if($1 !~ /^#/){print}}\' Genomes/" + genome + ".gff | tail -n +2 > temp.gff")
 	os.system("sort -k4,4n temp.gff -o temp.gff")
 	os.system('bedtools closest -s -D a -io -iu -a ./Results/{0}.aptamers.bed -b temp.gff > bed_output.txt'.format(genome))
@@ -171,6 +158,28 @@ def terminators(genome):
 
 	fh2.write('Location\tStrand\tLength\tPID\tGene\tSynonym\tCode\tCOG\tProduct\n\n\n')
 
+	fh1.close()
+	fh2.close()
+
+	# CHYBA DZIAŁA #
+	'''./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat termin_temp.fasta termin_crd.coords '''
+
+	### Tworzę plik coords z adnotacjami ###
+
+	#os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' aptamer_windows.fasta > termin_crd.coords")
+	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); } }\' aptamer_windows.fasta > termin_crd.coords")
+
+	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat aptamer_windows.fasta termin_crd.coords 1> output.tt 2> rubbish.txt")
+
+	### WAZNE !!! ###
+	#awk \'BEGIN { OFS=\"\\t\"; } { split(substr($0,2), t, \"|\"); split(substr($0,2), h, \" \"); if(t[2]+t[3] != ) { print $0 \"|1\", \"1\", \"2\", substr($0,2); } }
+
+	#os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2),list,\"|\"); print $0, \"1\", \"2\", split(substr($0,2); } }\' aptamer_windows.fasta > termin_crd.coords")
+
+	### DEBUG LINE ###
+	print("DEBUG")
+	return
+	######
 
 	### Ptt creation ###
 
@@ -187,13 +196,15 @@ def terminators(genome):
 	synonym=''
 	product=''
 
+	1. Przechodzę przez plik bed_output.txt
 	1.1 Jeśli gen:
 		- zczytaj pozycje APTAMERU i GENU
 		- zczytaj nić
 		- zczytaj długość APTAMERU i GENU
 		- zczytać nazwę APTAMERU
-		- zczytać nazwę GENU
-			Jeśli brak to -
+		- zczytać nazwę RYBOSWITCHA
+		* Jeśli brak nazwy genu to "-"
+		* Jeśli jest to ją zczytaj i zczytaj locus tag
 
 	2.
 	3.
@@ -261,10 +272,6 @@ def terminators(genome):
 	os.system('./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat sequence.fasta ./Results/{0}.ptt > output.tt'.format(genome))
 	os.system('rm sequence.fasta')
 
-	### DEBUG LINE ###
-	print("DEBUG")
-	return
-	######
 
 	fh1 = open('output.tt')
 	fh2 = open('./Results/{0}.terminators.bed'.format(genome), 'w')

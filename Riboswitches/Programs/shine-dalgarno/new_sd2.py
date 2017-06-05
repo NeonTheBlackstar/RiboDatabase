@@ -195,6 +195,10 @@ def getFasta(*arg):
 							if previous_end - aptamerInterval < end + beforeStart:
 								beforeStart = (previous_end - aptamerInterval) - end
 
+				else: # Fix in truncating for gene that is directly after start of genome.
+					if seqSymbol == '+':
+						beforeStart = start
+
 						#additional = '{}|{}'.format(beforeStart, afterStart)
 
 
