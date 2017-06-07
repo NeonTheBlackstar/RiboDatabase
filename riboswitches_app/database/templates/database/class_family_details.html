@@ -33,7 +33,7 @@
         <tbody>
           {% for detail in families_list %}
             <tr role="row">
-              <td>{{ detail.organism }}</td>
+              <td><a href="{% url 'search:record' detail.name %}">{{ detail.organism }}</a></td>
             </tr>
           {% endfor %}
         </tbody>

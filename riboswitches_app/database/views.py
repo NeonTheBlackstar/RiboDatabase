@@ -47,14 +47,16 @@ def class_family_details(request, family):
 
     for e in Record.objects.all():
         if e.family != None:
-            if family in str(e.family.all()):
+            if family == e.family.name:
                 dic = {
                     'id': e.id,
+                    'name': e.name,
                     'gene': None,
                     'organism': None,
                     'ligand': None,
                 }
                 dic['gene'] = e.gene.name if e.gene != None else dic['gene']
+                dic['name'] = e.name if e.name != None else dic['name']
                 dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
                 dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
                 families_list.append(dic.copy())
@@ -155,10 +157,25 @@ def organism_browser(request):
     }
 
     ddumps = json.dumps(d)
+    temp = {}
+    last = []
+    
+    for i in d['core']['data']:
+        pass
+
+    print(temp)
+
+    for i in range(0, len(temp)-1):
+        if temp[i] != '#':
+            if temp[i+1] == "Bacteria":
+                last.append(temp[i])
+
+    last = d['core']['data'][-1]['id']
 
     context = {
         'tax_list_tree': tax_list_tree,
         'd': ddumps,
+        'last': last,
     }
 
     return render(request, 'database/organism_browser.html', context)

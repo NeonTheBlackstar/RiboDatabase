@@ -39,8 +39,7 @@
 	            <div id="jstree-organism">
 	            	
 	            </div>  
-	            <!-- End of jstree list -->  
-
+	            <!-- End of jstree list -->
 	        </div>
 	    </div>
 	</div>
@@ -61,6 +60,15 @@ $(document).ready(function() {
     $('#jstree-organism').jstree(
         {{ d|safe }}
     );
+
+    $('#jstree-organism').on('click', function(){
+    	console.log($(this).attr('aria-activedescendant'));
+    	if($(this).attr('aria-activedescendant') === '{{ last }}') {
+    		alert('1');
+
+    	}
+    });
+    
 });
 </script>
 
