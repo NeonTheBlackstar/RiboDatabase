@@ -195,6 +195,11 @@ def getFasta(*arg):
 							if previous_end - aptamerInterval < end + beforeStart:
 								beforeStart = (previous_end - aptamerInterval) - end
 
+					else: # Fix for first gene in minus strand. I need to get the length of genome
+						if seqSymbol == '-':
+							if end + beforeStart >= len(sequence):
+								beforeStart = len(sequence) - 1 - end
+
 				else: # Fix in truncating for gene that is directly after start of genome.
 					if seqSymbol == '+':
 						beforeStart = start

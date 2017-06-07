@@ -149,5 +149,33 @@ I plik coord, który na każdą sekwencję z pliku z oknami ma dwa "fake" geny. 
 
 DOKONCZYC! Sprawdzic, w jakich przypadkach suma dlugosci przedzialow nie jest rowna dlugosci sekwencji takiej jaka oblicza transterm.
 
+
+############## 07.06.17 #################
+
+Dokończyłem sprawdzanie, gdzie błąd w liczeniu okien:
+
+os.system("awk \'BEGIN { OFS=\"\\t\"; } { split(substr($0,2), t, \"|\"); split(substr($0,2), h, \" \"); if(t[2]+t[3] != substr(h[4], 1, length(h[4]) - 1)) { print $0 \"|1\", \"1\", \"2\", substr($0,2); } }\' rubbish.txt")
+
+Okazało się, że jest okej, tylko nie odświeża etykiet beforeStart w funkcji printSeq. Błąd był przy pierwszym genie na nici "+" i pierwszym na nici "-".
+
+Terminatory:
+
+Jeśli są dwa temrinatory nienakładające się, to bierzemy ten bliżej riboswitcha:
+	- jeśli ten bliżej riboswitcha znajduje się w pozycji: [ koniec_aptameru - połowa_długości_terminatora : pozycja_end_terminatora ]
+	- jeśli nie, to bierzemy ten dalszy
+
+Jeśli się nakładają:
+	- bierzemy ten z lepszą oceną hp
+	- jeśli ocena hp jest taka sama, to bierzemy ten z większą różnicą (wart. bezwzg.) pomiędzy stabilnością harpina a poli-T
+
+Uzasadnienie: są aptamery, które są częscią terminatora i razem tworzą ten switch terminator/antyterminator. POSZUKAĆ WIĘCEJ INFO O TYM
+
+antyterminator - to struktura zapobiegająca tworzeniu się terminatorów
+antyantyterminator - to struktura zapobiegająca tworzeniu się antyterminatorów
+
+!!! JESZCZE MUSZĘ PRZEFILTROWAĆ TEN PLIK APTAMERS_WINDOWS, ŻEBY SZUKAŁO MI TERMINATORÓW TYLKO PRZY APTAMERACH !!!
+
+# Jak przekierować do dev/null w venv?
+
 '''
 '''_______________________________________________________________________'''

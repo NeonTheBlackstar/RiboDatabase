@@ -148,186 +148,20 @@ def aptamers(
 
 def terminators(genome):
 
-	os.system("awk \'{ if($1 !~ /^#/){print}}\' Genomes/" + genome + ".gff | tail -n +2 > temp.gff")
-	os.system("sort -k4,4n temp.gff -o temp.gff")
-	os.system('bedtools closest -s -D a -io -iu -a ./Results/{0}.aptamers.bed -b temp.gff > bed_output.txt'.format(genome))
-	os.system('rm temp.gff')
+	#os.system("awk \'{ if($1 !~ /^#/){print}}\' Genomes/" + genome + ".gff | tail -n +2 > temp.gff")
+	#os.system("sort -k4,4n temp.gff -o temp.gff")
+	#os.system('bedtools closest -s -D a -io -iu -a ./Results/{0}.aptamers.bed -b temp.gff > bed_output.txt'.format(genome))
+	#os.system('rm temp.gff')
 
-	fh1 = open('bed_output.txt')
-	fh2 = open('./Results/{0}.ptt'.format(genome), 'w')
-
-	fh2.write('Location\tStrand\tLength\tPID\tGene\tSynonym\tCode\tCOG\tProduct\n\n\n')
-
-	fh1.close()
-	fh2.close()
-
-	# CHYBA DZIAŁA #
-	'''./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat termin_temp.fasta termin_crd.coords '''
-
-	### Tworzę plik coords z adnotacjami ###
-
-	#os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' aptamer_windows.fasta > termin_crd.coords")
-	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); } }\' aptamer_windows.fasta > termin_crd.coords")
-
+	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' aptamer_windows.fasta > termin_crd.coords")
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat aptamer_windows.fasta termin_crd.coords 1> output.tt 2> rubbish.txt")
 
-	### WAZNE !!! ###
-	#awk \'BEGIN { OFS=\"\\t\"; } { split(substr($0,2), t, \"|\"); split(substr($0,2), h, \" \"); if(t[2]+t[3] != ) { print $0 \"|1\", \"1\", \"2\", substr($0,2); } }
 
-	#os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2),list,\"|\"); print $0, \"1\", \"2\", split(substr($0,2); } }\' aptamer_windows.fasta > termin_crd.coords")
 
 	### DEBUG LINE ###
 	print("DEBUG")
 	return
 	######
-
-	### Ptt creation ###
-
-
-
-	'''location1=''
-	location2=''
-	strand=''
-	length1=''
-	length2=''
-	pid=''
-	gene1=''
-	gene2=''
-	synonym=''
-	product=''
-
-	1. Przechodzę przez plik bed_output.txt
-	1.1 Jeśli gen:
-		- zczytaj pozycje APTAMERU i GENU
-		- zczytaj nić
-		- zczytaj długość APTAMERU i GENU
-		- zczytać nazwę APTAMERU
-		- zczytać nazwę RYBOSWITCHA
-		* Jeśli brak nazwy genu to "-"
-		* Jeśli jest to ją zczytaj i zczytaj locus tag
-
-	2.
-	3.
-
-	for line in fh1:
-		temp = line.split('\t')
-		print(line)
-		if (temp[8]=='gene'):
-			location1=temp[1]+'..'+temp[2]
-			location2=temp[9]+'..'+temp[10]
-			strand=temp[5]
-			length1=str(int(temp[2])-int(temp[1])+1)
-			length2=str(int(temp[10])-int(temp[9])+1)
-			gene1 = temp[3]
-			name = re.search(r'Name=[^;^\n]*',temp[14])
-			if (str(name) == 'None'):
-				gene2 = '-'
-			else:
-				gene2 = name.group()
-				gene2 = gene2[5:]
-				locus_tag = re.search(r'locus_tag=[^;^\n]*',temp[14])
-				if (str(locus_tag) == 'None'):
-					synonym = '-'
-				else:
-					synonym = locus_tag.group()
-					synonym = synonym[10:]
-		if (temp[8]=='CDS' or temp[8]=='exon'):
-			protein_id = re.search(r'protein_id=[^;^\n]*',temp[14])
-			if (str(protein_id) == 'None'):
-				pid = '-'
-			else:
-				pid = protein_id.group()
-				pid = pid[11:]
-				product_name = re.search(r'product=[^;^\n]*',temp[14])
-				if (str(product_name) == 'None'):
-					product = '-'
-				else:
-					product=product_name.group()
-					product=product[8:]
-			fh2.write(location1+'\t'+strand+'\t'+length1+'\t'+pid+'\t>'+gene1+'\t>'+gene1+'\t-\t-\t'+gene2+';'+synonym+'\n')
-			fh2.write(location2+'\t'+strand+'\t'+length2+'\t'+pid+'\t'+gene2+'\t'+synonym+'\t-\t-\t'+product+'\n')
-
-	fh1.close()
-	fh2.close()'''
-
-	# Po co są te oddzielne linijki dla aptamerów i genów w pliku PTT?
-
-	#os.system('rm bed_output.txt')
-	
-	### End ###
-
-	
-	### Zamien naglowek na >ID ###
-	os.system("awk \'{if(NR==1){print \">"+genome+"\";} else {print;} }\' ./Genomes/"+genome+".fasta > sequence.fasta")
-
-	'''fh1 = open('./Genomes/{0}.fasta'.format(genome))
-	fh2 = open('sequence.fasta', 'w')
-	for line in fh1:
-		if line[0]=='>':
-			fh2.write('>{0}\n'.format(genome))
-		else:
-			fh2.write(line)'''
-	### End ###
-
-	os.system('./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat sequence.fasta ./Results/{0}.ptt > output.tt'.format(genome))
-	os.system('rm sequence.fasta')
-
-
-	fh1 = open('output.tt')
-	fh2 = open('./Results/{0}.terminators.bed'.format(genome), 'w')
-
-	data = []
-	RF = []
-	terminators_tt = []
-	terminators_bed = []
-
-	for line in fh1:
-		if (line != '\n'):
-			data.append(line)
-
-	counter=0
-	for line in data:
-		temp = line.split()
-		if (line[0][0] == '>' and temp[4] == '+'):
-				end_RF = temp[3]
-				for i in range(counter+1,len(data)):
-					check = data[i].split()
-					if (check[0] == 'TERM'):
-						start_term = check[2]
-						distance = int(start_term)-int(end_RF)
-						if (distance<150):
-							RF.append(line[1:])
-							terminators_tt.append(data[i])
-							break
-		if (line[0][0] == '>' and temp[4] == '-'):
-				start_RF = temp[3]
-				j=counter-1
-				for i in range(0,counter):
-					check = data[j].split()
-					if (check[0] == 'TERM'):
-						end_term = check[2]
-						distance = int(start_RF)-int(end_term)
-						if (distance<150):
-							RF.append(line[1:])
-							terminators_tt.append(data[j])
-							break
-					j=j-1			
-		counter=counter+1
-
-	counter=0
-	for line in terminators_tt:
-		temp1 = line.split()
-		temp2 = RF[counter].split()
-		counter=counter+1	
-		if (temp1[5] == '+'): 
-			fh2.write('{0}\t'.format(genome)+temp1[2]+'\t'+temp1[4]+'\t'+temp2[0]+';'+temp2[6]+'\t'+temp1[7]+'\t'+temp1[5]+'\n')
-		if (temp1[5] == '-'): 
-			fh2.write('{0}\t'.format(genome)+temp1[4]+'\t'+temp1[2]+'\t'+temp2[0]+';'+temp2[6]+'\t'+temp1[7]+'\t'+temp1[5]+'\n')
-
-	fh1.close()
-	fh2.close()
-	
-	os.system('rm output.tt')
 
 
 def bedtools(genome):
