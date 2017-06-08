@@ -30,13 +30,17 @@ def makePromotersBed(genome):
 "awk  \'BEGIN {OFS = \"\\t\"}; {if({0} == "scientific_name") print $5, '\t' ,$3;}\'".format('xD')
 '''
 
-def createPromoterFilter(result_file):
+def createAptamersFilter(result_file):
 	filter_list = []
 	with open(result_file) as result_handle:
 		for line in result_handle:
 			line = line.strip().split('\t')
 			filter_list.append(line[1]) # Append locus tag
 	return(filter_list)
+
+def filterWindows(filter_list, window_file):
+	with open(window_file) as file_handle:
+		pass
 
 ### END ###
 
@@ -156,7 +160,7 @@ def terminators(genome):
 	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' aptamer_windows.fasta > termin_crd.coords")
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat aptamer_windows.fasta termin_crd.coords 1> output.tt 2> rubbish.txt")
 
-
+	f = open
 
 	### DEBUG LINE ###
 	print("DEBUG")

@@ -71,6 +71,6 @@ Envelopes passing glocal HMM envelope defn filter:              43  (0.001096); 
 Envelopes passing  local CM  CYK           filter:               5  (7.77e-05); expected (0.0001)
 Total CM hits reported:                                          2  (2.71e-05); includes 0 truncated hit(s)
 
-# CPU time: 0.86u 0.01s 00:00:00.87 Elapsed: 00:00:00.26
+# CPU time: 0.88u 0.00s 00:00:00.88 Elapsed: 00:00:00.27
 //
 [ok]
