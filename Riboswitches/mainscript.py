@@ -38,12 +38,23 @@ def createAptamersFilter(result_file):
 			filter_list.append(line[1]) # Append locus tag
 	return(filter_list)
 
-def filterWindows(filter_list, window_file):
-	with open(window_file) as file_handle:
-		pass
+
+def filterWindows(filter_list, window_file, output_file = ""):
+	if output_file == "":
+		output_file = window_file.split(".")[0]+"_output."+window_file.split(".")[1]
+	writeToFile = False
+	with open(window_file) as file_handle, open(output_file, 'w') as output_handle:
+		for line in file_handle:
+			if line.startswith(">"):
+				writeToFile = False
+				locus_tag = line.strip().split('|')[0][1:]
+				if locus_tag in filter_list:
+					writeToFile = True
+
+			if writeToFile == True:
+				output_handle.write(line)
 
 ### END ###
-
 
 def aptamers(
 	genome,				# Genome ID
@@ -104,17 +115,17 @@ def aptamers(
 
 					# Prepare data #
 					d[temp[0]] = {
-							'locus_tag': 			temp[5].split('|')[0],
-							'aptamer_start': 		int(temp[6]),
-							'aptamer_end': 			int(temp[7]),
-							'before_interval': 		int(temp[5].split('|')[1]),
-							'score': 				float(temp[3]),
-							'gene': {
-								'start': 		int(temp[5].split('|')[3]),
-								'end': 			int(temp[5].split('|')[4]),
-								'strand': 		temp[5].split('|')[5],
-							}
+						'locus_tag': 			temp[5].split('|')[0],
+						'terminator_start': 	int(temp[6]),
+						'terminator_end': 		int(temp[7]),
+						'before_interval': 		int(temp[5].split('|')[1]),
+						'score': 				0,
+						'gene': {
+							'start': 		int(temp[5].split('|')[3]),
+							'end': 			int(temp[5].split('|')[4]),
+							'strand': 		temp[5].split('|')[5],
 						}
+					}
 
 			elif start_scanning == True:# and len(temp) >= 12:
 				if temp[0] in d and temp[8] == '[]': # If aptamer covers whole model
@@ -152,15 +163,36 @@ def aptamers(
 
 def terminators(genome):
 
-	#os.system("awk \'{ if($1 !~ /^#/){print}}\' Genomes/" + genome + ".gff | tail -n +2 > temp.gff")
-	#os.system("sort -k4,4n temp.gff -o temp.gff")
-	#os.system('bedtools closest -s -D a -io -iu -a ./Results/{0}.aptamers.bed -b temp.gff > bed_output.txt'.format(genome))
-	#os.system('rm temp.gff')
+	aptamer_list = createAptamersFilter("./Results/{0}.result".format(genome))
+	filterWindows(aptamer_list, "aptamer_windows.fasta", "terminator_windows.fasta")
 
-	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' aptamer_windows.fasta > termin_crd.coords")
-	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat aptamer_windows.fasta termin_crd.coords 1> output.tt 2> rubbish.txt")
+	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' terminator_windows.fasta > termin_crd.coords")
+	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
 
-	f = open
+	scanForTerms = False
+	with open("transterm_output.tt") as tt_handle:
+		for line in tt_handle:
+			line = line.strip()
+			if line.startswith("SEQUENCE"):
+				header_list = line.split(" ")[1].split("|")
+				scanForTerms = True
+
+				# Prepare data #
+				d[header_list[0]] = {
+					'locus_tag': 			header_list[0],
+					'aptamer_start': 		0,
+					'aptamer_end': 			0,
+					'before_interval': 		header_list[1],
+					'score': 				0,
+					'gene': {
+						'start': 		header_list[3],
+						'end': 			header_list[4],
+						'strand': 		header_list[5],
+					}
+				}
+			elif scanForTerms == True:
+				if line.startswith("TERM"):
+					pass
 
 	### DEBUG LINE ###
 	print("DEBUG")
