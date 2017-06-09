@@ -54,6 +54,10 @@ def filterWindows(filter_list, window_file, output_file = ""):
 			if writeToFile == True:
 				output_handle.write(line)
 
+
+def intervalIntersect(a1, b1, a2, b2):
+	return (a2 < b1) and (b2 > a1)
+
 ### END ###
 
 def aptamers(
@@ -83,7 +87,7 @@ def aptamers(
 		"-before", 500, 
 		"-after", 200, 
 		"-aptamer", 50, 
-		"-biotype", "protein_coding", 
+		"-biotype", "protein_coding",
 		"-exhead", True, 
 		"-intervals", True)
 	
@@ -116,11 +120,12 @@ def aptamers(
 					# Prepare data #
 					d[temp[0]] = {
 						'locus_tag': 			temp[5].split('|')[0],
-						'terminator_start': 	int(temp[6]),
-						'terminator_end': 		int(temp[7]),
+						'aptamer_start': 		int(temp[6]),
+						'aptamer_end': 			int(temp[7]),
 						'before_interval': 		int(temp[5].split('|')[1]),
-						'score': 				0,
+						'score': 				0, # !!!
 						'gene': {
+							'locus_tag': 	temp[5].split('|')[0],
 							'start': 		int(temp[5].split('|')[3]),
 							'end': 			int(temp[5].split('|')[4]),
 							'strand': 		temp[5].split('|')[5],
@@ -143,7 +148,7 @@ def aptamers(
 						end = before_pos - d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
 							
 					switch_name = family_id + '_' + str(start)
-					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
+					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['gene']['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
 					
 		processingfile.close()
 
@@ -169,30 +174,110 @@ def terminators(genome):
 	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' terminator_windows.fasta > termin_crd.coords")
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
 
-	scanForTerms = False
-	with open("transterm_output.tt") as tt_handle:
+	d = {}
+	with open("transterm_output.tt") as tt_handle, open("{}.result".format(genome),"r") as result_handle:
 		for line in tt_handle:
 			line = line.strip()
 			if line.startswith("SEQUENCE"):
 				header_list = line.split(" ")[1].split("|")
-				scanForTerms = True
+				locus_tag = header_list[0]
 
-				# Prepare data #
-				d[header_list[0]] = {
-					'locus_tag': 			header_list[0],
-					'aptamer_start': 		0,
-					'aptamer_end': 			0,
-					'before_interval': 		header_list[1],
-					'score': 				0,
+				d[locus_tag] = {
 					'gene': {
-						'start': 		header_list[3],
-						'end': 			header_list[4],
+						'locus_tag': 	locus_tag,
+						'start': 		int(header_list[3]),
+						'end': 			int(header_list[4]),
 						'strand': 		header_list[5],
-					}
+						'before': 		int(header_list[1]),
+					},
+					'terminators': [],
 				}
-			elif scanForTerms == True:
-				if line.startswith("TERM"):
-					pass
+
+			elif line.startswith("TERM"):
+				# Zebranie danych #
+				term_list = line.split()
+
+				if d[locus_tag]['gene']['strand'] == '+':
+					before_pos = d[locus_tag]['gene']['start'] - d[locus_tag]['gene']['before']
+					terminator_start = 	before_pos + int(term_list[2]) - 1
+					terminator_end = 	before_pos + int(term_list[4]) - 1
+
+				elif d[locus_tag]['gene']['strand'] == '-':
+					before_pos = d[locus_tag]['gene']['end'] + d[locus_tag]['gene']['before']
+					terminator_start = 	before_pos - int(term_list[4]) - 1
+					terminator_end = 	before_pos - int(term_list[2]) - 1
+
+				terminator = {
+					'start': 			terminator_start,
+					'end': 				terminator_end,
+					'hp': 				int(term_list[7]),
+					'harpin_score':		float(term_list[8]),
+					'tail_score':		float(term_list[9]),
+				}
+
+				d[locus_tag]['terminators'].append(terminator.copy())
+
+		# Wybor najlepszego terminatora i zapis do pliku					
+		for line in result_handle:
+			line_list = line.strip().split('\t')
+			locus_tag = line_list[1]
+			strand = line_list[4]
+			aptamer_start = int(line_list[6])
+			aptamer_end = int(line_list[7])
+
+			terms_copy = list(d[locus_tag]['terminators'])
+			for id1 in range(0,len(terms_copy)):
+				for id2 in range(id1 + 1,len(terms_copy)):
+					t1 = terms_copy[id1]
+					t2 = terms_copy[id2]
+
+					# Jesli terminatory sie nakladaja na siebie:
+					if intervalIntersect(t1['start'], t1['end'], t2['start'], t2['end']) == True:
+								
+						#Zostawiamy terminator z lepsza ocena hp
+						if t1['hp'] < t2['hp']:
+							d[locus_tag]['terminators'].remove(t1)
+						elif t1['hp'] > t2['hp']:
+							d[locus_tag]['terminators'].remove(t2)
+						#Jesli ocena jest taka sama, zostawiamy ten z wieksza roznica energii spinki i poli-T
+						else:
+							t1_score_difference = abs(t1['harpin_score'] - t1['tail_score'])
+							t2_score_difference = abs(t2['harpin_score'] - t2['tail_score'])
+
+							if t1_score_difference <= t2_score_difference:
+								d[locus_tag]['terminators'].remove(t1)
+							else:
+								d[locus_tag]['terminators'].remove(t2)
+					# Jesli sie nie nakladaja
+					else:
+						# Oblicz odleglosc od aptameru
+						t1_length = abs(t1['start'] - t1['end'])
+						t2_length = abs(t2['start'] - t2['end'])
+						if strand == "+":
+							t1_distance = t1['start'] - aptamer_end
+							t2_distance = t2['start'] - aptamer_end
+						if strand == "-":
+							t1_distance = aptamer_start - t1['end']
+							t2_distance = aptamer_start - t2['end']
+
+						# Jesli dystans jest ujemny, to znaczy ze terminator nachodzi na aptamer
+						if t1_distance and t2_distance >= 0:
+							if t1_distance < t2_distance:
+								d[locus_tag]['terminators'].remove(t2)
+							else:
+								d[locus_tag]['terminators'].remove(t1)
+						'''
+						if t1_distance < 0 and t2_distance >= 0:
+							if abs(t1_distance) < (t1_length / 2):
+								d[locus_tag]['terminators'].remove(t2)
+							else:
+								d[locus_tag]['terminators'].remove(t1)
+						''' # DOKONCZYC
+
+							# Sprawdz czy terminator nachodzi na aptamer w dozwolonym stopniu
+
+
+	#print(d)
 
 	### DEBUG LINE ###
 	print("DEBUG")
