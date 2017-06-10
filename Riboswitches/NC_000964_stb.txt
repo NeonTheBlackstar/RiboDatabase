@@ -1,3 +1,0 @@
-#File Format
-#Start of the 1001nt long genomic window position	stability values for each window of 15nts separated by \t
-###################################################################################################

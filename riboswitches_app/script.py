@@ -372,6 +372,7 @@ for row in dList:
 	else:
 		v_record.mechanism_confirmation = None
 
+	''' Terminator '''
 	if row['terminator_start'] != 0 or row['terminator_end'] != 0:
 		v_record.terminator = Position.objects.create(
 			start = row['terminator_start'], 
@@ -382,6 +383,7 @@ for row in dList:
 	else:
 		v_record.terminator = None
 		
+	''' Promotor '''
 	if row['promoter_start'] != 0 or row['promoter_end'] != 0:
 		v_record.promoter = Position.objects.create(
 			start = row['promoter_start'], 

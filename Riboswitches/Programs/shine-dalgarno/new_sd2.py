@@ -86,7 +86,7 @@ def printToFasta(handle, seq, x, y, strand, id, additional, exhead):
 		additional = '|' + additional
 
 	if exhead == True:
-		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'\n')
+		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'|A'+'\n')
 	else:
 		handle.write('>'+id+additional+'\n')
 		

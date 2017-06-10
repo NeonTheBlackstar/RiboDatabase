@@ -1,4 +1,0 @@
->BSU06420|500|200|purE|698611|699100|+                                          
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

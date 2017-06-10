@@ -1,4 +1,0 @@
->BSU23280|500|200|ribD|2430257|2431343|-                                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

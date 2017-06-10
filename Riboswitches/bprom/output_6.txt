@@ -1,4 +1,0 @@
->BSU38950|500|200|yxjH|3997963|3999097|+                                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

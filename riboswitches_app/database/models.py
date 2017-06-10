@@ -14,6 +14,7 @@ class Record(models.Model):
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
+	# Sekwencja tutaj?
 	
 	name = models.CharField('nazwa', max_length = 20)
 	#riboswitch_id = models.CharField('id', max_length = 20, primary_key = True)
@@ -38,7 +39,7 @@ class Record(models.Model):
 
 
 class Aptamer(models.Model): #14 dodaję nową encję
-	sequence = models.TextField('sekwencja')
+	sequence = models.TextField('sekwencja') # Wywalic?
 	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')
 	structure = models.OneToOneField('Structure2D', null = True)
 	switch = models.ForeignKey('Record')#, related_name = "aptamer")

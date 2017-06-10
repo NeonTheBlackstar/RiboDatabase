@@ -14,131 +14,173 @@ Query:       Purine  [CLEN=102]
 Accession:   RF00167
 Description: Purine riboswitch
 Hit scores:
- rank     E-value  score  bias  sequence                            start    end   mdl trunc   gc  description
- ----   --------- ------ -----  ---------------------------------- ------ ------   --- ----- ----  -----------
-  (1) !   4.1e-17   87.2   0.0  BSU06420|470|200|698611|699100|+      228    329 +  cm    no 0.42  -
-  (2) !     1e-16   85.6   0.0  BSU06370|500|200|694661|695984|+      264    365 +  cm    no 0.38  -
-  (3) !   1.3e-16   85.2   0.5  BSU39020|500|200|4005751|4006945|+    272    373 +  cm    no 0.28  -
-  (4) !   9.1e-16   81.7   0.0  BSU22070|500|200|2319439|2320024|-    312    411 +  cm    no 0.46  -
-  (5) !     9e-14   73.6   0.1  BSU05800|500|200|625124|626291|-      346    445 +  cm    no 0.30  -
+ rank     E-value  score  bias  sequence                                                                            start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  ---------------------------------------------------------------------------------- ------ ------   --- ----- ----  -----------
+  (1) !   4.1e-17   87.2   0.0  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      228    329 +  cm    no 0.42  -
+  (2) !     1e-16   85.6   0.0  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      264    365 +  cm    no 0.38  -
+  (3) !   1.3e-16   85.2   0.5  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    272    373 +  cm    no 0.28  -
+  (4) !   9.1e-16   81.7   0.0  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    312    411 +  cm    no 0.46  -
+  (5) !     9e-14   73.6   0.1  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      346    445 +  cm    no 0.30  -
  ------ inclusion threshold ------
-  (6) ?      0.31   22.8   0.0  BSU06700|500|200|731953|732823|-      519    612 +  cm    no 0.43  -
+  (6) ?      0.31   22.8   0.0  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      519    612 +  cm    no 0.43  -
 
 
 Hit alignments:
->> BSU06420|470|200|698611|699100|+  
+>> BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (1) !   4.1e-17   87.2   0.0  cm        1      102 []         228         329 + .. 1.00    no 0.42
 
-                                                        v vv        vv               vv                              NC
-                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>>>> CS
-                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugccu 77 
-                                        A+ AA++ AAAA A   C  C:UAUAAU  :GGGAAUAUGGCCC:  AGUUUCUACC:GGCA:CCGUAAA:UGCC:
-  BSU06420|470|200|698611|699100|+ 228 CAUGAAAUCAAAACACGACCUCAUAUAAUCUUGGGAAUAUGGCCCAUAAGUUUCUACCCGGCAACCGUAAAUUGCCG 304
-                                       ***************************************************************************** PP
+                                                                                                        v vv        vv          NC
+                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                        A+ AA++ AAAA A   C  C:UAUAAU  :GGGAAUAU
+  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 228 CAUGAAAUCAAAACACGACCUCAUAUAAUCUUGGGAAUAU 267
+                                                                                       **************************************** PP
 
-                                              vv v               NC
-                                       >,,)))))))):::::::::::::: CS
-                            Purine  78 GACUAcGagggaaauuuuuuuuuuu 102
-                                       GACUA:G  G AAA U +U  +U++
-  BSU06420|470|200|698611|699100|+ 305 GACUAUGCAGGAAAGUGAUCGAUAA 329
-                                       ************************* PP
+                                                                                             vv                                 NC
+                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                       GGCCC:  AGUUUCUACC:GGCA:CCGUAAA:UGCC:GAC
+  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 268 GGCCCAUAAGUUUCUACCCGGCAACCGUAAAUUGCCGGAC 307
+                                                                                       **************************************** PP
 
->> BSU06370|500|200|694661|695984|+  
+                                                                                           vv v               NC
+                                                                                       )))))))):::::::::::::: CS
+                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                       UA:G  G AAA U +U  +U++
+  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 308 UAUGCAGGAAAGUGAUCGAUAA 329
+                                                                                       ********************** PP
+
+>> BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (2) !     1e-16   85.6   0.0  cm        1      102 []         264         365 + .. 1.00    no 0.38
 
-                                                        vv v        v                 v                              NC
-                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>>>> CS
-                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugccu 77 
-                                       A AAA+ AAA+AA AU   : CGUAUAAU :CG:GAAUAUGGC:CG: AGU UCUACCA:GC::CCGUAAA::GC:U
-  BSU06370|500|200|694661|695984|+ 264 AGAAAUCAAAUAAGAUGAAUUCGUAUAAUCGCGGGAAUAUGGCUCGCAAGUCUCUACCAAGCUACCGUAAAUGGCUU 340
-                                       ***************************************************************************** PP
+                                                                                                        vv v        v           NC
+                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                       A AAA+ AAA+AA AU   : CGUAUAAU :CG:GAAUAU
+  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 264 AGAAAUCAAAUAAGAUGAAUUCGUAUAAUCGCGGGAAUAU 303
+                                                                                       **************************************** PP
 
-                                              v vv               NC
-                                       >,,)))))))):::::::::::::: CS
-                            Purine  78 GACUAcGagggaaauuuuuuuuuuu 102
-                                       GACUACG :   A+UU UUU  UUU
-  BSU06370|500|200|694661|695984|+ 341 GACUACGUAAACAUUUCUUUCGUUU 365
-                                       ************************* PP
+                                                                                              v                                 NC
+                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                       GGC:CG: AGU UCUACCA:GC::CCGUAAA::GC:UGAC
+  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 304 GGCUCGCAAGUCUCUACCAAGCUACCGUAAAUGGCUUGAC 343
+                                                                                       **************************************** PP
 
->> BSU39020|500|200|4005751|4006945|+  
+                                                                                           v vv               NC
+                                                                                       )))))))):::::::::::::: CS
+                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                       UACG :   A+UU UUU  UUU
+  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 344 UACGUAAACAUUUCUUUCGUUU 365
+                                                                                       ********************** PP
+
+>> BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (3) !   1.3e-16   85.2   0.5  cm        1      102 []         272         373 + .. 1.00    no 0.28
 
-                                                                                                       vv       vv   NC
-                                         :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>> CS
-                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugc 75 
-                                          A+ +++ AAAAA A +::CU:GUAUA+ ::C:G:AAUAUGG:C:G:: GUUUCUACC::G:  CCGUAAA  :C
-  BSU39020|500|200|4005751|4006945|+ 272 CAUCUUAGAAAAAGACAUUCUUGUAUAUGAUCAGUAAUAUGGUCUGAUUGUUUCUACCUAGUAACCGUAAAAAAC 346
-                                         *************************************************************************** PP
+                                                                                                                                  NC
+                                                                                         :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                          A+ +++ AAAAA A +::CU:GUAUA+ ::C:G:AAUAU
+  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 272 CAUCUUAGAAAAAGACAUUCUUGUAUAUGAUCAGUAAUAU 311
+                                                                                         **************************************** PP
 
-                                                                     NC
-                                         >>>,,)))))))):::::::::::::: CS
-                              Purine  76 cuGACUAcGagggaaauuuuuuuuuuu 102
-                                         ::GACUAC:AG::A +UU ++U+++UU
-  BSU39020|500|200|4005751|4006945|+ 347 UAGACUACAAGAAAGUUUGAAUAAAUU 373
-                                         *************************** PP
+                                                                                                               vv       vv        NC
+                                                                                         __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                              Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                         GG:C:G:: GUUUCUACC::G:  CCGUAAA  :C::GAC
+  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 312 GGUCUGAUUGUUUCUACCUAGUAACCGUAAAAAACUAGAC 351
+                                                                                         **************************************** PP
 
->> BSU22070|500|200|2319439|2320024|-  
+                                                                                                                NC
+                                                                                         )))))))):::::::::::::: CS
+                                                                              Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                         UAC:AG::A +UU ++U+++UU
+  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 352 UACAAGAAAGUUUGAAUAAAUU 373
+                                                                                         ********************** PP
+
+>> BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (4) !   9.1e-16   81.7   0.0  cm        1      102 []         312         411 + .. 1.00    no 0.46
 
-                                                                      v                 v                            NC
-                                         :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>> CS
-                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugc 75 
-                                         ++A AAUA+AA+A  ++C:C:C:UAUAAU :CG:G AUAUGGC:CG: AGUUUCUACC:G:CA CCGUAAA UG:
-  BSU22070|500|200|2319439|2320024|- 312 UUACAAUAUAAUAGGAACACUCAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCA-CCGUAAA-UGU 384
-                                         ***************************************************************.*******.*** PP
+                                                                                                                      v           NC
+                                                                                         :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                         ++A AAUA+AA+A  ++C:C:C:UAUAAU :CG:G AUAU
+  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 312 UUACAAUAUAAUAGGAACACUCAUAUAAUCGCGUGGAUAU 351
+                                                                                         **************************************** PP
 
-                                                                     NC
-                                         >>>,,)))))))):::::::::::::: CS
-                              Purine  76 cuGACUAcGagggaaauuuuuuuuuuu 102
-                                         C:GACUA:G:G:GA  ++U  ++    
-  BSU22070|500|200|2319439|2320024|- 385 CCGACUAUGGGUGAGCAAUGGAACCGC 411
-                                         *************************** PP
+                                                                                                v                                 NC
+                                                                                         __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                              Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                         GGC:CG: AGUUUCUACC:G:CA CCGUAAA UG:C:GAC
+  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 352 GGCACGCAAGUUUCUACCGGGCA-CCGUAAA-UGUCCGAC 389
+                                                                                         ***********************.*******.******** PP
 
->> BSU05800|500|200|625124|626291|-  
+                                                                                                                NC
+                                                                                         )))))))):::::::::::::: CS
+                                                                              Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                         UA:G:G:GA  ++U  ++    
+  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 390 UAUGGGUGAGCAAUGGAACCGC 411
+                                                                                         ********************** PP
+
+>> BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (5) !     9e-14   73.6   0.1  cm        1      102 []         346         445 + .. 1.00    no 0.30
 
-                                                        vvv                                          v         v     NC
-                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>>>> CS
-                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugccu 77 
-                                       AA++AA++A  +A+++U   U:GUAUAA:C:C:::AAUAUGG:::G:G:GU UCUACCAGG:  CCGUAAA  :CCU
-  BSU05800|500|200|625124|626291|- 346 AAUUAAAUAGCUAUUAUCACUUGUAUAACCUCAAUAAUAUGGUUUGAGGGUGUCUACCAGGAA-CCGUAAA-AUCCU 420
-                                       ***************************************************************.*******.***** PP
+                                                                                                        vvv                     NC
+                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                       AA++AA++A  +A+++U   U:GUAUAA:C:C:::AAUAU
+  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 346 AAUUAAAUAGCUAUUAUCACUUGUAUAACCUCAAUAAUAU 385
+                                                                                       **************************************** PP
 
-                                               vvv               NC
-                                       >,,)))))))):::::::::::::: CS
-                            Purine  78 GACUAcGagggaaauuuuuuuuuuu 102
-                                       GA UAC:A    + UUU+U + +UU
-  BSU05800|500|200|625124|626291|- 421 GAUUACAAAAUUUGUUUAUGACAUU 445
-                                       ************************* PP
+                                                                                                             v         v        NC
+                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                       GG:::G:G:GU UCUACCAGG:  CCGUAAA  :CCUGA 
+  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 386 GGUUUGAGGGUGUCUACCAGGAA-CCGUAAA-AUCCUGAU 423
+                                                                                       ***********************.*******.******** PP
 
->> BSU06700|500|200|731953|732823|-  
+                                                                                            vvv               NC
+                                                                                       )))))))):::::::::::::: CS
+                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                       UAC:A    + UUU+U + +UU
+  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 424 UACAAAAUUUGUUUAUGACAUU 445
+                                                                                       ********************** PP
+
+>> BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (6) ?      0.31   22.8   0.0  cm        1      102 []         519         612 + .. 0.97    no 0.43
 
-                                                                                                 v                 v NC
-                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<<<<<_______>>>>>> CS
-                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCaggcagCCGUAAAcugccu 77 
-                                       A AA+ ++AAAAA  + C::UC: :UA+ ::CG::AA A G ::CG::     CUAC: :G:: CC   AA ::C: 
-  BSU06700|500|200|731953|732823|- 519 AGAAUCAUAAAAACCAGCAUUCGUUUAUUUGCGAAAAAAGGAUUCGCAG----CUACGACGAU-CCAAGAA-AUCGC 589
-                                       *****************************************9*******....9***999999.*******.99996 PP
+                                                                                                                                NC
+                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
+                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
+                                                                                       A AA+ ++AAAAA  + C::UC: :UA+ ::CG::AA A 
+  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 519 AGAAUCAUAAAAACCAGCAUUCGUUUAUUUGCGAAAAAAG 558
+                                                                                       **************************************** PP
 
-                                                                 NC
-                                       >,,)))))))):::::::::::::: CS
-                            Purine  78 GACUAcGagggaaauuuuuuuuuuu 102
-                                       :  : :GA::G    +UUU  ++  
-  BSU06700|500|200|731953|732823|- 590 C--AGUGAAUGCGGCAUUUCGAAGG 612
-                                       6..88******************** PP
+                                                                                                         v                 v    NC
+                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
+                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
+                                                                                       G ::CG::     CUAC: :G:: CC   AA ::C: :  
+  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 559 GAUUCGCAG----CUACGACGAU-CCAAGAA-AUCGCC-- 590
+                                                                                       *9*******....9***999999.*******.999966.. PP
+
+                                                                                                              NC
+                                                                                       )))))))):::::::::::::: CS
+                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
+                                                                                       : :GA::G    +UUU  ++  
+  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 591 AGUGAAUGCGGCAUUUCGAAGG 612
+                                                                                       88******************** PP
 
 
 
@@ -158,6 +200,6 @@ Envelopes passing glocal HMM envelope defn filter:              54  (0.001512); 
 Envelopes passing  local CM  CYK           filter:              10  (0.0002622); expected (0.0001)
 Total CM hits reported:                                          6  (0.000156); includes 0 truncated hit(s)
 
-# CPU time: 2.16u 0.02s 00:00:02.18 Elapsed: 00:00:00.64
+# CPU time: 2.22u 0.02s 00:00:02.24 Elapsed: 00:00:00.87
 //
 [ok]

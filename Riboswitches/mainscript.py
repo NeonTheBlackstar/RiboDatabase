@@ -23,12 +23,7 @@ def makeAptamersBed(genome):
 def makePromotersBed(genome):
 	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $2, 0, $5}\' ./Results/"+genome+".result > ./Results/prom.bed")
 
-
 #chr, {10}, {11}, {9}, 0, {4} // liczone od 0
-
-'''
-"awk  \'BEGIN {OFS = \"\\t\"}; {if({0} == "scientific_name") print $5, '\t' ,$3;}\'".format('xD')
-'''
 
 def createAptamersFilter(result_file):
 	filter_list = []
@@ -55,6 +50,10 @@ def filterWindows(filter_list, window_file, output_file = ""):
 				output_handle.write(line)
 
 
+def addMissingInformation(result_handle):
+	pass
+
+
 def intervalIntersect(a1, b1, a2, b2):
 	return (a2 < b1) and (b2 > a1)
 
@@ -69,7 +68,7 @@ def aptamers(
 	lista = os.listdir('Alignments')
 
 	finalFile = open("./Results/{0}.result".format(genome), "w")
-
+	
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
 	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
@@ -90,6 +89,21 @@ def aptamers(
 		"-biotype", "protein_coding",
 		"-exhead", True, 
 		"-intervals", True)
+
+	#Add all headers
+	finalFile.write(
+		"organism_accession_number\t"+
+		"locus_tag\t"+
+		"gene_start\t"+
+		"gene_end\t"+
+		"strand\t"+
+		"aptamer?name\t"+
+		"aptamer_start\t"+
+		"aptamer_end\t"+
+		"aptamer?score\t"+
+		"\n")
+
+	addMissingInformation(finalFile)
 	
 	for i in range(0, len(lista)):
 		
@@ -123,7 +137,7 @@ def aptamers(
 						'aptamer_start': 		int(temp[6]),
 						'aptamer_end': 			int(temp[7]),
 						'before_interval': 		int(temp[5].split('|')[1]),
-						'score': 				0, # !!!
+						'score': 				float(apt_e_value), # !!!
 						'gene': {
 							'locus_tag': 	temp[5].split('|')[0],
 							'start': 		int(temp[5].split('|')[3]),
@@ -157,13 +171,10 @@ def aptamers(
 	os.system('rm ./Genomes/byStrand.gff')
 	os.system('sort -k3,3n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
 	os.system('mv ./Results/{0}.sorted ./Results/{0}.result'.format(genome))
+	#os.system("rm ./Results/processing*.txt") # nie usuwac tych plikow
+	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
-	# Pliki, ktore moga sie pozniej przydac #
-	#os.system("rm ./aptamer_windows.fasta") # mam tego nie usuwac dla promotorow
-	#os.system("rm ./Results/processing.txt") # nie usuwac tych plikow
-	#os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
-
-	makeAptamersBed(genome)
+	#makeAptamersBed(genome)
 
 
 def terminators(genome):
@@ -175,7 +186,7 @@ def terminators(genome):
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
 
 	d = {}
-	with open("transterm_output.tt") as tt_handle, open("{}.result".format(genome),"r") as result_handle:
+	with open("transterm_output.tt") as tt_handle, open("./Results/{}.result".format(genome),"r") as result_handle:
 		for line in tt_handle:
 			line = line.strip()
 			if line.startswith("SEQUENCE"):
@@ -217,8 +228,15 @@ def terminators(genome):
 
 				d[locus_tag]['terminators'].append(terminator.copy())
 
-		# Wybor najlepszego terminatora i zapis do pliku					
+		# Wybor najlepszego terminatora wsrod nienakladajacych sie i eliminacja pozostalych
+		firstLine = True				
 		for line in result_handle:
+			line = line.strip()
+
+			if firstLine:	# Ommit first line with headers
+				firstLine = False
+				continue
+
 			line_list = line.strip().split('\t')
 			locus_tag = line_list[1]
 			strand = line_list[4]
@@ -226,6 +244,7 @@ def terminators(genome):
 			aptamer_end = int(line_list[7])
 
 			terms_copy = list(d[locus_tag]['terminators'])
+
 			for id1 in range(0,len(terms_copy)):
 				for id2 in range(id1 + 1,len(terms_copy)):
 					t1 = terms_copy[id1]
@@ -250,44 +269,84 @@ def terminators(genome):
 								d[locus_tag]['terminators'].remove(t2)
 					# Jesli sie nie nakladaja
 					else:
-						# Oblicz odleglosc od aptameru
-						t1_length = abs(t1['start'] - t1['end'])
-						t2_length = abs(t2['start'] - t2['end'])
-						if strand == "+":
-							t1_distance = t1['start'] - aptamer_end
-							t2_distance = t2['start'] - aptamer_end
-						if strand == "-":
-							t1_distance = aptamer_start - t1['end']
-							t2_distance = aptamer_start - t2['end']
+						try:
+							# Oblicz odleglosc od aptameru
+							t1_length = abs(t1['start'] - t1['end'])
+							t2_length = abs(t2['start'] - t2['end'])
+							if strand == "+":
+								t1_distance = t1['start'] - aptamer_end # Odleglosci od aptameru
+								t2_distance = t2['start'] - aptamer_end
+							if strand == "-":
+								t1_distance = aptamer_start - t1['end']
+								t2_distance = aptamer_start - t2['end']
 
-						# Jesli dystans jest ujemny, to znaczy ze terminator nachodzi na aptamer
-						if t1_distance and t2_distance >= 0:
-							if t1_distance < t2_distance:
-								d[locus_tag]['terminators'].remove(t2)
-							else:
-								d[locus_tag]['terminators'].remove(t1)
-						'''
-						if t1_distance < 0 and t2_distance >= 0:
-							if abs(t1_distance) < (t1_length / 2):
-								d[locus_tag]['terminators'].remove(t2)
-							else:
-								d[locus_tag]['terminators'].remove(t1)
-						''' # DOKONCZYC
+							# Gdy żaden z terminatorów nie nachodzi na aptamer
+							if t1_distance >= 0 and t2_distance >= 0:
+								if t1_distance < t2_distance:
+									d[locus_tag]['terminators'].remove(t2)
+								else:
+									d[locus_tag]['terminators'].remove(t1)
 
-							# Sprawdz czy terminator nachodzi na aptamer w dozwolonym stopniu
+							# Jesli dystans jest ujemny, to znaczy ze terminator nachodzi na aptamer
+							elif t1_distance < 0 and t2_distance >= 0:
+								if abs(t1_distance) < (t1_length / 2):
+									d[locus_tag]['terminators'].remove(t2)
+								else:
+									d[locus_tag]['terminators'].remove(t1) 
 
+							elif t1_distance >= 0 and t2_distance < 0:
+								if abs(t2_distance) < (t2_length / 2):
+									d[locus_tag]['terminators'].remove(t1)
+								else:
+									d[locus_tag]['terminators'].remove(t2)
 
-	#print(d)
+							elif t1_distance < 0 and t2_distance < 0: # Co tu zrobić?
+								if abs(t1_distance) < (t1_length / 2):
+									d[locus_tag]['terminators'].remove(t2)
+								elif abs(t2_distance) < (t2_length / 2):
+									d[locus_tag]['terminators'].remove(t1)
+								else:
+									if abs(t1_distance) < abs(t2_distance):
+										d[locus_tag]['terminators'].remove(t2)
+									else:
+										d[locus_tag]['terminators'].remove(t1)
+						except ValueError:
+							continue
+			#print(d[locus_tag])
+			#print("\n\n\n")
+
+		# Zapis do pliku
+		firstLine = True
+		result_handle.seek(0)
+		with open("./Results/{}_temp.result".format(genome),"w") as temp_result:
+			for line in result_handle:
+				line = line.strip()
+
+				if firstLine:	# Ommit first line with headers
+					firstLine = False
+					line += "\t" + "terminator_start" + "\t" + "terminator_end" + "\t" + "terminator?score" + "\n"
+				else:
+					line_list = line.strip().split('\t')
+					locus_tag = line_list[1]
+
+					if d[locus_tag]['terminators'] != []: # Jesli da tego aptameru znaleziono terminator
+						line += "\t" + str(d[locus_tag]['terminators'][0]['start']) + "\t" + str(d[locus_tag]['terminators'][0]['end']) + "\t" + str(d[locus_tag]['terminators'][0]['hp']) + '\n'
+					else:
+						line += "\t" + '0' + "\t" + '0' + "\t" + '0' + '\n'			
+				temp_result.write(line)
+
+		os.system("mv \"./Results/{0}_temp.result\" \"./Results/{0}.result\"".format(genome))
+
+	os.system('rm aptamer_windows.fasta')
+	os.system('rm terminator_windows.fasta')
+	os.system('rm rubbish.txt')
+	os.system('rm termin_crd.coords')
+	os.system('rm transterm_output.tt')
 
 	### DEBUG LINE ###
 	print("DEBUG")
 	return
 	######
-
-
-def bedtools(genome):
-	#ignore overlaps, ignore downstream, signed dist. w. r. t. A's strand
-	os.system('bedtools closest -io -id -D a -a ./Results/{0}.aptamers.bed -b ./Results/{0}.promoters.bed > ./Results/{0}.bedAP.txt'.format(genome))
 
 
 def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
@@ -316,18 +375,9 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 		else:
 			final.write('---\t---\t---\tNo_T\t')
 		terminators.close()
-		'''
-		sdsequence = open('./Results/{0}.bedASD.txt'.format(genome))
-		for lineSD in sdsequence:
-			tempSD = lineSD.split()
-			if ...
-				...
-				break
-		else:
-			final.write(...)
-		sdsequence.close()
-		'''
-		
+
+		############### tu bylo SD
+
 		if P_exist and T_exist:
 			final.write('Termination\n')
 		if P_exist and not T_exist and not SD_exist:
@@ -343,6 +393,7 @@ a = datetime.now()
 aptamers(sys.argv[1])
 #promoters()
 terminators(sys.argv[1])
+
 #__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
 #bedtools(sys.argv[1])
 #comparison(sys.argv[1])

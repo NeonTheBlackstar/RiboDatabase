@@ -177,5 +177,47 @@ antyantyterminator - to struktura zapobiegająca tworzeniu się antyterminatoró
 
 # Jak przekierować do dev/null w venv?
 
+
+############## 09.06.17 #################
+
+Co zrobić, jak dwa terminatory będą w aptamerze?
+Co zrobić, jak oba wówczas nie będą spełniały wymagań (połowa długości)?
+
+Jak zintegrowac wczytywanie taksonomii?
+
+############## 10.06.17 #################
+
+Rzeczy do dodania w pliku wynikowym:
+- Klasa ryboswitcha (bardziej ogolne): Alignment??? Ligandy??? Nazwa i description są w pliku!
+- Nazwa ryboswitcha?
+- Effect?
+- Mechanizm
+
+Gen:
+- nazwa [MOGE TO POBRAC Z GFF]
+- locus tag [done]
+- pozycja [done]
+
+Organism:
+- nazwa naukowa
+- nazwa zwyczajowa
+- accession number
+- taksonomia - id starczy, bo są już potworzone taksony w bazie
+
+Aptamer:
+- struktura 2D?
+
+Terminator:
+-lokacja i strand brane ze wspolnej kolumny dla genu
+
+# Baza danych #
+
+Dodać accession number do clasy ryboswitcha?
+
+///////////
+
+Nazwe genu dodam do exheada w getFasta.
+Nazwe organizmu i taksonomie moge zwracac returnem z getFasta. Lokacje też.
+
 '''
 '''_______________________________________________________________________'''

@@ -14,244 +14,342 @@ Query:       SAM  [CLEN=108]
 Accession:   RF00162
 Description: SAM riboswitch (S box leader)
 Hit scores:
- rank     E-value  score  bias  sequence                            start    end   mdl trunc   gc  description
- ----   --------- ------ -----  ---------------------------------- ------ ------   --- ----- ----  -----------
-  (1) !   3.5e-22   98.0   0.0  BSU11010|500|200|1178756|1180595|-    294    411 +  cm    no 0.50  -
-  (2) !   1.5e-21   95.6   0.0  BSU11870|500|200|1258491|1259613|+    313    433 +  cm    no 0.46  -
-  (3) !   1.9e-20   91.5   0.0  BSU32750|500|200|3363265|3364291|-    289    395 +  cm    no 0.49  -
-  (4) !   3.6e-20   90.4   0.0  BSU38950|500|200|3997963|3999097|+    312    418 +  cm    no 0.49  -
-  (5) !   6.4e-19   85.7   0.0  BSU18560|500|200|2024041|2025076|-    326    417 +  cm    no 0.48  -
-  (6) !   4.2e-18   82.6   0.0  BSU38960|500|200|3999349|4000486|+    317    423 +  cm    no 0.48  -
-  (7) !   9.6e-18   81.2   0.0  BSU13590|500|200|1427033|1428278|+    343    443 +  cm    no 0.51  -
-  (8) !   1.8e-17   80.2   0.0  BSU15570|500|200|1630381|1631083|+    234    339 +  cm    no 0.45  -
-  (9) !   2.8e-16   75.6   0.0  BSU30550|500|200|3127824|3129027|-    195    333 +  cm    no 0.48  -
- (10) !   4.9e-15   71.0   0.0  BSU13180|500|200|1383319|1385608|-    218    373 +  cm    no 0.51  -
- (11) !   5.8e-13   63.1   0.0  BSU13560|500|200|1423240|1424440|-    258    414 +  cm    no 0.49  -
+ rank     E-value  score  bias  sequence                                                                            start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  ---------------------------------------------------------------------------------- ------ ------   --- ----- ----  -----------
+  (1) !   3.5e-22   98.0   0.0  BSU11010|500|200|1178756|1180595|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    294    411 +  cm    no 0.50  -
+  (2) !   1.5e-21   95.6   0.0  BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    313    433 +  cm    no 0.46  -
+  (3) !   1.9e-20   91.5   0.0  BSU32750|500|200|3363265|3364291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    289    395 +  cm    no 0.49  -
+  (4) !   3.6e-20   90.4   0.0  BSU38950|500|200|3997963|3999097|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    312    418 +  cm    no 0.49  -
+  (5) !   6.4e-19   85.7   0.0  BSU18560|500|200|2024041|2025076|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    326    417 +  cm    no 0.48  -
+  (6) !   4.2e-18   82.6   0.0  BSU38960|500|200|3999349|4000486|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    317    423 +  cm    no 0.48  -
+  (7) !   9.6e-18   81.2   0.0  BSU13590|500|200|1427033|1428278|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    343    443 +  cm    no 0.51  -
+  (8) !   1.8e-17   80.2   0.0  BSU15570|500|200|1630381|1631083|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    234    339 +  cm    no 0.45  -
+  (9) !   2.8e-16   75.6   0.0  BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    195    333 +  cm    no 0.48  -
+ (10) !   4.9e-15   71.0   0.0  BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    218    373 +  cm    no 0.51  -
+ (11) !   5.8e-13   63.1   0.0  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    258    414 +  cm    no 0.49  -
 
 
 Hit alignments:
->> BSU11010|500|200|1178756|1180595|-  
+>> BSU11010|500|200|1178756|1180595|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (1) !   3.5e-22   98.0   0.0  cm        1      108 []         294         411 + .. 0.98    no 0.50
 
-                                                                                                                     NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______..........___>>>- CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau..........auagggA 65 
-                                         :UCUUAUCAAGAGA:GC+GAGGGACUGGCCC+A GAAGC:UC:GCAACC::: ++A+           AU :::A
-  BSU11010|500|200|1178756|1180595|- 294 UUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGgcgaucagccAUGACCA 368
-                                         ****************************************************9999889999999999889**** PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                         :UCUUAUCAAGAGA:GC+GAGGGACUGGCCC+A GAAGC:
+  BSU11010|500|200|1178756|1180595|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 294 UUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCU 333
+                                                                                         **************************************** PP
 
-                                                                                     NC
-                                         ->>>>>>,,,,,,,,<<<<_________>>>>,,,)))))))) CS
-                                 SAM  66 aGGUGCcAAuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108
-                                         AGGUGC:AA+UCC+GC::G U  ++ + C::G+AAGAUAAGA:
-  BSU11010|500|200|1178756|1180595|- 369 AGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAA 411
-                                         ******************************************* PP
+                                                                                                                                  NC
+                                                                                         ,,<<<-<<<<<<______..........___>>>-->>>> CS
+                                                                                 SAM  41 uCgGCAACCcccuauaau..........auagggAaGGUG 70 
+                                                                                         UC:GCAACC::: ++A+           AU :::AAGGUG
+  BSU11010|500|200|1178756|1180595|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 334 UCAGCAACCGGUGUAAUGgcgaucagccAUGACCAAGGUG 373
+                                                                                         ************9999889999999999889********* PP
 
->> BSU11870|500|200|1258491|1259613|+  
+                                                                                                                                NC
+                                                                                         >>,,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                                                                                 SAM  71 CcAAuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108
+                                                                                         C:AA+UCC+GC::G U  ++ + C::G+AAGAUAAGA:
+  BSU11010|500|200|1178756|1180595|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 374 CUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAA 411
+                                                                                         ************************************** PP
+
+>> BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (2) !   1.5e-21   95.6   0.0  cm        1      108 []         313         433 + .. 0.96    no 0.46
 
-                                                                                                                     NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______...........___>>> CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau...........auaggg 64 
-                                         :UCUUAUC  GAGAGG:GGAGGGACUGGCCCU  GAA:CCUC:GCAACC::CU+ ++U           A  G::
-  BSU11870|500|200|1258491|1259613|+ 313 UUCUUAUCGUGAGAGGUGGAGGGACUGGCCCUUAGAAACCUCAGCAACCGGCUUGUUUugcauuugcaaAGCGCC 387
-                                         *****************************************************9999889999999888888*** PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                         :UCUUAUC  GAGAGG:GGAGGGACUGGCCCU  GAA:CC
+  BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 313 UUCUUAUCGUGAGAGGUGGAGGGACUGGCCCUUAGAAACC 352
+                                                                                         **************************************** PP
 
-                                                                                        NC
-                                         -->>>>>>,,,,,,,,<<<<_______..__>>>>,,,)))))))) CS
-                                 SAM  65 AaGGUGCcAAuUCCugCcggauauuuu..uuccgGaaAgAUaAgag 108
-                                         AAGGUGC:AA+UCC+GC::G  +UUUU  U C::G+AAGAUAAGA:
-  BSU11870|500|200|1258491|1259613|+ 388 AAGGUGCUAAAUCCAGCAAGCGUUUUUuaUGCUUGGAAGAUAAGAA 433
-                                         ********************99977777799*************** PP
+                                                                                                                                  NC
+                                                                                         ,,<<<-<<<<<<______...........___>>>-->>> CS
+                                                                                 SAM  41 uCgGCAACCcccuauaau...........auagggAaGGU 69 
+                                                                                         UC:GCAACC::CU+ ++U           A  G::AAGGU
+  BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 353 UCAGCAACCGGCUUGUUUugcauuugcaaAGCGCCAAGGU 392
+                                                                                         *************9999889999999888888******** PP
 
->> BSU32750|500|200|3363265|3364291|-  
+                                                                                                                                  NC
+                                                                                         >>>,,,,,,,,<<<<_______..__>>>>,,,))))))) CS
+                                                                                 SAM  70 GCcAAuUCCugCcggauauuuu..uuccgGaaAgAUaAga 107
+                                                                                         GC:AA+UCC+GC::G  +UUUU  U C::G+AAGAUAAGA
+  BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 393 GCUAAAUCCAGCAAGCGUUUUUuaUGCUUGGAAGAUAAGA 432
+                                                                                         ***************99977777799************** PP
+
+                                                                                           NC
+                                                                                         ) CS
+                                                                                 SAM 108 g 108
+                                                                                         :
+  BSU11870|500|200|1258491|1259613|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 433 A 433
+                                                                                         * PP
+
+>> BSU32750|500|200|3363265|3364291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (3) !   1.9e-20   91.5   0.0  cm        1      108 []         289         395 + .. 1.00    no 0.49
 
-                                                                                          v             v            NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>,,, CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcAAu 75 
-                                         CUCU:AUCAAGAGAGG:GGAGGGA+  GCCCUAUGAA:CC CGGCAACC :C+A A U U+G: A GGUGCCAAU
-  BSU32750|500|200|3363265|3364291|- 289 CUCUUAUCAAGAGAGGUGGAGGGAAGUGCCCUAUGAAGCC-CGGCAACCAUCAACACUGUUGAAAUGGUGCCAAU 362
-                                         ****************************************.********************************** PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                         CUCU:AUCAAGAGAGG:GGAGGGA+  GCCCUAUGAA:CC
+  BSU32750|500|200|3363265|3364291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 289 CUCUUAUCAAGAGAGGUGGAGGGAAGUGCCCUAUGAAGCC 328
+                                                                                         **************************************** PP
 
-                                                                           NC
-                                         ,,,,,<<<<_________>>>>,,,)))))))) CS
-                                 SAM  76 UCCugCcggauauuuuuuccgGaaAgAUaAgag 108
-                                         UC   C ::   UU +  :: GAAAGAU:AGAG
-  BSU32750|500|200|3363265|3364291|- 363 UCACACGAAGCGUUCAGCUUUGAAAGAUGAGAG 395
-                                         ********************************* PP
+                                                                                                  v             v                 NC
+                                                                                         ,,<<<-<<<<<<_________>>>-->>>>>>,,,,,,,, CS
+                                                                                 SAM  41 uCgGCAACCcccuauaauauagggAaGGUGCcAAuUCCug 80 
+                                                                                          CGGCAACC :C+A A U U+G: A GGUGCCAAUUC   
+  BSU32750|500|200|3363265|3364291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 329 -CGGCAACCAUCAACACUGUUGAAAUGGUGCCAAUUCACA 367
+                                                                                         .*************************************** PP
 
->> BSU38950|500|200|3997963|3999097|+  
+                                                                                                                      NC
+                                                                                         <<<<_________>>>>,,,)))))))) CS
+                                                                                 SAM  81 CcggauauuuuuuccgGaaAgAUaAgag 108
+                                                                                         C ::   UU +  :: GAAAGAU:AGAG
+  BSU32750|500|200|3363265|3364291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 368 CGAAGCGUUCAGCUUUGAAAGAUGAGAG 395
+                                                                                         **************************** PP
+
+>> BSU38950|500|200|3997963|3999097|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (4) !   3.6e-20   90.4   0.0  cm        1      108 []         312         418 + .. 0.99    no 0.49
 
-                                         v                                                v             v            NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>,,, CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcAAu 75 
-                                          :CU:AUCAAGAGAGG:GGAGGGACUGGCCCUAUGA :CC C:GCAACC C: +U+ +A+ :G A GGUGC:AA+
-  BSU38950|500|200|3997963|3999097|+ 312 ACCUUAUCAAGAGAGGUGGAGGGACUGGCCCUAUGAUACC-CGGCAACCGCUGUUUCAAACAGAAUGGUGCUAAA 385
-                                         ****************************************.********************************** PP
+                                                                                         v                                        NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                          :CU:AUCAAGAGAGG:GGAGGGACUGGCCCUAUGA :CC
+  BSU38950|500|200|3997963|3999097|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 312 ACCUUAUCAAGAGAGGUGGAGGGACUGGCCCUAUGAUACC 351
+                                                                                         **************************************** PP
 
-                                                                         v NC
-                                         ,,,,,<<<<_________>>>>,,,)))))))) CS
-                                 SAM  76 UCCugCcggauauuuuuuccgGaaAgAUaAgag 108
-                                         UCCU ::G:A AUU   U:C::+ AGAU:AG: 
-  BSU38950|500|200|3997963|3999097|+ 386 UCCUUAAGAACAUUGCGUUCUUGCAGAUGAGGC 418
-                                         ********************************* PP
+                                                                                                  v             v                 NC
+                                                                                         ,,<<<-<<<<<<_________>>>-->>>>>>,,,,,,,, CS
+                                                                                 SAM  41 uCgGCAACCcccuauaauauagggAaGGUGCcAAuUCCug 80 
+                                                                                          C:GCAACC C: +U+ +A+ :G A GGUGC:AA+UCCU 
+  BSU38950|500|200|3997963|3999097|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 352 -CGGCAACCGCUGUUUCAAACAGAAUGGUGCUAAAUCCUU 390
+                                                                                         .*************************************** PP
 
->> BSU18560|500|200|2024041|2025076|-  
+                                                                                                                    v NC
+                                                                                         <<<<_________>>>>,,,)))))))) CS
+                                                                                 SAM  81 CcggauauuuuuuccgGaaAgAUaAgag 108
+                                                                                         ::G:A AUU   U:C::+ AGAU:AG: 
+  BSU38950|500|200|3997963|3999097|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 391 AAGAACAUUGCGUUCUUGCAGAUGAGGC 418
+                                                                                         **************************** PP
+
+>> BSU18560|500|200|2024041|2025076|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (5) !   6.4e-19   85.7   0.0  cm        1      108 []         326         417 + .. 0.95    no 0.48
 
-                                                                                                                     NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<~~~~~~-->>>>>>,,,,,,,,<<<< CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACC*[15]*AaGGUGCcAAuUCCugCcgg 84 
-                                         :U :UAUC+AGAGAGG:GGAGGGACUGGCCCUAUGAA:CCUCGGCAAC:      A :GUGCCAAUUCC+GC::G
-  BSU18560|500|200|2024041|2025076|- 326 UUUCUAUCCAGAGAGGUGGAGGGACUGGCCCUAUGAAACCUCGGCAACA*[ 2]*AUUGUGCCAAUUCCAGCAAG 396
-                                         ************************************************9...4..669***************** PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                         :U :UAUC+AGAGAGG:GGAGGGACUGGCCCUAUGAA:CC
+  BSU18560|500|200|2024041|2025076|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 326 UUUCUAUCCAGAGAGGUGGAGGGACUGGCCCUAUGAAACC 365
+                                                                                         **************************************** PP
 
-                                                                  NC
-                                         _________>>>>,,,)))))))) CS
-                                 SAM  85 auauuuuuuccgGaaAgAUaAgag 108
-                                               U+ C::GAAAGAUA: A:
-  BSU18560|500|200|2024041|2025076|- 397 C---GCUAGCUUGAAAGAUAGGAA 417
-                                         9...55567*************** PP
+                                                                                                                                  NC
+                                                                                         ,,<<<-<<<~~~~~~-->>>>>>,,,,,,,,<<<<_____ CS
+                                                                                 SAM  41 uCgGCAACC*[15]*AaGGUGCcAAuUCCugCcggauauu 89 
+                                                                                         UCGGCAAC:      A :GUGCCAAUUCC+GC::G     
+  BSU18560|500|200|2024041|2025076|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 366 UCGGCAACA*[ 2]*AUUGUGCCAAUUCCAGCAAGC---G 398
+                                                                                         ********9...4..669*****************9...5 PP
 
->> BSU38960|500|200|3999349|4000486|+  
+                                                                                                             NC
+                                                                                         ____>>>>,,,)))))))) CS
+                                                                                 SAM  90 uuuuccgGaaAgAUaAgag 108
+                                                                                          U+ C::GAAAGAUA: A:
+  BSU18560|500|200|2024041|2025076|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 399 CUAGCUUGAAAGAUAGGAA 417
+                                                                                         5567*************** PP
+
+>> BSU38960|500|200|3999349|4000486|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (6) !   4.2e-18   82.6   0.0  cm        1      108 []         317         423 + .. 0.94    no 0.48
 
-                                         v                                                v             v            NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>,,, CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcAAu 75 
-                                          :CUUAUCAAGAGAGG:GGAGGGACUGGCCCU  GA :CC C:GCAACC C: +U+  A+ :G A GGUGC:AA+
-  BSU38960|500|200|3999349|4000486|+ 317 UCCUUAUCAAGAGAGGUGGAGGGACUGGCCCUGCGAUACC-CGGCAACCGCUGUUU--AACAGAAUGGUGCUAAA 388
-                                         ****************************************.********9998887..77888999********* PP
+                                                                                         v                                        NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                          :CUUAUCAAGAGAGG:GGAGGGACUGGCCCU  GA :CC
+  BSU38960|500|200|3999349|4000486|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 317 UCCUUAUCAAGAGAGGUGGAGGGACUGGCCCUGCGAUACC 356
+                                                                                         **************************************** PP
 
-                                              v                 v          v NC
-                                         ,,,,,<<<<_______..__>>>>,,,)))))))) CS
-                                 SAM  76 UCCugCcggauauuuu..uuccgGaaAgAUaAgag 108
-                                         UCCU  :G:  A+U +    :C: +AAGAUAAG: 
-  BSU38960|500|200|3999349|4000486|+ 389 UCCUUUAGAGCAAUGAuuGCUCUUGAAGAUAAGGU 423
-                                         *******99988655566889************** PP
+                                                                                                  v             v                 NC
+                                                                                         ,,<<<-<<<<<<_________>>>-->>>>>>,,,,,,,, CS
+                                                                                 SAM  41 uCgGCAACCcccuauaauauagggAaGGUGCcAAuUCCug 80 
+                                                                                          C:GCAACC C: +U+  A+ :G A GGUGC:AA+UCCU 
+  BSU38960|500|200|3999349|4000486|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 357 -CGGCAACCGCUGUUU--AACAGAAUGGUGCUAAAUCCUU 393
+                                                                                         .********9998887..77888999************** PP
 
->> BSU13590|500|200|1427033|1428278|+  
+                                                                                         v                 v          v NC
+                                                                                         <<<<_______..__>>>>,,,)))))))) CS
+                                                                                 SAM  81 Ccggauauuuu..uuccgGaaAgAUaAgag 108
+                                                                                          :G:  A+U +    :C: +AAGAUAAG: 
+  BSU38960|500|200|3999349|4000486|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 394 UAGAGCAAUGAuuGCUCUUGAAGAUAAGGU 423
+                                                                                         **99988655566889************** PP
+
+>> BSU13590|500|200|1427033|1428278|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (7) !   9.6e-18   81.2   0.0  cm        1      108 []         343         443 + .. 0.92    no 0.51
 
-                                         v                                                  vv         vv            NC
-                                         ((((((((,,,,,.,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>,, CS
-                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcAA 74 
-                                          UCUUAUCAAGAG AGGC+GAGGGAC  GCCC+AUGAAGCC C:GCAACC:  U+++   +A  :A GGUGC:AA
-  BSU13590|500|200|1427033|1428278|+ 343 UUCUUAUCAAGAGcAGGCAGAGGGACGAGCCCGAUGAAGCC-CGGCAACCGACUUAU---AAAGCACGGUGCUAA 413
-                                         *****************************************.********6544443...2577999******** PP
+                                                                                         v                                        NC
+                                                                                         ((((((((,,,,,.,<<<---<<<_____>>>------>> CS
+                                                                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgC 39 
+                                                                                          UCUUAUCAAGAG AGGC+GAGGGAC  GCCC+AUGAAGC
+  BSU13590|500|200|1427033|1428278|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 343 UUCUUAUCAAGAGcAGGCAGAGGGACGAGCCCGAUGAAGC 382
+                                                                                         **************************************** PP
 
-                                                                          v NC
-                                         ,,,,,,<<<<_________>>>>,,,)))))))) CS
-                                 SAM  75 uUCCugCcggauauuuuuuccgGaaAgAUaAgag 108
-                                         UUC UGC:G:+    +   :C:GA AGAUAAGA 
-  BSU13590|500|200|1427033|1428278|+ 414 UUCUUGCAGCU----AGCGGCUGAGAGAUAAGAU 443
-                                         **********8....5567*************** PP
+                                                                                                    vv         vv                 NC
+                                                                                         >,,<<<-<<<<<<_________>>>-->>>>>>,,,,,,, CS
+                                                                                 SAM  40 CuCgGCAACCcccuauaauauagggAaGGUGCcAAuUCCu 79 
+                                                                                         C C:GCAACC:  U+++   +A  :A GGUGC:AAUUC U
+  BSU13590|500|200|1427033|1428278|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 383 C-CGGCAACCGACUUAU---AAAGCACGGUGCUAAUUCUU 418
+                                                                                         *.********6544443...2577999************* PP
 
->> BSU15570|500|200|1630381|1631083|+  
+                                                                                                                     v NC
+                                                                                         ,<<<<_________>>>>,,,)))))))) CS
+                                                                                 SAM  80 gCcggauauuuuuuccgGaaAgAUaAgag 108
+                                                                                         GC:G:+    +   :C:GA AGAUAAGA 
+  BSU13590|500|200|1427033|1428278|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 419 GCAGCU----AGCGGCUGAGAGAUAAGAU 443
+                                                                                         *****8....5567*************** PP
+
+>> BSU15570|500|200|1630381|1631083|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (8) !   1.8e-17   80.2   0.0  cm        1      108 []         234         339 + .. 0.93    no 0.45
 
-                                         vv                    v     v                                               NC
-                                         ((((((((,,,,,,<<<---<<<_____>>>------>>>,,<<<-<<<<<<_________>>>-->>>>>>,,, CS
-                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaauauagggAaGGUGCcAAu 75 
-                                           CUUAUCAAGAG GGC GAGG ACUGG CCUAUGAAGCC C:GCAACC: C+++   +U+G :A GGUGC:A U
-  BSU15570|500|200|1630381|1631083|+ 234 AACUUAUCAAGAGCGGCUGAGGGACUGGACCUAUGAAGCC-CGGCAACCUGCAUAG--UUUGUAA-GGUGCUACU 304
-                                         ****************************************.********7766665..5566666.********* PP
+                                                                                         vv                    v     v            NC
+                                                                                         ((((((((,,,,,,<<<---<<<_____>>>------>>> CS
+                                                                                 SAM   1 cucUuAUcaAGAGaGGcgGAGGGAcuGGCCCuaUGAAgCC 40 
+                                                                                           CUUAUCAAGAG GGC GAGG ACUGG CCUAUGAAGCC
+  BSU15570|500|200|1630381|1631083|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 234 AACUUAUCAAGAGCGGCUGAGGGACUGGACCUAUGAAGCC 273
+                                                                                         **************************************** PP
 
-                                                                          vv NC
-                                         ,,,,,<<<<_______..__>>>>,,,)))))))) CS
-                                 SAM  76 UCCugCcggauauuuu..uuccgGaaAgAUaAgag 108
-                                         UCC+GC:::AU ++UU  +U:::GAAAGAUAAG  
-  BSU15570|500|200|1630381|1631083|+ 305 UCCAGCAAAAUGAAUUccAUUUUGAAAGAUAAGGG 339
-                                         **********9988888899*************** PP
+                                                                                                                                  NC
+                                                                                         ,,<<<-<<<<<<_________>>>-->>>>>>,,,,,,,, CS
+                                                                                 SAM  41 uCgGCAACCcccuauaauauagggAaGGUGCcAAuUCCug 80 
+                                                                                          C:GCAACC: C+++   +U+G :A GGUGC:A UUCC+G
+  BSU15570|500|200|1630381|1631083|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 274 -CGGCAACCUGCAUAG--UUUGUAA-GGUGCUACUUCCAG 309
+                                                                                         .********7766665..5566666.************** PP
 
->> BSU30550|500|200|3127824|3129027|-  
+                                                                                                                     vv NC
+                                                                                         <<<<_______..__>>>>,,,)))))))) CS
+                                                                                 SAM  81 Ccggauauuuu..uuccgGaaAgAUaAgag 108
+                                                                                         C:::AU ++UU  +U:::GAAAGAUAAG  
+  BSU15570|500|200|1630381|1631083|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 310 CAAAAUGAAUUccAUUUUGAAAGAUAAGGG 339
+                                                                                         *****9988888899*************** PP
+
+>> BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (9) !   2.8e-16   75.6   0.0  cm        1      108 []         195         333 + .. 0.92    no 0.48
 
-                                                                                                                     NC
-                                         ((((((((,,,,,.,<<<---<<<_____>>>------>>>,,<<<-<<<<<<______................ CS
-                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCCuCgGCAACCcccuauaau................ 58 
-                                         CUCUUAUC+ GAG +GGCGGAGGGAC+GGCCCUAUGAAGCC C:GCAACC:::U+ + U                
-  BSU30550|500|200|3127824|3129027|- 195 CUCUUAUCCCGAGcUGGCGGAGGGACAGGCCCUAUGAAGCC-CAGCAACCGGUUUCUCUguuauuuauuauguuc 268
-                                         *****************************************.***********9999888888888888888888 PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,.,<<<---<<<_____>>>------>> CS
+                                                                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgC 39 
+                                                                                         CUCUUAUC+ GAG +GGCGGAGGGAC+GGCCCUAUGAAGC
+  BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 195 CUCUUAUCCCGAGcUGGCGGAGGGACAGGCCCUAUGAAGC 234
+                                                                                         **************************************** PP
 
-                                                                                                           NC
-                                         ...........___>>>-->>>>>>,,,,,.,,,<<<<_______...__>>>>,,,)))))))) CS
-                                 SAM  59 ...........auagggAaGGUGCcAAuUC.CugCcggauauuuu...uuccgGaaAgAUaAgag 108
-                                                    A A:::AAGGUGC:AA     UGC::G U+ U+U   U C::GA  GAUAAGAG
-  BSU30550|500|200|3127824|3129027|- 269 aacugagugagACAACCAAGGUGCUAACCUgUUGCAAGGUUGUAUgauUCCUUGAGCGAUAAGAG 333
-                                         88888888888778*************9876999****999777778899*************** PP
+                                                                                                                                  NC
+                                                                                         >,,<<<-<<<<<<______..................... CS
+                                                                                 SAM  40 CuCgGCAACCcccuauaau..................... 58 
+                                                                                         C C:GCAACC:::U+ + U                     
+  BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 235 C-CAGCAACCGGUUUCUCUguuauuuauuauguucaacug 273
+                                                                                         *.***********999988888888888888888888888 PP
 
->> BSU13180|500|200|1383319|1385608|-  
+                                                                                                                                  NC
+                                                                                         ......___>>>-->>>>>>,,,,,.,,,<<<<_______ CS
+                                                                                 SAM  59 ......auagggAaGGUGCcAAuUC.CugCcggauauuuu 91 
+                                                                                               A A:::AAGGUGC:AA     UGC::G U+ U+U
+  BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 274 agugagACAACCAAGGUGCUAACCUgUUGCAAGGUUGUAU 313
+                                                                                         888888778*************9876999****9997777 PP
+
+                                                                                                              NC
+                                                                                         ...__>>>>,,,)))))))) CS
+                                                                                 SAM  92 ...uuccgGaaAgAUaAgag 108
+                                                                                            U C::GA  GAUAAGAG
+  BSU30550|500|200|3127824|3129027|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 314 gauUCCUUGAGCGAUAAGAG 333
+                                                                                         78899*************** PP
+
+>> BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
  (10) !   4.9e-15   71.0   0.0  cm        1      108 []         218         373 + .. 0.89    no 0.51
 
-                                                                                             v                       NC
-                                         ((((((((,,,,,.,<<<---<<<_____>>>------>>>.,,<<<-<<<<<<______............... CS
-                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgCC.uCgGCAACCcccuauaau............... 58 
-                                         CUCU:AUC AGAG +GG: GA GGA+UGGCC U UGA :CC +C:GCAACC: C+ UAAU               
-  BSU13180|500|200|1383319|1385608|- 218 CUCUUAUCGAGAGuUGGGCGAGGGAUUGGCCUUUUGACCCCaACAGCAACCGACCGUAAUaccauugugaaaugg 292
-                                         *************88888********************88878********999999888788888888888888 PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,.,<<<---<<<_____>>>------>> CS
+                                                                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGAcuGGCCCuaUGAAgC 39 
+                                                                                         CUCU:AUC AGAG +GG: GA GGA+UGGCC U UGA :C
+  BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 218 CUCUUAUCGAGAGuUGGGCGAGGGAUUGGCCUUUUGACCC 257
+                                                                                         *************88888********************88 PP
 
-                                                                                v                                    NC
-                                         ...................................___>>>-->>>>>>,,,,,,,,<<<<_________>>>>, CS
-                                 SAM  59 ...................................auagggAaGGUGCcAAuUCCugCcggauauuuuuuccgGa 98 
-                                                                            ++AG :A GGUGC:AAUUCC+ C:G:+    U U :C:GA
-  BSU13180|500|200|1383319|1385608|- 293 ggcgcacugcuuuucgcgccgagacugaugucucaUAAGGCACGGUGCUAAUUCCAUCAGAU----UGUGUCUGA 363
-                                         88888888888888888888888888888888888777***********************8....4567***** PP
+                                                                                                     v                            NC
+                                                                                         >.,,<<<-<<<<<<______.................... CS
+                                                                                 SAM  40 C.uCgGCAACCcccuauaau.................... 58 
+                                                                                         C +C:GCAACC: C+ UAAU                    
+  BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 258 CaACAGCAACCGACCGUAAUaccauugugaaauggggcgc 297
+                                                                                         878********99999988878888888888888888888 PP
 
-                                                    NC
-                                         ,,)))))))) CS
-                                 SAM  99 aAgAUaAgag 108
-                                          AGAU:AGAG
-  BSU13180|500|200|1383319|1385608|- 364 GAGAUGAGAG 373
-                                         ********** PP
+                                                                                                                           v      NC
+                                                                                         ..............................___>>>-->> CS
+                                                                                 SAM  59 ..............................auagggAaGG 68 
+                                                                                                                       ++AG :A GG
+  BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 298 acugcuuuucgcgccgagacugaugucucaUAAGGCACGG 337
+                                                                                         888888888888888888888888888888777******* PP
 
->> BSU13560|500|200|1423240|1424440|-  
+                                                                                                                                  NC
+                                                                                         >>>>,,,,,,,,<<<<_________>>>>,,,)))))))) CS
+                                                                                 SAM  69 UGCcAAuUCCugCcggauauuuuuuccgGaaAgAUaAgag 108
+                                                                                         UGC:AAUUCC+ C:G:+    U U :C:GA AGAU:AGAG
+  BSU13180|500|200|1383319|1385608|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 338 UGCUAAUUCCAUCAGAU----UGUGUCUGAGAGAUGAGAG 373
+                                                                                         ****************8....4567*************** PP
+
+>> BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
  (11) !   5.8e-13   63.1   0.0  cm        1      108 []         258         414 + .. 0.85    no 0.49
 
-                                                                                              v                      NC
-                                         ((((((((,,,,,.,<<<---<<<_.____>>>------>>>.,,<<<-<<<<<<______.............. CS
-                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGA.cuGGCCCuaUGAAgCC.uCgGCAACCcccuauaau.............. 58 
-                                         CUCUUAUC AGAG +GG: GA GGA +UGGCC U UGA :CC + :GCAACC: C+ UAAU              
-  BSU13560|500|200|1423240|1424440|- 258 CUCUUAUCGAGAGuUGGGCGAGGGAuUUGGCCUUUUGACCCCaAAAGCAACCGACCGUAAUuccauugugaaaug 332
-                                         *************88899*********************998679*******99999888878888888888888 PP
+                                                                                                                                  NC
+                                                                                         ((((((((,,,,,.,<<<---<<<_.____>>>------> CS
+                                                                                 SAM   1 cucUuAUcaAGAG.aGGcgGAGGGA.cuGGCCCuaUGAAg 38 
+                                                                                         CUCUUAUC AGAG +GG: GA GGA +UGGCC U UGA :
+  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 258 CUCUUAUCGAGAGuUGGGCGAGGGAuUUGGCCUUUUGACC 297
+                                                                                         *************88899*********************9 PP
 
-                                                                                v                                    NC
-                                         ...................................___>>>-->>>>>>,,,,,,,,.<<<<_________>>>> CS
-                                 SAM  59 ...................................auagggAaGGUGCcAAuUCCug.CcggauauuuuuuccgG 97 
-                                                                            ++AG :A GGUGC:AAUUCC+  C:G:+     U +:C:G
-  BSU13560|500|200|1423240|1424440|- 333 gggcgcauuuuuuucgcgccgagacgcuggucucuUAAGGCACGGUGCUAAUUCCAUuCAGAU----CUGAUCUG 403
-                                         88888888888888888888888888888888888777****************877266654....33445666 PP
+                                                                                                      v                           NC
+                                                                                         >>.,,<<<-<<<<<<______................... CS
+                                                                                 SAM  39 CC.uCgGCAACCcccuauaau................... 58 
+                                                                                         CC + :GCAACC: C+ UAAU                   
+  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 298 CCaAAAGCAACCGACCGUAAUuccauugugaaauggggcg 337
+                                                                                         98679*******9999988887888888888888888888 PP
 
-                                                     NC
-                                         ,,,)))))))) CS
-                                 SAM  98 aaAgAUaAgag 108
-                                         A AGAUAAGAG
-  BSU13560|500|200|1423240|1424440|- 404 AGAGAUAAGAG 414
-                                         689******** PP
+                                                                                                                           v      NC
+                                                                                         ..............................___>>>-->> CS
+                                                                                 SAM  59 ..............................auagggAaGG 68 
+                                                                                                                       ++AG :A GG
+  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 338 cauuuuuuucgcgccgagacgcuggucucuUAAGGCACGG 377
+                                                                                         888888888888888888888888888888777******* PP
+
+                                                                                                                                  NC
+                                                                                         >>>>,,,,,,,,.<<<<_________>>>>,,,))))))) CS
+                                                                                 SAM  69 UGCcAAuUCCug.CcggauauuuuuuccgGaaAgAUaAga 107
+                                                                                         UGC:AAUUCC+  C:G:+     U +:C:GA AGAUAAGA
+  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 378 UGCUAAUUCCAUuCAGAU----CUGAUCUGAGAGAUAAGA 413
+                                                                                         *********877266654....33445666689******* PP
+
+                                                                                           NC
+                                                                                         ) CS
+                                                                                 SAM 108 g 108
+                                                                                         G
+  BSU13560|500|200|1423240|1424440|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 414 G 414
+                                                                                         * PP
 
 
 
@@ -271,6 +369,6 @@ Envelopes passing glocal HMM envelope defn filter:              30  (0.0007878);
 Envelopes passing  local CM  CYK           filter:              13  (0.000288); expected (0.0001)
 Total CM hits reported:                                         11  (0.0002593); includes 0 truncated hit(s)
 
-# CPU time: 1.73u 0.02s 00:00:01.75 Elapsed: 00:00:00.53
+# CPU time: 1.77u 0.04s 00:00:01.81 Elapsed: 00:00:00.75
 //
 [ok]
