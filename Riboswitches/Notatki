@@ -188,28 +188,33 @@ Jak zintegrowac wczytywanie taksonomii?
 ############## 10.06.17 #################
 
 Rzeczy do dodania w pliku wynikowym:
-- Klasa ryboswitcha (bardziej ogolne): Alignment??? Ligandy??? Nazwa i description są w pliku! !!!
 - Nazwa ryboswitcha?
 - Effect?
 - Mechanizm !!!
 
+Klasa ryboswitcha (bardziej ogolne): 
+- Alignment??? 
+- Ligandy??? 
+- Nazwa
+- Description
+
 Gen:
-- nazwa [MOGE TO POBRAC Z GFF]
+- nazwa [MOGE TO POBRAC Z GFF] [done]
 - locus tag [done]
 - pozycja [done]
-- lokacja
+- lokacja [done]
 
 Organism:
-- nazwa naukowa
-- nazwa zwyczajowa
-- accession number
-- taksonomia - id starczy, bo są już potworzone taksony w bazie
+- nazwa naukowa [done]
+- nazwa zwyczajowa ???
+- accession number [chyba done]
+- taksonomia - id starczy, bo są już potworzone taksony w bazie [done]
 
 Aptamer:
 - struktura 2D?
 
 Terminator:
--lokacja i strand brane ze wspolnej kolumny dla genu
+-lokacja i strand brane ze wspolnej kolumny dla genu [done]
 
 # Baza danych #
 
@@ -219,6 +224,53 @@ Dodać accession number do clasy ryboswitcha?
 
 Nazwe genu dodam do exheada w getFasta.
 Nazwe organizmu i taksonomie moge zwracac returnem z getFasta. Lokacje też.
+
+############## 12.06.17 #################
+
+$$$ Wątpliwości dot. szukania ryboprzełączników: $$$
+	- Jak przewidywać mechanizm i efekt?
+	# 
+	- Co robimy z alignmentem klas? Pobieramy z jakiejś bazy? W plikach CM nie ma reprezentacji dot-bracket.
+	# 
+	- Co z sekwencją genomu?
+	# 
+	- Strukutra aptameru i jego sekwencja? Struktura pod polem predicted? Wziąć z plików processing? Jak?
+	# 
+	- Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu.
+	# 
+	- Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp?
+	# 
+	- Problem z niepełną taksonomią
+	# 
+	- Location? Co tam powinno być?
+	# 
+	- Accession number dla genomu?
+	# 
+	- Robimy jakieś aptamer_id?
+	# 
+	- Nazwa dla całego ryboswitcha? Jakieś id?
+	# 
+	- Czy jak szukam aptameru, to powinienem przetłumaczyć sekwencję na RNA (w sensie że uracyl)? A ja tak, to co wtedy z terminatorami?
+	# 
+
+$$$ Wątpliwości dot. bazy danych: $$$
+	-
+	#
+
+$$$ Wątpliwości dot. zawartości pracy licencjackiej: $$$
+	- Czy opisuję etap poszukiwania shine-dalgarno? A jak tak, to czy wtedy też opisuję te wszystkie programy?
+	#
+	- Czy znajdzie się tam etap puszczenia analizy na serwerze wysokoprzepustowym?
+	# 
+	- Czy w opisie narzędzie zmieszczam takie rzeczy jak AWK?
+	# 
+	- Co z Infernalem? To ten program tworzący model kowariancji do poszukiwania ryboswitchy. Zamykamy się na te 4 klasy, czy robimy coś więcej? Opisać Infernala w narzędziach?
+	#
+	- 
+
+$$$ Wątpliwości dot. formalności: $$$
+	-
+	#
 
 '''
 '''_______________________________________________________________________'''

@@ -30,7 +30,7 @@ def createAptamersFilter(result_file):
 	with open(result_file) as result_handle:
 		for line in result_handle:
 			line = line.strip().split('\t')
-			filter_list.append(line[1]) # Append locus tag
+			filter_list.append(line[5]) # Append locus tag
 	return(filter_list)
 
 
@@ -64,7 +64,6 @@ def aptamers(
 	lista = os.listdir('Alignments')
 
 	finalFile = open("./Results/{0}.result".format(genome), "w")
-	finalFile.write("\nxD\n")
 	
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
@@ -77,7 +76,7 @@ def aptamers(
 	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k5,5nr >> ./Genomes/{0}_sorted.gff".format(genome))
 
 	''' Create multiple fasta file of propable aptamer regions '''
-	new_sd2.getFasta(
+	organism_info = new_sd2.getFasta(
 		"-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), 
 		"-fasta", "./Genomes/{0}.fasta".format(genome), 
 		"-before", 500, 
@@ -87,15 +86,19 @@ def aptamers(
 		"-exhead", True, 
 		"-intervals", True)
 
-	#Add all headers
+	# Add general and aptamer headers
 	finalFile.write(
 		"organism_accession_number\t"+
+		"scientific_name\t"+
+		"taxonomy_id\t"+
 		"gene_name\t"+
 		"location\t"+
 		"locus_tag\t"+
 		"gene_start\t"+
 		"gene_end\t"+
 		"strand\t"+
+		"class_name\t"+
+		"class_description\t"+
 		"aptamer?name\t"+
 		"aptamer_start\t"+
 		"aptamer_end\t"+
@@ -103,6 +106,19 @@ def aptamers(
 		"\n")
 	
 	for i in range(0, len(lista)):
+
+		# Read aptamer class info for the result file #
+		class_name = ""
+		class_desc = ""
+		with open("./Alignments/{0}".format(lista[i])) as class_handle:
+			for line in class_handle:
+				line = line.strip()
+				if line.startswith("NAME"):
+					class_name = line.split()[1]
+				elif line.startswith("DESC"):
+					class_desc = " ".join(line.split()[1:])
+					break
+		# End #
 		
 		family_id = lista[i].split('.')[0]
 		os.system("./Programs/cmsearch --toponly -o ./Results/processing_{1}_{2}.txt ./Alignments/{0} ./aptamer_windows.fasta".format(lista[i], genome, family_id))
@@ -161,25 +177,36 @@ def aptamers(
 						end = before_pos - d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
 							
 					switch_name = family_id + '_' + str(start)
-					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['gene']['name'], d[key]['gene']['location'], d[key]['gene']['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
-					print(d[key]['gene']['name'])
+					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
+						genome, organism_info['sc_name'], 
+						organism_info['tax'], 
+						d[key]['gene']['name'], 
+						d[key]['gene']['location'], 
+						d[key]['gene']['locus_tag'], 
+						d[key]['gene']['start'], 
+						d[key]['gene']['end'], 
+						d[key]['gene']['strand'],
+						class_name,
+						class_desc,
+						switch_name, 
+						start, 
+						end, 
+						d[key]['score']))
 
 		processingfile.close()
 
 	finalFile.close()
 	
 	os.system('rm ./Genomes/byStrand.gff')
-	os.system('sort -k3,3n ./Results/{0}.result -o ./Results/{0}.sorted'.format(genome))
-	os.system('mv ./Results/{0}.sorted ./Results/{0}.result'.format(genome))
-	#os.system("rm ./Results/processing*.txt") # nie usuwac tych plikow
+	#os.system("rm ./Results/processing*.txt")
 	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
+	# Posortuj plik wynikowy
+	os.system('head -n 1 ./Results/{0}.result > ./Results/{0}_temp.result'.format(genome))
+	os.system('tail -n +2 ./Results/{0}.result | sort -k7,7n >> ./Results/{0}_temp.result'.format(genome))
+	os.system('mv ./Results/{0}_temp.result ./Results/{0}.result'.format(genome))
+
 	#makeAptamersBed(genome)
-	### DEBUG LINE ###
-	print("DEBUG")
-	input()
-	return
-	######
 
 
 def terminators(genome):
@@ -187,6 +214,7 @@ def terminators(genome):
 	aptamer_list = createAptamersFilter("./Results/{0}.result".format(genome))
 	filterWindows(aptamer_list, "aptamer_windows.fasta", "terminator_windows.fasta")
 
+	# Generowanie pliku .coords dla Transterma # 
 	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' terminator_windows.fasta > termin_crd.coords")
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
 
@@ -243,11 +271,10 @@ def terminators(genome):
 				continue
 
 			line_list = line.strip().split('\t')
-			locus_tag = line_list[1]
-			strand = line_list[4]
-			aptamer_start = int(line_list[6])
-			aptamer_end = int(line_list[7])
-
+			locus_tag = line_list[5]
+			strand = line_list[8]
+			aptamer_start = int(line_list[12])
+			aptamer_end = int(line_list[13])
 			terms_copy = list(d[locus_tag]['terminators'])
 
 			for id1 in range(0,len(terms_copy)):
@@ -317,8 +344,6 @@ def terminators(genome):
 										d[locus_tag]['terminators'].remove(t1)
 						except ValueError:
 							continue
-			#print(d[locus_tag])
-			#print("\n\n\n")
 
 		# Zapis do pliku
 		firstLine = True
@@ -332,7 +357,7 @@ def terminators(genome):
 					line += "\t" + "terminator_start" + "\t" + "terminator_end" + "\t" + "terminator?score" + "\n"
 				else:
 					line_list = line.strip().split('\t')
-					locus_tag = line_list[1]
+					locus_tag = line_list[5]
 
 					if d[locus_tag]['terminators'] != []: # Jesli da tego aptameru znaleziono terminator
 						line += "\t" + str(d[locus_tag]['terminators'][0]['start']) + "\t" + str(d[locus_tag]['terminators'][0]['end']) + "\t" + str(d[locus_tag]['terminators'][0]['hp']) + '\n'
@@ -402,12 +427,3 @@ print('Done ' + str(strftime("%a, %d %b %Y %H:%M:%S +0000", localtime())))
 b = datetime.now()
 c = b - a
 print("{} seconds {} microseconds".format(c.seconds, c.microseconds % c.seconds))
-
-
-'''
-Tabela: aptamery: scory, pozeycje, sekwencje aptamrow
-promotory: pozycje, scory,
-terminatory: pozycje, scory
-
-DRS0000001
-'''

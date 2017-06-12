@@ -141,7 +141,6 @@ def getFasta(*arg):
 	previous_gene = None
 
 	### CHECK CONDITIONS ###
-
 	if gff_path != None:
 		handle = open(gff_path)
 	if fasta_path != None:
@@ -166,11 +165,17 @@ def getFasta(*arg):
 	h_fasta.close()
 	counter = 0
 
+	# Variables for organism information
+	scientificName = ""
+	taxonomy = ""
+
 	firstLine = True
 	for record in GFF.parse(handle):
 		for feature in record.features:
 			if firstLine:
-				location = feature.qualifiers['genome'][0]
+				location = feature.qualifiers['genome'][0] # Na pewno to to?
+				scientificName = feature.qualifiers['sub-species'][0] # Nie zostawiamy tego raczej tak?
+				taxonomy = feature.qualifiers['Dbxref'][0].split(":")[1]
 				firstLine = False
 
 			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == bioType or bioType == None):
@@ -273,3 +278,8 @@ def getFasta(*arg):
 					printBed(sequence, start, end, seqSymbol, beforeStart, afterStart, feature.qualifiers['locus_tag'][0], feature.qualifiers['gene_biotype'][0])
 	handle.close()
 	out_fasta.close()
+
+	return {
+		'sc_name': scientificName,
+		'tax': taxonomy,
+	}

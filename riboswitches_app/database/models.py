@@ -14,7 +14,7 @@ class Record(models.Model):
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
-	# Sekwencja tutaj?
+	# Sekwencja tutaj? TAK
 	
 	name = models.CharField('nazwa', max_length = 20)
 	#riboswitch_id = models.CharField('id', max_length = 20, primary_key = True)
@@ -72,7 +72,7 @@ class Article(models.Model):
 
 class Structure3D(models.Model):
 	pdbid = models.CharField(max_length = 10, primary_key = True) # Protein Data Bank ID
-	ribo_family = models.ForeignKey('RiboFamily')
+	ribo_family = models.ForeignKey('RiboFamily') # A nie klasa?
 
 	def __str__(self):
 		return 'Str3D: {}'.format(self.pdbid)
@@ -120,7 +120,8 @@ class Gene(models.Model):
 class Organism(models.Model):
 	scientific_name = models.CharField('nazwa_naukowa', max_length = 250, primary_key = True)
 	common_name = models.CharField('nazwa_zwyczajowa', max_length = 250)
-	accession_number = models.CharField('numer_dostepu', max_length = 15)
+	accession_number = models.CharField('numer_dostepu', max_length = 15) # ID build jako nazwa genomu
+	# accession do linkowania dodatkowo
 	taxonomy = models.ForeignKey('Taxonomy', null = True)
 
 	def __str__(self):
@@ -161,7 +162,7 @@ class Ligand(models.Model):
 class Position(models.Model):
 	start = models.IntegerField(default = 0)
 	end = models.IntegerField(default = 0)
-	location = models.TextField('opis')
+	location = models.TextField('opis') # identyfikator genomu
 	STRAND_CHOICES = (
 		('+', 'LEADING STRAND'),
 		('.', 'UNKNOWN'),
