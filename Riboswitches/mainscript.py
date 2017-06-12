@@ -50,10 +50,6 @@ def filterWindows(filter_list, window_file, output_file = ""):
 				output_handle.write(line)
 
 
-def addMissingInformation(result_handle):
-	pass
-
-
 def intervalIntersect(a1, b1, a2, b2):
 	return (a2 < b1) and (b2 > a1)
 
@@ -68,6 +64,7 @@ def aptamers(
 	lista = os.listdir('Alignments')
 
 	finalFile = open("./Results/{0}.result".format(genome), "w")
+	finalFile.write("\nxD\n")
 	
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
@@ -93,6 +90,8 @@ def aptamers(
 	#Add all headers
 	finalFile.write(
 		"organism_accession_number\t"+
+		"gene_name\t"+
+		"location\t"+
 		"locus_tag\t"+
 		"gene_start\t"+
 		"gene_end\t"+
@@ -102,8 +101,6 @@ def aptamers(
 		"aptamer_end\t"+
 		"aptamer?score\t"+
 		"\n")
-
-	addMissingInformation(finalFile)
 	
 	for i in range(0, len(lista)):
 		
@@ -143,6 +140,8 @@ def aptamers(
 							'start': 		int(temp[5].split('|')[3]),
 							'end': 			int(temp[5].split('|')[4]),
 							'strand': 		temp[5].split('|')[5],
+							'name':			temp[5].split('|')[6],
+							'location':		temp[5].split('|')[7],
 						}
 					}
 
@@ -162,8 +161,9 @@ def aptamers(
 						end = before_pos - d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
 							
 					switch_name = family_id + '_' + str(start)
-					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['gene']['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
-					
+					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(genome, d[key]['gene']['name'], d[key]['gene']['location'], d[key]['gene']['locus_tag'], d[key]['gene']['start'], d[key]['gene']['end'], d[key]['gene']['strand'], switch_name, start, end, d[key]['score']))
+					print(d[key]['gene']['name'])
+
 		processingfile.close()
 
 	finalFile.close()
@@ -175,6 +175,11 @@ def aptamers(
 	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
 	#makeAptamersBed(genome)
+	### DEBUG LINE ###
+	print("DEBUG")
+	input()
+	return
+	######
 
 
 def terminators(genome):
@@ -342,11 +347,6 @@ def terminators(genome):
 	os.system('rm rubbish.txt')
 	os.system('rm termin_crd.coords')
 	os.system('rm transterm_output.tt')
-
-	### DEBUG LINE ###
-	print("DEBUG")
-	return
-	######
 
 
 def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):

@@ -14,173 +14,131 @@ Query:       Purine  [CLEN=102]
 Accession:   RF00167
 Description: Purine riboswitch
 Hit scores:
- rank     E-value  score  bias  sequence                                                                            start    end   mdl trunc   gc  description
- ----   --------- ------ -----  ---------------------------------------------------------------------------------- ------ ------   --- ----- ----  -----------
-  (1) !   4.1e-17   87.2   0.0  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      228    329 +  cm    no 0.42  -
-  (2) !     1e-16   85.6   0.0  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      264    365 +  cm    no 0.38  -
-  (3) !   1.3e-16   85.2   0.5  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    272    373 +  cm    no 0.28  -
-  (4) !   9.1e-16   81.7   0.0  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB    312    411 +  cm    no 0.46  -
-  (5) !     9e-14   73.6   0.1  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      346    445 +  cm    no 0.30  -
+ rank     E-value  score  bias  sequence                                            start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  -------------------------------------------------- ------ ------   --- ----- ----  -----------
+  (1) !   4.1e-17   87.2   0.0  BSU06420|470|200|698611|699100|+|purE|chromosome      228    329 +  cm    no 0.42  -
+  (2) !     1e-16   85.6   0.0  BSU06370|500|200|694661|695984|+|pbuG|chromosome      264    365 +  cm    no 0.38  -
+  (3) !   1.3e-16   85.2   0.5  BSU39020|500|200|4005751|4006945|+|yxjA|chromosome    272    373 +  cm    no 0.28  -
+  (4) !   9.1e-16   81.7   0.0  BSU22070|500|200|2319439|2320024|-|xpt|chromosome     312    411 +  cm    no 0.46  -
+  (5) !     9e-14   73.6   0.1  BSU05800|500|200|625124|626291|-|pbuE|chromosome      346    445 +  cm    no 0.30  -
  ------ inclusion threshold ------
-  (6) ?      0.31   22.8   0.0  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB      519    612 +  cm    no 0.43  -
+  (6) ?      0.31   22.8   0.0  BSU06700|500|200|731953|732823|-|yerO|chromosome      519    612 +  cm    no 0.43  -
 
 
 Hit alignments:
->> BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU06420|470|200|698611|699100|+|purE|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (1) !   4.1e-17   87.2   0.0  cm        1      102 []         228         329 + .. 1.00    no 0.42
 
-                                                                                                        v vv        vv          NC
-                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                        A+ AA++ AAAA A   C  C:UAUAAU  :GGGAAUAU
-  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 228 CAUGAAAUCAAAACACGACCUCAUAUAAUCUUGGGAAUAU 267
-                                                                                       **************************************** PP
+                                                                        v vv        vv               vv              NC
+                                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<< CS
+                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCagg 61 
+                                                        A+ AA++ AAAA A   C  C:UAUAAU  :GGGAAUAUGGCCC:  AGUUUCUACC:GG
+  BSU06420|470|200|698611|699100|+|purE|chromosome 228 CAUGAAAUCAAAACACGACCUCAUAUAAUCUUGGGAAUAUGGCCCAUAAGUUUCUACCCGG 288
+                                                       ************************************************************* PP
 
-                                                                                             vv                                 NC
-                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                       GGCCC:  AGUUUCUACC:GGCA:CCGUAAA:UGCC:GAC
-  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 268 GGCCCAUAAGUUUCUACCCGGCAACCGUAAAUUGCCGGAC 307
-                                                                                       **************************************** PP
+                                                                              vv v               NC
+                                                       <<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                            Purine  62 cagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                       CA:CCGUAAA:UGCC:GACUA:G  G AAA U +U  +U++
+  BSU06420|470|200|698611|699100|+|purE|chromosome 289 CAACCGUAAAUUGCCGGACUAUGCAGGAAAGUGAUCGAUAA 329
+                                                       ***************************************** PP
 
-                                                                                           vv v               NC
-                                                                                       )))))))):::::::::::::: CS
-                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                       UA:G  G AAA U +U  +U++
-  BSU06420|470|200|698611|699100|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 308 UAUGCAGGAAAGUGAUCGAUAA 329
-                                                                                       ********************** PP
-
->> BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU06370|500|200|694661|695984|+|pbuG|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (2) !     1e-16   85.6   0.0  cm        1      102 []         264         365 + .. 1.00    no 0.38
 
-                                                                                                        vv v        v           NC
-                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                       A AAA+ AAA+AA AU   : CGUAUAAU :CG:GAAUAU
-  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 264 AGAAAUCAAAUAAGAUGAAUUCGUAUAAUCGCGGGAAUAU 303
-                                                                                       **************************************** PP
+                                                                        vv v        v                 v              NC
+                                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<< CS
+                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCagg 61 
+                                                       A AAA+ AAA+AA AU   : CGUAUAAU :CG:GAAUAUGGC:CG: AGU UCUACCA:G
+  BSU06370|500|200|694661|695984|+|pbuG|chromosome 264 AGAAAUCAAAUAAGAUGAAUUCGUAUAAUCGCGGGAAUAUGGCUCGCAAGUCUCUACCAAG 324
+                                                       ************************************************************* PP
 
-                                                                                              v                                 NC
-                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                       GGC:CG: AGU UCUACCA:GC::CCGUAAA::GC:UGAC
-  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 304 GGCUCGCAAGUCUCUACCAAGCUACCGUAAAUGGCUUGAC 343
-                                                                                       **************************************** PP
+                                                                              v vv               NC
+                                                       <<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                            Purine  62 cagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                       C::CCGUAAA::GC:UGACUACG :   A+UU UUU  UUU
+  BSU06370|500|200|694661|695984|+|pbuG|chromosome 325 CUACCGUAAAUGGCUUGACUACGUAAACAUUUCUUUCGUUU 365
+                                                       ***************************************** PP
 
-                                                                                           v vv               NC
-                                                                                       )))))))):::::::::::::: CS
-                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                       UACG :   A+UU UUU  UUU
-  BSU06370|500|200|694661|695984|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 344 UACGUAAACAUUUCUUUCGUUU 365
-                                                                                       ********************** PP
-
->> BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU39020|500|200|4005751|4006945|+|yxjA|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (3) !   1.3e-16   85.2   0.5  cm        1      102 []         272         373 + .. 1.00    no 0.28
 
-                                                                                                                                  NC
-                                                                                         :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                          A+ +++ AAAAA A +::CU:GUAUA+ ::C:G:AAUAU
-  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 272 CAUCUUAGAAAAAGACAUUCUUGUAUAUGAUCAGUAAUAU 311
-                                                                                         **************************************** PP
+                                                                                                                     NC
+                                                         :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<< CS
+                                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCa 59 
+                                                          A+ +++ AAAAA A +::CU:GUAUA+ ::C:G:AAUAUGG:C:G:: GUUUCUACC:
+  BSU39020|500|200|4005751|4006945|+|yxjA|chromosome 272 CAUCUUAGAAAAAGACAUUCUUGUAUAUGAUCAGUAAUAUGGUCUGAUUGUUUCUACCU 330
+                                                         *********************************************************** PP
 
-                                                                                                               vv       vv        NC
-                                                                                         __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                              Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                         GG:C:G:: GUUUCUACC::G:  CCGUAAA  :C::GAC
-  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 312 GGUCUGAUUGUUUCUACCUAGUAACCGUAAAAAACUAGAC 351
-                                                                                         **************************************** PP
+                                                            vv       vv                              NC
+                                                         <<<<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                              Purine  60 ggcagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                         :G:  CCGUAAA  :C::GACUAC:AG::A +UU ++U+++UU
+  BSU39020|500|200|4005751|4006945|+|yxjA|chromosome 331 AGUAACCGUAAAAAACUAGACUACAAGAAAGUUUGAAUAAAUU 373
+                                                         ******************************************* PP
 
-                                                                                                                NC
-                                                                                         )))))))):::::::::::::: CS
-                                                                              Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                         UAC:AG::A +UU ++U+++UU
-  BSU39020|500|200|4005751|4006945|+|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 352 UACAAGAAAGUUUGAAUAAAUU 373
-                                                                                         ********************** PP
-
->> BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU22070|500|200|2319439|2320024|-|xpt|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (4) !   9.1e-16   81.7   0.0  cm        1      102 []         312         411 + .. 1.00    no 0.46
 
-                                                                                                                      v           NC
-                                                                                         :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                              Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                         ++A AAUA+AA+A  ++C:C:C:UAUAAU :CG:G AUAU
-  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 312 UUACAAUAUAAUAGGAACACUCAUAUAAUCGCGUGGAUAU 351
-                                                                                         **************************************** PP
+                                                                                     v                 v             NC
+                                                        :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<< CS
+                                             Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCag 60 
+                                                        ++A AAUA+AA+A  ++C:C:C:UAUAAU :CG:G AUAUGGC:CG: AGUUUCUACC:G
+  BSU22070|500|200|2319439|2320024|-|xpt|chromosome 312 UUACAAUAUAAUAGGAACACUCAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGG 371
+                                                        ************************************************************ PP
 
-                                                                                                v                                 NC
-                                                                                         __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                              Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                         GGC:CG: AGUUUCUACC:G:CA CCGUAAA UG:C:GAC
-  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 352 GGCACGCAAGUUUCUACCGGGCA-CCGUAAA-UGUCCGAC 389
-                                                                                         ***********************.*******.******** PP
+                                                                                                   NC
+                                                        <<<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                             Purine  61 gcagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                        :CA CCGUAAA UG:C:GACUA:G:G:GA  ++U  ++    
+  BSU22070|500|200|2319439|2320024|-|xpt|chromosome 372 GCA-CCGUAAA-UGUCCGACUAUGGGUGAGCAAUGGAACCGC 411
+                                                        ***.*******.****************************** PP
 
-                                                                                                                NC
-                                                                                         )))))))):::::::::::::: CS
-                                                                              Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                         UA:G:G:GA  ++U  ++    
-  BSU22070|500|200|2319439|2320024|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 390 UAUGGGUGAGCAAUGGAACCGC 411
-                                                                                         ********************** PP
-
->> BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU05800|500|200|625124|626291|-|pbuE|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (5) !     9e-14   73.6   0.1  cm        1      102 []         346         445 + .. 1.00    no 0.30
 
-                                                                                                        vvv                     NC
-                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                       AA++AA++A  +A+++U   U:GUAUAA:C:C:::AAUAU
-  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 346 AAUUAAAUAGCUAUUAUCACUUGUAUAACCUCAAUAAUAU 385
-                                                                                       **************************************** PP
+                                                                        vvv                                          NC
+                                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<< CS
+                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCagg 61 
+                                                       AA++AA++A  +A+++U   U:GUAUAA:C:C:::AAUAUGG:::G:G:GU UCUACCAGG
+  BSU05800|500|200|625124|626291|-|pbuE|chromosome 346 AAUUAAAUAGCUAUUAUCACUUGUAUAACCUCAAUAAUAUGGUUUGAGGGUGUCUACCAGG 406
+                                                       ************************************************************* PP
 
-                                                                                                             v         v        NC
-                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                       GG:::G:G:GU UCUACCAGG:  CCGUAAA  :CCUGA 
-  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 386 GGUUUGAGGGUGUCUACCAGGAA-CCGUAAA-AUCCUGAU 423
-                                                                                       ***********************.*******.******** PP
+                                                        v         v            vvv               NC
+                                                       <<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                            Purine  62 cagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                       :  CCGUAAA  :CCUGA UAC:A    + UUU+U + +UU
+  BSU05800|500|200|625124|626291|-|pbuE|chromosome 407 AA-CCGUAAA-AUCCUGAUUACAAAAUUUGUUUAUGACAUU 445
+                                                       **.*******.****************************** PP
 
-                                                                                            vvv               NC
-                                                                                       )))))))):::::::::::::: CS
-                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                       UAC:A    + UUU+U + +UU
-  BSU05800|500|200|625124|626291|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 424 UACAAAAUUUGUUUAUGACAUU 445
-                                                                                       ********************** PP
-
->> BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB  
+>> BSU06700|500|200|731953|732823|-|yerO|chromosome  
  rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
  ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
   (6) ?      0.31   22.8   0.0  cm        1      102 []         519         612 + .. 0.97    no 0.43
 
-                                                                                                                                NC
-                                                                                       :::::::::::::::::((((((((,,,<<<<<<<_____ CS
-                                                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAU 40 
-                                                                                       A AA+ ++AAAAA  + C::UC: :UA+ ::CG::AA A 
-  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 519 AGAAUCAUAAAAACCAGCAUUCGUUUAUUUGCGAAAAAAG 558
-                                                                                       **************************************** PP
+                                                                                                                 v   NC
+                                                       :::::::::::::::::((((((((,,,<<<<<<<_______>>>>>>>,,,,,,,,<<<< CS
+                                            Purine   1 aaaaaauaaaaaaaauucccuCgUAUAAucccgggAAUAUGGcccgggaGUUUCUACCagg 61 
+                                                       A AA+ ++AAAAA  + C::UC: :UA+ ::CG::AA A G ::CG::     CUAC: :G
+  BSU06700|500|200|731953|732823|-|yerO|chromosome 519 AGAAUCAUAAAAACCAGCAUUCGUUUAUUUGCGAAAAAAGGAUUCGCAG----CUACGACG 575
+                                                       *****************************************9*******....9***9999 PP
 
-                                                                                                         v                 v    NC
-                                                                                       __>>>>>>>,,,,,,,,<<<<<<<_______>>>>>>>,, CS
-                                                                            Purine  41 GGcccgggaGUUUCUACCaggcagCCGUAAAcugccuGAC 80 
-                                                                                       G ::CG::     CUAC: :G:: CC   AA ::C: :  
-  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 559 GAUUCGCAG----CUACGACGAU-CCAAGAA-AUCGCC-- 590
-                                                                                       *9*******....9***999999.*******.999966.. PP
-
-                                                                                                              NC
-                                                                                       )))))))):::::::::::::: CS
-                                                                            Purine  81 UAcGagggaaauuuuuuuuuuu 102
-                                                                                       : :GA::G    +UUU  ++  
-  BSU06700|500|200|731953|732823|-|AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB 591 AGUGAAUGCGGCAUUUCGAAGG 612
-                                                                                       88******************** PP
+                                                                      v                          NC
+                                                       <<<_______>>>>>>>,,)))))))):::::::::::::: CS
+                                            Purine  62 cagCCGUAAAcugccuGACUAcGagggaaauuuuuuuuuuu 102
+                                                       :: CC   AA ::C: :  : :GA::G    +UUU  ++  
+  BSU06700|500|200|731953|732823|-|yerO|chromosome 576 AU-CCAAGAA-AUCGCC--AGUGAAUGCGGCAUUUCGAAGG 612
+                                                       99.*******.999966..88******************** PP
 
 
 
@@ -200,6 +158,6 @@ Envelopes passing glocal HMM envelope defn filter:              54  (0.001512); 
 Envelopes passing  local CM  CYK           filter:              10  (0.0002622); expected (0.0001)
 Total CM hits reported:                                          6  (0.000156); includes 0 truncated hit(s)
 
-# CPU time: 2.22u 0.02s 00:00:02.24 Elapsed: 00:00:00.87
+# CPU time: 1.04u 0.01s 00:00:01.05 Elapsed: 00:00:00.32
 //
 [ok]

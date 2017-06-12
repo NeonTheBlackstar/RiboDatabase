@@ -81,12 +81,12 @@ def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl += '\t'+str(x)+'\t'+str(y)+'\t'+strand
 	return shdl
 
-def printToFasta(handle, seq, x, y, strand, id, additional, exhead):
+def printToFasta(handle, seq, x, y, strand, id, additional, exhead, geneName = "", location = ""):
 	if(additional != ''):
 		additional = '|' + additional
 
 	if exhead == True:
-		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'|A'+'\n')
+		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'|'+geneName+'|'+location+'\n')
 	else:
 		handle.write('>'+id+additional+'\n')
 		
@@ -166,8 +166,13 @@ def getFasta(*arg):
 	h_fasta.close()
 	counter = 0
 
+	firstLine = True
 	for record in GFF.parse(handle):
 		for feature in record.features:
+			if firstLine:
+				location = feature.qualifiers['genome'][0]
+				firstLine = False
+
 			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == bioType or bioType == None):
 				### Reset modified values ###
 				beforeStart = getParamValue('-before',arg)
@@ -175,9 +180,11 @@ def getFasta(*arg):
 				additional = ''
 
 				# Start and end values are related to GFF notation, it does not represent the real direction of a strand.
+				# Gene information #
 				start = feature.location.start # Automatically substract 1, so it matches ID array notation
 				end = feature.location.end
 				seqSymbol = '+' if feature.strand == 1 else '-'
+				geneName = feature.qualifiers['Name'][0]
 
 				preBefore = beforeStart
 
@@ -256,7 +263,7 @@ def getFasta(*arg):
 					additional += feature.qualifiers['gene'][0]
 
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
-				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead)
+				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead, geneName, location)
 				counter += 1
 
 				### PREVIOUS GENE ###
