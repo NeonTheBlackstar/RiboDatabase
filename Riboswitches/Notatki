@@ -188,10 +188,10 @@ Jak zintegrowac wczytywanie taksonomii?
 ############## 10.06.17 #################
 
 Rzeczy do dodania w pliku wynikowym:
-- Klasa ryboswitcha (bardziej ogolne): Alignment??? Ligandy??? Nazwa i description są w pliku!
+- Klasa ryboswitcha (bardziej ogolne): Alignment??? Ligandy??? Nazwa i description są w pliku! !!!
 - Nazwa ryboswitcha?
 - Effect?
-- Mechanizm
+- Mechanizm !!!
 
 Gen:
 - nazwa [MOGE TO POBRAC Z GFF]
