@@ -1,24 +1,52 @@
 {% extends 'database/base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block _title %}Search{% endblock %}
-
 
 {% block content %}
 
 <div class="jumbotron">
   <div class="container" id="search-field">
-    <div class="col-xs-12">
-    	<form method="get" action="/search/">
-      	<div class="input-group input-group-lg" id="test">
-        	<input type="text" class="typeahead form-control" placeholder="Search for..." autocomplete="off" />
-        	<span class="input-group-btn">
-          	<input type="submit" class="btn btn-default" value="Go!">
-        	</span>
-      	</div>
-    	</form>
-  	</div>
-	</div>
+    <div class="row">
+      <div class="col-xs-12">
+        <form>
+          <div class="input-group input-group-lg" id="test">
+            <input type="text" class="typeahead form-control" placeholder="Search for..." autocomplete="off" name="term"/>
+            <span class="input-group-btn">
+            <input type="submit" class="btn btn-default" value="Go!" id="search_records">
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" id="records">
+      <!--{% if records %}
+        <div class="panel panel-default" id="panel-search-results">
+          
+            
+              {% for record in records %}
+              
+                <a href="{% url 'search:record' record.name %}">
+                <div class="panel-body">
+                  {{ record.name }}
+                </div>
+                </a>
+              
+              {% endfor %}
+            
+          
+        </div>
+        {% endif %}-->
+      </div>
+    </div>
+  </div>
 </div>
+
+{% endblock %}
+
+{% block js_plugins %}
+
+<script src="{% static "database/js/search_ajax.js" %}"></script>
 
 {% endblock %}

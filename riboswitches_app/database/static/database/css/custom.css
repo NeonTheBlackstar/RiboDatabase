@@ -166,6 +166,20 @@ main.fade-out {
     padding-bottom: 50px;
 }
 
+#panel-search-results {
+    margin: 0 !important;
+    margin-top: 5% !important;
+}
+
+#panel-search-results .panel-body:hover {
+    background-color: rgb(179, 214, 185);
+}
+
+#panel-search-results a {
+    text-decoration: none;
+    color: #333;
+}
+
 #wrapper {
     max-width: 100%;
     min-height: 100%;

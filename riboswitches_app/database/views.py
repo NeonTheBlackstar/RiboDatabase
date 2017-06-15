@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+import json
 
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
 import json
@@ -8,9 +10,29 @@ def index(request):
     context = {'breadcrumbs': []}
     return render(request, 'database/index.html', context)
 
-def searcher(request):
+# def searcher(request):
+
+#     return render(request, 'database/searcher.html')
+
+def searcher_ajax(request):
 
     return render(request, 'database/searcher.html')
+
+def get_records_by_ajax(request):
+
+    l = []
+    term = request.GET['term']
+
+    records = Record.objects.filter(name__icontains=term)
+    
+    for r in records:
+        l.append(r.name)
+
+    context = {
+        'records': l,
+    }
+
+    return JsonResponse(context)
 
 def class_family_browser(request):
 
@@ -156,21 +178,19 @@ def organism_browser(request):
         "plugins" : [ "types", ] 
     }
 
-    ddumps = json.dumps(d)
-    temp = {}
     last = []
-    
-    for i in d['core']['data']:
-        pass
 
-    print(temp)
+    for i in range(0, len(d['core']['data'])):
+        if d['core']['data'][i]['parent'] != '#':
+            try:
+                if d['core']['data'][i+1]['parent'] == 'Bacteria':
+                    last.append(d['core']['data'][i]['text'])
+            except IndexError:
+                last.append(d['core']['data'][-1]['text'])
 
-    for i in range(0, len(temp)-1):
-        if temp[i] != '#':
-            if temp[i+1] == "Bacteria":
-                last.append(temp[i])
+    print(last)
 
-    last = d['core']['data'][-1]['id']
+    ddumps = json.dumps(d)
 
     context = {
         'tax_list_tree': tax_list_tree,

@@ -62,10 +62,10 @@ $(document).ready(function() {
     );
 
     $('#jstree-organism').on('click', function(){
-    	console.log($(this).attr('aria-activedescendant'));
-    	if($(this).attr('aria-activedescendant') === '{{ last }}') {
-    		alert('1');
-
+    	
+    	if({{ last|safe }}.includes($(this).attr('aria-activedescendant'))) {
+    		var test = $(this).attr('aria-activedescendant');
+    		console.log($(this)[0])
     	}
     });
     
