@@ -5,41 +5,56 @@
 
 {% block content %}
 
-<div class="jumbotron">
-  <div class="container" id="search-field">
-    <div class="row">
-      <div class="col-xs-12">
-        <form>
-          <div class="input-group input-group-lg" id="test">
-            <input type="text" class="typeahead form-control" placeholder="Search for..." autocomplete="off" name="term"/>
-            <span class="input-group-btn">
-            <input type="submit" class="btn btn-default" value="Go!" id="search_records">
-            </span>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12" id="records">
-      <!--{% if records %}
-        <div class="panel panel-default" id="panel-search-results">
-          
-            
-              {% for record in records %}
-              
-                <a href="{% url 'search:record' record.name %}">
-                <div class="panel-body">
-                  {{ record.name }}
-                </div>
-                </a>
-              
-              {% endfor %}
-            
-          
+<div class="container">
+  <!-- Nav helper -->
+  <div class="bs-example">
+    <ul class="breadcrumb">
+      <li>
+        <a href="{% url 'database:index' %}">
+          Home
+        </a>
+      </li>
+      <li class="active">
+        Search
+      </li>
+    </ul>
+  </div>
+
+  <div class="jumbotron" id="search-field-searcher">
+   
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="name-form">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="basic-addon3">Organism</span>
+              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_all"/>
+              <span class="input-group-btn">
+              <input type="submit" class="btn btn-default" value="Go!">
+              </span>
+            </div>
+          </form>
         </div>
-        {% endif %}-->
       </div>
-    </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="ligand-form">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="basic-addon3" style="width:112px;">Ligand</span>
+              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_ligand"/>
+              <span class="input-group-btn">
+              <input type="submit" class="btn btn-default" value="Go!" id="search_records">
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12" id="records">
+
+        </div>
+      </div>   
   </div>
 </div>
 

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-import json
+
+from django.db.models import CharField
+from django.db.models import  Q
 
 from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
 import json
@@ -9,10 +11,6 @@ def index(request):
 
     context = {'breadcrumbs': []}
     return render(request, 'database/index.html', context)
-
-# def searcher(request):
-
-#     return render(request, 'database/searcher.html')
 
 def searcher_ajax(request):
 
@@ -23,10 +21,13 @@ def get_records_by_ajax(request):
     l = []
     term = request.GET['term']
 
-    records = Record.objects.filter(name__icontains=term)
-    
-    for r in records:
-        l.append(r.name)
+    ligands = Ligand.objects.filter(name__icontains=term)
+
+    for e in Record.objects.all():
+        if e.family != None:
+            for i in ligands:
+                if i.name in str(e.family.ribo_class.ligands.all()):
+                    l.append(e.name)
 
     context = {
         'records': l,

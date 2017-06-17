@@ -49,6 +49,13 @@ main.fade-out {
     background-color: #e8eff7 !important;
 }
 
+.loading {
+    background: url('../images/loader.gif') no-repeat center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
 .ligand-img {
     box-shadow: 0;
     transition: box-shadow 0.4s;
@@ -152,18 +159,15 @@ main.fade-out {
     margin-right: 10px;
 }
 
-#quicksearch {
-    height: 46px;
-    font-size: 20px;
+#no-results-msg {
+    margin-top: 1%;
+    text-align: center;
+    color: #333;
 }
 
-#record-panel {
+#panel-index {
     margin-right: 0;
-}
-
-#search-field {
-    padding-top: 80px;
-    padding-bottom: 50px;
+    margin-bottom: 0;
 }
 
 #panel-search-results {
@@ -178,6 +182,32 @@ main.fade-out {
 #panel-search-results a {
     text-decoration: none;
     color: #333;
+}
+
+#quicksearch {
+    height: 46px;
+    font-size: 20px;
+}
+
+#record-panel {
+    margin-right: 0;
+}
+
+#records {
+    min-height: 100px;
+    display: none;
+}
+
+#search-field-searcher {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#search-field-index {
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
 #wrapper {
