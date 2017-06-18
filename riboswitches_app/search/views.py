@@ -14,20 +14,20 @@ def riboswitches(request):
     limit = request.GET['limit']
     l = []
 
-    for r in Record.objects.filter(name__contains=term):
+    for r in Record.objects.filter(name__icontains=term):
         l.append({'name':r.name, 'url':"/search/record/{}".format(r.name)},)
 
     return JsonResponse(l, safe=False)
 
 
 def ligands(request):
-    term = request.GET['term']
+    term = request.GET['term'] # ligand name
     limit = request.GET['limit']
     lig = []
 
     for l in Ligand.objects.filter(name__contains=term):
-        lig.append({'name':l.name, 'url':'http://www.google.com'},)
-
+        lig.append({'name':l.name, 'url':"/browser/ligand/{}/".format(l.name)},)
+    
     return JsonResponse(lig, safe=False)
 
 def record(request, riboswitch_name):

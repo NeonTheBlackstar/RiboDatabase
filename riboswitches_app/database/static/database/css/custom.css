@@ -138,6 +138,7 @@ main.fade-out {
     color: white;
 }
 
+
 #ligands-filter {
     position: relative;
     margin: 0 0 40px 0;
@@ -208,6 +209,11 @@ main.fade-out {
 #search-field-index {
     padding-top: 80px;
     padding-bottom: 50px;
+}
+
+#btn-row {
+    margin-top: 20px;
+    text-align: center !important;
 }
 
 #wrapper {
