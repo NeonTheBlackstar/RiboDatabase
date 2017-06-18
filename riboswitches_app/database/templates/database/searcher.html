@@ -3,6 +3,11 @@
 
 {% block _title %}Search{% endblock %}
 
+{% block css_plugins %}
+<!-- dataTables for Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static "database/plugins/datatables/styles/datatables.bootstrap.min.css" %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
@@ -20,44 +25,44 @@
     </ul>
   </div>
 
-  <div class="jumbotron" id="search-field-searcher">
-   
-      <div class="row">
-        <div class="col-xs-12">
-          <form id="name-form">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="basic-addon3">Organism</span>
-              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_all"/>
-            </div>
-          </form>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-xs-12">
-          <form id="ligand-form">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="basic-addon3">Ligand</span>
-              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_ligand"/>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row" id="btn-row">
-        <button type="submit" class="btn btn-default btn-lg" id="search_records">Go!</button>
-      </div>
-      <div class="row">
-        <div class="col-xs-12" id="records">
+  <!-- <div id="table_wrapper" class="dataTables wrapper form-inline dt-bootstrap"> -->
+    <div class="col-xs-12">
+      <table id="search-table" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Riboswitch</th>
+            <th>Ligand</th>
+            <th>Organism</th>
+          </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Ligand</th>
+                <th>Organism</th>
+            </tr>
+        </tfoot>
+        <tbody>
+        {% for rr in recordList %}
+          <tr role="row">
+            <td><a href="{% url 'search:record' rr.name %}">{{ rr.name }}</a></td>
+            <td><a href="{% url 'search:record' rr.ligand %}">{{ rr.ligand }}</a></td>
+            <td><a href="{% url 'search:record' rr.organism %}">{{ rr.organism }}</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
-        </div>
-      </div>   
-  </div>
+  <!-- </div> -->
+
+
 </div>
 
 {% endblock %}
 
 {% block js_plugins %}
-
-<script src="{% static "database/js/search_ajax.js" %}"></script>
+<script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
+<script src="{% static "database/js/datatables_search.js" %}"></script>
 
 {% endblock %}

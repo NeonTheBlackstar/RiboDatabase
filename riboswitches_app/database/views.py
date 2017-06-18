@@ -1,39 +1,54 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from django.db.models import CharField
-from django.db.models import  Q
-
-from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, LigandClass
-import json
+from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxonomy, \
+                    LigandClass
+import json, re
 
 def index(request):
 
     context = {'breadcrumbs': []}
     return render(request, 'database/index.html', context)
 
-def searcher_ajax(request):
+def searcher(request):
 
-    return render(request, 'database/searcher.html')
-
-def get_records_by_ajax(request):
-
-    l = []
-    term = request.GET['term']
-
-    ligands = Ligand.objects.filter(name__icontains=term)
+    recordList = []
 
     for e in Record.objects.all():
         if e.family != None:
-            for i in ligands:
-                if i.name in str(e.family.ribo_class.ligands.all()):
-                    l.append(e.name)
+            dic = {
+                'name': e.name,
+                'ligand': None,
+                'organism': None,
+            }
+            dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
+            dic['organism'] = e.gene.organism.scientific_name if e.gene.organism.scientific_name != None else dic['organism']
+            recordList.append(dic.copy())
 
     context = {
-        'records': l,
+        'recordList': recordList,
     }
 
-    return JsonResponse(context)
+    return render(request, 'database/searcher.html', context)
+
+# def get_records_by_ajax(request):
+
+#     l = []
+#     term = request.GET['term']
+
+#     ligands = Ligand.objects.filter(name__icontains=term)
+
+#     for e in Record.objects.all():
+#         if e.family != None:
+#             for i in ligands:
+#                 if i.name in str(e.family.ribo_class.ligands.all()):
+#                     l.append(e.name)
+
+#     context = {
+#         'records': l,
+#     }
+
+#     return JsonResponse(context)
 
 def class_family_browser(request):
 
@@ -58,12 +73,8 @@ def class_family_browser(request):
         'result': result,
     }
 
-    print(context)
-
     return render(request, 'database/class_family_browser.html', context)
 
-#########################################################################
-########################## TO DO ########################################
 def class_family_details(request, family):
 
     families_list = []
@@ -109,13 +120,9 @@ def ligand_details(request, ligand_name):
             if ligand_name in str(e.family.ribo_class.ligands.all()):
                 dic = {
                     'id': e.id,
-                    # 'gene': None,
-                    # 'organism': None,
                     'name': e.name,
                     'ligand': None,
                 }
-                # dic['gene'] = e.gene.name if e.gene != None else dic['gene']
-                # dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
                 dic['name'] = e.name if e.name != None else dic['name']
                 dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
                 recordList.append(dic.copy())
@@ -125,14 +132,9 @@ def ligand_details(request, ligand_name):
         'name': name,
     }
 
-    print(recordList)
-
     return render(request, 'database/ligand_details.html', context)
 
-##########################################################################################
-
 ### BEST BROWSER IN THE WHOLE UNIVERSE ###
-### KEEP CALM AND BROWSE THE TAXONOMY ###
 
 def create_tax(tax_list, parent_id, data):
 
@@ -179,24 +181,22 @@ def organism_browser(request):
         "plugins" : [ "types", ] 
     }
 
-    last = []
+    parents = []
+    childrens = []
 
-    for i in range(0, len(d['core']['data'])):
-        if d['core']['data'][i]['parent'] != '#':
-            try:
-                if d['core']['data'][i+1]['parent'] == 'Bacteria':
-                    last.append(d['core']['data'][i]['text'])
-            except IndexError:
-                last.append(d['core']['data'][-1]['text'])
+    for i in data:
+        parents.append(i['parent'])
 
-    print(last)
+    for i in data:
+        if i['id'] not in parents:
+            childrens.append(i['id'])
 
     ddumps = json.dumps(d)
 
     context = {
         'tax_list_tree': tax_list_tree,
         'd': ddumps,
-        'last': last,
+        'childrens': childrens,
     }
 
     return render(request, 'database/organism_browser.html', context)
@@ -208,7 +208,13 @@ def organism_browser(request):
 
 def organism_details(request, organism_name):
 
-    organism = Organism.objects.filter(scientific_name = organism_name)
+    term = request.get_full_path()
+
+    match = re.findall(r'[/](.*?)[/]',term)[-1].replace('_', ' ')
+
+    print(match)
+
+    organism = Organism.objects.filter(scientific_name = match)
     gene = Gene.objects.filter(organism = organism)
     riboswitch_record = Record.objects.filter(gene = gene)
     context = {

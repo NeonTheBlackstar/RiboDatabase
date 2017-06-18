@@ -61,11 +61,12 @@ $(document).ready(function() {
         {{ d|safe }}
     );
 
-    $('#jstree-organism').on('click', function(){
-    	
-    	if({{ last|safe }}.includes($(this).attr('aria-activedescendant'))) {
-    		var test = $(this).attr('aria-activedescendant');
-    		console.log($(this)[0])
+    $('#jstree-organism').click(function(event) {
+    	var organism = $('#jstree-organism').jstree('get_selected').toString();
+    	console.log({{childrens|safe}})
+    	console.log(organism)
+    	if($.inArray(organism, {{ childrens|safe }}) === 0) {
+    		window.location = organism.replace(' ', '_');
     	}
     });
     
