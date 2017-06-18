@@ -1,24 +1,63 @@
 {% extends 'database/base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block _title %}Search{% endblock %}
 
-
 {% block content %}
 
-<div class="jumbotron">
-  <div class="container" id="search-field">
-    <div class="col-xs-12">
-    	<form method="get" action="/search/">
-      	<div class="input-group input-group-lg" id="test">
-        	<input type="text" class="typeahead form-control" placeholder="Search for..." autocomplete="off" />
-        	<span class="input-group-btn">
-          	<input type="submit" class="btn btn-default" value="Go!">
-        	</span>
-      	</div>
-    	</form>
-  	</div>
-	</div>
+<div class="container">
+  <!-- Nav helper -->
+  <div class="bs-example">
+    <ul class="breadcrumb">
+      <li>
+        <a href="{% url 'database:index' %}">
+          Home
+        </a>
+      </li>
+      <li class="active">
+        Search
+      </li>
+    </ul>
+  </div>
+
+  <div class="jumbotron" id="search-field-searcher">
+   
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="name-form">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="basic-addon3">Organism</span>
+              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_all"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="ligand-form">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="basic-addon3">Ligand</span>
+              <input type="text" class="form-control" placeholder="Search for..." autocomplete="off" name="term_ligand"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="btn-row">
+        <button type="submit" class="btn btn-default btn-lg" id="search_records">Go!</button>
+      </div>
+      <div class="row">
+        <div class="col-xs-12" id="records">
+
+        </div>
+      </div>   
+  </div>
 </div>
+
+{% endblock %}
+
+{% block js_plugins %}
+
+<script src="{% static "database/js/search_ajax.js" %}"></script>
 
 {% endblock %}

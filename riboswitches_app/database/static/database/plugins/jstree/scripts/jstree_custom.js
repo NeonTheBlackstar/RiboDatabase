@@ -28,6 +28,10 @@ $(document).ready( function () {
     		data.instance.set_type(data.node,'default');
 		});
 
+		$('#jstree-organism').on("select_node.jstree", function (e, data) {
+           document.location = data.instance.get_node(data.node, true).children('a').attr('href');
+        });
+
 		$("#jstree-organism").on('open_node.jstree', function (event, data) {
     		data.instance.set_type(data.node,'folder-open');
 		});

@@ -14,8 +14,13 @@
         	Home
         </a>
       </li>
+      <li>
+        <a href="{% url 'database:searcher' %}">
+          Search
+        </a>
+      </li>
       <li class="active">
-        Search
+        {{ name }}
       </li>
     </ul>
   </div>
@@ -36,12 +41,12 @@
         <table class="table table-bordered table-hover">
           <tbody>
             {% for i in l %}
-            {% for key, value in i.items %}
-            <tr>
-              <td>{{ key }}</td>
-              <td>{{ value }}</td>
-            </tr>
-            {% endfor %}
+              {% for key, value in i.items %}
+              <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+              </tr>
+              {% endfor %}
             {% endfor %}
           </tbody>
         </table>
