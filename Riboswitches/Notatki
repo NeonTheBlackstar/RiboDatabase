@@ -228,49 +228,91 @@ Nazwe organizmu i taksonomie moge zwracac returnem z getFasta. Lokacje też.
 ############## 12.06.17 #################
 
 $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
-	- Jak przewidywać mechanizm i efekt?
-	# 
+		@ - Jak przewidywać mechanizm i efekt?
+		# nie będziemy, czyli Unknown
 	- Co robimy z alignmentem klas? Pobieramy z jakiejś bazy? W plikach CM nie ma reprezentacji dot-bracket.
 	# 
-	- Co z sekwencją genomu?
-	# 
-	- Strukutra aptameru i jego sekwencja? Struktura pod polem predicted? Wziąć z plików processing? Jak?
-	# 
-	- Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu.
-	# 
-	- Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp?
-	# 
-	- Problem z niepełną taksonomią
-	# 
-	- Location? Co tam powinno być?
-	# 
-	- Accession number dla genomu?
-	# 
-	- Robimy jakieś aptamer_id?
-	# 
-	- Nazwa dla całego ryboswitcha? Jakieś id?
-	# 
-	- Czy jak szukam aptameru, to powinienem przetłumaczyć sekwencję na RNA (w sensie że uracyl)? A ja tak, to co wtedy z terminatorami?
+		@ - Co z sekwencją genomu?
+		# sekwencja okna w encji Record
+		@ - Strukutra aptameru i jego sekwencja? Struktura pod polem predicted? Wziąć z plików processing? Jak?
+		# Marianna miała mieć jakiś program do ogarnięcia tego
+		@ - Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu.
+		# ogarnąć przy pobieraniu z bazy ncbi
+		@ - Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp?
+		# tak, hp
+		@ - Problem z niepełną taksonomią
+		# do ogarnięcia przez Szymona i Andrzeja
+		@ - Location? Co tam powinno być?
+		# genom
+		@ - Accession number dla genomu?
+		# tak
+	- Jak by wyglądało pole aptamer_id? Jak generować?
+	# do zastanowienia
+	- Nazwa dla całego ryboswitcha? Jak generować?
+	# do zastanowienia
+	- Czy jak szukam aptameru, to powinienem przetłumaczyć sekwencję na RNA (w sensie że uracyl)?
 	# 
 
 $$$ Wątpliwości dot. bazy danych: $$$
-	-
-	#
+	- Czy struktura 2D będzie tylko dla aptamerów, czy dla terminatorów też (np. wizualizacja związania Shine-Dalgarno)?
+	# IDK
+	- Czy alignment w RiboClass i RiboFamily to nie to samo co struktura 2D?
+	# IDK
+		@ - Klucze główne do zrobienia: w genie (locus_tag może się powtarzać w wielu organizmach), dla aptameru i dla rekordów.
+		# zrobic domyslny ID, bo locus tak moze nie byc unikalny, jesli mamy wiele genomow np. plazmidowe w organizmie
+		@ - W organizmie dodać accession number i ID buildu. Na co klucz główny, bo na razie jest na nazwę naukową?
+		# klucz glowny na build
+		@ - Jeśli w taksonomii najniżej jest gatunek, to czy relacja nie powinna być jeden do jednego dla organizm - taksonomia?
+		# ma tak zostac, bo dla jednego gatunku moze byc np. wiele buildow lub genomow
+		@ - Czy do ligandu dać pole z jakimś ID np. do bazy danych?
+		# nie, na nazwe niech zostanie
+	- Jakieś pole z ID dla klasy aptamerów?
+	# do przemyslenia
+		@ - Struktura 3D powinna pójść do klasy, nie rodziny
+		# Tak
+	- Struktura 2D with_ligand, without_ligand zostaje? Jak to uzupełniać?
+	# Nie wiadomo. Trzeba będzie zrobić przegląd literatury i ogarnąć, czy ma to w ogóle sens
+		@ - Wywalić sekwencję z aptamera?
+		# wywalamy
+		@ - Scory dla terminatorów, promotorów i aptamerów? Albo nowe pole, albo nowa encja
+		# tak, pole
+		@ - Czy sekwencję zamieścić w tej głównej encji rekord?
+		# tak, sekwencja okna
+		@ - Co robimy z operonami? Nie możemy tego zastąpić relacją jeden do wielu?
+		# Możemy	
+		@ - W jaki sposób uwzględnić Shine-Dalgarno?
+		# jako pole tak jak promotor i terminator
 
 $$$ Wątpliwości dot. zawartości pracy licencjackiej: $$$
 	- Czy opisuję etap poszukiwania shine-dalgarno? A jak tak, to czy wtedy też opisuję te wszystkie programy?
 	#
 	- Czy znajdzie się tam etap puszczenia analizy na serwerze wysokoprzepustowym?
 	# 
-	- Czy w opisie narzędzie zmieszczam takie rzeczy jak AWK?
-	# 
 	- Co z Infernalem? To ten program tworzący model kowariancji do poszukiwania ryboswitchy. Zamykamy się na te 4 klasy, czy robimy coś więcej? Opisać Infernala w narzędziach?
 	#
-	- 
+	- Czy w opisie narzędzie zmieszczam takie rzeczy jak AWK? W ogóle jakie narzędzia powinienem opisać?
+	#
+	- Czego my uzywaliśmy do budowy tych modeli kowariancji? Cmbuild?
 
 $$$ Wątpliwości dot. formalności: $$$
-	-
-	#
+		@ - Temat i cel i zakres pracy
+		# ogarniete
+	- Skład komisji, recenzent, przewodniczący?
+	# najpierw trzeba znac termin obrony
+		@ - Mniej więcej data egzaminu?
+		# 6/7 lipca mniej wiecej, wtedy pasuje Markowi, a ja pozniej mam operacje
+	- Szablon karty pracy
+	# musze wypelnic i przeslac p. Kasi
+
+SHINE-DALGARNO:
+
+Dla genów, przy których znaleziono aptamer, ale nie było terminatora:
+1) Na oknie 25 nukleotydów przed genem znajdź motyw SD. Szukanie motywu jest długie, dlatego poszukiwanie motywu odbywa się dla połowy losowo wybranych genów z pliku gff + tam, gdzie znaleziono aptamery.
+2) Ekstrahujesz z pliku wynikowego motyw i pozycje.
+3) Dla genów, przy których znaleziono motyw SD i są one przy aptamerach, generowane są nowe okna o rozmiarze 100 przed genem i 50 po genie. 
+4) Na tym pliku multifasta uruchamiany jest barriers z argumentem minimalne deltaEnergy = 3.
+5) Sprawdź, czy formy suboptymalne tworzą postać ryboprzełącznika.
+- skrypt sprawdza, czy 60% nukleotydów budujących Shine-Dalgarno jest związanych.
 
 '''
 '''_______________________________________________________________________'''

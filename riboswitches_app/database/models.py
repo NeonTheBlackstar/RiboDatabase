@@ -13,6 +13,7 @@ class Record(models.Model):
 	genes_under_operon_regulation = models.ManyToManyField('Gene', related_name = 'operon_gene') # MANY TO MANY
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
+	#sd = models.OneToOneField('Position', null = True, related_name = 'promoter')
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
 	# Sekwencja tutaj? TAK
 	
@@ -32,7 +33,7 @@ class Record(models.Model):
 		('DG', 'DEGRADATION'),
 	)
 	mechanism = models.CharField(max_length = 3, choices = MECHANISM_CHOICES, default = 'UN')
-	mechanism_confirmation = models.ForeignKey('Article', related_name = 'confirmation', null = True)
+	mechanism_confirmation = models.ForeignKey('Article', related_name = 'confirmation', null = True) # ZROBIĆ!
 
 	def __str__(self):
 		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| {} |{}| {} {} |{}|'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.name, self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation)
@@ -72,7 +73,7 @@ class Article(models.Model):
 
 class Structure3D(models.Model):
 	pdbid = models.CharField(max_length = 10, primary_key = True) # Protein Data Bank ID
-	ribo_family = models.ForeignKey('RiboFamily') # A nie klasa?
+	ribo_family = models.ForeignKey('RiboFamily') # A nie klasa? TAK, ZMIENIĆ NA KLASĘ
 
 	def __str__(self):
 		return 'Str3D: {}'.format(self.pdbid)
@@ -83,12 +84,10 @@ Rodzina jest mniej ogólna niż klasa. Rodzina to będzie to, co my przewidzimy!
 class RiboFamily(models.Model): # w record taka sama nazwa !
 	''' RiboClass podlinkowane '''
 	''' Structure3D podlinkowane '''
-	# Accesion number???
 	ribo_class = models.ForeignKey('RiboClass', null = True)
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
-	#ligand = models.ForeignKey('Ligand', null = True)
 
 	def __str__(self):
 		return 'RFam: {} {} {} |{}|'.format(self.name, self.description, self.alignment, self.ribo_class)#, self.structure3D.all())
@@ -99,6 +98,7 @@ Relacja jeden do wielu odwrotnie!
 '''
 
 class RiboClass(models.Model):
+	# Accesion number???
 	name = models.CharField('nazwa', max_length = 10, primary_key = True)
 	description = models.TextField('opis')
 	alignment = models.TextField('dopasowanie')
@@ -169,6 +169,7 @@ class Position(models.Model):
 		('-', 'LAGGING STRAND'),
 	)
 	strand = models.CharField(max_length = 1, choices = STRAND_CHOICES, default = '.')
+	# score pole
 
 	def __str__(self):
 		return 'Pos: {} {} |{}| {}'.format(self.start, self.end, self.location, self.strand)
