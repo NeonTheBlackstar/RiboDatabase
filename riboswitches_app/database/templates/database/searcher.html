@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container">
   <!-- Nav helper -->
   <div class="bs-example">
     <ul class="breadcrumb">
       <li>
+        <span class="glyphicon glyphicon-home"></span>
         <a href="{% url 'database:index' %}">
           Home
         </a>
@@ -26,7 +26,7 @@
   </div>
 
   <!-- <div id="table_wrapper" class="dataTables wrapper form-inline dt-bootstrap"> -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="table_wrapper">
       <table id="search-table" class="display table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
           <tr>
@@ -46,8 +46,8 @@
         {% for rr in recordList %}
           <tr role="row">
             <td><a href="{% url 'search:record' rr.name %}">{{ rr.name }}</a></td>
-            <td><a href="{% url 'search:record' rr.ligand %}">{{ rr.ligand }}</a></td>
-            <td><a href="{% url 'search:record' rr.organism %}">{{ rr.organism }}</a></td>
+            <td>{{ rr.ligand }}</td>
+            <td>{{ rr.organism }}</td>
           </tr>
         {% endfor %}
         </tbody>
@@ -64,5 +64,4 @@
 {% block js_plugins %}
 <script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
 <script src="{% static "database/js/datatables_search.js" %}"></script>
-
 {% endblock %}

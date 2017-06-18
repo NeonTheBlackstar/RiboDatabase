@@ -23,6 +23,7 @@
   
   </head>
   <body>
+  
     <!-- Document wrapper -->
     <div id="wrapper">
 
@@ -49,7 +50,7 @@
                   <li><a href="{% url 'database:class_family_browser' %}">By class/family</a></li>
                 </ul>
               </li>
-              <li><a href="#" id="about">About</a></li>
+              <li><a href="{% url 'database:about' %}" id="about">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
@@ -59,7 +60,8 @@
 
       <!-- Main contet from other templates -->
       <main class="fade-out">
-        {% block content %} 
+        {% block content %}
+           
         {% endblock %}
       <main>
       <!-- End content -->

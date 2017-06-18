@@ -16,6 +16,7 @@
 	<!-- Nav helper -->
 	<div class="bs-example">
 	    <ul class="breadcrumb">
+	    	<span class="glyphicon glyphicon-home"></span>
 	        <li><a href="{% url 'database:index' %}">Home</a></li>
 	        <li class="active">Browse</li>
 	        <li class="active">By organism</li>
@@ -23,7 +24,7 @@
 	</div>
 
 
-	<div class="panel panel-default">
+	<div class="panel panel-default panel-no-margin">
 	    <div class="panel-heading">
 	        <h4 class="panel-title">
 	            <a data-toggle="collapse" data-parent="#accordion" href="#filterPanel">Browse organisms</a>
@@ -53,6 +54,7 @@
 <!-- jstree script -->
 <script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
 <script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
+<script src="{% static 'database/js/page_loader.js' %}"></script>
 
 <!--Safely pass json to jstree -->
 <script>

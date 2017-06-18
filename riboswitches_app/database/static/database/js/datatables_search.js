@@ -1,5 +1,7 @@
 $(document).ready( function () {
-	$('#search-table').DataTable(); //initialize dataTables
+	$('#search-table').DataTable({
+		responsive: true
+	}); //initialize dataTables
 
 	// Setup - add a text input to each footer cell
     $('#search-table tfoot th').each( function () {

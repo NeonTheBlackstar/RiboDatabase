@@ -5,6 +5,10 @@ from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxon
                     LigandClass
 import json, re
 
+def about(request):
+
+    return render(request, 'database/about.html')
+
 def index(request):
 
     context = {'breadcrumbs': []}

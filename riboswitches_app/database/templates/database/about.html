@@ -1,0 +1,34 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}About{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <!-- Nav helper -->
+  <div class="bs-example">
+    <ul class="breadcrumb">
+      <li>
+        <span class="glyphicon glyphicon-home"></span>
+        <a href="{% url 'database:index' %}">
+          Home
+        </a>
+      </li>
+      <li class="active">
+        About
+      </li>
+    </ul>
+  </div>
+
+
+
+</div>
+
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
+<script src="{% static "database/js/datatables_search.js" %}"></script>
+{% endblock %}

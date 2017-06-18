@@ -27,6 +27,12 @@ main.fade-out {
     transition: none;
 }
 
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
 /***** End of HTML tags *****/
 
 /***** Classes *****/
@@ -37,6 +43,10 @@ main.fade-out {
     margin-left: 5px;
 }
 
+.breadcrumb {
+    margin-top: 15px !important;
+}
+
 .fa-folder-o {
     font-size: 19px !important;
 }
@@ -45,8 +55,22 @@ main.fade-out {
     font-size: 19px !important;
 }
 
+.glyphicon-home {
+    margin-right: 5px;
+}
+
 .jstree-anchor:hover {
     background-color: #e8eff7 !important;
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/loader.gif') no-repeat center rgb(249,249,249);
 }
 
 .loading {
@@ -111,6 +135,11 @@ main.fade-out {
 .panel.panel-default {
     margin-right: 12px;
     margin-bottom: 12px;
+}
+
+.panel-no-margin {
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .search-header {
@@ -199,16 +228,9 @@ main.fade-out {
     display: none;
 }
 
-#search-field-searcher {
-    padding-top: 80px;
-    padding-bottom: 50px;
-    padding-right: 0;
+#table_wrapper {
     padding-left: 0;
-}
-
-#search-field-index {
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-right: 0;
 }
 
 #btn-row {
@@ -223,9 +245,3 @@ main.fade-out {
 }
 
 /***** End of IDs *****/
-
-tfoot input {
-    width: 100%;
-    padding: 3px;
-    box-sizing: border-box;
-}

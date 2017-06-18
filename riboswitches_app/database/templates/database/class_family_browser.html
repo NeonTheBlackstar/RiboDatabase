@@ -7,22 +7,25 @@
 
 {% block css_plugins %}
 <!-- Js tree styles -->
-<link href="{% static "database/plugins/jstree/themes/default/style_jstree.css" %}" rel="stylesheet">
+<link href="{% static "database/plugins/jstree/
 {% endblock %}
 
 {% block content %}
+<div class="loader"></div>
+
 <div class="container">
 
   <!-- Nav helper -->
   <div class="bs-example">
       <ul class="breadcrumb">
+        <span class="glyphicon glyphicon-home"></span>
           <li><a href="{% url 'database:index' %}" id="test">Home</a></li>
           <li class="active">Browse</li>
           <li class="active">By class/family</li>
       </ul>
   </div>
 
-  <div class="panel panel-default">
+  <div class="panel panel-default panel-no-margin">
       <div class="panel-heading">
           <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#filterPanel">Browse classes and families</a>
