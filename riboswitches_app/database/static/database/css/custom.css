@@ -122,6 +122,10 @@ tfoot input {
     color: #fff;
 }
 
+.pagination {
+    margin-bottom: 35px !important;
+}
+
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > 
 .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
     background-color: #70ad77 !important;
