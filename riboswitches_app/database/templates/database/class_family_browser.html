@@ -7,12 +7,10 @@
 
 {% block css_plugins %}
 <!-- Js tree styles -->
-<link href="{% static "database/plugins/jstree/
+<link href="{% static "database/plugins/jstree/themes/default/style_jstree.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<div class="loader"></div>
-
 <div class="container">
 
   <!-- Nav helper -->
@@ -22,6 +20,7 @@
           <li><a href="{% url 'database:index' %}" id="test">Home</a></li>
           <li class="active">Browse</li>
           <li class="active">By class/family</li>
+          <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Class/family browser" data-content="This part of browsing lets you to find riboswitches for specifi classes and families. The number next to a class name represents the number of families for this class." data-trigger="hover" data-placement="left"></span>
       </ul>
   </div>
 
@@ -71,4 +70,5 @@
 <!-- jstree script -->
 <script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
 <script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
 {% endblock %}

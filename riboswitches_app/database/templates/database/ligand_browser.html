@@ -16,6 +16,7 @@
           <li><a href="{% url 'database:index' %}">Home</a></li>
           <li class="active">Browse</li>
           <li class="active">By ligand</li>
+          <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Broswing by ligand" data-content="Riboswitches can bind different types of ligands. Thanks to this option, you can easily find all riboswitches for a specific ligand." data-trigger="hover" data-placement="left"></span>
       </ul>
   </div>
 
@@ -57,4 +58,5 @@
 <!-- isotope script -->
 <script src="{% static "database/plugins/isotope/isotope.pkgd.min.js" %}"></script>
 <script src="{% static "database/plugins/jstree/scripts/isotope_custom.js" %}"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
 {% endblock %}

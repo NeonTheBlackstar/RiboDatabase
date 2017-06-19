@@ -21,6 +21,7 @@
 		          <li class="active">Browse</li>
 		          <li><a href="{% url 'database:ligand_browser' %}">By ligand</a></li>
 		          <li class="active">{{ name }}</li>
+		          <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Browsing result page" data-content="On this page, you see all the riboswitches which are results of browsing." data-trigger="hover" data-placement="left"></span>
 		      </ul>
 		  </div>
 			
@@ -51,4 +52,5 @@
 {% block js_plugins %}
 <script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
 <script src="{% static "database/plugins/datatables/scripts/datatables_custom.js" %}"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
 {% endblock %}

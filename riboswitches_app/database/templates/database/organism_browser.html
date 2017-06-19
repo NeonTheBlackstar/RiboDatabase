@@ -20,6 +20,7 @@
 	        <li><a href="{% url 'database:index' %}">Home</a></li>
 	        <li class="active">Browse</li>
 	        <li class="active">By organism</li>
+	        <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Organism browser" data-content="This option lets you browse taxonomy and check which riboswitches are on a specific level." data-trigger="hover" data-placement="left"></span>
 	    </ul>
 	</div>
 
@@ -54,7 +55,7 @@
 <!-- jstree script -->
 <script src="{% static "database/plugins/jstree/scripts/jstree.min.js" %}"></script>
 <script src="{% static "database/plugins/jstree/scripts/jstree_custom.js" %}"></script>
-<script src="{% static 'database/js/page_loader.js' %}"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
 
 <!--Safely pass json to jstree -->
 <script>

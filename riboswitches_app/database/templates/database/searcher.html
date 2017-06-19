@@ -22,6 +22,7 @@
       <li class="active">
         Search
       </li>
+      <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Searcher" data-content="This is a searcher. On this page, there are displaying all the riboswitches from the database. You can eaisly filter the results using the inputs on the bottom of the page. In order to see the record, you should click on a riboswitch name." data-trigger="hover" data-placement="left"></span>
     </ul>
   </div>
 
@@ -64,4 +65,7 @@
 {% block js_plugins %}
 <script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
 <script src="{% static "database/js/datatables_search.js" %}"></script>
+<script>
+$(".glyphicon-question-sign").popover();
+</script>
 {% endblock %}

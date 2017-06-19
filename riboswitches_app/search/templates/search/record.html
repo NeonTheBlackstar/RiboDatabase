@@ -23,6 +23,7 @@
       <li class="active">
         {{ name }}
       </li>
+      <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Record" data-content="On this page you see a specific record from database." data-trigger="hover" data-placement="left"></span>
     </ul>
   </div>
 
@@ -55,4 +56,10 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block js_plugins %}
+<script>
+$(".glyphicon-question-sign").popover();
+</script>
 {% endblock %}
