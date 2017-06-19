@@ -5,9 +5,9 @@ from .models import Gene, Organism, Ligand, RiboFamily, Record, RiboClass, Taxon
                     LigandClass
 import json, re
 
-def about(request):
+def help(request):
 
-    return render(request, 'database/about.html')
+    return render(request, 'database/help.html')
 
 def index(request):
 

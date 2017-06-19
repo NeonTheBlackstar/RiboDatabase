@@ -5,7 +5,7 @@ app_name = 'database'
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-    url(r'^about/$', views.about, name='about'),
+    url(r'^help/about/$', views.help, name='help'),
     url(r'^browser/ligand/$', views.ligand_browser, name='ligand_browser'),
     url(r'^browser/ligand/(?P<ligand_name>[A-Za-z]+)/$', views.ligand_details, name='ligand_details'),
     url(r'^browser/organism/$', views.organism_browser, name='organism_browser'),

@@ -1,0 +1,199 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}About{% endblock %}
+
+{% block content %}
+<div class="container">
+  <!-- Nav helper -->
+  <div class="bs-example">
+    <ul class="breadcrumb">
+      <li>
+        <span class="glyphicon glyphicon-home"></span>
+        <a href="{% url 'database:index' %}">
+        Home
+        </a>
+      </li>
+      <li class="active">Help</li>
+      <li class="active">About</li>
+    </ul>
+  </div>
+  <div class="panel panel-default panel-no-margin">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span class="panel-help-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#about-panel" style="text-decoration: none; color: #333;">
+        <span class="glyphicon glyphicon-education glyphicon-help"></span>
+        About the project
+        </a>
+        </span>
+        <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#about-panel">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+        </span>
+        <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Help site" data-content="This is a help page. You can read here all the information about the project and how to use this database." data-trigger="hover" data-placement="left"></span>
+      </h4>
+    </div>
+    <div id="about-panel" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <p id="about-panel-text">[Project] is a database which provides information about riboswitches.</p>
+        <p>There are several ways to retrieve the information. You can use:</p>
+        <ul>
+          <li>Quicksearch on main page</li>
+          <li>Main search</li>
+          <li>Taxonomy browsing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="panel panel-default panel-no-margin">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span class="panel-help-title">
+        <span class="glyphicon glyphicon-search glyphicon-help"></span>
+        Search
+        </span>
+      </h4>
+    </div>
+    <div id="search-panel-about">
+      <div class="panel-body">
+        <div class="col-xs-12 col-md-6">
+          <p id="about-panel-text">
+            To find individual riboswitch record, you can use quicksearch or the 
+            main search.
+          </p>
+          <p id="about-panel-text">
+            Quicksearch
+          </p>
+          <p>
+          <ul>
+            <li>
+              Start typing either a riboswtich name (eg. [..]) or a ligand (eg. alanine). 
+            </li>
+            <li>
+              If you don't remember any of this names, you can use displayed suggestions.
+            </li>
+          </ul>
+          </p>
+          <p id="about-panel-text">
+            Main search
+          </p>
+          <p>
+          <ul>
+            <li>
+              The search module displays all the riboswitches from the database. 
+            </li>
+            <li>
+              The information is in a tabular format.
+            </li>
+            <li>
+              You can easily filter the results using inputs which are on the 
+              bottom of the page.
+            </li>
+          </ul>
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-6" id="quicksearch-img">
+          <figure>
+            <img src="../../static/database/images/quicksearch.png" alt="Quicksearch input" id="quicksearch-width-img">
+            <figcaption>Quicksearch input on main page</figcaption>
+          </figure>
+          <br>
+          <figure>
+            <img src="../../static/database/images/mainsearch.png" alt="Mainsearch input" id="mainsearch-width-img">
+            <figcaption>The table of main search</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="panel panel-default panel-no-margin">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span class="panel-help-title">
+        <span class="glyphicon glyphicon-filter glyphicon-help"></span>
+        Browse
+        </span>
+      </h4>
+    </div>
+    <div id="browse-panel-about">
+      <div class="panel-body">
+        <div class="col-xs-12 col-md-6">
+          <p id="about-panel-text">
+            If you'd like to browse riboswitches instead of search for a specific one, you should use
+            browse.
+          </p>
+          <p id="about-panel-text">
+            Taxonomy browser
+          </p>
+          <p>
+          <ul>
+            <li>
+              You can select either the single species or some of any intermediate level.
+            </li>
+            <li>
+              The taxonomy is based on <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy Database</a>
+            </li>
+          </ul>
+          </p>
+          <p id="about-panel-text">
+            Ligand browser
+          </p>
+          <p>
+          <ul>
+            <li>
+              The next option for browsing the database is a ligand browser. 
+            </li>
+            <li>
+              This browser displays all of the ligands from database.
+            </li>
+          </ul>
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-6" id="quicksearch-img">
+          <figure>
+            <img src="../../static/database/images/organism_browser.png" alt="Taxonomy browser" id="quicksearch-width-img">
+            <figcaption>The taxonomy tree</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="panel panel-default panel-no-margin" style="margin-bottom: 50px !important;">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span class="panel-help-title">
+        <span class="glyphicon glyphicon-th-list glyphicon-help"></span>
+        Record
+        </span>
+      </h4>
+    </div>
+    <div id="browse-panel-about">
+      <div class="panel-body">
+        <div class="col-xs-12 col-md-6">
+          <p id="about-panel-text">The last step of browsing the database is a record page</p>
+          <ul>
+            <li>This page contains all the information for specific riboswitch</li>
+            <li>It is displayed in tabular form</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6" id="quicksearch-img">
+          <figure>
+            <img src="../../static/database/images/record.png" alt="Record page" id="quicksearch-width-img">
+            <figcaption>Part of the record</figcaption>
+          </figure>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js_plugins %}
+<script>
+$(".glyphicon-question-sign").popover();
+</script>
+{% endblock %}

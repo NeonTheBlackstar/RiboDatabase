@@ -10,6 +10,7 @@ html {
 body {
     padding-top: 60px;
     height: 100%;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 div.jumbotron {
@@ -36,6 +37,10 @@ tfoot input {
 /***** End of HTML tags *****/
 
 /***** Classes *****/
+.about-list {
+    text-decoration: none;
+}
+
 .badge.progress-bar-success {
     background-color: #70ad77 !important;
     float: right;
@@ -53,6 +58,10 @@ tfoot input {
 
 .fa-folder-open-o {
     font-size: 19px !important;
+}
+
+.glyphicon-help {
+    margin-right: 5px;
 }
 
 .glyphicon-home {
@@ -96,7 +105,7 @@ tfoot input {
 
 .ligand-name {
     text-transform: capitalize;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 18px;
 }
 
@@ -136,6 +145,10 @@ tfoot input {
     cursor: pointer;  
 }
 
+.panel-help-title {
+    font-size: 20px;
+}
+
 .panel.panel-default {
     margin-right: 12px;
     margin-bottom: 12px;
@@ -153,6 +166,10 @@ tfoot input {
 /***** End of classes *****/
 
 /***** IDs *****/
+#about-panel-text {
+    font-size: 16px; 
+    text-align: justify;
+}
 
 /* Advanced search button - under the search bar */
 #advanced-search-btn {
@@ -221,6 +238,20 @@ tfoot input {
 #quicksearch {
     height: 46px;
     font-size: 20px;
+}
+
+#quicksearch-img {
+    text-align: center !important;
+}
+
+#quicksearch-width-img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+#mainsearch-width-img {
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 #record-panel {
