@@ -1,0 +1,97 @@
+{% extends 'database/base.html' %}
+{% load static %}
+
+{% block _title %}Contact{% endblock %}
+
+{% block css_plugins %}
+<!-- Js tree styles -->
+<link href="{% static "database/plugins/jstree/themes/default/style_jstree.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <!-- Nav helper -->
+  <div class="row">
+	  <div class="col-xs-12">
+		  <div class="bs-example">
+		    <ul class="breadcrumb">
+		      <span class="glyphicon glyphicon-home"></span>
+		      <li><a href="{% url 'database:index' %}">Home</a></li>
+		      <li class="active">Contact</li>
+		      <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Contact page" data-content="You can use a form on this page to contact us." data-trigger="hover" data-placement="left"></span>
+		    </ul>
+		  </div>
+	  </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="map_container">
+        <div id="map" class="embed-responsive-item" style="height:400px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom:50px !important;">
+    <div class="col-xs-12 col-md-6">
+      <div class="panel panel-default panel-no-margin" style="margin-top: 5% !important;">
+        <div class="panel-body">
+          <h4>Contacts</h4>
+          <hr>
+          <address>
+            <strong>Adam Mickiewicz University</strong><br>
+            Department of Computational Biology<br>
+            ul. Umultowska 89<br>
+            Poznan, 61-617<br>
+            <abbr title="Phone">P:</abbr> (+48) 61829-58-43
+          </address>
+          <address>
+            <strong>Email</strong><br>
+          </address>
+          <address>
+            <strong>Web</strong><br>
+            <a target="_blank" href="http://www.combio.pl">www.combio.pl</a>
+          </address>
+          <div class="row">
+            <a href="https://www.facebook.com/bioinformatyka" target="_blank">
+            <img class="social-icon" title="Facebook profile" data-original-title="facebook" src="../../static/database/images/facebook_icon.svg" />
+            </a>
+            <a href="https://www.twitter.com/bioinformatyka" target="_blank">
+            <img class="social-icon" title="Twitter profile" data-original-title="twitter" src="../../static/database/images/twitter_icon.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="panel panel-default panel-no-margin" style="margin-top: 5% !important;">
+        <div class="panel-body">
+          <form action="#" id="contact-form">
+            <h4 class="form-section">Send us a message</h4>
+            <hr>
+            <div class="form-group">
+              <input name="subject" type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <input name="name" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input name="email" type="text" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <textarea name="message" class="form-control" rows="3" placeholder="Feedback"></textarea>
+            </div>
+            <button type="submit" class="btn green">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static "database/js/googlemaps.js" %}"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
+{% endblock %}

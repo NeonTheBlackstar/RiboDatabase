@@ -9,6 +9,14 @@ def help(request):
 
     return render(request, 'database/help.html')
 
+def contact(request):
+
+    context = {
+        'api_key': 'AIzaSyAVR8tS7DwduYSSWCkKgAgjKuS1ZGyWaeA',
+    }
+
+    return render(request, 'database/contact.html', context)
+
 def index(request):
 
     context = {'breadcrumbs': []}

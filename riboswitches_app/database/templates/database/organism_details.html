@@ -5,26 +5,51 @@
   Details
 {% endblock %}
 
+{% block css_plugins %}
+<!-- dataTables for Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static "database/plugins/datatables/styles/datatables.bootstrap.min.css" %}">
+{% endblock %}
+
 {% block content %}
-		<div class="container">
-			<div class="col-xs-12">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Gene</th>
-						</tr>
-					</thead>
-					{% for rr in riboswitch_record %}
-						<tbody>
+
+	<div class="container">
+		  <!-- Nav helper -->
+		  <div class="bs-example">
+		      <ul class="breadcrumb">
+		      	<span class="glyphicon glyphicon-home"></span>
+		          <li><a href="{% url 'database:index' %}">Home</a></li>
+		          <li class="active">Browse</li>
+		          <li><a href="{% url 'database:organism_browser' %}">By organism</a></li>
+		          <li class="active">{{ name }}</li>
+		          <span data-toggle="popover" class="glyphicon glyphicon-question-sign glyphicon-help pull-right" title="Browsing result page" data-content="On this page, you see all the riboswitches which are results of browsing." data-trigger="hover" data-placement="left"></span>
+		      </ul>
+		  </div>
+			
+			<div class="dataTables wrapper form-inline dt-bootstrap no-footer">
+				<div class="col-xs-12" id="table_wrapper" >
+					<table id="ligand-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+						<thead>
 							<tr>
-								<td>{{ rr.family.name }}</td>
-								<td>{{ rr.gene.name }}</td>	
+								<th>Riboswitch</th>
 							</tr>
-						</tbody>
-					{% endfor %}
-				</table>
+						</thead>
+							<tbody>
+							{% for rr in riboswitch_record %}
+								<tr role="row">
+									<td><a href="{% url 'search:record' rr.name %}">{{ rr.name }}</a></td>
+								</tr>
+							{% endfor %}
+							</tbody>
+					</table>
+				</div>
+	
 			</div>
 		</div>
 
+{% endblock %}
+
+{% block js_plugins %}
+<script src="{% static "database/plugins/datatables/scripts/datatables.min.js" %}"></script>
+<script src="{% static "database/plugins/datatables/scripts/datatables_custom.js" %}"></script>
+<script>$(".glyphicon-question-sign").popover();</script>
 {% endblock %}
