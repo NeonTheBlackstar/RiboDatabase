@@ -60,6 +60,16 @@ def aptamers(
 	e_value = 0.001, 	# Maximum e-value for aptamer to ?evaluate?
 	):
 
+	# Gather build id for taxonomy, before GFF header will be wiped out #
+	genome_build_id = ""
+	# Gather genome build #
+	with open("./Genomes/{0}.gff".format(genome)) as handle:
+		for line in handle:
+			line = line.strip()
+			if line.startswith("#!genome-build"):
+				genome_build_id = line.split(" ")[1]
+				break
+
 	lista = []
 	lista = os.listdir('Alignments')
 
@@ -89,7 +99,9 @@ def aptamers(
 	# Add general and aptamer headers
 	finalFile.write(
 		"organism_accession_number\t"+
-		"scientific_name\t"+
+		#"scientific_name\t"+
+		"build_id\t"+
+		###
 		"taxonomy_id\t"+
 		"gene_name\t"+
 		"location\t"+
@@ -178,7 +190,10 @@ def aptamers(
 							
 					switch_name = family_id + '_' + str(start)
 					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
-						genome, organism_info['sc_name'], 
+						genome, 
+						#organism_info['sc_name'], 
+						genome_build_id,
+						###
 						organism_info['tax'], 
 						d[key]['gene']['name'], 
 						d[key]['gene']['location'], 

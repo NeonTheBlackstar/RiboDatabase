@@ -13,9 +13,11 @@ class Record(models.Model):
 	genes_under_operon_regulation = models.ManyToManyField('Gene', related_name = 'operon_gene') # MANY TO MANY
 	terminator = models.OneToOneField('Position', null = True, related_name = 'terminator')
 	promoter = models.OneToOneField('Position', null = True, related_name = 'promoter')
+	shinedalgarno = models.OneToOneField('Position', null = True, related_name = 'shinedalgarno')
 	#sd = models.OneToOneField('Position', null = True, related_name = 'promoter')
 	articles = models.ManyToManyField('Article', related_name = 'article') # MANY TO MANY
 	# Sekwencja tutaj? TAK
+	sequence = models.TextField('sekwencja') # Wywalic?
 	
 	name = models.CharField('nazwa', max_length = 20)
 	#riboswitch_id = models.CharField('id', max_length = 20, primary_key = True)
@@ -36,11 +38,10 @@ class Record(models.Model):
 	mechanism_confirmation = models.ForeignKey('Article', related_name = 'confirmation', null = True) # ZROBIĆ!
 
 	def __str__(self):
-		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| {} |{}| {} {} |{}|'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.name, self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation)
+		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| {} |{}| {} {} |{}| {}'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.name, self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation, self.sequence)
 
 
 class Aptamer(models.Model): #14 dodaję nową encję
-	sequence = models.TextField('sekwencja') # Wywalic?
 	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')
 	structure = models.OneToOneField('Structure2D', null = True)
 	switch = models.ForeignKey('Record')#, related_name = "aptamer")
@@ -52,7 +53,7 @@ class Aptamer(models.Model): #14 dodaję nową encję
 	# pole id aptameru w ryboswitchu
 
 	def __str__(self):
-		return 'Apt: {} |{}| |{}|'.format(self.sequence, self.position, self.structure)
+		return 'Apt: |{}| |{}|'.format(self.position, self.structure)
 
 
 class Structure2D(models.Model):
@@ -73,7 +74,8 @@ class Article(models.Model):
 
 class Structure3D(models.Model):
 	pdbid = models.CharField(max_length = 10, primary_key = True) # Protein Data Bank ID
-	ribo_family = models.ForeignKey('RiboFamily') # A nie klasa? TAK, ZMIENIĆ NA KLASĘ
+	#ribo_family = models.ForeignKey('RiboFamily') # A nie klasa? TAK, ZMIENIĆ NA KLASĘ
+	ribo_class = models.ForeignKey('RiboClass')
 
 	def __str__(self):
 		return 'Str3D: {}'.format(self.pdbid)
@@ -118,11 +120,11 @@ class Gene(models.Model):
 
 
 class Organism(models.Model):
-	scientific_name = models.CharField('nazwa_naukowa', max_length = 250, primary_key = True)
+	scientific_name = models.CharField('nazwa_naukowa', max_length = 250) #, primary_key = True)
 	common_name = models.CharField('nazwa_zwyczajowa', max_length = 250)
-	accession_number = models.CharField('numer_dostepu', max_length = 15) # ID build jako nazwa genomu
-	# accession do linkowania dodatkowo
-	taxonomy = models.ForeignKey('Taxonomy', null = True)
+	accession_number = models.CharField('numer_dostepu', max_length = 30) # ID build jako nazwa genomu
+	build_id = models.CharField('numer_dostepu', max_length = 30, primary_key = True) ### !!! NEW !!! ###
+	taxonomy = models.OneToOneField('Taxonomy', null = True) ### !!! NEW !!! ###
 
 	def __str__(self):
 		return 'Or: {} {} {} |{}|'.format(self.scientific_name, self.common_name, self.accession_number, self.taxonomy)
@@ -163,6 +165,7 @@ class Position(models.Model):
 	start = models.IntegerField(default = 0)
 	end = models.IntegerField(default = 0)
 	location = models.TextField('opis') # identyfikator genomu
+	score = models.FloatField(default = 0.0)
 	STRAND_CHOICES = (
 		('+', 'LEADING STRAND'),
 		('.', 'UNKNOWN'),
@@ -172,4 +175,4 @@ class Position(models.Model):
 	# score pole
 
 	def __str__(self):
-		return 'Pos: {} {} |{}| {}'.format(self.start, self.end, self.location, self.strand)
+		return 'Pos: {} {} {} |{}| {}'.format(self.start, self.end, self.score, self.location, self.strand)

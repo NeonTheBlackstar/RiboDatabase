@@ -43,6 +43,7 @@ def record(request, riboswitch_name):
         context['promoter'] = r.promoter
         context['mechanism'] = r.mechanism
         context['effect'] = r.effect
+        context['sequence'] = r.sequence
 
     l.append(context)
     test = {

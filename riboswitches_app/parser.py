@@ -54,14 +54,15 @@ def loadDataToDictionary(fileName):
 		'effect':						Record._meta.get_field('effect').get_default(),
 		'mechanism':					Record._meta.get_field('mechanism').get_default(),
 		'confirmation':					Record._meta.get_field('mechanism_confirmation').get_default(),
+		'sequence':						Record._meta.get_field('sequence').get_default(),						
 		# ''' Linked with Gene '''		#
 		# ''' Linked with RiboFamily '''#
 		# ''' Linked with Article '''	#
 
 			# Aptamer #
-		'aptamer_sequence':				Aptamer._meta.get_field('sequence').get_default(),						# [ Array ]
 		'aptamer_start':				Position._meta.get_field('start').get_default(),						# [ Array ]
 		'aptamer_end':					Position._meta.get_field('end').get_default(),							# [ Array ]
+		'aptamer_score':				Position._meta.get_field('score').get_default(),						# [ Array ]
 		# ''' Linked with Structure2D '''#
 
 			# RiboClass #
@@ -87,6 +88,7 @@ def loadDataToDictionary(fileName):
 		'scientific_name':				Organism._meta.get_field('scientific_name').get_default(),
 		'common_name':					Organism._meta.get_field('common_name').get_default(),
 		'organism_accession_number':	Organism._meta.get_field('accession_number').get_default(),
+		'build_id':						Organism._meta.get_field('build_id').get_default(),
 		# ''' Linked with Taxonomy ''' #
 
 			# Taxonomy #
@@ -111,10 +113,17 @@ def loadDataToDictionary(fileName):
 			# Terminator #
 		'terminator_start':				Position._meta.get_field('start').get_default(),
 		'terminator_end':				Position._meta.get_field('end').get_default(),
+		'terminator_score':				Position._meta.get_field('score').get_default(),
 
 			# Promoter # 
 		'promoter_start':				Position._meta.get_field('start').get_default(),
 		'promoter_end':					Position._meta.get_field('end').get_default(),
+		'promoter_score':				Position._meta.get_field('score').get_default(),
+
+			# Shine-Dalgarno # 
+		'sd_start':						Position._meta.get_field('start').get_default(),
+		'sd_end':						Position._meta.get_field('end').get_default(),
+		'sd_score':						Position._meta.get_field('score').get_default(),
 
 			# Articles #
 		'articles':						Record._meta.get_field('articles').get_default(),						# [ Array ]

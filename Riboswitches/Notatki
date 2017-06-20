@@ -232,20 +232,20 @@ $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
 		# nie będziemy, czyli Unknown
 	- Co robimy z alignmentem klas? Pobieramy z jakiejś bazy? W plikach CM nie ma reprezentacji dot-bracket.
 	# 
-		@ - Co z sekwencją genomu?
-		# sekwencja okna w encji Record
+			@ - Co z sekwencją genomu?
+			# sekwencja okna w encji Record [ZROBIONE]
 		@ - Strukutra aptameru i jego sekwencja? Struktura pod polem predicted? Wziąć z plików processing? Jak?
 		# Marianna miała mieć jakiś program do ogarnięcia tego
 		@ - Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu.
 		# ogarnąć przy pobieraniu z bazy ncbi
-		@ - Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp?
-		# tak, hp
+			@ - Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp? [ZROBIONE]
+			# tak, hp
 		@ - Problem z niepełną taksonomią
 		# do ogarnięcia przez Szymona i Andrzeja
 		@ - Location? Co tam powinno być?
 		# genom
-		@ - Accession number dla genomu?
-		# tak
+			@ - Accession number dla genomu? [ZROBIONE]
+			# tak
 	- Jak by wyglądało pole aptamer_id? Jak generować?
 	# do zastanowienia
 	- Nazwa dla całego ryboswitcha? Jak generować?
@@ -258,30 +258,30 @@ $$$ Wątpliwości dot. bazy danych: $$$
 	# IDK
 	- Czy alignment w RiboClass i RiboFamily to nie to samo co struktura 2D?
 	# IDK
-		@ - Klucze główne do zrobienia: w genie (locus_tag może się powtarzać w wielu organizmach), dla aptameru i dla rekordów.
-		# zrobic domyslny ID, bo locus tak moze nie byc unikalny, jesli mamy wiele genomow np. plazmidowe w organizmie
-		@ - W organizmie dodać accession number i ID buildu. Na co klucz główny, bo na razie jest na nazwę naukową?
-		# klucz glowny na build
-		@ - Jeśli w taksonomii najniżej jest gatunek, to czy relacja nie powinna być jeden do jednego dla organizm - taksonomia?
-		# ma tak zostac, bo dla jednego gatunku moze byc np. wiele buildow lub genomow
-		@ - Czy do ligandu dać pole z jakimś ID np. do bazy danych?
-		# nie, na nazwe niech zostanie
+			@ - Klucze główne do zrobienia: w genie (locus_tag może się powtarzać w wielu organizmach), dla aptameru i dla rekordów.
+			# zrobic domyslny ID, bo locus tak moze nie byc unikalny, jesli mamy wiele genomow np. plazmidowe w organizmie [ZROBIONE]
+			@ - W organizmie dodać accession number i ID buildu. Na co klucz główny, bo na razie jest na nazwę naukową? [ZROBIONE]
+			# klucz glowny na build
+			@ - Jeśli w taksonomii najniżej jest gatunek, to czy relacja nie powinna być jeden do jednego dla organizm - taksonomia? [ZROBIONE]
+			# ma tak zostac, bo dla jednego gatunku moze byc np. wiele buildow lub genomow
+			@ - Czy do ligandu dać pole z jakimś ID np. do bazy danych? [ZROBIONE]
+			# nie, na nazwe niech zostanie
 	- Jakieś pole z ID dla klasy aptamerów?
 	# do przemyslenia
-		@ - Struktura 3D powinna pójść do klasy, nie rodziny
-		# Tak
+			@ - Struktura 3D powinna pójść do klasy, nie rodziny [ZROBIONE]
+			# Tak
 	- Struktura 2D with_ligand, without_ligand zostaje? Jak to uzupełniać?
 	# Nie wiadomo. Trzeba będzie zrobić przegląd literatury i ogarnąć, czy ma to w ogóle sens
-		@ - Wywalić sekwencję z aptamera?
-		# wywalamy
-		@ - Scory dla terminatorów, promotorów i aptamerów? Albo nowe pole, albo nowa encja
-		# tak, pole
-		@ - Czy sekwencję zamieścić w tej głównej encji rekord?
-		# tak, sekwencja okna
+			@ - Wywalić sekwencję z aptamera? [ZROBIONE]
+			# wywalamy
+			@ - Scory dla terminatorów, promotorów i aptamerów? Albo nowe pole, albo nowa encja [ZROBIONE]
+			# tak, pole
+			@ - Czy sekwencję zamieścić w tej głównej encji rekord? [ZROBIONE]
+			# tak, sekwencja okna
 		@ - Co robimy z operonami? Nie możemy tego zastąpić relacją jeden do wielu?
 		# Możemy	
-		@ - W jaki sposób uwzględnić Shine-Dalgarno?
-		# jako pole tak jak promotor i terminator
+			@ - W jaki sposób uwzględnić Shine-Dalgarno? [ZROBIONE]
+			# jako pole tak jak promotor i terminator
 
 $$$ Wątpliwości dot. zawartości pracy licencjackiej: $$$
 	- Czy opisuję etap poszukiwania shine-dalgarno? A jak tak, to czy wtedy też opisuję te wszystkie programy?

@@ -26,9 +26,11 @@ application = get_wsgi_application()
 ''' Finally import out models '''
 from database.models import *
 ''' To use managing functions inside script: '''
-#from django.core.management import execute_from_command_line
+from django.core.management import execute_from_command_line
 ''' Removes whole data from database. Comment following line if it's not necessary ''' ###################################
-#execute_from_command_line([argv[0], 'flush', '--noinput'])
+
+if(len(argv) >= 3 and argv[2] == "purge"):
+	execute_from_command_line([argv[0], 'flush', '--noinput'])
 
 
 def imageValidation(name):
@@ -54,6 +56,16 @@ def convertToListForInt(line, delimiter = ','):
 		if line != '':
 			line = line.split(delimiter)
 			return([int(elem.strip()) for elem in line])
+		else:
+			return([])
+	else:
+		return([line])
+
+def convertToListForFloat(line, delimiter = ','): # Modified for floats
+	if not isinstance(line, float):
+		if line != '':
+			line = line.split(delimiter)
+			return([float(elem.strip()) for elem in line])
 		else:
 			return([])
 	else:
@@ -195,11 +207,12 @@ for row in dList:
 			if pdb != '':
 				Structure3D.objects.create(
 					pdbid = pdb,
-					ribo_family = v_ribofamily,
+					ribo_class = v_riboclass,
+					#ribo_family = v_ribofamily,
 				)
 		except IntegrityError as e:
 			if match("UNIQUE", str(e)):
-				print('Error. Object Structure3D has been already assigned to RiboFamily. {}'.format(str(e)) )
+				print('Error. Object Structure3D has been already assigned to RiboClass. {}'.format(str(e)) )
 			else:
 				print(e)
 
@@ -247,12 +260,13 @@ for row in dList:
 
 	''' Organism '''
 	try:
-		if row['scientific_name'] != '':
+		if row['build_id'] != '':
 			if v_taxonomies != []:
 				v_organism = Organism.objects.create(
 					scientific_name = row['scientific_name'],
 					common_name = row['common_name'],
 					accession_number = row['organism_accession_number'],
+					build_id = row['build_id'],
 					taxonomy = v_taxonomies[-1],
 				)
 			else:
@@ -260,10 +274,12 @@ for row in dList:
 					scientific_name = row['scientific_name'],
 					common_name = row['common_name'],
 					accession_number = row['organism_accession_number'],
+					build_id = row['build_id'],
 				)
+
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_organism = Organism.objects.get(scientific_name = row['scientific_name'])
+			v_organism = Organism.objects.get(build_id = row['build_id'])
 			if v_taxonomies != []: # If an organism already exists and taxonomy was given, assign the taxonomy to the organism
 				v_organism.taxonomy = v_taxonomies[-1]
 				v_organism.save()
@@ -351,13 +367,34 @@ for row in dList:
 
 
 	''' Switch '''
-	v_record = Record.objects.create(
-		family = v_ribofamily,
-		gene = v_gene,
-		name = row['switch_name'],
-		effect = row['effect'],
-		mechanism = _mechanism,
-	)
+	if v_gene != None:
+		v_record = Record.objects.create(
+			family = v_ribofamily,
+			gene = v_gene,
+			name = row['switch_name'],
+			effect = row['effect'],
+			mechanism = _mechanism,
+			sequence = row['sequence'],
+		)
+	else:
+		for e in Organism.objects.all():
+			print('\n\n')
+			print(e)
+			print('\n\n')
+
+		for e in Taxonomy.objects.all():
+			print('\n\n')
+			print(e)
+			print('\n\n')
+
+		print("\n\n------------------------\n\n")
+
+		for e in Record.objects.all():
+			print('\n\n')
+			print(e)
+			print('\n\n')
+
+		continue
 
 
 	''' Mechanism Confirmation '''
@@ -379,6 +416,7 @@ for row in dList:
 			end = row['terminator_end'],
 			location = row['location'],
 			strand = row['strand'],
+			score = rowe['terminator_score'],
 			)
 	else:
 		v_record.terminator = None
@@ -390,40 +428,59 @@ for row in dList:
 			end = row['promoter_end'],
 			location = row['location'],
 			strand = row['strand'],
+			score = rowe['promoter_score'],
 			)
 	else:
 		v_record.promoter = None
-	
+
+	''' Shine-Dalgarno '''
+	if row['sd_start'] != 0 or row['sd_end'] != 0:
+		v_record.shinedalgarno = Position.objects.create(
+			start = row['sd_start'], 
+			end = row['sd_end'],
+			location = row['location'],
+			strand = row['strand'],
+			score = rowe['sd_score'],
+			)
+	else:
+		v_record.shinedalgarno = None
+
+
 	v_record.save()
 
 
 	''' Aptamer '''
-	v_ap_sequence = convertToList(row['aptamer_sequence'])
 	v_ap_start = convertToListForInt(row['aptamer_start'])
 	v_ap_end = convertToListForInt(row['aptamer_end'])
+	v_ap_score = convertToListForFloat(row['aptamer_score'])
 	v_ap_temp = None
 	#v_structures2d
 
+	print(v_ap_start)
+
 	complete_coordinates = minimumButNotZero( len(v_ap_start), len(v_ap_end) ) # It's a number of complete pairs of values [start, end]
-	biggest_length = maximum( len(v_ap_sequence), complete_coordinates )
+	biggest_length = complete_coordinates
+	print(biggest_length)
 
-	for id in range(0, biggest_length):
-		v_ap_temp = Aptamer.objects.create(switch = v_record)
+	if not(len(v_ap_start) <= 1 and len(v_ap_end) <= 1 and v_ap_start[0] == 0 and v_ap_end[0] == 0):
+		for id in range(0, biggest_length):
+			v_ap_temp = Aptamer.objects.create(switch = v_record)
 
-		v_ap_temp.position = Position.objects.create(
-			start = Position._meta.get_field('start').get_default() if indexOutOfRange(v_ap_start, id) else v_ap_start[id], 
-			end = Position._meta.get_field('end').get_default() if indexOutOfRange(v_ap_end, id) else v_ap_end[id],
-			location = row['location'],
-			strand = row['strand'],
-		)
+			v_ap_temp.position = Position.objects.create(
+				start = Position._meta.get_field('start').get_default() if indexOutOfRange(v_ap_start, id) else v_ap_start[id], 
+				end = Position._meta.get_field('end').get_default() if indexOutOfRange(v_ap_end, id) else v_ap_end[id],
+				location = row['location'],
+				strand = row['strand'],
+			)
 
-		if not indexOutOfRange(v_structures2d, id):
-			v_ap_temp.structure = v_structures2d[id]
+			if not indexOutOfRange(v_structures2d, id):
+				v_ap_temp.structure = v_structures2d[id]
 
-		if not indexOutOfRange(v_ap_sequence, id):
-			v_ap_temp.sequence = v_ap_sequence[id]
+			if not indexOutOfRange(v_ap_score, id):
+				v_ap_temp.position.score = v_ap_score[id]
+				v_ap_temp.position.save()
 
-		v_ap_temp.save()
+			v_ap_temp.save()
 
 
 	''' Add ManyToMany relations '''
