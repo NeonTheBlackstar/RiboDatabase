@@ -66,9 +66,8 @@ $(document).ready(function() {
 
     $('#jstree-organism').click(function(event) {
     	var organism = $('#jstree-organism').jstree('get_selected').toString();
-    	console.log({{childrens|safe}})
-    	console.log(organism)
-    	if($.inArray(organism, {{ childrens|safe }}) === 0) {
+
+    	if($.inArray(organism, {{ childrens|safe }}) !== -1) {
     		window.location = organism.replace(' ', '_');
     	}
     });

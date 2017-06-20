@@ -68,6 +68,11 @@ tfoot input {
     margin-right: 5px;
 }
 
+.green {
+    background-color: #70ad77;
+    color: white;
+}
+
 .jstree-anchor:hover {
     background-color: #e8eff7 !important;
 }
@@ -163,6 +168,11 @@ tfoot input {
     margin-left: 10px;
 }
 
+.social-icon {
+    height: 52px;
+    margin-left: 15px;
+}
+
 /***** End of classes *****/
 
 /***** IDs *****/
@@ -174,6 +184,18 @@ tfoot input {
 /* Advanced search button - under the search bar */
 #advanced-search-btn {
     padding-top: 10px;
+}
+
+#map_container{
+  position: relative;
+}
+
+#map{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 22.25%;
+    padding-top: 30px;
+    position: relative;
 }
 
 /* Always on the bottom of the site */
