@@ -127,7 +127,7 @@ class Organism(models.Model):
 	taxonomy = models.OneToOneField('Taxonomy', null = True) ### !!! NEW !!! ###
 
 	def __str__(self):
-		return 'Or: {} {} {} |{}|'.format(self.scientific_name, self.common_name, self.accession_number, self.taxonomy)
+		return 'Or: {} {} {} {} |{}|'.format(self.scientific_name, self.common_name, self.accession_number, self.build_id, self.taxonomy)
 
 
 class Taxonomy(models.Model):

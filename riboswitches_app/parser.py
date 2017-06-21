@@ -132,7 +132,7 @@ def loadDataToDictionary(fileName):
 		'structure_3d':					Structure3D._meta.get_field('pdbid').get_default(),						# [ Array ]
 	}
 
-	extension = fileName.split('.')[1]
+	extension = fileName.split('.')[-1]
 	if extension == 'csv':
 		return csvParser(d, fileName)
 	elif extension == 'xml':

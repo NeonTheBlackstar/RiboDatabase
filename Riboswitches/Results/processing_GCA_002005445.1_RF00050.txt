@@ -1,0 +1,151 @@
+# cmsearch :: search CM(s) against a sequence database
+# INFERNAL 1.1.1 (July 2014)
+# Copyright (C) 2014 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query CM file:                         ./Alignments/RF00050.cm
+# target sequence database:              ./aptamer_windows.fasta
+# output directed to file:               ./Results/processing_GCA_002005445.1_RF00050.txt
+# search top-strand only:                on
+# number of worker threads:              4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FMN  [CLEN=140]
+Accession:   RF00050
+Description: FMN riboswitch (RFN element)
+Hit scores:
+ rank     E-value  score  bias  sequence                                                      start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  ------------------------------------------------------------ ------ ------   --- ----- ----  -----------
+  (1) !   1.1e-30  123.9   0.0  A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome      138    291 +  cm    no 0.62  -
+  (2) !     0.006   21.7   0.0  A0U92_06465|500|200|1449259|1449805|-|A0U92_06465|chromosome    130    250 +  cm    no 0.63  -
+ ------ inclusion threshold ------
+  (3) ?       0.7   14.1   0.0  A0U92_07795|500|200|1744316|1745726|+|A0U92_07795|chromosome     54    174 +  cm    no 0.58  -
+  (4) ?       6.9   10.4   0.0  A0U92_06840|500|200|1533191|1534688|-|A0U92_06840|chromosome    543    615 +  cm    no 0.59  -
+
+
+Hit alignments:
+>> A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (1) !   1.1e-30  123.9   0.0  cm        1      140 []         138         291 + .. 0.98    no 0.62
+
+                                                                   vv                                                NC
+                                                                 ::((((((((,,,,,,<<<_______>>>,,,,,<<<<_____________ CS
+                                                         FMN   1 aaucguccUCaGGGCaGGGUGaAAUUCCCuACCGGCGGUAAuuaauuaaau 51 
+                                                                 A   GU:CUCAGGGC+GGGUG AAUUCCC ACCGGCGGUAAU   U    +
+  A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome 138 AGACGUUCUCAGGGCGGGGUGCAAUUCCCCACCGGCGGUAAUCGCUCCCGA 188
+                                                                 *****************************************9999999888 PP
+
+                                                                                                                     NC
+                                                                 __........____>>>>,,,,,,,,,,,,......,,,,,,,,,,,,,,, CS
+                                                         FMN  52 uu........aAGcCCGCGAgCguuuaaaa......uuuuaaagucagcaG 88 
+                                                                 ++        AAGCCCGCGAGCG+ U+  +      +   A +GUCAGCAG
+  A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome 189 AAggaagcggAAGCCCGCGAGCGCCUUCCUcucacgAGGCAGGGUCAGCAG 239
+                                                                 8899*********************99999******999999********* PP
+
+                                                                                                                 vv  NC
+                                                                 ,<<<<<_______>>>>>,,,,,<<<______>>>,,,,,,,)))))))): CS
+                                                         FMN  89 AuccGGUGaaAuUCCggaGCCGACgGUAuAGUCcGGAUGgaAGAggacgaa 139
+                                                                 AUCCGGUG+AAUUCCGGAGCCGACGGUAUAGUCCGGAUG+AAGAG:AC   
+  A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome 240 AUCCGGUGUAAUUCCGGAGCCGACGGUAUAGUCCGGAUGAAAGAGAACAGC 290
+                                                                 *************************************************** PP
+
+                                                                   NC
+                                                                 : CS
+                                                         FMN 140 a 140
+                                                                 +
+  A0U92_02735|386|200|617037|618084|+|A0U92_02735|chromosome 291 G 291
+                                                                 * PP
+
+>> A0U92_06465|500|200|1449259|1449805|-|A0U92_06465|chromosome  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (2) !     0.006   21.7   0.0  cm        1      140 []         130         250 + .. 0.91    no 0.63
+
+                                                                        vvv                                          NC
+                                                                   ::((((((((,,,,,,<<<_______>>>,,,,,<<<<___________ CS
+                                                           FMN   1 aaucguccUCaGGGCaGGGUGaAAUUCCCuACCGGCGGUAAuuaauuaa 49 
+                                                                    A:CG   :C GGGCA: G G A UUC :  CC G GGUAA+    + A
+  A0U92_06465|500|200|1449259|1449805|-|A0U92_06465|chromosome 130 GAGCGCAAGCUGGGCAAUGCGGACUUCAUCGCCCGUGGUAAACCGGAGA 178
+                                                                   *******************************************999999 PP
+
+                                                                                                                     NC
+                                                                   ____.....____>>>>,,,,,,,,,,,,,,,,,,,,,,,,,,,,     CS
+                                                           FMN  50 auuu.....aAGcCCGCGAgCguuuaaaauuuuaaagucagcaGA     89 
+                                                                   +U U     AA CCC CGAGCGU U  +                 
+  A0U92_06465|500|200|1449259|1449805|-|A0U92_06465|chromosome 179 UUGUugaggAAACCCGCGAGCGUCUGGUG----------------     207
+                                                                   99999****9***********98877655................     PP
+
+                                                                                        vvv      NC
+                                                                   ~~~~~~~~~~~~,,,,,,,)))))))):: CS
+                                                           FMN  90 *[17]**[17]*GAUGgaAGAggacgaaa 140
+                                                                               GA GG AG:   CG:  
+  A0U92_06465|500|200|1449259|1449805|-|A0U92_06465|chromosome 208 *[11]**[15]*GAAGGCAGCACUCGCCC 250
+                                                                   ...6.....9..***************** PP
+
+>> A0U92_07795|500|200|1744316|1745726|+|A0U92_07795|chromosome  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (3) ?       0.7   14.1   0.0  cm        1      140 []          54         174 + .. 0.78    no 0.58
+
+                                                                                                                     NC
+                                                                   ::((((((((,,,,,,<<<_______>>>,,,,,<<<<___________ CS
+                                                           FMN   1 aaucguccUCaGGGCaGGGUGaAAUUCCCuACCGGCGGUAAuuaauuaa 49 
+                                                                   A ::G::: C G    G GU  A U C C AC GGCGG A U +  U+ 
+  A0U92_07795|500|200|1744316|1745726|+|A0U92_07795|chromosome  54 AGCAGCUUGCCG--AUGCGU--AUUACGCAACAGGCGGCAGUGUGGUUG 98 
+                                                                   **********75..567776..5555************99777666555 PP
+
+                                                                                                                     NC
+                                                                   ~~~~~~>>>>,,,,,,,,,,,,,,,,,,,,,,,,,,,,~~~~~~      CS
+                                                           FMN  50 *[ 8]*CCGCGAgCguuuaaaauuuuaaagucagcaGA*[17]*      106
+                                                                         CCGCGAGC +   AA+  UUA +G              
+  A0U92_07795|500|200|1744316|1745726|+|A0U92_07795|chromosome  99 *[16]*CCGCGAGCACACCAAUCGUUACGGC-------*[11]*      150
+                                                                   ...6..********99888877555555444..........6..      PP
+
+                                                                                           NC
+                                                                   ~~~~~~,,,,,,,)))))))):: CS
+                                                           FMN 107 *[17]*GAUGgaAGAggacgaaa 140
+                                                                         GAUG+  G :::C:: +
+  A0U92_07795|500|200|1744316|1745726|+|A0U92_07795|chromosome 151 *[ 7]*GAUGACGGUAAGCUGGU 174
+                                                                   ...*..***************** PP
+
+>> A0U92_06840|500|200|1533191|1534688|-|A0U92_06840|chromosome  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (4) ?       6.9   10.4   0.0  cm        1      140 []         543         615 + .. 0.89    no 0.59
+
+                                                                        v          v           v                     NC
+                                                                   ::((((((((,,,,,,<<<_______>>>,,,,,~~~~~~,,,,,,,,, CS
+                                                           FMN   1 aaucguccUCaGGGCaGGGUGaAAUUCCCuACCG*[27]*GAgCguuua 70 
+                                                                   A ::: :: C GG C  GGUG AA UCC  A CG      GA CG    
+  A0U92_06840|500|200|1533191|1534688|-|A0U92_06840|chromosome 543 ACGGCCAUUCCGGUCUGGGUGGAAGUCCAGAUCG*[ 1]*GAACGGCC- 585
+                                                                   *****************************99886...9..77776554. PP
+
+                                                                                                             v      NC
+                                                                   ,,,,,,,,,,,,,,,,,,,~~~~~~~~~~~~,,,,,,,)))))))):: CS
+                                                           FMN  71 aaauuuuaaagucagcaGA*[17]**[17]*GAUGgaAGAggacgaaa 140
+                                                                                                  GAU G AG :: :::++
+  A0U92_06840|500|200|1533191|1534688|-|A0U92_06840|chromosome 586 -------------------*[ 7]**[ 6]*GAUUGUAGGAUUGCCUG 615
+                                                                   ......................6.....9..***************** PP
+
+
+
+Internal CM pipeline statistics summary:
+----------------------------------------
+Query model(s):                                                  1  (140 consensus positions)
+Target sequences:                                             3200  (2172259 residues searched)
+Target sequences re-searched for truncated hits:              3200  (1875200 residues re-searched)
+Windows   passing  local HMM SSV           filter:            2721  (0.2088); expected (0.35)
+Windows   passing  local HMM Viterbi       filter:                  (off)
+Windows   passing  local HMM Viterbi  bias filter:                  (off)
+Windows   passing  local HMM Forward       filter:             110  (0.007415); expected (0.005)
+Windows   passing  local HMM Forward  bias filter:             105  (0.00709); expected (0.005)
+Windows   passing glocal HMM Forward       filter:              46  (0.003527); expected (0.005)
+Windows   passing glocal HMM Forward  bias filter:              46  (0.003527); expected (0.005)
+Envelopes passing glocal HMM envelope defn filter:              44  (0.001699); expected (0.005)
+Envelopes passing  local CM  CYK           filter:               8  (0.0001888); expected (0.0001)
+Total CM hits reported:                                          4  (0.0001159); includes 0 truncated hit(s)
+
+# CPU time: 1.93u 0.01s 00:00:01.94 Elapsed: 00:00:00.52
+//
+[ok]

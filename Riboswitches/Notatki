@@ -228,8 +228,8 @@ Nazwe organizmu i taksonomie moge zwracac returnem z getFasta. Lokacje też.
 ############## 12.06.17 #################
 
 $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
-		@ - Jak przewidywać mechanizm i efekt?
-		# nie będziemy, czyli Unknown
+			@ - Jak przewidywać mechanizm i efekt?
+			# nie będziemy, czyli Unknown [ZROBIONE]
 	- Co robimy z alignmentem klas? Pobieramy z jakiejś bazy? W plikach CM nie ma reprezentacji dot-bracket.
 	# 
 			@ - Co z sekwencją genomu?
@@ -240,8 +240,8 @@ $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
 		# ogarnąć przy pobieraniu z bazy ncbi
 			@ - Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp? [ZROBIONE]
 			# tak, hp
-		@ - Problem z niepełną taksonomią
-		# do ogarnięcia przez Szymona i Andrzeja
+			@ - Problem z niepełną taksonomią
+			# do ogarnięcia przez Szymona i Andrzeja [ZROBIONE]
 		@ - Location? Co tam powinno być?
 		# genom
 			@ - Accession number dla genomu? [ZROBIONE]
@@ -251,7 +251,9 @@ $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
 	- Nazwa dla całego ryboswitcha? Jak generować?
 	# do zastanowienia
 	- Czy jak szukam aptameru, to powinienem przetłumaczyć sekwencję na RNA (w sensie że uracyl)?
-	# 
+	#
+		@ Sekwencję okna wczytać!
+		#
 
 $$$ Wątpliwości dot. bazy danych: $$$
 	- Czy struktura 2D będzie tylko dla aptamerów, czy dla terminatorów też (np. wizualizacja związania Shine-Dalgarno)?
@@ -313,6 +315,10 @@ Dla genów, przy których znaleziono aptamer, ale nie było terminatora:
 4) Na tym pliku multifasta uruchamiany jest barriers z argumentem minimalne deltaEnergy = 3.
 5) Sprawdź, czy formy suboptymalne tworzą postać ryboprzełącznika.
 - skrypt sprawdza, czy 60% nukleotydów budujących Shine-Dalgarno jest związanych.
+
+############## 21.06.17 #################
+
+
 
 '''
 '''_______________________________________________________________________'''

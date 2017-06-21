@@ -1,4 +1,4 @@
-organism_accession_number	build_id	taxonomy_id	gene_name	location	locus_tag	gene_start	gene_end	strand	class_name	class_description	aptamer?name	aptamer_start	aptamer_end	aptamer?score	terminator_start	terminator_end	terminator?score
+organism_accession_number	build_id	taxonomy_id	gene_name	location	locus_tag	gene_start	gene_end	strand	class_name	class_description	aptamer?name	aptamer_start	aptamer_end	aptamer_score	terminator_start	terminator_end	terminator_score
 NC_000964.3	ASM904v1	224308	pbuE	chromosome	BSU05800	625124	626291	-	Purine	Purine riboswitch	RF00167_626345	626345	626444	9e-14	626331	626373	100
 NC_000964.3	ASM904v1	224308	pbuG	chromosome	BSU06370	694661	695984	+	Purine	Purine riboswitch	RF00167_694424	694424	694525	1e-16	694579	694600	100
 NC_000964.3	ASM904v1	224308	purE	chromosome	BSU06420	698611	699100	+	Purine	Purine riboswitch	RF00167_698368	698368	698469	4.1e-17	698520	698565	88

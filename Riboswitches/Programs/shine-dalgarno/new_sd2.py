@@ -174,7 +174,7 @@ def getFasta(*arg):
 		for feature in record.features:
 			if firstLine:
 				location = feature.qualifiers['genome'][0] # Na pewno to to?
-				scientificName = feature.qualifiers['sub-species'][0] # Nie zostawiamy tego raczej tak?
+				#scientificName = feature.qualifiers['sub-species'][0] # Nie zostawiamy tego raczej tak?
 				taxonomy = feature.qualifiers['Dbxref'][0].split(":")[1]
 				firstLine = False
 

@@ -1,0 +1,3 @@
+organism_accession_number	build_id	taxonomy_id	gene_name	location	locus_tag	gene_start	gene_end	strand	class_name	class_description	aptamer?name	aptamer_start	aptamer_end	aptamer_score	terminator_start	terminator_end	terminator_score
+GCA_002005445.1	ASM200544v1	435	A0U92_02735	chromosome	A0U92_02735	617037	618084	+	FMN	FMN riboswitch (RFN element)	RF00050_616788	616788	616941	1.1e-30	0	0	0
+GCA_002005445.1	ASM200544v1	435	gcvT	chromosome	A0U92_12395	2764495	2765629	+	Glycine	Glycine riboswitch	RF00504_2764251	2764251	2764340	1.3e-13	0	0	0

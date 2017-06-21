@@ -33,7 +33,7 @@ def searcher(request):
                 'ligand': None,
                 'organism': None,
             }
-            dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
+            dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() else dic['ligand']
             dic['organism'] = e.gene.organism.scientific_name if e.gene.organism.scientific_name != None else dic['organism']
             recordList.append(dic.copy())
 
@@ -75,21 +75,25 @@ def class_family_browser(request):
         }
         dic['name'] = i.name
         for j in RiboFamily.objects.all():
+            print(j)
             if j.ribo_class.name == i.name:
                 families.append(j.name)
             dic['families'] = families
         families = []
         result.append(dic.copy())
-
     context = {
         'result': result,
     }
+    print(context['result'])
 
     return render(request, 'database/class_family_browser.html', context)
 
 def class_family_details(request, family):
 
     families_list = []
+
+    print('############')
+    print(family)
 
     for e in Record.objects.all():
         if e.family != None:
@@ -104,7 +108,7 @@ def class_family_details(request, family):
                 dic['gene'] = e.gene.name if e.gene != None else dic['gene']
                 dic['name'] = e.name if e.name != None else dic['name']
                 dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
-                dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() != None else dic['ligand']
+                dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() else dic['ligand']
                 families_list.append(dic.copy())
 
     context = {

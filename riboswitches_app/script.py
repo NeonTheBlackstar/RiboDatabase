@@ -166,6 +166,7 @@ for row in dList:
 
 
 	''' RiboClass '''
+	print(row['class_name'])
 	try:
 		if row['class_name'] != '':
 			v_riboclass = RiboClass.objects.create(
@@ -177,6 +178,7 @@ for row in dList:
 		if match("UNIQUE", str(e)):
 			v_riboclass = RiboClass.objects.get(name = row['class_name'])
 
+	print(v_riboclass)
 
 	''' RiboFamily '''
 	try:
@@ -196,8 +198,9 @@ for row in dList:
 			)
 	except IntegrityError as e:
 		if match("UNIQUE", str(e)):
-			v_ribofamily = RiboFamily.objects.get(name = row['family_name'])
+			v_ribofamily = RiboFamily.objects.get(name = row['class_name'])
 
+	print(v_ribofamily)
 
 	''' Structure 3D '''
 	pdb_ids = convertToList(row['structure_3d'])
@@ -221,20 +224,16 @@ for row in dList:
 	''' Taxonomy '''
 	tax_names = convertToList(row['taxonomy_name'])
 
+	if not isinstance(row['taxonomy_id'], int):
+		tax_ids = convertToListForInt(row['taxonomy_id'])
+	elif isinstance(row['taxonomy_id'], int): # Because default value is Integer 0
+		tax_ids = []
+
 	if tax_names != []:
-
-		if not isinstance(row['taxonomy_id'], int):
-			tax_ids = convertToListForInt(row['taxonomy_id'])
-		elif isinstance(row['taxonomy_id'], int): #and row['taxonomy_id'] <= 0:
-			tax_ids = []
-
 		complete_coordinates = minimumButNotZero( len(tax_ids), len(tax_names) )
 
 		tax_ids = tax_ids[::-1]
 		tax_names = tax_names[::-1]
-
-		print(tax_ids)
-		print(tax_names)
 
 		for id in range(0, complete_coordinates):
 			v_taxonomy = None
@@ -255,19 +254,29 @@ for row in dList:
 					v_taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[id])
 
 			v_taxonomies.append(v_taxonomy)
+	elif tax_ids != [] and tax_names == []: # No names but IDs
+		print("\nLOL {}\n".format(tax_ids))
+		for id in tax_ids:
+			if not Taxonomy.objects.filter(taxonomy_id = id):
+				print(id)
+				os.system("python3 ../riboswitches_app/tax_parser.py {}".format(id))
+				os.system("python3 ../riboswitches_app/script.py ../riboswitches_app/taxonomy.csv")
+				os.system("rm ../riboswitches_app/taxonomy.csv")
 
 #################################################################################################################################################################################################
 
 	''' Organism '''
+	print("XXX | {} |\n {}|\n".format(Taxonomy.objects.get(taxonomy_id = tax_ids[0]), tax_ids))
 	try:
 		if row['build_id'] != '':
-			if v_taxonomies != []:
+			if tax_ids != []:
 				v_organism = Organism.objects.create(
-					scientific_name = row['scientific_name'],
+					#scientific_name = row['scientific_name'], 
+					scientific_name = Taxonomy.objects.get(taxonomy_id = tax_ids[0]).name, 
 					common_name = row['common_name'],
 					accession_number = row['organism_accession_number'],
 					build_id = row['build_id'],
-					taxonomy = v_taxonomies[-1],
+					taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[0]),
 				)
 			else:
 				v_organism = Organism.objects.create(
@@ -340,7 +349,7 @@ for row in dList:
 				v_articles.append(temp_art)
 
 
-	''' Operon Genes - ManyToMany relation '''
+	''' Operon Genes - ManyToMany relation ogarnac wczytywanie wielu genow w encji gen'''
 	operon_list = convertToList(row['operon_genes'])
 	temp_gene = None
 
@@ -416,7 +425,7 @@ for row in dList:
 			end = row['terminator_end'],
 			location = row['location'],
 			strand = row['strand'],
-			score = rowe['terminator_score'],
+			score = row['terminator_score'],
 			)
 	else:
 		v_record.terminator = None
@@ -428,7 +437,7 @@ for row in dList:
 			end = row['promoter_end'],
 			location = row['location'],
 			strand = row['strand'],
-			score = rowe['promoter_score'],
+			score = row['promoter_score'],
 			)
 	else:
 		v_record.promoter = None
@@ -440,7 +449,7 @@ for row in dList:
 			end = row['sd_end'],
 			location = row['location'],
 			strand = row['strand'],
-			score = rowe['sd_score'],
+			score = row['sd_score'],
 			)
 	else:
 		v_record.shinedalgarno = None
@@ -456,11 +465,8 @@ for row in dList:
 	v_ap_temp = None
 	#v_structures2d
 
-	print(v_ap_start)
-
 	complete_coordinates = minimumButNotZero( len(v_ap_start), len(v_ap_end) ) # It's a number of complete pairs of values [start, end]
 	biggest_length = complete_coordinates
-	print(biggest_length)
 
 	if not(len(v_ap_start) <= 1 and len(v_ap_end) <= 1 and v_ap_start[0] == 0 and v_ap_end[0] == 0):
 		for id in range(0, biggest_length):

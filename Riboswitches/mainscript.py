@@ -16,12 +16,12 @@ from time import sleep, localtime, strftime
 ### HELPER FUNCTIONS ###
 
 def makeAptamersBed(genome):
-	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $7, $8, $2, $9, $5}\' ./Results/"+genome+".result > ./Results/apt.bed")
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $7, $8, $2, $9, $5}\' ./Results/"+genome+".result.csv > ./Results/apt.bed")
 
 #chr, {6}, {7}, {1}, {8}, {4} // liczone od 0
 
 def makePromotersBed(genome):
-	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $2, 0, $5}\' ./Results/"+genome+".result > ./Results/prom.bed")
+	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $2, 0, $5}\' ./Results/"+genome+".result.csv > ./Results/prom.bed")
 
 #chr, {10}, {11}, {9}, 0, {4} // liczone od 0
 
@@ -73,7 +73,7 @@ def aptamers(
 	lista = []
 	lista = os.listdir('Alignments')
 
-	finalFile = open("./Results/{0}.result".format(genome), "w")
+	finalFile = open("./Results/{0}.result.csv".format(genome), "w")
 	
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
@@ -114,7 +114,7 @@ def aptamers(
 		"aptamer?name\t"+
 		"aptamer_start\t"+
 		"aptamer_end\t"+
-		"aptamer?score\t"+
+		"aptamer_score\t"+
 		"\n")
 	
 	for i in range(0, len(lista)):
@@ -149,7 +149,7 @@ def aptamers(
 					continue
 
 			if start_scanning == False:
-				if len(temp) > 5 and temp[5].startswith("BSU") and temp[12] == "-":	
+				if len(temp) > 5 and temp[5].startswith("A0U") and temp[12] == "-":	####################### OGARNAC TO!!!
 					''' Filter outputed aptamers '''
 					# E-value
 					apt_e_value = float(temp[2])
@@ -217,16 +217,16 @@ def aptamers(
 	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
 	# Posortuj plik wynikowy
-	os.system('head -n 1 ./Results/{0}.result > ./Results/{0}_temp.result'.format(genome))
-	os.system('tail -n +2 ./Results/{0}.result | sort -k7,7n >> ./Results/{0}_temp.result'.format(genome))
-	os.system('mv ./Results/{0}_temp.result ./Results/{0}.result'.format(genome))
+	os.system('head -n 1 ./Results/{0}.result.csv > ./Results/{0}_temp.result.csv'.format(genome))
+	os.system('tail -n +2 ./Results/{0}.result.csv | sort -k7,7n >> ./Results/{0}_temp.result.csv'.format(genome))
+	os.system('mv ./Results/{0}_temp.result.csv ./Results/{0}.result.csv'.format(genome))
 
 	#makeAptamersBed(genome)
 
 
 def terminators(genome):
 
-	aptamer_list = createAptamersFilter("./Results/{0}.result".format(genome))
+	aptamer_list = createAptamersFilter("./Results/{0}.result.csv".format(genome))
 	filterWindows(aptamer_list, "aptamer_windows.fasta", "terminator_windows.fasta")
 
 	# Generowanie pliku .coords dla Transterma # 
@@ -234,7 +234,7 @@ def terminators(genome):
 	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
 
 	d = {}
-	with open("transterm_output.tt") as tt_handle, open("./Results/{}.result".format(genome),"r") as result_handle:
+	with open("transterm_output.tt") as tt_handle, open("./Results/{}.result.csv".format(genome),"r") as result_handle:
 		for line in tt_handle:
 			line = line.strip()
 			if line.startswith("SEQUENCE"):
@@ -363,13 +363,13 @@ def terminators(genome):
 		# Zapis do pliku
 		firstLine = True
 		result_handle.seek(0)
-		with open("./Results/{}_temp.result".format(genome),"w") as temp_result:
+		with open("./Results/{}_temp.result.csv".format(genome),"w") as temp_result:
 			for line in result_handle:
 				line = line.strip()
 
 				if firstLine:	# Ommit first line with headers
 					firstLine = False
-					line += "\t" + "terminator_start" + "\t" + "terminator_end" + "\t" + "terminator?score" + "\n"
+					line += "\t" + "terminator_start" + "\t" + "terminator_end" + "\t" + "terminator_score" + "\n"
 				else:
 					line_list = line.strip().split('\t')
 					locus_tag = line_list[5]
@@ -380,7 +380,7 @@ def terminators(genome):
 						line += "\t" + '0' + "\t" + '0' + "\t" + '0' + '\n'			
 				temp_result.write(line)
 
-		os.system("mv \"./Results/{0}_temp.result\" \"./Results/{0}.result\"".format(genome))
+		os.system("mv \"./Results/{0}_temp.result.csv\" \"./Results/{0}.result.csv\"".format(genome))
 
 	os.system('rm aptamer_windows.fasta')
 	os.system('rm terminator_windows.fasta')
