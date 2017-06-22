@@ -68,7 +68,7 @@ $(document).ready(function() {
     	var organism = $('#jstree-organism').jstree('get_selected').toString();
 
     	if($.inArray(organism, {{ childrens|safe }}) !== -1) {
-    		window.location = organism.replace(' ', '_');
+    		window.location = organism.replace(/ /g, '_');
     	}
     });
     

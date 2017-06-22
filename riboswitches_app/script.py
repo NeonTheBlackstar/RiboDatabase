@@ -380,11 +380,11 @@ for row in dList:
 		v_record = Record.objects.create(
 			family = v_ribofamily,
 			gene = v_gene,
-			name = row['switch_name'],
 			effect = row['effect'],
 			mechanism = _mechanism,
 			sequence = row['sequence'],
 		)
+		print(v_record.name())
 	else:
 		for e in Organism.objects.all():
 			print('\n\n')

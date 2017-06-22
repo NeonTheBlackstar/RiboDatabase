@@ -19,7 +19,7 @@ class Record(models.Model):
 	# Sekwencja tutaj? TAK
 	sequence = models.TextField('sekwencja') # Wywalic?
 	
-	name = models.CharField('nazwa', max_length = 20)
+	#name = models.CharField('nazwa', max_length = 20)
 	#riboswitch_id = models.CharField('id', max_length = 20, primary_key = True)
 	#id dodac
 	EFFECT_CHOICES = ( 
@@ -38,8 +38,10 @@ class Record(models.Model):
 	mechanism_confirmation = models.ForeignKey('Article', related_name = 'confirmation', null = True) # ZROBIĆ!
 
 	def __str__(self):
-		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| {} |{}| {} {} |{}| {}'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.name, self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation, self.sequence)
+		return 'RECORD: |{}| |{}| |{}| |{}| |{}| |{}| |{}| {} {} |{}| {}'.format(self.family, self.aptamer_set.all(), self.gene, self.terminator, self.promoter, self.articles.all(), self.genes_under_operon_regulation.all(), self.effect, self.mechanism, self.mechanism_confirmation, self.sequence)
 
+	def name(self):
+		return "RS{}".format((str(self.id).zfill(8)))
 
 class Aptamer(models.Model): #14 dodaję nową encję
 	position = models.OneToOneField('Position', null = True, related_name = 'aptamer_position')

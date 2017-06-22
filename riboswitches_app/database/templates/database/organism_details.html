@@ -34,10 +34,11 @@
 							</tr>
 						</thead>
 							<tbody>
-							{% for rr in riboswitch_record %}
+							{% for i in riboswitch_record %}
 								<tr role="row">
-									<td><a href="{% url 'search:record' rr.name %}">{{ rr.name }}</a></td>
+									<td><a href="{% url 'search:record' i.name %}">{{ i.name }}</a></td>
 								</tr>
+
 							{% endfor %}
 							</tbody>
 					</table>

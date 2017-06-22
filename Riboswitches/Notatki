@@ -236,8 +236,8 @@ $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
 			# sekwencja okna w encji Record [ZROBIONE]
 		@ - Strukutra aptameru i jego sekwencja? Struktura pod polem predicted? Wziąć z plików processing? Jak?
 		# Marianna miała mieć jakiś program do ogarnięcia tego
-		@ - Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu.
-		# ogarnąć przy pobieraniu z bazy ncbi
+			@ - Nazwa organizmu? Nie ma w pliku gff pełnej nazwy. Jakby działała taksonomia, to nie byłoby problemu. [ZROBIONE]
+			# ogarnąć przy pobieraniu z bazy ncbi. JEST WCZYTYWANA Z TAKSONOMII
 			@ - Scory dla terminatorów i aptamerów? Które wartości powinny być scorami? Dla terminatorów entropia czy hp? [ZROBIONE]
 			# tak, hp
 			@ - Problem z niepełną taksonomią
@@ -246,20 +246,20 @@ $$$ Wątpliwości dot. szukania ryboprzełączników: $$$
 		# genom
 			@ - Accession number dla genomu? [ZROBIONE]
 			# tak
-	- Jak by wyglądało pole aptamer_id? Jak generować?
-	# do zastanowienia
-	- Nazwa dla całego ryboswitcha? Jak generować?
-	# do zastanowienia
+			@ - Jak by wyglądało pole aptamer_id? Jak generować? [ZROBIONE]
+			# będzie domyślne ID
+			@ - Nazwa dla całego ryboswitcha? Jak generować? [ZROBIONE]
+			# zrobione
 	- Czy jak szukam aptameru, to powinienem przetłumaczyć sekwencję na RNA (w sensie że uracyl)?
 	#
-		@ Sekwencję okna wczytać!
+		@ - Sekwencję okna wczytać!
 		#
 
 $$$ Wątpliwości dot. bazy danych: $$$
-	- Czy struktura 2D będzie tylko dla aptamerów, czy dla terminatorów też (np. wizualizacja związania Shine-Dalgarno)?
-	# IDK
-	- Czy alignment w RiboClass i RiboFamily to nie to samo co struktura 2D?
-	# IDK
+			$- Czy struktura 2D będzie tylko dla aptamerów, czy dla terminatorów też (np. wizualizacja związania Shine-Dalgarno)?
+			# IDK
+			$- Czy alignment w RiboClass i RiboFamily to nie to samo co struktura 2D?
+			# IDK
 			@ - Klucze główne do zrobienia: w genie (locus_tag może się powtarzać w wielu organizmach), dla aptameru i dla rekordów.
 			# zrobic domyslny ID, bo locus tak moze nie byc unikalny, jesli mamy wiele genomow np. plazmidowe w organizmie [ZROBIONE]
 			@ - W organizmie dodać accession number i ID buildu. Na co klucz główny, bo na razie jest na nazwę naukową? [ZROBIONE]
@@ -268,20 +268,20 @@ $$$ Wątpliwości dot. bazy danych: $$$
 			# ma tak zostac, bo dla jednego gatunku moze byc np. wiele buildow lub genomow
 			@ - Czy do ligandu dać pole z jakimś ID np. do bazy danych? [ZROBIONE]
 			# nie, na nazwe niech zostanie
-	- Jakieś pole z ID dla klasy aptamerów?
-	# do przemyslenia
+			@- Jakieś pole z ID dla klasy aptamerów?
+			# nie będzie pola
 			@ - Struktura 3D powinna pójść do klasy, nie rodziny [ZROBIONE]
 			# Tak
-	- Struktura 2D with_ligand, without_ligand zostaje? Jak to uzupełniać?
-	# Nie wiadomo. Trzeba będzie zrobić przegląd literatury i ogarnąć, czy ma to w ogóle sens
+			@- Struktura 2D with_ligand, without_ligand zostaje? Jak to uzupełniać?
+			# na razie zostaje, w przyszlosci to zalezec bedzie od danych literaturowych, cze beda jakies dostepne z tymi stukturami
 			@ - Wywalić sekwencję z aptamera? [ZROBIONE]
 			# wywalamy
 			@ - Scory dla terminatorów, promotorów i aptamerów? Albo nowe pole, albo nowa encja [ZROBIONE]
 			# tak, pole
 			@ - Czy sekwencję zamieścić w tej głównej encji rekord? [ZROBIONE]
 			# tak, sekwencja okna
-		@ - Co robimy z operonami? Nie możemy tego zastąpić relacją jeden do wielu?
-		# Możemy	
+			@ - Co robimy z operonami? Nie możemy tego zastąpić relacją jeden do wielu?
+			# zostawiamy, bo jestem leniwą bułą
 			@ - W jaki sposób uwzględnić Shine-Dalgarno? [ZROBIONE]
 			# jako pole tak jak promotor i terminator
 
@@ -318,7 +318,13 @@ Dla genów, przy których znaleziono aptamer, ale nie było terminatora:
 
 ############## 21.06.17 #################
 
+xD
 
+############## 22.06.17 #################
+
+Zrobić klucz główny dla ryboprzełącznika RS00000001
+
+# Wyszukiwarka
 
 '''
 '''_______________________________________________________________________'''

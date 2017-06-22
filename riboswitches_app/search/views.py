@@ -9,13 +9,25 @@ def index(request):
     return render(request, 'search/index.html', context)
 
 
-def riboswitches(request):
+def genes(request):
     term = request.GET['term']
     limit = request.GET['limit']
     l = []
 
-    for r in Record.objects.filter(name__icontains=term):
-        l.append({'name':r.name, 'url':"/search/record/{}".format(r.name)},)
+    for g in Gene.objects.filter(name__icontains=term):
+        print(g)
+        l.append({'name':g.name, 'url':"/search/gene/{}".format(g.name)},)
+
+    return JsonResponse(l, safe=False)
+
+
+def organisms(request):
+    term = request.GET['term']
+    limit = request.GET['limit']
+    l = []
+
+    for o in Organism.objects.filter(scientific_name__icontains=term):
+        l.append({'name':o.scientific_name, 'url':"/search/organism/{}".format(o.scientific_name.replace(' ', '_'))},)
 
     return JsonResponse(l, safe=False)
 
@@ -25,17 +37,19 @@ def ligands(request):
     limit = request.GET['limit']
     lig = []
 
-    for l in Ligand.objects.filter(name__contains=term):
+    for l in Ligand.objects.filter(name__icontains=term):
         lig.append({'name':l.name, 'url':"/browser/ligand/{}/".format(l.name)},)
     
     return JsonResponse(lig, safe=False)
+
 
 def record(request, riboswitch_name):
     l = []
     context = {}
 
-    for r in Record.objects.filter(name=riboswitch_name):
-        context['name'] = r.name
+    # Odrzucamy z nazwy dwie pierwsze litery "RS", a część liczbową konwertujemy do Integera
+    for r in Record.objects.filter(id=int(riboswitch_name[2:])):
+        context['name'] = r.name()
         context['organism'] = r.gene.organism.scientific_name
         context['family'] = r.family.name
         context['gene'] = r.gene.name

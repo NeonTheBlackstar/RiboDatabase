@@ -117,6 +117,30 @@ def class_family_details(request, family):
 
     return render(request, 'database/class_family_details.html', context)
 
+def gene_details(request, gene_name):
+
+    recordList = []
+    name = gene_name
+
+    for e in Record.objects.all():
+        if gene_name in str(e.gene.name):
+            dic = {
+                'id': e.id,
+                'name': e.name(),
+                'gene': None,
+            }
+            dic['name'] = e.name() if e.name() != None else dic['name']
+            dic['gene'] = e.gene.name if e.gene.name != None else dic['gene']
+            recordList.append(dic.copy())
+
+    context = {
+        'recordList': recordList,
+        'name': name,
+    }
+
+    return render(request, 'database/ ils.html', context)
+
+
 def ligand_browser(request):
 
     ligand_list = Ligand.objects.all()
@@ -225,16 +249,27 @@ def organism_browser(request):
 def organism_details(request, organism_name):
 
     term = request.get_full_path()
-
     match = re.findall(r'[/](.*?)[/]',term)[-1].replace('_', ' ')
 
-    print(match)
+    # print(match)
 
-    organism = Organism.objects.filter(scientific_name = match)
-    gene = Gene.objects.filter(organism = organism)
-    riboswitch_record = Record.objects.filter(gene = gene)
+    riboswitch_record = []
+
+    for e in Record.objects.all():
+        if match == str(e.gene.organism.scientific_name):
+            dic = {
+                'id': e.id,
+                'name': e.name(),
+                'scientific_name': None,
+            }
+            dic['name'] = e.name() if e.name() != None else dic['name']
+            dic['scientific_name'] = e.gene.organism.scientific_name if e.gene.organism.scientific_name != None else dic['scientific_name']
+            riboswitch_record.append(dic.copy())
+
     context = {
         'riboswitch_record': riboswitch_record,
     }
+
+    print(context)
 
     return render(request, 'database/organism_details.html', context)

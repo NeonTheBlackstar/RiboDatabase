@@ -13,16 +13,16 @@ var Quicksearch = function() {
         var typeahead = $('#quicksearch');
 
         // Search 1
-        var ribo = new Bloodhound({
+        var gene = new Bloodhound({
           datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
           queryTokenizer: Bloodhound.tokenizers.whitespace,
           remote: {
-            url: ROOT_URL + 'riboswitches?term=%QUERY&limit='+LIMIT,
+            url: ROOT_URL + 'genes?term=%QUERY&limit='+LIMIT,
             wildcard: '%QUERY'
            },
           limit: LIMIT
         });
-        ribo.initialize();
+        gene.initialize();
          
         // Search 2 
         var lig = new Bloodhound({
@@ -36,18 +36,43 @@ var Quicksearch = function() {
         });     
         lig.initialize();
 
+        // Search 3 
+        var org = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          remote: {
+            url: ROOT_URL + 'organisms?term=%QUERY&limit='+LIMIT,
+            wildcard: '%QUERY'
+           },
+          limit: LIMIT
+        });   
+        org.initialize();
+
         // Typeahead initialization
         typeahead.typeahead(null, {
-            name: 'ribo',
+            name: 'gene',
             displayKey: 'name',
-            source: ribo.ttAdapter(),
+            source: gene.ttAdapter(),
             templates: {
                 empty: [
                     '<div class="empty-message" style="padding-left: 20px; font-size="16px";>',
                     'No Results',
                     '</div>'
                 ].join('\n'),
-                header: '<h4 class="tt-header search-header">Riboswitches</h4>'
+                header: '<h4 class="tt-header search-header">Genes</h4>'
+            }
+        },
+        {
+            name: 'org',
+            displayKey: 'name',
+            source: org.ttAdapter(),
+            templates: {
+                empty: [
+                    '<div class="empty-message" style="padding-left: 20px; font-size="16px";>',
+                    'No Results',
+                    '</div>'
+                ].join('\n'),
+                header: '<h4 class="tt-header search-header">Organisms</h4>'
             }
         },
         {

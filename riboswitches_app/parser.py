@@ -49,7 +49,7 @@ def loadDataToDictionary(fileName):
 	'''
 	d = {
 			# Record #
-		'switch_name':					Record._meta.get_field('name').get_default(),
+		#'switch_name':					Record._meta.get_field('name').get_default(),
 		'operon_genes':					Record._meta.get_field('genes_under_operon_regulation').get_default(), # [ Array ]
 		'effect':						Record._meta.get_field('effect').get_default(),
 		'mechanism':					Record._meta.get_field('mechanism').get_default(),
