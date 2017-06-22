@@ -69,12 +69,70 @@ def aptamers(
 			if line.startswith("#!genome-build"):
 				genome_build_id = line.split(" ")[1]
 				break
-
-	lista = []
-	lista = os.listdir('Alignments')
-
-	finalFile = open("./Results/{0}.result.csv".format(genome), "w")
 	
+	########### PRZYGOTOWANIE SEKWENCJI ###########
+	''' Prepare separate files for all replicons '''
+	# GFF #
+	with open("./Genomes/{0}.gff".format(genome)) as handle:
+		#replicon_id = ""
+		counter = 0
+		replicon_handle = None
+
+		for line in handle:
+			if line.startswith("##sequence-region"):
+				counter += 1
+				#replicon_id = line.split()[1]
+				replicon_handle = open("./Genomes/{0}-replicon-{1}.gff".format(genome, counter), "w")
+
+			elif not line.startswith("#"):
+				replicon_handle.write(line)
+
+	# FASTA #
+	with open("./Genomes/{0}.fasta".format(genome)) as handle:
+		counter = 0
+		replicon_handle = None
+
+		for line in handle:
+			if line.startswith(">"):
+				counter += 1
+				replicon_handle = open("./Genomes/{0}-replicon-{1}.fasta".format(genome, counter), "w")
+
+			replicon_handle.write(line)
+
+	replicon_files = [ file for file in os.listdir('Genomes') if "replicon" in file ]
+
+	os.system("touch temp.fasta")
+	for file in replicon_files:
+		counter = file.split("-")[-1].split(".")[0]
+		# Sorted by strand
+		os.system("sort -t \"\t\" -k7,7 -k4,4n ./Genomes/{0} > ./Genomes/byStrand_{1}.gff".format(file, counter))
+		# Remove previous file if there's any
+		os.system('rm ./Genomes/{0}_sorted_{1}.gff > /dev/null 2>&1'.format(genome, counter))
+		# Sorted by ascending start position on strand +
+		os.system("awk '$7 == \"+\"' ./Genomes/byStrand_{1}.gff | sort -k4,4n >> ./Genomes/{0}_sorted_{1}.gff".format(genome, counter))
+		# Sorted by descending start position on strand -
+		os.system("awk '$7 == \"-\"' ./Genomes/byStrand_{1}.gff | sort -k5,5nr >> ./Genomes/{0}_sorted_{1}.gff".format(genome, counter))
+
+		organism_info = new_sd2.getFasta(
+			"-gff", "./Genomes/{0}_sorted_{1}.gff".format(genome, counter), 
+			"-fasta", "./Genomes/{0}-replicon-{1}.fasta".format(genome, counter), 
+			"-before", 500, 
+			"-after", 200, 
+			"-aptamer", 50, 
+			"-biotype", "protein_coding",
+			"-exhead", True, 
+			"-intervals", True)
+
+		#os.system("aptamer_windows.fasta >> temp.fasta")
+	
+	#os.system("mv temp.fasta aptamer_windows.fasta")
+
+	'''Nie wiem dlaczego, ale cos sie tutaj za duzo appenduje '''
+
+	##### DEBUG #####
+	print("Debug!")
+	exit()
+
 	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
 	# Sorted by strand
 	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
@@ -95,6 +153,10 @@ def aptamers(
 		"-biotype", "protein_coding",
 		"-exhead", True, 
 		"-intervals", True)
+
+	################################################
+
+	finalFile = open("./Results/{0}.result.csv".format(genome), "w")
 
 	# Add general and aptamer headers
 	finalFile.write(
@@ -117,6 +179,8 @@ def aptamers(
 		"aptamer_score\t"+
 		"\n")
 	
+	lista = os.listdir('Alignments')
+
 	for i in range(0, len(lista)):
 
 		# Read aptamer class info for the result file #
@@ -149,7 +213,9 @@ def aptamers(
 					continue
 
 			if start_scanning == False:
-				if len(temp) > 5 and temp[5].startswith("A0U") and temp[12] == "-":	####################### OGARNAC TO!!!
+				#if len(temp) > 5 and temp[5].startswith("A0U") and temp[12] == "-":	####################### OGARNAC TO!!!
+				if len(temp) > 5 and len(temp) < 16 and temp[0].startswith("(") and temp[12] == "-":	####################### OGARNAC TO!!!
+				
 					''' Filter outputed aptamers '''
 					# E-value
 					apt_e_value = float(temp[2])
@@ -213,7 +279,7 @@ def aptamers(
 	finalFile.close()
 	
 	os.system('rm ./Genomes/byStrand.gff')
-	#os.system("rm ./Results/processing*.txt")
+	os.system("rm ./Results/processing*.txt")
 	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
 	# Posortuj plik wynikowy

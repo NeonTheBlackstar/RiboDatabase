@@ -1,0 +1,9 @@
+NC_017164.1	RefSeq	region	1	8041	.	+	.	ID=id100;Dbxref=taxon:696749;Is_circular=true;Name=ABKp2;gbkey=Src;genome=plasmid;mol_type=genomic DNA;plasmid-name=ABKp2;strain=1656-2
+NC_017164.1	RefSeq	gene	70	585	.	+	.	ID=gene3914;Name=ABK1_RS19400;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19400;old_locus_tag=ABK1_3817
+NC_017164.1	RefSeq	gene	1531	1818	.	+	.	ID=gene3916;Name=ABK1_RS19410;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19410
+NC_017164.1	RefSeq	gene	1805	2119	.	+	.	ID=gene3917;Name=ABK1_RS19415;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19415;old_locus_tag=ABK1_3820
+NC_017164.1	RefSeq	gene	2247	4658	.	+	.	ID=gene3918;Name=ABK1_RS19420;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19420;old_locus_tag=ABK1_3821
+NC_017164.1	RefSeq	gene	4963	5424	.	+	.	ID=gene3919;Name=ABK1_RS19425;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19425;old_locus_tag=ABK1_3822
+NC_017164.1	RefSeq	gene	6276	6653	.	+	.	ID=gene3920;Name=ABK1_RS19430;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19430;old_locus_tag=ABK1_3823
+NC_017164.1	RefSeq	gene	7343	8035	.	+	.	ID=gene3921;Name=ABK1_RS19435;end_range=8035,.;gbkey=Gene;gene_biotype=pseudogene;locus_tag=ABK1_RS19435;partial=true;pseudo=true
+NC_017164.1	RefSeq	gene	797	1225	.	-	.	ID=gene3915;Name=ABK1_RS19405;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ABK1_RS19405;old_locus_tag=ABK1_3818
