@@ -43,7 +43,11 @@ def readAttrb(value, default = None):
 		return(int(value))
 
 
-def loadDataToDictionary(fileName):
+def loadDataToDictionary(fileName, isResult = False):
+	# If result, then redirect to proper filepath
+	if isResult == True:
+		fileName = "../Riboswitches/Results/" + fileName
+
 	'''
 	Dictionary that represents all possible data which can be obtained for a single riboswitch record:
 	'''

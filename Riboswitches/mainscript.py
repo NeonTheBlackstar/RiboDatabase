@@ -62,14 +62,17 @@ def aptamers(
 
 	# Gather build id for taxonomy, before GFF header will be wiped out #
 	genome_build_id = ""
-	# Gather genome build #
+	genome_accession = ""
+	# Gather genome info #
 	with open("./Genomes/{0}.gff".format(genome)) as handle:
 		for line in handle:
 			line = line.strip()
-			if line.startswith("#!genome-build"):
-				genome_build_id = line.split(" ")[1]
+			if line.startswith("#!genome-build-accession"):
+				genome_accession = line.split()[1].split(":")[1]
 				break
-	
+			elif line.startswith("#!genome-build"):
+				genome_build_id = line.split(" ")[1]
+
 	########### PRZYGOTOWANIE SEKWENCJI ###########
 	''' Prepare separate files for all replicons '''
 	# GFF #
@@ -82,10 +85,13 @@ def aptamers(
 			if line.startswith("##sequence-region"):
 				counter += 1
 				#replicon_id = line.split()[1]
+				if replicon_handle != None:
+					replicon_handle.close()
 				replicon_handle = open("./Genomes/{0}-replicon-{1}.gff".format(genome, counter), "w")
 
 			elif not line.startswith("#"):
 				replicon_handle.write(line)
+		replicon_handle.close()
 
 	# FASTA #
 	with open("./Genomes/{0}.fasta".format(genome)) as handle:
@@ -95,11 +101,14 @@ def aptamers(
 		for line in handle:
 			if line.startswith(">"):
 				counter += 1
+				if replicon_handle != None:
+					replicon_handle.close()
 				replicon_handle = open("./Genomes/{0}-replicon-{1}.fasta".format(genome, counter), "w")
 
 			replicon_handle.write(line)
+		replicon_handle.close()
 
-	replicon_files = [ file for file in os.listdir('Genomes') if "replicon" in file ]
+	replicon_files = [ file for file in os.listdir('Genomes') if "replicon" in file and file.endswith("gff") ]
 
 	os.system("touch temp.fasta")
 	for file in replicon_files:
@@ -123,36 +132,13 @@ def aptamers(
 			"-exhead", True, 
 			"-intervals", True)
 
-		#os.system("aptamer_windows.fasta >> temp.fasta")
+		os.system("cat aptamer_windows.fasta >> temp.fasta")
 	
-	#os.system("mv temp.fasta aptamer_windows.fasta")
-
-	'''Nie wiem dlaczego, ale cos sie tutaj za duzo appenduje '''
+	os.system("mv temp.fasta aptamer_windows.fasta")
 
 	##### DEBUG #####
-	print("Debug!")
-	exit()
-
-	''' Sort gff file ascending on strand + and descending on strand - for easier calculations '''
-	# Sorted by strand
-	os.system("tail -n +8 ./Genomes/{0}.gff | head -n -1 | sort -t \"\t\" -k7,7 -k4,4n > ./Genomes/byStrand.gff".format(genome))
-	# Remove previous file if there's any
-	os.system('rm ./Genomes/{0}_sorted.gff > /dev/null 2>&1'.format(genome))
-	# Sorted by ascending start position on strand +
-	os.system("awk '$7 == \"+\"' ./Genomes/byStrand.gff | sort -k4,4n >> ./Genomes/{0}_sorted.gff".format(genome))
-	# Sorted by descending start position on strand -
-	os.system("awk '$7 == \"-\"' ./Genomes/byStrand.gff | sort -k5,5nr >> ./Genomes/{0}_sorted.gff".format(genome))
-
-	''' Create multiple fasta file of propable aptamer regions '''
-	organism_info = new_sd2.getFasta(
-		"-gff", "./Genomes/{0}_sorted.gff".format(sys.argv[1]), 
-		"-fasta", "./Genomes/{0}.fasta".format(genome), 
-		"-before", 500, 
-		"-after", 200, 
-		"-aptamer", 50, 
-		"-biotype", "protein_coding",
-		"-exhead", True, 
-		"-intervals", True)
+	#print("Debug!")
+	#exit()
 
 	################################################
 
@@ -177,6 +163,8 @@ def aptamers(
 		"aptamer_start\t"+
 		"aptamer_end\t"+
 		"aptamer_score\t"+
+		"replicon_id\t"+
+		"sequence\t"+
 		"\n")
 	
 	lista = os.listdir('Alignments')
@@ -213,7 +201,6 @@ def aptamers(
 					continue
 
 			if start_scanning == False:
-				#if len(temp) > 5 and temp[5].startswith("A0U") and temp[12] == "-":	####################### OGARNAC TO!!!
 				if len(temp) > 5 and len(temp) < 16 and temp[0].startswith("(") and temp[12] == "-":	####################### OGARNAC TO!!!
 				
 					''' Filter outputed aptamers '''
@@ -222,8 +209,9 @@ def aptamers(
 					if apt_e_value >= e_value:
 						continue
 
-					# Prepare data #
+					### Prepare data ###
 					d[temp[0]] = {
+						# sequence?
 						'locus_tag': 			temp[5].split('|')[0],
 						'aptamer_start': 		int(temp[6]),
 						'aptamer_end': 			int(temp[7]),
@@ -236,8 +224,27 @@ def aptamers(
 							'strand': 		temp[5].split('|')[5],
 							'name':			temp[5].split('|')[6],
 							'location':		temp[5].split('|')[7],
+							'replicon_id':	temp[5].split('|')[8],
 						}
 					}
+
+					# Get sequence from FASTA file #
+					getSeq = False
+					windowSequence = ""
+					with open("./aptamer_windows.fasta") as apt_handle:
+						for l in apt_handle:
+							if l.startswith(">"):
+								if d[temp[0]]['gene']['locus_tag'] in l:
+									getSeq = True
+								else:
+									if getSeq == True:
+										break
+							else:
+								if getSeq == True:
+									windowSequence += l.strip()
+
+					d[temp[0]]['gene']['sequence'] = windowSequence
+					### END ###
 
 			elif start_scanning == True:# and len(temp) >= 12:
 				if temp[0] in d and temp[8] == '[]': # If aptamer covers whole model
@@ -255,8 +262,8 @@ def aptamers(
 						end = before_pos - d[key]['aptamer_start'] - 1 # -1 because counting starts from 1
 							
 					switch_name = family_id + '_' + str(start)
-					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
-						genome, 
+					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
+						genome_accession, 
 						#organism_info['sc_name'], 
 						genome_build_id,
 						###
@@ -272,15 +279,19 @@ def aptamers(
 						switch_name, 
 						start, 
 						end, 
-						d[key]['score']))
+						d[key]['score'],
+						d[key]['gene']['replicon_id'],
+						windowSequence))
 
 		processingfile.close()
 
 	finalFile.close()
 	
-	os.system('rm ./Genomes/byStrand.gff')
+	os.system('rm ./Genomes/byStrand*.gff')
 	os.system("rm ./Results/processing*.txt")
-	os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
+	os.system('rm ./Genomes/{0}_sorted*.gff'.format(genome))
+	os.system('rm ./Genomes/{0}-replicon*.fasta'.format(genome))
+	os.system('rm ./Genomes/{0}-replicon*.gff'.format(genome))
 
 	# Posortuj plik wynikowy
 	os.system('head -n 1 ./Results/{0}.result.csv > ./Results/{0}_temp.result.csv'.format(genome))
@@ -495,16 +506,24 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 		if not P_exist and not T_exist:
 			final.write('Unknown\n')
 
-a = datetime.now()
-aptamers(sys.argv[1])
-#promoters()
-terminators(sys.argv[1])
+##### SCRIPT STARSTS HERE #####
 
-#__init__.runShineDalAnalysis(sys.argv[1], True) # If set true, then meme will be runed
-#bedtools(sys.argv[1])
-#comparison(sys.argv[1])
+if sys.argv[1] == "all":
+	genomes_list = [ file[:-4] for file in os.listdir('Genomes') if file.endswith(".gff") ]
+else:
+	genomes_list = [sys.argv[1]]
 
-print('Done ' + str(strftime("%a, %d %b %Y %H:%M:%S +0000", localtime())))
-b = datetime.now()
-c = b - a
-print("{} seconds {} microseconds".format(c.seconds, c.microseconds % c.seconds))
+for genome in genomes_list:
+	a = datetime.now()
+
+	aptamers(genome)
+	#promoters()
+	terminators(genome)
+
+	print('Done {} genome, date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))
+	b = datetime.now()
+	c = b - a
+	#print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))
+
+
+

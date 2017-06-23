@@ -81,12 +81,12 @@ def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl += '\t'+str(x)+'\t'+str(y)+'\t'+strand
 	return shdl
 
-def printToFasta(handle, seq, x, y, strand, id, additional, exhead, geneName = "", location = ""):
+def printToFasta(handle, seq, x, y, strand, id, additional, exhead, geneName = "", location = "", replicon_id = ""):
 	if(additional != ''):
 		additional = '|' + additional
 
 	if exhead == True:
-		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'|'+geneName+'|'+location+'\n')
+		handle.write('>'+id+additional+'|'+str(x)+'|'+str(y)+'|'+strand+'|'+geneName+'|'+location+'|'+replicon_id+'\n')
 	else:
 		handle.write('>'+id+additional+'\n')
 		
@@ -171,6 +171,7 @@ def getFasta(*arg):
 
 	firstLine = True
 	for record in GFF.parse(handle):
+		replicon_id = record.id
 		for feature in record.features:
 			if firstLine:
 				location = feature.qualifiers['genome'][0] # Na pewno to to?
@@ -268,7 +269,7 @@ def getFasta(*arg):
 					additional += feature.qualifiers['gene'][0]
 
 				window = printSeq(sequence, start, end, seqSymbol, beforeStart, afterStart)
-				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead, geneName, location)
+				printToFasta(out_fasta, window, start, end, seqSymbol, feature.qualifiers['locus_tag'][0], additional, exhead, geneName, location, replicon_id)
 				counter += 1
 
 				### PREVIOUS GENE ###
