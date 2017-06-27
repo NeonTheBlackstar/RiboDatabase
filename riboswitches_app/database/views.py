@@ -43,25 +43,6 @@ def searcher(request):
 
     return render(request, 'database/searcher.html', context)
 
-# def get_records_by_ajax(request):
-
-#     l = []
-#     term = request.GET['term']
-
-#     ligands = Ligand.objects.filter(name__icontains=term)
-
-#     for e in Record.objects.all():
-#         if e.family != None:
-#             for i in ligands:
-#                 if i.name in str(e.family.ribo_class.ligands.all()):
-#                     l.append(e.name)
-
-#     context = {
-#         'records': l,
-#     }
-
-#     return JsonResponse(context)
-
 def class_family_browser(request):
 
     result = []
@@ -91,9 +72,6 @@ def class_family_browser(request):
 def class_family_details(request, family):
 
     families_list = []
-
-    print('############')
-    print(family)
 
     for e in Record.objects.all():
         if e.family != None:

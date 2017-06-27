@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
+from collections import OrderedDict
+
 from database.models import Record, Ligand, Gene, Organism
 
 
@@ -45,7 +47,7 @@ def ligands(request):
 
 def record(request, riboswitch_name):
     l = []
-    context = {}
+    context = OrderedDict()
 
     # Odrzucamy z nazwy dwie pierwsze litery "RS", a część liczbową konwertujemy do Integera
     for r in Record.objects.filter(id=int(riboswitch_name[2:])):
