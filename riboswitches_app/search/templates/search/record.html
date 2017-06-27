@@ -40,13 +40,13 @@
     </div>
     <div id="browsePanel" class="panel-collapse collapse in">
       <div class="panel-body">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" style="table-layout: fixed; width: 100%">
           <tbody>
             {% for i in l %}
               {% for key, value in i.items %}
               <tr>
                 <td>{{ key }}</td>
-                <td>{{ value }}</td>
+                <td style="word-wrap: break-word">{{ value }}</td>
               </tr>
               {% endfor %}
             {% endfor %}
