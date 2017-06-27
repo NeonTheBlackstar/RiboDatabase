@@ -98,21 +98,11 @@ def class_family_details(request, family):
     for e in Record.objects.all():
         if e.family != None:
             if family == e.family.name:
-                dic = {
-                    'id': e.id,
-                    'name': e.name,
-                    'gene': None,
-                    'organism': None,
-                    'ligand': None,
-                }
-                dic['gene'] = e.gene.name if e.gene != None else dic['gene']
-                dic['name'] = e.name if e.name != None else dic['name']
-                dic['organism'] = e.gene.organism.scientific_name if e.gene.organism != None else dic['organism']
-                dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() else dic['ligand']
-                families_list.append(dic.copy())
+                organism = e.gene.organism.scientific_name
+                families_list.append(organism)
 
     context = {
-        'families_list': families_list,
+        'families_list': set(families_list),
     }
 
     return render(request, 'database/class_family_details.html', context)
@@ -249,9 +239,9 @@ def organism_browser(request):
 def organism_details(request, organism_name):
 
     term = request.get_full_path()
-    match = re.findall(r'[/](.*?)[/]',term)[-1].replace('_', ' ')
+    match = re.findall(r'[/](.*?)[/]',term)[-1].replace('%20', ' ')
 
-    # print(match)
+    print(match)
 
     riboswitch_record = []
 
