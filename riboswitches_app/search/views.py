@@ -3,7 +3,7 @@ from django.http import JsonResponse
 
 from collections import OrderedDict
 
-from database.models import Record, Ligand, Gene, Organism
+from database.models import Record, Ligand, Gene, Organism, Aptamer
 
 
 def index(request):
@@ -51,20 +51,28 @@ def record(request, riboswitch_name):
 
     # Odrzucamy z nazwy dwie pierwsze litery "RS", a część liczbową konwertujemy do Integera
     for r in Record.objects.filter(id=int(riboswitch_name[2:])):
-        context['name'] = r.name()
-        context['organism'] = r.gene.organism.scientific_name
-        context['family'] = r.family.name
-        context['gene'] = r.gene.name
-        context['terminator'] = r.terminator
-        context['promoter'] = r.promoter
-        context['mechanism'] = r.mechanism
-        context['effect'] = r.effect
-        context['sequence'] = r.sequence
+        context['Name'] = r.name()
+        context['Organism'] = r.gene.organism.scientific_name
+        context['Class'] = r.family.ribo_class.name
+        context['Family'] = r.family.name
+        context['Gene'] = r.gene.name
+        context['Promoter'] = r.promoter
+        for a in Aptamer.objects.all():
+            if a.switch.id == int(riboswitch_name[2:]):
+                context['Aptamer position'] = a.position
+                context['Aptamer structure'] = a.structure
+        context['Shine-Dalgarno'] = r.shinedalgarno
+        context['Terminator'] = r.terminator
+        context['Mechanism'] = r.get_mechanism_display()
+        context['Effect'] = r.get_effect_display()
+        context['Sequence'] = r.sequence
+
+    
 
     l.append(context)
     test = {
         'l': l,
-        'name': context['name'],
+        'name': context['Name'],
     }
 
     print(context)

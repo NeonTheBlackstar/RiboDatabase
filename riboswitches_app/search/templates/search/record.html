@@ -30,10 +30,28 @@
   <div class="panel panel-default" id="record-panel">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#browsePanel">
+        <a data-toggle="collapse" data-parent="#accordion" href="#structurePanel">
+        Structure
+        </a>
+        <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#structurePanel">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+        </span>
+      </h4>
+    </div>
+    <div id="structurePanel" class="panel-collapse collapse in">
+      <div class="panel-body">
+          
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default" id="record-panel">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion2" href="#browsePanel">
         Record <strong>{{name}}</strong>
         </a>
-        <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#browsePanel">
+        <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion2" href="#browsePanel">
         <i class="glyphicon glyphicon-chevron-up"></i>
         </span>
       </h4>
@@ -45,7 +63,7 @@
             {% for i in l %}
               {% for key, value in i.items %}
               <tr>
-                <td>{{ key }}</td>
+                <td><strong>{{ key }}</strong></td>
                 <td style="word-wrap: break-word">{{ value }}</td>
               </tr>
               {% endfor %}
