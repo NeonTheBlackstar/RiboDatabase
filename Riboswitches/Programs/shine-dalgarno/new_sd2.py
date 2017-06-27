@@ -168,18 +168,19 @@ def getFasta(*arg):
 	# Variables for organism information
 	scientificName = ""
 	taxonomy = ""
+	location = ""
 
 	firstLine = True
 	for record in GFF.parse(handle):
 		replicon_id = record.id
 		for feature in record.features:
-			if firstLine:
-				location = feature.qualifiers['genome'][0] # Na pewno to to?
+			if firstLine and feature.type == 'region':
+				location = feature.qualifiers['genome'][0]
 				#scientificName = feature.qualifiers['sub-species'][0] # Nie zostawiamy tego raczej tak?
 				taxonomy = feature.qualifiers['Dbxref'][0].split(":")[1]
 				firstLine = False
 
-			if feature.type == 'gene' and (feature.qualifiers['gene_biotype'][0] == bioType or bioType == None):
+			if feature.type == 'gene' and ('gene_biotype' not in feature.qualifiers or (feature.qualifiers['gene_biotype'][0] == bioType or bioType == None)):
 				### Reset modified values ###
 				beforeStart = getParamValue('-before',arg)
 				afterStart = getParamValue('-after',arg)

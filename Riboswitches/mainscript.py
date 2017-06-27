@@ -11,7 +11,9 @@ import sd2
 import new_sd2
 from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
+### HOW TO USE ###
 # python3 mainscript.py NC_000964.3
+# python3 mainscript.py all
 
 ### HELPER FUNCTIONS ###
 
@@ -73,7 +75,7 @@ def aptamers(
 			elif line.startswith("#!genome-build"):
 				genome_build_id = line.split(" ")[1]
 
-	########### PRZYGOTOWANIE SEKWENCJI ###########
+	########## PRZYGOTOWANIE SEKWENCJI ###########
 	''' Prepare separate files for all replicons '''
 	# GFF #
 	with open("./Genomes/{0}.gff".format(genome)) as handle:
@@ -84,7 +86,6 @@ def aptamers(
 		for line in handle:
 			if line.startswith("##sequence-region"):
 				counter += 1
-				#replicon_id = line.split()[1]
 				if replicon_handle != None:
 					replicon_handle.close()
 				replicon_handle = open("./Genomes/{0}-replicon-{1}.gff".format(genome, counter), "w")
@@ -108,7 +109,7 @@ def aptamers(
 			replicon_handle.write(line)
 		replicon_handle.close()
 
-	replicon_files = [ file for file in os.listdir('Genomes') if "replicon" in file and file.endswith("gff") ]
+	replicon_files = [ file for file in os.listdir('Genomes') if "replicon" in file and file.endswith("gff") and genome in file ]
 
 	os.system("touch temp.fasta")
 	for file in replicon_files:
@@ -135,10 +136,6 @@ def aptamers(
 		os.system("cat aptamer_windows.fasta >> temp.fasta")
 	
 	os.system("mv temp.fasta aptamer_windows.fasta")
-
-	##### DEBUG #####
-	#print("Debug!")
-	#exit()
 
 	################################################
 
@@ -307,8 +304,8 @@ def terminators(genome):
 	filterWindows(aptamer_list, "aptamer_windows.fasta", "terminator_windows.fasta")
 
 	# Generowanie pliku .coords dla Transterma # 
-	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print $0 \"|1\", \"1\", \"2\", substr($0,2); print $0 \"|2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' terminator_windows.fasta > termin_crd.coords")
-	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> rubbish.txt")
+	os.system("awk \'BEGIN { OFS=\"\\t\"; } { if($1 ~ /^>/) { split(substr($0,2), t, \"|\"); print \"gene1\", \"1\", \"2\", substr($0,2); print \"gene2\", t[2]+t[3]-1, t[2]+t[3], substr($0,2)} }\' terminator_windows.fasta > termin_crd.coords")
+	os.system("./Programs/transterm/transterm -p ./Programs/transterm/expterm.dat terminator_windows.fasta termin_crd.coords 1> transterm_output.tt 2> errors.txt")
 
 	d = {}
 	with open("transterm_output.tt") as tt_handle, open("./Results/{}.result.csv".format(genome),"r") as result_handle:
@@ -346,7 +343,7 @@ def terminators(genome):
 				terminator = {
 					'start': 			terminator_start,
 					'end': 				terminator_end,
-					'hp': 				int(term_list[7]),
+					'confidence': 				int(term_list[7]),
 					'harpin_score':		float(term_list[8]),
 					'tail_score':		float(term_list[9]),
 				}
@@ -377,20 +374,24 @@ def terminators(genome):
 					# Jesli terminatory sie nakladaja na siebie:
 					if intervalIntersect(t1['start'], t1['end'], t2['start'], t2['end']) == True:
 								
-						#Zostawiamy terminator z lepsza ocena hp
-						if t1['hp'] < t2['hp']:
-							d[locus_tag]['terminators'].remove(t1)
-						elif t1['hp'] > t2['hp']:
-							d[locus_tag]['terminators'].remove(t2)
+						#Zostawiamy terminator z lepsza ocena confidence
+						if t1['confidence'] < t2['confidence']:
+							if t1 in d[locus_tag]['terminators']:
+								d[locus_tag]['terminators'].remove(t1)
+						elif t1['confidence'] > t2['confidence']:
+							if t2 in d[locus_tag]['terminators']:
+								d[locus_tag]['terminators'].remove(t2)
 						#Jesli ocena jest taka sama, zostawiamy ten z wieksza roznica energii spinki i poli-T
 						else:
 							t1_score_difference = abs(t1['harpin_score'] - t1['tail_score'])
 							t2_score_difference = abs(t2['harpin_score'] - t2['tail_score'])
 
 							if t1_score_difference <= t2_score_difference:
-								d[locus_tag]['terminators'].remove(t1)
+								if t1 in d[locus_tag]['terminators']:
+									d[locus_tag]['terminators'].remove(t1)
 							else:
-								d[locus_tag]['terminators'].remove(t2)
+								if t2 in d[locus_tag]['terminators']:
+									d[locus_tag]['terminators'].remove(t2) ### Tu jest błąd, ale nie powinno go być! ValueError: list.remove(x): x not in list
 					# Jesli sie nie nakladaja
 					else:
 						try:
@@ -407,33 +408,43 @@ def terminators(genome):
 							# Gdy żaden z terminatorów nie nachodzi na aptamer
 							if t1_distance >= 0 and t2_distance >= 0:
 								if t1_distance < t2_distance:
-									d[locus_tag]['terminators'].remove(t2)
+									if t2 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t2)
 								else:
-									d[locus_tag]['terminators'].remove(t1)
+									if t1 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t1)
 
 							# Jesli dystans jest ujemny, to znaczy ze terminator nachodzi na aptamer
 							elif t1_distance < 0 and t2_distance >= 0:
 								if abs(t1_distance) < (t1_length / 2):
-									d[locus_tag]['terminators'].remove(t2)
+									if t2 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t2)
 								else:
-									d[locus_tag]['terminators'].remove(t1) 
+									if t1 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t1) 
 
 							elif t1_distance >= 0 and t2_distance < 0:
 								if abs(t2_distance) < (t2_length / 2):
-									d[locus_tag]['terminators'].remove(t1)
+									if t1 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t1)
 								else:
-									d[locus_tag]['terminators'].remove(t2)
+									if t2 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t2)
 
 							elif t1_distance < 0 and t2_distance < 0: # Co tu zrobić?
 								if abs(t1_distance) < (t1_length / 2):
-									d[locus_tag]['terminators'].remove(t2)
+									if t2 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t2)
 								elif abs(t2_distance) < (t2_length / 2):
-									d[locus_tag]['terminators'].remove(t1)
+									if t1 in d[locus_tag]['terminators']:
+										d[locus_tag]['terminators'].remove(t1)
 								else:
 									if abs(t1_distance) < abs(t2_distance):
-										d[locus_tag]['terminators'].remove(t2)
+										if t2 in d[locus_tag]['terminators']:
+											d[locus_tag]['terminators'].remove(t2)
 									else:
-										d[locus_tag]['terminators'].remove(t1)
+										if t1 in d[locus_tag]['terminators']:
+											d[locus_tag]['terminators'].remove(t1)
 						except ValueError:
 							continue
 
@@ -452,7 +463,7 @@ def terminators(genome):
 					locus_tag = line_list[5]
 
 					if d[locus_tag]['terminators'] != []: # Jesli da tego aptameru znaleziono terminator
-						line += "\t" + str(d[locus_tag]['terminators'][0]['start']) + "\t" + str(d[locus_tag]['terminators'][0]['end']) + "\t" + str(d[locus_tag]['terminators'][0]['hp']) + '\n'
+						line += "\t" + str(d[locus_tag]['terminators'][0]['start']) + "\t" + str(d[locus_tag]['terminators'][0]['end']) + "\t" + str(d[locus_tag]['terminators'][0]['confidence']) + '\n'
 					else:
 						line += "\t" + '0' + "\t" + '0' + "\t" + '0' + '\n'			
 				temp_result.write(line)
@@ -461,7 +472,7 @@ def terminators(genome):
 
 	os.system('rm aptamer_windows.fasta')
 	os.system('rm terminator_windows.fasta')
-	os.system('rm rubbish.txt')
+	os.system('rm errors.txt')
 	os.system('rm termin_crd.coords')
 	os.system('rm transterm_output.tt')
 
@@ -507,8 +518,14 @@ def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
 			final.write('Unknown\n')
 
 ##### SCRIPT STARSTS HERE #####
-
+'''
+os.system('rm ./Genomes/byStrand*.gff')
+os.system('rm ./Genomes/{0}_sorted*.gff'.format(sys.argv[1]))
+os.system('rm ./Genomes/{0}-replicon*.fasta'.format(sys.argv[1]))
+os.system('rm ./Genomes/{0}-replicon*.gff'.format(sys.argv[1]))
+'''
 if sys.argv[1] == "all":
+	os.system("rename 's/\.fna$/\.fasta/' ./Genomes/*.fna > /dev/null 2>&1")
 	genomes_list = [ file[:-4] for file in os.listdir('Genomes') if file.endswith(".gff") ]
 else:
 	genomes_list = [sys.argv[1]]
@@ -516,11 +533,17 @@ else:
 for genome in genomes_list:
 	a = datetime.now()
 
+	#try:
 	aptamers(genome)
 	#promoters()
 	terminators(genome)
+	print('Succeeded {} genome! Date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))
+	'''except (KeyboardInterrupt, SystemExit):
+		raise
+	except:
+		print('Failed {} genome! Date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))'''
 
-	print('Done {} genome, date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))
+	
 	b = datetime.now()
 	c = b - a
 	#print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))

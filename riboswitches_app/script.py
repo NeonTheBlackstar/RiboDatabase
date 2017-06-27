@@ -9,6 +9,10 @@
 	from database.models import RiboFamily, RiboClass
 
 	!!! NIE ZAPOMNIJ ZRESETOWAĆ COUNTERA DLA ID REKORDÓW W DBSHELLU JAK ZACZNIESZ WRZUCAĆ DANE DO BAZY NA STAŁE !!!
+USAGE:
+python3 script.py loadresults		- zeby wczytac wyniki adnotacji
+python3 script.py loadresults purge - zeby wczytac wyniki adnotacji i wyczyscic baze danych
+
 '''
 
 from parser import loadDataToDictionary
@@ -40,7 +44,7 @@ if len(argv) == 1:
 elif len(argv) >= 3 and argv[2] == "purge":
 	execute_from_command_line([argv[0], 'flush', '--noinput'])
 elif argv[1] == "loadresults":
-	execute_from_command_line([argv[0], 'flush', '--noinput'])
+	#execute_from_command_line([argv[0], 'flush', '--noinput'])
 	result_files = [ file for file in os.listdir('../Riboswitches/Results') ]
 	isResult = True
 else:
@@ -532,7 +536,7 @@ for datafile in result_files:
 print('Done loading {} records, date: {}'.format(record_counter, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))
 b = datetime.now()
 c = b - a
-print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))
+#print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))
 
 '''
 for e in Organism.objects.all():
