@@ -77,10 +77,10 @@ def promoters(
 	print("debug") ### TU SKONCZYLEM
 	return
 
-
 	'''
 	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
 	'''
+	
 	os.system('export TSS_DATA=\"Programs/lin/data\"')
 
 	counter = 1

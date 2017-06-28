@@ -41,14 +41,15 @@ isResult = False
 
 if len(argv) == 1:
 	print("No arguments where passed to the script. Program will abort now...")
-elif len(argv) >= 3 and argv[2] == "purge":
-	execute_from_command_line([argv[0], 'flush', '--noinput'])
 elif argv[1] == "loadresults":
 	#execute_from_command_line([argv[0], 'flush', '--noinput'])
 	result_files = [ file for file in os.listdir('../Riboswitches/Results') ]
 	isResult = True
 else:
 	result_files = [ argv[1] ]
+
+if len(argv) >= 3 and argv[2] == "purge":
+	execute_from_command_line([argv[0], 'flush', '--noinput'])
 
 
 
