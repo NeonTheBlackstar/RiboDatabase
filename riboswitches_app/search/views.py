@@ -3,7 +3,7 @@ from django.http import JsonResponse
 
 from collections import OrderedDict
 
-from database.models import Record, Ligand, Gene, Organism, Aptamer
+from database.models import Record, Ligand, Gene, Organism, Aptamer, Article
 
 
 def index(request):
@@ -49,23 +49,39 @@ def record(request, riboswitch_name):
     l = []
     context = OrderedDict()
 
+    for a in Aptamer.objects.all():
+        if a.switch.id == int(riboswitch_name[2:]):
+            pos = a.position
+            struct = a.structure
+
     # Odrzucamy z nazwy dwie pierwsze litery "RS", a część liczbową konwertujemy do Integera
     for r in Record.objects.filter(id=int(riboswitch_name[2:])):
         context['Name'] = r.name()
         context['Organism'] = r.gene.organism.scientific_name
         context['Class'] = r.family.ribo_class.name
         context['Family'] = r.family.name
+        lig = r.family.ribo_class.ligands.all()
+
+        if not lig.exists():
+            context['Ligand'] = 'None'
+        else:
+            context['Ligand'] = lig
+            
         context['Gene'] = r.gene.name
         context['Promoter'] = r.promoter
-        for a in Aptamer.objects.all():
-            if a.switch.id == int(riboswitch_name[2:]):
-                context['Aptamer position'] = a.position
-                context['Aptamer structure'] = a.structure
+        context['Aptamer position'] = pos
+        context['Aptamer structure'] = struct
         context['Shine-Dalgarno'] = r.shinedalgarno
         context['Terminator'] = r.terminator
         context['Mechanism'] = r.get_mechanism_display()
         context['Effect'] = r.get_effect_display()
         context['Sequence'] = r.sequence
+        articles = r.articles.all()
+
+    if not articles.exists():
+        context['Articles (Pubmed ID)'] = 'No articles found'
+    else:
+        context['Articles (Pubmed ID)'] = articles
 
     
 

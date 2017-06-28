@@ -32,6 +32,7 @@
         <thead>
           <tr>
             <th>Riboswitch</th>
+            <th>Gene</th>
             <th>Ligand</th>
             <th>Organism</th>
           </tr>
@@ -39,6 +40,7 @@
         <tfoot>
             <tr>
                 <th>Name</th>
+                <th>Gene</th>
                 <th>Ligand</th>
                 <th>Organism</th>
             </tr>
@@ -47,6 +49,7 @@
         {% for rr in recordList %}
           <tr role="row">
             <td><a href="{% url 'search:record' rr.name %}">{{ rr.name }}</a></td>
+            <td>{{ rr.gene }}</td>
             <td>{{ rr.ligand }}</td>
             <td>{{ rr.organism }}</td>
           </tr>

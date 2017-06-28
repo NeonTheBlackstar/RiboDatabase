@@ -30,10 +30,12 @@ def searcher(request):
         if e.family != None:
             dic = {
                 'name': e.name,
+                'gene' : None,
                 'ligand': None,
                 'organism': None,
             }
             dic['ligand'] = e.family.ribo_class.ligands.all()[0].name if e.family.ribo_class.ligands.all() else dic['ligand']
+            dic['gene'] = e.gene.name if e.gene.name != None else dic['gene']
             dic['organism'] = e.gene.organism.scientific_name if e.gene.organism.scientific_name != None else dic['organism']
             recordList.append(dic.copy())
 
@@ -139,6 +141,7 @@ def ligand_details(request, ligand_name):
         'recordList': recordList,
         'name': name,
     }
+
 
     return render(request, 'database/ligand_details.html', context)
 
