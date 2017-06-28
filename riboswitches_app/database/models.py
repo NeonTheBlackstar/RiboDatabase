@@ -177,4 +177,4 @@ class Position(models.Model):
 	# score pole
 
 	def __str__(self):
-		return "Start: {} End: {} Score: {} Location: {} Strand: {}".format(self.start, self.end, self.score, self.location, self.strand)
+		return "Start: {}, End: {}, Score: {}, Location: {}, Strand: {}".format(self.start, self.end, self.score, self.location, self.strand)
