@@ -71,7 +71,7 @@ class Article(models.Model):
 	pmid = models.IntegerField(primary_key = True)
 
 	def __str__(self):
-		return 'Art: {}'.format(self.pmid)
+		return '{}'.format(self.pmid)
 
 
 class Structure3D(models.Model):
@@ -160,7 +160,7 @@ class Ligand(models.Model):
 	# baza ligandow
 
 	def __str__(self):
-		return 'Li: |{}| {} {} {}'.format(self.ligand_class, self.name, self.description, self.image_name)
+		return self.name.title()
 
 
 class Position(models.Model):

@@ -53,6 +53,9 @@ def record(request, riboswitch_name):
         if a.switch.id == int(riboswitch_name[2:]):
             pos = a.position
             struct = a.structure
+        else:
+            pos = 'No position found'
+            struct = 'No structure found'
 
     # Odrzucamy z nazwy dwie pierwsze litery "RS", a część liczbową konwertujemy do Integera
     for r in Record.objects.filter(id=int(riboswitch_name[2:])):
@@ -65,7 +68,8 @@ def record(request, riboswitch_name):
         if not lig.exists():
             context['Ligand'] = 'None'
         else:
-            context['Ligand'] = lig
+            lig_list = [str(l) for l in list(lig)]
+            context['Ligand'] = ', '.join(lig_list)
             
         context['Gene'] = r.gene.name
         context['Promoter'] = r.promoter
@@ -78,10 +82,20 @@ def record(request, riboswitch_name):
         context['Sequence'] = r.sequence
         articles = r.articles.all()
 
+        temp = 0
+        if r.terminator != None:
+            terminator_length = r.terminator.end - r.terminator.start
+            l2=[]
+            for i in r.sequence:
+                l2.append(i)
+            sequence_length = len(l2)
+            temp = (terminator_length/sequence_length)*100
+
     if not articles.exists():
         context['Articles (Pubmed ID)'] = 'No articles found'
     else:
-        context['Articles (Pubmed ID)'] = articles
+        newlist = [str(t) for t in list(articles)]
+        context['Articles (Pubmed ID)'] = ', '.join(newlist)
 
     
 
@@ -89,6 +103,7 @@ def record(request, riboswitch_name):
     test = {
         'l': l,
         'name': context['Name'],
+        'temp': temp,
     }
 
     print(context)
