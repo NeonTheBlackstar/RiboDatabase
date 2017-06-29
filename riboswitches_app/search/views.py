@@ -84,23 +84,35 @@ def record(request, riboswitch_name):
         context['Sequence'] = r.sequence
         articles = r.articles.all()
 
+        strand = r.aptamer_set.all()[0].position.strand
+
         if r.promoter != None:
             sequence_length = (r.gene.position.start + 20) - r.promoter.start
         else:
-            st, en = sorted([r.gene.position.start + 20, r.aptamer_set.all()[0].position.start])
-            sequence_length = en - st
+            if strand == '+':
+                sequence_length = (r.gene.position.start + 20) - r.aptamer_set.all()[0].position.start
+            else:
+                sequence_length = r.aptamer_set.all()[0].position.end - (r.gene.position.end - 20)
 
-
+        print(sequence_length)
         if r.shinedalgarno != None:
-            shinedalgarno_length = r.shinedalgarno.end - r.shinedalgarno.start
+            sd_st, sd_en = sorted([r.shinedalgarno.start, r.shinedalgarno.end])
+            shinedalgarno_length = sd_en - sd_st
             shinedalgarno_width = (shinedalgarno_length/sequence_length) * 100
-            shinedalgarno_left = (r.shinedalgarno.start * 100)/sequence_length
+            if strand == '+':
+                shinedalgarno_left = (sd_st - riboswitch_start) * 100 / sequence_length
+            else:
+                shinedalgarno_left = -((sd_en - riboswitch_start) * 100 / sequence_length)
 
         # Start of a riboswitch is equal to start of a promoter or an aptamer, if promoter doesn't exists
         if r.promoter != None:
-            promoter_length = r.promoter.end - r.promoter.start
+            pro_st, pro_en = sorted([r.promoter.start, r.promoter.end])
+            promoter_length = pro_en - pro_st
             promoter_width = (promoter_length/sequence_length)*100
-            promoter_left = (r.promoter.start * 100)/sequence_length
+            if strand == '+':
+                promoter_left = (pro_st - riboswitch_start) * 100 / sequence_length
+            else:
+                promoter_left = -((pro_en - riboswitch_start) * 100 / sequence_length)
             riboswitch_start = r.promoter.start
         else:
             if r.terminator.strand == '+':
