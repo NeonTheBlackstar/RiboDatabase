@@ -51,6 +51,7 @@ def record(request, riboswitch_name):
     terminator_width = 0
     promoter_width = 0
     shinedalgarno_width = 0
+    shinedalgarno_left = 0
     aptamer_width = 0
     aug_width = 0
     riboswitch_start = 0
@@ -121,6 +122,9 @@ def record(request, riboswitch_name):
                 shinedalgarno_left = (sd_st - riboswitch_start) * 100 / sequence_length
             else:
                 shinedalgarno_left = -((sd_en - riboswitch_start) * 100 / sequence_length)
+        else:
+            sd_st = 0
+            sd_en = 0
 
         apt_st, apt_en = sorted([r.aptamer_set.all()[0].position.start, r.aptamer_set.all()[0].position.end])
         aptamer_length = apt_en - apt_st
@@ -140,7 +144,6 @@ def record(request, riboswitch_name):
                 terminator_left = (ter_st - riboswitch_start) * 100 /sequence_length
             else:
                 terminator_left = -((ter_en - riboswitch_start) * 100 /sequence_length)
-
 
             if r.terminator.end > riboswitch_end:
                 riboswitch_end = r.terminator.end
@@ -179,6 +182,10 @@ def record(request, riboswitch_name):
         'aptamer_end': apt_en,
         'aptamer_width': aptamer_width,
         'aptamer_left': aptamer_left,
+        'shine_start': sd_st,
+        'shine_end': sd_en,
+        'shine_width': shinedalgarno_width,
+        'shine_left': shinedalgarno_left,
         'aug_start': r.gene.position.start,
         'aug_end': r.gene.position.start + 3,
         'aug_width': aug_width,

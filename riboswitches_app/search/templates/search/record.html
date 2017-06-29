@@ -39,21 +39,47 @@
       </h4>
     </div>
     <div id="structurePanel" class="panel-collapse collapse in">
-      <div class="panel-body">
-          <div id="ribo" style="border-color: grey;">
-            <div data-toggle="popover" data-html="true" class="feat-ribo" id="promoter" title="Promoter" data-content="Start: {{promoter_start}}<br>End: {{promoter_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{promoter_left}}%; width: {{promoter_width}}%; background-color: blue; height: 100%;">
-              
-            </div>
-            <div data-toggle="popover" data-html="true" class="feat-ribo" id="aptamer" title="Aptamer" data-content="Start: {{aptamer_start}}<br>End: {{aptamer_end}}" data-trigger="hover" data-placement="bottom" style="left: {{aptamer_left}}%; width: {{aptamer_width}}%; background-color: green; height: 100%;">
-              
-            </div>
-            <div data-toggle="popover" data-html="true" class="feat-ribo" id="terminator" title="Terminator" data-content="Start: {{terminator_start}}<br>End: {{terminator_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{terminator_left}}%; width: {{terminator_width}}%; background-color: red; height: 100%;">
-              
-            </div>
-            <div data-toggle="popover" data-html="true" class="feat-ribo" id="aug" title="AUG" data-content="Start: {{aug_start}}<br>End: {{aug_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{aug_left}}%; width: {{aug_width}}%; background-color: black; height: 100%;">
-              
-            </div>
+      <div class="row">
+        <div class="container">
+          <div class="panel-body">
+              <div id="ribo" style="border-color: grey;">
+                <div data-toggle="popover" data-html="true" class="feat-ribo" id="promoter" title="Promoter" data-content="Start: {{promoter_start}}<br>End: {{promoter_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{promoter_left}}%; width: {{promoter_width}}%; background-color: #609dff; height: 100%;">
+                  
+                </div>
+                <div data-toggle="popover" data-html="true" class="feat-ribo" id="aptamer" title="Aptamer" data-content="Start: {{aptamer_start}}<br>End: {{aptamer_end}}" data-trigger="hover" data-placement="bottom" style="left: {{aptamer_left}}%; width: {{aptamer_width}}%; background-color: #70ad77; height: 100%;">
+                  
+                </div>
+                <div data-toggle="popover" data-html="true" class="feat-ribo" id="terminator" title="Terminator" data-content="Start: {{terminator_start}}<br>End: {{terminator_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{terminator_left}}%; width: {{terminator_width}}%; background-color: #ff3838; height: 100%;">
+                  
+                </div>
+                <div data-toggle="popover" data-html="true" class="feat-ribo" id="terminator" title="Shine-Dalgarno" data-content="Start: {{shine_start}}<br>End: {{shine_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{shine_left}}%; width: {{shine_width}}%; background-color: #fff94c; height: 100%;">
+                  
+                </div>
+                <div data-toggle="popover" data-html="true" class="feat-ribo" id="aug" title="AUG" data-content="Start: {{aug_start}}<br>End: {{aug_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{aug_left}}%; width: {{aug_width}}%; background-color: #b564fc; height: 100%;">
+                  
+                </div>
+              </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container" style="text-align: center; width: 100%;">
+          <div style="margin-right: 5%; display: inline-block;">
+            <div style="width: 20px; height: 20px; background-color: #609dff; border-radius: 50%; display: inline-block;"></div><p>Promoter</p>
+          </div>
+          <div style="margin-right: 5%; display: inline-block;">
+            <div style="width: 20px; height: 20px; background-color: #70ad77; border-radius: 50%; display: inline-block;"></div><p>Aptamer</p>
+          </div>
+          <div style="margin-right: 5%; display: inline-block;">
+            <div style="width: 20px; height: 20px; background-color: #ff3838; border-radius: 50%; display: inline-block;"></div><p>Terminator</p>
+          </div>
+          <div style="margin-right: 5%; display: inline-block;">
+            <div style="width: 20px; height: 20px; background-color: #fff94c; border-radius: 50%; display: inline-block;"></div><p>Shine-Dalgarno</p>
+          </div>
+          <div style="display: inline-block;">
+            <div style="width: 20px; height: 20px; background-color: #b564fc; border-radius: 50%; display: inline-block;"></div><p>AUG</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
