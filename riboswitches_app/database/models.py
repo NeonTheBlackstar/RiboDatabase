@@ -55,7 +55,7 @@ class Aptamer(models.Model): #14 dodaję nową encję
 	# pole id aptameru w ryboswitchu
 
 	def __str__(self):
-		return 'Apt: |{}| |{}|'.format(self.position, self.structure)
+		return 'Start: {}, End: {}'.format(self.position.start, self.position.end)
 
 
 class Structure2D(models.Model):
