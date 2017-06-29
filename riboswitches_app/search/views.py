@@ -94,16 +94,6 @@ def record(request, riboswitch_name):
             else:
                 sequence_length = r.aptamer_set.all()[0].position.end - (r.gene.position.end - 20)
 
-        print(sequence_length)
-        if r.shinedalgarno != None:
-            sd_st, sd_en = sorted([r.shinedalgarno.start, r.shinedalgarno.end])
-            shinedalgarno_length = sd_en - sd_st
-            shinedalgarno_width = (shinedalgarno_length/sequence_length) * 100
-            if strand == '+':
-                shinedalgarno_left = (sd_st - riboswitch_start) * 100 / sequence_length
-            else:
-                shinedalgarno_left = -((sd_en - riboswitch_start) * 100 / sequence_length)
-
         # Start of a riboswitch is equal to start of a promoter or an aptamer, if promoter doesn't exists
         if r.promoter != None:
             pro_st, pro_en = sorted([r.promoter.start, r.promoter.end])
@@ -122,6 +112,15 @@ def record(request, riboswitch_name):
             promoter_left = 0
             pro_st = ''
             pro_en = ''
+
+        if r.shinedalgarno != None:
+            sd_st, sd_en = sorted([r.shinedalgarno.start, r.shinedalgarno.end])
+            shinedalgarno_length = sd_en - sd_st
+            shinedalgarno_width = (shinedalgarno_length/sequence_length) * 100
+            if strand == '+':
+                shinedalgarno_left = (sd_st - riboswitch_start) * 100 / sequence_length
+            else:
+                shinedalgarno_left = -((sd_en - riboswitch_start) * 100 / sequence_length)
 
         apt_st, apt_en = sorted([r.aptamer_set.all()[0].position.start, r.aptamer_set.all()[0].position.end])
         aptamer_length = apt_en - apt_st

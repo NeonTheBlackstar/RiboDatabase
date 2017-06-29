@@ -21,31 +21,94 @@
   </div>
 
   <!-- Menu for managing the isotope filtering -->
-  <div class="ligand-filter">
+<!--   <div class="ligand-filter">
     <ul>
       <li data-filter="*">all</li>
       <li data-filter=".alanine">alanine</li>
       <li data-filter=".glycine">glycine</li>
     </ul>
-  </div>
+  </div> -->
 
   <div class="ligand-container">
 
-  {% for ligand in ligand_list %}
-  
-      <div class="item {{ligand.name}} panel panel-default">
-        <div class="panel-heading text-center ligand-name">
-          {{ ligand.name }} 
-        </div>
-        <div class="panel-body grid-item">
-          <a href="{% url 'database:ligand_details' ligand.name %}">
-            <img class="ligand-img" src="{% static "database/images/" %}{{ ligand.image_name }}">
-          </a>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">  
+        <div class="panel panel-default lig-browser">
+          <div class="panel-heading text-center ligand-name">
+            Glycine 
+          </div>
+          <div class="panel-body">
+            <a href="{% url 'database:ligand_details' glycine %}">
+              <img class="ligand-img" src="{% static "database/images/Glycine.png" %}">
+            </a>
+          </div>
         </div>
       </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="panel panel-default lig-browser">
+          <div class="panel-heading text-center ligand-name">
+            Alanine 
+          </div>
+          <div class="panel-body">
+            <a href="{% url 'database:ligand_details' alanine %}">
+              <img class="ligand-img" src="{% static "database/images/Alanine.png" %}">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="panel panel-default lig-browser">
+          <div class="panel-heading text-center ligand-name">
+            FMN 
+          </div>
+          <div class="panel-body">
+            <a href="{% url 'database:ligand_details' fmn %}">
+              <img class="ligand-img" src="{% static "database/images/FMN.png" %}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  {% endfor %}
-  
+    <div class="row" style="margin-top: 15px;">
+      <div class="col-xs-12 col-md-4">  
+        <div class="panel panel-default lig-browser">
+          <div class="panel-heading text-center ligand-name">
+            SAM 
+          </div>
+          <div class="panel-body grid-item">
+            <a href="{% url 'database:ligand_details' sam %}">
+              <img class="ligand-img" src="{% static "database/images/SAM.png" %}">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="panel panel-default lig-browser">
+          <div class="panel-heading text-center ligand-name">
+            Adenine 
+          </div>
+          <div class="panel-body">
+            <a href="{% url 'database:ligand_details' adenine %}">
+              <img class="ligand-img" src="{% static "database/images/Adenine.png" %}">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="panel panel-default lig-browser" style="margin-bottom: 50px !important;">
+          <div class="panel-heading text-center ligand-name">
+            Guanine 
+          </div>
+          <div class="panel-body grid-item">
+            <a href="{% url 'database:ligand_details' guanine %}">
+              <img class="ligand-img" src="{% static "database/images/Guanine.png" %}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>

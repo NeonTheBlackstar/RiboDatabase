@@ -99,8 +99,14 @@ tfoot input {
     transition: box-shadow 0.4s;
     transition: -webkit-filter: grayscale(100%) 0.4s;
     transition: opacity 0.4s;
-    height: 300px;
-    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.lig-browser {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin: 5px !important;
 }
 
 .ligand-img:hover {

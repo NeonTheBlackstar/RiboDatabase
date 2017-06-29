@@ -113,9 +113,13 @@ def gene_details(request, gene_name):
 
 def ligand_browser(request):
 
-    ligand_list = Ligand.objects.all()
     context = {
-        'ligand_list': ligand_list,
+        'glycine': 'Glycine',
+        'alanine': 'Alanine',
+        'sam': 'SAM',
+        'fmn': 'FMN',
+        'adenine': 'Adnenine',
+        'guanine': 'Guanine',
     }
 
     return render(request, 'database/ligand_browser.html', context)
