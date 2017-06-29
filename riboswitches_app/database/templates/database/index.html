@@ -12,15 +12,7 @@
 
 {% block content %}
 
-  <div class="container">
-    <div class="row">
-      <div id="bck-img">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="jumbotron">
+  <div class="jumbotron" style="margin-top: 5%;">
     <div class="container" id="search-field-index">
       <div class="col-xs-12">
         <form method="get" action="/search/">
@@ -37,19 +29,40 @@
 
   <div class="container">
     <div class="col-xs-12">
-      <div class="panel panel-default" id="panel-index">
-        <div class="panel-body">
-          <div class="col-xs-5">
-            Riboswitches database
-            <ul>
-              <li>This</li>
-              <li>is</li>
-              <li>a</li>
-              <li>basic</li>
-              <li>info</li>
-            </ul>
+      <div class="panel panel-default panel-no-margin">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <span class="panel-help-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#about-panel" style="text-decoration: none; color: #333;">
+            <span class="glyphicon glyphicon-education glyphicon-help"></span>
+            What is RISE?
+            </a>
+            </span>
+            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#about-panel">
+            <i class="glyphicon glyphicon-chevron-up"></i>
+            </span>
+          </h4>
+        </div>
+        <div id="about-panel" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="col-xs-12 col-md-8">
+            <br>
+              <p id="about-panel-text">Riboswitches are fragments of mRNA, which affect on a control of transcription, <br>translation, splicing and RNA stability.</p>
+              <p id="about-panel-text">RISE is a web app for the management of riboswitch database</p>
+              <p>There are several ways to retrieve the information. You can use:</p>
+              <ul>
+                <li>Quicksearch on main page</li>
+                <li>Main search</li>
+                <li>Taxonomy browsing</li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <figure>
+                <img src="../../static/database/images/SAM_riboswitch.png" alt="SAM riboswitch" id="quicksearch-width-img">
+                <figcaption style="text-align: center; font-size: 12px;">Riboswitch which bounds SAM</figcaption>
+              </figure>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>

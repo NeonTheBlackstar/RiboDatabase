@@ -87,7 +87,8 @@ def record(request, riboswitch_name):
         if r.promoter != None:
             sequence_length = (r.gene.position.start + 20) - r.promoter.start
         else:
-            sequence_length = (r.gene.position.start + 20) - r.aptamer_set.all()[0].position.start
+            st, en = sorted([r.gene.position.start + 20, r.aptamer_set.all()[0].position.start])
+            sequence_length = en - st
 
 
         if r.shinedalgarno != None:
@@ -102,28 +103,41 @@ def record(request, riboswitch_name):
             promoter_left = (r.promoter.start * 100)/sequence_length
             riboswitch_start = r.promoter.start
         else:
-            riboswitch_start = r.aptamer_set.all()[0].position.start
+            if r.terminator.strand == '+':
+                riboswitch_start = r.aptamer_set.all()[0].position.start
+            else:
+                riboswitch_start = r.aptamer_set.all()[0].position.end
             promoter_left = 0
 
-        aptamer_length = r.aptamer_set.all()[0].position.end - r.aptamer_set.all()[0].position.start
+        apt_st, apt_en = sorted([r.aptamer_set.all()[0].position.start, r.aptamer_set.all()[0].position.end])
+        aptamer_length = apt_en - apt_st
         aptamer_width = (aptamer_length * 100) / sequence_length
-        aptamer_left = (r.aptamer_set.all()[0].position.start - riboswitch_start) * 100 / sequence_length
+        if r.terminator.strand == '+':
+            aptamer_left = (apt_st - riboswitch_start) * 100 / sequence_length
+        else:
+            aptamer_left = -((apt_en - riboswitch_start) * 100 / sequence_length)
 
         # End of a riboswitch is equal to start of a gene or end of a terminator
         riboswitch_end = r.gene.position.start + 20
         if r.terminator != None:
-            #st, en = sorted([r.terminator.start, r.terminator.end])
-            terminator_length = r.terminator.end - r.terminator.start
+            ter_st, ter_en = sorted([r.terminator.start, r.terminator.end])
+            terminator_length = ter_en - ter_st
             terminator_width = (terminator_length * 100) / sequence_length
-            terminator_left = (r.terminator.start - riboswitch_start) * 100 /sequence_length
+            if r.terminator.strand == '+':
+                terminator_left = (ter_st - riboswitch_start) * 100 /sequence_length
+            else:
+                terminator_left = -((ter_en - riboswitch_start) * 100 /sequence_length)
+
 
             if r.terminator.end > riboswitch_end:
                 riboswitch_end = r.terminator.end
 
         if r.gene.position.start != None:
-            aug_start = r.gene.position.start
-            aug_width = 3
-            aug_left = (aug_start - riboswitch_start) * 100 /sequence_length
+            aug_width = 3 * 100 / sequence_length
+            if r.terminator.strand == '+':
+                aug_left = (r.gene.position.start - riboswitch_start) * 100 /sequence_length
+            else:
+                aug_left = -((r.gene.position.end - riboswitch_start) * 100 /sequence_length)
         else:
             aug_start = 0
             aug_width = 0
@@ -148,7 +162,6 @@ def record(request, riboswitch_name):
         'aptamer_left': aptamer_left,
         'aug_width': aug_width,
         'aug_left': aug_left,
-        'znak': 'A',
     }
 
     return render(request, 'search/record.html', test)
