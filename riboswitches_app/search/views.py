@@ -120,6 +120,8 @@ def record(request, riboswitch_name):
             else:
                 riboswitch_start = r.aptamer_set.all()[0].position.end
             promoter_left = 0
+            pro_st = ''
+            pro_en = ''
 
         apt_st, apt_en = sorted([r.aptamer_set.all()[0].position.start, r.aptamer_set.all()[0].position.end])
         aptamer_length = apt_en - apt_st
@@ -166,12 +168,20 @@ def record(request, riboswitch_name):
     test = {
         'l': l,
         'name': context['Name'],
+        'terminator_start': ter_st,
+        'terminator_end': ter_en,
         'terminator_width': terminator_width,
         'terminator_left': terminator_left,
+        'promoter_start': pro_st,
+        'promoter_end': pro_en,
         'promoter_width': promoter_width,
         'promoter_left': promoter_left,
+        'aptamer_start': apt_st,
+        'aptamer_end': apt_en,
         'aptamer_width': aptamer_width,
         'aptamer_left': aptamer_left,
+        'aug_start': r.gene.position.start,
+        'aug_end': r.gene.position.start + 3,
         'aug_width': aug_width,
         'aug_left': aug_left,
     }

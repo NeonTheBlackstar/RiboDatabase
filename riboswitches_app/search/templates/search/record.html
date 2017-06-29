@@ -41,16 +41,16 @@
     <div id="structurePanel" class="panel-collapse collapse in">
       <div class="panel-body">
           <div id="ribo" style="border-color: grey;">
-            <div class="feat-ribo" style="left: {{promoter_left}}%; width: {{promoter_width}}%; background-color: blue; height: 100%;">
+            <div data-toggle="popover" data-html="true" class="feat-ribo" id="promoter" title="Promoter" data-content="Start: {{promoter_start}}<br>End: {{promoter_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{promoter_left}}%; width: {{promoter_width}}%; background-color: blue; height: 100%;">
               
             </div>
-            <div class="feat-ribo" style="left: {{aptamer_left}}%; width: {{aptamer_width}}%; background-color: green; height: 100%;">
+            <div data-toggle="popover" data-html="true" class="feat-ribo" id="aptamer" title="Aptamer" data-content="Start: {{aptamer_start}}<br>End: {{aptamer_end}}" data-trigger="hover" data-placement="bottom" style="left: {{aptamer_left}}%; width: {{aptamer_width}}%; background-color: green; height: 100%;">
               
             </div>
-            <div class="feat-ribo" style="left: {{terminator_left}}%; width: {{terminator_width}}%; background-color: red; height: 100%;">
+            <div data-toggle="popover" data-html="true" class="feat-ribo" id="terminator" title="Terminator" data-content="Start: {{terminator_start}}<br>End: {{terminator_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{terminator_left}}%; width: {{terminator_width}}%; background-color: red; height: 100%;">
               
             </div>
-            <div class="feat-ribo" style="left: {{aug_left}}%; width: {{aug_width}}%; background-color: black; height: 100%;">
+            <div data-toggle="popover" data-html="true" class="feat-ribo" id="aug" title="AUG" data-content="Start: {{aug_start}}<br>End: {{aug_end}}" data-trigger="hover" data-placement="bottom" class="feat-ribo" style="left: {{aug_left}}%; width: {{aug_width}}%; background-color: black; height: 100%;">
               
             </div>
           </div>
@@ -91,6 +91,10 @@
 
 {% block js_plugins %}
 <script>
+$("#promoter").popover();
+$("#terminator").popover();
+$("#aptamer").popover();
+$("#aug").popover();
 $(".glyphicon-question-sign").popover();
 </script>
 {% endblock %}
