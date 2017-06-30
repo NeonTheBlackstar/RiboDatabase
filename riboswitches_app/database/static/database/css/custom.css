@@ -42,10 +42,10 @@ tfoot input {
 }
 
 .badge.progress-bar-success {
-    background-color: #70ad77 !important;
-    float: right;
-    margin-top: 3px;
-    margin-left: 5px;
+    -moz-background-color: #70ad77 !important;
+    -moz-float: right;
+    -moz-margin-top: 3px;
+    -moz-margin-left: 5px;
 }
 
 .breadcrumb {

@@ -103,7 +103,9 @@ def record(request, riboswitch_name):
             if strand == '+':
                 promoter_left = (pro_st - riboswitch_start) * 100 / sequence_length
             else:
-                promoter_left = -((pro_en - riboswitch_start) * 100 / sequence_length)
+                promoter_left = (pro_en - riboswitch_start) * 100 / sequence_length
+                if promoter_left < 0:
+                	promoter_left = promoter_left * (-1)
             riboswitch_start = r.promoter.start
         else:
             if r.terminator.strand == '+':
@@ -121,7 +123,9 @@ def record(request, riboswitch_name):
             if strand == '+':
                 shinedalgarno_left = (sd_st - riboswitch_start) * 100 / sequence_length
             else:
-                shinedalgarno_left = -((sd_en - riboswitch_start) * 100 / sequence_length)
+                shinedalgarno_left = (sd_en - riboswitch_start) * 100 / sequence_length
+                if shinedalgarno_left < 0:
+                	shinedalgarno_left = shinedalgarno_left * (-1)
         else:
             sd_st = 0
             sd_en = 0
@@ -132,7 +136,9 @@ def record(request, riboswitch_name):
         if r.terminator.strand == '+':
             aptamer_left = (apt_st - riboswitch_start) * 100 / sequence_length
         else:
-            aptamer_left = -((apt_en - riboswitch_start) * 100 / sequence_length)
+            aptamer_left = (apt_en - riboswitch_start) * 100 / sequence_length
+            if aptamer_left < 0:
+            	aptamer_left = aptamer_left * (-1)
 
         # End of a riboswitch is equal to start of a gene or end of a terminator
         riboswitch_end = r.gene.position.start + 20
@@ -143,7 +149,9 @@ def record(request, riboswitch_name):
             if r.terminator.strand == '+':
                 terminator_left = (ter_st - riboswitch_start) * 100 /sequence_length
             else:
-                terminator_left = -((ter_en - riboswitch_start) * 100 /sequence_length)
+                terminator_left = (ter_en - riboswitch_start) * 100 /sequence_length
+                if terminator_left < 0:
+                	terminator_left = terminator_left * (-1)
 
             if r.terminator.end > riboswitch_end:
                 riboswitch_end = r.terminator.end
@@ -153,7 +161,9 @@ def record(request, riboswitch_name):
             if r.terminator.strand == '+':
                 aug_left = (r.gene.position.start - riboswitch_start) * 100 /sequence_length
             else:
-                aug_left = -((r.gene.position.end - riboswitch_start) * 100 /sequence_length)
+                aug_left = (r.gene.position.end - riboswitch_start) * 100 /sequence_length
+                if aug_left < 0:
+                	aug_left = aug_left * (-1)
         else:
             aug_start = 0
             aug_width = 0
