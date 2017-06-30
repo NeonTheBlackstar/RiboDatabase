@@ -56,6 +56,9 @@ def record(request, riboswitch_name):
     aug_width = 0
     riboswitch_start = 0
     riboswitch_end = 0
+    terminator_score = 0
+    promoter_score = 0
+    shine_score = 0
 
     # Początek ryboprzełącznika to start promotora lub start aptameru, gdy go nie ma
     # Pozycja startu genu, to pozycja startu AUG, za ktorym dodajemy jeszcze 20nt
@@ -97,6 +100,7 @@ def record(request, riboswitch_name):
 
         # Start of a riboswitch is equal to start of a promoter or an aptamer, if promoter doesn't exists
         if r.promoter != None:
+            promoter_score = r.promoter.score
             pro_st, pro_en = sorted([r.promoter.start, r.promoter.end])
             promoter_length = pro_en - pro_st
             promoter_width = (promoter_length/sequence_length)*100
@@ -105,7 +109,7 @@ def record(request, riboswitch_name):
             else:
                 promoter_left = (pro_en - riboswitch_start) * 100 / sequence_length
                 if promoter_left < 0:
-                	promoter_left = promoter_left * (-1)
+                    promoter_left = promoter_left * (-1)
             riboswitch_start = r.promoter.start
         else:
             if r.terminator.strand == '+':
@@ -117,6 +121,7 @@ def record(request, riboswitch_name):
             pro_en = ''
 
         if r.shinedalgarno != None:
+            shine_score = r.shinedalgarno.score
             sd_st, sd_en = sorted([r.shinedalgarno.start, r.shinedalgarno.end])
             shinedalgarno_length = sd_en - sd_st
             shinedalgarno_width = (shinedalgarno_length/sequence_length) * 100
@@ -125,7 +130,7 @@ def record(request, riboswitch_name):
             else:
                 shinedalgarno_left = (sd_en - riboswitch_start) * 100 / sequence_length
                 if shinedalgarno_left < 0:
-                	shinedalgarno_left = shinedalgarno_left * (-1)
+                    shinedalgarno_left = shinedalgarno_left * (-1)
         else:
             sd_st = 0
             sd_en = 0
@@ -138,11 +143,12 @@ def record(request, riboswitch_name):
         else:
             aptamer_left = (apt_en - riboswitch_start) * 100 / sequence_length
             if aptamer_left < 0:
-            	aptamer_left = aptamer_left * (-1)
+                aptamer_left = aptamer_left * (-1)
 
         # End of a riboswitch is equal to start of a gene or end of a terminator
         riboswitch_end = r.gene.position.start + 20
         if r.terminator != None:
+            terminator_score = r.terminator.score
             ter_st, ter_en = sorted([r.terminator.start, r.terminator.end])
             terminator_length = ter_en - ter_st
             terminator_width = (terminator_length * 100) / sequence_length
@@ -151,7 +157,7 @@ def record(request, riboswitch_name):
             else:
                 terminator_left = (ter_en - riboswitch_start) * 100 /sequence_length
                 if terminator_left < 0:
-                	terminator_left = terminator_left * (-1)
+                    terminator_left = terminator_left * (-1)
 
             if r.terminator.end > riboswitch_end:
                 riboswitch_end = r.terminator.end
@@ -163,7 +169,7 @@ def record(request, riboswitch_name):
             else:
                 aug_left = (r.gene.position.end - riboswitch_start) * 100 /sequence_length
                 if aug_left < 0:
-                	aug_left = aug_left * (-1)
+                    aug_left = aug_left * (-1)
         else:
             aug_start = 0
             aug_width = 0
@@ -184,18 +190,22 @@ def record(request, riboswitch_name):
         'terminator_end': ter_en,
         'terminator_width': terminator_width,
         'terminator_left': terminator_left,
+        'terminator_score': terminator_score,
         'promoter_start': pro_st,
         'promoter_end': pro_en,
         'promoter_width': promoter_width,
         'promoter_left': promoter_left,
+        'promoter_score': promoter_score,
         'aptamer_start': apt_st,
         'aptamer_end': apt_en,
         'aptamer_width': aptamer_width,
         'aptamer_left': aptamer_left,
+        'aptamer_score': r.aptamer_set.all()[0].position.score,
         'shine_start': sd_st,
         'shine_end': sd_en,
         'shine_width': shinedalgarno_width,
         'shine_left': shinedalgarno_left,
+        'shine_score': shine_score,
         'aug_start': r.gene.position.start,
         'aug_end': r.gene.position.start + 3,
         'aug_width': aug_width,
