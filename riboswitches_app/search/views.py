@@ -57,6 +57,9 @@ def record(request, riboswitch_name):
     riboswitch_start = 0
     riboswitch_end = 0
     terminator_score = 0
+    ter_st = 0
+    ter_en = 0
+    terminator_left = 0
     promoter_score = 0
     shine_score = 0
 
@@ -112,7 +115,7 @@ def record(request, riboswitch_name):
                     promoter_left = promoter_left * (-1)
             riboswitch_start = r.promoter.start
         else:
-            if r.terminator.strand == '+':
+            if strand == '+':
                 riboswitch_start = r.aptamer_set.all()[0].position.start
             else:
                 riboswitch_start = r.aptamer_set.all()[0].position.end
@@ -138,7 +141,7 @@ def record(request, riboswitch_name):
         apt_st, apt_en = sorted([r.aptamer_set.all()[0].position.start, r.aptamer_set.all()[0].position.end])
         aptamer_length = apt_en - apt_st
         aptamer_width = (aptamer_length * 100) / sequence_length
-        if r.terminator.strand == '+':
+        if strand == '+':
             aptamer_left = (apt_st - riboswitch_start) * 100 / sequence_length
         else:
             aptamer_left = (apt_en - riboswitch_start) * 100 / sequence_length
@@ -152,7 +155,7 @@ def record(request, riboswitch_name):
             ter_st, ter_en = sorted([r.terminator.start, r.terminator.end])
             terminator_length = ter_en - ter_st
             terminator_width = (terminator_length * 100) / sequence_length
-            if r.terminator.strand == '+':
+            if strand == '+':
                 terminator_left = (ter_st - riboswitch_start) * 100 /sequence_length
             else:
                 terminator_left = (ter_en - riboswitch_start) * 100 /sequence_length
@@ -164,7 +167,7 @@ def record(request, riboswitch_name):
 
         if r.gene.position.start != None:
             aug_width = 3 * 100 / sequence_length
-            if r.terminator.strand == '+':
+            if strand == '+':
                 aug_left = (r.gene.position.start - riboswitch_start) * 100 /sequence_length
             else:
                 aug_left = (r.gene.position.end - riboswitch_start) * 100 /sequence_length
