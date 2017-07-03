@@ -67,7 +67,6 @@ def class_family_browser(request):
     context = {
         'result': result,
     }
-    print(context['result'])
 
     return render(request, 'database/class_family_browser.html', context)
 
@@ -108,7 +107,7 @@ def gene_details(request, gene_name):
         'name': name,
     }
 
-    return render(request, 'database/ ils.html', context)
+    return render(request, 'database/ligand_details.html', context)
 
 
 def ligand_browser(request):
@@ -117,7 +116,7 @@ def ligand_browser(request):
         'glycine': 'Glycine',
         'alanine': 'Alanine',
         'sam': 'SAM',
-        'fmn': 'FMN',
+        'FMN': 'FMN',
         'adenine': 'Adnenine',
         'guanine': 'Guanine',
     }
@@ -131,6 +130,7 @@ def ligand_details(request, ligand_name):
 
     for e in Record.objects.all():
         if e.family != None:
+            print(e.family.ribo_class.ligands.all())
             if ligand_name in str(e.family.ribo_class.ligands.all()):
                 dic = {
                     'id': e.id,
@@ -226,7 +226,6 @@ def organism_details(request, organism_name):
     term = request.get_full_path()
     match = re.findall(r'[/](.*?)[/]',term)[-1].replace('%20', ' ')
 
-    print(match)
 
     riboswitch_record = []
 
@@ -244,7 +243,5 @@ def organism_details(request, organism_name):
     context = {
         'riboswitch_record': riboswitch_record,
     }
-
-    print(context)
 
     return render(request, 'database/organism_details.html', context)

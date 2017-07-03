@@ -15,10 +15,12 @@ def genes(request):
     term = request.GET['term']
     limit = request.GET['limit']
     l = []
+    temp = []
 
     for g in Gene.objects.filter(name__icontains=term):
-        print(g)
-        l.append({'name':g.name, 'url':"/search/gene/{}".format(g.name)},)
+        if g.name not in temp:    
+            temp.append(g.name)
+            l.append({'name':g.name, 'url':"/search/gene/{}".format(g.name)},)
 
     return JsonResponse(l, safe=False)
 
@@ -29,7 +31,7 @@ def organisms(request):
     l = []
 
     for o in Organism.objects.filter(scientific_name__icontains=term):
-        l.append({'name':o.scientific_name, 'url':"/search/organism/{}".format(o.scientific_name.replace(' ', '_'))},)
+        l.append({'name':o.scientific_name, 'url':"/search/organism/{}".format(o.scientific_name.replace('%20', ' '))},)
 
     return JsonResponse(l, safe=False)
 
@@ -38,9 +40,8 @@ def ligands(request):
     term = request.GET['term'] # ligand name
     limit = request.GET['limit']
     lig = []
-
     for l in Ligand.objects.filter(name__icontains=term):
-        lig.append({'name':l.name, 'url':"/browser/ligand/{}/".format(l.name)},)
+        lig.append({'name':l.name, 'url':"/browser/ligand/{}/".format(l.name.capitalize())},)
     
     return JsonResponse(lig, safe=False)
 
