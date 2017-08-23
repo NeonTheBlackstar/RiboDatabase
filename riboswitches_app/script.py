@@ -8,10 +8,9 @@
 # To import only a few models:
 	from database.models import RiboFamily, RiboClass
 
-	!!! NIE ZAPOMNIJ ZRESETOWAĆ COUNTERA DLA ID REKORDÓW W DBSHELLU JAK ZACZNIESZ WRZUCAĆ DANE DO BAZY NA STAŁE !!!
 USAGE:
-python3 script.py loadresults		- zeby wczytac wyniki adnotacji
-python3 script.py loadresults purge - zeby wczytac wyniki adnotacji i wyczyscic baze danych
+python3 script.py loadresults		- to load all annotation results
+python3 script.py loadresults purge 	- to load all annotation results and before that purge whole database
 
 '''
 
@@ -33,7 +32,6 @@ application = get_wsgi_application()
 from database.models import *
 ''' To use managing functions inside script: '''
 from django.core.management import execute_from_command_line
-''' Removes whole data from database. Comment following line if it's not necessary ''' ###################################
 
 ### HANDLE SCRIPT PARAMETERS ###
 result_files = []
@@ -42,7 +40,6 @@ isResult = False
 if len(argv) == 1:
 	print("No arguments where passed to the script. Program will abort now...")
 elif argv[1] == "loadresults":
-	#execute_from_command_line([argv[0], 'flush', '--noinput'])
 	result_files = [ file for file in os.listdir('../Riboswitches/Results') ]
 	isResult = True
 else:
@@ -127,7 +124,7 @@ for datafile in result_files:
 	for row in dList:
 		''' CREATING NEW OBJECTS '''
 		v_record = None
-		v_riboclass = None # Pointer for RiboClass object 123
+		v_riboclass = None
 		v_ribofamily = None
 		v_organism = None
 		v_gene = None
@@ -135,10 +132,10 @@ for datafile in result_files:
 		v_mech_conf = None
 
 		''' ARRAYS '''
-		v_articles = [] # List of pointers for Article objects
+		v_articles = []
 		v_operon_genes = []
 		v_structures3d = []
-		v_ligands = [] # ManyToMany
+		v_ligands = []
 		v_ligandclasses = []
 		v_taxonomies = []
 		# Aptamers #
@@ -245,7 +242,6 @@ for datafile in result_files:
 					Structure3D.objects.create(
 						pdbid = pdb,
 						ribo_class = v_riboclass,
-						#ribo_family = v_ribofamily,
 					)
 			except IntegrityError as e:
 				if match("UNIQUE", str(e)):
@@ -253,7 +249,6 @@ for datafile in result_files:
 				else:
 					print(e)
 
-	#################################################################################################################################################################################################
 
 		''' Taxonomy '''
 		tax_names = convertToList(row['taxonomy_name'])
@@ -288,21 +283,20 @@ for datafile in result_files:
 						v_taxonomy = Taxonomy.objects.get(taxonomy_id = tax_ids[id])
 
 				v_taxonomies.append(v_taxonomy)
-		elif tax_ids != [] and tax_names == []: # No names but IDs
+		elif tax_ids != [] and tax_names == []:
 			for id in tax_ids:
 				if not Taxonomy.objects.filter(taxonomy_id = id):
 					os.system("python3 ../riboswitches_app/tax_parser.py {}".format(id))
 					os.system("python3 ../riboswitches_app/script.py ../riboswitches_app/taxonomy.csv")
 					os.system("rm ../riboswitches_app/taxonomy.csv")
 
-	#################################################################################################################################################################################################
 
 		''' Organism '''
 		try:
 			if row['build_id'] != '':
 				if tax_ids != []:
 					v_organism = Organism.objects.create(
-						#scientific_name = row['scientific_name'], 
+ 
 						scientific_name = Taxonomy.objects.get(taxonomy_id = tax_ids[0]).name, 
 						common_name = row['common_name'],
 						accession_number = row['organism_accession_number'],
@@ -416,29 +410,11 @@ for datafile in result_files:
 				sequence = row['sequence'],
 			)
 		else:
-			'''
-			for e in Organism.objects.all():
-				print('\n\n')
-				print(e)
-				print('\n\n')
-
-			for e in Taxonomy.objects.all():
-				print('\n\n')
-				print(e)
-				print('\n\n')
-
-			print("\n\n------------------------\n\n")
-
-			for e in Record.objects.all():
-				print('\n\n')
-				print(e)
-				print('\n\n')
-			'''
 			continue
 
 
 		''' Mechanism Confirmation '''
-		if row['confirmation'] != '' and row['confirmation'] != None: ###########3 POPRAWIĆ !!!
+		if row['confirmation'] != '' and row['confirmation'] != None:
 			try:
 				v_mech_conf = Article.objects.create(pmid = row['confirmation'])
 			except IntegrityError as e:
@@ -448,6 +424,7 @@ for datafile in result_files:
 			v_record.mechanism_confirmation = v_mech_conf
 		else:
 			v_record.mechanism_confirmation = None
+
 
 		''' Terminator '''
 		if row['terminator_start'] != 0 or row['terminator_end'] != 0:
@@ -461,6 +438,7 @@ for datafile in result_files:
 		else:
 			v_record.terminator = None
 			
+
 		''' Promotor '''
 		if row['promoter_start'] != 0 or row['promoter_end'] != 0:
 			v_record.promoter = Position.objects.create(
@@ -472,6 +450,7 @@ for datafile in result_files:
 				)
 		else:
 			v_record.promoter = None
+
 
 		''' Shine-Dalgarno '''
 		if row['sd_start'] != 0 or row['sd_end'] != 0:
@@ -538,23 +517,3 @@ print('Done loading {} records, date: {}'.format(record_counter, str(strftime("%
 b = datetime.now()
 c = b - a
 #print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))
-
-'''
-for e in Organism.objects.all():
-	print('\n\n')
-	print(e)
-	print('\n\n')
-
-for e in Taxonomy.objects.all():
-	print('\n\n')
-	print(e)
-	print('\n\n')
-
-print("\n\n------------------------\n\n")
-
-for e in Record.objects.all():
-	print('\n\n')
-	print(e)
-	print('\n\n')
-
-'''

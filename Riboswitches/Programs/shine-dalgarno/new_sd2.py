@@ -42,7 +42,7 @@ def printBed(seq, x, y, strand, beforeStart, afterStart, locus_tag, biotype = ''
 			end = y + beforeStart
 			start = y - afterStart	
 
-	os.system("echo \'{}\t{}\t{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, locus_tag, '0', strand, biotype))
+	os.system("echo \'{}\t{}\t{}\t{}\t{}\t{}' >> ./window.bed".format('chr', start, end, locus_tag, '0', strand))
 
 def printSeq(seq, x, y, strand, beforeStart, afterStart):
 	shdl = ''
@@ -145,7 +145,7 @@ def getFasta(*arg):
 		handle = open(gff_path)
 	if fasta_path != None:
 		h_fasta = open(fasta_path)
-	if meme_path != None:
+	'''if meme_path != None:
 		meme = open(meme_path, "r")
 		fileName = 'rnafold_seqs'
 	else:
@@ -155,7 +155,12 @@ def getFasta(*arg):
 		fileName = 'aptamer_windows'
 
 	if prom_filter != None:
-		fileName = 'promoter_windows'
+		fileName = 'promoter_windows'''
+
+	if aptamerInterval == None:
+		aptamerInterval = 0
+
+	fileName = 'aptamer_windows'
 
 	if makeBed != None:
 		os.system('rm ./window.bed > /dev/null 2>&1')
@@ -204,6 +209,7 @@ def getFasta(*arg):
 						if seqSymbol == '+':
 							if previous_start + aptamerInterval > start - beforeStart: # Cos jest zle???
 								beforeStart = start - (previous_start + aptamerInterval)
+								## DEBUG ##
 
 						if seqSymbol == '-':
 							if previous_end - aptamerInterval < end + beforeStart:

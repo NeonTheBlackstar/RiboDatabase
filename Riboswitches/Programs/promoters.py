@@ -1,27 +1,16 @@
-'''
-Szukamy na tych samych oknach co aptamery, zeby dwa razy tego nie ekstrahowac.
-Jesli promotor zostanie znaleziony przed pozycją aptameru, to dodajemy go do wyniku.
-'''
 def promoters(
-	genome_id = sys.argv[1], 									# Genome ID
+	genome_id = sys.argv[1], 					# Genome ID
 	genome_fasta = './Genomes/{}.fasta'.format(sys.argv[1]),	# Genome fasta file path
-	window = '100', 											# Window size for the upstream region to be compared
-	gccontent = 'default'										# GC-content of the whole genome
+	window = '100', 						# Window size for the upstream region to be compared
+	gccontent = 'default'						# GC-content of the whole genome
 	):
 	
-	# GC content dla ramki, czy dla calego genomu? DLA CALEGO GENOMU
-	# Zwiększyć okno "window" do 500, skoro taka jest ramka dla aptameru? TAKA SAMA RAMKA JAK DLA APTAMERU
-	# Robić filtrowanie dla znalezionych promotorów? OGARNĄĆ JAK OBLICZYĆ TE LEVELE
-
+	
 	aptamer_list = createAptamersFilter("./Results/{0}.result.csv".format(genome))
 	filterWindows(aptamer_list, "aptamer_windows.fasta", "promoter_windows.fasta")
 
+	### PROMPREDICT ###
 	gccontent = float(subprocess.check_output("./Programs/gc_calc Genomes/{0}.fasta".format(genome_id), shell=True))
-
-	### Use PromPredictMultiseq to find promoters in multifasta file ###
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_mulseq'.format("promoter_windows.fasta", window, gccontent)) 
-	#os.system('echo \'{0}\n{1}\n{2}\' | ./Programs/PromPredict_genome_V1'.format(genome_fasta, window, gccontent)) 
-
 
 	PP_output_path = glob('./promoter_windows_PPde.txt')[0]
 	ID_line = None
@@ -71,16 +60,10 @@ def promoters(
 					if line.split('\t')[1] == d['locus_tag']:
 						finalFile.write("{}\t{}\t{}\t{}\n".format(line, promoter_name, start, end))
 						break
-
 	makePromotersBed(genome_id)
 
-	print("debug") ### TU SKONCZYLEM
-	return
-
-	'''
-	############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
-	'''
-	
+			
+	### BPROM ###
 	os.system('export TSS_DATA=\"Programs/lin/data\"')
 
 	counter = 1
@@ -105,8 +88,6 @@ def promoters(
 			os.system('Programs/lin/bprom \"{0}\" \"bprom/output_{1}.txt\"'.format("./temp_prom.fasta", counter))
 
 		prom_windows.close()
-
-	# BEDTOOLS
 
 	os.system('rm ./*_PPde.txt')
 	os.system('rm ./*_stb.txt')

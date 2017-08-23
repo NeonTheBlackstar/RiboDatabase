@@ -20,19 +20,17 @@ from time import sleep, localtime, strftime
 def makeAptamersBed(genome):
 	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $7, $8, $2, $9, $5}\' ./Results/"+genome+".result.csv > ./Results/apt.bed")
 
-#chr, {6}, {7}, {1}, {8}, {4} // liczone od 0
 
 def makePromotersBed(genome):
 	os.system("awk \'BEGIN {OFS = \"\\t\"}; {print \"chr\", $11, $12, $2, 0, $5}\' ./Results/"+genome+".result.csv > ./Results/prom.bed")
 
-#chr, {10}, {11}, {9}, 0, {4} // liczone od 0
 
 def createAptamersFilter(result_file):
 	filter_list = []
 	with open(result_file) as result_handle:
 		for line in result_handle:
 			line = line.strip().split('\t')
-			filter_list.append(line[5]) # Append locus tag
+			filter_list.append(line[5])
 	return(filter_list)
 
 
@@ -59,7 +57,7 @@ def intervalIntersect(a1, b1, a2, b2):
 
 def aptamers(
 	genome,				# Genome ID
-	e_value = 0.001, 	# Maximum e-value for aptamer to ?evaluate?
+	e_value = 0.001, 		# Maximum e-value for aptamer score
 	):
 
 	# Gather build id for taxonomy, before GFF header will be wiped out #
@@ -75,7 +73,6 @@ def aptamers(
 			elif line.startswith("#!genome-build"):
 				genome_build_id = line.split(" ")[1]
 
-	########## PRZYGOTOWANIE SEKWENCJI ###########
 	''' Prepare separate files for all replicons '''
 	# GFF #
 	with open("./Genomes/{0}.gff".format(genome)) as handle:
@@ -131,7 +128,8 @@ def aptamers(
 			"-aptamer", 50, 
 			"-biotype", "protein_coding",
 			"-exhead", True, 
-			"-intervals", True)
+			"-intervals", True,
+			)
 
 		os.system("cat aptamer_windows.fasta >> temp.fasta")
 	
@@ -164,8 +162,9 @@ def aptamers(
 		"sequence\t"+
 		"\n")
 	
-	lista = os.listdir('Alignments')
+	riboswitchCount = 0
 
+	lista = os.listdir('Alignments')
 	for i in range(0, len(lista)):
 
 		# Read aptamer class info for the result file #
@@ -198,7 +197,7 @@ def aptamers(
 					continue
 
 			if start_scanning == False:
-				if len(temp) > 5 and len(temp) < 16 and temp[0].startswith("(") and temp[12] == "-":	####################### OGARNAC TO!!!
+				if len(temp) > 5 and len(temp) < 16 and temp[0].startswith("(") and temp[12] == "-":
 				
 					''' Filter outputed aptamers '''
 					# E-value
@@ -208,7 +207,6 @@ def aptamers(
 
 					### Prepare data ###
 					d[temp[0]] = {
-						# sequence?
 						'locus_tag': 			temp[5].split('|')[0],
 						'aptamer_start': 		int(temp[6]),
 						'aptamer_end': 			int(temp[7]),
@@ -243,7 +241,7 @@ def aptamers(
 					d[temp[0]]['gene']['sequence'] = windowSequence
 					### END ###
 
-			elif start_scanning == True:# and len(temp) >= 12:
+			elif start_scanning == True:
 				if temp[0] in d and temp[8] == '[]': # If aptamer covers whole model
 					key = temp[0]
 
@@ -261,9 +259,7 @@ def aptamers(
 					switch_name = family_id + '_' + str(start)
 					finalFile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
 						genome_accession, 
-						#organism_info['sc_name'], 
 						genome_build_id,
-						###
 						organism_info['tax'], 
 						d[key]['gene']['name'], 
 						d[key]['gene']['location'], 
@@ -280,10 +276,12 @@ def aptamers(
 						d[key]['gene']['replicon_id'],
 						windowSequence))
 
+					riboswitchCount += 1
+
 		processingfile.close()
 
 	finalFile.close()
-	
+
 	os.system('rm ./Genomes/byStrand*.gff')
 	os.system("rm ./Results/processing*.txt")
 	os.system('rm ./Genomes/{0}_sorted*.gff'.format(genome))
@@ -296,6 +294,7 @@ def aptamers(
 	os.system('mv ./Results/{0}_temp.result.csv ./Results/{0}.result.csv'.format(genome))
 
 	#makeAptamersBed(genome)
+	return(riboswitchCount)
 
 
 def terminators(genome):
@@ -350,7 +349,7 @@ def terminators(genome):
 
 				d[locus_tag]['terminators'].append(terminator.copy())
 
-		# Wybor najlepszego terminatora wsrod nienakladajacych sie i eliminacja pozostalych
+		# Choosing the best, not overlapping terminator and removing the rest of them
 		firstLine = True				
 		for line in result_handle:
 			line = line.strip()
@@ -371,17 +370,17 @@ def terminators(genome):
 					t1 = terms_copy[id1]
 					t2 = terms_copy[id2]
 
-					# Jesli terminatory sie nakladaja na siebie:
+					# If terminators overlap with each other
 					if intervalIntersect(t1['start'], t1['end'], t2['start'], t2['end']) == True:
 								
-						#Zostawiamy terminator z lepsza ocena confidence
+						# I leave terminator with better confidence
 						if t1['confidence'] < t2['confidence']:
 							if t1 in d[locus_tag]['terminators']:
 								d[locus_tag]['terminators'].remove(t1)
 						elif t1['confidence'] > t2['confidence']:
 							if t2 in d[locus_tag]['terminators']:
 								d[locus_tag]['terminators'].remove(t2)
-						#Jesli ocena jest taka sama, zostawiamy ten z wieksza roznica energii spinki i poli-T
+						# If the same score, I leave the one with bigger energy difference between harping and poli-T
 						else:
 							t1_score_difference = abs(t1['harpin_score'] - t1['tail_score'])
 							t2_score_difference = abs(t2['harpin_score'] - t2['tail_score'])
@@ -391,21 +390,21 @@ def terminators(genome):
 									d[locus_tag]['terminators'].remove(t1)
 							else:
 								if t2 in d[locus_tag]['terminators']:
-									d[locus_tag]['terminators'].remove(t2) ### Tu jest błąd, ale nie powinno go być! ValueError: list.remove(x): x not in list
-					# Jesli sie nie nakladaja
+									d[locus_tag]['terminators'].remove(t2)
+					# If not overlapping
 					else:
 						try:
-							# Oblicz odleglosc od aptameru
+							# Calculate distance from aptamer
 							t1_length = abs(t1['start'] - t1['end'])
 							t2_length = abs(t2['start'] - t2['end'])
 							if strand == "+":
-								t1_distance = t1['start'] - aptamer_end # Odleglosci od aptameru
+								t1_distance = t1['start'] - aptamer_end
 								t2_distance = t2['start'] - aptamer_end
 							if strand == "-":
 								t1_distance = aptamer_start - t1['end']
 								t2_distance = aptamer_start - t2['end']
 
-							# Gdy żaden z terminatorów nie nachodzi na aptamer
+							# When none of terminators overlap with aptamer
 							if t1_distance >= 0 and t2_distance >= 0:
 								if t1_distance < t2_distance:
 									if t2 in d[locus_tag]['terminators']:
@@ -414,7 +413,7 @@ def terminators(genome):
 									if t1 in d[locus_tag]['terminators']:
 										d[locus_tag]['terminators'].remove(t1)
 
-							# Jesli dystans jest ujemny, to znaczy ze terminator nachodzi na aptamer
+							# If distance is negative, it means that terminator overlaps aptamer
 							elif t1_distance < 0 and t2_distance >= 0:
 								if abs(t1_distance) < (t1_length / 2):
 									if t2 in d[locus_tag]['terminators']:
@@ -431,7 +430,7 @@ def terminators(genome):
 									if t2 in d[locus_tag]['terminators']:
 										d[locus_tag]['terminators'].remove(t2)
 
-							elif t1_distance < 0 and t2_distance < 0: # Co tu zrobić?
+							elif t1_distance < 0 and t2_distance < 0:
 								if abs(t1_distance) < (t1_length / 2):
 									if t2 in d[locus_tag]['terminators']:
 										d[locus_tag]['terminators'].remove(t2)
@@ -462,7 +461,7 @@ def terminators(genome):
 					line_list = line.strip().split('\t')
 					locus_tag = line_list[5]
 
-					if d[locus_tag]['terminators'] != []: # Jesli da tego aptameru znaleziono terminator
+					if d[locus_tag]['terminators'] != []: # If terminator for that aptamer was found
 						line += "\t" + str(d[locus_tag]['terminators'][0]['start']) + "\t" + str(d[locus_tag]['terminators'][0]['end']) + "\t" + str(d[locus_tag]['terminators'][0]['confidence']) + '\n'
 					else:
 						line += "\t" + '0' + "\t" + '0' + "\t" + '0' + '\n'			
@@ -476,46 +475,6 @@ def terminators(genome):
 	os.system('rm termin_crd.coords')
 	os.system('rm transterm_output.tt')
 
-
-def comparison(genome, distance_P = 150, distance_T = 150, distance_SD = 200):
-	#format: genome start_R end_R name_R strand_R start_P end_P distance_P start_T end_T strand_T distance_T start_SD end_SD strand_SD distance_SD gene_annotation type_of_mechanism
-	#default distance: P = 150, T = 150, SD = 200 
-	final = open('./Results/{0}.final.txt'.format(genome), 'w')
-	aptamers = open('./Results/{0}.bedAP.txt'.format(genome), 'r')
-	for lineA in aptamers:
-		P_exist = False
-		T_exist = False
-		SD_exist = False
-		tempA = lineA.split()
-		final.write('{0}\t{1}\t{2}\t{3}\t{4}\t'.format(genome, tempA[1], tempA[2], tempA[3], tempA[5]))
-		if int(tempA[11]) >= (-(int(distance_P))):
-			final.write('{0}\t{1}\t{2}\t'.format(tempA[7], tempA[8], tempA[11]))
-			P_exist = True
-		else:
-			final.write('---\t---\tNo_P\t')
-		terminators = open('./Results/{0}.bedAT.txt'.format(genome), 'r')
-		for lineT in terminators:
-			tempT = lineT.split()
-			if int(tempT[13]) <= distance_T and tempT[3] == tempA[3]:
-				final.write('{0}\t{1}\t{2}\t{3}\t'.format(tempT[7], tempT[8], tempT[12], tempT[13]))
-				T_exist = True
-				break
-		else:
-			final.write('---\t---\t---\tNo_T\t')
-		terminators.close()
-
-		############### tu bylo SD
-
-		if P_exist and T_exist:
-			final.write('Termination\n')
-		if P_exist and not T_exist and not SD_exist:
-			final.write('Unknown\n')
-		if P_exist and SD_exist and not T_exist:
-			final.write('Translation\n')
-		if not P_exist and T_exist:
-			final.write('Termination\n')
-		if not P_exist and not T_exist:
-			final.write('Unknown\n')
 
 ##### SCRIPT STARSTS HERE #####
 '''
@@ -533,20 +492,18 @@ else:
 for genome in genomes_list:
 	a = datetime.now()
 
-	#try:
-	aptamers(genome)
-	#promoters()
+	switchesFound = aptamers(genome)
 	terminators(genome)
-	print('Succeeded {} genome! Date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))
-	'''except (KeyboardInterrupt, SystemExit):
-		raise
-	except:
-		print('Failed {} genome! Date: {}'.format(genome, str(strftime("%a, %d %b %Y %H:%M:%S", localtime()))))'''
 
-	
 	b = datetime.now()
 	c = b - a
-	#print("{} seconds {} microseconds\n---".format(c.seconds, c.microseconds % c.seconds))
 
+	print("{}\t{}MB\t{}MB\t{}s\t{}".format(
+		genome,
+		round(os.path.getsize("./Genomes/"+genome+".fasta")/10**6, 2), 
+		round(os.path.getsize("./Genomes/"+genome+".gff")/10**6, 2),
+		round(c.seconds + c.microseconds / 1000000, 1),
+		switchesFound
+	))
 
 
