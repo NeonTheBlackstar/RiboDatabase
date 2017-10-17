@@ -4,10 +4,15 @@ import os
 
 def getSeq(h_fasta):
 	sq = ''
+	org_name = ''
 	for line in h_fasta:
+		line = line.strip()
 		if line.startswith('>') == False:
-			sq += line.strip()
-	return sq
+			sq += line
+		else:
+			_list = line.split(" ")
+			org_name = _list[1] + " " + _list[2]
+	return {"sq": sq, "org_name": org_name}
 	
 def translate(seq):
 	dic = {'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G'}
@@ -166,12 +171,15 @@ def getFasta(*arg):
 		os.system('rm ./window.bed > /dev/null 2>&1')
 
 	out_fasta = open(fileName + '.fasta', 'w')
-	sequence = getSeq(h_fasta)
+
+	temp_dic = getSeq(h_fasta)
+	sequence = temp_dic["sq"]
+
 	h_fasta.close()
 	counter = 0
 
 	# Variables for organism information
-	scientificName = ""
+	scientificName = temp_dic["org_name"]
 	taxonomy = ""
 	location = ""
 

@@ -294,7 +294,10 @@ def aptamers(
 	os.system('mv ./Results/{0}_temp.result.csv ./Results/{0}.result.csv'.format(genome))
 
 	#makeAptamersBed(genome)
-	return(riboswitchCount)
+	return({
+		"rswCount": riboswitchCount, 
+		"sc_name": organism_info["sc_name"]
+	})
 
 
 def terminators(genome):
@@ -492,18 +495,19 @@ else:
 for genome in genomes_list:
 	a = datetime.now()
 
-	switchesFound = aptamers(genome)
+	temp_dic = aptamers(genome)
 	terminators(genome)
 
 	b = datetime.now()
 	c = b - a
 
-	print("{}\t{}MB\t{}MB\t{}s\t{}".format(
+	print("{}\t{}\t{}MB\t{}MB\t{}s\t{}".format(
 		genome,
+		temp_dic["sc_name"],
 		round(os.path.getsize("./Genomes/"+genome+".fasta")/10**6, 2), 
 		round(os.path.getsize("./Genomes/"+genome+".gff")/10**6, 2),
 		round(c.seconds + c.microseconds / 1000000, 1),
-		switchesFound
+		temp_dic["rswCount"],
 	))
 
 

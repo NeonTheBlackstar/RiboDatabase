@@ -1,7 +1,6 @@
-INFERNAL1/a [1.1.1 | July 2014]
+INFERNAL1/a [1.1 | October 2013]
 NAME     Glycine
 ACC      RF00504
-DESC     Glycine riboswitch
 STATES   291
 NODES    78
 CLEN     94
@@ -10,9 +9,9 @@ ALPH     RNA
 RF       no
 CONS     yes
 MAP      yes
-DATE     Fri Jun 10 11:56:47 2016
-COM      [1] ./cmbuild RF00504.cm RF00504.sto
-COM      [2] ./cmcalibrate RF00504.cm
+DATE     Thu Feb 20 18:43:22 2014
+COM      [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM      [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -404,10 +403,9 @@ CM
                                              [ END    77 ]      -      - - - - -
      E   290   289 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [i1.1.1 | July 2014]
+HMMER3/f [i1.1 | October 2013]
 NAME  Glycine
 ACC   RF00504
-DESC  Glycine riboswitch
 LENG  94
 MAXL  359
 ALPH  RNA
@@ -416,8 +414,9 @@ MM    no
 CONS  yes
 CS    yes
 MAP   yes
-DATE  Fri Jun 10 11:56:47 2016
-COM   [1] ./cmbuild RF00504.cm RF00504.sto
+DATE  Thu Feb 20 18:43:22 2014
+COM   [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM   [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 NSEQ  44
 EFFN  10.664307
 CKSUM 1538723602

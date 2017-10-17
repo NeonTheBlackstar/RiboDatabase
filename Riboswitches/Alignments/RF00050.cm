@@ -1,7 +1,6 @@
-INFERNAL1/a [1.1.1 | July 2014]
+INFERNAL1/a [1.1 | October 2013]
 NAME     FMN
 ACC      RF00050
-DESC     FMN riboswitch (RFN element)
 STATES   439
 NODES    131
 CLEN     140
@@ -10,9 +9,9 @@ ALPH     RNA
 RF       no
 CONS     yes
 MAP      yes
-DATE     Fri Jun 10 11:56:07 2016
-COM      [1] ./cmbuild RF00050.cm RF00050.sto
-COM      [2] ./cmcalibrate RF00050.cm
+DATE     Wed Mar  5 13:53:55 2014
+COM      [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM      [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -605,10 +604,9 @@ CM
                                              [ END   130 ]      -      - - - - -
      E   438   437 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [i1.1.1 | July 2014]
+HMMER3/f [i1.1 | October 2013]
 NAME  FMN
 ACC   RF00050
-DESC  FMN riboswitch (RFN element)
 LENG  140
 MAXL  439
 ALPH  RNA
@@ -617,8 +615,9 @@ MM    no
 CONS  yes
 CS    yes
 MAP   yes
-DATE  Fri Jun 10 11:56:07 2016
-COM   [1] ./cmbuild RF00050.cm RF00050.sto
+DATE  Wed Mar  5 13:53:55 2014
+COM   [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM   [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 NSEQ  144
 EFFN  1.770996
 CKSUM 1916540060

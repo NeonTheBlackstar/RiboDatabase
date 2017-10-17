@@ -1,7 +1,6 @@
-INFERNAL1/a [1.1.1 | July 2014]
+INFERNAL1/a [1.1 | October 2013]
 NAME     Purine
 ACC      RF00167
-DESC     Purine riboswitch
 STATES   315
 NODES    86
 CLEN     102
@@ -10,9 +9,9 @@ ALPH     RNA
 RF       no
 CONS     yes
 MAP      yes
-DATE     Tue May 10 13:39:30 2016
-COM      [1] src/cmbuild RF00167.cm RF00167.sto
-COM      [2] src/cmcalibrate RF00167.cm
+DATE     Fri Feb 28 01:25:34 2014
+COM      [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM      [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -436,10 +435,9 @@ CM
                                              [ END    85 ]      -      - - - - -
      E   314   313 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [i1.1.1 | July 2014]
+HMMER3/f [i1.1 | October 2013]
 NAME  Purine
 ACC   RF00167
-DESC  Purine riboswitch
 LENG  102
 MAXL  179
 ALPH  RNA
@@ -448,8 +446,9 @@ MM    no
 CONS  yes
 CS    yes
 MAP   yes
-DATE  Tue May 10 13:39:30 2016
-COM   [1] src/cmbuild RF00167.cm RF00167.sto
+DATE  Fri Feb 28 01:25:35 2014
+COM   [1] /nfs/production/xfam/rfam/software/bin/cmbuild -F CM SEED
+COM   [2] /nfs/production/xfam/rfam/software/bin/cmcalibrate --mpi CM
 NSEQ  133
 EFFN  9.274445
 CKSUM 1292453307
