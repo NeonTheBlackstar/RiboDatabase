@@ -1,0 +1,11 @@
+>BSU27420|500|200|2801140|2802202|-|yrrI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.95
+ -10 box at pos.     46 CAGCATGAT Score    34
+ -35 box at pos.     22 TTGTCT    Score    48
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

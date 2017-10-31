@@ -1,0 +1,4 @@
+>BSU29350|500|200|3005121|3005829|-|tcyM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

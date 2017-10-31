@@ -1,0 +1,15 @@
+>BSU03140|500|200|339155|339749|-|tmrB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.22
+ -10 box at pos.     47 TTCTCAAAT Score    36
+ -35 box at pos.     22 TTTCCG    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  AAATATAT at position       3 Score -   7
+      rpoH2:  TCTCCCTT at position      38 Score -  10
+     rpoD17:  TCCCTTTT at position      40 Score -  11
+       purR:  CTTTTTCT at position      43 Score -   6

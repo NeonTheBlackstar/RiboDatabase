@@ -1,0 +1,4 @@
+>BSU31380|500|200|3224863|3225100|+|yuzA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

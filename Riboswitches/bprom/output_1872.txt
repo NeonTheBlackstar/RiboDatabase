@@ -1,0 +1,12 @@
+>BSU38130|500|200|3914008|3914272|+|ywcE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.13
+ -10 box at pos.     44 GTTTATTAT Score    69
+ -35 box at pos.     22 TTTTCA    Score    34
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TAATGTTT at position      40 Score -   9

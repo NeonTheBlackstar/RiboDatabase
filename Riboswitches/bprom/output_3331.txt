@@ -1,0 +1,4 @@
+>BSU22960|500|200|2402066|2403350|-|gudB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

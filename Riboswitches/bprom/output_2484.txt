@@ -1,0 +1,4 @@
+>BSU33960|500|200|3484071|3485466|-|araE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

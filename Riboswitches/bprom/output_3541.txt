@@ -1,0 +1,4 @@
+>BSU20220|355|200|2170503|2170731|-|yorX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

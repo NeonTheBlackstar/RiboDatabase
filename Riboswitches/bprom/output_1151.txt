@@ -1,0 +1,4 @@
+>BSU15680|227|200|1641948|1642563|+|gmk|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

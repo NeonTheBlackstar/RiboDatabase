@@ -1,0 +1,14 @@
+>BSU17559|338|200|1885752|1885917|+|ynzI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.24
+ -10 box at pos.     42 CAATTCCAT Score    -8
+ -35 box at pos.     26 TTTACA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTAATTTT at position      18 Score -   9
+        lrp:  ATTTTTTT at position      21 Score -  11
+       lexA:  TTTTTTTA at position      22 Score -  16

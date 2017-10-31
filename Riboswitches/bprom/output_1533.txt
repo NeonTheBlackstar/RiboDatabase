@@ -1,0 +1,12 @@
+>BSU24600|500|200|2552445|2552619|+|sinI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.29
+ -10 box at pos.     48 ACCTATGAT Score    53
+ -35 box at pos.     26 GTGACT    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       nagC:  CATTTCAC at position      42 Score -   6

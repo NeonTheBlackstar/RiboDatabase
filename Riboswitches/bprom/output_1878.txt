@@ -1,0 +1,15 @@
+>BSU38330|318|200|3933576|3934254|+|lrgB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.12
+ -10 box at pos.     49 CGGCAGTAT Score    33
+ -35 box at pos.     29 CTTCTT    Score    -6
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       oxyR:  GATTAATT at position      10 Score -   9
+      argR2:  ATATAAAT at position      36 Score -  13
+        fnr:  ATAAATAT at position      38 Score -   9
+       metR:  TTCTTTTC at position      72 Score -   8

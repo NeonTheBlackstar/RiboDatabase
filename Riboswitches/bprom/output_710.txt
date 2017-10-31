@@ -1,0 +1,4 @@
+>BSU09450|500|200|1022230|1023100|+|yhdF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

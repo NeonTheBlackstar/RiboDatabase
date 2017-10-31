@@ -1,0 +1,12 @@
+>BSU11500|500|200|1227696|1228092|+|spxA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.33
+ -10 box at pos.     45 AGGTTTTAT Score    37
+ -35 box at pos.     25 CTGATA    Score    23
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  ATTTCAAG at position      64 Score -   9

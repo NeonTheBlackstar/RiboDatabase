@@ -1,0 +1,4 @@
+>BSU13110|338|200|1377242|1378145|+|purU|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU36250|500|200|3731821|3732535|-|ptkA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

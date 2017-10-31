@@ -1,0 +1,13 @@
+>BSU09830|500|200|1056701|1057568|+|yhaX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.59
+ -10 box at pos.     40 ATTTATATT Score    61
+ -35 box at pos.     28 TTTTCG    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  TTTTCGTT at position      28 Score -   5
+       purR:  TTTCGTTT at position      29 Score -   6

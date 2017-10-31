@@ -1,0 +1,11 @@
+>BSU10910|500|200|1169876|1170476|-|yisZ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.62
+ -10 box at pos.     46 CACTATTAT Score    56
+ -35 box at pos.     27 CTACCA    Score     3
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

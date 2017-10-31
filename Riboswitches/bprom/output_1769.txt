@@ -1,0 +1,4 @@
+>BSU34100|500|200|3499540|3500350|+|rsbQ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

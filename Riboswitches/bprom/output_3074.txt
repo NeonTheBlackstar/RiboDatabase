@@ -1,0 +1,4 @@
+>BSU26100|309|200|2681626|2682130|-|yqbI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

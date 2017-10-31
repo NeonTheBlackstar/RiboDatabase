@@ -1,0 +1,4 @@
+>BSU35370|375|200|3636045|3636270|-|csrA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

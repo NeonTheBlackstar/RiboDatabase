@@ -1,0 +1,4 @@
+>BSU07500|500|200|823715|824717|-|yfmE|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

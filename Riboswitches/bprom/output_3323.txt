@@ -1,0 +1,4 @@
+>BSU23050|220|200|2410016|2410589|-|fmnP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

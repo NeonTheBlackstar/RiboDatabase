@@ -1,0 +1,12 @@
+>BSU10690|500|200|1149144|1149321|-|gerPD|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.98
+ -10 box at pos.     45 GTATAAATT Score    45
+ -35 box at pos.     26 CTACCA    Score     3
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  GAGTATAA at position      43 Score -   9

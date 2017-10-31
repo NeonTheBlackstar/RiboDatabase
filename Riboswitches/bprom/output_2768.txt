@@ -1,0 +1,16 @@
+>BSU29930|500|200|3061650|3063807|-|amyX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.98
+ -10 box at pos.     40 GGTTTTTCT Score    28
+ -35 box at pos.     26 TTTCCG    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       arcA:  AATAAAAA at position       8 Score -  12
+       purR:  ATAAAAAG at position       9 Score -  11
+        lrp:  TTTCTTTT at position      44 Score -   9
+       ompR:  TTCTTTTT at position      45 Score -   8
+       purR:  CTTTTTCT at position      47 Score -   6

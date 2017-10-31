@@ -1,0 +1,4 @@
+>BSU15140|451|200|1580621|1581557|+|mraW|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

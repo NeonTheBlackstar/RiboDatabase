@@ -1,0 +1,4 @@
+>BSU12770|276|200|1345630|1345795|+|xkdX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

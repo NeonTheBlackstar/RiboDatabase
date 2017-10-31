@@ -1,0 +1,4 @@
+>BSU10930|500|200|1171754|1172465|-|yitB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

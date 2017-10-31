@@ -1,0 +1,4 @@
+>BSU12640|448|200|1331742|1332183|+|xkdJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

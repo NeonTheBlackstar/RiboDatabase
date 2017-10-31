@@ -1,0 +1,4 @@
+>BSU39060|500|200|4010403|4011684|+|citH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

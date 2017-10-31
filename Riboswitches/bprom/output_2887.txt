@@ -1,0 +1,4 @@
+>BSU28470|500|200|2909519|2910746|-|lysC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

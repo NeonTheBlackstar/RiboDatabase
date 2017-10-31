@@ -1,0 +1,4 @@
+>BSU33270|500|200|3413349|3414039|-|yvrO|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

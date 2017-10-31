@@ -1,0 +1,13 @@
+>BSU04830|500|200|531786|531981|+|sacV|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.36
+ -10 box at pos.     46 AAATAGTCT Score    22
+ -35 box at pos.     22 TTGCTT    Score    48
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  TTTCGTTT at position      11 Score -   6
+     rpoD17:  AATAAATA at position      43 Score -  11

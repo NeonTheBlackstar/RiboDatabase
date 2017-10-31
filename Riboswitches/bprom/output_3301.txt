@@ -1,0 +1,4 @@
+>BSU23300|500|200|2431736|2432081|-|ypuD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

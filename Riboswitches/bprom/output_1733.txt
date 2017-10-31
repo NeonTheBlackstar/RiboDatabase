@@ -1,0 +1,4 @@
+>BSU32880|414|200|3374955|3376581|+|yusP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

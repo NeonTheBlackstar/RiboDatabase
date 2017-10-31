@@ -1,0 +1,15 @@
+>BSU26450|500|200|2707126|2707684|+|yrkN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.51
+ -10 box at pos.     42 CATTAAACG Score    20
+ -35 box at pos.     28 TTGAAT    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       oxyR:  ATTAGTGT at position      18 Score -  12
+       metJ:  TAAACGGA at position      45 Score -   6
+     rpoD19:  ACAGATTT at position      52 Score -   6
+     rpoD17:  TTGATATA at position      58 Score -   8

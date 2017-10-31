@@ -1,0 +1,16 @@
+>BSU18590|500|200|2028174|2028579|-|yoaG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.89
+ -10 box at pos.     45 CGTTTTTTT Score    17
+ -35 box at pos.     21 TATAAT    Score    -1
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  ATCTTTTA at position      15 Score -   6
+     rpoD17:  TTTATAAT at position      19 Score -   9
+       argR:  ATAATCAT at position      22 Score -   9
+       purR:  CGTTTTTT at position      45 Score -   8
+        fnr:  TTTTTTGA at position      48 Score -   9

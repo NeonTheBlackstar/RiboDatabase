@@ -1,0 +1,12 @@
+>BSU24910|417|200|2574640|2575720|-|yqgM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.06
+ -10 box at pos.     45 CCGTAAGCT Score    43
+ -35 box at pos.     24 TTCAAA    Score    40
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  ATAATCAT at position      17 Score -   9

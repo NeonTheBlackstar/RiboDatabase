@@ -1,0 +1,4 @@
+>BSU26540|288|200|2713319|2713802|-|yrkE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

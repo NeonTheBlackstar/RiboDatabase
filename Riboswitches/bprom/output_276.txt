@@ -1,0 +1,12 @@
+>BSU03470|500|200|376031|376394|+|hxlR|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.33
+ -10 box at pos.     49 CGCTTTCAT Score    28
+ -35 box at pos.     29 ATGTCA    Score    23
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CCCTAAAA at position      13 Score -  11

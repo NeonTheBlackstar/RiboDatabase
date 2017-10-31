@@ -1,0 +1,4 @@
+>BSU23140|486|200|2419178|2420807|-|resB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

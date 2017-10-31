@@ -1,0 +1,4 @@
+>BSU01860|500|200|209632|210160|+|ybcF|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

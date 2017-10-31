@@ -1,0 +1,13 @@
+>BSU32300|249|200|3318827|3319262|-|yutE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.24
+ -10 box at pos.     41 ATATTAAAT Score    25
+ -35 box at pos.     21 TTAAAG    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       tyrR:  TAAATAAA at position      45 Score -  10
+     rpoD17:  AATAAATA at position      47 Score -  11

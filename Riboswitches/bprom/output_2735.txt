@@ -1,0 +1,4 @@
+>BSU30410|500|200|3113978|3115289|-|ytrF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,13 @@
+>BSU16550|500|200|1722870|1724022|+|dxr|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.61
+ -10 box at pos.     44 ACATACATT Score    27
+ -35 box at pos.     27 TTGACC    Score    44
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AAATCAGA at position      15 Score -   7
+       argR:  TTTTTTAT at position      51 Score -  13

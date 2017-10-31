@@ -1,0 +1,15 @@
+>BSU09780|500|200|1052161|1053253|-|yheC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.34
+ -10 box at pos.     46 CAGTCCCAT Score     4
+ -35 box at pos.     24 TTAAGA    Score    20
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  GCTTTTTA at position       3 Score -   7
+        fnr:  ATTTGTTT at position      53 Score -   7
+     rpoD17:  TTTGTTTT at position      54 Score -   9
+        crp:  TTTTGCAA at position      58 Score -   6

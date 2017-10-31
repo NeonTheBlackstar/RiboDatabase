@@ -1,0 +1,4 @@
+>BSU36970|500|200|3794675|3795350|-|spoIIR|chromosome|NC_000964.3               
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

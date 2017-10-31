@@ -1,0 +1,4 @@
+>BSU09165|500|200|989711|990680|+|yhcO|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

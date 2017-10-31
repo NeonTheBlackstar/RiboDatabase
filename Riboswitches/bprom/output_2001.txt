@@ -1,0 +1,4 @@
+>BSU40830|500|200|4193263|4194163|-|yyaK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

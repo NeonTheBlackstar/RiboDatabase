@@ -1,0 +1,4 @@
+>BSU28050|500|200|2862571|2863141|-|maf|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

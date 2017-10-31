@@ -1,0 +1,4 @@
+>BSU38630|500|200|3964996|3966640|+|katX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

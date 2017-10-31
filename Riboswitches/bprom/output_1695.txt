@@ -1,0 +1,4 @@
+>BSU31560|500|200|3242609|3243656|+|yufP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

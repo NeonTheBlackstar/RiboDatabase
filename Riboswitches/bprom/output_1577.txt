@@ -1,0 +1,4 @@
+>BSU26910|350|200|2749659|2750475|+|yraK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

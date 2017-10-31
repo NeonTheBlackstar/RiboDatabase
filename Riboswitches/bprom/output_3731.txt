@@ -1,0 +1,13 @@
+>BSU15060|132|200|1573806|1575054|-|ylbM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.94
+ -10 box at pos.     43 GCATACACT Score    39
+ -35 box at pos.     23 TTGACA    Score    66
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cpxR:  TAAAACAA at position      52 Score -   9
+        fis:  AAAAATAA at position      58 Score -   9

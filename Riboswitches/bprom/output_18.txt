@@ -1,0 +1,4 @@
+>BSU00230|241|200|29771|30035|+|bofA|chromosome|NC_000964.3                     
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

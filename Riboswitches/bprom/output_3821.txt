@@ -1,0 +1,13 @@
+>BSU11910|500|200|1263701|1264931|-|yjcM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.47
+ -10 box at pos.     40 TTTTAAAAT Score    79
+ -35 box at pos.     27 TGGACT    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTTAAAAT at position      41 Score -   7
+      argR2:  TTTATTTT at position      48 Score -   7

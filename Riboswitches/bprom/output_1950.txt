@@ -1,0 +1,11 @@
+>BSU40300|500|200|4140259|4141357|+|rapG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.56
+ -10 box at pos.     47 TGATCTAAT Score    44
+ -35 box at pos.     27 TTCCCA    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

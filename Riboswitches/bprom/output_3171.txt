@@ -1,0 +1,4 @@
+>BSU24900|500|200|2574407|2574557|-|rpmG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU37250|500|200|3823557|3824229|-|narI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,14 @@
+>BSU08490|127|200|924209|924401|-|yfhD|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.04
+ -10 box at pos.     46 TGCTAAGCG Score    17
+ -35 box at pos.     26 TTTAAA    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TAGGAATA at position      59 Score -  11
+        lrp:  AATACATA at position      63 Score -  11
+     rpoD15:  CCCTTAAA at position      73 Score -  14

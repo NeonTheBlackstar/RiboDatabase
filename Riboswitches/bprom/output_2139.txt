@@ -1,0 +1,16 @@
+>BSU38690|479|200|3969998|3970319|-|yxlC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.08
+ -10 box at pos.     44 TTATATAAA Score    37
+ -35 box at pos.     22 TTTCCA    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TATATAAA at position      45 Score -  14
+      argR2:  ATATAAAT at position      46 Score -  13
+     rpoD18:  ACTTGTTA at position      54 Score -   9
+       pdhR:  TTGTTAAA at position      56 Score -   8
+       purR:  CTTTCCCT at position      65 Score -   7

@@ -1,0 +1,4 @@
+>BSU32720|500|200|3361304|3361682|-|yurZ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

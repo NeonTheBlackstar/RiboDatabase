@@ -1,0 +1,16 @@
+>BSU09420|500|200|1018997|1020002|+|lytE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.52
+ -10 box at pos.     45 AAGTAAAGC Score     6
+ -35 box at pos.     28 TTGATC    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       pdhR:  TTGTTAAA at position      12 Score -   8
+       metJ:  TGTAAACA at position      35 Score -   8
+     rpoD17:  AATAAGTA at position      42 Score -  13
+       cynR:  ATAAGTAA at position      43 Score -  12
+       cpxR:  CTTGTAAG at position      54 Score -  11

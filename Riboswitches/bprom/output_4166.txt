@@ -1,0 +1,13 @@
+>BSU01610|500|200|180343|181354|-|feuC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.46
+ -10 box at pos.     44 TGGTACAGT Score    54
+ -35 box at pos.     25 TTCTCA    Score    33
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      argR2:  TTTATTTT at position      12 Score -   7
+     rpoD16:  TTTCAAAT at position      17 Score -  10

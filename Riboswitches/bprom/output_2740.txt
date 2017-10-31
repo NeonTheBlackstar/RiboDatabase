@@ -1,0 +1,15 @@
+>BSU30350|500|200|3107231|3108425|-|yttB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.49
+ -10 box at pos.     44 TTCTCAAGT Score    12
+ -35 box at pos.     26 CTGACA    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       nagC:  TTTAATTT at position       5 Score -   7
+       soxS:  AATTTCTT at position       8 Score -   7
+     rpoD19:  ACAGATTT at position      29 Score -   6
+        crp:  TTTGTGAG at position      65 Score -  10

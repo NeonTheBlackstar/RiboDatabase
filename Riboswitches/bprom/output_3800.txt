@@ -1,0 +1,4 @@
+>BSU12500|454|200|1320569|1321166|-|xkdA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

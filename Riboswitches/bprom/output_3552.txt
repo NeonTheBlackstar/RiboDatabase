@@ -1,0 +1,4 @@
+>BSU20100|105|200|2166657|2166852|-|yosJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

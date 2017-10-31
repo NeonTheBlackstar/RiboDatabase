@@ -1,0 +1,15 @@
+>BSU12270|500|200|1297725|1298223|+|yjlB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.20
+ -10 box at pos.     49 GGCTACAAT Score    69
+ -35 box at pos.     22 ATAAAA    Score     7
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cpxR:  TAAAACAA at position      23 Score -   9
+     rpoD17:  GCTACAAT at position      50 Score -   8
+       arcA:  AATTGTAA at position      55 Score -  16
+       tyrR:  TGTAATTT at position      58 Score -  10

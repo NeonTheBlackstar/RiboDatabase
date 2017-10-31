@@ -1,0 +1,4 @@
+>BSU34410|118|200|3532832|3533120|-|yveG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

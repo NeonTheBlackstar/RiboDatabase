@@ -1,0 +1,4 @@
+>BSU01460|500|200|151302|152133|+|cbiO|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

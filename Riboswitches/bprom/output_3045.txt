@@ -1,0 +1,4 @@
+>BSU26420|500|200|2703149|2704448|-|yrkQ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

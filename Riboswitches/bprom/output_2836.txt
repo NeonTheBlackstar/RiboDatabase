@@ -1,0 +1,4 @@
+>BSU29100|500|200|2976067|2977807|-|phoR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

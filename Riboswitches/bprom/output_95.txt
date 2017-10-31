@@ -1,0 +1,13 @@
+>BSU01010|308|200|117889|118423|+|nusG|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.32
+ -10 box at pos.     42 CGGTAATTT Score    49
+ -35 box at pos.     23 TTAACG    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TTTTGTTA at position      64 Score -   9
+       dnaA:  TTGTTATC at position      66 Score -   5

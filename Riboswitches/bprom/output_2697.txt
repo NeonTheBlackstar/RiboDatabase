@@ -1,0 +1,4 @@
+>BSU30970|500|200|3168623|3169766|-|glgC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

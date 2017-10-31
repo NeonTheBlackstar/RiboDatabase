@@ -1,0 +1,14 @@
+>BSU11920|500|200|1265056|1265377|+|yjcN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.66
+ -10 box at pos.     45 TGTTTTTTT Score    21
+ -35 box at pos.     28 TTCAAC    Score    18
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TAGCTTAT at position      37 Score -  15
+     rpoD19:  ATTGTTTT at position      43 Score -   7
+       metR:  TTTTTTCA at position      48 Score -   8

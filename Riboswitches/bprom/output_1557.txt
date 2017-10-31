@@ -1,0 +1,14 @@
+>BSU25840|500|200|2660329|2660464|+|phrE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.90
+ -10 box at pos.     47 TTTTTCAAT Score    32
+ -35 box at pos.     27 CTCATA    Score     3
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TTCAATCT at position      50 Score -   7
+        crp:  ATCACAAA at position      69 Score -  10
+       arcA:  TCACAAAA at position      70 Score -  10

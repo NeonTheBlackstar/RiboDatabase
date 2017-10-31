@@ -1,0 +1,13 @@
+>BSU30050|500|200|3073530|3075165|-|ytgP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.05
+ -10 box at pos.     42 CTTGATAAT Score    46
+ -35 box at pos.     22 ATGCCG    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TTTCAAAA at position      32 Score -   6
+        hns:  ATTAAATT at position      60 Score -   9

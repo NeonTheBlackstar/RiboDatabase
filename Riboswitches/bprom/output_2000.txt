@@ -1,0 +1,12 @@
+>BSU40850|348|200|4195777|4196332|-|maa|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.61
+ -10 box at pos.     41 TTGTATCAT Score    69
+ -35 box at pos.     21 TTAATG    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       nagC:  CTTATTTT at position      72 Score -   6

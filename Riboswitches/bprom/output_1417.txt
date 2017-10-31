@@ -1,0 +1,16 @@
+>BSU19490|500|200|2124020|2124494|+|gerT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.29
+ -10 box at pos.     47 AGGAGCACT Score   -11
+ -35 box at pos.     29 TTTAAA    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTTCCTT at position      23 Score -   7
+        fis:  AAAAATAA at position      32 Score -   9
+        ihf:  AAATAAAA at position      34 Score -  13
+        ihf:  AATAAAAT at position      35 Score -  10
+     rpoD17:  TAATGTAA at position      69 Score -  12

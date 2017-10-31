@@ -1,0 +1,12 @@
+>BSU31430|500|200|3228430|3228691|-|yugE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.26
+ -10 box at pos.     44 TGGTAAAAA Score    49
+ -35 box at pos.     29 TTTTTC    Score     4
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TGTAAAAT at position      11 Score -  11

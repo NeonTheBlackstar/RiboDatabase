@@ -1,0 +1,4 @@
+>BSU33620|306|200|3454220|3454967|-|yvaK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

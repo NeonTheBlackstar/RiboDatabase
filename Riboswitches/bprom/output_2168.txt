@@ -1,0 +1,4 @@
+>BSU38190|500|200|3919092|3920634|-|galT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

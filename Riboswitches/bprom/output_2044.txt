@@ -1,0 +1,11 @@
+>BSU40120|500|200|4122618|4122849|-|yyzE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.18
+ -10 box at pos.     46 CTTCAAACT Score    39
+ -35 box at pos.     25 TTGTGA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

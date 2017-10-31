@@ -1,0 +1,11 @@
+>BSU28430|500|200|2905570|2906332|-|sdhB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.62
+ -10 box at pos.     48 TGATATTAT Score    68
+ -35 box at pos.     23 TTAAGA    Score    20
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

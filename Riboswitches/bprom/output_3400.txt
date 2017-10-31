@@ -1,0 +1,4 @@
+>BSU22220|500|200|2334580|2336830|-|yprA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

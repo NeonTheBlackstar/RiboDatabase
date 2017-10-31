@@ -1,0 +1,13 @@
+>BSU17680|500|200|1902218|1903058|+|thyA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.74
+ -10 box at pos.     47 GTTAATGAT Score    31
+ -35 box at pos.     24 CTGCCA    Score    26
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TCATAAAA at position      34 Score -  11
+       argR:  CATAAAAA at position      35 Score -  14

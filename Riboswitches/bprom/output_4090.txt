@@ -1,0 +1,11 @@
+>BSU03840|500|200|436035|437454|-|ycnB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.29
+ -10 box at pos.     46 GGTTATCAT Score    72
+ -35 box at pos.     24 TTCTCC    Score    11
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,0 +1,12 @@
+>BSU34000|500|200|3488951|3489869|+|cyeB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.35
+ -10 box at pos.     46 GGATATTTT Score    45
+ -35 box at pos.     24 GTGCAG    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TTTTGTTT at position      52 Score -   9

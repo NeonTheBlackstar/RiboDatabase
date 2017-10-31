@@ -1,0 +1,13 @@
+>BSU12040|500|200|1276336|1276843|-|yjdG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.96
+ -10 box at pos.     49 TTTTATTCT Score    62
+ -35 box at pos.     24 TTCCAC    Score    13
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      rpoH3:  CCCCCCAT at position      15 Score -  12
+        lrp:  TATTCTTA at position      52 Score -   8

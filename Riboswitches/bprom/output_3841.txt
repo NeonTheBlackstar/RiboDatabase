@@ -1,0 +1,4 @@
+>BSU11320|500|200|1207817|1208057|-|yjzB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

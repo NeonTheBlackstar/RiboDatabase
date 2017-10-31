@@ -1,0 +1,16 @@
+>BSU25830|500|200|2659212|2660340|+|rapE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.58
+ -10 box at pos.     42 GCATATAAC Score    27
+ -35 box at pos.     25 TTTCAA    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  TCTTTAAT at position      15 Score -   6
+       nagC:  TTTAATTT at position      17 Score -   7
+     rpoD18:  TTAATTTT at position      18 Score -   9
+       metR:  TTTTTTCA at position      22 Score -   8
+     rpoD17:  ACTTTTAG at position      35 Score -   9

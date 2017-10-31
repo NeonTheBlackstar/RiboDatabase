@@ -1,0 +1,13 @@
+>BSU36760|500|200|3777948|3779259|-|murAA|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.36
+ -10 box at pos.     41 TTTTAGACT Score    59
+ -35 box at pos.     21 GACAAA    Score   -30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  ACAAAAAA at position      22 Score -   9
+      rpoH3:  CAAAAAAA at position      23 Score -   9

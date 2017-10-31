@@ -1,0 +1,4 @@
+>BSU38100|500|200|3910301|3911303|-|ywcH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

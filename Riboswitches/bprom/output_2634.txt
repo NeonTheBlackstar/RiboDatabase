@@ -1,0 +1,4 @@
+>BSU31960|500|200|3280518|3287655|-|dhbF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

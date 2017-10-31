@@ -1,0 +1,13 @@
+>BSU14440|500|200|1514051|1514963|+|ykpB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.61
+ -10 box at pos.     43 CAATATTCT Score    40
+ -35 box at pos.     26 TTGTAG    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TGTAGACT at position      27 Score -  13
+     rpoD16:  GCTTTTTA at position      71 Score -   7

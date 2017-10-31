@@ -1,0 +1,12 @@
+>BSU24450|500|200|2538114|2538672|-|efp|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.80
+ -10 box at pos.     45 CTTGATTTT Score    12
+ -35 box at pos.     22 TTGAAA    Score    60
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       hipB:  AAAGGATA at position      66 Score -   9

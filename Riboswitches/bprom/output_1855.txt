@@ -1,0 +1,4 @@
+>BSU37400|500|200|3838551|3839862|+|albD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

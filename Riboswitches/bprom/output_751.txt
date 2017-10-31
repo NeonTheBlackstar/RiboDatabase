@@ -1,0 +1,14 @@
+>BSU10240|500|200|1098411|1099146|+|yhfI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.95
+ -10 box at pos.     48 AATTATATT Score    54
+ -35 box at pos.     25 AAGAAA    Score    -7
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  ATAGATAA at position      19 Score -   9
+       cpxR:  GTAAATTA at position      45 Score -   9
+       gcvA:  TTATATTT at position      50 Score -  11

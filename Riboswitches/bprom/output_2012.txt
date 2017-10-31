@@ -1,0 +1,4 @@
+>BSU40520|326|200|4165658|4166588|-|yybS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

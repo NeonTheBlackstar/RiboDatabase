@@ -1,0 +1,4 @@
+>BSU01580|500|200|177082|178519|+|ybaR|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

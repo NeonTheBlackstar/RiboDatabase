@@ -1,0 +1,4 @@
+>BSU30400|500|200|3113186|3113882|-|bceR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

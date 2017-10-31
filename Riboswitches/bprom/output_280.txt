@@ -1,0 +1,4 @@
+>BSU03510|500|200|398531|402359|+|srfAC|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

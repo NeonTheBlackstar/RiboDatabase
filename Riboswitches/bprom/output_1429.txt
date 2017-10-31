@@ -1,0 +1,14 @@
+>BSU19950|500|200|2156238|2156457|+|sspC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.91
+ -10 box at pos.     47 TGTTACATT Score    57
+ -35 box at pos.     25 TTTCAG    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTTCCTT at position      11 Score -   7
+        lrp:  TTGTCTTA at position      31 Score -   7
+       arcA:  TTAATTAA at position      36 Score -  13

@@ -1,0 +1,4 @@
+>BSU08580|500|200|929405|929738|+|yfhL|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

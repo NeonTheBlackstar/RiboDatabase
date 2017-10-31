@@ -1,0 +1,11 @@
+>BSU37760|500|200|3875779|3877192|-|rocC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.73
+ -10 box at pos.     48 AGTCATTCT Score    38
+ -35 box at pos.     26 TTGACC    Score    44
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,0 +1,4 @@
+>BSU34420|500|200|3533195|3533288|-|yveF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

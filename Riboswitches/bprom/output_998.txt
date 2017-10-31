@@ -1,0 +1,4 @@
+>BSU13850|500|200|1451370|1453284|+|zosA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

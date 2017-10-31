@@ -1,0 +1,13 @@
+>BSU05050|500|200|551518|551929|+|lrpA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.04
+ -10 box at pos.     41 TGCTAATAT Score    67
+ -35 box at pos.     27 ATGTCT    Score    18
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTTGTAT at position      32 Score -   9
+       phoB:  TAATATAT at position      44 Score -  15

@@ -1,0 +1,11 @@
+>BSU12060|500|200|1277685|1278165|+|yjdI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.27
+ -10 box at pos.     49 TGACAAACT Score    39
+ -35 box at pos.     28 TTGATA    Score    58
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

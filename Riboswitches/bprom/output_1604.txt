@@ -1,0 +1,4 @@
+>BSU27809|88|200|2841306|2841447|+|yrzT|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

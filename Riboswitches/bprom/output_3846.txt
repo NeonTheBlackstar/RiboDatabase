@@ -1,0 +1,15 @@
+>BSU11070|500|200|1183942|1184479|-|yitP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.89
+ -10 box at pos.     42 TTTTAACAT Score    61
+ -35 box at pos.     27 TTTCTC    Score    12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TTTTAACA at position      42 Score -  10
+     rpoD17:  CTCCTTTT at position      56 Score -  12
+     rpoD17:  ATTTTGTA at position      70 Score -   9
+     rpoD15:  TTTTGTAA at position      71 Score -  11

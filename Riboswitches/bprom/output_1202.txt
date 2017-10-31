@@ -1,0 +1,4 @@
+>BSU16210|316|200|1692495|1694106|+|fliF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

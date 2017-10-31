@@ -1,0 +1,13 @@
+>BSU38770|500|200|3979752|3981105|+|cimH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.68
+ -10 box at pos.     49 GCTCAATAT Score    29
+ -35 box at pos.     23 TTCACA    Score    46
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       dnaA:  ATTCACAA at position      22 Score -   5
+       arcA:  TCACAAAA at position      24 Score -  10

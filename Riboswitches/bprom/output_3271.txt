@@ -1,0 +1,13 @@
+>BSU23630|500|200|2460277|2460502|-|yqkE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.64
+ -10 box at pos.     45 TAAGAGAAT Score    15
+ -35 box at pos.     25 TAGAAA    Score    23
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  TATACTTA at position      39 Score -  18
+     rpoD17:  ATACTTAA at position      40 Score -  13

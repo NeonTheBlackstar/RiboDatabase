@@ -1,0 +1,4 @@
+>BSU37090|500|200|3805089|3806055|-|glpX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

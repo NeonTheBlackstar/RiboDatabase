@@ -1,0 +1,4 @@
+>BSU22650|500|200|2373486|2374134|-|trpF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

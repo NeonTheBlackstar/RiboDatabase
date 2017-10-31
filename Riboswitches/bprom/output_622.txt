@@ -1,0 +1,11 @@
+>BSU08240|372|200|898009|898867|+|catE|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.63
+ -10 box at pos.     46 GGGCACCAT Score    31
+ -35 box at pos.     23 TTATCA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

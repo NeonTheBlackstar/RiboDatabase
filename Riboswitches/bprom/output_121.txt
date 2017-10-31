@@ -1,0 +1,11 @@
+>BSU01270|356|200|140856|141168|+|rplX|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.81
+ -10 box at pos.     46 AGCTAACAT Score    58
+ -35 box at pos.     24 TTGGTG    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

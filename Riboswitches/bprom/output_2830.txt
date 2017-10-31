@@ -1,0 +1,4 @@
+>BSU29170|500|200|2984311|2984695|-|fxsA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,16 @@
+>BSU36080|500|200|3717998|3718616|+|ywrF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.36
+ -10 box at pos.     41 ATAAAAAAT Score    27
+ -35 box at pos.     21 TCACAA    Score    -5
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  ACAAAAAA at position       2 Score -   9
+     rpoS17:  CTCACAAA at position      20 Score -   8
+       arcA:  TCACAAAA at position      21 Score -  10
+        ihf:  ACAAAAAA at position      23 Score -   9
+        ihf:  ACAAAAAA at position      62 Score -   9

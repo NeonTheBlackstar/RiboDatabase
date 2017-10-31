@@ -1,0 +1,14 @@
+>BSU39930|500|200|4101165|4102365|+|yxaM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.12
+ -10 box at pos.     44 TTTTATTAA Score    34
+ -35 box at pos.     28 TTTACA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       metR:  CAAATTTT at position      32 Score -   8
+      argR2:  TTTTTATT at position      43 Score -  13
+       phoB:  TTTATTAA at position      45 Score -   8

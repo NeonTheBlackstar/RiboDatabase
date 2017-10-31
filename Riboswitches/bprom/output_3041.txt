@@ -1,0 +1,13 @@
+>BSU26490|238|200|2710001|2710787|-|yrkJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.11
+ -10 box at pos.     40 AGGTCAAAT Score    44
+ -35 box at pos.     23 ATGAAT    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  ACAAAAAA at position      11 Score -   9
+      rpoH3:  CAAAAAAA at position      12 Score -   9

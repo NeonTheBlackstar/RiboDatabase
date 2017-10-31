@@ -1,0 +1,4 @@
+>BSU26300|337|200|2697094|2697289|-|yqaI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

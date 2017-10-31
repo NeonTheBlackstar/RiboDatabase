@@ -1,0 +1,4 @@
+>BSU36470|500|200|3752279|3753752|-|pucI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

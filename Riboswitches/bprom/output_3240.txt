@@ -1,0 +1,14 @@
+>BSU24080|500|200|2502658|2503753|-|bcd|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.01
+ -10 box at pos.     46 TTGCAAAAT Score    54
+ -35 box at pos.     26 TGGAAG    Score    17
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       soxS:  TTGCTCCT at position      14 Score -   9
+       narL:  TGCTCCTT at position      15 Score -  12
+        crp:  TTTTGCAA at position      44 Score -   6

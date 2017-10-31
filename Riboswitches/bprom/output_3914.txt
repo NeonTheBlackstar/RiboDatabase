@@ -1,0 +1,4 @@
+>BSU09770|500|200|1050810|1052172|-|yheD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

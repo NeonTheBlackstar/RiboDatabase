@@ -1,0 +1,11 @@
+>BSU21150|500|200|2236268|2237285|+|yonB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.92
+ -10 box at pos.     48 CTTTATGCT Score    56
+ -35 box at pos.     25 GTGACT    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,0 +1,4 @@
+>BSU38090|500|200|3907843|3910264|+|vpr|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

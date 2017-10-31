@@ -1,0 +1,15 @@
+>BSU20930|500|200|2213082|2213478|-|yopD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.75
+ -10 box at pos.     42 AAACAAAAA Score    -8
+ -35 box at pos.     23 ATGCCT    Score    26
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TAATTAGA at position      28 Score -  20
+     rpoD17:  ATTAGAGT at position      30 Score -  12
+     rpoD17:  GAGTAAAA at position      34 Score -   8
+       ilvY:  ATATATCA at position      68 Score -   9

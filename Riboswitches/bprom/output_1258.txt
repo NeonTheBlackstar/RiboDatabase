@@ -1,0 +1,13 @@
+>BSU16760|500|200|1747122|1748337|+|dapG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.40
+ -10 box at pos.     46 GAAAAAAAT Score    22
+ -35 box at pos.     26 ATGAAA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  TGAGGAAA at position      19 Score -   6
+        crp:  ATGCCTGA at position      62 Score -   9

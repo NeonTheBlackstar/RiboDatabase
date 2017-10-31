@@ -1,0 +1,13 @@
+>BSU30570|500|200|3131151|3131394|-|ytmB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.50
+ -10 box at pos.     47 CGGAATTAT Score    40
+ -35 box at pos.     22 TCCATA    Score     1
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TGTCAAGA at position       5 Score -  19
+     rpoD18:  GATAGAAT at position      15 Score -   9

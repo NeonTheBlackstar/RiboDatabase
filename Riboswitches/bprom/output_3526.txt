@@ -1,0 +1,14 @@
+>BSU20370|435|200|2182407|2183922|-|yorI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.90
+ -10 box at pos.     41 TGTTTTAAT Score    55
+ -35 box at pos.     28 TTACCA    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  CCTTATAA at position      11 Score -  21
+     rpoD16:  TTATAAAA at position      13 Score -   9
+        crp:  AGATCACA at position      67 Score -  14

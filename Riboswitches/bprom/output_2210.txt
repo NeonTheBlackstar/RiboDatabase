@@ -1,0 +1,11 @@
+>BSU37700|500|200|3869486|3870671|-|bacE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.00
+ -10 box at pos.     45 GGGTTTAAT Score    53
+ -35 box at pos.     28 ATGAAA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,0 +1,15 @@
+>BSU18600|500|200|2029019|2029313|+|yozQ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.58
+ -10 box at pos.     46 TGCGATTTT Score    18
+ -35 box at pos.     27 ATGTCA    Score    23
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  AAATGTAA at position       4 Score -  13
+        lrp:  ATTTTTTT at position      50 Score -  11
+       metR:  TTTTTTCA at position      52 Score -   8
+       metR:  TTTTTTCA at position      60 Score -   8

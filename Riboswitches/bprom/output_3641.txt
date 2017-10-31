@@ -1,0 +1,12 @@
+>BSU18930|334|200|2063509|2064163|-|yobH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.93
+ -10 box at pos.     48 CTTTAACAT Score    57
+ -35 box at pos.     27 CTGTAG    Score     6
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD19:  TTAACATG at position      50 Score -   8

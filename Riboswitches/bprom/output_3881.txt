@@ -1,0 +1,4 @@
+>BSU10470|500|200|1121035|1121398|-|yhjD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

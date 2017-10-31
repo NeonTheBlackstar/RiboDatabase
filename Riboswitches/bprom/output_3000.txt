@@ -1,0 +1,13 @@
+>BSU27100|500|200|2768041|2768674|-|yrhP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.20
+ -10 box at pos.     46 CTCGAACTT Score    -4
+ -35 box at pos.     25 TTCCCG    Score    35
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TTTCAAAA at position      54 Score -   6
+       glpR:  TTCAAAAT at position      55 Score -   6

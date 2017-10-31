@@ -1,0 +1,4 @@
+>BSU12450|500|200|1317156|1317414|-|yjpA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

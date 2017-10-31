@@ -1,0 +1,4 @@
+>BSU34350|500|200|3526406|3528203|-|epsC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,16 @@
+>BSU21640|500|200|2283135|2283651|-|yokC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.79
+ -10 box at pos.     47 CTGGAAACC Score    -8
+ -35 box at pos.     27 TTCTTA    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoS17:  TTATATTA at position      10 Score -  14
+       ompR:  ATATTACA at position      12 Score -   9
+     rpoD16:  TTCAATCT at position      20 Score -   7
+        ihf:  AAATAAAA at position      35 Score -  13
+       phoB:  AATAAAAG at position      36 Score -   8

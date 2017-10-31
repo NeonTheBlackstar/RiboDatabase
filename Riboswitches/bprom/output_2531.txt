@@ -1,0 +1,12 @@
+>BSU33290|500|200|3415386|3416196|-|fhuC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.69
+ -10 box at pos.     46 GCTCAATAT Score    29
+ -35 box at pos.     21 ATGCAA    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       dnaA:  TTTGGATA at position      34 Score -   6

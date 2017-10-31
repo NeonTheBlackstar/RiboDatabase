@@ -1,0 +1,13 @@
+>BSU31130|500|200|3191842|3193378|-|yubD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.84
+ -10 box at pos.     49 AGGTTAATT Score    24
+ -35 box at pos.     23 TTGCCT    Score    56
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  ATTTCATA at position      42 Score -  11
+       argR:  TAATTCAT at position      53 Score -  10

@@ -1,0 +1,4 @@
+>BSU20710|242|200|2201487|2201691|-|yopZ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

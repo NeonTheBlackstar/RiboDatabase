@@ -1,0 +1,4 @@
+>BSU01760|500|200|197026|198478|+|ybbR|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

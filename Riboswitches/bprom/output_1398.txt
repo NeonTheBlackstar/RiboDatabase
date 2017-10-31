@@ -1,0 +1,15 @@
+>BSU18960|500|200|2065041|2065377|+|yozM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.12
+ -10 box at pos.     46 CTGTATTGT Score    45
+ -35 box at pos.     21 ATGATG    Score    22
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cysB:  TGTATATA at position       7 Score -  12
+       narL:  TAACTCTT at position      13 Score -   8
+     rpoD17:  TTGATATA at position      36 Score -   8
+     rpoD16:  TGATATAA at position      37 Score -   9

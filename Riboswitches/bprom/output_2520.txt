@@ -1,0 +1,4 @@
+>BSU33460|500|200|3436848|3437457|-|yvgT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

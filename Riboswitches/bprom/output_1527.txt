@@ -1,0 +1,13 @@
+>BSU24210|500|200|2516439|2517558|+|yqiG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.51
+ -10 box at pos.     46 GAGCAAGTT Score     8
+ -35 box at pos.     21 TTGTAA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       arcA:  ATTTGTAA at position      19 Score -   8
+        ihf:  TTTCAAAA at position      62 Score -   6

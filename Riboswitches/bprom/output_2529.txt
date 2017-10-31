@@ -1,0 +1,4 @@
+>BSU33310|500|200|3417221|3418376|-|fhuB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,13 @@
+>BSU29300|500|200|3000984|3001677|-|rbfK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.15
+ -10 box at pos.     47 GATTATGAT Score    60
+ -35 box at pos.     21 TTACTT    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  CGTTTTTT at position      35 Score -   8
+        fnr:  TTTTTTGA at position      38 Score -   9

@@ -1,0 +1,14 @@
+>BSU30560|500|200|3129529|3131113|+|pckA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.60
+ -10 box at pos.     40 ATATATGAT Score    54
+ -35 box at pos.     23 CTCCCG    Score     0
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTCCTCCT at position       6 Score -   8
+       cysB:  TGTATATA at position      37 Score -  12
+        fnr:  TTATACAA at position      66 Score -  14

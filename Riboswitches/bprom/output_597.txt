@@ -1,0 +1,11 @@
+>BSU07880|500|200|862003|862474|+|yfkJ|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.32
+ -10 box at pos.     45 TGATAAAAA Score    37
+ -35 box at pos.     23 TTGCTG    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

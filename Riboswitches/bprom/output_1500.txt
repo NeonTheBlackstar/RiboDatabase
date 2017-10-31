@@ -1,0 +1,4 @@
+>BSU22310|500|200|2340801|2341422|+|recU|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

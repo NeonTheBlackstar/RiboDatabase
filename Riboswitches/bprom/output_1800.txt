@@ -1,0 +1,18 @@
+>BSU35650|500|200|3663280|3664201|+|lytR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.80
+ -10 box at pos.     47 CCTCATCAT Score    31
+ -35 box at pos.     21 TTCAAT    Score    35
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  ATCTTTTA at position      27 Score -   6
+     rpoD15:  TTTTAACA at position      30 Score -  10
+        fur:  ATCATTTT at position      51 Score -   8
+        lrp:  ATTTTTTT at position      54 Score -  11
+       metR:  TTTTTTCA at position      56 Score -   8
+       phoB:  TTTTCATA at position      58 Score -  13
+     rpoD19:  TTTCATAT at position      59 Score -  11

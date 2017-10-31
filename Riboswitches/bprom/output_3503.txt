@@ -1,0 +1,12 @@
+>BSU20650|123|200|2199149|2199353|-|yoqF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.43
+ -10 box at pos.     45 AGCTATTCA Score    21
+ -35 box at pos.     22 TTCAAA    Score    40
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  AATTGAGG at position      10 Score -  11

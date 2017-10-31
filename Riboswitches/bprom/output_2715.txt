@@ -1,0 +1,4 @@
+>BSU30700|500|200|3138977|3139226|-|rpmE2|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

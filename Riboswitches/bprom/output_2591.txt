@@ -1,0 +1,4 @@
+>BSU32530|500|200|3342432|3343671|-|yurH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

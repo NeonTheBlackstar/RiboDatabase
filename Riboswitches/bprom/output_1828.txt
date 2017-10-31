@@ -1,0 +1,4 @@
+>BSU36280|500|200|3735448|3738217|+|ywqA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

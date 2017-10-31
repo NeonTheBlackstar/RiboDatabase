@@ -1,0 +1,4 @@
+>BSU17920|500|200|1922840|1923014|-|ynzD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

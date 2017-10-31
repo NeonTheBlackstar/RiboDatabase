@@ -1,0 +1,13 @@
+>BSU16930|500|200|1763221|1764472|+|cinA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.06
+ -10 box at pos.     48 ATTTATTAT Score    67
+ -35 box at pos.     23 TCGCAC    Score    -4
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  TATTTATT at position      47 Score -   8
+        lrp:  ATTTATTA at position      48 Score -   6

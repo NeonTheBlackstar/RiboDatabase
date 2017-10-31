@@ -1,0 +1,4 @@
+>BSU19470|225|200|2122324|2122675|-|yojF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

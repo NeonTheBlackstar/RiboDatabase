@@ -1,0 +1,4 @@
+>BSU10390|500|200|1114056|1115586|-|yhfW|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU11079|500|200|1184656|1185004|+|yizB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

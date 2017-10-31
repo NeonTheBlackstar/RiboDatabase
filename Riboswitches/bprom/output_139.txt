@@ -1,0 +1,13 @@
+>BSU01440|500|200|149952|150315|+|rplQ|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.06
+ -10 box at pos.     46 AACTATGAT Score    53
+ -35 box at pos.     29 GTGTAG    Score     8
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TGTAGGCC at position      30 Score -  33
+     rpoD18:  TTACACTT at position      59 Score -   9

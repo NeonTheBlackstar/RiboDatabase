@@ -1,0 +1,11 @@
+>BSU22870|500|200|2393601|2394651|-|fni|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.78
+ -10 box at pos.     46 AAGTAAAAG Score    30
+ -35 box at pos.     28 TTGTTG    Score    39
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

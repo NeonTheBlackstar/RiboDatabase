@@ -1,0 +1,12 @@
+>BSU09889|500|200|1062278|1062464|-|yhzD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.51
+ -10 box at pos.     46 AGCTCTTTT Score    11
+ -35 box at pos.     22 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TAATCTGT at position      10 Score -   7

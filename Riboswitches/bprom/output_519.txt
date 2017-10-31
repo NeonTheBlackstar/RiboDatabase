@@ -1,0 +1,12 @@
+>BSU06760|360|200|740287|742927|+|yeeA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.56
+ -10 box at pos.     49 TGCTGAATT Score    23
+ -35 box at pos.     29 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       glpR:  AATTTGAG at position      54 Score -   6

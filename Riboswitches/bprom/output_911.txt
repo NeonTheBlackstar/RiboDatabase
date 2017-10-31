@@ -1,0 +1,14 @@
+>BSU12680|101|200|1334965|1338964|+|xkdO|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.44
+ -10 box at pos.     45 TGATAGGTT Score    29
+ -35 box at pos.     23 TTTAAA    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TTTTATTT at position      33 Score -  13
+     rpoD18:  TTGATAGG at position      44 Score -  11
+       gcvA:  ATAAGCTA at position      54 Score -  13

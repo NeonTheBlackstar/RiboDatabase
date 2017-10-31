@@ -1,0 +1,4 @@
+>BSU14650|500|200|1536234|1536873|-|yktB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

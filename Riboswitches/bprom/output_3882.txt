@@ -1,0 +1,12 @@
+>BSU10460|500|200|1120627|1120828|-|yhjC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.74
+ -10 box at pos.     48 AAGCATCCT Score    21
+ -35 box at pos.     25 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  CCTTATAA at position      54 Score -  21

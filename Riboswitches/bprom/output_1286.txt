@@ -1,0 +1,16 @@
+>BSU17090|500|200|1782712|1783390|+|pksB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.69
+ -10 box at pos.     47 GGATATGTT Score    43
+ -35 box at pos.     21 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTGCTTTT at position      16 Score -   6
+     rpoS17:  CAGACATA at position      35 Score -  10
+       argR:  CATAAAAA at position      39 Score -  14
+       purR:  ATAAAAAG at position      40 Score -  11
+       hipB:  AAAGGATA at position      44 Score -   9

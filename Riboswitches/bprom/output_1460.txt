@@ -1,0 +1,13 @@
+>BSU21230|500|200|2241764|2241992|+|yomT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.42
+ -10 box at pos.     42 CACTGCACT Score     6
+ -35 box at pos.     23 TTAATG    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  ATAACTAA at position      61 Score -  14
+        tus:  TAACTAAT at position      62 Score -  17

@@ -1,0 +1,14 @@
+>BSU35180|500|200|3615115|3615346|-|csbA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.78
+ -10 box at pos.     49 ATACATATT Score    24
+ -35 box at pos.     27 CTGCCT    Score    21
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  AAATAAAA at position      37 Score -  13
+        lrp:  AATACATA at position      48 Score -  11
+        crp:  AACCCCTC at position      61 Score -  13

@@ -1,0 +1,4 @@
+>BSU07520|427|200|825786|826734|-|yfmC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

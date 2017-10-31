@@ -1,0 +1,18 @@
+>BSU11890|500|200|1260810|1261356|-|yjcK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.56
+ -10 box at pos.     41 TTTTCTTTT Score    14
+ -35 box at pos.     24 TTAACT    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       soxS:  TATCATTT at position      35 Score -   9
+        fur:  ATCATTTT at position      36 Score -   8
+        lrp:  TTTCTTTT at position      42 Score -   9
+       metR:  TTCTTTTC at position      43 Score -   8
+       soxS:  CTTTTCCC at position      45 Score -   7
+       purR:  CGTTTTTT at position      54 Score -   8
+        fnr:  TTTTTTGA at position      57 Score -   9

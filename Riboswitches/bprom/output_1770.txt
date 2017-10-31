@@ -1,0 +1,11 @@
+>BSU34110|500|200|3500385|3501597|+|rsbP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.36
+ -10 box at pos.     46 GAGTATTAC Score    25
+ -35 box at pos.     24 TTGCTA    Score    53
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

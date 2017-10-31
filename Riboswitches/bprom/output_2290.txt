@@ -1,0 +1,4 @@
+>BSU36640|321|200|3766713|3768423|-|ureC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

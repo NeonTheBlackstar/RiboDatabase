@@ -1,0 +1,4 @@
+>BSU21630|500|200|2281666|2282485|+|yokD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

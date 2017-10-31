@@ -1,0 +1,14 @@
+>BSU11420|500|200|1218112|1219105|-|trpS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.58
+ -10 box at pos.     44 GTGTTTTCT Score    22
+ -35 box at pos.     24 TTGATT    Score    53
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTGCTTTT at position      60 Score -   6
+     rpoD16:  GCTTTTTA at position      62 Score -   7
+      argR2:  ACATATAA at position      69 Score -  14

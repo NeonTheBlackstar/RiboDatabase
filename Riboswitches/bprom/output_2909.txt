@@ -1,0 +1,4 @@
+>BSU28210|500|200|2882970|2884629|-|lonB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

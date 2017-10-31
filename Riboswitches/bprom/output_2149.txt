@@ -1,0 +1,4 @@
+>BSU38570|500|200|3959840|3960173|-|licA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

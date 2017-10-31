@@ -1,0 +1,13 @@
+>BSU05060|500|200|552051|552501|-|lrpB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.66
+ -10 box at pos.     42 GGACATCAT Score    35
+ -35 box at pos.     23 TTGCAT    Score    50
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       marR:  CAACTAAT at position      59 Score -   8
+       gcvA:  AACTAATT at position      60 Score -  14

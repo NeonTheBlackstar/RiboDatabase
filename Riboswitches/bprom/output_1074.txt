@@ -1,0 +1,11 @@
+>BSU14850|437|200|1552898|1554110|+|ftsW|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.76
+ -10 box at pos.     46 GGATAACTT Score    34
+ -35 box at pos.     23 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

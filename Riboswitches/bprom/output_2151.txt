@@ -1,0 +1,13 @@
+>BSU38490|500|200|3950725|3951661|-|menA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.08
+ -10 box at pos.     46 TTGCAGCAT Score    26
+ -35 box at pos.     25 TTCATA    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TTTTCATA at position      23 Score -  13
+       purR:  CGTTTTTT at position      72 Score -   8

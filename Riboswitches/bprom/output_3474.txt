@@ -1,0 +1,14 @@
+>BSU20950|500|200|2214971|2215199|-|yopB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.83
+ -10 box at pos.     49 GTCCATCCT Score    24
+ -35 box at pos.     25 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       hipB:  CCTTTTTA at position      21 Score -  11
+       lexA:  TACTGTAT at position      27 Score -   9
+     rpoD17:  TAGGAATA at position      36 Score -  11

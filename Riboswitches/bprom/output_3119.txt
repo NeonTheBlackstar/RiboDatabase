@@ -1,0 +1,4 @@
+>BSU25520|500|200|2632881|2633220|-|yqxA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,11 @@
+>BSU16800|287|200|1752271|1754641|+|spoIIIE|chromosome|NC_000964.3              
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.21
+ -10 box at pos.     46 GCTTCTAGT Score    14
+ -35 box at pos.     27 TTGAAT    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

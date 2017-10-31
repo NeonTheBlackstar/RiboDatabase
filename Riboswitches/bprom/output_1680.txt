@@ -1,0 +1,13 @@
+>BSU31270|500|200|3212590|3213328|+|tgl|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.02
+ -10 box at pos.     42 TGTGAAAAT Score    50
+ -35 box at pos.     23 TTGATT    Score    53
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  CCCCATAA at position       1 Score -   8
+        ihf:  CTCCTTGA at position      19 Score -   9

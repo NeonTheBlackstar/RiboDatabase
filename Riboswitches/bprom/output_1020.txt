@@ -1,0 +1,4 @@
+>BSU14130|285|200|1485452|1485896|+|ykuL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

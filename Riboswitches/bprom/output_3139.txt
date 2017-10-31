@@ -1,0 +1,4 @@
+>BSU25310|404|200|2611455|2611827|-|dgkA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

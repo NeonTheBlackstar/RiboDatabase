@@ -1,0 +1,4 @@
+>BSU03090|488|200|334629|335259|+|ycgF|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

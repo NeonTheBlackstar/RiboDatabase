@@ -1,0 +1,4 @@
+>BSU27840|500|200|2844674|2845838|-|safA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

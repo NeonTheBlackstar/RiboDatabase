@@ -1,0 +1,4 @@
+>BSU17150|500|200|1789942|1791205|+|pksG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

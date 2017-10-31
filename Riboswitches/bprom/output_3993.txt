@@ -1,0 +1,22 @@
+>BSU07460|500|200|819310|820531|-|yfmI|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF- 10.02
+ -10 box at pos.     43 GATTAAACT Score    59
+ -35 box at pos.     26 GTCATA    Score     5
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       deoR:  AATTTTAT at position      10 Score -   8
+        ihf:  TTTTATTT at position      12 Score -  13
+     rpoD17:  CTTAAAAT at position      52 Score -  11
+        fur:  ATCATTTT at position      58 Score -   8
+        lrp:  ATTTTTTT at position      61 Score -  11
+      rpoH2:  TTTTTTTT at position      62 Score -  16
+       lexA:  TTTTTTTA at position      63 Score -  16
+       argR:  TTTTTTAT at position      64 Score -  13
+      argR2:  TTTTTATT at position      65 Score -  13
+        ihf:  TTTTATTT at position      66 Score -  13
+      argR2:  TTTATTTT at position      67 Score -   7

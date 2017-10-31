@@ -1,0 +1,4 @@
+>BSU30470|500|200|3119564|3119837|-|ytzC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

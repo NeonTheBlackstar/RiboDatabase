@@ -1,0 +1,12 @@
+>BSU09710|231|200|1045317|1047075|+|yheI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.54
+ -10 box at pos.     46 GCGTAACAT Score    52
+ -35 box at pos.     29 GCGCTG    Score   -23
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       ompR:  GTAACATA at position      48 Score -  11

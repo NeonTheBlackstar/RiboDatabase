@@ -1,0 +1,4 @@
+>BSU23440|500|200|2442683|2443304|-|spoVAA|chromosome|NC_000964.3               
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

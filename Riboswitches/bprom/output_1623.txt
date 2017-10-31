@@ -1,0 +1,4 @@
+>BSU29050|500|200|2970037|2970880|+|ytbE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

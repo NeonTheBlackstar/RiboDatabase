@@ -1,0 +1,4 @@
+>BSU16150|500|200|1688113|1688659|+|clpQ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

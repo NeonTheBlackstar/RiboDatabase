@@ -1,0 +1,15 @@
+>BSU10430|500|200|1117733|1118633|-|yhxD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.26
+ -10 box at pos.     48 GTCTTTGTT Score     4
+ -35 box at pos.     21 TTCACA    Score    46
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTGCTTTT at position       1 Score -   6
+       purR:  CTTTTTCT at position       4 Score -   6
+     rpoD17:  TTTGTTTT at position      51 Score -   9
+      argR2:  TTTTTATT at position      55 Score -  13

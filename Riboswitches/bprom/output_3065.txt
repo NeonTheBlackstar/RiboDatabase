@@ -1,0 +1,4 @@
+>BSU26190|500|200|2688305|2689601|-|yqaT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

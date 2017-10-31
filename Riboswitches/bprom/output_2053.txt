@@ -1,0 +1,4 @@
+>BSU39940|476|200|4102428|4103661|-|yxaL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

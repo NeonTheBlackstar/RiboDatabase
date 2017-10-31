@@ -1,0 +1,13 @@
+>BSU35220|500|200|3620345|3621539|-|minJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.50
+ -10 box at pos.     41 CTGTATAAA Score    45
+ -35 box at pos.     22 TATACT    Score     5
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  CTTATACT at position      20 Score -  10
+        crp:  TCACAATT at position      62 Score -  10

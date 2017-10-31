@@ -1,0 +1,4 @@
+>BSU19690|500|200|2139453|2140869|-|kamA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

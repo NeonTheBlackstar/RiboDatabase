@@ -1,0 +1,4 @@
+>BSU11840|469|200|1256435|1256858|-|yjcF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

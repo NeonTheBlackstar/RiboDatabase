@@ -1,0 +1,4 @@
+>BSU20840|402|200|2208327|2208528|-|yopM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

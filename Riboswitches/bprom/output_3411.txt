@@ -1,0 +1,13 @@
+>BSU22090|500|200|2321971|2322964|-|kdgT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.12
+ -10 box at pos.     46 AGGGAAGAT Score    30
+ -35 box at pos.     26 TTATCG    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  ACGACCCC at position       4 Score -   7
+       nagC:  ATATTTTA at position      53 Score -   7

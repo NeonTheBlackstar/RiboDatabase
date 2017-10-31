@@ -1,0 +1,4 @@
+>BSU22380|129|200|2348863|2349349|-|ypmB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

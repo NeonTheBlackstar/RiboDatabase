@@ -1,0 +1,4 @@
+>BSU13210|500|200|1388069|1388834|-|thiX|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

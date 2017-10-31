@@ -1,0 +1,4 @@
+>BSU04900|233|200|536686|536995|+|yddA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

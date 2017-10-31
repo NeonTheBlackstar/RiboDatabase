@@ -1,0 +1,4 @@
+>BSU06269|349|200|680906|681065|-|ydzJ|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

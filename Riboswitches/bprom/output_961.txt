@@ -1,0 +1,12 @@
+>BSU13340|265|200|1398495|1398960|+|ykoM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.74
+ -10 box at pos.     43 GAACAAAAT Score    32
+ -35 box at pos.     24 TTTATA    Score    39
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTATAAT at position      24 Score -   9

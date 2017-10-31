@@ -1,0 +1,4 @@
+>BSU01640|500|200|183413|185003|-|ybbB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

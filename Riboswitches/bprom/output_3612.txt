@@ -1,0 +1,12 @@
+>BSU19380|500|200|2111836|2113753|-|yojO|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.06
+ -10 box at pos.     48 TATTAGATT Score    42
+ -35 box at pos.     29 CTGCCT    Score    21
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TTAGATTA at position      50 Score -  14

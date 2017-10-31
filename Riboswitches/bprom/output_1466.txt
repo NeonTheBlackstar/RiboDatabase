@@ -1,0 +1,4 @@
+>BSU21290|434|200|2244713|2245133|+|yomN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

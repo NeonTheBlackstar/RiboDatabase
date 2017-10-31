@@ -1,0 +1,4 @@
+>BSU31250|500|200|3208279|3210268|-|tlpA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

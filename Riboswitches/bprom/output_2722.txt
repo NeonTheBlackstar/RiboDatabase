@@ -1,0 +1,4 @@
+>BSU30580|500|200|3131445|3132219|-|ytmA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

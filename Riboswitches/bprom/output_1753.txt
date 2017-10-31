@@ -1,0 +1,13 @@
+>BSU33530|500|200|3444328|3445405|+|yvaA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.78
+ -10 box at pos.     49 TATTACAAT Score    63
+ -35 box at pos.     22 TTTTCA    Score    34
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CCCGTAGG at position      40 Score -  20
+       arcA:  AATAAAAA at position      55 Score -  12

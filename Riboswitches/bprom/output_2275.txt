@@ -1,0 +1,4 @@
+>BSU36800|500|200|3781068|3781467|-|atpC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

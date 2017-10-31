@@ -1,0 +1,11 @@
+>BSU04810|330|200|530623|531133|-|immA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.42
+ -10 box at pos.     44 TTGTCTAAT Score    49
+ -35 box at pos.     24 TTAATA    Score    35
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,0 +1,18 @@
+>BSU29690|500|200|3040091|3040724|+|acuA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.50
+ -10 box at pos.     49 TTTCCACAT Score    -3
+ -35 box at pos.     24 ATAAAA    Score     7
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  CATAAAAA at position      23 Score -  14
+       argR:  ATAAAAAT at position      24 Score -  10
+        fis:  AAAAATAA at position      26 Score -   9
+        ihf:  AAATAAAA at position      28 Score -  13
+       arcA:  AATAAAAA at position      29 Score -  12
+     rpoD17:  CCCCTTTT at position      43 Score -  12
+     rpoD16:  CACATTTC at position      53 Score -   7

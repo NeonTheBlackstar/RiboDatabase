@@ -1,0 +1,13 @@
+>BSU18760|500|200|2044955|2045828|-|yoaU|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.56
+ -10 box at pos.     47 ATTCATTTT Score    21
+ -35 box at pos.     28 GTCCCA    Score     8
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       dnaA:  TATACACA at position      40 Score -  14
+       fhlA:  TCATTTTC at position      49 Score -   7

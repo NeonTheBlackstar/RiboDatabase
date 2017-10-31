@@ -1,0 +1,4 @@
+>BSU34750|500|200|3569572|3570523|-|whiA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

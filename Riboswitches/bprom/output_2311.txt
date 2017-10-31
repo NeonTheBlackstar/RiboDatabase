@@ -1,0 +1,4 @@
+>BSU36310|410|200|3740205|3740547|-|ssbB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

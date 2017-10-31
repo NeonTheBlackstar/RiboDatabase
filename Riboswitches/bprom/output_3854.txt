@@ -1,0 +1,11 @@
+>BSU10970|500|200|1174860|1175976|-|yitF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.73
+ -10 box at pos.     45 AAGCAAAAT Score    42
+ -35 box at pos.     25 GTGACG    Score    27
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

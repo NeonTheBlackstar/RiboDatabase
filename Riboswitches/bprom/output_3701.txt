@@ -1,0 +1,15 @@
+>BSU17980|128|200|1926127|1926274|-|sspP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.32
+ -10 box at pos.     40 GCTTGTACT Score    28
+ -35 box at pos.     27 TTGAAA    Score    60
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  AAATAACA at position      67 Score -  10
+       araC:  TAACAAAA at position      70 Score -  10
+        ihf:  ACAAAAAA at position      72 Score -   9
+      rpoH3:  CAAAAAAA at position      73 Score -   9

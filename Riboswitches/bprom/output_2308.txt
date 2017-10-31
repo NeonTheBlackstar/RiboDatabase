@@ -1,0 +1,14 @@
+>BSU36360|448|200|3743266|3743659|-|mscL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.27
+ -10 box at pos.     42 GGGCAAAAG Score    20
+ -35 box at pos.     27 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  ATAAAAAT at position      54 Score -  10
+        crp:  AAATGTAA at position      58 Score -  13
+       galR:  ATGTAACC at position      60 Score -   7

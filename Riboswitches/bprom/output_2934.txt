@@ -1,0 +1,13 @@
+>BSU27950|261|200|2855176|2855515|-|ysxB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.60
+ -10 box at pos.     46 AGTTACTTT Score    38
+ -35 box at pos.     24 TTGCTG    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       ompR:  TGTTTACA at position       7 Score -   8
+     rpoD15:  TTTTGTTT at position      63 Score -   9

@@ -1,0 +1,4 @@
+>BSU17950|391|200|1924470|1924962|+|yneJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

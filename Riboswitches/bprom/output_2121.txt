@@ -1,0 +1,4 @@
+>BSU39040|500|200|4007802|4008093|-|yxiS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU36500|500|200|3756043|3756508|-|ywoB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

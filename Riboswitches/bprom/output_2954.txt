@@ -1,0 +1,13 @@
+>BSU27700|500|200|2832423|2832690|-|yajC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.07
+ -10 box at pos.     47 GGATAAACC Score    24
+ -35 box at pos.     24 TTCACA    Score    46
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoS18:  TGTCATGA at position       2 Score -   7
+       dnaA:  ATTCACAA at position      23 Score -   5

@@ -1,0 +1,4 @@
+>BSU20310|135|200|2174351|2174549|-|yorO|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,14 @@
+>BSU20850|500|200|2208854|2208980|-|yopL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.89
+ -10 box at pos.     45 CTCTATTAT Score    63
+ -35 box at pos.     29 TTAACT    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       tyrR:  TGAGATTT at position       6 Score -   7
+       glpR:  TCGAATTA at position      56 Score -   9
+     rpoD15:  GCTCAAGA at position      71 Score -   6

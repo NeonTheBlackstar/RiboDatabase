@@ -1,0 +1,13 @@
+>BSU06110|500|200|661629|663027|+|ydjA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.65
+ -10 box at pos.     41 AGCTACCAT Score    49
+ -35 box at pos.     23 TTAAAG    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  AATTATTT at position       1 Score -  12
+       soxS:  AATTTCTT at position      52 Score -   7

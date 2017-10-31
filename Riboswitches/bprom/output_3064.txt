@@ -1,0 +1,17 @@
+>BSU26200|482|200|2689593|2690313|-|yqaS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.08
+ -10 box at pos.     40 GAATAGAAA Score    10
+ -35 box at pos.     28 TTTACA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TTTTTTTA at position       1 Score -  16
+       gcvA:  AACTAATT at position      16 Score -  14
+     rpoS17:  TTATGTTT at position      22 Score -   7
+      rpoH2:  ACAAAAGA at position      31 Score -   6
+       arcA:  TCACAAAA at position      63 Score -  10
+       modE:  CTATATAC at position      73 Score -   9

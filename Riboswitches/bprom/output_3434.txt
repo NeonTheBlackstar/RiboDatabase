@@ -1,0 +1,13 @@
+>BSU21800|457|200|2295981|2296602|-|ypkP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.05
+ -10 box at pos.     48 AAATAACAT Score    38
+ -35 box at pos.     27 ATGATC    Score     6
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cysB:  TCTTGCAT at position      31 Score -  10
+        crp:  AAATAACA at position      48 Score -  10

@@ -1,0 +1,4 @@
+>BSU25210|478|200|2601527|2603339|-|dnaG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

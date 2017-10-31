@@ -1,0 +1,4 @@
+>BSU20030|500|200|2159741|2159984|-|yosR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

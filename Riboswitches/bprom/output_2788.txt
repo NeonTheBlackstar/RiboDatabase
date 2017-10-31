@@ -1,0 +1,4 @@
+>BSU29670|282|200|3036602|3037871|-|tyrS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

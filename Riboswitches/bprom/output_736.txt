@@ -1,0 +1,17 @@
+>BSU09958|500|200|1071401|1071488|+|yhzE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.25
+ -10 box at pos.     40 AGGTAATCT Score    58
+ -35 box at pos.     25 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CAATTCAT at position      15 Score -   7
+       ompR:  TCATATTT at position      19 Score -  11
+      argR2:  CATATTTT at position      20 Score -   8
+       nagC:  ATATTTTA at position      21 Score -   7
+     rpoD17:  TTTTACTT at position      24 Score -   8
+     rpoD18:  TTGCTTTT at position      57 Score -   6

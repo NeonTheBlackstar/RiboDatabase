@@ -1,0 +1,16 @@
+>BSU26930|500|200|2751291|2751726|-|yraI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  6.29
+ -10 box at pos.     45 ATATAAAAT Score    63
+ -35 box at pos.     26 ATCATA    Score     8
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  AAATATAT at position      41 Score -   7
+       tyrR:  AATATATA at position      42 Score -  15
+       lexA:  TATATAAA at position      44 Score -  14
+       lexA:  ATATAAAA at position      45 Score -  11
+        fnr:  TTTTTTGA at position      61 Score -   9

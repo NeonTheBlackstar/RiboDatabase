@@ -1,0 +1,15 @@
+>BSU20420|407|200|2186984|2187299|-|yorD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.58
+ -10 box at pos.     43 GATTAATTT Score    35
+ -35 box at pos.     28 CTTATA    Score     4
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        hns:  ATTAAATT at position       7 Score -   9
+        crp:  TATACATA at position      30 Score -  13
+       oxyR:  GATTAATT at position      43 Score -   9
+     rpoD18:  TTAATTTT at position      45 Score -   9

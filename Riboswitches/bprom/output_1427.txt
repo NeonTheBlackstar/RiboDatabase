@@ -1,0 +1,4 @@
+>BSU19790|358|200|2149083|2150037|+|cgeB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

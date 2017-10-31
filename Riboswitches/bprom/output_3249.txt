@@ -1,0 +1,4 @@
+>BSU23960|500|200|2490573|2491296|-|artR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

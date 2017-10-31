@@ -1,0 +1,12 @@
+>BSU32770|392|200|3365068|3365389|-|yusE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.47
+ -10 box at pos.     46 GGTTATGAT Score    74
+ -35 box at pos.     23 ATGAAG    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AAATCAGA at position      65 Score -   7

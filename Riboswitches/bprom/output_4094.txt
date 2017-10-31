@@ -1,0 +1,4 @@
+>BSU03730|500|200|424207|424888|-|yclH|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

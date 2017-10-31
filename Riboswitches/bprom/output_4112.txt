@@ -1,0 +1,11 @@
+>BSU03310|500|200|358302|360435|-|nasC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.57
+ -10 box at pos.     42 GGGCAAAAT Score    58
+ -35 box at pos.     24 ATCAAA    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

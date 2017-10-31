@@ -1,0 +1,13 @@
+>BSU29520|500|200|3019532|3020027|-|yteJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.68
+ -10 box at pos.     42 ATTTCTTTT Score     9
+ -35 box at pos.     25 TTGCCG    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD19:  CAAGCTTG at position      32 Score -   7
+        lrp:  TTTCTTTT at position      43 Score -   9

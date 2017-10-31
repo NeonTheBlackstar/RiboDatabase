@@ -1,0 +1,4 @@
+>BSU00710|500|200|79879|80755|+|hslO|chromosome|NC_000964.3                     
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,16 @@
+>BSU25770|500|200|2653370|2654873|-|spoIVCA|chromosome|NC_000964.3              
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.38
+ -10 box at pos.     45 GGAAATAAA Score     5
+ -35 box at pos.     23 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AATAAATA at position      48 Score -  11
+       lexA:  ATAAATAA at position      49 Score -  14
+       tyrR:  TAAATAAA at position      50 Score -  10
+        crp:  TTTTGTTA at position      61 Score -   9
+       pdhR:  TTGTTAAA at position      63 Score -   8

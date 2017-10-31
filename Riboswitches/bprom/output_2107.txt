@@ -1,0 +1,4 @@
+>BSU39200|414|200|4021895|4022264|-|yxzC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

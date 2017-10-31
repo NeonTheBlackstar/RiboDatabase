@@ -1,0 +1,15 @@
+>BSU08800|500|200|957704|959060|-|ygaK|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.47
+ -10 box at pos.     45 CGTTGTAGT Score    27
+ -35 box at pos.     23 TTAATG    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TTTTTTTA at position      61 Score -  16
+       argR:  TTTTTTAT at position      62 Score -  13
+     rpoD16:  TTTTTATA at position      63 Score -  13
+       gcvA:  TTATATTT at position      66 Score -  11

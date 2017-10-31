@@ -1,0 +1,4 @@
+>BSU31770|270|200|3261538|3261937|-|yueI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

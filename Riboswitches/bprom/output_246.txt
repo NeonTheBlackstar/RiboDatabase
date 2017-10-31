@@ -1,0 +1,13 @@
+>BSU02980|500|200|321012|322269|+|opuAA|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.53
+ -10 box at pos.     49 TGACAATAT Score    35
+ -35 box at pos.     23 TTTAAA    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  TTTAAAAT at position      23 Score -   7
+        lrp:  TTGACAAT at position      48 Score -   7

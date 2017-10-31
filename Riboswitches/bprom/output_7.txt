@@ -1,0 +1,11 @@
+>BSU00070|500|200|6993|9459|+|gyrA|chromosome|NC_000964.3                       
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.83
+ -10 box at pos.     46 TGTTAAAAA Score    48
+ -35 box at pos.     25 ATGACA    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

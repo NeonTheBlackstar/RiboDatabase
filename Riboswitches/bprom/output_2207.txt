@@ -1,0 +1,12 @@
+>BSU37730|500|200|3872868|3873576|-|bacB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.15
+ -10 box at pos.     49 CAGTAAATT Score    49
+ -35 box at pos.     26 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fnr:  TAAATTGT at position      52 Score -  12

@@ -1,0 +1,4 @@
+>BSU04840|264|200|532291|532552|+|ydcO|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

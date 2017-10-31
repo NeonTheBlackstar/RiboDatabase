@@ -1,0 +1,13 @@
+>BSU19900|128|200|2154595|2154673|-|yotF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.40
+ -10 box at pos.     45 ATGCAGAAT Score    39
+ -35 box at pos.     23 GTGATA    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  ATAAAAAT at position      26 Score -  10
+        crp:  TCATATCA at position      34 Score -   9

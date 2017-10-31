@@ -1,0 +1,15 @@
+>BSU29910|500|200|3060394|3060673|+|ytzH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.00
+ -10 box at pos.     46 TTTTACTTT Score    36
+ -35 box at pos.     23 TTTACA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TATATTCA at position      10 Score -   8
+       metJ:  CTTTACAT at position      22 Score -  14
+       ompR:  TTTACATT at position      23 Score -  11
+     rpoD17:  TTTTACTT at position      46 Score -   8

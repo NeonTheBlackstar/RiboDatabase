@@ -1,0 +1,4 @@
+>BSU12340|500|200|1305485|1306565|+|uxuA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

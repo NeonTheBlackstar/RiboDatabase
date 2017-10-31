@@ -1,0 +1,14 @@
+>BSU30550|500|200|3127824|3129027|-|metK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.90
+ -10 box at pos.     46 GTATAACAT Score    47
+ -35 box at pos.     29 TTGCTA    Score    53
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  CGTTTTTT at position      16 Score -   8
+     rpoD17:  TTGTGAAT at position      36 Score -   6
+     rpoD16:  TTTCAAAT at position      59 Score -  10

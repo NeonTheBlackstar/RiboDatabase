@@ -1,0 +1,4 @@
+>BSU29740|500|200|3044164|3045169|-|ccpA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

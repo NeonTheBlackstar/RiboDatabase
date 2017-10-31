@@ -1,0 +1,12 @@
+>BSU25470|500|200|2626111|2627947|-|dnaK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.17
+ -10 box at pos.     46 TTGCAAGGT Score    14
+ -35 box at pos.     26 TTCAAA    Score    40
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  TGAGGAAA at position      60 Score -   6

@@ -1,0 +1,13 @@
+>BSU12600|500|200|1328701|1329529|+|xkdF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.14
+ -10 box at pos.     46 AAATAAGCT Score    30
+ -35 box at pos.     24 TTGAAT    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      rpoH3:  CTTGAATA at position      23 Score -   5
+       nagC:  GAAATAAG at position      45 Score -   8

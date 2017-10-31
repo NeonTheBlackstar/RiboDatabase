@@ -1,0 +1,12 @@
+>BSU10100|500|200|1083228|1083729|-|yhgC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.37
+ -10 box at pos.     44 TGCTAATAT Score    67
+ -35 box at pos.     29 TTCCAC    Score    13
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TAATATAT at position      47 Score -  15

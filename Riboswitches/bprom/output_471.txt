@@ -1,0 +1,4 @@
+>BSU06150|500|200|667465|668527|+|gutB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

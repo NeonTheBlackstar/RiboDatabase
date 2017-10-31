@@ -1,0 +1,11 @@
+>BSU32400|500|200|3326802|3327150|-|yunG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.08
+ -10 box at pos.     43 TTTTATCAT Score    68
+ -35 box at pos.     21 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

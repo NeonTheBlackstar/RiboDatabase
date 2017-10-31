@@ -1,0 +1,4 @@
+>BSU27970|500|200|2855972|2856839|-|spoIVFB|chromosome|NC_000964.3              
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

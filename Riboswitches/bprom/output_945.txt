@@ -1,0 +1,4 @@
+>BSU13100|288|200|1376854|1377172|+|ykkD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

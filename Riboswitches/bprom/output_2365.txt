@@ -1,0 +1,14 @@
+>BSU35460|500|200|3641810|3642107|-|comFB|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.57
+ -10 box at pos.     44 TTTTTTTAT Score    34
+ -35 box at pos.     23 ATGTAA    Score    17
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TTTTTTTA at position      44 Score -  16
+       argR:  TTTTTTAT at position      45 Score -  13
+      argR2:  TTTTTATT at position      46 Score -  13

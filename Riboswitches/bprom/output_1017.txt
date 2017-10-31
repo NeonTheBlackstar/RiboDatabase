@@ -1,0 +1,14 @@
+>BSU14100|500|200|1484116|1484356|+|ykuJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.01
+ -10 box at pos.     44 CAATCCAAT Score    10
+ -35 box at pos.     28 TTGTCA    Score    53
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  TTTTTTAT at position      20 Score -  13
+      argR2:  TTTTTATT at position      21 Score -  13
+        ihf:  TTTTATTT at position      22 Score -  13

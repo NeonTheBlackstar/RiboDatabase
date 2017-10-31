@@ -1,0 +1,4 @@
+>BSU34160|500|200|3507252|3508518|-|cycB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

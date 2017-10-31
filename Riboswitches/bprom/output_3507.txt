@@ -1,0 +1,4 @@
+>BSU20610|355|200|2197343|2197859|-|yoqJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

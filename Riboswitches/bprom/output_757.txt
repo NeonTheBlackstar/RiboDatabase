@@ -1,0 +1,4 @@
+>BSU10320|471|200|1106523|1107516|+|yhfP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

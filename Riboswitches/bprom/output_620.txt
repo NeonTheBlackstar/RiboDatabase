@@ -1,0 +1,4 @@
+>BSU08220|500|200|895618|897433|+|yfiC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

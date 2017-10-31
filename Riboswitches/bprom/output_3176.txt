@@ -1,0 +1,13 @@
+>BSU24850|176|200|2570605|2571571|-|glcK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.41
+ -10 box at pos.     43 GGATGAATT Score    14
+ -35 box at pos.     24 TTGAAA    Score    60
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      argR2:  TTTATTTT at position       3 Score -   7
+        hns:  AAAGGAAT at position      52 Score -   8

@@ -1,0 +1,11 @@
+>BSU08750|500|200|945519|946404|+|ygxA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.33
+ -10 box at pos.     45 TCCTAAAAC Score    29
+ -35 box at pos.     24 ATGCAT    Score    20
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

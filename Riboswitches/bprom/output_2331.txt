@@ -1,0 +1,4 @@
+>BSU36010|500|200|3709627|3711340|-|alsS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

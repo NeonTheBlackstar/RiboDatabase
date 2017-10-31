@@ -1,0 +1,4 @@
+>BSU18010|500|200|1929480|1929993|+|yneN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

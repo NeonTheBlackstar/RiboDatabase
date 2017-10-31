@@ -1,0 +1,4 @@
+>BSU36300|500|200|3739205|3739982|-|glcR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

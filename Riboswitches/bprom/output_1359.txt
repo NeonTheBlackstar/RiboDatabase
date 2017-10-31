@@ -1,0 +1,13 @@
+>BSU18030|133|200|1930446|1930698|+|tlp|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.41
+ -10 box at pos.     44 ATGCATGAT Score    40
+ -35 box at pos.     21 ATAAAG    Score     1
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       carP:  CTGTAAAA at position      12 Score -   7
+     rpoD17:  TGTAAAAT at position      13 Score -  11

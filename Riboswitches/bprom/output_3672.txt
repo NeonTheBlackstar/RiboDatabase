@@ -1,0 +1,4 @@
+>BSU18440|500|200|2008571|2010053|-|gltD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

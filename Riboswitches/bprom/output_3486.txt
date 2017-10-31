@@ -1,0 +1,16 @@
+>BSU20830|153|200|2208007|2208325|-|yopN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.90
+ -10 box at pos.     41 TTTTTTCAT Score    30
+ -35 box at pos.     27 TTAAAA    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fnr:  ATTTGTTT at position      36 Score -   7
+     rpoD17:  TTTGTTTT at position      37 Score -   9
+       metR:  TTTTTTCA at position      41 Score -   8
+        fis:  AAAAATAA at position      70 Score -   9
+      rpoH2:  AAATAATG at position      72 Score -   5

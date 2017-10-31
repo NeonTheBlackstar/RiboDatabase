@@ -1,0 +1,11 @@
+>BSU15740|500|200|1647938|1649282|+|rsmB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.55
+ -10 box at pos.     46 CGGAACACT Score    28
+ -35 box at pos.     27 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

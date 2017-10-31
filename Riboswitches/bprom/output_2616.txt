@@ -1,0 +1,4 @@
+>BSU32180|323|200|3307016|3308231|-|yutK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

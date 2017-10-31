@@ -1,0 +1,14 @@
+>BSU29290|500|200|2999716|3000967|-|ytnL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.70
+ -10 box at pos.     48 CAGCATTCT Score    26
+ -35 box at pos.     26 TTTATG    Score    33
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TTTTGTTT at position       2 Score -   9
+     rpoD18:  TTTAAAAT at position      58 Score -   7
+       cpxR:  TAAAATTA at position      60 Score -   6

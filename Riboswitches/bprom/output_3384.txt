@@ -1,0 +1,13 @@
+>BSU22430|500|200|2353838|2354672|-|panB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.26
+ -10 box at pos.     46 CGGTACCGG Score    -6
+ -35 box at pos.     27 TTTACT    Score    42
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      argR2:  CATATTTT at position      22 Score -   8
+       nagC:  ATATTTTA at position      23 Score -   7

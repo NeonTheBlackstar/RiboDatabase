@@ -1,0 +1,4 @@
+>BSU13200|500|200|1387205|1388039|+|rsbRB|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

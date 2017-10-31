@@ -1,0 +1,15 @@
+>BSU22320|500|200|2341443|2344188|+|ponA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.16
+ -10 box at pos.     46 TTGTAAATG Score    22
+ -35 box at pos.     27 AAGCCG    Score   -12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CCAAATTG at position       5 Score -   6
+       dnaA:  TATACACA at position      17 Score -  14
+       rpoN:  AAATTGTA at position      43 Score -   8
+       arcA:  AATTGTAA at position      44 Score -  16

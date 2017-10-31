@@ -1,0 +1,4 @@
+>BSU40000|500|200|4108057|4109128|+|yxnA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

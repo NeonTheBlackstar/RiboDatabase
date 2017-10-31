@@ -1,0 +1,4 @@
+>BSU17350|367|200|1867789|1868062|+|ymzC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU05330|444|200|579540|579876|+|aseR|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

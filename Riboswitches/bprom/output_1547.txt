@@ -1,0 +1,4 @@
+>BSU25160|500|200|2596534|2597479|+|ispH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

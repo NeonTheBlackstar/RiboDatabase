@@ -1,0 +1,4 @@
+>BSU23519|500|200|2449488|2449716|-|yqzK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

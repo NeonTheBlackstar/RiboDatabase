@@ -1,0 +1,15 @@
+>BSU07530|500|200|826842|827211|-|yfmB|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.37
+ -10 box at pos.     44 CTTTTTTAT Score    30
+ -35 box at pos.     24 TTTATT    Score    34
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       deoR:  AATTTTAT at position      21 Score -   8
+     rpoD17:  CTCCTTTT at position      41 Score -  12
+       argR:  TTTTTTAT at position      45 Score -  13
+      argR2:  TTTTTATT at position      46 Score -  13

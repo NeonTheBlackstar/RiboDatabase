@@ -1,0 +1,11 @@
+>BSU29040|500|200|2968823|2970014|+|ytbD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.79
+ -10 box at pos.     42 ATCTAAAAT Score    69
+ -35 box at pos.     24 TCCCCA    Score     4
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

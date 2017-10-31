@@ -1,0 +1,14 @@
+>BSU20520|500|200|2193826|2193976|+|yoqT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.64
+ -10 box at pos.     41 CTTTATAAT Score    82
+ -35 box at pos.     25 CTGTAA    Score    12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TTTTCATA at position       5 Score -  13
+     rpoD17:  TTTATAAT at position      42 Score -   9
+     rpoD17:  TTCCCTGT at position      67 Score -   6

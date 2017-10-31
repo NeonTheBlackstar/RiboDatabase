@@ -1,0 +1,4 @@
+>BSU24610|157|200|2552652|2552988|+|sinR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

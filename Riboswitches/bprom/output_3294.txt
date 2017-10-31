@@ -1,0 +1,13 @@
+>BSU23401|308|200|2439803|2440415|-|spoVAEA|chromosome|NC_000964.3              
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.64
+ -10 box at pos.     45 TGACATCAT Score    38
+ -35 box at pos.     26 TTGACG    Score    60
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TTAAATTG at position      21 Score -  10
+     rpoS18:  TGTCATGA at position      40 Score -   7

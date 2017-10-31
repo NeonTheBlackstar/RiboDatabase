@@ -1,0 +1,17 @@
+>BSU11580|500|200|1235911|1236484|-|yjbK|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.47
+ -10 box at pos.     46 CTCCATAGT Score    27
+ -35 box at pos.     24 TTCACT    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  TAAAAACA at position      11 Score -   7
+       carP:  CACTTTTT at position      26 Score -   8
+       purR:  CTTTTTCT at position      28 Score -   6
+     rpoD17:  CTCCATAG at position      46 Score -  15
+        lrp:  ATCTTTTA at position      62 Score -   6
+       gcvA:  TTATATTT at position      67 Score -  11

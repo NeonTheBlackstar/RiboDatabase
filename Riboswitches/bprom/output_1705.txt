@@ -1,0 +1,19 @@
+>BSU31730|500|200|3257692|3258061|+|yuzC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  5.46
+ -10 box at pos.     44 TTCCACACT Score    29
+ -35 box at pos.     23 TTCAAG    Score    34
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  ATAACAAT at position       4 Score -   9
+       arcA:  TAACAATT at position       5 Score -  13
+     rpoD19:  ATTGTTTT at position      10 Score -   7
+     rpoD17:  TTTTACTT at position      14 Score -   8
+        lrp:  TTTCTTTT at position      29 Score -   9
+       metR:  TTCTTTTC at position      30 Score -   8
+     rpoD17:  CTCCTTTT at position      51 Score -  12
+        fnr:  TTTTTTGA at position      56 Score -   9

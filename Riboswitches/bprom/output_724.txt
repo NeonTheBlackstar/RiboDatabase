@@ -1,0 +1,4 @@
+>BSU09720|500|200|1047071|1049093|+|yheH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

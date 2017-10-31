@@ -1,0 +1,4 @@
+>BSU33100|500|200|3396113|3396839|-|liaF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

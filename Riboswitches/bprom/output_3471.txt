@@ -1,0 +1,13 @@
+>BSU20980|220|200|2217966|2219199|-|yonV|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.36
+ -10 box at pos.     40 TGTCAGAAT Score    50
+ -35 box at pos.     26 ATCAAA    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  GCTCAAGA at position       4 Score -   6
+       narP:  TTTAGAGT at position      61 Score -   8

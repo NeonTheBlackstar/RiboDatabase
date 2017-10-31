@@ -1,0 +1,4 @@
+>BSU06970|500|200|761661|762945|+|yesO|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

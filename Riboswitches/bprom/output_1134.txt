@@ -1,0 +1,4 @@
+>BSU15500|500|200|1621373|1622660|+|pyrC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

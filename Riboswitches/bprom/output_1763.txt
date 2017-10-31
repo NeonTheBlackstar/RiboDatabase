@@ -1,0 +1,4 @@
+>BSU33840|500|200|3471265|3471823|+|yvbF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

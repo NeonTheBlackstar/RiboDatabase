@@ -1,0 +1,13 @@
+>BSU32560|500|200|3346237|3347026|+|frlR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.11
+ -10 box at pos.     46 CGGCAATTT Score    23
+ -35 box at pos.     28 CTGCCG    Score    20
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  GTTCAATT at position       7 Score -   6
+       phoB:  CATCTTTC at position      65 Score -   6

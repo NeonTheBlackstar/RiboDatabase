@@ -1,0 +1,14 @@
+>BSU31080|500|200|3187502|3188048|+|yuaB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.57
+ -10 box at pos.     45 CTTTAAATT Score    55
+ -35 box at pos.     26 TTGTGG    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       soxS:  AATTTCTT at position      61 Score -   7
+     rpoD19:  CACCTAAA at position      71 Score -   6
+     rpoD16:  ACCTAAAT at position      72 Score -   9

@@ -1,0 +1,4 @@
+>BSU17370|423|200|1868616|1869009|+|nrdI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

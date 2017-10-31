@@ -1,0 +1,4 @@
+>BSU06060|500|200|655222|656506|+|ydiO|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

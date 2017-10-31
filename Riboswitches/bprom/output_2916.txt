@@ -1,0 +1,4 @@
+>BSU28130|500|200|2874201|2875176|-|hemB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

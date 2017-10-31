@@ -1,0 +1,4 @@
+>BSU13169|387|200|1382456|1382627|+|ykzN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

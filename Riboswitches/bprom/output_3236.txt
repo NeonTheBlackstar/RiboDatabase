@@ -1,0 +1,4 @@
+>BSU24130|500|200|2508220|2509639|-|prpD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

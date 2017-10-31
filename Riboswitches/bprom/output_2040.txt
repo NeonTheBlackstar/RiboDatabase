@@ -1,0 +1,16 @@
+>BSU40170|157|200|4126480|4127440|-|yydG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  5.48
+ -10 box at pos.     47 TGGTATTTT Score    60
+ -35 box at pos.     27 TAGCAA    Score    18
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  ATCACAAA at position      16 Score -  10
+       arcA:  TCACAAAA at position      17 Score -  10
+     rpoD17:  ATTTTGTA at position      51 Score -   9
+     rpoD15:  TTTTGTAA at position      52 Score -  11
+     rpoD17:  TGTAAAAT at position      55 Score -  11

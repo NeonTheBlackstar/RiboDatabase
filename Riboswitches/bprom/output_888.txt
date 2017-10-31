@@ -1,0 +1,12 @@
+>BSU12480|500|200|1319010|1319613|+|yjqB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.14
+ -10 box at pos.     47 GAATATCAT Score    47
+ -35 box at pos.     23 TACAAA    Score     3
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  CTTACATA at position      17 Score -  16

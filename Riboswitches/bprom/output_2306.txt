@@ -1,0 +1,4 @@
+>BSU36390|500|200|3745435|3746245|-|flhP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

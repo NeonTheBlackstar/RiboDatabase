@@ -1,0 +1,12 @@
+>BSU01030|470|200|119110|119809|+|rplA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.58
+ -10 box at pos.     46 TGTTAACAT Score    68
+ -35 box at pos.     21 TTGGAC    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cytR:  TTCTGTAA at position      62 Score -   8

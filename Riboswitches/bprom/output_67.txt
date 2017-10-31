@@ -1,0 +1,4 @@
+>BSU00730|500|200|81770|82697|+|cysK|chromosome|NC_000964.3                     
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

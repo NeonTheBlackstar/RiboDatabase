@@ -1,0 +1,4 @@
+>BSU23410|415|200|2440774|2441791|-|spoVAD|chromosome|NC_000964.3               
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

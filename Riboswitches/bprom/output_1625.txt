@@ -1,0 +1,12 @@
+>BSU29239|500|200|2994755|2995097|+|ytrH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.58
+ -10 box at pos.     49 ATTTAGATT Score    44
+ -35 box at pos.     26 TTTCGG    Score    13
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CGCCTTTT at position      40 Score -   7

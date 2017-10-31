@@ -1,0 +1,15 @@
+>BSU02280|474|200|248267|248756|+|ybfM|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.58
+ -10 box at pos.     49 TTTTATTTT Score    52
+ -35 box at pos.     24 ATCACA    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  GCTTTTTA at position      46 Score -   7
+      argR2:  TTTTTATT at position      48 Score -  13
+        ihf:  TTTTATTT at position      49 Score -  13
+      argR2:  TTTATTTT at position      50 Score -   7

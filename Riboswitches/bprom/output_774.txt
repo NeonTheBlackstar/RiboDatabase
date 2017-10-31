@@ -1,0 +1,4 @@
+>BSU10760|500|200|1153264|1153621|+|yisL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

@@ -1,0 +1,4 @@
+>BSU08029|500|200|875427|875694|+|yfzA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

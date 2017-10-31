@@ -1,0 +1,13 @@
+>BSU13520|500|200|1417937|1418960|-|ykrP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.30
+ -10 box at pos.     46 GAGTCAACT Score    22
+ -35 box at pos.     27 ACGCTT    Score   -19
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  ACAAAAAA at position       8 Score -   9
+     rpoD16:  TTTCAAAT at position      33 Score -  10

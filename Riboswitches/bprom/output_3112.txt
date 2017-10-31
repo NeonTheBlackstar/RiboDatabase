@@ -1,0 +1,4 @@
+>BSU25610|303|200|2642100|2642844|-|yqeM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

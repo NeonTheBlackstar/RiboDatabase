@@ -1,0 +1,4 @@
+>BSU35950|500|200|3705164|3706133|+|rbsC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

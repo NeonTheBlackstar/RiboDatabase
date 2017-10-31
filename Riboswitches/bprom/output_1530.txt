@@ -1,0 +1,4 @@
+>BSU24540|500|200|2544994|2545375|+|yqhL|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

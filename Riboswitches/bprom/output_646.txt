@@ -1,0 +1,4 @@
+>BSU08590|269|200|929724|930585|+|yfhM|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

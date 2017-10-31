@@ -1,0 +1,4 @@
+>BSU39340|500|200|4041482|4041938|+|hutP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

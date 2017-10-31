@@ -1,0 +1,12 @@
+>BSU00050|500|200|4566|4812|+|yaaB|chromosome|NC_000964.3                       
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.45
+ -10 box at pos.     40 AAATACCAT Score    29
+ -35 box at pos.     23 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  CAAGAGGG at position      14 Score -   7

@@ -1,0 +1,4 @@
+>BSU13380|500|200|1401771|1403466|+|ykoS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

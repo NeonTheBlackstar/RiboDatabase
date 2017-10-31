@@ -1,0 +1,15 @@
+>BSU10290|500|200|1103103|1104384|+|yhfN|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.11
+ -10 box at pos.     46 CGGCTTGCT Score     0
+ -35 box at pos.     27 GTGCCA    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       soxS:  TATCATTT at position       1 Score -   9
+        fur:  ATCATTTT at position       2 Score -   8
+        tus:  TAGTATGT at position      21 Score -  16
+      rpoH3:  CAAAAAAA at position      38 Score -   9

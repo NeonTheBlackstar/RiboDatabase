@@ -1,0 +1,13 @@
+>BSU34080|500|200|3497613|3498351|-|yvfS|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.35
+ -10 box at pos.     47 GCTTATACT Score    66
+ -35 box at pos.     28 TTGCCG    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  CTTATACT at position      48 Score -  10
+       marR:  TATACTTG at position      50 Score -  11

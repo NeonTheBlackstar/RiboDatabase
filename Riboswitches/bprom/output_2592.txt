@@ -1,0 +1,12 @@
+>BSU32520|500|200|3341165|3342416|-|pucG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.20
+ -10 box at pos.     46 CGGAAAAAT Score    47
+ -35 box at pos.     27 ATGAGC    Score    -9
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  AAAAATAA at position      49 Score -   9

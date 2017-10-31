@@ -1,0 +1,4 @@
+>BSU13190|500|200|1386023|1386983|-|ispA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

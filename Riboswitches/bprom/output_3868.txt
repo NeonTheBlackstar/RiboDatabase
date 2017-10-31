@@ -1,0 +1,4 @@
+>BSU10710|177|200|1149957|1150200|-|gerPB|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

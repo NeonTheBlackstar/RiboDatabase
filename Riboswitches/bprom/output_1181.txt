@@ -1,0 +1,4 @@
+>BSU16000|222|200|1673891|1674137|+|ylqC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

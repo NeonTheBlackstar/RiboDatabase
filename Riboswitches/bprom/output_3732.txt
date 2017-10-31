@@ -1,0 +1,4 @@
+>BSU15030|500|200|1570573|1571800|-|ylbJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

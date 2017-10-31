@@ -1,0 +1,4 @@
+>BSU17610|500|200|1893395|1894895|+|xylB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

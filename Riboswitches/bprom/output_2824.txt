@@ -1,0 +1,12 @@
+>BSU29230|500|200|2991268|2994616|-|dnaE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.19
+ -10 box at pos.     45 AGCCATGAT Score    41
+ -35 box at pos.     22 ATGAAG    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TGATATAA at position      50 Score -   9

@@ -1,0 +1,11 @@
+>BSU00150|500|200|23145|23769|-|dgk|chromosome|NC_000964.3                      
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.55
+ -10 box at pos.     45 GAACAAAAT Score    32
+ -35 box at pos.     28 TTGACT    Score    61
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

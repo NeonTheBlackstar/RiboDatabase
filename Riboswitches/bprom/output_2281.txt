@@ -1,0 +1,12 @@
+>BSU36730|500|200|3774654|3775329|-|ywmD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.66
+ -10 box at pos.     46 GATTATAAA Score    38
+ -35 box at pos.     29 TTAATG    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TAATGTGA at position      30 Score -   9

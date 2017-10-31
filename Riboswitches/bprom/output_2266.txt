@@ -1,0 +1,4 @@
+>BSU36890|500|200|3788425|3789055|-|upp|chromosome|NC_000964.3                  
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

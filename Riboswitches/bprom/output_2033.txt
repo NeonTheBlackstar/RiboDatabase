@@ -1,0 +1,4 @@
+>BSU40250|183|200|4135797|4137024|-|yycR|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

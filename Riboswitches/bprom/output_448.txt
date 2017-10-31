@@ -1,0 +1,4 @@
+>BSU05860|500|200|630911|631811|+|gmuE|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

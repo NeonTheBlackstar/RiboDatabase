@@ -1,0 +1,12 @@
+>BSU33800|500|200|3467545|3468235|-|opuCD|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.23
+ -10 box at pos.     43 AAGAAAAAT Score    32
+ -35 box at pos.     23 TTAACA    Score    43
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      argR2:  ATATAAAT at position      60 Score -  13

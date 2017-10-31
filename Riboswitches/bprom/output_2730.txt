@@ -1,0 +1,4 @@
+>BSU30460|500|200|3118846|3119239|-|ytrA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

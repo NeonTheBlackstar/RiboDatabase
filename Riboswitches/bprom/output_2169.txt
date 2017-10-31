@@ -1,0 +1,19 @@
+>BSU38170|500|200|3917295|3918261|-|qoxA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.99
+ -10 box at pos.     43 AGATAAACA Score    22
+ -35 box at pos.     26 TTCCTC    Score    11
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  TTTTTTAT at position       2 Score -  13
+      argR2:  TTTTTATT at position       3 Score -  13
+        ihf:  TTTTATTT at position       4 Score -  13
+        lrp:  TATTTATT at position       7 Score -   8
+     rpoD17:  TTTTGTAT at position      34 Score -   9
+        lrp:  TAAGATAA at position      41 Score -  16
+       phoB:  TCATAAAA at position      63 Score -  11
+       argR:  CATAAAAA at position      64 Score -  14

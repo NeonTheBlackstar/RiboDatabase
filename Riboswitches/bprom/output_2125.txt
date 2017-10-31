@@ -1,0 +1,15 @@
+>BSU38980|500|200|4001328|4001979|-|scoB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.34
+ -10 box at pos.     43 CGGCAGTTT Score    13
+ -35 box at pos.     23 GTGAAA    Score    27
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  AAATAAAA at position      27 Score -  13
+        ihf:  AATAAAAT at position      28 Score -  10
+       purR:  TTTTTAAG at position      49 Score -   9
+       narP:  TTGAGGTA at position      65 Score -   8

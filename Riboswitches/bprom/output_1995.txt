@@ -1,0 +1,4 @@
+>BSU40900|278|200|4198885|4199404|-|ssbA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

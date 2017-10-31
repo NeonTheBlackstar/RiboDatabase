@@ -1,0 +1,4 @@
+>BSU17910|482|200|1922548|1922767|+|yneF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

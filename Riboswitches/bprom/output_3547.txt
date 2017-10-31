@@ -1,0 +1,4 @@
+>BSU20150|360|200|2168113|2168461|-|yosE|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

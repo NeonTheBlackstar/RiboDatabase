@@ -1,0 +1,13 @@
+>BSU12519|500|200|1321847|1322027|+|yjzJ|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.61
+ -10 box at pos.     48 CTGTTTGCT Score    19
+ -35 box at pos.     28 TTGATA    Score    58
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       purR:  CTTTTTCT at position      11 Score -   6
+        lrp:  TTTCTTTT at position      14 Score -   9

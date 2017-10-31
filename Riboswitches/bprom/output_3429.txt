@@ -1,0 +1,4 @@
+>BSU21850|426|200|2299405|2300179|-|ypiP|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

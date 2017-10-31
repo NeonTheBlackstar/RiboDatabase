@@ -1,0 +1,11 @@
+>BSU15350|500|200|1607555|1608836|+|ylmB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.58
+ -10 box at pos.     47 AGATACGAT Score    45
+ -35 box at pos.     28 TTGCCC    Score    39
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

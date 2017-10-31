@@ -1,0 +1,12 @@
+>BSU13170|500|200|1382676|1383147|-|guaD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.53
+ -10 box at pos.     41 ATCGAACAT Score    15
+ -35 box at pos.     21 TTGATG    Score    52
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TTAGATTA at position      71 Score -  14

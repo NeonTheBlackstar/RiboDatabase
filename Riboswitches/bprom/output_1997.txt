@@ -1,0 +1,4 @@
+>BSU40880|254|200|4197779|4198538|-|exoAA|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

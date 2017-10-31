@@ -1,0 +1,13 @@
+>BSU06670|500|200|728731|729022|+|gatC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.30
+ -10 box at pos.     45 CAATAAAGT Score    33
+ -35 box at pos.     22 ATACCA    Score     8
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       narL:  TCCTAAAG at position      58 Score -  20
+     rpoD17:  ATAATAAT at position      68 Score -   8

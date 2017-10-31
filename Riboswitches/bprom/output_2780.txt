@@ -1,0 +1,12 @@
+>BSU29770|403|200|3047106|3047562|-|ytxH|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.63
+ -10 box at pos.     48 CACTAAAAA Score    25
+ -35 box at pos.     29 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD19:  GTGATCTA at position       8 Score -  11

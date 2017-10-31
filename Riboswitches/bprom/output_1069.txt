@@ -1,0 +1,4 @@
+>BSU14770|500|200|1546120|1547959|+|bipA|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

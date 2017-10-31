@@ -1,0 +1,14 @@
+>BSU32780|186|200|3365390|3365831|-|yusF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.03
+ -10 box at pos.     46 CGGCCAAAT Score    19
+ -35 box at pos.     23 TTATAT    Score    19
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TTTCAAAA at position       2 Score -   6
+       glpR:  TTCAAAAT at position       3 Score -   6
+        fur:  ATGATAAT at position      30 Score -   8

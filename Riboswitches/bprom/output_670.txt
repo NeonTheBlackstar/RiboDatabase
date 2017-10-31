@@ -1,0 +1,16 @@
+>BSU08930|500|200|970134|970617|+|cspR|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.88
+ -10 box at pos.     44 AGCGATAAC Score     9
+ -35 box at pos.     27 CTGCTT    Score    13
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TTATAAAA at position      31 Score -   9
+       argR:  ATAAAAAT at position      33 Score -  10
+       metR:  CAAATTTT at position      57 Score -   8
+       deoR:  AATTTTAT at position      59 Score -   8
+        ihf:  TTTTATTT at position      61 Score -  13

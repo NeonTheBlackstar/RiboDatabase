@@ -1,0 +1,4 @@
+>BSU27990|500|200|2857775|2858582|-|minD|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

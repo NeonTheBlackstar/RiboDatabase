@@ -1,0 +1,4 @@
+>BSU09600|342|200|1036952|1037309|-|crcBA|chromosome|NC_000964.3                
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

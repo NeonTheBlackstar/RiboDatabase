@@ -1,0 +1,11 @@
+>BSU09010|500|200|977774|979373|+|yhcA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.51
+ -10 box at pos.     49 TGCAAAAAT Score    45
+ -35 box at pos.     29 GTGAAA    Score    27
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

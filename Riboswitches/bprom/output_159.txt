@@ -1,0 +1,13 @@
+>BSU01810|500|200|203728|204364|+|adaA|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.56
+ -10 box at pos.     48 GATTACGCT Score    34
+ -35 box at pos.     24 TTGAAC    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fnr:  ATTTGTTT at position      34 Score -   7
+       ntrC:  TGCACTAA at position      61 Score -   8

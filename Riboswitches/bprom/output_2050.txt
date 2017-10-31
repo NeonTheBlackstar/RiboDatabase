@@ -1,0 +1,4 @@
+>BSU39980|500|200|4106244|4107258|-|qodI|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

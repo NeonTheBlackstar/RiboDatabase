@@ -1,0 +1,12 @@
+>BSU36770|309|200|3779292|3780033|-|ywmB|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.45
+ -10 box at pos.     48 CGTTAATCA Score    20
+ -35 box at pos.     26 TTGCAA    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTTATAG at position       1 Score -  10

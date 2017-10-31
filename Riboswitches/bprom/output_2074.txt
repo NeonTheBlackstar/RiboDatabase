@@ -1,0 +1,13 @@
+>BSU39600|500|200|4066606|4067005|-|yxeC|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.28
+ -10 box at pos.     49 AGCTTTGAT Score    29
+ -35 box at pos.     25 TCACCA    Score     1
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       carP:  CACTTTTT at position       3 Score -   8
+        crp:  TCACATTT at position      38 Score -  12

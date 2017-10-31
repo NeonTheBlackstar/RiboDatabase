@@ -1,0 +1,4 @@
+>BSU40530|500|200|4167109|4167592|+|cotF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

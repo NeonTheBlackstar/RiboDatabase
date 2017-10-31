@@ -1,0 +1,15 @@
+>BSU03550|500|200|405068|406007|-|ycxC|chromosome|NC_000964.3                   
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.79
+ -10 box at pos.     46 TTTTTGTAT Score    17
+ -35 box at pos.     25 GTCCCA    Score     8
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       melR:  TCCCATAA at position      26 Score -   8
+       lexA:  ATAAATAA at position      30 Score -  14
+       tyrR:  TAAATAAA at position      31 Score -  10
+     rpoD17:  TTTTGTAT at position      47 Score -   9

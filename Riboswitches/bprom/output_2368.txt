@@ -1,0 +1,4 @@
+>BSU35430|450|200|3640284|3640551|-|flgM|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

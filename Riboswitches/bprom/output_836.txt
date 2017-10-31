@@ -1,0 +1,13 @@
+>BSU11690|147|200|1245040|1245811|+|thiG|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.62
+ -10 box at pos.     43 CGTTATCGT Score    47
+ -35 box at pos.     22 GTATCA    Score    -3
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  AAATAAAA at position      34 Score -  13
+        ihf:  AATAAAAT at position      35 Score -  10

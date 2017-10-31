@@ -1,0 +1,4 @@
+>BSU00040|181|200|3436|4549|+|recF|chromosome|NC_000964.3                       
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

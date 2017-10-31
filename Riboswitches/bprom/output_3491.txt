@@ -1,0 +1,4 @@
+>BSU20770|500|200|2203377|2203596|-|yopT|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0

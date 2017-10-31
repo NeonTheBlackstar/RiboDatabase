@@ -1,0 +1,15 @@
+>BSU10009|500|200|1074380|1074572|+|yhzF|chromosome|NC_000964.3                 
+ Length of sequence-        80
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.21
+ -10 box at pos.     44 TGATTTTCT Score    20
+ -35 box at pos.     21 TTGTAA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TTTTGTAA at position      19 Score -  11
+       soxS:  AATTTCTT at position      66 Score -   7
+        lrp:  TTTCTTTT at position      68 Score -   9
+       ompR:  TTCTTTTT at position      69 Score -   8
