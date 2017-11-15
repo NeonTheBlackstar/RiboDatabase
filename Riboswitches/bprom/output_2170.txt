@@ -1,4 +1,4 @@
->BSU38160|500|200|3915318|3917268|-|qoxB|chromosome|NC_000964.3                 
+>b3745|500|200|3928151|3929603|-|viaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

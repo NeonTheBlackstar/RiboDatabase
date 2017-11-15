@@ -1,4 +1,4 @@
->BSU27240|500|200|2784687|2784918|-|yrhC|chromosome|NC_000964.3                 
+>b2111|500|200|2191679|2192222|-|yehD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

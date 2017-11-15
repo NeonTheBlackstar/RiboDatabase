@@ -1,14 +1,11 @@
->BSU25230|500|200|2603372|2603867|-|yqxD|chromosome|NC_000964.3                 
+>b1825|168|200|1908260|1908548|-|yebO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.29
- -10 box at pos.     44 CTGAATCAT Score    29
- -35 box at pos.     22 TTTAAA    Score    41
+ Promoter Pos:     61 LDF-  1.49
+ -10 box at pos.     42 ATGTACAAT Score    66
+ -35 box at pos.     26 ATGATG    Score    22
 
  Oligonucleotides from known TF binding sites:
 
- For promoter at     61:
-       araC:  AAGATTAG at position      26 Score -  16
-        crp:  TCATATCA at position      49 Score -   9
-     rpoD18:  TTTAAAAT at position      67 Score -   7
+ No such sites for promoter at     61

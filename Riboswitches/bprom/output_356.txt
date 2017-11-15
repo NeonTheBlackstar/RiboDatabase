@@ -1,4 +1,4 @@
->BSU04580|500|200|511105|512641|+|cshA|chromosome|NC_000964.3                   
+>b0778|500|200|812269|812947|+|bioD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

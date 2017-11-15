@@ -1,12 +1,4 @@
->BSU28150|500|200|2875950|2876895|-|hemC|chromosome|NC_000964.3                 
+>b2276|500|200|2390047|2391505|-|nuoN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.76
- -10 box at pos.     42 TATTACAAT Score    63
- -35 box at pos.     29 TTTTGG    Score     5
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       ompR:  ATATTACA at position      41 Score -   9
+ Number of predicted promoters -      0

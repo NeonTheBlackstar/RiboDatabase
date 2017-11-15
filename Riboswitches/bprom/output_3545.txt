@@ -1,4 +1,4 @@
->BSU20170|174|200|2168909|2169452|-|yosC|chromosome|NC_000964.3                 
+>b0905|500|200|954871|956632|-|ycaO|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

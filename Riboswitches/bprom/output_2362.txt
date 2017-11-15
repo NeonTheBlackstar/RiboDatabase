@@ -1,13 +1,4 @@
->BSU35490|500|200|3644606|3645296|-|degU|chromosome|NC_000964.3                 
+>b3387|500|200|3515076|3515913|-|dam|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.13
- -10 box at pos.     41 CTATATACA Score    23
- -35 box at pos.     21 TTCCAA    Score    35
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       modE:  CTATATAC at position      41 Score -   9
-       lexA:  TATATACA at position      42 Score -  13
+ Number of predicted promoters -      0

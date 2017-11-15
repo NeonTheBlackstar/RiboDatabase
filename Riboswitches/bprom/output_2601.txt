@@ -1,4 +1,4 @@
->BSU32380|500|200|3325077|3325899|-|yunE|chromosome|NC_000964.3                 
+>b2902|500|200|3045157|3045901|-|ygfF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

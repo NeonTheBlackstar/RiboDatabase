@@ -1,4 +1,4 @@
->BSU18480|466|200|2016844|2017738|-|proH|chromosome|NC_000964.3                 
+>b0629|500|200|660424|661378|-|ybeF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

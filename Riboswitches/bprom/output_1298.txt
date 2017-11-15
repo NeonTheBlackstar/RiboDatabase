@@ -1,4 +1,12 @@
->BSU17210|500|200|1834408|1850875|+|pksN|chromosome|NC_000964.3                 
+>b3028|500|200|3172529|3173111|+|mdaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.43
+ -10 box at pos.     45 AGGTATACT Score    79
+ -35 box at pos.     21 TATACG    Score     4
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  GGTATACT at position      46 Score -  13

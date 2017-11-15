@@ -1,4 +1,4 @@
->BSU11929|97|200|1265676|1265850|+|yjzG|chromosome|NC_000964.3                  
+>b1814|500|200|1896931|1898296|+|sdaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

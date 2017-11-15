@@ -1,4 +1,14 @@
->BSU29440|500|200|3011750|3013136|-|argH|chromosome|NC_000964.3                 
+>b2463|500|200|2576097|2578377|-|maeB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.76
+ -10 box at pos.     47 CGATAGCAT Score    43
+ -35 box at pos.     25 TTGCCA    Score    61
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  ATTTTTTT at position      30 Score -  11
+      rpoH2:  TTTTTTTT at position      31 Score -  16
+       lexA:  TTTTTTTA at position      32 Score -  16

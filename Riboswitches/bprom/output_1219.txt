@@ -1,11 +1,4 @@
->BSU16370|227|200|1705819|1706599|+|fliR|chromosome|NC_000964.3                 
+>b2798|500|200|2931054|2931810|+|ygdG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.62
- -10 box at pos.     43 CGGTTTAAT Score    52
- -35 box at pos.     23 TTGGCT    Score    33
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

@@ -1,13 +1,4 @@
->BSU33250|500|200|3411683|3412094|+|yvrL|chromosome|NC_000964.3                 
+>b4044|500|200|4257741|4259121|+|dinF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.24
- -10 box at pos.     41 GTCTAAAAC Score    33
- -35 box at pos.     24 TCGACA    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        ihf:  AAAGTATA at position       6 Score -  14
-        ihf:  AGTATACA at position       8 Score -  19
+ Number of predicted promoters -      0

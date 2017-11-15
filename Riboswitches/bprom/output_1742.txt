@@ -1,4 +1,4 @@
->BSU33070|500|200|3393292|3394414|+|gerAC|chromosome|NC_000964.3                
+>b4037|500|200|4249553|4250474|+|malM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU16880|500|200|1760463|1760721|+|ymfJ|chromosome|NC_000964.3                 
+>b2943|500|200|3088283|3089678|+|galP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

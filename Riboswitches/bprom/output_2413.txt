@@ -1,4 +1,4 @@
->BSU34860|500|200|3582935|3583565|-|hisI|chromosome|NC_000964.3                 
+>b3305|355|200|3445606|3446140|-|rplF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

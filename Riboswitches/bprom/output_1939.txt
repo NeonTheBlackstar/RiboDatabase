@@ -1,4 +1,4 @@
->BSU40022|324|200|4110216|4110909|+|yxaC|chromosome|NC_000964.3                 
+>b4311|500|200|4538784|4539501|-|nanC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU22760|341|200|2383614|2384370|-|hepS|chromosome|NC_000964.3                 
+>b1377|500|200|1435759|1436893|-|ompN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

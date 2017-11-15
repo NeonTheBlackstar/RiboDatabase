@@ -1,4 +1,11 @@
->BSU31970|500|200|3287674|3288613|-|dhbB|chromosome|NC_000964.3                 
+>b2824|500|200|2962748|2963156|-|ygdB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.39
+ -10 box at pos.     46 CGTGAAAGT Score    22
+ -35 box at pos.     28 TTTCTG    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

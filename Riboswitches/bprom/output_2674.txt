@@ -1,4 +1,11 @@
->BSU31280|500|200|3213853|3214252|-|yugU|chromosome|NC_000964.3                 
+>b2756|500|200|2879787|2880387|-|casE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.25
+ -10 box at pos.     46 ACTCATTCT Score    24
+ -35 box at pos.     27 TTGCAG    Score    49
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

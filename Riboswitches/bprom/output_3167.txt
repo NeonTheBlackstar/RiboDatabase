@@ -1,4 +1,4 @@
->BSU24960|500|200|2578002|2578812|-|pstBA|chromosome|NC_000964.3                
+>b1778|500|200|1862015|1862429|-|msrB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

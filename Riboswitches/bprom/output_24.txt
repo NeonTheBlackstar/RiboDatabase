@@ -1,11 +1,4 @@
->BSU00290|500|200|39870|40200|+|yaaQ|chromosome|NC_000964.3                     
+>b0042|500|200|43187|44129|+|fixB|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.59
- -10 box at pos.     42 CTTTAGAAC Score    27
- -35 box at pos.     24 TTGAAA    Score    60
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

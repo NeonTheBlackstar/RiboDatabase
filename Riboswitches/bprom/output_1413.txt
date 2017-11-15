@@ -1,4 +1,4 @@
->BSU19330|500|200|2104055|2104901|+|sodF|chromosome|NC_000964.3                 
+>b3267|500|200|3418389|3418611|+|yhdV|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

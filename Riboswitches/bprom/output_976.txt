@@ -1,4 +1,4 @@
->BSU13590|500|200|1427033|1428278|+|mtnW|chromosome|NC_000964.3                 
+>b2172|500|200|2266244|2267711|+|yeiQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

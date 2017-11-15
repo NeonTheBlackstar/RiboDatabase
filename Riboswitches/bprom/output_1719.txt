@@ -1,4 +1,4 @@
->BSU32420|500|200|3328761|3330357|+|pucR|chromosome|NC_000964.3                 
+>b3996|500|200|4196902|4197676|+|nudC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

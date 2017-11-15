@@ -1,4 +1,4 @@
->BSU18770|500|200|2045928|2046807|+|cyeA|chromosome|NC_000964.3                 
+>b3207|436|200|3348451|3349084|+|yrbL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

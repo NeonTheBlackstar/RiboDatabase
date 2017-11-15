@@ -1,4 +1,13 @@
->BSU16730|393|200|1744366|1745260|+|spoVFA|chromosome|NC_000964.3               
+>b2889|198|200|3033064|3033613|+|idi|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.79
+ -10 box at pos.     48 GCTTCAAAT Score    31
+ -35 box at pos.     27 TTGCAA    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       rhaS:  TCCTGTCA at position       7 Score -   7
+     rpoD18:  AAATATAT at position      53 Score -   7

@@ -1,4 +1,4 @@
->BSU15560|500|200|1629319|1629970|+|pyrE|chromosome|NC_000964.3                 
+>b2617|500|200|2753604|2753946|+|bamE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

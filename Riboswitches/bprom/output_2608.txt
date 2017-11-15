@@ -1,4 +1,4 @@
->BSU32290|413|200|3318028|3318799|-|yutF|chromosome|NC_000964.3                 
+>b2892|500|200|3036372|3038106|-|recJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

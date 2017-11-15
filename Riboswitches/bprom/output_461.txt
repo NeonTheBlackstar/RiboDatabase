@@ -1,4 +1,4 @@
->BSU06030|281|200|650233|651868|+|groEL|chromosome|NC_000964.3                  
+>b0977|345|200|1036748|1037606|+|hyaF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

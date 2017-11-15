@@ -1,4 +1,4 @@
->BSU13090|500|200|1376516|1376855|+|ykkC|chromosome|NC_000964.3                 
+>b2089|246|200|2170531|2171398|+|insF1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

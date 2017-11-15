@@ -1,4 +1,4 @@
->BSU22470|356|200|2358207|2358918|-|ypjG|chromosome|NC_000964.3                 
+>b1303|500|200|1366934|1367912|-|pspF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

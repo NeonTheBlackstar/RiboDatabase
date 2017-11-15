@@ -1,13 +1,4 @@
->BSU35030|500|200|3597288|3598020|+|yvoA|chromosome|NC_000964.3                 
+>b4157|500|200|4385392|4385707|+|yjeN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.05
- -10 box at pos.     46 CGGCATTTT Score    30
- -35 box at pos.     29 TCGACA    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       purR:  CGTTTTTT at position      13 Score -   8
-       metR:  TTTTTTCA at position      16 Score -   8
+ Number of predicted promoters -      0

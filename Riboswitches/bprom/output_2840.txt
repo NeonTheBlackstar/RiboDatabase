@@ -1,4 +1,4 @@
->BSU29060|500|200|2970921|2971515|-|coaE|chromosome|NC_000964.3                 
+>b2407|500|200|2524044|2524878|-|xapA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

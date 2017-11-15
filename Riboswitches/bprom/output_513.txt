@@ -1,12 +1,4 @@
->BSU06680|256|200|729037|730495|+|gatA|chromosome|NC_000964.3                   
+>b1091|500|200|1148758|1149712|+|fabH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.80
- -10 box at pos.     49 CAGTATCAT Score    58
- -35 box at pos.     29 ATGTTC    Score    -7
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       soxS:  TATCATTT at position      52 Score -   9
+ Number of predicted promoters -      0

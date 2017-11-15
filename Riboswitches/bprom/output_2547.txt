@@ -1,4 +1,4 @@
->BSU33110|500|200|3396872|3397745|-|liaG|chromosome|NC_000964.3                 
+>b2997|426|200|3145142|3146261|-|hybO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU17360|304|200|1868143|1868374|+|ymzA|chromosome|NC_000964.3                 
+>b3044|500|200|3186186|3186552|+|insC1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

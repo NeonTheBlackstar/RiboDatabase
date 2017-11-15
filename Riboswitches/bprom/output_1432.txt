@@ -1,4 +1,4 @@
->BSU20490|500|200|2191625|2192300|+|yoqW|chromosome|NC_000964.3                 
+>b3333|500|200|3463921|3465085|+|gspL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

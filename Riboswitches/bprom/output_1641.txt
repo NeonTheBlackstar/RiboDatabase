@@ -1,13 +1,4 @@
->BSU29970|500|200|3066450|3067386|+|ytkP|chromosome|NC_000964.3                 
+>b3833|500|200|4018854|4019610|+|ubiE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.45
- -10 box at pos.     49 TGTTTTTCT Score    31
- -35 box at pos.     26 TTCCCG    Score    35
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD15:  TTTTGTTT at position      46 Score -   9
-     rpoD17:  TTTGTTTT at position      47 Score -   9
+ Number of predicted promoters -      0

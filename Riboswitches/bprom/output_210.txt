@@ -1,4 +1,15 @@
->BSU02510|500|200|274028|275561|+|garD|chromosome|NC_000964.3                   
+>b0451|500|200|472965|474252|+|amtB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.21
+ -10 box at pos.     40 TGCTCTCTT Score    12
+ -35 box at pos.     21 TTCAAA    Score    40
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       fhlA:  TCATTTTC at position      16 Score -   7
+        crp:  TCAAACTT at position      22 Score -   6
+        fis:  TCTTAACT at position      29 Score -  11
+        crp:  CTCGTTTT at position      50 Score -   6

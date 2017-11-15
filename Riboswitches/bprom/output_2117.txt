@@ -1,4 +1,4 @@
->BSU39090|500|200|4013794|4014475|-|yxiP|chromosome|NC_000964.3                 
+>b3907|500|200|4099490|4100525|-|rhaT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

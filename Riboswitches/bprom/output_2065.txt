@@ -1,4 +1,4 @@
->BSU39700|500|200|4075784|4076819|-|iolG|chromosome|NC_000964.3                 
+>b4062|500|200|4277059|4277383|-|soxS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

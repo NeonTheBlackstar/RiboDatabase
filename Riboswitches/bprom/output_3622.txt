@@ -1,21 +1,4 @@
->BSU19220|500|200|2094009|2095785|-|yocI|chromosome|NC_000964.3                 
+>b0717|500|200|748978|749707|-|ybgP|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF- 10.16
- -10 box at pos.     42 TTGTAATAT Score    66
- -35 box at pos.     23 ATAAAG    Score     1
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       argR:  ATAATCAT at position       3 Score -   9
-        lrp:  TATTTTTT at position      31 Score -  11
-        lrp:  ATTTTTTT at position      32 Score -  11
-      rpoH2:  TTTTTTTT at position      33 Score -  16
-       lexA:  TTTTTTTA at position      34 Score -  16
-       argR:  TTTTTTAT at position      35 Score -  13
-      argR2:  TTTTTATT at position      36 Score -  13
-       phoB:  TAATATAT at position      45 Score -  15
-        lrp:  TATTTTTT at position      50 Score -  11
-     rpoD15:  TTTTGTTT at position      54 Score -   9
+ Number of predicted promoters -      0

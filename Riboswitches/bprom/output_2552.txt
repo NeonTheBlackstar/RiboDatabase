@@ -1,4 +1,4 @@
->BSU33040|202|200|3389023|3390412|-|fumC|chromosome|NC_000964.3                 
+>b2992|437|200|3140310|3140799|-|hybE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU10070|500|200|1080149|1081340|-|yhaA|chromosome|NC_000964.3                 
+>b0022|500|200|20232|20508|-|insA|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU32440|500|200|3331856|3333149|+|pucK|chromosome|NC_000964.3                 
+>b3998|500|200|4198789|4199461|+|nfi|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

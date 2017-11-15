@@ -1,4 +1,4 @@
->BSU01890|380|200|211858|213031|+|ybcL|chromosome|NC_000964.3                   
+>b0367|500|200|386970|387798|+|tauC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

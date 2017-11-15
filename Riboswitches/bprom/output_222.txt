@@ -1,4 +1,4 @@
->BSU02630|500|200|285774|285987|+|tatAD|chromosome|NC_000964.3                  
+>b0480|500|200|504913|506566|+|ushA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

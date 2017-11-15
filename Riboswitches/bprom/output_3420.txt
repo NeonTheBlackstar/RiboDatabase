@@ -1,4 +1,4 @@
->BSU22010|197|200|2310994|2311885|-|exoA|chromosome|NC_000964.3                 
+>b1216|500|200|1270748|1271849|-|chaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

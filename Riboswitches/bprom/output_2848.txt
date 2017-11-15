@@ -1,4 +1,4 @@
->BSU28960|500|200|2961585|2962431|-|ytxC|chromosome|NC_000964.3                 
+>b2386|298|200|2506646|2507894|-|fryC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

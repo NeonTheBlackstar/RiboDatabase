@@ -1,4 +1,4 @@
->BSU33910|500|200|3477876|3479412|-|pgm|chromosome|NC_000964.3                  
+>b3162|23|200|3305970|3307860|-|deaD|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

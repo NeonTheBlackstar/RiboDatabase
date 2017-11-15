@@ -1,4 +1,4 @@
->BSU33940|500|200|3481697|3482705|-|gapA|chromosome|NC_000964.3                 
+>b3164|466|200|3309032|3311168|-|pnp|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

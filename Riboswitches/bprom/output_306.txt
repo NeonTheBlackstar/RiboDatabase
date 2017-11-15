@@ -1,4 +1,12 @@
->BSU03970|500|200|449197|449551|+|ycnL|chromosome|NC_000964.3                   
+>b0681|500|200|708333|709740|+|chiP|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.28
+ -10 box at pos.     43 CAATATATT Score    44
+ -35 box at pos.     21 TATCAG    Score    -7
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TGTAGGCC at position      67 Score -  33

@@ -1,4 +1,14 @@
->BSU26370|500|200|2700032|2700569|-|yqaC|chromosome|NC_000964.3                 
+>b2033|500|200|2104493|2105084|-|wbbJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.31
+ -10 box at pos.     41 AGGCATAAA Score    25
+ -35 box at pos.     28 TGGCAA    Score    18
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD19:  TTTCATAT at position      55 Score -  11
+       lexA:  ATATATAC at position      59 Score -  12
+       lexA:  TATATACT at position      60 Score -  18

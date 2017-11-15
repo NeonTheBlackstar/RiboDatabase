@@ -1,4 +1,4 @@
->BSU23170|500|200|2422263|2422800|-|spmB|chromosome|NC_000964.3                 
+>b1489|500|200|1563333|1565733|-|dosP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

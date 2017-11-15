@@ -1,4 +1,11 @@
->BSU15430|500|200|1613356|1616122|+|ileS|chromosome|NC_000964.3                 
+>b2585|500|200|2722726|2724082|+|pssA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.62
+ -10 box at pos.     46 GACTACGAT Score    39
+ -35 box at pos.     26 TAGCCA    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

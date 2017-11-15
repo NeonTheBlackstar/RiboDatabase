@@ -1,4 +1,4 @@
->BSU30840|500|200|3154006|3154726|+|yteA|chromosome|NC_000964.3                 
+>b3885|500|200|4075552|4076152|+|yihX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

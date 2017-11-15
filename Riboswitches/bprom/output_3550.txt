@@ -1,4 +1,4 @@
->BSU20120|373|200|2167038|2167509|-|yosH|chromosome|NC_000964.3                 
+>b0897|500|200|944930|945557|-|ycaC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

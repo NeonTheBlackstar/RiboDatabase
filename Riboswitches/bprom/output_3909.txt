@@ -1,4 +1,0 @@
->BSU09870|500|200|1060987|1061326|-|khtS|chromosome|NC_000964.3                 
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

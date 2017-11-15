@@ -1,12 +1,4 @@
->BSU21570|500|200|2275199|2275697|-|yokJ|chromosome|NC_000964.3                 
+>b1160|500|200|1211679|1212003|-|iraM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.12
- -10 box at pos.     40 AAGTACGAT Score    43
- -35 box at pos.     22 TTGCTG    Score    47
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  CCTTATAA at position      28 Score -  21
+ Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU40420|500|200|4155432|4156725|-|purA|chromosome|NC_000964.3                 
+>b4136|264|200|4363344|4365042|-|dsbD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.28
- -10 box at pos.     47 GATTATCAT Score    58
- -35 box at pos.     21 GTGTCA    Score    20
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       soxS:  TATCATTT at position      50 Score -   9
+ Number of predicted promoters -      0

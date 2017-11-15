@@ -1,4 +1,11 @@
->BSU39870|500|200|4095355|4095835|-|yxbD|chromosome|NC_000964.3                 
+>b4622|500|200|4304127|4304403|-|ytcA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.45
+ -10 box at pos.     46 CGATAACCT Score    43
+ -35 box at pos.     29 TTCAAT    Score    35
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

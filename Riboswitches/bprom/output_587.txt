@@ -1,4 +1,13 @@
->BSU07650|500|200|838076|838742|+|yflK|chromosome|NC_000964.3                   
+>b1242|500|200|1298597|1299245|+|ychE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.19
+ -10 box at pos.     41 TGTTAAACT Score    76
+ -35 box at pos.     26 ATGCTC    Score     1
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        tus:  CATTAGTA at position       9 Score -   9
+     rpoD16:  CTCCTGAT at position      31 Score -   9

@@ -1,4 +1,4 @@
->BSU22690|500|200|2377631|2378015|-|aroH|chromosome|NC_000964.3                 
+>b4527|95|200|1419155|1419311|-|ydaF|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

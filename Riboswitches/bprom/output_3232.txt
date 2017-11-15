@@ -1,4 +1,4 @@
->BSU24170|500|200|2512860|2514042|-|mmgA|chromosome|NC_000964.3                 
+>b1662|500|200|1742600|1743242|-|ribC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

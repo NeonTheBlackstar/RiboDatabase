@@ -1,4 +1,4 @@
->BSU38070|292|200|3906141|3906972|-|sacT|chromosome|NC_000964.3                 
+>b3737|500|200|3920949|3921189|-|atpE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

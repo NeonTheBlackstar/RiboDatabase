@@ -1,4 +1,4 @@
->BSU21610|500|200|2279976|2280867|+|yokF|chromosome|NC_000964.3                 
+>b3472|500|200|3609954|3610512|+|dcrB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

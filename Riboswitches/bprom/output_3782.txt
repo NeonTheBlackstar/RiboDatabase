@@ -1,4 +1,4 @@
->BSU13240|500|200|1391039|1391642|-|thiU|chromosome|NC_000964.3                 
+>b0328|500|200|345665|346337|-|yahN|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

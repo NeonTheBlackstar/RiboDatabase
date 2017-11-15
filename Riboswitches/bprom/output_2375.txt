@@ -1,4 +1,4 @@
->BSU35360|319|200|3634986|3635901|-|hag|chromosome|NC_000964.3                  
+>b3362|500|200|3491452|3491620|-|yhfG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

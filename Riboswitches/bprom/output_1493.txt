@@ -1,4 +1,4 @@
->BSU22000|390|200|2310858|2310987|+|sspL|chromosome|NC_000964.3                 
+>b3495|500|200|3640110|3640545|+|uspA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

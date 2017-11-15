@@ -1,4 +1,4 @@
->BSU00560|500|200|64098|64635|+|spoVT|chromosome|NC_000964.3                    
+>b0093|500|200|103154|103985|+|ftsQ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

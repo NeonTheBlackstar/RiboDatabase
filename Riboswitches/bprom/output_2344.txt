@@ -1,4 +1,4 @@
->BSU35720|500|200|3676158|3678399|-|tagF|chromosome|NC_000964.3                 
+>b3425|500|200|3561496|3561823|-|glpE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,12 @@
->BSU22280|500|200|2339225|2339471|-|yppD|chromosome|NC_000964.3                 
+>b1277|500|200|1338569|1339160|-|ribA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.65
+ -10 box at pos.     45 ATCCAGGAT Score    17
+ -35 box at pos.     26 TTCCTG    Score    27
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       araC:  TAACAAAA at position      10 Score -  10

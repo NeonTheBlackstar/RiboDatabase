@@ -1,4 +1,4 @@
->BSU34780|500|200|3572412|3572889|-|yvcI|chromosome|NC_000964.3                 
+>b3297|323|200|3441708|3442098|-|rpsK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

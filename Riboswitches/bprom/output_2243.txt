@@ -1,4 +1,11 @@
->BSU37160|500|200|3812541|3813063|-|rpoE|chromosome|NC_000964.3                 
+>b3627|500|200|3802038|3803058|-|waaO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.44
+ -10 box at pos.     45 CTGGAAACT Score    30
+ -35 box at pos.     25 TTATCA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

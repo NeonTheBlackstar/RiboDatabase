@@ -1,4 +1,4 @@
->BSU15950|500|200|1670139|1671129|+|ftsY|chromosome|NC_000964.3                 
+>b2682|500|200|2809616|2810354|+|ygaZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

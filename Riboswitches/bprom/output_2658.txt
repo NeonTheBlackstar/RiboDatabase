@@ -1,4 +1,4 @@
->BSU31590|500|200|3246151|3246367|-|yufS|chromosome|NC_000964.3                 
+>b2780|500|200|2908028|2909666|-|pyrG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

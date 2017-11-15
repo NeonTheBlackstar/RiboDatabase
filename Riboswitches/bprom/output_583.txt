@@ -1,4 +1,4 @@
->BSU07600|500|200|833227|834187|+|yflP|chromosome|NC_000964.3                   
+>b1227|500|200|1285848|1286526|+|narI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

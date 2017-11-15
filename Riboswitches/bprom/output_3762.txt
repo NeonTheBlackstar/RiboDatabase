@@ -1,16 +1,4 @@
->BSU13940|500|200|1462812|1463493|-|ykwB|chromosome|NC_000964.3                 
+>b0393|500|200|409107|410019|-|rdgC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.75
- -10 box at pos.     41 ATGTAAGCC Score    11
- -35 box at pos.     21 TTTCTT    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       dnaA:  TTTGGATA at position       5 Score -   6
-       metJ:  TGTAAACA at position      13 Score -   8
-        lrp:  TTTCTTTT at position      21 Score -   9
-       ompR:  TTCTTTTT at position      22 Score -   8
-       argR:  ATAATCAT at position      58 Score -   9
+ Number of predicted promoters -      0

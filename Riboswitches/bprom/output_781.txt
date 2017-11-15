@@ -1,4 +1,4 @@
->BSU10880|500|200|1166736|1168191|+|yisV|chromosome|NC_000964.3                 
+>b1650|500|200|1726658|1727756|+|nemA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

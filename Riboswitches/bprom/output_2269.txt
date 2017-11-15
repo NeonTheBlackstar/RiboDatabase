@@ -1,4 +1,4 @@
->BSU36860|500|200|3786619|3786832|-|atpE|chromosome|NC_000964.3                 
+>b3570|500|200|3736352|3737177|-|bax|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

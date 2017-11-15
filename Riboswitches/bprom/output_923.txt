@@ -1,4 +1,4 @@
->BSU12790|500|200|1346730|1347000|+|xhlA|chromosome|NC_000964.3                 
+>b2019|146|200|2090191|2091091|+|hisG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

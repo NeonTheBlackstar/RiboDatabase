@@ -1,4 +1,4 @@
->BSU21740|500|200|2290857|2291625|-|ypmR|chromosome|NC_000964.3                 
+>b1182|500|200|1229482|1230394|-|hlyE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU17660|441|200|1900079|1900514|+|yncF|chromosome|NC_000964.3                 
+>b3088|500|200|3238579|3239545|+|alx|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

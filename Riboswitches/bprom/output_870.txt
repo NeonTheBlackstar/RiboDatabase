@@ -1,4 +1,12 @@
->BSU12230|500|200|1294137|1294950|+|hemD|chromosome|NC_000964.3                 
+>b1858|500|200|1942661|1943417|+|znuC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.21
+ -10 box at pos.     47 CGTGATCAT Score    35
+ -35 box at pos.     25 TCGTCA    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       carP:  CACTTTTT at position      29 Score -   8

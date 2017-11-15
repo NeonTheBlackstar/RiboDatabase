@@ -1,4 +1,4 @@
->BSU29470|500|200|3015110|3016298|-|ackA|chromosome|NC_000964.3                 
+>b2468|500|200|2583545|2585525|-|aegA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

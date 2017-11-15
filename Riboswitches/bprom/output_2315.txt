@@ -1,4 +1,12 @@
->BSU36260|327|200|3732524|3733271|-|ywqC|chromosome|NC_000964.3                 
+>b3470|500|200|3608750|3608996|-|tusA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.50
+ -10 box at pos.     47 AGGGATCAT Score    35
+ -35 box at pos.     24 ATGACG    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       oxyR:  TAGAATAG at position       9 Score -  21

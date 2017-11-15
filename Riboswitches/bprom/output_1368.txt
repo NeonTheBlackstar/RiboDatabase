@@ -1,4 +1,4 @@
->BSU18170|500|200|1946248|1946695|+|yngA|chromosome|NC_000964.3                 
+>b3150|500|200|3296408|3296984|+|yraP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

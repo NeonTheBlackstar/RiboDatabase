@@ -1,4 +1,4 @@
->BSU13360|500|200|1400187|1400739|+|ykoP|chromosome|NC_000964.3                 
+>b2141|500|200|2230623|2231022|+|yohJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

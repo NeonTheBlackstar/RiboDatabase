@@ -1,4 +1,13 @@
->BSU22070|500|200|2319439|2320024|-|xpt|chromosome|NC_000964.3                  
+>b1241|500|200|1295445|1298121|-|adhE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.58
+ -10 box at pos.     45 CCGGATAAT Score    40
+ -35 box at pos.     27 TTAGCT    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  GTTAGCTC at position      26 Score -  16
+       lexA:  ATAAATAA at position      61 Score -  14

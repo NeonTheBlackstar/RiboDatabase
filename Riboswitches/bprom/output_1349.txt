@@ -1,4 +1,4 @@
->BSU17890|352|200|1919860|1921864|+|tkt|chromosome|NC_000964.3                  
+>b3119|500|200|3267379|3267598|+|tdcR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

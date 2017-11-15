@@ -1,4 +1,4 @@
->BSU06839|500|200|752078|752252|+|phrH|chromosome|NC_000964.3                   
+>b1103|500|200|1161884|1162244|+|hinT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

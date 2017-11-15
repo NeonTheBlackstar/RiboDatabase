@@ -1,4 +1,4 @@
->BSU27310|477|200|2789685|2791440|-|pbpI|chromosome|NC_000964.3                 
+>b2128|500|200|2215744|2216476|-|yehW|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

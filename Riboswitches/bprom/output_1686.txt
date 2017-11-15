@@ -1,4 +1,4 @@
->BSU31450|500|200|3230066|3231353|+|kinB|chromosome|NC_000964.3                 
+>b3923|276|200|4113292|4113721|+|uspD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

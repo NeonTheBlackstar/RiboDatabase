@@ -1,4 +1,4 @@
->BSU39330|248|200|4039465|4040875|-|abnB|chromosome|NC_000964.3                 
+>b3957|500|200|4153695|4154847|-|argE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

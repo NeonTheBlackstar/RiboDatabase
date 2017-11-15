@@ -1,4 +1,4 @@
->BSU08850|500|200|963173|964004|+|ssuC|chromosome|NC_000964.3                   
+>b1396|500|200|1460470|1460893|+|paaI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

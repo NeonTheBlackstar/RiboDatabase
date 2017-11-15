@@ -1,4 +1,4 @@
->BSU10350|500|200|1109387|1110482|-|yhfS|chromosome|NC_000964.3                 
+>b0051|500|200|51608|52430|-|rsmA|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

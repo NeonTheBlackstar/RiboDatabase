@@ -1,4 +1,4 @@
->BSU35800|500|200|3688811|3690263|+|gerBA|chromosome|NC_000964.3                
+>b4178|500|200|4406189|4406615|+|nsrR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

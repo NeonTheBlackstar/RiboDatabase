@@ -1,4 +1,4 @@
->BSU11780|500|200|1251630|1252017|-|cotV|chromosome|NC_000964.3                 
+>b0212|500|200|234026|234782|-|gloB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

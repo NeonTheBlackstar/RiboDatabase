@@ -1,4 +1,4 @@
->BSU24160|500|200|2511972|2512836|-|mmgB|chromosome|NC_000964.3                 
+>b1659|500|200|1738865|1739798|-|ydhB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

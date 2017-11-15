@@ -1,4 +1,4 @@
->BSU09950|500|200|1070363|1071242|-|prsA|chromosome|NC_000964.3                 
+>b0007|500|200|6528|7959|-|yaaJ|chromosome|NC_000913.3                          
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

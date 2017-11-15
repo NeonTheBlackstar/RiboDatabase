@@ -1,4 +1,4 @@
->BSU17040|500|200|1775744|1778321|+|mutS|chromosome|NC_000964.3                 
+>b2964|500|200|3105713|3106970|+|nupG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU32100|500|200|3300033|3301254|-|yumB|chromosome|NC_000964.3                 
+>b2843|500|200|2983287|2984124|-|kduI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

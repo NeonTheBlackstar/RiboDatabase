@@ -1,4 +1,4 @@
->BSU22190|179|200|2332152|2332782|-|ypsA|chromosome|NC_000964.3                 
+>b1262|500|200|1318426|1319788|-|trpC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

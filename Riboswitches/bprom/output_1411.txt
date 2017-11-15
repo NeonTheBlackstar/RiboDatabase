@@ -1,13 +1,4 @@
->BSU19310|500|200|2100579|2102067|+|dhaS|chromosome|NC_000964.3                 
+>b3263|500|200|3412620|3412800|+|yhdU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.94
- -10 box at pos.     45 CTGTTTGAT Score    29
- -35 box at pos.     25 TCGACT    Score    24
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD15:  TTTTAACA at position      33 Score -  10
-       araC:  TAACAAAA at position      36 Score -  10
+ Number of predicted promoters -      0

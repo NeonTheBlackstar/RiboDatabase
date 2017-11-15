@@ -1,14 +1,4 @@
->BSU25660|500|200|2644629|2645472|-|aroE|chromosome|NC_000964.3                 
+>b1894|500|200|1978939|1979215|-|insA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.61
- -10 box at pos.     48 CCATCAAAT Score    19
- -35 box at pos.     23 ATGATA    Score    28
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  TTATGATA at position      21 Score -   7
-       arcA:  AATAAAAA at position      70 Score -  12
-       purR:  ATAAAAAG at position      71 Score -  11
+ Number of predicted promoters -      0

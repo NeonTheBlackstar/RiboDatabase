@@ -1,4 +1,4 @@
->BSU34230|500|200|3515061|3516228|-|epsN|chromosome|NC_000964.3                 
+>b3194|500|200|3338465|3339248|-|mlaE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

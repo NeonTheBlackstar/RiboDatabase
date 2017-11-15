@@ -1,15 +1,4 @@
->BSU30480|500|200|3119998|3120967|+|ytqA|chromosome|NC_000964.3                 
+>b3859|296|200|4042414|4043401|+|srkA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  4.35
- -10 box at pos.     47 TTTTAAAAG Score    41
- -35 box at pos.     28 TTTACA    Score    47
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoS17:  CTCACAAA at position       8 Score -   8
-       lexA:  TTTTTTTA at position      24 Score -  16
-        ihf:  ACAAAAAA at position      31 Score -   9
-      rpoH3:  CAAAAAAA at position      32 Score -   9
+ Number of predicted promoters -      0

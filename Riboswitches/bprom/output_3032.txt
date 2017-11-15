@@ -1,4 +1,4 @@
->BSU26610|356|200|2718958|2720263|-|yrkA|chromosome|NC_000964.3                 
+>b2049|500|200|2123083|2124520|-|cpsB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

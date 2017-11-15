@@ -1,4 +1,4 @@
->BSU22019|282|200|2311985|2312132|-|ypzF|chromosome|NC_000964.3                 
+>b1219|500|200|1273245|1273599|-|ychN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

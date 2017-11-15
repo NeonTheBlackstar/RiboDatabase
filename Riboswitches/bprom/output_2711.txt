@@ -1,4 +1,11 @@
->BSU30770|500|200|3145037|3145958|-|mntA|chromosome|NC_000964.3                 
+>b2689|500|200|2816511|2816940|-|yqaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.53
+ -10 box at pos.     46 CAGTACGAT Score    44
+ -35 box at pos.     25 GTATTA    Score   -11
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

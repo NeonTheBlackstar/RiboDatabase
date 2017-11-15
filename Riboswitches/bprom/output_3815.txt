@@ -1,4 +1,4 @@
->BSU12080|396|200|1279513|1280503|-|ctaO|chromosome|NC_000964.3                 
+>b0249|500|200|265303|265543|-|ykfF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU11290|500|200|1205980|1206538|+|yjaV|chromosome|NC_000964.3                 
+>b1701|300|200|1783030|1784677|+|fadK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

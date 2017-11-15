@@ -1,4 +1,4 @@
->BSU14800|500|200|1548680|1549310|-|ylaJ|chromosome|NC_000964.3                 
+>b0460|350|200|480089|480308|-|hha|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

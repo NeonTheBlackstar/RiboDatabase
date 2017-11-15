@@ -1,4 +1,4 @@
->BSU10700|215|200|1149317|1149935|-|gerPC|chromosome|NC_000964.3                
+>b0107|500|200|115713|117099|-|hofB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU35660|500|200|3664240|3665383|-|mnaA|chromosome|NC_000964.3                 
+>b3416|500|200|3547985|3550070|-|malQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

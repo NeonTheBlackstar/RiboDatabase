@@ -1,4 +1,4 @@
->BSU11940|500|200|1266613|1267117|+|yjcP|chromosome|NC_000964.3                 
+>b1817|500|200|1902047|1903019|+|manX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

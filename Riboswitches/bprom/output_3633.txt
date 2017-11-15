@@ -1,4 +1,4 @@
->BSU19040|500|200|2079213|2079546|-|csaA|chromosome|NC_000964.3                 
+>b0692|500|200|716945|718265|-|potE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

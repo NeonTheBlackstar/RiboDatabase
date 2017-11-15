@@ -1,4 +1,4 @@
->BSU40100|500|200|4119526|4121056|+|ahpF|chromosome|NC_000964.3                 
+>b4305|500|200|4530529|4531651|-|sgcX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->BSU05220|500|200|569289|569949|-|ydeJ|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

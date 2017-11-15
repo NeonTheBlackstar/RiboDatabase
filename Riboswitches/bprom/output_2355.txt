@@ -1,4 +1,4 @@
->BSU35580|500|200|3654138|3655524|-|tuaD|chromosome|NC_000964.3                 
+>b3394|500|200|3521432|3521972|-|hofN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

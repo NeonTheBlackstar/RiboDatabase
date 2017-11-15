@@ -1,13 +1,4 @@
->BSU19260|500|200|2098315|2098792|-|yocM|chromosome|NC_000964.3                 
+>b0752|444|200|783881|784823|-|zitB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.05
- -10 box at pos.     44 ATTTATTTT Score    47
- -35 box at pos.     24 TTTTCT    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-      argR2:  TTTATTTT at position      45 Score -   7
-       purR:  ATAAAAAG at position      58 Score -  11
+ Number of predicted promoters -      0

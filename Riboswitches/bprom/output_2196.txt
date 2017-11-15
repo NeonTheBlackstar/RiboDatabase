@@ -1,4 +1,4 @@
->BSU37840|500|200|3885238|3885979|-|spsI|chromosome|NC_000964.3                 
+>b3718|500|200|3898670|3899393|-|yieK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,11 +1,4 @@
->BSU27590|500|200|2820076|2820475|-|yrvI|chromosome|NC_000964.3                 
+>b2182|500|200|2278569|2279760|-|bcr|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.42
- -10 box at pos.     46 TGCTGCAAT Score    34
- -35 box at pos.     29 TTGTCC    Score    31
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

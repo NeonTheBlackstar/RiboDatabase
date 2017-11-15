@@ -1,4 +1,12 @@
->BSU00780|500|200|86586|86949|+|folB|chromosome|NC_000964.3                     
+>b0148|500|200|162104|164534|+|hrpB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.51
+ -10 box at pos.     46 AGGTAATAT Score    68
+ -35 box at pos.     27 TCGCTG    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cynR:  TAAGGTAA at position      44 Score -  11

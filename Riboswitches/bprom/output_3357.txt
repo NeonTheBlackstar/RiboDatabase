@@ -1,4 +1,4 @@
->BSU22710|500|200|2379099|2380272|-|aroF|chromosome|NC_000964.3                 
+>b1356|500|200|1419764|1420241|-|racR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

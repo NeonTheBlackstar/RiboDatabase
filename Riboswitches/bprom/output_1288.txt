@@ -1,4 +1,4 @@
->BSU17110|500|200|1785132|1786107|+|pksD|chromosome|NC_000964.3                 
+>b2989|500|200|3138726|3139593|+|yghU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

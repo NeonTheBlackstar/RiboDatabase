@@ -1,4 +1,4 @@
->BSU04280|500|200|480012|480864|+|ydaK|chromosome|NC_000964.3                   
+>b4515|500|200|774195|774309|+|cydX|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

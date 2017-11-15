@@ -1,4 +1,4 @@
->BSU26259|500|200|2693456|2693606|-|yqzO|chromosome|NC_000964.3                 
+>b2014|2|200|2085703|2087062|-|plaP|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

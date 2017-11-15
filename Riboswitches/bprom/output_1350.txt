@@ -1,4 +1,17 @@
->BSU17900|500|200|1922016|1922463|+|yneE|chromosome|NC_000964.3                 
+>b3120|424|200|3267853|3268393|+|yhaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.62
+ -10 box at pos.     48 ATTTATTTT Score    47
+ -35 box at pos.     22 TTCACG    Score    40
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TCACATTT at position      13 Score -  12
+       metR:  TTTTTTCA at position      18 Score -   8
+     rpoD15:  TTTTCACG at position      20 Score -   6
+      argR2:  TTTATTTT at position      49 Score -   7
+       nagC:  ATATTTTA at position      61 Score -   7
+     rpoD18:  TTTAAAAT at position      65 Score -   7

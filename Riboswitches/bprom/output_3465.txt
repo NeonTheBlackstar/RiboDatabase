@@ -1,4 +1,4 @@
->BSU21080|500|200|2228755|2229166|-|yonI|chromosome|NC_000964.3                 
+>b1125|500|200|1183616|1184444|-|potB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

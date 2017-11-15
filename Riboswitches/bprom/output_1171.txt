@@ -1,4 +1,4 @@
->BSU15890|500|200|1662546|1663548|+|plsX|chromosome|NC_000964.3                 
+>b2674|192|200|2800964|2801375|+|nrdI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

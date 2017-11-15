@@ -1,4 +1,4 @@
->BSU25510|422|200|2630909|2632748|-|lepA|chromosome|NC_000964.3                 
+>b1879|500|200|1962971|1965050|-|flhA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

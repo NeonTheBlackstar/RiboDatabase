@@ -1,4 +1,11 @@
->BSU23380|500|200|2436946|2438266|-|lysA|chromosome|NC_000964.3                 
+>b1507|216|200|1590853|1592176|-|hipA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.75
+ -10 box at pos.     46 GAAAAAAAT Score    22
+ -35 box at pos.     26 TGGACG    Score    23
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

@@ -1,13 +1,4 @@
->BSU35070|500|200|3603820|3604567|-|yvmC|chromosome|NC_000964.3                 
+>b3320|294|200|3452296|3452926|-|rplC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.99
- -10 box at pos.     46 GTATATCAT Score    54
- -35 box at pos.     22 GTGCAG    Score    16
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  AAATCAGA at position      65 Score -   7
-     rpoS17:  CAGACATA at position      69 Score -  10
+ Number of predicted promoters -      0

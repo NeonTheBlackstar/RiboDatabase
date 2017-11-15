@@ -1,4 +1,4 @@
->BSU23140|486|200|2419178|2420807|-|resB|chromosome|NC_000964.3                 
+>b1486|500|200|1559906|1560929|-|ddpB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

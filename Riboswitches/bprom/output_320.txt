@@ -1,4 +1,4 @@
->BSU04110|500|200|462430|463072|+|lipC|chromosome|NC_000964.3                   
+>b0712|500|200|744242|745175|+|ybgK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

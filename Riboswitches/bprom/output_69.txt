@@ -1,4 +1,4 @@
->BSU00750|500|200|84289|84874|+|pabA|chromosome|NC_000964.3                     
+>b0129|500|200|144576|145017|+|yadI|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

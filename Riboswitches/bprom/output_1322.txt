@@ -1,14 +1,4 @@
->BSU17530|500|200|1884237|1884879|+|ynaE|chromosome|NC_000964.3                 
+>b3071|500|200|3216778|3217402|+|yqjI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.32
- -10 box at pos.     43 GGATTCAAT Score    25
- -35 box at pos.     26 ATGACA    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       lexA:  TATATAAA at position      13 Score -  14
-        ihf:  TGATATGA at position      22 Score -   6
-     rpoD19:  ATTGTTTT at position      64 Score -   7
+ Number of predicted promoters -      0

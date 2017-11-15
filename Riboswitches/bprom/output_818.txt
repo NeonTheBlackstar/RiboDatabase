@@ -1,4 +1,4 @@
->BSU11450|500|200|1222532|1223450|+|oppC|chromosome|NC_000964.3                 
+>b1750|500|200|1833400|1834111|+|ydjX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

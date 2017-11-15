@@ -1,14 +1,4 @@
->BSU35730|500|200|3678398|3680420|-|tagE|chromosome|NC_000964.3                 
+>b3428|500|200|3564133|3566581|-|glgP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.66
- -10 box at pos.     46 TGTTGCTAT Score    25
- -35 box at pos.     23 AAGCAG    Score   -18
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        hns:  ATTAAATT at position       2 Score -   9
-        crp:  TTAAATTG at position       3 Score -  10
-       argR:  AATTCAAT at position      66 Score -  12
+ Number of predicted promoters -      0

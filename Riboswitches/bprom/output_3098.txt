@@ -1,4 +1,4 @@
->BSU25790|413|200|2655752|2656793|-|arsB|chromosome|NC_000964.3                 
+>b1908|500|200|1990953|1991619|-|yecA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

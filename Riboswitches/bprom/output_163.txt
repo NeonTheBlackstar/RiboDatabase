@@ -1,4 +1,12 @@
->BSU01860|500|200|209632|210160|+|ybcF|chromosome|NC_000964.3                   
+>b0360|500|200|381350|381716|+|insC1|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.74
+ -10 box at pos.     42 AGGTAAATT Score    62
+ -35 box at pos.     26 GTGAAT    Score    22
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       cpxR:  GTAAATTA at position      44 Score -   9

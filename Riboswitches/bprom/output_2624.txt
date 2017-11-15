@@ -1,4 +1,4 @@
->BSU32080|147|200|3299343|3299664|-|yuiB|chromosome|NC_000964.3                 
+>b2841|500|200|2980763|2982182|-|araE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

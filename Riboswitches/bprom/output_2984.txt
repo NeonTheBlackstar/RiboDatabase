@@ -1,4 +1,4 @@
->BSU27340|500|200|2792859|2794128|-|yrrO|chromosome|NC_000964.3                 
+>b2131|500|200|2218563|2219481|-|osmF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

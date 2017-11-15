@@ -1,4 +1,4 @@
->BSU32490|500|200|3338500|3339334|-|pucC|chromosome|NC_000964.3                 
+>b2908|500|200|3053514|3054840|-|pepP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

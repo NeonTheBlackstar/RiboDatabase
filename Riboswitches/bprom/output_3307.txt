@@ -1,4 +1,11 @@
->BSU23220|500|200|2425830|2426586|-|scpA|chromosome|NC_000964.3                 
+>b1494|500|200|1572406|1575202|-|pqqL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.26
+ -10 box at pos.     48 CGGTAATCT Score    59
+ -35 box at pos.     26 GTGATA    Score    25
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

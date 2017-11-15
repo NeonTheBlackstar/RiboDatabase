@@ -1,4 +1,4 @@
->BSU17010|500|200|1772842|1774372|+|ymcB|chromosome|NC_000964.3                 
+>b2961|500|200|3103012|3104065|+|mutY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

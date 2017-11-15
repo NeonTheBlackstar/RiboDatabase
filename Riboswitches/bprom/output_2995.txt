@@ -1,4 +1,12 @@
->BSU27200|500|200|2779461|2780262|-|yrhG|chromosome|NC_000964.3                 
+>b2109|500|200|2188429|2190910|-|yehB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.72
+ -10 box at pos.     49 GGGCAAATT Score    38
+ -35 box at pos.     24 TTAACG    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AAAAATAG at position      41 Score -   9

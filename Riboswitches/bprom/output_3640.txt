@@ -1,11 +1,4 @@
->BSU18940|236|200|2064199|2064547|-|yozK|chromosome|NC_000964.3                 
+>b0676|500|200|700373|701594|-|nagC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.60
- -10 box at pos.     46 GGATATTCT Score    55
- -35 box at pos.     24 ATGACA    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

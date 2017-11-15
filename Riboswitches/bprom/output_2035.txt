@@ -1,13 +1,4 @@
->BSU40230|201|200|4134435|4134915|-|yydA|chromosome|NC_000964.3                 
+>b4108|500|200|4326398|4326734|-|yjdM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.55
- -10 box at pos.     47 GAACATACT Score    29
- -35 box at pos.     23 CTGCCG    Score    20
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  AAATCAGA at position      33 Score -   7
-     rpoD15:  ACATACTA at position      49 Score -  17
+ Number of predicted promoters -      0

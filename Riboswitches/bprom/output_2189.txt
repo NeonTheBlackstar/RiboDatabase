@@ -1,4 +1,4 @@
->BSU37910|500|200|3892350|3893121|-|spsA|chromosome|NC_000964.3                 
+>b3725|500|200|3907592|3908366|-|pstB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

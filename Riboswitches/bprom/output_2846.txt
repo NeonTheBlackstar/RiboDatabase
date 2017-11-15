@@ -1,4 +1,4 @@
->BSU28980|500|200|2963184|2964120|-|dnaI|chromosome|NC_000964.3                 
+>b2388|500|200|2508460|2509426|-|glk|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

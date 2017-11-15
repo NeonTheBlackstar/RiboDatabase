@@ -1,11 +1,4 @@
->BSU20690|297|200|2200789|2201128|-|yoqB|chromosome|NC_000964.3                 
+>b1021|500|200|1086105|1086519|-|pgaD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.66
- -10 box at pos.     44 TGGCAAAAT Score    61
- -35 box at pos.     21 TTAATT    Score    30
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

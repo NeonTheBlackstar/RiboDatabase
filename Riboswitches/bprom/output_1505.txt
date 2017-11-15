@@ -1,4 +1,4 @@
->BSU23070|500|200|2411085|2412663|+|serA|chromosome|NC_000964.3                 
+>b3519|500|200|3669591|3671241|+|treF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

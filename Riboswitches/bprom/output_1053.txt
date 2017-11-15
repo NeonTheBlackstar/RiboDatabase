@@ -1,4 +1,4 @@
->BSU14520|500|200|1521350|1523084|+|adeC|chromosome|NC_000964.3                 
+>b2398|500|200|2518466|2518811|+|yfeC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

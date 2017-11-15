@@ -1,4 +1,4 @@
->BSU23080|500|200|2412705|2413473|-|aroD|chromosome|NC_000964.3                 
+>b1479|244|200|1553971|1555669|-|maeA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

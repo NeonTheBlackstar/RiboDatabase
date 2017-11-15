@@ -1,4 +1,4 @@
->BSU07590|500|200|832544|833225|+|citT|chromosome|NC_000964.3                   
+>b1226|500|200|1285138|1285849|+|narJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU20000|500|200|2158438|2158684|+|yosU|chromosome|NC_000964.3                 
+>b3331|320|200|3462343|3462931|+|gspJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.39
- -10 box at pos.     46 TTTCATCAT Score    42
- -35 box at pos.     27 TCTAAA    Score     4
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       tyrR:  TGAGATTT at position      41 Score -   7
+ Number of predicted promoters -      0

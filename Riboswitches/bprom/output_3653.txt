@@ -1,4 +1,4 @@
->BSU18720|500|200|2041927|2042839|-|yoaR|chromosome|NC_000964.3                 
+>b0650|500|200|681722|683393|-|hscC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

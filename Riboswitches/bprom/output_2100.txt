@@ -1,14 +1,4 @@
->BSU39270|500|200|4033777|4035607|-|bglP|chromosome|NC_000964.3                 
+>b3945|500|200|4137931|4139035|-|gldA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.28
- -10 box at pos.     40 GTTTAATTT Score    42
- -35 box at pos.     26 GTGTAT    Score     9
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  TTCAATCT at position       6 Score -   7
-       nagC:  TTTAATTT at position      41 Score -   7
-        ihf:  TTAATTTA at position      42 Score -  12
+ Number of predicted promoters -      0

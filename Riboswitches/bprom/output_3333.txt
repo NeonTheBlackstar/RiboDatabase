@@ -1,4 +1,4 @@
->BSU22940|500|200|2400207|2400864|-|prsW|chromosome|NC_000964.3                 
+>b1448|500|200|1518327|1518846|-|mnaT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

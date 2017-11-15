@@ -1,4 +1,4 @@
->BSU08870|500|200|965260|965797|+|ygaN|chromosome|NC_000964.3                   
+>b1398|500|200|1462124|1463438|+|paaK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

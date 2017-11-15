@@ -1,4 +1,4 @@
->BSU17290|281|200|1864690|1865044|-|ebrB|chromosome|NC_000964.3                 
+>b0504|500|200|531294|532221|-|allS|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU06330|500|200|688183|689146|+|yeaC|chromosome|NC_000964.3                   
+>b1029|500|200|1095842|1096829|+|ycdU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU25200|500|200|2600213|2601329|-|sigA|chromosome|NC_000964.3                 
+>b1823|106|200|1907225|1907435|-|cspC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

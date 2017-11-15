@@ -1,4 +1,4 @@
->BSU18660|500|200|2036038|2036722|+|yoaM|chromosome|NC_000964.3                 
+>b3201|500|200|3343943|3344669|+|lptB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

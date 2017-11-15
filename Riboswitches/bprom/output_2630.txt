@@ -1,4 +1,4 @@
->BSU32000|500|200|3291510|3292296|-|dhbA|chromosome|NC_000964.3                 
+>b2828|500|200|2965161|2966037|-|lgt|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

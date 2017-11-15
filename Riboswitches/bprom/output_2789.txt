@@ -1,4 +1,4 @@
->BSU29650|500|200|3033695|3035435|-|dgcP|chromosome|NC_000964.3                 
+>b2508|500|200|2632603|2634070|-|guaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

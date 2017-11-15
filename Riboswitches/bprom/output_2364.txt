@@ -1,4 +1,4 @@
->BSU35470|500|200|3642166|3643558|-|comFA|chromosome|NC_000964.3                
+>b3385|500|200|3513630|3514389|-|gph|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

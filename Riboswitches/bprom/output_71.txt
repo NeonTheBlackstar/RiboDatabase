@@ -1,4 +1,4 @@
->BSU00770|500|200|85736|86594|+|sul|chromosome|NC_000964.3                      
+>b0132|500|200|146967|147870|+|yadD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

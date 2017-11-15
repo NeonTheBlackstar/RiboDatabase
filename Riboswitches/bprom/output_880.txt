@@ -1,4 +1,4 @@
->BSU12360|500|200|1307445|1308714|+|exuT|chromosome|NC_000964.3                 
+>b1902|500|200|1986924|1987428|+|ftnB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

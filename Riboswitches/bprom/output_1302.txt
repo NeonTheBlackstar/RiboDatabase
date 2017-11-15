@@ -1,13 +1,4 @@
->BSU17320|500|200|1865875|1866289|+|ymaF|chromosome|NC_000964.3                 
+>b3038|500|200|3180420|3181581|+|ygiC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.80
- -10 box at pos.     48 TAGAAAAAT Score    37
- -35 box at pos.     21 TTTTTA    Score    26
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  TTAGATTA at position      24 Score -  14
-       oxyR:  ATTAGTGT at position      57 Score -  12
+ Number of predicted promoters -      0

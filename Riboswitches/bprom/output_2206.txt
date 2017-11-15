@@ -1,4 +1,4 @@
->BSU37740|500|200|3873565|3874180|-|bacA|chromosome|NC_000964.3                 
+>b4477|500|200|3872994|3873612|-|dgoA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

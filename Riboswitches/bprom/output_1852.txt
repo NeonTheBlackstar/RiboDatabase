@@ -1,15 +1,4 @@
->BSU37370|127|200|3836322|3837669|+|albA|chromosome|NC_000964.3                 
+>b4273|273|200|4498594|4499500|+|insD1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  3.68
- -10 box at pos.     42 AATTACAAT Score    58
- -35 box at pos.     26 ATGCCC    Score     9
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       hipB:  CCTTTTTA at position      30 Score -  11
-       purR:  TTTTTAAG at position      32 Score -   9
-       cpxR:  GTAAATTA at position      39 Score -   9
-       arcA:  TTAACTAA at position      53 Score -  12
+ Number of predicted promoters -      0

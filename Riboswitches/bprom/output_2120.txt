@@ -1,4 +1,4 @@
->BSU39050|500|200|4008142|4010203|-|katE|chromosome|NC_000964.3                 
+>b3902|500|200|4093447|4094272|-|rhaD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

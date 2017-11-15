@@ -1,4 +1,4 @@
->BSU15190|500|200|1587925|1588900|+|mraY|chromosome|NC_000964.3                 
+>b2502|500|200|2625114|2626656|+|ppx|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

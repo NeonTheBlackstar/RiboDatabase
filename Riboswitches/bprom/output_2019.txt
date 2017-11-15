@@ -1,4 +1,4 @@
->BSU40410|500|200|4153695|4154403|-|walR|chromosome|NC_000964.3                 
+>b4135|500|200|4362732|4363308|-|yjdC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

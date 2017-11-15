@@ -1,4 +1,4 @@
->BSU29780|500|200|3047592|3048015|-|ytxG|chromosome|NC_000964.3                 
+>b2519|500|200|2645012|2647325|-|pbpC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

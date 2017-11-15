@@ -1,4 +1,4 @@
->BSU30270|500|200|3097849|3099130|+|msmE|chromosome|NC_000964.3                 
+>b3844|500|200|4026526|4027228|+|fre|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

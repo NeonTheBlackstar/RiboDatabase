@@ -1,12 +1,4 @@
->BSU18240|500|200|1953180|1954515|-|yngH|chromosome|NC_000964.3                 
+>b0589|500|200|620195|621188|-|fepG|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.26
- -10 box at pos.     42 GGCTATTAT Score    71
- -35 box at pos.     23 TGGCTA    Score    16
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoS17:  CTATTATA at position      44 Score -  13
+ Number of predicted promoters -      0

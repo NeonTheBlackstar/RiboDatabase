@@ -1,4 +1,4 @@
->BSU22930|500|200|2399151|2400069|-|sleB|chromosome|NC_000964.3                 
+>b1447|465|200|1517881|1518331|-|ydcZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

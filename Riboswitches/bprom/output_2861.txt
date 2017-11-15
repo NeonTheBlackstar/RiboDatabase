@@ -1,4 +1,4 @@
->BSU28790|500|200|2945688|2947371|-|araB|chromosome|NC_000964.3                 
+>b2354|500|200|2471076|2471517|-|yfdK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

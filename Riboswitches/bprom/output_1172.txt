@@ -1,4 +1,4 @@
->BSU15900|500|200|1663566|1664520|+|fabD|chromosome|NC_000964.3                 
+>b2675|333|200|2801347|2803492|+|nrdE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

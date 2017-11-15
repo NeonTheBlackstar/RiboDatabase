@@ -1,4 +1,4 @@
->BSU36020|500|200|3711497|3712406|+|alsR|chromosome|NC_000964.3                 
+>b4195|265|200|4421707|4422172|+|ulaC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

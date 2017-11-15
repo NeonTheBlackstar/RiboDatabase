@@ -1,4 +1,4 @@
->BSU26130|500|200|2682884|2683196|-|yqbF|chromosome|NC_000964.3                 
+>b1991|500|200|2063387|2064467|-|cobT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

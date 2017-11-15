@@ -1,4 +1,11 @@
->BSU00250|264|200|35844|36459|+|xpaC|chromosome|NC_000964.3                     
+>b0031|500|200|28373|29195|+|dapB|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.79
+ -10 box at pos.     49 CGGGAAAAT Score    47
+ -35 box at pos.     29 CTGCCG    Score    20
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

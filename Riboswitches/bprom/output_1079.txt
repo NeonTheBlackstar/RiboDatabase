@@ -1,4 +1,4 @@
->BSU14910|500|200|1563436|1564060|+|ctaE|chromosome|NC_000964.3                 
+>b2469|500|200|2585730|2587431|+|narQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

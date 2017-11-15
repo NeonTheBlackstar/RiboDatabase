@@ -1,4 +1,4 @@
->BSU27320|500|200|2791493|2791967|-|greA|chromosome|NC_000964.3                 
+>b2129|500|200|2216480|2217407|-|yehX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

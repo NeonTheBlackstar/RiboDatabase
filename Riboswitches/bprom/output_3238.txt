@@ -1,4 +1,11 @@
->BSU24100|500|200|2504788|2506867|-|bkdR|chromosome|NC_000964.3                 
+>b1646|500|200|1724133|1724655|-|sodC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.04
+ -10 box at pos.     42 GTTTACCCT Score    39
+ -35 box at pos.     25 TTGCAA    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

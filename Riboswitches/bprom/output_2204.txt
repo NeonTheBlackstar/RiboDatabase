@@ -1,11 +1,13 @@
->BSU37760|500|200|3875779|3877192|-|rocC|chromosome|NC_000964.3                 
+>b4479|500|200|3874470|3875160|-|dgoR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.73
- -10 box at pos.     48 AGTCATTCT Score    38
- -35 box at pos.     26 TTGACC    Score    44
+ Promoter Pos:     61 LDF-  0.85
+ -10 box at pos.     49 CATTACTAT Score    45
+ -35 box at pos.     26 TACAAA    Score     3
 
  Oligonucleotides from known TF binding sites:
 
- No such sites for promoter at     61
+ For promoter at     61:
+       cynR:  TAAGGTAA at position       4 Score -  11
+     rpoD17:  TAGCCTTT at position      36 Score -   6

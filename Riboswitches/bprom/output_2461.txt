@@ -1,4 +1,4 @@
->BSU34250|500|200|3516879|3517488|-|epsL|chromosome|NC_000964.3                 
+>b3208|500|200|3349080|3349809|-|mtgA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU16530|500|200|1721213|1721996|+|uppS|chromosome|NC_000964.3                 
+>b2851|500|200|2991267|2991759|+|ygeG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

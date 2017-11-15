@@ -1,12 +1,4 @@
->BSU06830|500|200|750958|752089|+|rapH|chromosome|NC_000964.3                   
+>b1101|500|200|1157868|1159302|+|ptsG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.02
- -10 box at pos.     40 GTGTACTAT Score    54
- -35 box at pos.     23 TTGAAT    Score    55
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-      rpoH3:  CTTGAATA at position      22 Score -   5
+ Number of predicted promoters -      0

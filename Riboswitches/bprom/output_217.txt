@@ -1,4 +1,4 @@
->BSU02580|500|200|281027|281714|+|ycbO|chromosome|NC_000964.3                   
+>b0471|500|200|494075|494405|+|ybaB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

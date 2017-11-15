@@ -1,13 +1,4 @@
->BSU17570|500|200|1887351|1888743|+|xynP|chromosome|NC_000964.3                 
+>b3079|500|200|3227800|3228871|+|ygjJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.29
- -10 box at pos.     46 GTTTACACA Score    19
- -35 box at pos.     21 TTCGCA    Score    18
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  TAACCAAT at position       6 Score -   6
-       ompR:  TGTTTACA at position      45 Score -   8
+ Number of predicted promoters -      0

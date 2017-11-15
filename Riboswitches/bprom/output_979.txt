@@ -1,4 +1,4 @@
->BSU13620|500|200|1429583|1430120|+|mtnD|chromosome|NC_000964.3                 
+>b2175|500|200|2269978|2270545|+|mepS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

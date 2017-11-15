@@ -1,4 +1,4 @@
->BSU00210|288|200|28866|29463|+|recR|chromosome|NC_000964.3                     
+>b0027|500|200|25206|25701|+|lspA|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

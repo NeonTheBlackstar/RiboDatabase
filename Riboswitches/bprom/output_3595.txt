@@ -1,4 +1,4 @@
->BSU19630|500|200|2135469|2136171|-|deoD|chromosome|NC_000964.3                 
+>b0804|500|200|838529|839207|-|ybiX|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

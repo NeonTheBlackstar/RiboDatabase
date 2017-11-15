@@ -1,4 +1,13 @@
->BSU12820|500|200|1348441|1348612|-|spoIISB|chromosome|NC_000964.3              
+>b0281|500|200|295695|297096|-|intF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.83
+ -10 box at pos.     46 CAGGAAACT Score    23
+ -35 box at pos.     27 AGGAAT    Score   -12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  ATAACAAT at position      31 Score -   9
+       arcA:  TAACAATT at position      32 Score -  13

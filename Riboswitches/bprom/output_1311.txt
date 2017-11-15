@@ -1,4 +1,4 @@
->BSU17420|500|200|1874202|1875171|+|spoVK|chromosome|NC_000964.3                
+>b3051|500|200|3192863|3194525|+|yqiK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU12850|500|200|1350481|1351099|-|ykaA|chromosome|NC_000964.3                 
+>b0285|500|200|300930|301887|-|paoB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

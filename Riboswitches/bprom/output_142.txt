@@ -1,4 +1,4 @@
->BSU01470|500|200|152129|152927|+|ybaF|chromosome|NC_000964.3                   
+>b0323|500|200|340164|341115|+|yahI|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

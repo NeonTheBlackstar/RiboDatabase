@@ -1,4 +1,4 @@
->BSU30800|500|200|3148900|3149716|-|menB|chromosome|NC_000964.3                 
+>b2697|500|200|2819380|2822011|-|alaS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

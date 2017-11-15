@@ -1,4 +1,4 @@
->BSU08390|500|200|913923|914460|+|yfiT|chromosome|NC_000964.3                   
+>b1329|500|200|1393226|1394840|+|mppA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

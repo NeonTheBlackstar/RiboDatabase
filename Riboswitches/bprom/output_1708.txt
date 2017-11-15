@@ -1,4 +1,4 @@
->BSU31930|500|200|3278324|3279461|+|ald|chromosome|NC_000964.3                  
+>b3973|500|200|4173081|4174047|+|birA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

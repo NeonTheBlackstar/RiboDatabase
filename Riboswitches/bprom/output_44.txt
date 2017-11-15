@@ -1,4 +1,4 @@
->BSU00500|436|200|56351|57722|+|glmU|chromosome|NC_000964.3                     
+>b0087|500|200|96001|97084|+|mraY|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

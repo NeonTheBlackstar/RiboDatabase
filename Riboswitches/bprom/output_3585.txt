@@ -1,4 +1,11 @@
->BSU19720|500|200|2143021|2143675|-|yodR|chromosome|NC_000964.3                 
+>b0822|500|200|859212|860028|-|ybiV|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.66
+ -10 box at pos.     49 GGGTAAACT Score    74
+ -35 box at pos.     21 TTGGCC    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

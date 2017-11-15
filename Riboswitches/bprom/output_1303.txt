@@ -1,4 +1,4 @@
->BSU17330|463|200|1866388|1867333|+|miaA|chromosome|NC_000964.3                 
+>b3040|500|200|3182549|3183323|+|zupT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

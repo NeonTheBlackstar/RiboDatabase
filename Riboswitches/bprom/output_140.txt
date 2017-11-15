@@ -1,4 +1,13 @@
->BSU01450|440|200|150442|151288|+|cbiO|chromosome|NC_000964.3                   
+>b0320|500|200|336777|338325|+|yahF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.77
+ -10 box at pos.     47 CCGTTTTAT Score    24
+ -35 box at pos.     26 TTTAAT    Score    36
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TTTAATTA at position      26 Score -  11
+       tyrR:  TAAATAAA at position      63 Score -  10

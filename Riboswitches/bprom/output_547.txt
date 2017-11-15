@@ -1,4 +1,4 @@
->BSU07060|500|200|772141|773980|+|yesX|chromosome|NC_000964.3                   
+>b1154|500|200|1207500|1208130|+|stfP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

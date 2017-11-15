@@ -1,4 +1,4 @@
->BSU06440|500|200|700231|701527|+|purB|chromosome|NC_000964.3                   
+>b1049|500|200|1110862|1113406|+|opgH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,12 @@
->BSU14560|218|200|1526194|1526749|-|def|chromosome|NC_000964.3                  
+>b0432|500|200|450662|451610|-|cyoA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.43
+ -10 box at pos.     47 AAATATTAT Score    49
+ -35 box at pos.     27 ACGCAT    Score   -17
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TAATCTGT at position      39 Score -   7

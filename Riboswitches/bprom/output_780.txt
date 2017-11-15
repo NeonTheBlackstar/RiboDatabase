@@ -1,4 +1,4 @@
->BSU10850|500|200|1164369|1165398|+|yisS|chromosome|NC_000964.3                 
+>b1649|500|200|1726022|1726622|+|nemR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

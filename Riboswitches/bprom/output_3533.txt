@@ -1,4 +1,12 @@
->BSU20300|180|200|2174103|2174319|-|yorP|chromosome|NC_000964.3                 
+>b0955|500|200|1016538|1018299|-|ycbZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.19
+ -10 box at pos.     48 GCGTATGCT Score    51
+ -35 box at pos.     25 TTCCAG    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  AATAAATT at position      19 Score -   9

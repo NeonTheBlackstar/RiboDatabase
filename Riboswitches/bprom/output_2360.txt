@@ -1,12 +1,4 @@
->BSU35530|500|200|3648653|3649730|-|tagO|chromosome|NC_000964.3                 
+>b3389|500|200|3517397|3518486|-|aroB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.63
- -10 box at pos.     44 TGGCATTAT Score    54
- -35 box at pos.     23 TTATAT    Score    19
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  CGTATAAT at position      70 Score -  14
+ Number of predicted promoters -      0

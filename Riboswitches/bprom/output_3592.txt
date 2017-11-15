@@ -1,4 +1,4 @@
->BSU19660|500|200|2137601|2137778|-|yozD|chromosome|NC_000964.3                 
+>b0811|500|200|847257|848004|-|glnH|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

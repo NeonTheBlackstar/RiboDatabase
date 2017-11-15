@@ -1,4 +1,4 @@
->BSU28540|500|200|2917165|2917942|-|ysiB|chromosome|NC_000964.3                 
+>b2319|500|200|2435635|2436649|-|usg|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

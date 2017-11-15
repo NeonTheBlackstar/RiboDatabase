@@ -1,4 +1,4 @@
->BSU17100|500|200|1783762|1784629|+|pksC|chromosome|NC_000964.3                 
+>b2986|500|200|3134130|3134823|+|yghT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

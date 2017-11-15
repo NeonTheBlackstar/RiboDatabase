@@ -1,12 +1,4 @@
->BSU09080|500|200|982318|983236|+|yhcH|chromosome|NC_000964.3                   
+>b1429|500|200|1500572|1501565|+|tehA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.92
- -10 box at pos.     49 TGTTAAAGA Score    24
- -35 box at pos.     24 TTGATA    Score    58
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       nagC:  CATTTCAC at position      41 Score -   6
+ Number of predicted promoters -      0

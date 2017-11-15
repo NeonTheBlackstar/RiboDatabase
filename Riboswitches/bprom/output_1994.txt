@@ -1,4 +1,4 @@
->BSU40910|500|200|4199444|4199732|-|rpsF|chromosome|NC_000964.3                 
+>b4210|500|200|4432090|4433056|-|ytfF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

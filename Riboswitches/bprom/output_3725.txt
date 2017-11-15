@@ -1,4 +1,4 @@
->BSU17060|500|200|1780617|1781073|-|ymzD|chromosome|NC_000964.3                 
+>b0484|500|200|508874|511379|-|copA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU35110|500|200|3607122|3607320|-|yvlC|chromosome|NC_000964.3                 
+>b3322|500|200|3453507|3453927|-|gspB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

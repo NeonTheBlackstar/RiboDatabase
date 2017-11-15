@@ -1,4 +1,4 @@
->BSU11650|500|200|1242448|1243159|+|tenA|chromosome|NC_000964.3                 
+>b1780|500|200|1863849|1864734|+|yeaD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

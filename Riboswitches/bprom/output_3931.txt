@@ -1,4 +1,0 @@
->BSU09430|500|200|1020072|1020948|-|citR|chromosome|NC_000964.3                 
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

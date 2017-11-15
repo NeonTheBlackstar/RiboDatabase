@@ -1,4 +1,13 @@
->BSU35290|500|200|3627138|3628240|-|prfB|chromosome|NC_000964.3                 
+>b3347|500|200|3476606|3477419|-|fkpA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.23
+ -10 box at pos.     47 CGCTTTTTT Score    12
+ -35 box at pos.     24 GTGACA    Score    33
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  ACAAAAAA at position      27 Score -   9
+       lexA:  TTTTTTTA at position      50 Score -  16

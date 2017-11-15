@@ -1,4 +1,4 @@
->BSU33340|500|200|3421464|3421605|-|sspJ|chromosome|NC_000964.3                 
+>b3041|500|200|3183812|3184466|-|ribB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

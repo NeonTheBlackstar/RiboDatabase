@@ -1,12 +1,4 @@
->BSU39140|262|200|4019147|4019609|-|yxiK|chromosome|NC_000964.3                 
+>b3925|500|200|4114568|4115579|-|glpX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.66
- -10 box at pos.     43 TTTTATGCT Score    60
- -35 box at pos.     21 TTGAAG    Score    54
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       argR:  TTTTTTAT at position      41 Score -  13
+ Number of predicted promoters -      0

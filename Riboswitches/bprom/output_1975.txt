@@ -1,4 +1,4 @@
->BSU40810|363|200|4190208|4191126|+|yyaM|chromosome|NC_000964.3                 
+>b4254|500|200|4477306|4478311|-|argI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

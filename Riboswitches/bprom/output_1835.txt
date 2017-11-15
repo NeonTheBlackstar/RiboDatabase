@@ -1,4 +1,4 @@
->BSU36520|500|200|3758015|3758366|+|glnK|chromosome|NC_000964.3                 
+>b4225|500|200|4448691|4449042|+|chpB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

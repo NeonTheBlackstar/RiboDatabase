@@ -1,4 +1,4 @@
->BSU28690|500|200|2934593|2935928|+|glcF|chromosome|NC_000964.3                 
+>b3790|500|200|3974466|3975141|+|wecD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

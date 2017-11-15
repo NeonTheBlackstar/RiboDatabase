@@ -1,4 +1,4 @@
->BSU33330|490|200|3419655|3421065|-|lysP|chromosome|NC_000964.3                 
+>b3039|500|200|3181618|3182407|-|ygiD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

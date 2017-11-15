@@ -1,4 +1,4 @@
->BSU15040|500|200|1571980|1572763|+|ylbK|chromosome|NC_000964.3                 
+>b2485|500|200|2606261|2606912|+|hyfE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

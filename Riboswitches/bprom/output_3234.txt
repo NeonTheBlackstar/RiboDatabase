@@ -1,4 +1,4 @@
->BSU24150|500|200|2510805|2511945|-|mmgC|chromosome|NC_000964.3                 
+>b4602|500|200|1737455|1737545|-|ynhF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

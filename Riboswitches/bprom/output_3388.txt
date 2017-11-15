@@ -1,4 +1,4 @@
->BSU22390|500|200|2349357|2349528|-|ypmA|chromosome|NC_000964.3                 
+>b1290|500|200|1351827|1352634|-|sapF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

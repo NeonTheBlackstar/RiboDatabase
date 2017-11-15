@@ -1,4 +1,4 @@
->BSU07750|467|200|844769|846185|+|yflA|chromosome|NC_000964.3                   
+>b1247|500|200|1305763|1306768|+|oppF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

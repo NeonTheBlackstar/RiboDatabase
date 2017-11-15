@@ -1,4 +1,4 @@
->BSU37080|500|200|3803399|3804683|-|rho|chromosome|NC_000964.3                  
+>b3616|500|200|3790319|3791345|-|tdh|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU17940|500|200|1924029|1924392|+|yneI|chromosome|NC_000964.3                 
+>b3132|500|200|3278913|3280194|+|kbaZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

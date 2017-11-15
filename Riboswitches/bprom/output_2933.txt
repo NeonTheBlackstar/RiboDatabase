@@ -1,4 +1,4 @@
->BSU27960|500|200|2855517|2855826|-|rplU|chromosome|NC_000964.3                 
+>b2239|500|200|2349934|2351011|-|glpQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

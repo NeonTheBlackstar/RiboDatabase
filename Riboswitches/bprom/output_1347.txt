@@ -1,4 +1,4 @@
->BSU17870|286|200|1918741|1919395|+|yneB|chromosome|NC_000964.3                 
+>b3106|500|200|3254318|3255020|+|yhaK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

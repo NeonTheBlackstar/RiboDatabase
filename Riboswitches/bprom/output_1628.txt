@@ -1,4 +1,4 @@
->BSU29260|500|200|2996979|2997282|+|ytpI|chromosome|NC_000964.3                 
+>b3809|190|200|3994761|3995586|+|dapF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

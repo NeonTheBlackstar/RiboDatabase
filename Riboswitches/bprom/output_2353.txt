@@ -1,4 +1,4 @@
->BSU35600|500|200|3656751|3658203|-|tuaB|chromosome|NC_000964.3                 
+>b3402|500|200|3530714|3532439|-|yhgE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

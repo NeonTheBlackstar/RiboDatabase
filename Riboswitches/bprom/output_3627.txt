@@ -1,4 +1,4 @@
->BSU19100|500|200|2083066|2084008|-|yobV|chromosome|NC_000964.3                 
+>b0698|39|200|727058|728732|-|kdpA|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

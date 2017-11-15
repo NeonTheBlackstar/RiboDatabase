@@ -1,4 +1,4 @@
->BSU24110|500|200|2507019|2507256|+|yqzF|chromosome|NC_000964.3                 
+>b3571|500|200|3737496|3739527|+|malS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU30900|500|200|3159690|3160746|-|cotS|chromosome|NC_000964.3                 
+>b2712|500|200|2835172|2837425|-|hypF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

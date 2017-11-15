@@ -1,4 +1,12 @@
->BSU09920|500|200|1066076|1068968|+|yhaN|chromosome|NC_000964.3                 
+>b1565|500|200|1645896|1646202|+|ydfV|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.26
+ -10 box at pos.     44 TGGTATACA Score    46
+ -35 box at pos.     29 TTCTCG    Score    27
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       modE:  TATACAAG at position      47 Score -  13

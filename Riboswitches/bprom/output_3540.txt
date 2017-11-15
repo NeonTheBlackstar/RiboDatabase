@@ -1,4 +1,4 @@
->BSU20230|171|200|2170770|2171136|-|yorW|chromosome|NC_000964.3                 
+>b0931|500|200|989153|990356|-|pncB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU13780|500|200|1444098|1445298|+|ykvP|chromosome|NC_000964.3                 
+>b2209|500|200|2303904|2304393|+|eco|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

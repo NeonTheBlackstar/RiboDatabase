@@ -1,4 +1,4 @@
->BSU31650|426|200|3251723|3252008|+|mrpF|chromosome|NC_000964.3                 
+>b3963|500|200|4161123|4161771|+|fabR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU17070|500|200|1781227|1781785|-|ymcC|chromosome|NC_000964.3                 
+>b0488|500|200|514400|514859|-|ybbJ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.43
- -10 box at pos.     47 CAGTAAAAG Score    31
- -35 box at pos.     28 TTTTTA    Score    26
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       hipB:  CCTTTTTA at position      26 Score -  11
+ Number of predicted promoters -      0

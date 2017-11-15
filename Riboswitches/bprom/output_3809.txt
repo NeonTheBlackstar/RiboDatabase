@@ -1,4 +1,4 @@
->BSU12200|500|200|1290674|1290953|-|yjiA|chromosome|NC_000964.3                 
+>b0262|500|200|277755|278802|-|afuC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

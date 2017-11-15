@@ -1,4 +1,4 @@
->BSU30020|500|200|3072400|3072622|+|ytzE|chromosome|NC_000964.3                 
+>b3835|500|200|4020225|4021866|+|ubiB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

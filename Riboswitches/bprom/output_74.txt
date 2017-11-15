@@ -1,11 +1,13 @@
->BSU00800|405|200|87400|87610|+|yazB|chromosome|NC_000964.3                     
+>b0151|500|200|169777|170575|+|fhuC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.36
- -10 box at pos.     46 GGTGACAGT Score    14
- -35 box at pos.     25 TTTACT    Score    42
+ Promoter Pos:     61 LDF-  1.07
+ -10 box at pos.     48 TGTTAACGT Score    44
+ -35 box at pos.     25 GCGAAA    Score   -10
 
  Oligonucleotides from known TF binding sites:
 
- No such sites for promoter at     61
+ For promoter at     61:
+     rpoD18:  CTTATACT at position      65 Score -  10
+        fis:  TATACTTA at position      67 Score -  18

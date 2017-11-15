@@ -1,4 +1,4 @@
->BSU16920|500|200|1762622|1763204|+|pgsA|chromosome|NC_000964.3                 
+>b2946|500|200|3091133|3091865|+|rsmE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

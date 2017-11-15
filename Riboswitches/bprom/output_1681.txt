@@ -1,4 +1,4 @@
->BSU31321|500|200|3218524|3218857|+|mstX|chromosome|NC_000964.3                 
+>b3916|500|200|4107551|4108514|+|pfkA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU22420|500|200|2352976|2353837|-|panC|chromosome|NC_000964.3                 
+>b1293|500|200|1354504|1355470|-|sapB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

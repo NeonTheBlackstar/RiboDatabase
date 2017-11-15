@@ -1,12 +1,4 @@
->BSU22630|500|200|2371507|2372311|-|trpA|chromosome|NC_000964.3                 
+>b1348|500|200|1413732|1413927|-|ralR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.53
- -10 box at pos.     44 TTTTTAAAT Score    41
- -35 box at pos.     21 ATGCGA    Score     8
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD15:  TGTGTAGG at position       2 Score -  22
+ Number of predicted promoters -      0

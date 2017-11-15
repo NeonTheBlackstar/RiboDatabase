@@ -1,13 +1,4 @@
->BSU31030|500|200|3182706|3183195|+|yuaE|chromosome|NC_000964.3                 
+>b3896|500|200|4087001|4088057|+|yiiG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.60
- -10 box at pos.     41 GATGATAAT Score    40
- -35 box at pos.     21 ATGCCA    Score    31
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        fur:  ATGATAAT at position      42 Score -   8
-        crp:  AGATGTGA at position      63 Score -   6
+ Number of predicted promoters -      0

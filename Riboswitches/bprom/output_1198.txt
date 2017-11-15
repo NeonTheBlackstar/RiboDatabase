@@ -1,4 +1,4 @@
->BSU16170|500|200|1690118|1690898|+|codY|chromosome|NC_000964.3                 
+>b2731|500|200|2854337|2856416|+|fhlA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

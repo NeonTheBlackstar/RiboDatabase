@@ -1,4 +1,4 @@
->BSU31680|500|200|3252803|3253448|-|comA|chromosome|NC_000964.3                 
+>b2782|198|200|2910755|2911091|-|mazF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU00980|500|200|116599|117256|+|sigH|chromosome|NC_000964.3                   
+>b0179|439|200|200970|201996|+|lpxD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

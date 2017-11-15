@@ -1,4 +1,4 @@
->BSU31000|500|200|3179925|3180447|-|yuaI|chromosome|NC_000964.3                 
+>b2721|500|200|2844761|2846471|-|hycE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

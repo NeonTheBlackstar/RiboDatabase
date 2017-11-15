@@ -1,14 +1,4 @@
->BSU19180|500|200|2089395|2090454|+|des|chromosome|NC_000964.3                  
+>b3257|500|200|3407374|3407617|+|yhdT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.43
- -10 box at pos.     46 GATGATTAT Score    26
- -35 box at pos.     26 ATACTA    Score     0
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD15:  ACATACTA at position      24 Score -  17
-       metJ:  AGACATCC at position      60 Score -   7
-       argR:  CATCCATA at position      63 Score -   6
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU14190|500|200|1489752|1490877|+|dapL|chromosome|NC_000964.3                 
+>b2344|500|200|2461305|2462646|+|fadL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

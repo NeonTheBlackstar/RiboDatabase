@@ -1,4 +1,4 @@
->BSU11330|500|200|1208221|1209160|+|fabHA|chromosome|NC_000964.3                
+>b1705|500|200|1789612|1789804|+|ydiE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

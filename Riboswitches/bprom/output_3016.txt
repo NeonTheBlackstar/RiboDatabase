@@ -1,4 +1,4 @@
->BSU26790|500|200|2735681|2736536|-|aadK|chromosome|NC_000964.3                 
+>b2066|500|200|2142306|2142948|-|udk|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU36750|500|200|3776721|3777753|-|spoIID|chromosome|NC_000964.3               
+>b3548|500|200|3712235|3712934|-|yhjY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

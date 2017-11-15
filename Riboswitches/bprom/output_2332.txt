@@ -1,4 +1,4 @@
->BSU36000|500|200|3708798|3709566|-|alsD|chromosome|NC_000964.3                 
+>b3447|500|200|3585080|3586823|-|ggt|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

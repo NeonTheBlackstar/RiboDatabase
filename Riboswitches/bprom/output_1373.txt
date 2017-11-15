@@ -1,4 +1,4 @@
->BSU18430|500|200|2007525|2008515|+|yogA|chromosome|NC_000964.3                 
+>b3160|500|200|3303447|3304455|+|yhbW|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

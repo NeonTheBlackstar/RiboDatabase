@@ -1,4 +1,4 @@
->BSU29190|500|200|2986587|2987547|-|pfkA|chromosome|NC_000964.3                 
+>b2427|500|200|2544751|2545609|-|murR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

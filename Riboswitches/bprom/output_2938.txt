@@ -1,4 +1,4 @@
->BSU27910|500|200|2852156|2852600|-|pheB|chromosome|NC_000964.3                 
+>b2226|500|200|2328147|2329797|-|yfaQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

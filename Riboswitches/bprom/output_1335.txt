@@ -1,4 +1,4 @@
->BSU17720|500|200|1905808|1906207|+|yndA|chromosome|NC_000964.3                 
+>b3093|500|200|3245223|3246522|+|exuT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

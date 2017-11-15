@@ -1,4 +1,13 @@
->BSU24900|500|200|2574407|2574557|-|rpmG|chromosome|NC_000964.3                 
+>b1774|500|200|1857789|1858833|-|ydjJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.28
+ -10 box at pos.     46 TGGTATTTT Score    60
+ -35 box at pos.     29 ATGTTT    Score    10
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD19:  ATTGTTTT at position       8 Score -   7
+      argR2:  TTTTTATT at position      51 Score -  13

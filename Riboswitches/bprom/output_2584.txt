@@ -1,4 +1,4 @@
->BSU32620|500|200|3352311|3352686|-|yurQ|chromosome|NC_000964.3                 
+>b2927|500|200|3072671|3073691|-|epd|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,13 +1,4 @@
->BSU21030|500|200|2222339|2222534|+|yonP|chromosome|NC_000964.3                 
+>b3357|500|200|3486119|3486752|+|crp|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  3.14
- -10 box at pos.     47 TGGTAAAAT Score    87
- -35 box at pos.     22 TATATG    Score    -4
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       metJ:  ACATCTAA at position      39 Score -  12
-       cpxR:  TAAAATTA at position      50 Score -   6
+ Number of predicted promoters -      0

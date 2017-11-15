@@ -1,4 +1,4 @@
->BSU20200|199|200|2170029|2170242|-|yorZ|chromosome|NC_000964.3                 
+>b0928|500|200|984518|985709|-|aspC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU00240|500|200|35530|35725|+|csfB|chromosome|NC_000964.3                     
+>b0030|500|200|27292|28207|+|rihC|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,11 +1,4 @@
->BSU14750|411|200|1544935|1545547|-|ylaE|chromosome|NC_000964.3                 
+>b0457|500|200|477066|478617|-|ylaB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.62
- -10 box at pos.     46 AGGCATTAT Score    49
- -35 box at pos.     24 TTATCG    Score    24
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

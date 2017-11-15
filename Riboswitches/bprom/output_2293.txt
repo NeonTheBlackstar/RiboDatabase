@@ -1,4 +1,4 @@
->BSU36600|500|200|3764132|3764906|-|mta|chromosome|NC_000964.3                  
+>b3528|500|200|3682160|3683447|-|dctA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

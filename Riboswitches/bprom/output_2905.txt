@@ -1,4 +1,4 @@
->BSU28250|500|200|2888939|2889539|-|leuD|chromosome|NC_000964.3                 
+>b2285|500|200|2401551|2402052|-|nuoE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

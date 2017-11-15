@@ -1,4 +1,4 @@
->BSU40330|500|200|4142674|4144078|-|rocE|chromosome|NC_000964.3                 
+>b4124|500|200|4349314|4350034|-|dcuR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

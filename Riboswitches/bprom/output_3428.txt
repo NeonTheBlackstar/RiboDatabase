@@ -1,4 +1,4 @@
->BSU21860|500|200|2300220|2300655|-|yphP|chromosome|NC_000964.3                 
+>b1203|500|200|1256720|1257812|-|ychF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

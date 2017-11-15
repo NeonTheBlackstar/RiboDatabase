@@ -1,4 +1,12 @@
->BSU16120|500|200|1683660|1685736|+|topA|chromosome|NC_000964.3                 
+>b2726|500|200|2850646|2850997|+|hypA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.74
+ -10 box at pos.     49 CGTAATACT Score    43
+ -35 box at pos.     24 TTGTCT    Score    48
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TTTTGTTT at position      38 Score -   9

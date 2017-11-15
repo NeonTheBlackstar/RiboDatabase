@@ -1,4 +1,4 @@
->BSU12990|500|200|1367940|1368831|+|ykfC|chromosome|NC_000964.3                 
+>b2077|500|200|2161463|2162879|+|iceT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

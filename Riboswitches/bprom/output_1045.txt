@@ -1,4 +1,4 @@
->BSU14400|500|200|1509255|1511163|+|fruA|chromosome|NC_000964.3                 
+>b4680|500|200|2496920|2496992|+|ypdK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

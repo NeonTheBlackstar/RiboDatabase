@@ -1,4 +1,4 @@
->BSU25100|500|200|2591427|2591865|-|zur|chromosome|NC_000964.3                  
+>b1805|500|200|1888060|1889746|-|fadD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

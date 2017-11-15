@@ -1,4 +1,15 @@
->BSU26800|500|200|2736914|2737958|+|yrpB|chromosome|NC_000964.3                 
+>b4618|500|200|3853552|3853642|+|tisB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.03
+ -10 box at pos.     43 TTTTGTACT Score    38
+ -35 box at pos.     26 TTGAGG    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  AATTGAGG at position      24 Score -  11
+      flhCD:  TGAGGGGT at position      27 Score -  12
+       araC:  TAACAAAA at position      62 Score -  10
+        ihf:  ACAAAAAA at position      64 Score -   9

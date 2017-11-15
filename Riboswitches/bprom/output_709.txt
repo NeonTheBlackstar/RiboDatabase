@@ -1,4 +1,4 @@
->BSU09440|500|200|1021056|1022157|+|citA|chromosome|NC_000964.3                 
+>b1474|500|200|1547400|1550448|+|fdnG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

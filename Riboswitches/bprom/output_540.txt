@@ -1,4 +1,13 @@
->BSU06990|500|200|763874|764765|+|yesQ|chromosome|NC_000964.3                   
+>b1139|500|200|1198694|1199588|+|lit|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.87
+ -10 box at pos.     47 AGTCACGCT Score    20
+ -35 box at pos.     26 TTCGAA    Score    12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  TTATAATT at position       9 Score -  14
+     rpoD16:  AGTGTAAT at position      63 Score -   9

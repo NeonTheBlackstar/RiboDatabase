@@ -1,4 +1,12 @@
->BSU37220|500|200|3819219|3819744|-|ywjB|chromosome|NC_000964.3                 
+>b3630|500|200|3805152|3805950|-|waaP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.33
+ -10 box at pos.     48 CGGAATCAT Score    36
+ -35 box at pos.     27 TTGAAG    Score    54
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        ihf:  TTTTATTT at position      72 Score -  13

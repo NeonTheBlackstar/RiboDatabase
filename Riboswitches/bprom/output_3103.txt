@@ -1,4 +1,4 @@
->BSU25710|500|200|2648902|2649655|-|cwlH|chromosome|NC_000964.3                 
+>b1900|500|200|1983554|1985069|-|araG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

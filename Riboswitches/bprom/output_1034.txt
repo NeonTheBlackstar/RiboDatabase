@@ -1,4 +1,4 @@
->BSU14290|500|200|1498444|1498966|+|mobB|chromosome|NC_000964.3                 
+>b2360|378|200|2474031|2474856|+|yfdQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

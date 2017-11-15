@@ -1,15 +1,4 @@
->BSU17410|500|200|1872811|1873579|-|cwlC|chromosome|NC_000964.3                 
+>b0522|456|200|551526|552594|-|purK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.46
- -10 box at pos.     46 TGAGATTTT Score    12
- -35 box at pos.     24 CGGACA    Score    -6
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       tyrR:  TGAGATTT at position      46 Score -   7
-     rpoD15:  TTTTGTTT at position      51 Score -   9
-     rpoD17:  TTTGTTTT at position      52 Score -   9
-        fur:  ATCATTTT at position      62 Score -   8
+ Number of predicted promoters -      0

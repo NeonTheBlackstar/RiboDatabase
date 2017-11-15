@@ -1,4 +1,4 @@
->BSU29790|500|200|3048176|3049475|-|murC|chromosome|NC_000964.3                 
+>b2520|500|200|2647325|2652287|-|yfhM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

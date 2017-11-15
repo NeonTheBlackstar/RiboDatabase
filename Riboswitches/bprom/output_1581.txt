@@ -1,4 +1,4 @@
->BSU26980|500|200|2754606|2754804|+|yraE|chromosome|NC_000964.3                 
+>b4557|273|200|3884815|3885073|+|yidD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

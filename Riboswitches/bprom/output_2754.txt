@@ -1,4 +1,4 @@
->BSU30135|500|200|3082259|3083225|-|yteP|chromosome|NC_000964.3                 
+>b2555|500|200|2688792|2689506|-|yfhG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

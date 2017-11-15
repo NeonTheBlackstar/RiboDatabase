@@ -1,11 +1,4 @@
->BSU15910|500|200|1664512|1665253|+|fabG|chromosome|NC_000964.3                 
+>b2676|500|200|2803501|2804461|+|nrdF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.51
- -10 box at pos.     46 TGGCCAAAT Score    23
- -35 box at pos.     27 TTGCGA    Score    38
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

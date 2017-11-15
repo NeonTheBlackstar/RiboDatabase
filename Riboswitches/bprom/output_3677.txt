@@ -1,14 +1,4 @@
->BSU18360|500|200|1999848|2000826|-|yoxA|chromosome|NC_000964.3                 
+>b0614|500|200|647483|648035|-|citX|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.86
- -10 box at pos.     45 TTTTAACCG Score    13
- -35 box at pos.     22 TTCACA    Score    46
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       metR:  TTTTTTCA at position      18 Score -   8
-       metJ:  CTTTACAT at position      65 Score -  14
-       ompR:  TTTACATT at position      66 Score -  11
+ Number of predicted promoters -      0

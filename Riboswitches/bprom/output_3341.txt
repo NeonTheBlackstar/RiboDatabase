@@ -1,4 +1,4 @@
->BSU22860|500|200|2392750|2393350|-|yphA|chromosome|NC_000964.3                 
+>b4428|8|200|1491921|1492071|-|hokB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

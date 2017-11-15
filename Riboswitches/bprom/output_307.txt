@@ -1,4 +1,4 @@
->BSU03981|476|200|449723|451160|+|mtlA|chromosome|NC_000964.3                   
+>b0682|500|200|709789|710116|+|chiQ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

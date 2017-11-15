@@ -1,4 +1,13 @@
->BSU34400|260|200|3532324|3532810|-|padC|chromosome|NC_000964.3                 
+>b3230|500|200|3377814|3378207|-|rpsI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.14
+ -10 box at pos.     44 GGGTAAGCT Score    58
+ -35 box at pos.     29 GTGTAA    Score    14
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  TATTTATT at position      36 Score -   8
+     rpoD17:  CTAAACCA at position      73 Score -   6

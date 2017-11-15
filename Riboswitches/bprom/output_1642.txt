@@ -1,4 +1,4 @@
->BSU29990|500|200|3068907|3070206|+|pbuO|chromosome|NC_000964.3                 
+>b3834|500|200|4019623|4020229|+|ubiJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

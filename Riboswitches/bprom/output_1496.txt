@@ -1,4 +1,4 @@
->BSU22169|500|200|2329869|2330022|+|ypzG|chromosome|NC_000964.3                 
+>b3501|500|200|3648527|3648881|+|arsR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU24070|500|200|2501548|2502640|-|buk|chromosome|NC_000964.3                  
+>b1639|500|200|1718065|1718395|-|mliC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.09
- -10 box at pos.     46 CGGTAGATC Score    15
- -35 box at pos.     25 TTGAAG    Score    54
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       dnaA:  ATTCACAA at position      67 Score -   5
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU12280|500|200|1298611|1299034|+|rex|chromosome|NC_000964.3                  
+>b1867|500|200|1950831|1951398|+|yecD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

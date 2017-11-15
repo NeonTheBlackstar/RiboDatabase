@@ -1,4 +1,4 @@
->BSU12610|500|200|1329554|1330490|+|xkdG|chromosome|NC_000964.3                 
+>b1951|500|200|2023967|2024591|+|rcsA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

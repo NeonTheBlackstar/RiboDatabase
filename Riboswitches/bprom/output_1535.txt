@@ -1,4 +1,4 @@
->BSU24650|500|200|2555518|2555845|+|yqzG|chromosome|NC_000964.3                 
+>b3582|500|200|3749231|3750092|+|sgbU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

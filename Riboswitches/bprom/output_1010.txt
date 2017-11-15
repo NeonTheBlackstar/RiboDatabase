@@ -1,4 +1,4 @@
->BSU13990|500|200|1470025|1471846|+|kinA|chromosome|NC_000964.3                 
+>b4544|500|200|2372556|2372892|+|arnE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

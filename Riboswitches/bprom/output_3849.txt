@@ -1,4 +1,4 @@
->BSU11020|500|200|1180908|1181400|-|yitK|chromosome|NC_000964.3                 
+>b0145|500|200|160148|160604|-|dksA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

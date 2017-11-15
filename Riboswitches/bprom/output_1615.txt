@@ -1,4 +1,4 @@
->BSU28660|500|200|2931691|2931907|+|sspI|chromosome|NC_000964.3                 
+>b3787|500|200|3971259|3972522|+|wecC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

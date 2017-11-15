@@ -1,4 +1,4 @@
->BSU27020|500|200|2757491|2758001|+|yraA|chromosome|NC_000964.3                 
+>b3707|500|200|3888434|3888509|+|tnaC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

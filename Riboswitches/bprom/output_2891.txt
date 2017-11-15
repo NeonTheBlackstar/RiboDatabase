@@ -1,4 +1,4 @@
->BSU28420|500|200|2905066|2905510|-|ysmA|chromosome|NC_000964.3                 
+>b2308|500|200|2425229|2425916|-|hisQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

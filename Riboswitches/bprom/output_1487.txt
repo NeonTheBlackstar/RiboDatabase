@@ -1,4 +1,4 @@
->BSU21910|500|200|2305377|2306283|+|metA|chromosome|NC_000964.3                 
+>b3480|500|200|3617775|3618582|+|nikE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

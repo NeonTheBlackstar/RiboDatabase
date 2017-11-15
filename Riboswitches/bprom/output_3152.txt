@@ -1,4 +1,12 @@
->BSU25180|500|200|2598615|2599266|-|trmK|chromosome|NC_000964.3                 
+>b1816|500|200|1900028|1901585|-|yoaE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.10
+ -10 box at pos.     49 CTTTATTAT Score    68
+ -35 box at pos.     26 TAGCAA    Score    18
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  ATAACAAT at position      19 Score -   9

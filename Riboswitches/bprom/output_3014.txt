@@ -1,15 +1,12 @@
->BSU26840|500|200|2742243|2742774|-|sigZ|chromosome|NC_000964.3                 
+>b2070|500|200|2149038|2150985|-|yegI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.21
- -10 box at pos.     47 TTGTATAGA Score    25
- -35 box at pos.     28 TTCCAG    Score    29
+ Promoter Pos:     61 LDF-  4.21
+ -10 box at pos.     46 CGTTAGAAT Score    72
+ -35 box at pos.     21 TTGCTG    Score    47
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at     61:
-     rpoD17:  ATTTTGTA at position      44 Score -   9
-     rpoD17:  TTTTGTAT at position      45 Score -   9
-        crp:  TCATATCA at position      66 Score -   9
-       soxS:  TATCATTT at position      69 Score -   9
+       deoR:  TTAGAATA at position      48 Score -  17

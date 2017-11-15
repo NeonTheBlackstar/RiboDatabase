@@ -1,4 +1,4 @@
->BSU27660|500|200|2829151|2829448|-|comN|chromosome|NC_000964.3                 
+>b2197|156|200|2294900|2295380|-|ccmE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

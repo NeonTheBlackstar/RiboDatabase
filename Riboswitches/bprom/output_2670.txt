@@ -1,16 +1,4 @@
->BSU31319|500|200|3218214|3218478|-|yuzI|chromosome|NC_000964.3                 
+>b2760|500|200|2882629|2884138|-|casA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.26
- -10 box at pos.     49 AGACATAAA Score    13
- -35 box at pos.     25 ATGATT    Score    23
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       soxS:  CAAGTATA at position      14 Score -  12
-       lexA:  TATATAAA at position      18 Score -  14
-      argR2:  ATATAAAT at position      19 Score -  13
-      rpoH2:  ACAAAAGA at position      38 Score -   6
-     rpoS17:  CAGACATA at position      48 Score -  10
+ Number of predicted promoters -      0

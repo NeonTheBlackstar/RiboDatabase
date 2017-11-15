@@ -1,13 +1,4 @@
->BSU17490|425|200|1881097|1881349|+|ynzG|chromosome|NC_000964.3                 
+>b3063|500|200|3208023|3209487|+|ttdT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.65
- -10 box at pos.     49 GGGGATGCT Score    29
- -35 box at pos.     24 TTCCAG    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       lexA:  TATATACA at position      14 Score -  13
-       tyrR:  TATACAGA at position      16 Score -  11
+ Number of predicted promoters -      0

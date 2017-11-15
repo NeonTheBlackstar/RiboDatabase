@@ -1,13 +1,4 @@
->BSU40240|500|200|4135350|4135764|+|yycS|chromosome|NC_000964.3                 
+>b4302|500|200|4527548|4527980|-|sgcA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  3.35
- -10 box at pos.     45 TGTCACAAT Score    51
- -35 box at pos.     25 TTTTCT    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       narP:  TTGAGGTA at position      16 Score -   8
-        lrp:  TTTCTTTT at position      26 Score -   9
+ Number of predicted promoters -      0

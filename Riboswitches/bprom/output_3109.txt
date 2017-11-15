@@ -1,4 +1,4 @@
->BSU25640|252|200|2643764|2644334|-|nadD|chromosome|NC_000964.3                 
+>b1892|500|200|1977846|1978197|-|flhD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

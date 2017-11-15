@@ -1,4 +1,4 @@
->BSU22400|459|200|2349670|2352466|-|dinG|chromosome|NC_000964.3                 
+>b1291|500|200|1352635|1353628|-|sapD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU39770|500|200|4084798|4085554|+|iolR|chromosome|NC_000964.3                 
+>b4346|500|200|4577957|4579337|-|mcrB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

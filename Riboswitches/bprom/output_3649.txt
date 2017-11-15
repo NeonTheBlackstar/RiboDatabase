@@ -1,4 +1,4 @@
->BSU18810|500|200|2049949|2050312|-|yobA|chromosome|NC_000964.3                 
+>b0654|500|200|685928|686669|-|gltJ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

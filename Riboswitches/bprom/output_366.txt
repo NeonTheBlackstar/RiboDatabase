@@ -1,14 +1,4 @@
->BSU04690|319|200|520605|521007|+|rsbT|chromosome|NC_000964.3                   
+>b0797|500|200|830871|832236|+|rhlE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.88
- -10 box at pos.     45 AAGAAGACT Score    12
- -35 box at pos.     21 ATGACC    Score    14
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       tyrR:  TAAATAAA at position      57 Score -  10
-        ihf:  AAATAAAA at position      58 Score -  13
-        ihf:  AATAAAAT at position      59 Score -  10
+ Number of predicted promoters -      0

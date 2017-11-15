@@ -1,4 +1,4 @@
->BSU03780|500|200|429962|430085|+|phrC|chromosome|NC_000964.3                   
+>b0623|500|200|657291|657501|+|cspE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU24390|370|200|2534325|2535525|-|spoIIIAE|chromosome|NC_000964.3             
+>b1706|500|200|1789807|1791244|-|ydiU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU40990|500|200|4207896|4208748|-|noc|chromosome|NC_000964.3                  
+>b4232|500|200|4454610|4455609|-|fbp|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

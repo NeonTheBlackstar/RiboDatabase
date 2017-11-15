@@ -1,4 +1,12 @@
->BSU37130|500|200|3809549|3809924|-|spo0F|chromosome|NC_000964.3                
+>b3625|500|200|3800266|3800965|-|waaY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.07
+ -10 box at pos.     45 CGCAAAACT Score    31
+ -35 box at pos.     28 TTAAAA    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        lrp:  TATTCTTA at position      72 Score -   8

@@ -1,4 +1,4 @@
->BSU12300|500|200|1300449|1301871|+|uxaC|chromosome|NC_000964.3                 
+>b1869|500|200|1952265|1952661|+|yecN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU36690|500|200|3770999|3772133|-|rapB|chromosome|NC_000964.3                 
+>b3541|500|200|3702864|3703848|-|dppD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

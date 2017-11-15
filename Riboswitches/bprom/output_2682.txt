@@ -1,4 +1,4 @@
->BSU31200|500|200|3199564|3201022|-|yulC|chromosome|NC_000964.3                 
+>b2747|280|200|2871779|2872490|-|ispD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

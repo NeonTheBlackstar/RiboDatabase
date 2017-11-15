@@ -1,4 +1,4 @@
->BSU33900|500|200|3476554|3477847|-|eno|chromosome|NC_000964.3                  
+>b3161|500|200|3304572|3305817|-|mtr|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

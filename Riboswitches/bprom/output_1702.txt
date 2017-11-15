@@ -1,4 +1,4 @@
->BSU31640|500|200|3251247|3251724|+|mrpE|chromosome|NC_000964.3                 
+>b3961|500|200|4158489|4159407|+|oxyR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

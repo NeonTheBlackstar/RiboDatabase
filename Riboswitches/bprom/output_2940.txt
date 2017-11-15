@@ -1,4 +1,4 @@
->BSU27870|500|200|2847870|2849466|-|nadB|chromosome|NC_000964.3                 
+>b2218|500|200|2317026|2319876|-|rcsC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

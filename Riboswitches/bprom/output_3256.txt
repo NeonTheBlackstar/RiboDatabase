@@ -1,4 +1,13 @@
->BSU23860|500|200|2480749|2482159|-|yqjI|chromosome|NC_000964.3                 
+>b1599|302|200|1672819|1673149|-|mdtI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.94
+ -10 box at pos.     49 CTTTATTTT Score    48
+ -35 box at pos.     29 GTCAGT    Score   -15
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD18:  GTGAGGGA at position      33 Score -  12
+      argR2:  TTTATTTT at position      50 Score -   7
