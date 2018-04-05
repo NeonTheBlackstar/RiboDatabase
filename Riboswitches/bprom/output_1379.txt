@@ -1,4 +1,4 @@
->BSU18580|500|200|2027508|2027802|+|yoaF|chromosome|NC_000964.3                 
+>b3197|500|200|3341265|3342252|+|kdsD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

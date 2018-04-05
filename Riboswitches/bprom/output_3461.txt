@@ -1,12 +1,4 @@
->BSU21440|500|200|2265224|2265671|-|bdbB|chromosome|NC_000964.3                 
+>b1131|500|200|1190615|1191986|-|purB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.79
- -10 box at pos.     46 ATTGATTAT Score    31
- -35 box at pos.     26 TTGATA    Score    58
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        fnr:  ATCAATAA at position      63 Score -   5
+ Number of predicted promoters -      0

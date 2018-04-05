@@ -1,4 +1,14 @@
->BSU23310|500|200|2432315|2432870|-|sipS|chromosome|NC_000964.3                 
+>b1501|500|200|1584206|1586486|-|ydeP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.55
+ -10 box at pos.     47 GGGGACAGT Score    15
+ -35 box at pos.     22 TGGCTA    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       tyrR:  TAAATAAA at position      55 Score -  10
+        ihf:  AAATAAAA at position      56 Score -  13
+       phoB:  AATAAAAG at position      57 Score -   8

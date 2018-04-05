@@ -1,4 +1,4 @@
->BSU23420|388|200|2441803|2442256|-|spoVAC|chromosome|NC_000964.3               
+>b1521|500|200|1609228|1610680|-|uxaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

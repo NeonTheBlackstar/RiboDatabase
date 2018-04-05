@@ -1,4 +1,4 @@
->BSU31210|500|200|3201026|3201803|-|yulB|chromosome|NC_000964.3                 
+>b2748|467|200|2872508|2872820|-|ftsB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

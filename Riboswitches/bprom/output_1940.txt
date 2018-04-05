@@ -1,4 +1,4 @@
->BSU40050|500|200|4113416|4114148|+|gntR|chromosome|NC_000964.3                 
+>b4310|500|200|4537658|4538765|-|nanM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

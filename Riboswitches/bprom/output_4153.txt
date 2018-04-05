@@ -1,4 +1,0 @@
->BSU02030|500|200|223218|223989|-|ybdM|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU24350|500|200|2531717|2532197|-|accB|chromosome|NC_000964.3                 
+>b1686|500|200|1765221|1765632|-|menI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU13890|500|200|1457186|1459286|+|ptsG|chromosome|NC_000964.3                 
+>b2243|500|200|2355520|2356711|+|glpC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

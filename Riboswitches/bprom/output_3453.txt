@@ -1,4 +1,4 @@
->BSU21530|423|200|2272533|2272890|-|yolB|chromosome|NC_000964.3                 
+>b1141|500|200|1200786|1201032|-|xisE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

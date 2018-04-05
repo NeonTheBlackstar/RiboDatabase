@@ -1,4 +1,4 @@
->BSU21380|500|200|2259474|2260296|+|yomF|chromosome|NC_000964.3                 
+>b3448|500|200|3586942|3587383|+|yhhA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU18220|500|200|1951227|1952010|-|yngF|chromosome|NC_000964.3                 
+>b0583|500|200|609458|610079|-|entD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

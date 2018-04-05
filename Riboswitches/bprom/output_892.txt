@@ -1,4 +1,4 @@
->BSU12530|500|200|1322749|1323550|+|xkdC|chromosome|NC_000964.3                 
+>b1942|500|200|2017945|2018389|+|fliJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU11560|500|200|1234509|1234908|-|yjbI|chromosome|NC_000964.3                 
+>b0193|500|200|216178|217003|-|yaeF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

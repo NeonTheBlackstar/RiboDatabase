@@ -1,4 +1,4 @@
->BSU26410|500|200|2702687|2703104|-|yrkR|chromosome|NC_000964.3                 
+>b2035|500|200|2106059|2107226|-|wbbH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

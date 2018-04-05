@@ -1,4 +1,4 @@
->BSU16960|500|200|1767309|1768872|+|ymdA|chromosome|NC_000964.3                 
+>b2951|500|200|3095097|3095802|+|yggS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

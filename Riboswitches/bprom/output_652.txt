@@ -1,4 +1,4 @@
->BSU08670|293|200|938242|938587|+|ygaB|chromosome|NC_000964.3                   
+>b1381|500|200|1443050|1445690|+|ydbH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

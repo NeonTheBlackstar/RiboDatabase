@@ -1,14 +1,4 @@
->BSU31700|500|200|3255852|3256020|-|comX|chromosome|NC_000964.3                 
+>b2784|500|200|2911416|2913651|-|relA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  5.86
- -10 box at pos.     47 GATTAAAAT Score    69
- -35 box at pos.     26 ATGAAA    Score    30
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  TAATTAGA at position      41 Score -  20
-        crp:  TTAGATTA at position      44 Score -  14
-        ihf:  TAGATTAA at position      45 Score -  18
+ Number of predicted promoters -      0

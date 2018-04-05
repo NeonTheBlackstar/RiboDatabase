@@ -1,4 +1,4 @@
->BSU34590|500|200|3552368|3553205|-|mdxG|chromosome|NC_000964.3                 
+>b3249|500|200|3398386|3398875|-|mreD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

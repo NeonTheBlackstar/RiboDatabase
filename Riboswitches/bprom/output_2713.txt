@@ -1,4 +1,4 @@
->BSU30750|500|200|3142953|3144261|-|mntC|chromosome|NC_000964.3                 
+>b2687|500|200|2814217|2814733|-|luxS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

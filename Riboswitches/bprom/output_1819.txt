@@ -1,4 +1,4 @@
->BSU36030|500|200|3712616|3713945|+|ywrK|chromosome|NC_000964.3                 
+>b4196|428|200|4422185|4422836|+|ulaD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

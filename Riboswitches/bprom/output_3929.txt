@@ -1,4 +1,0 @@
->BSU09500|500|200|1028232|1028523|-|yhdK|chromosome|NC_000964.3                 
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

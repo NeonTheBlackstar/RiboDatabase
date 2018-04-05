@@ -1,4 +1,4 @@
->BSU26960|213|200|2753064|2753433|+|yraF|chromosome|NC_000964.3                 
+>b3703|500|200|3884335|3884476|+|rpmH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

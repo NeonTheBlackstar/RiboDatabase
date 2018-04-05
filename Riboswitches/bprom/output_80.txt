@@ -1,4 +1,12 @@
->BSU00860|500|200|103571|106004|+|clpC|chromosome|NC_000964.3                   
+>b0161|500|200|180883|182308|+|degP|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.44
+ -10 box at pos.     46 GGCTTGAAT Score    30
+ -35 box at pos.     26 TAGCCA    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       carP:  CTGTAAAA at position      10 Score -   7

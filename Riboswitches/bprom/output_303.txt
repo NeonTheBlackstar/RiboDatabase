@@ -1,4 +1,12 @@
->BSU03910|500|200|442949|444338|+|gabD|chromosome|NC_000964.3                   
+>b0662|500|200|695100|696276|+|ubiF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.24
+ -10 box at pos.     49 AAATAATAT Score    42
+ -35 box at pos.     29 GTGCAG    Score    16
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  AAAAATAA at position      47 Score -   9

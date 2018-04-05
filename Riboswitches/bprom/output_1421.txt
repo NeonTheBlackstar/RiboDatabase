@@ -1,4 +1,4 @@
->BSU19580|150|200|2130376|2131867|+|yodF|chromosome|NC_000964.3                 
+>b3290|500|200|3436517|3437894|+|trkA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

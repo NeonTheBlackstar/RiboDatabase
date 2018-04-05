@@ -1,4 +1,4 @@
->BSU05329|500|200|579046|579232|+|ydzO|chromosome|NC_000964.3                   
+>b0908|500|200|958811|960095|+|aroA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,16 @@
->BSU03770|500|200|428830|429979|+|rapC|chromosome|NC_000964.3                   
+>b0622|500|200|656556|657117|+|pagP|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  4.94
+ -10 box at pos.     46 TGTTTTTAT Score    41
+ -35 box at pos.     22 CTGCCA    Score    26
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD16:  TTTTTATA at position      48 Score -  13
+        crp:  TATACATA at position      52 Score -  13
+       lexA:  ATAGATAA at position      57 Score -   9
+       araC:  TAACAAAA at position      62 Score -  10
+     rpoD15:  AACGCATA at position      68 Score -   6

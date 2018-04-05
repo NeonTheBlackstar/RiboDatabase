@@ -1,4 +1,4 @@
->BSU28560|500|200|2918645|2920328|-|lcfA|chromosome|NC_000964.3                 
+>b2322|500|200|2438941|2440120|-|yfcJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

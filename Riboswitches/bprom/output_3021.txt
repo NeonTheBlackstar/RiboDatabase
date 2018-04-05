@@ -1,4 +1,4 @@
->BSU26730|500|200|2730559|2730835|-|yrdF|chromosome|NC_000964.3                 
+>b2060|396|200|2133489|2135652|-|wzc|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

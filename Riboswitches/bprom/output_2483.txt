@@ -1,4 +1,4 @@
->BSU33980|500|200|3486806|3487817|-|yvbT|chromosome|NC_000964.3                 
+>b3167|500|200|3312776|3313178|-|rbfA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

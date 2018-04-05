@@ -1,4 +1,12 @@
->BSU04990|500|200|545594|545975|+|yddJ|chromosome|NC_000964.3                   
+>b0857|500|200|897083|897929|+|potI|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.92
+ -10 box at pos.     40 CTGAATAAT Score    47
+ -35 box at pos.     22 TTAAAA    Score    37
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AATTTTCT at position      46 Score -   7

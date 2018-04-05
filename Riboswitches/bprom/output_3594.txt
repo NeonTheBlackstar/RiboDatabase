@@ -1,4 +1,4 @@
->BSU19640|500|200|2136537|2136852|-|yodL|chromosome|NC_000964.3                 
+>b0808|500|200|843254|845480|-|ybiO|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

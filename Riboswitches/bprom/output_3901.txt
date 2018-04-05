@@ -1,4 +1,4 @@
->BSU10030|500|200|1076514|1076952|-|hinT|chromosome|NC_000964.3                 
+>b0021|144|200|19810|20314|-|insB1|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

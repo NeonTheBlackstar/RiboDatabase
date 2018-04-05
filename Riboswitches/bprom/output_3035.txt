@@ -1,4 +1,4 @@
->BSU26560|322|200|2714932|2715493|-|yrkC|chromosome|NC_000964.3                 
+>b2046|500|200|2118679|2120158|-|wzxC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

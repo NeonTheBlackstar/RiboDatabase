@@ -1,4 +1,4 @@
->BSU11010|500|200|1178756|1180595|-|yitJ|chromosome|NC_000964.3                 
+>b0144|442|200|159185|160112|-|gluQ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

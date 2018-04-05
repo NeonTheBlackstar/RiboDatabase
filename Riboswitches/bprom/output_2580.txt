@@ -1,4 +1,4 @@
->BSU32670|414|200|3355592|3356990|-|sufB|chromosome|NC_000964.3                 
+>b4465|500|200|3076178|3077456|-|yggP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

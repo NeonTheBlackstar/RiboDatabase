@@ -1,4 +1,4 @@
->BSU37900|500|200|3890921|3892346|-|spsB|chromosome|NC_000964.3                 
+>b3724|500|200|3906852|3907578|-|phoU|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

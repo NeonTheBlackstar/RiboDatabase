@@ -1,4 +1,4 @@
->BSU40390|500|200|4150495|4151863|-|walH|chromosome|NC_000964.3                 
+>b4132|500|200|4358696|4360031|-|cadB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

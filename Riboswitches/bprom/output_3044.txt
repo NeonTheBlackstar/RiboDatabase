@@ -1,4 +1,4 @@
->BSU26430|500|200|2704434|2705130|-|yrkP|chromosome|NC_000964.3                 
+>b2037|500|200|2108336|2109584|-|wzxB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

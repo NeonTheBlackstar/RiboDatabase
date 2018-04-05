@@ -1,4 +1,4 @@
->BSU06550|500|200|712018|713293|+|yecA|chromosome|NC_000964.3                   
+>b1078|500|200|1134728|1135511|+|flgG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

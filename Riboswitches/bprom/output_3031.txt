@@ -1,4 +1,4 @@
->BSU26619|500|200|2720525|2720669|-|yrzO|chromosome|NC_000964.3                 
+>b2050|426|200|2124522|2125746|-|wcaI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

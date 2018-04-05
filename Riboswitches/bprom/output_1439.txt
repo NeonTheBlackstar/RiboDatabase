@@ -1,13 +1,4 @@
->BSU20929|231|200|2212847|2213078|+|yoyI|chromosome|NC_000964.3                 
+>b3355|222|200|3484489|3485359|+|prkB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.99
- -10 box at pos.     47 GATTACACT Score    50
- -35 box at pos.     21 TAAAAT    Score    -5
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  TGTAAAAT at position      19 Score -  11
-     rpoD18:  TTACACTT at position      49 Score -   9
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU01920|184|200|214174|215407|+|skfB|chromosome|NC_000964.3                   
+>b0377|500|200|396638|397859|+|sbmA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU00970|500|200|116024|116537|+|yacP|chromosome|NC_000964.3                   
+>b0178|500|200|200481|200967|+|skp|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

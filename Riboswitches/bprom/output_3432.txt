@@ -1,4 +1,4 @@
->BSU21820|500|200|2297105|2297900|-|thyA|chromosome|NC_000964.3                 
+>b1197|500|200|1245678|1247376|-|treA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

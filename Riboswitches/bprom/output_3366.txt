@@ -1,4 +1,4 @@
->BSU22620|500|200|2370414|2371497|-|hisC|chromosome|NC_000964.3                 
+>b1347|137|200|1413530|1413740|-|ydaC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

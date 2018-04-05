@@ -1,4 +1,4 @@
->BSU15670|500|200|1641671|1641941|+|ylzA|chromosome|NC_000964.3                 
+>b2634|500|200|2769702|2770404|+|yfjR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

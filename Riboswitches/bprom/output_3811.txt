@@ -1,4 +1,4 @@
->BSU12140|500|200|1284370|1284769|-|yjgA|chromosome|NC_000964.3                 
+>b0254|500|200|269288|270182|-|perR|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

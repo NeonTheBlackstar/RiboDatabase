@@ -1,4 +1,4 @@
->BSU18230|186|200|1952030|1952930|-|yngG|chromosome|NC_000964.3                 
+>b0584|500|200|610253|612494|-|fepA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU26180|500|200|2686769|2688302|-|yqbA|chromosome|NC_000964.3                 
+>b1997|500|200|2069814|2070180|-|insC1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.21
- -10 box at pos.     45 GTGGATCAT Score    30
- -35 box at pos.     22 ATAACG    Score     7
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  GTTAGGGT at position      33 Score -  12
+ Number of predicted promoters -      0

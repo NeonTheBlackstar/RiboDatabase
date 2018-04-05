@@ -1,12 +1,4 @@
->BSU35350|500|200|3634424|3634754|-|yvyC|chromosome|NC_000964.3                 
+>b3361|107|200|3490860|3491463|-|fic|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.49
- -10 box at pos.     49 TGCTAAGCT Score    55
- -35 box at pos.     26 ATCAAC    Score   -12
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD19:  ACGTGCTA at position      46 Score -  12
+ Number of predicted promoters -      0

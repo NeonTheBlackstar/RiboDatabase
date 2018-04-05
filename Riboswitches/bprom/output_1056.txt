@@ -1,4 +1,4 @@
->BSU14580|500|200|1528325|1529441|+|pdhA|chromosome|NC_000964.3                 
+>b2410|500|200|2526945|2527944|+|yfeH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU20580|500|200|2195985|2196264|+|yoqM|chromosome|NC_000964.3                 
+>b3352|500|200|3481288|3483202|+|yheS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

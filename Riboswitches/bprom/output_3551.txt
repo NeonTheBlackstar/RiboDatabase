@@ -1,4 +1,4 @@
->BSU20110|452|200|2166872|2167007|-|yosI|chromosome|NC_000964.3                 
+>b0888|500|200|931084|932050|-|trxB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

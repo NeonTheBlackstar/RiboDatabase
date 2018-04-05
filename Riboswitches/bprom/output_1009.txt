@@ -1,4 +1,4 @@
->BSU13980|500|200|1467804|1469862|+|pbpH|chromosome|NC_000964.3                 
+>b2257|500|200|2370907|2372560|+|arnT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

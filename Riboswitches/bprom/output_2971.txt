@@ -1,4 +1,4 @@
->BSU27490|500|200|2808706|2809327|-|yrrB|chromosome|NC_000964.3                 
+>b2162|500|200|2254244|2255186|-|rihB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

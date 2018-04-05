@@ -1,14 +1,4 @@
->BSU00130|500|200|20879|22157|+|serS|chromosome|NC_000964.3                     
+>b0020|500|200|18714|19620|+|nhaR|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.11
- -10 box at pos.     47 TGGTCGTAT Score    25
- -35 box at pos.     25 TTGAAG    Score    54
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       nagC:  ATATTTTA at position       1 Score -   7
-       nagC:  ATTTTAGA at position       3 Score -   6
-     rpoD17:  GCATAATG at position      41 Score -   8
+ Number of predicted promoters -      0

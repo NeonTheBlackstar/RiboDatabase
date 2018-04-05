@@ -1,4 +1,4 @@
->BSU34920|500|200|3587550|3588192|-|hisG|chromosome|NC_000964.3                 
+>b3311|141|200|3448313|3448568|-|rpsQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

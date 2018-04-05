@@ -1,4 +1,15 @@
->BSU37430|500|200|3842293|3842995|+|albG|chromosome|NC_000964.3                 
+>b4313|500|200|4542036|4542633|+|fimE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.27
+ -10 box at pos.     48 TGTTAAAAA Score    48
+ -35 box at pos.     21 TAGAGA    Score     6
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TTTTATAG at position      16 Score -  10
+     rpoD18:  TTGAGATA at position      30 Score -   9
+        lrp:  TATTCTTA at position      63 Score -   8
+       ilvY:  ATATATCA at position      73 Score -   9

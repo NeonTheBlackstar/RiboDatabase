@@ -1,4 +1,4 @@
->BSU30380|500|200|3111326|3112088|-|bceA|chromosome|NC_000964.3                 
+>b2575|500|200|2712026|2712764|-|trmN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

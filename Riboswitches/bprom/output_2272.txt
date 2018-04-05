@@ -1,4 +1,4 @@
->BSU36830|500|200|3783877|3785386|-|atpA|chromosome|NC_000964.3                 
+>b3563|500|200|3727406|3727748|-|yiaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,12 +1,4 @@
->BSU22050|500|200|2316955|2318053|-|bcsA|chromosome|NC_000964.3                 
+>b1233|500|200|1288673|1289132|-|ychJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.40
- -10 box at pos.     46 AGGTGTGAT Score    35
- -35 box at pos.     27 ATGCCG    Score    25
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-      rpoH3:  CAAAAAAA at position      19 Score -   9
+ Number of predicted promoters -      0

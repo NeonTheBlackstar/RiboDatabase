@@ -1,4 +1,4 @@
->BSU10400|500|200|1115697|1116555|+|yhxC|chromosome|NC_000964.3                 
+>b1610|500|200|1684258|1685188|+|tus|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

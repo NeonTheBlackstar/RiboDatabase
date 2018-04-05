@@ -1,4 +1,4 @@
->BSU28500|500|200|2913023|2913338|-|trxA|chromosome|NC_000964.3                 
+>b2315|500|200|2431673|2432942|-|folC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

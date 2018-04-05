@@ -1,4 +1,4 @@
->BSU15000|454|200|1568923|1569196|+|ylbG|chromosome|NC_000964.3                 
+>b2482|500|200|2601817|2603836|+|hyfB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

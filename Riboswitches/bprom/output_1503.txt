@@ -1,4 +1,15 @@
->BSU22869|500|200|2393421|2393559|+|ypzI|chromosome|NC_000964.3                 
+>b3513|500|200|3659231|3660389|+|mdtE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.36
+ -10 box at pos.     45 GTCGACGCT Score     0
+ -35 box at pos.     29 ATGAAA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  AAAAATAA at position      19 Score -   9
+        ihf:  AAATAAAA at position      21 Score -  13
+       arcA:  AATAAAAA at position      22 Score -  12
+       argR:  ATAAAAAT at position      23 Score -  10

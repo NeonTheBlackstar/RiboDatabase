@@ -1,4 +1,4 @@
->BSU40010|500|200|4109184|4109616|-|yxaD|chromosome|NC_000964.3                 
+>b4092|386|200|4314343|4315102|-|phnP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

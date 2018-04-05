@@ -1,4 +1,4 @@
->BSU33470|500|200|3437643|3438060|-|bdbC|chromosome|NC_000964.3                 
+>b3068|500|200|3214966|3215473|-|mug|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

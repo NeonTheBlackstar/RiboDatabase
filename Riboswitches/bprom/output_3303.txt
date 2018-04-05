@@ -1,4 +1,4 @@
->BSU23270|500|200|2429599|2430247|-|ribE|chromosome|NC_000964.3                 
+>b1498|500|200|1580841|1582524|-|ydeN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

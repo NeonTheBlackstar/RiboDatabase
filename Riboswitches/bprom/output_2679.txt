@@ -1,4 +1,4 @@
->BSU31230|500|200|3204066|3206055|-|tlpB|chromosome|NC_000964.3                 
+>b2750|500|200|2873386|2873992|-|cysC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

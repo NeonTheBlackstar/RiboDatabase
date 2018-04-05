@@ -1,4 +1,4 @@
->BSU37420|500|200|3841016|3842297|+|albF|chromosome|NC_000964.3                 
+>b4312|500|200|4540956|4541559|+|fimB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

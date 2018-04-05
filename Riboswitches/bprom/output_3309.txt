@@ -1,4 +1,4 @@
->BSU23200|500|200|2424653|2425193|-|ypuI|chromosome|NC_000964.3                 
+>b1492|500|200|1568953|1570489|-|gadC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU36040|500|200|3714001|3714679|-|ywrJ|chromosome|NC_000964.3                 
+>b3450|500|200|3588109|3589180|-|ugpC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

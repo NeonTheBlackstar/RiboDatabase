@@ -1,13 +1,4 @@
->BSU14680|500|200|1538263|1538692|+|ykzC|chromosome|NC_000964.3                 
+>b2428|500|200|2545772|2546669|+|murQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.44
- -10 box at pos.     44 GTGCACGAT Score    26
- -35 box at pos.     28 TTTAAT    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       nagC:  TTTAATTT at position      28 Score -   7
-        ihf:  TTAATTTA at position      29 Score -  12
+ Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->BSU04020|500|200|454651|455260|-|yczH|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

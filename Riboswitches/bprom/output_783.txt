@@ -1,4 +1,4 @@
->BSU10940|500|200|1172649|1173336|+|yitC|chromosome|NC_000964.3                 
+>b1653|500|200|1729086|1733703|+|lhr|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

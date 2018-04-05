@@ -1,4 +1,4 @@
->BSU22780|416|200|2384782|2385355|-|folE|chromosome|NC_000964.3                 
+>b1379|500|200|1441320|1441743|-|hslJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

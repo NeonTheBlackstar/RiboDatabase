@@ -1,4 +1,4 @@
->BSU12980|500|200|1366843|1367944|+|ykfB|chromosome|NC_000964.3                 
+>b2076|500|200|2158385|2161463|+|mdtC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

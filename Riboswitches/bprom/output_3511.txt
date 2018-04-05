@@ -1,4 +1,4 @@
->BSU20550|500|200|2194717|2195059|-|yoqP|chromosome|NC_000964.3                 
+>b0999|500|200|1062549|1062855|-|cbpM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

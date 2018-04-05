@@ -1,4 +1,4 @@
->BSU27920|500|200|2852660|2853947|-|obgE|chromosome|NC_000964.3                 
+>b2229|500|200|2334335|2334959|-|yfaT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

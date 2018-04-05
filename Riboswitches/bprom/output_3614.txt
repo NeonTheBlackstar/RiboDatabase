@@ -1,4 +1,4 @@
->BSU19360|500|200|2107504|2108758|-|odhB|chromosome|NC_000964.3                 
+>b0757|500|200|788830|789979|-|galK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

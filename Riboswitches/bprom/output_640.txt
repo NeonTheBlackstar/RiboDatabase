@@ -1,4 +1,13 @@
->BSU08520|500|200|925632|926427|+|recX|chromosome|NC_000964.3                   
+>b1343|500|200|1409510|1410884|+|dbpA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.71
+ -10 box at pos.     46 CTGTATACA Score    35
+ -35 box at pos.     21 TAACAA    Score    -5
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       araC:  TAACAAAA at position      21 Score -  10
+       metR:  ATTTTTCC at position      32 Score -   6

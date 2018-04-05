@@ -1,4 +1,4 @@
->BSU00300|292|200|40212|40653|+|yaaR|chromosome|NC_000964.3                     
+>b0043|500|200|44179|45466|+|fixC|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

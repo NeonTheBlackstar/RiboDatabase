@@ -1,4 +1,12 @@
->BSU33680|461|200|3457614|3457941|+|yvaP|chromosome|NC_000964.3                 
+>b4057|370|200|4270657|4271014|+|yjbR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.91
+ -10 box at pos.     46 CGTTAACAT Score    64
+ -35 box at pos.     29 CTGGCT    Score    -2
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  TAACGGAT at position       6 Score -   6

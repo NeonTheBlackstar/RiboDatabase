@@ -1,13 +1,4 @@
->BSU15330|500|200|1605629|1606412|+|sigG|chromosome|NC_000964.3                 
+>b2550|500|200|2682862|2684056|+|yphH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.49
- -10 box at pos.     45 AGGTTTCCT Score    23
- -35 box at pos.     27 ATAACA    Score    13
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  AAATAACA at position      25 Score -  10
-       araC:  TAACAAAA at position      28 Score -  10
+ Number of predicted promoters -      0

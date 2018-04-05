@@ -1,13 +1,4 @@
->BSU14710|500|200|1541885|1543826|+|ylaA|chromosome|NC_000964.3                 
+>b2429|500|200|2546672|2548097|+|murP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.28
- -10 box at pos.     45 CCTTGTCAT Score    19
- -35 box at pos.     26 TTCAAA    Score    40
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       ompR:  TTCTTTTT at position      20 Score -   8
-        ihf:  TTTCAAAA at position      25 Score -   6
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU28100|500|200|2869963|2870989|-|ysxE|chromosome|NC_000964.3                 
+>b2265|334|200|2379347|2380643|-|menF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

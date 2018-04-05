@@ -1,4 +1,0 @@
->BSU03740|500|200|424903|426364|-|yclI|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

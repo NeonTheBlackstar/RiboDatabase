@@ -1,4 +1,14 @@
->BSU37820|500|200|3883426|3884278|-|spsK|chromosome|NC_000964.3                 
+>b3702|500|200|3882325|3883729|-|dnaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.48
+ -10 box at pos.     46 CGCTTTTCC Score   -16
+ -35 box at pos.     26 TTCTCT    Score    28
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fur:  ATAATTGT at position       3 Score -  13
+       tyrR:  ATTGTACA at position       6 Score -  10
+     rpoD15:  TTTTCGCA at position      60 Score -   6

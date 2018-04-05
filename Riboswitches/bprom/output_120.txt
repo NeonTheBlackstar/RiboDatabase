@@ -1,12 +1,4 @@
->BSU01260|254|200|140450|140819|+|rplN|chromosome|NC_000964.3                   
+>b0243|500|200|261502|262756|+|proA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.70
- -10 box at pos.     46 ACATACACT Score    37
- -35 box at pos.     24 TTGTTG    Score    39
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        ihf:  ACAAAAAA at position      39 Score -   9
+ Number of predicted promoters -      0

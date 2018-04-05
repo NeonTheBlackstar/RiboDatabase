@@ -1,4 +1,4 @@
->BSU28120|500|200|2872879|2874172|-|hemL|chromosome|NC_000964.3                 
+>b2267|500|200|2381081|2381543|-|elaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

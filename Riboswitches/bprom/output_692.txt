@@ -1,4 +1,4 @@
->BSU09200|500|200|994997|995594|+|yhcS|chromosome|NC_000964.3                   
+>b1438|172|200|1509507|1509924|+|hicB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

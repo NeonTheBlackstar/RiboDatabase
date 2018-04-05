@@ -1,12 +1,11 @@
->BSU39000|500|200|4002715|4004134|-|yxjC|chromosome|NC_000964.3                 
+>b3899|407|200|4090914|4092366|-|frvB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.35
- -10 box at pos.     41 TGGCATGCT Score    42
- -35 box at pos.     23 TAGACT    Score    24
+ Promoter Pos:     61 LDF-  0.65
+ -10 box at pos.     46 CGGTTTTAT Score    38
+ -35 box at pos.     23 TTGGCG    Score    32
 
  Oligonucleotides from known TF binding sites:
 
- For promoter at     61:
-       phoB:  TCATAAAA at position      49 Score -  11
+ No such sites for promoter at     61

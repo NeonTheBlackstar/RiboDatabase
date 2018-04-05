@@ -1,4 +1,4 @@
->BSU00910|500|200|110479|110956|+|ispF|chromosome|NC_000964.3                   
+>b0172|500|200|192871|193429|+|frr|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

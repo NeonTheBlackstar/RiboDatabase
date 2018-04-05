@@ -1,4 +1,4 @@
->BSU18070|500|200|1931919|1932501|-|yneS|chromosome|NC_000964.3                 
+>b0570|500|200|593327|594770|-|cusS|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

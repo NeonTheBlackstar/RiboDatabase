@@ -1,4 +1,4 @@
->BSU33700|500|200|3459805|3460486|-|opuBD|chromosome|NC_000964.3                
+>b3117|500|200|3265038|3266028|-|tdcB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

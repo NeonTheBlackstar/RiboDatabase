@@ -1,4 +1,4 @@
->BSU00990|500|200|117348|117498|+|rpmG|chromosome|NC_000964.3                   
+>b0180|500|200|202100|202556|+|fabZ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

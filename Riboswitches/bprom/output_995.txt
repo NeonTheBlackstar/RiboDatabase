@@ -1,4 +1,4 @@
->BSU13820|443|200|1448505|1449132|+|ykvT|chromosome|NC_000964.3                 
+>b2222|500|200|2324108|2324759|+|atoA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

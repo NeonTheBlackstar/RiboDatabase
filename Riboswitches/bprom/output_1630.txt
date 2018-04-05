@@ -1,4 +1,4 @@
->BSU29540|500|200|3021232|3022036|+|ppnK|chromosome|NC_000964.3                 
+>b3811|500|200|3996286|3997183|+|xerC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

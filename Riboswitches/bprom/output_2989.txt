@@ -1,4 +1,4 @@
->BSU27280|500|200|2787845|2788487|-|yrrT|chromosome|NC_000964.3                 
+>b2125|500|200|2212242|2212962|-|yehT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

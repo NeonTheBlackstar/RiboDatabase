@@ -1,4 +1,4 @@
->BSU23250|500|200|2427891|2428356|-|ribH|chromosome|NC_000964.3                 
+>b1496|500|200|1577656|1579342|-|yddA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

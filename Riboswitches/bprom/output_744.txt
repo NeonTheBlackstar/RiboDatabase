@@ -1,4 +1,4 @@
->BSU10130|500|200|1087249|1088182|+|hemH|chromosome|NC_000964.3                 
+>b1588|500|200|1660555|1662979|+|ynfF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

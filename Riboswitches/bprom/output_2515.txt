@@ -1,4 +1,4 @@
->BSU33510|329|200|3443612|3443822|-|copZ|chromosome|NC_000964.3                 
+>b3083|500|200|3234140|3234455|-|higB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

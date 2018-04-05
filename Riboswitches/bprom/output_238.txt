@@ -1,4 +1,11 @@
->BSU02870|500|200|309999|310842|+|adcB|chromosome|NC_000964.3                   
+>b0512|500|200|539146|540508|+|allB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.45
+ -10 box at pos.     48 CAGTATTAT Score    62
+ -35 box at pos.     26 ATAAAA    Score     7
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

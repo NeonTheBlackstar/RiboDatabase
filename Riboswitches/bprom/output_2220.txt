@@ -1,4 +1,4 @@
->BSU37570|420|200|3857016|3858417|-|mmr|chromosome|NC_000964.3                  
+>b3670|500|200|3850801|3851092|-|ilvN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

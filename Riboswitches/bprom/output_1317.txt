@@ -1,12 +1,4 @@
->BSU17480|486|200|1880622|1880967|+|ynzF|chromosome|NC_000964.3                 
+>b3062|500|200|3207370|3207976|+|ttdB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.25
- -10 box at pos.     48 ATTTATGGT Score    41
- -35 box at pos.     27 ATGACT    Score    31
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD18:  TTACACTT at position      34 Score -   9
+ Number of predicted promoters -      0

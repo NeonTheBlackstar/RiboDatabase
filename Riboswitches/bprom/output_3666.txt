@@ -1,4 +1,4 @@
->BSU18540|500|200|2021222|2022467|-|yoaB|chromosome|NC_000964.3                 
+>b0632|500|200|662751|663963|-|dacA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

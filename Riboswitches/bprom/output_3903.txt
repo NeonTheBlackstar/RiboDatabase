@@ -1,4 +1,4 @@
->BSU10010|500|200|1074645|1075164|-|trpP|chromosome|NC_000964.3                 
+>b4412|7|200|16750|16903|-|hokC|chromosome|NC_000913.3                          
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

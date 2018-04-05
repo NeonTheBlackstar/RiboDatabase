@@ -1,4 +1,4 @@
->BSU33810|500|200|3468252|3469164|-|opuCC|chromosome|NC_000964.3                
+>b3151|500|200|3297097|3298138|-|yraQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

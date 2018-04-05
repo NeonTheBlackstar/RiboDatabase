@@ -1,4 +1,4 @@
->BSU12900|500|200|1357935|1359285|-|htrA|chromosome|NC_000964.3                 
+>b0288|500|200|303852|304182|-|ykgJ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

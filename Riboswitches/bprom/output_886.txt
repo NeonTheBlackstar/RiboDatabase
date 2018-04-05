@@ -1,11 +1,4 @@
->BSU12440|500|200|1316994|1317129|+|phrA|chromosome|NC_000964.3                 
+>b1930|500|200|2009478|2009712|+|yedF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.08
- -10 box at pos.     47 CTATATAAT Score    71
- -35 box at pos.     25 TCCCCG    Score    -2
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

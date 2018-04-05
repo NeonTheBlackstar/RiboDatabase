@@ -1,4 +1,4 @@
->BSU32540|500|200|3344112|3344979|+|bsn|chromosome|NC_000964.3                  
+>b4004|500|200|4203319|4204645|+|zraR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

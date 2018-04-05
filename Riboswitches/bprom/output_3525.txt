@@ -1,4 +1,4 @@
->BSU20380|500|200|2183936|2184407|-|yorH|chromosome|NC_000964.3                 
+>b0967|500|200|1028778|1029969|-|rlmI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

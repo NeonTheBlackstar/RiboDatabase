@@ -1,4 +1,4 @@
->BSU18669|500|200|2037062|2037368|-|yozS|chromosome|NC_000964.3                 
+>b0639|500|200|669930|670572|-|nadD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

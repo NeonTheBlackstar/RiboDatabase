@@ -1,4 +1,11 @@
->BSU39940|476|200|4102428|4103661|-|yxaL|chromosome|NC_000964.3                 
+>b4085|500|200|4307782|4308478|-|alsE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.17
+ -10 box at pos.     46 CGTTATCTT Score    51
+ -35 box at pos.     26 GTAATT    Score    -3
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

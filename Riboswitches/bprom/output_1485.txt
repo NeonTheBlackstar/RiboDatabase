@@ -1,4 +1,4 @@
->BSU21780|500|200|2294285|2295281|+|yplP|chromosome|NC_000964.3                 
+>b3478|500|200|3616181|3617015|+|nikC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

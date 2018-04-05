@@ -1,4 +1,4 @@
->BSU12550|297|200|1324148|1324355|+|xtrA|chromosome|NC_000964.3                 
+>b1945|419|200|2020086|2021091|+|fliM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

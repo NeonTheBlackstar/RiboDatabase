@@ -1,4 +1,4 @@
->BSU15570|500|200|1630381|1631083|+|cysH|chromosome|NC_000964.3                 
+>b2620|500|200|2754895|2755378|+|smpB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

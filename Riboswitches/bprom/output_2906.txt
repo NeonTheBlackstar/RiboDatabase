@@ -1,4 +1,4 @@
->BSU28240|500|200|2887816|2888821|-|ysoA|chromosome|NC_000964.3                 
+>b2284|447|200|2400217|2401555|-|nuoF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

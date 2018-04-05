@@ -1,4 +1,4 @@
->BSU40350|500|200|4145746|4147132|+|rocR|chromosome|NC_000964.3                 
+>b4299|500|200|4525014|4525803|-|yjhI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

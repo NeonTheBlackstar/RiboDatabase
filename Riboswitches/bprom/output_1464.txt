@@ -1,4 +1,11 @@
->BSU21270|297|200|2243988|2244180|+|yomP|chromosome|NC_000964.3                 
+>b3414|500|200|3545623|3546199|+|nfuA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.19
+ -10 box at pos.     45 TGTTACTAT Score    63
+ -35 box at pos.     24 TCGCCA    Score    24
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

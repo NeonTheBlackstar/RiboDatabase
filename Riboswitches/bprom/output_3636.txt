@@ -1,4 +1,4 @@
->BSU18990|500|200|2071285|2071744|-|yobK|chromosome|NC_000964.3                 
+>b4637|500|200|710638|710725|-|uof|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

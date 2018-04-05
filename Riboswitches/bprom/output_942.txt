@@ -1,4 +1,14 @@
->BSU13070|500|200|1375259|1375787|+|ykkA|chromosome|NC_000964.3                 
+>b2086|500|200|2168711|2169611|+|yegS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.51
+ -10 box at pos.     48 AGACATAAT Score    51
+ -35 box at pos.     27 ATCATT    Score     3
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoS17:  CAGACATA at position      47 Score -  10
+       arcA:  AATAAAAA at position      54 Score -  12
+       argR:  ATAAAAAT at position      55 Score -  10

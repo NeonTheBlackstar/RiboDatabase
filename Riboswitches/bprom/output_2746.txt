@@ -1,4 +1,4 @@
->BSU30230|500|200|3093342|3094689|-|bioA|chromosome|NC_000964.3                 
+>b2566|500|200|2702480|2703386|-|era|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

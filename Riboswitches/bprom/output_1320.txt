@@ -1,4 +1,4 @@
->BSU17510|454|200|1882039|1882831|+|ynaC|chromosome|NC_000964.3                 
+>b3066|276|200|3211106|3212852|+|dnaG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

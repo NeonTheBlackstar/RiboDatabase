@@ -1,4 +1,4 @@
->BSU07810|500|200|851849|853535|+|treA|chromosome|NC_000964.3                   
+>b1252|500|200|1311088|1311808|+|tonB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU25460|500|200|2624784|2625912|-|dnaJ|chromosome|NC_000964.3                 
+>b1872|500|200|1954577|1957007|-|torZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

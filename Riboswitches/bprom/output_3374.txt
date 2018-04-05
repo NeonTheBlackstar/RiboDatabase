@@ -1,4 +1,4 @@
->BSU22540|500|200|2363110|2363878|-|qcrC|chromosome|NC_000964.3                 
+>b1335|500|200|1399720|1400236|-|ogt|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

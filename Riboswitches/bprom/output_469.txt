@@ -1,12 +1,12 @@
->BSU06120|500|200|663600|663936|+|ydjB|chromosome|NC_000964.3                   
+>b4517|170|200|1052066|1052240|+|gnsA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.63
- -10 box at pos.     45 TTTTTTAAT Score    48
- -35 box at pos.     21 TAAAAA    Score     0
+ Promoter Pos:     61 LDF-  1.60
+ -10 box at pos.     46 CGATAACCT Score    43
+ -35 box at pos.     23 TTCAAC    Score    18
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at     61:
-       lexA:  TTTTTTTA at position      44 Score -  16
+       nagC:  CTTATTTT at position      13 Score -   6

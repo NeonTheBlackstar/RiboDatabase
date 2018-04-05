@@ -1,4 +1,4 @@
->BSU35740|500|200|3680580|3680970|-|tagD|chromosome|NC_000964.3                 
+>b3429|500|200|3566599|3568033|-|glgA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

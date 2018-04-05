@@ -1,4 +1,13 @@
->BSU08330|500|200|907967|909125|+|yfiN|chromosome|NC_000964.3                   
+>b1323|500|200|1386719|1388261|+|tyrR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.64
+ -10 box at pos.     42 GGGTATTAC Score    39
+ -35 box at pos.     29 TGGCAT    Score    13
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       phoB:  TTTAATTA at position       2 Score -  11
+       arcA:  TTAATTAA at position       3 Score -  13

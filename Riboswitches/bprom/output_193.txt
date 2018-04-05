@@ -1,4 +1,4 @@
->BSU02270|500|200|247743|248277|+|pssA|chromosome|NC_000964.3                   
+>b0415|500|200|434646|435117|+|ribE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

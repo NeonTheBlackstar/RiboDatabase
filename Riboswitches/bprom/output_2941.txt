@@ -1,4 +1,13 @@
->BSU27860|500|200|2847047|2847917|-|nadC|chromosome|NC_000964.3                 
+>b2215|500|200|2311645|2312749|-|ompC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.88
+ -10 box at pos.     44 CAGAATAAT Score    40
+ -35 box at pos.     29 TTTTCT    Score    29
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD17:  AATAGTTA at position       7 Score -  13
+        crp:  GTGTGTAA at position      58 Score -  10

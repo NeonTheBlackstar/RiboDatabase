@@ -1,4 +1,4 @@
->BSU01070|500|200|121918|125500|+|rpoB|chromosome|NC_000964.3                   
+>b0188|404|200|212330|213629|+|tilS|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU30650|500|200|3136237|3136675|-|dps|chromosome|NC_000964.3                  
+>b2627|500|200|2761350|2763540|-|yfjK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

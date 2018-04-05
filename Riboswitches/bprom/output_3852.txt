@@ -1,4 +1,4 @@
->BSU10990|419|200|1177364|1178213|-|yitH|chromosome|NC_000964.3                 
+>b0142|500|200|157252|157732|-|folK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

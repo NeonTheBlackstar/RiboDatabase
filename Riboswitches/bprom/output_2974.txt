@@ -1,12 +1,12 @@
->BSU27469|486|200|2805500|2805692|-|yrzR|chromosome|NC_000964.3                 
+>b2156|500|200|2247062|2248532|-|lysP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.28
- -10 box at pos.     42 CAGTATACT Score    66
- -35 box at pos.     24 ATGAAG    Score    24
+ Promoter Pos:     61 LDF-  1.76
+ -10 box at pos.     47 GTTTGAGAT Score    22
+ -35 box at pos.     27 TTGCTG    Score    47
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at     61:
-        crp:  TCACACTT at position       4 Score -  11
+        crp:  TCACATTT at position      33 Score -  12

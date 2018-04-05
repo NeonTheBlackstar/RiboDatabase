@@ -1,13 +1,4 @@
->BSU18670|500|200|2037600|2038779|-|yoaN|chromosome|NC_000964.3                 
+>b0640|500|200|670573|671605|-|holA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.87
- -10 box at pos.     46 GACAAAACT Score    18
- -35 box at pos.     25 ATGTCT    Score    18
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  AAATCAGA at position      40 Score -   7
-        fis:  AATTATTT at position      67 Score -  12
+ Number of predicted promoters -      0

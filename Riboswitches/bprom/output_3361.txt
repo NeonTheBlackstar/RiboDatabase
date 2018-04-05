@@ -1,11 +1,4 @@
->BSU22670|500|200|2374880|2375897|-|trpD|chromosome|NC_000964.3                 
+>b4526|171|200|1417837|1418008|-|ydaE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.29
- -10 box at pos.     46 CGGCAGAGT Score    23
- -35 box at pos.     24 TTGATC    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

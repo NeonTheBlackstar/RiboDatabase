@@ -1,4 +1,4 @@
->BSU19130|500|200|2085302|2085980|+|yocA|chromosome|NC_000964.3                 
+>b3253|500|200|3403483|3404458|+|acuI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

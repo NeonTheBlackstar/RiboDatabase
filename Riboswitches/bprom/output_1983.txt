@@ -1,4 +1,4 @@
->BSU41030|500|200|4213199|4213826|-|jag|chromosome|NC_000964.3                  
+>b4239|500|200|4463053|4464709|-|treC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

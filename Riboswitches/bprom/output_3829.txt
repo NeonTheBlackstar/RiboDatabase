@@ -1,13 +1,4 @@
->BSU11770|377|200|1251272|1251590|-|cotW|chromosome|NC_000964.3                 
+>b0211|500|200|232596|233955|-|mltD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.43
- -10 box at pos.     41 TGCGAAAAT Score    45
- -35 box at pos.     27 TCGAAG    Score    17
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  TCACAATT at position      51 Score -  10
-      argR2:  ACATATAA at position      67 Score -  14
+ Number of predicted promoters -      0

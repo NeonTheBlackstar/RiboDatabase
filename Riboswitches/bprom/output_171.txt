@@ -1,4 +1,4 @@
->BSU01935|500|200|215403|216894|+|skfC|chromosome|NC_000964.3                   
+>b0378|500|200|397871|398966|+|yaiW|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU28380|500|200|2902001|2903102|-|gerM|chromosome|NC_000964.3                 
+>b2301|500|200|2419840|2420485|-|yfcF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

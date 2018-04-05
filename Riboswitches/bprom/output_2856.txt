@@ -1,4 +1,4 @@
->BSU28850|182|200|2952223|2952583|-|rplT|chromosome|NC_000964.3                 
+>b2372|500|200|2489241|2490186|-|yfdV|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

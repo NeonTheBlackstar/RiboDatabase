@@ -1,4 +1,4 @@
->BSU10490|500|200|1122174|1122681|+|sipV|chromosome|NC_000964.3                 
+>b1622|500|200|1700956|1702129|+|malY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

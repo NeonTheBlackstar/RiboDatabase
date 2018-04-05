@@ -1,4 +1,4 @@
->BSU37100|500|200|3806085|3807375|-|murAB|chromosome|NC_000964.3                
+>b3618|500|200|3792825|3793683|-|yibB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

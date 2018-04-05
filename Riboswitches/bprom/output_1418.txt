@@ -1,4 +1,4 @@
->BSU19530|500|200|2126548|2126938|+|yodA|chromosome|NC_000964.3                 
+>b3287|500|200|3433689|3434199|+|def|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

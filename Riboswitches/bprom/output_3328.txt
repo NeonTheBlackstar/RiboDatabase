@@ -1,4 +1,4 @@
->BSU22990|500|200|2405113|2405557|-|ypbF|chromosome|NC_000964.3                 
+>b1465|500|200|1535936|1536617|-|narV|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

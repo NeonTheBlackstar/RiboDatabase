@@ -1,4 +1,4 @@
->BSU04460|500|200|499364|500045|+|dctR|chromosome|NC_000964.3                   
+>b0762|500|200|794772|794922|+|acrZ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

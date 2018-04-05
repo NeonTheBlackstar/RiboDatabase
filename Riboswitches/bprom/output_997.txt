@@ -1,12 +1,4 @@
->BSU13840|500|200|1450637|1451135|+|stoA|chromosome|NC_000964.3                 
+>b2224|500|200|2326108|2327293|+|atoB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.78
- -10 box at pos.     45 GATTTTCAT Score    20
- -35 box at pos.     25 TTAAAA    Score    37
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  ACGGTATA at position      65 Score -   6
+ Number of predicted promoters -      0

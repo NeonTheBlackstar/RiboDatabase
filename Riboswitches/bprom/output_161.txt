@@ -1,4 +1,4 @@
->BSU01830|500|200|205408|206926|+|ndhF|chromosome|NC_000964.3                   
+>b0352|500|200|373867|374881|+|mhpE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

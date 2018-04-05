@@ -1,4 +1,4 @@
->BSU09990|484|200|1073105|1073717|-|hpr|chromosome|NC_000964.3                  
+>b0011|380|200|10642|11356|-|yaaW|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

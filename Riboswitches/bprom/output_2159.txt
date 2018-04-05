@@ -1,4 +1,4 @@
->BSU38300|500|200|3931371|3932190|-|thiM|chromosome|NC_000964.3                 
+>b3803|500|200|3987884|3989066|-|hemX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

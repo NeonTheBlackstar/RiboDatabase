@@ -1,4 +1,13 @@
->BSU23260|500|200|2428388|2429585|-|ribA|chromosome|NC_000964.3                 
+>b1497|500|200|1579632|1580790|-|ydeM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.75
+ -10 box at pos.     44 AGATAAGAA Score    16
+ -35 box at pos.     27 TTGCTG    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       argR:  CATAAAAA at position      66 Score -  14
+       argR:  ATAAAAAT at position      67 Score -  10

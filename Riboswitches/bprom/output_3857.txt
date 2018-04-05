@@ -1,4 +1,13 @@
->BSU10920|500|200|1170472|1171642|-|sat|chromosome|NC_000964.3                  
+>b0136|500|200|151002|151599|-|yadK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.27
+ -10 box at pos.     48 TGTTGATTT Score    14
+ -35 box at pos.     23 ATGACT    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        tus:  CATTAGTA at position      14 Score -   9
+       cysB:  TGTATATA at position      63 Score -  12

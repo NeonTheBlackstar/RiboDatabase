@@ -1,4 +1,4 @@
->BSU32820|500|200|3367039|3368824|-|fadE|chromosome|NC_000964.3                 
+>b2975|500|200|3119596|3121279|-|glcA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

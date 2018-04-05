@@ -1,4 +1,4 @@
->BSU16250|500|200|1697195|1697639|+|fliJ|chromosome|NC_000964.3                 
+>b2765|500|200|2892213|2892579|+|queD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

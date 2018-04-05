@@ -1,4 +1,4 @@
->BSU16060|500|200|1677450|1678218|+|rnhB|chromosome|NC_000964.3                 
+>b2707|376|200|2829046|2829820|+|srlR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

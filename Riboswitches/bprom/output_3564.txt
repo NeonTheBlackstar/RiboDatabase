@@ -1,4 +1,4 @@
->BSU19980|387|200|2157340|2157682|-|yosW|chromosome|NC_000964.3                 
+>b0869|500|200|906851|908282|-|ybjT|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

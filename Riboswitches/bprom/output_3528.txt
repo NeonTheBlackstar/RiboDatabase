@@ -1,4 +1,4 @@
->BSU20350|500|200|2179525|2181256|-|yorK|chromosome|NC_000964.3                 
+>b0963|500|200|1026556|1027015|-|mgsA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

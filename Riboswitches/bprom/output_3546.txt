@@ -1,4 +1,4 @@
->BSU20160|500|200|2168475|2168871|-|yosD|chromosome|NC_000964.3                 
+>b0904|500|200|953608|954466|-|focA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU31440|500|200|3228777|3229941|+|patB|chromosome|NC_000964.3                 
+>b3922|500|200|4112966|4113266|+|yiiS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

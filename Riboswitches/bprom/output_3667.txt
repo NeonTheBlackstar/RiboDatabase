@@ -1,4 +1,4 @@
->BSU18500|500|200|2018553|2019270|-|fabG|chromosome|NC_000964.3                 
+>b0631|500|200|662378|662642|-|ybeD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

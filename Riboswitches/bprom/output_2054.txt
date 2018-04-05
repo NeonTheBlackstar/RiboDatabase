@@ -1,13 +1,4 @@
->BSU39880|500|200|4095914|4096907|-|yxbC|chromosome|NC_000964.3                 
+>b4084|500|200|4306869|4307799|-|alsK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.30
- -10 box at pos.     47 GGATAAGAT Score    56
- -35 box at pos.     24 TAGCCT    Score    19
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       purR:  TAATCGTT at position      37 Score -   6
-       dnaA:  TTTGGATA at position      44 Score -   6
+ Number of predicted promoters -      0

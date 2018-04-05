@@ -1,4 +1,4 @@
->BSU15260|500|200|1595209|1595917|+|ylxX|chromosome|NC_000964.3                 
+>b2535|500|200|2665434|2666715|+|csiE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

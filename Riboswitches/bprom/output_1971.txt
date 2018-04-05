@@ -1,4 +1,4 @@
->BSU40750|500|200|4186091|4186448|+|yyaQ|chromosome|NC_000964.3                 
+>b4260|500|200|4484439|4485951|-|pepA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

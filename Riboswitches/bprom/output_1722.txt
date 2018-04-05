@@ -1,4 +1,4 @@
->BSU32450|500|200|3333161|3334646|+|pucL|chromosome|NC_000964.3                 
+>b3999|500|200|4199503|4200094|+|yjaG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

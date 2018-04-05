@@ -1,4 +1,4 @@
->BSU05820|261|200|626932|627265|+|gmuA|chromosome|NC_000964.3                   
+>b0946|500|200|1005951|1006494|+|zapC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

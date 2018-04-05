@@ -1,4 +1,4 @@
->BSU13580|500|200|1425640|1426837|+|ykrV|chromosome|NC_000964.3                 
+>b2171|500|200|2265449|2266022|+|yeiP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

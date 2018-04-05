@@ -1,4 +1,11 @@
->BSU08190|500|200|891435|892200|+|malR|chromosome|NC_000964.3                   
+>b1307|318|200|1369392|1369614|+|pspD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.71
+ -10 box at pos.     48 CGGTAAAAC Score    45
+ -35 box at pos.     27 TTGCCA    Score    61
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

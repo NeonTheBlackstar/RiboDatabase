@@ -1,4 +1,4 @@
->BSU35620|500|200|3659118|3660609|-|lytC|chromosome|NC_000964.3                 
+>b3404|500|200|3534515|3535868|-|envZ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

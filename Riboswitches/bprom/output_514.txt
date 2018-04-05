@@ -1,4 +1,4 @@
->BSU06690|500|200|730508|731939|+|gatB|chromosome|NC_000964.3                   
+>b1092|500|200|1149727|1150657|+|fabD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

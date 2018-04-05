@@ -1,4 +1,4 @@
->BSU27930|500|200|2853980|2854559|-|spo0B|chromosome|NC_000964.3                
+>b2230|500|200|2334955|2336644|-|yfaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

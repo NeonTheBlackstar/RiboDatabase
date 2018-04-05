@@ -1,4 +1,4 @@
->BSU21420|500|200|2264679|2264892|+|bhlA|chromosome|NC_000964.3                 
+>b3468|500|200|3605750|3606377|+|yhhN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

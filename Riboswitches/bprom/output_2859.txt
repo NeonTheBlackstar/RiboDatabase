@@ -1,4 +1,4 @@
->BSU28810|500|200|2949052|2950024|-|abnA|chromosome|NC_000964.3                 
+>b2367|500|200|2480637|2482176|-|emrY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

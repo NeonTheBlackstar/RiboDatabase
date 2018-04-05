@@ -1,11 +1,4 @@
->BSU11310|500|200|1207596|1207788|+|comZ|chromosome|NC_000964.3                 
+>b1704|500|200|1788434|1789481|+|aroH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.51
- -10 box at pos.     46 TATGAAAAT Score    36
- -35 box at pos.     29 TTATCA    Score    30
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

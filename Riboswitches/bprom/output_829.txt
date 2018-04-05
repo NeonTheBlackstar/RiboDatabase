@@ -1,4 +1,4 @@
->BSU11610|500|200|1237659|1238460|+|ppnK|chromosome|NC_000964.3                 
+>b1767|500|200|1850859|1851876|+|ansA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

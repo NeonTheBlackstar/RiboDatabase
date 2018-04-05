@@ -1,4 +1,4 @@
->BSU35940|361|200|3703681|3705163|+|rbsA|chromosome|NC_000964.3                 
+>b4186|500|200|4413027|4414191|+|yjfC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

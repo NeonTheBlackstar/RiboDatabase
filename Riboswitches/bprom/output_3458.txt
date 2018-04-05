@@ -1,4 +1,4 @@
->BSU21470|178|200|2267345|2269463|-|sunT|chromosome|NC_000964.3                 
+>b1134|500|200|1193826|1194288|-|nudJ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

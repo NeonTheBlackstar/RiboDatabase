@@ -1,4 +1,4 @@
->BSU14410|500|200|1511307|1511889|+|sipT|chromosome|NC_000964.3                 
+>b2380|500|200|2498670|2500368|+|ypdA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

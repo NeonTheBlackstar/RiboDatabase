@@ -1,4 +1,12 @@
->BSU06180|500|200|671244|671928|+|pspA|chromosome|NC_000964.3                   
+>b1001|500|200|1064035|1065292|+|yccE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.40
+ -10 box at pos.     42 GATCATACT Score    40
+ -35 box at pos.     23 TTGCGA    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  TTAAATTG at position       8 Score -  10

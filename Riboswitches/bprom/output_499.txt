@@ -1,4 +1,4 @@
->BSU06500|500|200|706972|708013|+|purM|chromosome|NC_000964.3                   
+>b1074|500|200|1131437|1131842|+|flgC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

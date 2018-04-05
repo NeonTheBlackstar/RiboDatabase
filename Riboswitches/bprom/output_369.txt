@@ -1,4 +1,4 @@
->BSU04720|276|200|522413|522896|+|rsbW|chromosome|NC_000964.3                   
+>b0807|500|200|842331|843258|+|rlmF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

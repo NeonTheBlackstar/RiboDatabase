@@ -1,4 +1,4 @@
->BSU34090|500|200|3498351|3499257|-|yvfR|chromosome|NC_000964.3                 
+>b3181|500|200|3328238|3328715|-|greA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

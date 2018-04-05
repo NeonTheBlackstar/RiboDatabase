@@ -1,4 +1,4 @@
->BSU29210|500|200|2988692|2989565|-|accD|chromosome|NC_000964.3                 
+>b2432|460|200|2550640|2551216|-|yfeY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

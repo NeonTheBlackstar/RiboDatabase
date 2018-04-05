@@ -1,4 +1,4 @@
->BSU35120|301|200|3607324|3608422|-|yvlB|chromosome|NC_000964.3                 
+>b3323|500|200|3453928|3455398|-|gspA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

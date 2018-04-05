@@ -1,4 +1,4 @@
->BSU21870|500|200|2300761|2302438|-|ilvD|chromosome|NC_000964.3                 
+>b1204|500|200|1257928|1258513|-|pth|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

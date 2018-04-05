@@ -1,4 +1,4 @@
->BSU37530|500|200|3852717|3853377|-|ywhC|chromosome|NC_000964.3                 
+>b3667|500|200|3847304|3848624|-|uhpC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU09890|500|200|1062590|1063487|+|natA|chromosome|NC_000964.3                 
+>b4533|500|200|1636755|1636989|+|ynfO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

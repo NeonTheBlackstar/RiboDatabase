@@ -1,10 +1,10 @@
->BSU30450|335|200|3117975|3118854|-|ytrB|chromosome|NC_000964.3                 
+>b2594|500|200|2735030|2736011|-|rluD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.56
- -10 box at pos.     46 TGATAAGCT Score    49
- -35 box at pos.     23 TTGAAA    Score    60
+ Promoter Pos:     61 LDF-  0.90
+ -10 box at pos.     42 TGACATAAT Score    56
+ -35 box at pos.     21 TGGTCA    Score    16
 
  Oligonucleotides from known TF binding sites:
 

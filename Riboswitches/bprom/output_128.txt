@@ -1,4 +1,4 @@
->BSU01340|464|200|143874|144054|+|rpmD|chromosome|NC_000964.3                   
+>b0287|500|200|302990|303605|+|yagU|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

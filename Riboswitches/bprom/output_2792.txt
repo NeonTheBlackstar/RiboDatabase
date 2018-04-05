@@ -1,4 +1,4 @@
->BSU29590|500|200|3026956|3028102|-|iscS|chromosome|NC_000964.3                 
+>b2498|500|200|2620245|2620872|-|upp|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU03500|500|200|390879|391020|+|comS|chromosome|NC_000964.3                   
+>b0586|165|200|614156|618038|+|entF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

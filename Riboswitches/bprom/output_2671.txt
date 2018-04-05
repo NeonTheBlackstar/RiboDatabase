@@ -1,4 +1,11 @@
->BSU31310|255|200|3217495|3218173|-|yugP|chromosome|NC_000964.3                 
+>b2759|500|200|2882154|2882637|-|casB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.48
+ -10 box at pos.     44 GGATATCGT Score    37
+ -35 box at pos.     27 TTGAAT    Score    55
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

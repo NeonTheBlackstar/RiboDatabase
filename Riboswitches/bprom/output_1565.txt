@@ -1,11 +1,4 @@
->BSU26440|500|200|2705397|2706615|+|yrkO|chromosome|NC_000964.3                 
+>b3654|500|200|3828944|3830336|+|xanP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.67
- -10 box at pos.     45 TGTTTCAAT Score    39
- -35 box at pos.     27 TTTCCT    Score    37
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

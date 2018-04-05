@@ -1,4 +1,4 @@
->BSU33750|500|200|3464288|3464765|+|sdpA|chromosome|NC_000964.3                 
+>b4063|500|200|4277468|4277933|+|soxR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

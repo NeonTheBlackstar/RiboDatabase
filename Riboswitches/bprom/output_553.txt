@@ -1,4 +1,4 @@
->BSU07120|500|200|782061|782949|+|lplC|chromosome|NC_000964.3                   
+>b1166|251|200|1216368|1216635|+|ariR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

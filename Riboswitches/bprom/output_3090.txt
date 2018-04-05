@@ -1,4 +1,4 @@
->BSU25920|202|200|2665902|2666796|-|yqxG|chromosome|NC_000964.3                 
+>b1920|500|200|1999584|2000385|-|fliY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

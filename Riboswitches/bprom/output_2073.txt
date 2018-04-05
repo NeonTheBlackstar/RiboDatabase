@@ -1,4 +1,4 @@
->BSU39620|500|200|4068188|4068536|-|yxeA|chromosome|NC_000964.3                 
+>b4033|500|200|4243530|4245075|-|malF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

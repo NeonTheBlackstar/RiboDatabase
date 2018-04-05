@@ -1,4 +1,11 @@
->BSU22920|500|200|2397764|2399117|-|ypeB|chromosome|NC_000964.3                 
+>b4598|500|200|1517098|1517194|-|yncL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.65
+ -10 box at pos.     42 CGACATACT Score    42
+ -35 box at pos.     25 ATGACT    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

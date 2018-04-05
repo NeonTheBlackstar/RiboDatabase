@@ -1,4 +1,4 @@
->BSU35410|451|200|3638244|3639768|-|flgK|chromosome|NC_000964.3                 
+>b3379|500|200|3507711|3508590|-|php|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

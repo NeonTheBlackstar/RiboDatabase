@@ -1,4 +1,4 @@
->BSU23470|500|200|2444644|2444998|-|spoIIAA|chromosome|NC_000964.3              
+>b1529|500|200|1618242|1618908|-|marC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

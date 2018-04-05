@@ -1,4 +1,4 @@
->BSU03710|500|200|421733|422957|+|gerKC|chromosome|NC_000964.3                  
+>b0606|500|200|639752|641318|+|ahpF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

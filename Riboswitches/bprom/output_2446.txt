@@ -1,4 +1,4 @@
->BSU34430|500|200|3533418|3534102|-|racX|chromosome|NC_000964.3                 
+>b3239|500|200|3385856|3386129|-|yhcO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

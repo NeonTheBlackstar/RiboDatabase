@@ -1,4 +1,4 @@
->BSU15410|283|200|1611653|1612427|+|ylmH|chromosome|NC_000964.3                 
+>b2583|438|200|2719222|2719921|+|yfiP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

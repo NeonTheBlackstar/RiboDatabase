@@ -1,11 +1,4 @@
->BSU19480|500|200|2123025|2123922|-|yojE|chromosome|NC_000964.3                 
+>b0789|500|200|822497|823739|-|clsB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.72
- -10 box at pos.     44 AGGTTTACT Score    41
- -35 box at pos.     29 TTGACT    Score    61
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

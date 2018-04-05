@@ -1,4 +1,4 @@
->BSU17590|500|200|1890511|1891564|-|xylR|chromosome|NC_000964.3                 
+>b0523|500|200|552590|553100|-|purE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU22350|500|200|2345432|2346131|-|dnaD|chromosome|NC_000964.3                 
+>b1285|500|200|1344756|1346742|-|gmr|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

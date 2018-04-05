@@ -1,4 +1,4 @@
->BSU38910|500|200|3994368|3995025|+|yxjL|chromosome|NC_000964.3                 
+>b4386|500|200|4623100|4624117|-|lplA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

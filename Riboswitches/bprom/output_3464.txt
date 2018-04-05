@@ -1,4 +1,4 @@
->BSU21310|500|200|2246150|2246480|-|yozP|chromosome|NC_000964.3                 
+>b1126|500|200|1184457|1185594|-|potA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

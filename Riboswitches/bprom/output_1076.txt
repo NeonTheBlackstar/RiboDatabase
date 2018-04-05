@@ -1,4 +1,4 @@
->BSU14880|500|200|1559308|1560226|+|ctaB|chromosome|NC_000964.3                 
+>b2449|338|200|2563979|2564372|+|yffR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

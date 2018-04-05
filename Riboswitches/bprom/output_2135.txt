@@ -1,4 +1,4 @@
->BSU38740|500|200|3975087|3976791|-|cydC|chromosome|NC_000964.3                 
+>b3877|500|200|4065808|4067194|-|yihP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

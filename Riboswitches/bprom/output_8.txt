@@ -1,14 +1,4 @@
->BSU00090|500|200|15914|17381|+|guaB|chromosome|NC_000964.3                     
+>b0014|500|200|12162|14079|+|dnaK|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.65
- -10 box at pos.     44 AACAATAAT Score    33
- -35 box at pos.     25 TTCACT    Score    41
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       cpxR:  TAAAACAA at position      41 Score -   9
-     rpoD15:  TTTTGTTT at position      52 Score -   9
-       purR:  TTTCGTTT at position      61 Score -   6
+ Number of predicted promoters -      0

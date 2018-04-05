@@ -1,12 +1,4 @@
->BSU25350|250|200|2615451|2616648|-|yqfD|chromosome|NC_000964.3                 
+>b1847|500|200|1930033|1930390|-|yebF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.42
- -10 box at pos.     46 TGGCAGACT Score    41
- -35 box at pos.     26 CTGCCG    Score    20
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       lexA:  AAACCACA at position      70 Score -   5
+ Number of predicted promoters -      0

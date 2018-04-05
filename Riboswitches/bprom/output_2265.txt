@@ -1,4 +1,11 @@
->BSU36900|500|200|3789189|3790437|-|glyA|chromosome|NC_000964.3                 
+>b3586|279|200|3752962|3754099|-|yiaV|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.23
+ -10 box at pos.     46 TGCCAAAAA Score    17
+ -35 box at pos.     22 TTTACA    Score    47
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

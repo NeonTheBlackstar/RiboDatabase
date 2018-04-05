@@ -1,4 +1,4 @@
->BSU06860|500|200|753816|754401|+|yezE|chromosome|NC_000964.3                   
+>b1106|500|200|1163259|1164084|+|thiK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

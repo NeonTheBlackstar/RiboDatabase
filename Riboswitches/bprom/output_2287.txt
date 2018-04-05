@@ -1,13 +1,4 @@
->BSU36670|500|200|3770103|3770292|-|csbD|chromosome|NC_000964.3                 
+>b4453|500|200|3699979|3700087|-|ldrD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.85
- -10 box at pos.     47 TTTTATTTT Score    52
- -35 box at pos.     25 TTTCAG    Score    30
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        ihf:  TTTTATTT at position      47 Score -  13
-      argR2:  TTTATTTT at position      48 Score -   7
+ Number of predicted promoters -      0

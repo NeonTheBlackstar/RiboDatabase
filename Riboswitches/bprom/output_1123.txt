@@ -1,4 +1,4 @@
->BSU15390|500|200|1610864|1611314|+|sepF|chromosome|NC_000964.3                 
+>b2580|500|200|2716753|2717443|+|ung|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

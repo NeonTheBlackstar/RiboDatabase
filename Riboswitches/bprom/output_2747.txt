@@ -1,4 +1,4 @@
->BSU30220|500|200|3092183|3093353|-|bioF|chromosome|NC_000964.3                 
+>b2565|500|200|2701740|2702469|-|recO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

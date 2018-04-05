@@ -1,4 +1,4 @@
->BSU39430|500|200|4052378|4053320|-|deoR|chromosome|NC_000964.3                 
+>b4407|500|200|4192636|4192837|-|thiS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

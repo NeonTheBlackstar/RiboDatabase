@@ -1,4 +1,4 @@
->BSU16470|473|200|1716492|1717257|+|sigD|chromosome|NC_000964.3                 
+>b2834|276|200|2971596|2972637|+|tas|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU11280|500|200|1205164|1205899|+|yjaU|chromosome|NC_000964.3                 
+>b1700|500|200|1782680|1782974|+|ydiT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

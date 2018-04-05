@@ -1,14 +1,4 @@
->BSU07580|500|200|830944|832573|+|citS|chromosome|NC_000964.3                   
+>b1225|500|200|1283603|1285142|+|narH|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.22
- -10 box at pos.     47 ATTCATCAT Score    37
- -35 box at pos.     21 GTATCA    Score    -3
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        fur:  ATCATTTT at position      51 Score -   8
-     rpoD19:  TGTTGTGT at position      62 Score -   8
-       farR:  TGTATTAT at position      67 Score -   6
+ Number of predicted promoters -      0

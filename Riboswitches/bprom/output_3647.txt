@@ -1,15 +1,4 @@
->BSU18840|500|200|2054598|2055240|-|xynA|chromosome|NC_000964.3                 
+>b0657|500|200|689342|690881|-|lnt|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  5.90
- -10 box at pos.     47 AGCTATCAT Score    65
- -35 box at pos.     27 TTCTTT    Score    20
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD16:  TTTCAAAT at position       5 Score -  10
-        ihf:  AAATAAAA at position       9 Score -  13
-       arcA:  AATAAAAA at position      10 Score -  12
-       argR:  ATAAAAAT at position      11 Score -  10
+ Number of predicted promoters -      0

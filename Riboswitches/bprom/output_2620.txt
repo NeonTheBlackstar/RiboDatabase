@@ -1,4 +1,4 @@
->BSU32140|492|200|3304095|3304719|-|paiB|chromosome|NC_000964.3                 
+>b4683|411|200|2989818|2989899|-|yqeL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

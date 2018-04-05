@@ -1,14 +1,4 @@
->BSU14480|500|200|1517864|1518143|+|abh|chromosome|NC_000964.3                  
+>b2389|500|200|2509629|2510886|+|yfeO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.47
- -10 box at pos.     47 CGGTGTTTT Score    18
- -35 box at pos.     27 CTGACA    Score    31
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       phoB:  CATCTTTC at position      13 Score -   6
-       metR:  ATTTTTCC at position      39 Score -   6
-       arcA:  TCATGTTT at position      61 Score -   6
+ Number of predicted promoters -      0

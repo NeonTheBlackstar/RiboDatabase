@@ -1,13 +1,4 @@
->BSU23500|500|200|2447245|2448430|-|drm|chromosome|NC_000964.3                  
+>b1538|500|200|1625334|1627380|-|dcp|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.52
- -10 box at pos.     45 TGTTAAAAA Score    48
- -35 box at pos.     23 ATGACA    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        fis:  AAAAATAA at position      50 Score -   9
-      rpoH2:  AAATAATG at position      52 Score -   5
+ Number of predicted promoters -      0

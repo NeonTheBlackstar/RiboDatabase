@@ -1,4 +1,4 @@
->BSU39320|500|200|4038793|4039159|-|yxiB|chromosome|NC_000964.3                 
+>b3956|500|200|4150446|4153098|-|ppc|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

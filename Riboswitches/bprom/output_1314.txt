@@ -1,4 +1,4 @@
->BSU17450|500|200|1877958|1878366|+|glnR|chromosome|NC_000964.3                 
+>b3055|500|200|3201206|3201827|+|ygiM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

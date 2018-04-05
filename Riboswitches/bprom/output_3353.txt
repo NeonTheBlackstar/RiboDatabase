@@ -1,4 +1,4 @@
->BSU22750|500|200|2382906|2383608|-|ubiE|chromosome|NC_000964.3                 
+>b1376|500|200|1435184|1435619|-|uspF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

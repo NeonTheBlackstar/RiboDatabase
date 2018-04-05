@@ -1,4 +1,4 @@
->BSU11730|500|200|1248664|1249348|+|cotO|chromosome|NC_000964.3                 
+>b1794|500|200|1877714|1878740|+|yeaP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

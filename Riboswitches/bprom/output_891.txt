@@ -1,4 +1,4 @@
->BSU12520|116|200|1322013|1322850|+|xkdB|chromosome|NC_000964.3                 
+>b1941|500|200|2016553|2017927|+|fliI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU03900|500|200|441570|442881|+|gabT|chromosome|NC_000964.3                   
+>b0649|500|200|680211|681663|+|djlC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU11055|471|200|1183028|1183958|-|yitO|chromosome|NC_000964.3                 
+>b0154|500|200|173601|174882|-|hemL|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU06210|500|200|673813|674785|+|ydjI|chromosome|NC_000964.3                   
+>b1013|500|200|1074241|1074880|+|rutR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

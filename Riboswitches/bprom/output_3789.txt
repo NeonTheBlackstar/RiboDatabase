@@ -1,14 +1,4 @@
->BSU13150|500|200|1381433|1381877|-|ohrR|chromosome|NC_000964.3                 
+>b0303|500|200|318330|318567|-|rclB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.04
- -10 box at pos.     48 TCTAAATCT Score    12
- -35 box at pos.     21 TTGACA    Score    66
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       soxS:  CTTTTCCC at position      38 Score -   7
-     rpoD17:  ACAAGTGT at position      69 Score -  11
-        crp:  AAGTGTGA at position      71 Score -  13
+ Number of predicted promoters -      0

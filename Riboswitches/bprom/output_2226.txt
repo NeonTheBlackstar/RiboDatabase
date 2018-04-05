@@ -1,11 +1,4 @@
->BSU37490|500|200|3847852|3848725|-|speB|chromosome|NC_000964.3                 
+>b3663|500|200|3841949|3842402|-|yicN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.81
- -10 box at pos.     45 TCTGAAAAT Score    36
- -35 box at pos.     27 TTTATG    Score    33
-
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     61
+ Number of predicted promoters -      0

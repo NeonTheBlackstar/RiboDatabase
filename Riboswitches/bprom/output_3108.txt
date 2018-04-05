@@ -1,4 +1,4 @@
->BSU25650|500|200|2644345|2644636|-|yqeI|chromosome|NC_000964.3                 
+>b1893|144|200|1978517|1979021|-|insB1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

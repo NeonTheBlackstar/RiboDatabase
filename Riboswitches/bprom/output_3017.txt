@@ -1,4 +1,4 @@
->BSU26780|500|200|2734952|2735456|-|yrdA|chromosome|NC_000964.3                 
+>b2065|500|200|2141633|2142215|-|dcd|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

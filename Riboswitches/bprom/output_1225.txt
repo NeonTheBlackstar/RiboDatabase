@@ -1,4 +1,4 @@
->BSU16430|500|200|1712814|1714833|+|cheA|chromosome|NC_000964.3                 
+>b2811|500|200|2944541|2944985|+|csdE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

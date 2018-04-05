@@ -1,4 +1,4 @@
->BSU09700|500|200|1045036|1045198|+|yheJ|chromosome|NC_000964.3                 
+>b1532|365|200|1619988|1620207|+|marB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU39820|369|200|4089428|4091309|-|htpG|chromosome|NC_000964.3                 
+>b4080|500|200|4299563|4301030|-|mdtP|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

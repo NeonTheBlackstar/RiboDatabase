@@ -1,4 +1,4 @@
->BSU20720|351|200|2201704|2201983|-|yopY|chromosome|NC_000964.3                 
+>b1024|500|200|1089865|1092289|-|pgaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

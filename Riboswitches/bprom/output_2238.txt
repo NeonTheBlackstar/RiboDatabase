@@ -1,12 +1,4 @@
->BSU37240|500|200|3821569|3823072|-|ywiE|chromosome|NC_000964.3                 
+>b3632|500|200|3807063|3808098|-|waaQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.40
- -10 box at pos.     45 TGCCAAGGT Score    15
- -35 box at pos.     25 TTGCAA    Score    55
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  CAAGAGGG at position      28 Score -   7
+ Number of predicted promoters -      0

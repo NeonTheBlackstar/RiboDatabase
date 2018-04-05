@@ -1,4 +1,4 @@
->BSU37940|326|200|3894462|3895785|-|ywdJ|chromosome|NC_000964.3                 
+>b3727|500|200|3909438|3910398|-|pstC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

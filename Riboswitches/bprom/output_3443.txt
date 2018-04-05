@@ -1,4 +1,13 @@
->BSU21680|484|200|2287096|2287528|-|yppQ|chromosome|NC_000964.3                 
+>b4593|500|200|1222989|1223163|-|ymgI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.56
+ -10 box at pos.     47 ATATATACT Score    60
+ -35 box at pos.     25 TCAGCG    Score   -28
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lexA:  ATATATAC at position      47 Score -  12
+       lexA:  TATATACT at position      48 Score -  18

@@ -1,4 +1,4 @@
->BSU20600|485|200|2197120|2197324|-|yoqK|chromosome|NC_000964.3                 
+>b1004|500|200|1067111|1067708|-|wrbA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

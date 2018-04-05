@@ -1,4 +1,4 @@
->BSU19430|500|200|2118503|2119127|-|yojJ|chromosome|NC_000964.3                 
+>b0772|500|200|805997|807281|-|ybhC|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

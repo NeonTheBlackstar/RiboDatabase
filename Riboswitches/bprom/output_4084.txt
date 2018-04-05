@@ -1,4 +1,0 @@
->BSU03950|500|200|446800|448426|-|ycnJ|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

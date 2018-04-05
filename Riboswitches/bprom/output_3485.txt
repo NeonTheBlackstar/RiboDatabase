@@ -1,4 +1,12 @@
->BSU20840|402|200|2208327|2208528|-|yopM|chromosome|NC_000964.3                 
+>b1056|500|200|1117900|1118476|-|yceI|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.29
+ -10 box at pos.     48 TATTACGAT Score    47
+ -35 box at pos.     29 GTGGAT    Score    -6
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        crp:  ATCACAAA at position      64 Score -  10

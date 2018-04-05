@@ -1,4 +1,4 @@
->BSU31050|500|200|3183866|3185075|-|gbsB|chromosome|NC_000964.3                 
+>b2725|500|200|2849973|2850435|-|hycA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

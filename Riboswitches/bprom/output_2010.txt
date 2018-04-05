@@ -1,4 +1,4 @@
->BSU40540|500|200|4167621|4167999|-|yybR|chromosome|NC_000964.3                 
+>b4150|372|200|4377810|4378944|-|ampC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

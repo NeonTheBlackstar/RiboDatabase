@@ -1,4 +1,4 @@
->BSU00840|428|200|101926|102484|+|mcsA|chromosome|NC_000964.3                   
+>b0156|500|200|176609|176954|+|erpA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

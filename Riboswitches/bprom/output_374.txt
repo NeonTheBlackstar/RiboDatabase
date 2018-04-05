@@ -1,4 +1,4 @@
->BSU04770|374|200|525205|525649|+|ydcH|chromosome|NC_000964.3                   
+>b0825|500|200|863641|864304|+|fsaA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

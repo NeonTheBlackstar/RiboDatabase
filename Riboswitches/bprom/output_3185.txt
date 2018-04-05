@@ -1,4 +1,4 @@
->BSU24730|500|200|2559006|2560077|-|comGA|chromosome|NC_000964.3                
+>b1745|500|200|1826915|1828259|-|astB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

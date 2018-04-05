@@ -1,4 +1,4 @@
->BSU20760|238|200|2203110|2203308|-|yopU|chromosome|NC_000964.3                 
+>b1038|364|200|1101710|1102127|-|csgF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

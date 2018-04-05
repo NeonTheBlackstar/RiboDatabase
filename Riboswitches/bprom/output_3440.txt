@@ -1,4 +1,4 @@
->BSU21720|500|200|2290077|2290272|-|ypmT|chromosome|NC_000964.3                 
+>b1176|500|200|1225384|1226080|-|minC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

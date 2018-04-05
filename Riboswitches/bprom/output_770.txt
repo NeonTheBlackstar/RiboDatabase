@@ -1,4 +1,4 @@
->BSU10640|500|200|1143576|1144752|+|sbcD|chromosome|NC_000964.3                 
+>b1630|500|200|1709141|1710200|+|rsxD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

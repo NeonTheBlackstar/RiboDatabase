@@ -1,4 +1,4 @@
->BSU12720|273|200|1340931|1341357|+|xkdS|chromosome|NC_000964.3                 
+>b2000|500|200|2071538|2074658|+|flu|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

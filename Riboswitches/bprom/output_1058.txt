@@ -1,4 +1,4 @@
->BSU14600|500|200|1530536|1531865|+|pdhC|chromosome|NC_000964.3                 
+>b2414|500|200|2532408|2533380|+|cysK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

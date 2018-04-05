@@ -1,4 +1,4 @@
->BSU25340|500|200|2614495|2615455|-|phoH|chromosome|NC_000964.3                 
+>b1846|500|200|1929047|1929707|-|yebE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

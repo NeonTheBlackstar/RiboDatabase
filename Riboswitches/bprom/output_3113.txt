@@ -1,4 +1,4 @@
->BSU25590|500|200|2640512|2641130|-|comEA|chromosome|NC_000964.3                
+>b1887|500|200|1972835|1973339|-|cheW|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

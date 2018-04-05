@@ -1,4 +1,4 @@
->BSU18320|500|200|1974880|1982548|-|ppsC|chromosome|NC_000964.3                 
+>b0610|500|200|643556|643967|-|rnk|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

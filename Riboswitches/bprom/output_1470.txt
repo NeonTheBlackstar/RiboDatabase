@@ -1,4 +1,4 @@
->BSU21350|500|200|2249153|2256011|+|yomI|chromosome|NC_000964.3                 
+>b3444|500|200|3583482|3583758|+|insA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

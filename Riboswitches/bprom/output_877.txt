@@ -1,4 +1,4 @@
->BSU12330|500|200|1304441|1305461|+|yjmD|chromosome|NC_000964.3                 
+>b1876|500|200|1960061|1961795|+|argS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

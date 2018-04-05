@@ -1,12 +1,4 @@
->BSU27410|500|200|2798173|2800810|-|alaS|chromosome|NC_000964.3                 
+>b2151|500|200|2240627|2241668|-|galS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  1.57
- -10 box at pos.     41 CGTTATCAT Score    71
- -35 box at pos.     25 TTAAAA    Score    37
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-     rpoD17:  CTTAAAAT at position      24 Score -  11
+ Number of predicted promoters -      0

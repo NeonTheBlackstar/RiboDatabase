@@ -1,4 +1,4 @@
->BSU27030|500|200|2758042|2760076|-|sacC|chromosome|NC_000964.3                 
+>b2093|433|200|2174281|2174566|-|gatB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

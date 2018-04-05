@@ -1,4 +1,0 @@
->BSU02650|500|200|286772|287420|-|pcp|chromosome|NC_000964.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU00650|500|200|73105|73843|+|yabS|chromosome|NC_000964.3                     
+>b0111|498|200|119280|120135|+|ampE|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

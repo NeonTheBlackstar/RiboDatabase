@@ -1,4 +1,4 @@
->BSU20870|485|200|2210330|2210747|-|yopJ|chromosome|NC_000964.3                 
+>b1059|319|200|1119467|1120586|-|solA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

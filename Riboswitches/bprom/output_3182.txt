@@ -1,13 +1,4 @@
->BSU24770|500|200|2564025|2564406|-|mgsR|chromosome|NC_000964.3                 
+>b1748|500|200|1830761|1831982|-|astC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.10
- -10 box at pos.     45 CACCATAAT Score    44
- -35 box at pos.     23 TTTAAT    Score    36
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       arcA:  AATAAAAA at position      51 Score -  12
-       argR:  ATAAAAAT at position      52 Score -  10
+ Number of predicted promoters -      0

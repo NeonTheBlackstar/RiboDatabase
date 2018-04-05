@@ -1,4 +1,11 @@
->BSU22660|500|200|2374138|2374888|-|trpC|chromosome|NC_000964.3                 
+>b1351|195|200|1417487|1417763|-|racC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.30
+ -10 box at pos.     45 TTTTATCAA Score    30
+ -35 box at pos.     27 TTCACT    Score    41
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

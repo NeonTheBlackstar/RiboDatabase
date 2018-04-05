@@ -1,4 +1,12 @@
->BSU14960|480|200|1566378|1567419|+|ylbC|chromosome|NC_000964.3                 
+>b4547|500|200|2592761|2592962|+|ypfN|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.27
+ -10 box at pos.     44 TGCCAATAT Score    41
+ -35 box at pos.     21 TTCCCG    Score    35
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+       lacI:  AGTAACAA at position      69 Score -   8

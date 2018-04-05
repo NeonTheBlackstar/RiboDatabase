@@ -1,14 +1,4 @@
->BSU00680|500|200|76343|76886|+|hprT|chromosome|NC_000964.3                     
+>b0115|500|200|125694|127587|+|aceF|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.46
- -10 box at pos.     47 AGACATGTT Score    15
- -35 box at pos.     25 CTGAAG    Score    19
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  TCATATCA at position      40 Score -   9
-       ompR:  TGTTTACA at position      56 Score -   8
-       ompR:  TTTACATT at position      58 Score -  11
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU18140|500|200|1942191|1942455|+|ynfE|chromosome|NC_000964.3                 
+>b3149|365|200|3295808|3296399|+|diaA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

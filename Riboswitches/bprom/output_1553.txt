@@ -1,12 +1,4 @@
->BSU25690|500|200|2647455|2647614|+|sda|chromosome|NC_000964.3                  
+>b3621|500|200|3795978|3796938|+|waaC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.55
- -10 box at pos.     43 GCGTATTAT Score    63
- -35 box at pos.     29 GTCCCA    Score     8
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       ompR:  TTTACATT at position      72 Score -  11
+ Number of predicted promoters -      0

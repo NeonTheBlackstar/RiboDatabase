@@ -1,4 +1,4 @@
->BSU04700|363|200|521018|522026|+|rsbU|chromosome|NC_000964.3                   
+>b0800|500|200|835247|836210|+|ybiB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

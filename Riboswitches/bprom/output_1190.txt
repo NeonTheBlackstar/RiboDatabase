@@ -1,4 +1,4 @@
->BSU16090|404|200|1680430|1681588|+|sucC|chromosome|NC_000964.3                 
+>b2711|500|200|2833911|2835045|+|norW|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

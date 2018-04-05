@@ -1,4 +1,4 @@
->BSU06360|500|200|692739|694281|+|guaA|chromosome|NC_000964.3                   
+>b1035|500|200|1099639|1100194|+|ycdY|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

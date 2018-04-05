@@ -1,4 +1,4 @@
->BSU32690|500|200|3357443|3358664|-|sufS|chromosome|NC_000964.3                 
+>b2934|500|200|3078886|3079330|-|cmtB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

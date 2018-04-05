@@ -1,4 +1,4 @@
->BSU16480|500|200|1717285|1717789|+|ylxL|chromosome|NC_000964.3                 
+>b2837|500|200|2976598|2977630|+|galR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

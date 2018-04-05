@@ -1,4 +1,4 @@
->BSU34140|500|200|3505101|3505953|-|ganQ|chromosome|NC_000964.3                 
+>b3185|282|200|3332861|3333119|-|rpmA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

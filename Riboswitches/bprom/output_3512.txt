@@ -1,4 +1,4 @@
->BSU20540|251|200|2194401|2194758|-|yoqR|chromosome|NC_000964.3                 
+>b0995|500|200|1057261|1057954|-|torR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

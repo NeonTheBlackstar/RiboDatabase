@@ -1,4 +1,4 @@
->BSU23670|287|200|2462192|2463224|-|yqkA|chromosome|NC_000964.3                 
+>b1561|322|200|1644650|1644902|-|rem|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

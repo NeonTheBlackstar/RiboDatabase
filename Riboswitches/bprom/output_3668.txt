@@ -1,4 +1,4 @@
->BSU18490|500|200|2017885|2018254|-|rtp|chromosome|NC_000964.3                  
+>b0630|314|200|661636|662278|-|lipB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

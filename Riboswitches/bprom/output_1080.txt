@@ -1,4 +1,4 @@
->BSU14920|500|200|1564062|1564395|+|ctaF|chromosome|NC_000964.3                 
+>b2470|500|200|2587594|2590708|+|acrD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

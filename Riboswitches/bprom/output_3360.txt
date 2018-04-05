@@ -1,12 +1,4 @@
->BSU22680|500|200|2375868|2377416|-|trpE|chromosome|NC_000964.3                 
+>b1352|500|200|1418007|1418229|-|kilR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.35
- -10 box at pos.     45 GGCTACACC Score    21
- -35 box at pos.     29 TTCAAA    Score    40
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        ihf:  ATCATACA at position       5 Score -  13
+ Number of predicted promoters -      0

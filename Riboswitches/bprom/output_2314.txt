@@ -1,4 +1,4 @@
->BSU36269|500|200|3733504|3733648|-|ywzD|chromosome|NC_000964.3                 
+>b3473|500|200|3610515|3611733|-|yhhS|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

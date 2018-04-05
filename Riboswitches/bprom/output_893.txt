@@ -1,4 +1,4 @@
->BSU12539|500|200|1323549|1323717|+|ykzK|chromosome|NC_000964.3                 
+>b1943|390|200|2018385|2019513|+|fliK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

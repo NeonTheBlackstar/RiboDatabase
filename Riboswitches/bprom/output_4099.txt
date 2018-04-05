@@ -1,4 +1,0 @@
->BSU03600|500|200|409964|410669|-|tcyB|chromosome|NC_000964.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU08970|500|200|973155|975051|+|prkA|chromosome|NC_000964.3                   
+>b1410|500|200|1479137|1480895|+|ynbC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

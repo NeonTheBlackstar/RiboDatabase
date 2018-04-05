@@ -1,4 +1,4 @@
->BSU34820|474|200|3577744|3579514|-|bmrA|chromosome|NC_000964.3                 
+>b3301|133|200|3444104|3444539|-|rplO|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

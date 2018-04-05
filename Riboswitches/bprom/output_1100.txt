@@ -1,4 +1,4 @@
->BSU15160|300|200|1581946|1584097|+|pbpB|chromosome|NC_000964.3                 
+>b2499|500|200|2621196|2622234|+|purM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

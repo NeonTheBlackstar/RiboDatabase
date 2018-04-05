@@ -1,4 +1,13 @@
->BSU25280|130|200|2608945|2609713|-|recO|chromosome|NC_000964.3                 
+>b1831|500|200|1914835|1915534|-|proQ|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  1.63
+ -10 box at pos.     42 GGTTTTTAT Score    38
+ -35 box at pos.     25 CTGACA    Score    31
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+      argR2:  TTTTTATT at position      44 Score -  13
+        ihf:  TTTTATTT at position      45 Score -  13

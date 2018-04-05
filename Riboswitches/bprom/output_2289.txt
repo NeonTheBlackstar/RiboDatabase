@@ -1,4 +1,4 @@
->BSU36650|264|200|3768419|3768794|-|ureB|chromosome|NC_000964.3                 
+>b3533|500|200|3692617|3695236|-|bcsA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

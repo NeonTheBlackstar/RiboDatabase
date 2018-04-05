@@ -1,4 +1,11 @@
->BSU17700|313|200|1904994|1905195|-|cotC|chromosome|NC_000964.3                 
+>b0535|500|200|563847|564480|-|sfmZ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.21
+ -10 box at pos.     44 AGGTATGCT Score    63
+ -35 box at pos.     26 TCCATA    Score     1
+
+ Oligonucleotides from known TF binding sites:
+
+ No such sites for promoter at     61

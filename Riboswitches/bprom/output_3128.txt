@@ -1,4 +1,4 @@
->BSU25430|500|200|2621676|2623032|-|rimO|chromosome|NC_000964.3                 
+>b1861|154|200|1945364|1945976|-|ruvA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

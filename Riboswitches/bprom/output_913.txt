@@ -1,4 +1,4 @@
->BSU12700|500|200|1339631|1340609|+|xkdQ|chromosome|NC_000964.3                 
+>b1982|500|200|2055060|2056515|+|amn|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU35990|500|200|3708171|3708699|-|ywrO|chromosome|NC_000964.3                 
+>b3440|500|200|3579767|3580805|-|yhhX|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

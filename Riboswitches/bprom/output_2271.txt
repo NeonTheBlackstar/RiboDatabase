@@ -1,4 +1,4 @@
->BSU36840|459|200|3785402|3785948|-|atpH|chromosome|NC_000964.3                 
+>b3564|500|200|3727916|3729371|-|xylB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU35160|500|200|3610063|3612937|-|uvrA|chromosome|NC_000964.3                 
+>b3338|500|200|3467159|3469853|-|chiA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

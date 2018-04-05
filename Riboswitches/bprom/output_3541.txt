@@ -1,4 +1,13 @@
->BSU20220|355|200|2170503|2170731|-|yorX|chromosome|NC_000964.3                 
+>b0930|500|200|987584|988985|-|asnS|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  0.97
+ -10 box at pos.     47 GAGTAAAAC Score    32
+ -35 box at pos.     22 ATGAAA    Score    30
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        hns:  ACAGAGTA at position      44 Score -   7
+     rpoD17:  GAGTAAAA at position      47 Score -   8

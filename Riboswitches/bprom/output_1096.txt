@@ -1,4 +1,4 @@
->BSU15120|500|200|1578375|1579995|+|yllA|chromosome|NC_000964.3                 
+>b2491|393|200|2611899|2613912|+|hyfR|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

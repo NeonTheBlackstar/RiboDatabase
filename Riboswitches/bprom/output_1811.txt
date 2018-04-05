@@ -1,4 +1,4 @@
->BSU35920|500|200|3702392|3703274|+|rbsK|chromosome|NC_000964.3                 
+>b4184|500|200|4411978|4412377|+|yjfL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

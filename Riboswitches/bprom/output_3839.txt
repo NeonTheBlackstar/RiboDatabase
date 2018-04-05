@@ -1,4 +1,4 @@
->BSU11510|500|200|1228134|1228791|-|yjbE|chromosome|NC_000964.3                 
+>b0168|500|200|188711|189506|-|map|chromosome|NC_000913.3                       
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

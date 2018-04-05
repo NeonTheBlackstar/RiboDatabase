@@ -1,4 +1,4 @@
->BSU06730|500|200|737602|738982|+|yefA|chromosome|NC_000964.3                   
+>b1095|274|200|1151938|1153180|+|fabF|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

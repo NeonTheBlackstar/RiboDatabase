@@ -1,4 +1,4 @@
->BSU19890|40|200|2154265|2154583|-|yotG|chromosome|NC_000964.3                  
+>b0860|500|200|899843|900575|-|artJ|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

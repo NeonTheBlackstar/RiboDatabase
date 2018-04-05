@@ -1,4 +1,4 @@
->BSU00490|500|200|55865|56159|+|spoVG|chromosome|NC_000964.3                    
+>b0086|500|200|94649|96008|+|murF|chromosome|NC_000913.3                        
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

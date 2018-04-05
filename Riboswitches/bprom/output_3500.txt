@@ -1,15 +1,4 @@
->BSU20680|295|200|2200375|2200783|-|yoqC|chromosome|NC_000964.3                 
+>b1014|500|200|1074919|1078882|-|putA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  4.47
- -10 box at pos.     46 TGTCAAAGT Score    36
- -35 box at pos.     28 TAGACA    Score    29
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  TAGACACT at position      28 Score -  12
-       lexA:  TATATAAA at position      60 Score -  14
-       lexA:  ATATAAAA at position      61 Score -  11
-       purR:  ATAAAAAG at position      63 Score -  11
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU32150|500|200|3304742|3305261|-|paiA|chromosome|NC_000964.3                 
+>b2849|500|200|2989934|2990360|-|yqeK|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

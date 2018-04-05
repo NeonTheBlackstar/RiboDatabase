@@ -1,12 +1,4 @@
->BSU11540|500|200|1231082|1233095|+|pepF|chromosome|NC_000964.3                 
+>b1759|500|200|1841489|1841897|+|nudG|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.86
- -10 box at pos.     49 CCTTAGGCT Score    32
- -35 box at pos.     27 TTAACT    Score    38
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-       arcA:  TAACTCAA at position      28 Score -   7
+ Number of predicted promoters -      0

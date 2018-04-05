@@ -1,4 +1,4 @@
->BSU26420|500|200|2703149|2704448|-|yrkQ|chromosome|NC_000964.3                 
+>b2036|500|200|2107225|2108329|-|glf|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

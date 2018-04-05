@@ -1,4 +1,4 @@
->BSU38810|500|200|3984132|3985230|-|msmX|chromosome|NC_000964.3                 
+>b3881|500|200|4071772|4072651|-|yihT|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

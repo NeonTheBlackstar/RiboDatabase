@@ -1,4 +1,4 @@
->BSU16220|500|200|1694118|1695135|+|fliG|chromosome|NC_000964.3                 
+>b2739|500|200|2864235|2865012|+|ygbM|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU30820|500|200|3150562|3152305|-|menD|chromosome|NC_000964.3                 
+>b2699|500|200|2822707|2823769|-|recA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

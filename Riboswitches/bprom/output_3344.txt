@@ -1,4 +1,4 @@
->BSU22840|298|200|2390205|2391516|-|engA|chromosome|NC_000964.3                 
+>b1402|273|200|1467920|1468826|-|insD1|chromosome|NC_000913.3                   
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

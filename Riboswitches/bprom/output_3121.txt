@@ -1,4 +1,4 @@
->BSU25500|500|200|2629717|2630857|-|hemN|chromosome|NC_000964.3                 
+>b1878|500|200|1962579|1962972|-|flhE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

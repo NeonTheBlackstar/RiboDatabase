@@ -1,4 +1,16 @@
->BSU12350|500|200|1306561|1307398|+|yjmF|chromosome|NC_000964.3                 
+>b1895|500|200|1979752|1980181|+|uspC|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  2.79
+ -10 box at pos.     48 GGGTGTATT Score    33
+ -35 box at pos.     24 ATGTAT    Score    12
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+     rpoD15:  TATAAGTC at position      27 Score -  15
+     rpoD17:  ACTTTTGT at position      37 Score -   9
+     rpoD15:  TTTTGTTT at position      39 Score -   9
+     rpoD17:  TTTGTTTT at position      40 Score -   9
+     rpoD16:  TTCAATCT at position      56 Score -   7

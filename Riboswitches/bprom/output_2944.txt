@@ -1,4 +1,4 @@
->BSU27830|500|200|2843930|2844527|-|coxA|chromosome|NC_000964.3                 
+>b2210|500|200|2305107|2306754|-|mqo|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

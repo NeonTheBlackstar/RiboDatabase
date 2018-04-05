@@ -1,4 +1,4 @@
->BSU32330|500|200|3320323|3321220|-|lipA|chromosome|NC_000964.3                 
+>b2896|197|200|3040415|3040823|-|cptA|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

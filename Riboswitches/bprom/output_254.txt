@@ -1,4 +1,14 @@
->BSU03080|500|200|334091|334556|+|ycgE|chromosome|NC_000964.3                   
+>b0544|500|200|568901|570428|+|ybcK|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      0
+ Number of predicted promoters -      1
+ Promoter Pos:     61 LDF-  3.45
+ -10 box at pos.     47 GGTTATTAG Score    38
+ -35 box at pos.     27 TTGTTA    Score    45
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at     61:
+        fis:  ACAATTAT at position      19 Score -   8
+        fis:  AATTATTT at position      21 Score -  12
+       soxS:  ATTTGTTA at position      25 Score -  10

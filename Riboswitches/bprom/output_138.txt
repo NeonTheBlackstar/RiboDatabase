@@ -1,4 +1,4 @@
->BSU01430|500|200|148930|149875|+|rpoA|chromosome|NC_000964.3                   
+>b0318|500|200|335279|335885|+|yahD|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

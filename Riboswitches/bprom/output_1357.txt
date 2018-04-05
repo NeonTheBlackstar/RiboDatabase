@@ -1,4 +1,4 @@
->BSU18019|500|200|1930073|1930199|+|ynzL|chromosome|NC_000964.3                 
+>b3138|500|200|3284169|3284646|+|agaB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

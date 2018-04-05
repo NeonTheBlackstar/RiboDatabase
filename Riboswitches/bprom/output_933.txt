@@ -1,4 +1,4 @@
->BSU12950|500|200|1363140|1364148|+|dppD|chromosome|NC_000964.3                 
+>b2069|500|200|2147673|2149026|+|yegD|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

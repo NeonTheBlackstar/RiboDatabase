@@ -1,13 +1,11 @@
->BSU18898|500|200|2059690|2059864|-|yozW|chromosome|NC_000964.3                 
+>b0661|500|200|693530|694955|-|miaB|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  2.61
- -10 box at pos.     48 AACTATTAT Score    55
- -35 box at pos.     27 ATGCCA    Score    31
+ Promoter Pos:     61 LDF-  0.62
+ -10 box at pos.     47 CGGTAGCTT Score    35
+ -35 box at pos.     25 TTTCCA    Score    42
 
  Oligonucleotides from known TF binding sites:
 
- For promoter at     61:
-        lrp:  TTGACAAT at position      10 Score -   7
-     rpoS17:  CTATTATA at position      50 Score -  13
+ No such sites for promoter at     61

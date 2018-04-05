@@ -1,4 +1,4 @@
->BSU27400|500|200|2797822|2798089|-|yrzL|chromosome|NC_000964.3                 
+>b2150|500|200|2239349|2240348|-|mglB|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

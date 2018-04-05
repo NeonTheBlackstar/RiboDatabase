@@ -1,14 +1,4 @@
->BSU00570|500|200|64816|66415|+|yabM|chromosome|NC_000964.3                     
+>b0094|500|200|103981|105244|+|ftsA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     61 LDF-  0.25
- -10 box at pos.     46 CTCCAAAAA Score     6
- -35 box at pos.     21 ATGTAT    Score    12
-
- Oligonucleotides from known TF binding sites:
-
- For promoter at     61:
-        crp:  ATTTGTGA at position       8 Score -   6
-       cysB:  TGTATATA at position      22 Score -  12
-     rpoD19:  TACTTAAA at position      59 Score -   8
+ Number of predicted promoters -      0

@@ -1,4 +1,4 @@
->BSU20630|290|200|2198312|2198765|-|yoqH|chromosome|NC_000964.3                 
+>b1008|500|200|1070364|1070955|-|rutE|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

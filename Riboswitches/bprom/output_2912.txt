@@ -1,4 +1,4 @@
->BSU28170|500|200|2877765|2879133|-|hemA|chromosome|NC_000964.3                 
+>b2278|249|200|2393204|2395046|-|nuoL|chromosome|NC_000913.3                    
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

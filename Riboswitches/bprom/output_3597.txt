@@ -1,4 +1,4 @@
->BSU19590|500|200|2131901|2133302|-|ctpA|chromosome|NC_000964.3                 
+>b0798|500|200|832467|832950|-|ybiA|chromosome|NC_000913.3                      
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0

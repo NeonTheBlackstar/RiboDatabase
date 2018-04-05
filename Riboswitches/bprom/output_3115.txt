@@ -1,4 +1,4 @@
->BSU25570|500|200|2637542|2639873|-|comEC|chromosome|NC_000964.3                
+>b1885|500|200|1969382|1970984|-|tap|chromosome|NC_000913.3                     
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      0
