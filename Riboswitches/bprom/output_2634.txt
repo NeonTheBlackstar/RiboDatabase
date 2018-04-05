@@ -1,4 +1,0 @@
->b2823|342|200|2962440|2962764|-|ppdC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

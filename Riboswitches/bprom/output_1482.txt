@@ -1,4 +1,0 @@
->b3475|500|200|3612968|3613556|+|acpT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

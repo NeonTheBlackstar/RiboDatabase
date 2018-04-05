@@ -1,4 +1,0 @@
->b4162|500|200|4391603|4392149|+|orn|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

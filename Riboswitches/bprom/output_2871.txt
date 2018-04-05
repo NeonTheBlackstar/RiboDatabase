@@ -1,4 +1,0 @@
->b2332|491|200|2449227|2450049|-|yfcO|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

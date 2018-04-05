@@ -1,4 +1,0 @@
->b0931|500|200|989153|990356|-|pncB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

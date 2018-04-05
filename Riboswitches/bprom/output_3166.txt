@@ -1,4 +1,0 @@
->b1782|500|200|1865725|1866472|-|mipA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

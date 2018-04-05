@@ -1,4 +1,0 @@
->b1268|500|200|1324745|1326641|+|yciQ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

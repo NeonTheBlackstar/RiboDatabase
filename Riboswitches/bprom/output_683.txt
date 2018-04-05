@@ -1,4 +1,0 @@
->b1424|500|200|1496855|1498511|+|opgD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

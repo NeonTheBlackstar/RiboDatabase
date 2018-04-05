@@ -1,4 +1,0 @@
->b0989|500|200|1050962|1051175|-|cspH|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

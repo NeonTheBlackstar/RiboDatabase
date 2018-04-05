@@ -1,4 +1,0 @@
->b3608|417|200|3782641|3783661|-|gpsA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

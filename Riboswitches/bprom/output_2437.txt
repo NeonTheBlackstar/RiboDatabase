@@ -1,4 +1,0 @@
->b3250|500|200|3398874|3399978|-|mreC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

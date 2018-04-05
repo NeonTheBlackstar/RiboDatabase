@@ -1,4 +1,0 @@
->b0349|500|200|371238|372105|+|mhpC|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

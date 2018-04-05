@@ -1,4 +1,0 @@
->b4674|500|200|1465164|1465230|-|ynbG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

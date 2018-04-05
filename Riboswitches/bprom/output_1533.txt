@@ -1,4 +1,0 @@
->b3580|500|200|3747083|3748580|+|lyxK|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0301|198|200|317725|318319|-|rclC|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1235|500|200|1290241|1291255|+|rssB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4383|500|200|4619602|4620826|+|deoB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

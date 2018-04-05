@@ -1,4 +1,0 @@
->b2608|217|200|2745369|2745918|-|rimM|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

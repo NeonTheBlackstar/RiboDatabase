@@ -1,4 +1,0 @@
->b2781|356|200|2909893|2910685|-|mazG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

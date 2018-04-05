@@ -1,4 +1,0 @@
->b4669|135|200|3950506|3950557|+|ilvX|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

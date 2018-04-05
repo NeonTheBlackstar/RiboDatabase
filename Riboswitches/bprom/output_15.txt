@@ -1,4 +1,0 @@
->b0026|500|200|22390|25207|+|ileS|chromosome|NC_000913.3                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

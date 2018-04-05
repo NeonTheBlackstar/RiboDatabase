@@ -1,4 +1,0 @@
->b1640|500|200|1718492|1719602|-|anmK|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

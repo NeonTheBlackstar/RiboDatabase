@@ -1,4 +1,0 @@
->b3508|340|200|3655254|3655902|-|yhiD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

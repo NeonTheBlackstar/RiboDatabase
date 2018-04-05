@@ -1,4 +1,0 @@
->b3147|500|200|3293399|3295436|+|lpoA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

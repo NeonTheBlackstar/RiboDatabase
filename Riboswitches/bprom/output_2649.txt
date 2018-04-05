@@ -1,4 +1,0 @@
->b2791|279|200|2923001|2923784|-|truC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

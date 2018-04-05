@@ -1,4 +1,0 @@
->b0592|500|200|623553|624510|-|fepB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

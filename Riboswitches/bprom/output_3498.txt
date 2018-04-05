@@ -1,4 +1,0 @@
->b1022|500|200|1086520|1087846|-|pgaC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

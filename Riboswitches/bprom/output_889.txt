@@ -1,4 +1,0 @@
->b1939|500|200|2014879|2015875|+|fliG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

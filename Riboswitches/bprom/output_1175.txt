@@ -1,4 +1,0 @@
->b2678|500|200|2806009|2807074|+|proW|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

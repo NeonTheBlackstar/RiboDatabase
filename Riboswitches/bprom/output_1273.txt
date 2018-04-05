@@ -1,4 +1,0 @@
->b2948|500|200|3092936|3093500|+|yqgE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

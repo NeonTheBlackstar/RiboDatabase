@@ -1,4 +1,0 @@
->b1522|421|200|1610906|1611854|-|yneF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

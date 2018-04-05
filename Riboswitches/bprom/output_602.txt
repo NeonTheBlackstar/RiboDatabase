@@ -1,4 +1,0 @@
->b1276|490|200|1335830|1338506|+|acnA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

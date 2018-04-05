@@ -1,4 +1,0 @@
->b1090|204|200|1147620|1148691|+|plsX|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4030|500|200|4240324|4240735|+|psiE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4319|493|200|4548284|4548788|+|fimG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

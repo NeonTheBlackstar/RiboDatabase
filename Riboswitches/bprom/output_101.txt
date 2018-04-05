@@ -1,4 +1,0 @@
->b0188|404|200|212330|213629|+|tilS|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

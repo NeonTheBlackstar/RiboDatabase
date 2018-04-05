@@ -1,4 +1,0 @@
->b3569|500|200|3734978|3736157|+|xylR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

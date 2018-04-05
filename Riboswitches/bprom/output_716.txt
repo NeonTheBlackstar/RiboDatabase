@@ -1,4 +1,0 @@
->b1517|500|200|1606099|1606975|+|lsrF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0695|500|200|721729|724414|-|kdpD|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

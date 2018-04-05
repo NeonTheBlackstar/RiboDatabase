@@ -1,4 +1,0 @@
->b2700|500|200|2823848|2824346|-|pncC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

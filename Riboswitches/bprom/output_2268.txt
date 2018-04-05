@@ -1,4 +1,0 @@
->b3573|500|200|3741108|3741582|-|ysaA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

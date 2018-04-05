@@ -1,4 +1,0 @@
->b1302|500|200|1365549|1366815|+|puuE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3331|320|200|3462343|3462931|+|gspJ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

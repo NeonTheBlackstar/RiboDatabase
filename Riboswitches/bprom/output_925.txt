@@ -1,4 +1,0 @@
->b2021|500|200|2092397|2093468|+|hisC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

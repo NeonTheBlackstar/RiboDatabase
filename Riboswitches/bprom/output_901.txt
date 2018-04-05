@@ -1,4 +1,0 @@
->b1951|500|200|2023967|2024591|+|rcsA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

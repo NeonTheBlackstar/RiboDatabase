@@ -1,4 +1,0 @@
->b0166|500|200|185122|185947|-|dapD|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

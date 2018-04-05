@@ -1,4 +1,0 @@
->b3845|500|200|4027608|4028772|-|fadA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

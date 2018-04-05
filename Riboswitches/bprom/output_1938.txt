@@ -1,4 +1,0 @@
->b4321|500|200|4549952|4551296|-|gntP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

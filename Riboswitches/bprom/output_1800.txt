@@ -1,4 +1,0 @@
->b4173|334|200|4400671|4401952|+|hflX|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

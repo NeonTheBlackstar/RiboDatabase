@@ -1,4 +1,0 @@
->b1107|500|200|1164094|1165120|+|nagZ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

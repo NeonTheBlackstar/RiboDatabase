@@ -1,4 +1,0 @@
->b4373|332|200|4608184|4608631|+|rimI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4302|500|200|4527548|4527980|-|sgcA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1828|500|200|1910275|1911649|+|yebQ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

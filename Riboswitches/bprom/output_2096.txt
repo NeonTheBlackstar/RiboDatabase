@@ -1,4 +1,0 @@
->b3955|500|200|4148531|4150265|-|eptC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

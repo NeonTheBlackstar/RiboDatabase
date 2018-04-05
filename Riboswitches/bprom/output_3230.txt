@@ -1,4 +1,0 @@
->b1669|500|200|1748746|1749559|-|ydhT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

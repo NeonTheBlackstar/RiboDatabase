@@ -1,4 +1,0 @@
->b3739|500|200|3922059|3922440|-|atpI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0038|500|200|37897|39115|-|caiB|chromosome|NC_000913.3                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

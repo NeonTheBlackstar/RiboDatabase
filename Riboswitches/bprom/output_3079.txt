@@ -1,4 +1,0 @@
->b1962|355|200|2032383|2033079|-|yedJ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1583|500|200|1655807|1656149|+|ynfB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

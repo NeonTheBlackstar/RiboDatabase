@@ -1,4 +1,0 @@
->b1232|458|200|1287781|1288624|-|purU|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

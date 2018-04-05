@@ -1,4 +1,0 @@
->b2774|500|200|2899487|2900273|-|ygcW|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

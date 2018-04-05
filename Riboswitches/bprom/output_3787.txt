@@ -1,4 +1,0 @@
->b0311|500|200|325576|327247|-|betA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

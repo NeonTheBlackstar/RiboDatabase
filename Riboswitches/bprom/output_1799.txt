@@ -1,4 +1,0 @@
->b4172|500|200|4400287|4400596|+|hfq|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

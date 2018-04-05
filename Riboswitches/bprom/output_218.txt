@@ -1,4 +1,0 @@
->b0472|279|200|494404|495010|+|recR|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

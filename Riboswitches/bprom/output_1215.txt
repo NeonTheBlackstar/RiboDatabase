@@ -1,4 +1,0 @@
->b2794|500|200|2925347|2926196|+|queF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

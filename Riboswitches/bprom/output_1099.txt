@@ -1,4 +1,0 @@
->b2495|500|200|2617577|2617937|+|yfgD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1738|500|200|1821298|1821619|-|chbB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

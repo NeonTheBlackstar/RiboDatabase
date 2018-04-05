@@ -1,4 +1,0 @@
->b4261|500|200|4486217|4487318|+|lptF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1656|500|200|1735377|1735959|+|sodB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

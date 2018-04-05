@@ -1,4 +1,0 @@
->b2565|500|200|2701740|2702469|-|recO|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

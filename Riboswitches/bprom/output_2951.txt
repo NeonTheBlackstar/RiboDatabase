@@ -1,4 +1,0 @@
->b2202|409|200|2297656|2298259|-|napC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

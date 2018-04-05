@@ -1,4 +1,0 @@
->b2124|500|200|2211725|2212196|-|yehS|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

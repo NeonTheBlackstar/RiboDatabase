@@ -1,4 +1,0 @@
->b2196|426|200|2292960|2294904|-|ccmF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

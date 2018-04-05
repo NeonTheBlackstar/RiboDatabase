@@ -1,4 +1,0 @@
->b1813|500|200|1896169|1896748|+|nudL|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

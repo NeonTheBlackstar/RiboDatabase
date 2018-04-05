@@ -1,4 +1,0 @@
->b2702|500|200|2825831|2826395|+|srlA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

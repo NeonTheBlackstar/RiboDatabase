@@ -1,4 +1,0 @@
->b1448|500|200|1518327|1518846|-|mnaT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

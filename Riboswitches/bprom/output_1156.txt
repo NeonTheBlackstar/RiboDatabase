@@ -1,4 +1,0 @@
->b2644|417|200|2776385|2776868|+|yfjY|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

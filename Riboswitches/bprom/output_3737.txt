@@ -1,4 +1,0 @@
->b0459|340|200|479366|479918|-|maa|chromosome|NC_000913.3                       
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

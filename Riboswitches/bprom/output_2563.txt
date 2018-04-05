@@ -1,4 +1,0 @@
->b2976|376|200|3121633|3123805|-|glcB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3100|344|200|3250076|3250376|+|yqjK|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

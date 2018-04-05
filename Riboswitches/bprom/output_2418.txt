@@ -1,4 +1,0 @@
->b3300|392|200|3442765|3444097|-|secY|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0036|500|200|35376|36162|-|caiD|chromosome|NC_000913.3                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

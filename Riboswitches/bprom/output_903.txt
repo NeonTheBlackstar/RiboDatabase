@@ -1,4 +1,0 @@
->b1955|475|200|2025510|2026326|+|yedP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

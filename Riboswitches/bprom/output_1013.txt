@@ -1,4 +1,0 @@
->b2269|500|200|2382712|2383924|+|elaD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

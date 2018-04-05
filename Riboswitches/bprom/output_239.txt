@@ -1,4 +1,0 @@
->b0513|500|200|540564|541866|+|ybbY|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

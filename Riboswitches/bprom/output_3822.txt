@@ -1,4 +1,0 @@
->b0237|500|200|254258|255716|-|pepD|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

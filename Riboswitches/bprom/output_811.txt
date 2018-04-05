@@ -1,4 +1,0 @@
->b1724|500|200|1807399|1807690|+|ydiZ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

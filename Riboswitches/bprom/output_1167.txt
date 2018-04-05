@@ -1,4 +1,0 @@
->b2668|259|200|2797519|2798044|+|ygaP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

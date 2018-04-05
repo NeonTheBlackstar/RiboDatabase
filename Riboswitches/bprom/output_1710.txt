@@ -1,4 +1,0 @@
->b3981|500|200|4177357|4177741|+|secE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

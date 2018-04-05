@@ -1,4 +1,0 @@
->b1881|350|200|1966392|1967037|-|cheZ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

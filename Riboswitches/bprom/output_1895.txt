@@ -1,4 +1,0 @@
->b4397|500|200|4635520|4635994|+|creA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0209|500|200|231121|231922|+|yafD|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

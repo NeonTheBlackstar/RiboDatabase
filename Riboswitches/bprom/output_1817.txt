@@ -1,4 +1,0 @@
->b4194|500|200|4421392|4421698|+|ulaB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

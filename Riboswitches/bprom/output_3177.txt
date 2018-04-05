@@ -1,4 +1,0 @@
->b1765|500|200|1848124|1848676|-|ydjA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

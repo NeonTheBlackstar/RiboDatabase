@@ -1,4 +1,0 @@
->b3691|500|200|3870437|3871730|-|dgoT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

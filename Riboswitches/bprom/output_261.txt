@@ -1,4 +1,0 @@
->b0550|237|200|573370|573733|+|rusA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

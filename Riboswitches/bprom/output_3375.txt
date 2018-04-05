@@ -1,4 +1,0 @@
->b1333|500|200|1397671|1398622|-|uspE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

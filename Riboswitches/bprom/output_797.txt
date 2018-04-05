@@ -1,4 +1,0 @@
->b1692|500|200|1773788|1774655|+|ydiB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

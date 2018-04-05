@@ -1,4 +1,0 @@
->b2435|500|200|2552351|2553221|+|amiA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1225|500|200|1283603|1285142|+|narH|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3945|500|200|4137931|4139035|-|gldA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

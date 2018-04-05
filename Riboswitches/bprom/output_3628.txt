@@ -1,4 +1,0 @@
->b0697|500|200|724987|727036|-|kdpB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

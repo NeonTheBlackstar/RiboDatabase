@@ -1,4 +1,0 @@
->b3403|500|200|3532817|3534440|+|pck|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2727|304|200|2851000|2851873|+|hypB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2273|500|200|2387709|2388426|-|yfbN|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

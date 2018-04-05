@@ -1,4 +1,0 @@
->b2306|500|200|2423735|2424509|-|hisP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

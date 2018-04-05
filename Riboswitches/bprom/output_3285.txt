@@ -1,4 +1,0 @@
->b1533|500|200|1620237|1621137|-|eamA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

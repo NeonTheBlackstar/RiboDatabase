@@ -1,4 +1,0 @@
->b4142|500|200|4370687|4370981|+|groS|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

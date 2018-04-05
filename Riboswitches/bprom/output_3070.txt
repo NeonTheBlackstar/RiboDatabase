@@ -1,4 +1,0 @@
->b1992|492|200|2064478|2065222|-|cobS|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4112|500|200|4332180|4333272|-|basS|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

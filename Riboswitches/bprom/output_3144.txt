@@ -1,4 +1,0 @@
->b1830|500|200|1912767|1914816|-|prc|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

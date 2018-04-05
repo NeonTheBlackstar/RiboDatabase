@@ -1,4 +1,0 @@
->b4150|372|200|4377810|4378944|-|ampC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

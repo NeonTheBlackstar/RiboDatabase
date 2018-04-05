@@ -1,4 +1,0 @@
->b1766|500|200|1848836|1850693|+|sppA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

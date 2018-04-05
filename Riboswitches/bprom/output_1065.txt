@@ -1,4 +1,0 @@
->b2429|500|200|2546672|2548097|+|murP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

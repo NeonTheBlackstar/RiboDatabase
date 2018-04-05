@@ -1,4 +1,0 @@
->b1860|500|200|1944345|1945356|-|ruvB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

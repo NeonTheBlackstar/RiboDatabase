@@ -1,4 +1,0 @@
->b1584|326|200|1656183|1656744|+|speG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0872|500|200|911181|912150|-|hcr|chromosome|NC_000913.3                       
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

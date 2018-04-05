@@ -1,4 +1,0 @@
->b1795|280|200|1879006|1879255|-|yeaQ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1380|500|200|1441853|1442843|-|ldhA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

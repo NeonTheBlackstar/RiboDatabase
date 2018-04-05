@@ -1,4 +1,0 @@
->b0613|476|200|646630|647509|-|citG|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

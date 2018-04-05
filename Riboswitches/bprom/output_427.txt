@@ -1,4 +1,0 @@
->b0918|129|200|970851|971598|+|kdsB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

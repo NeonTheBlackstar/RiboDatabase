@@ -1,4 +1,0 @@
->b4485|500|200|4451057|4452560|+|ytfR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3493|500|200|3637641|3639141|+|pitA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

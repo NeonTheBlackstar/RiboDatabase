@@ -1,4 +1,0 @@
->b4185|358|200|4412386|4413025|+|yjfM|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

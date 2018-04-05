@@ -1,4 +1,0 @@
->b3330|456|200|3461973|3462351|+|gspI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

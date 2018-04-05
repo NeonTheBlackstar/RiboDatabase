@@ -1,4 +1,0 @@
->b3190|403|200|3336548|3336803|-|ibaG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

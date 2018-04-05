@@ -1,4 +1,0 @@
->b3988|500|200|4185349|4189573|+|rpoC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

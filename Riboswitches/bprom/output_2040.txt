@@ -1,4 +1,0 @@
->b4100|399|200|4320662|4321247|-|phnH|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

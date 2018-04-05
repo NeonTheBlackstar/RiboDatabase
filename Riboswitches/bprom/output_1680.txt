@@ -1,4 +1,0 @@
->b3915|500|200|4106468|4107371|+|fieF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3317|270|200|3450542|3451364|-|rplB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

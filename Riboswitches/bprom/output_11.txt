@@ -1,4 +1,0 @@
->b0019|500|200|17488|18655|+|nhaA|chromosome|NC_000913.3                        
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

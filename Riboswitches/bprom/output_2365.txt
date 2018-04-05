@@ -1,4 +1,0 @@
->b3384|500|200|3512633|3513638|-|trpS|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

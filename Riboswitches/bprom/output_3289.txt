@@ -1,4 +1,0 @@
->b1523|500|200|1611965|1612325|-|yneG|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

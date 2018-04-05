@@ -1,4 +1,0 @@
->b0396|500|200|411296|412481|-|araJ|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

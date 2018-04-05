@@ -1,4 +1,0 @@
->b2050|426|200|2124522|2125746|-|wcaI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0491|500|200|516582|517362|+|fetB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b1253|500|200|1311847|1312246|-|yciA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2539|500|200|2670389|2670908|+|hcaF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

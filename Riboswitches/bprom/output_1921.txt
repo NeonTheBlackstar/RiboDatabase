@@ -1,4 +1,0 @@
->b4350|500|200|4583248|4586761|-|hsdR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

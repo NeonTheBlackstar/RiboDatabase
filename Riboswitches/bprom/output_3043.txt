@@ -1,4 +1,0 @@
->b2038|500|200|2109580|2110138|-|rfbC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

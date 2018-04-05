@@ -1,4 +1,0 @@
->b1597|500|200|1671375|1671684|+|asr|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2496|500|200|2618074|2618776|-|hda|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

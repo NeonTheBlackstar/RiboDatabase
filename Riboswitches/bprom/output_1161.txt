@@ -1,4 +1,0 @@
->b2660|500|200|2789981|2791250|+|lhgO|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

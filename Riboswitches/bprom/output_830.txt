@@ -1,4 +1,0 @@
->b1768|500|200|1851886|1852528|+|pncA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4668|500|200|2153680|2153737|-|ibsB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

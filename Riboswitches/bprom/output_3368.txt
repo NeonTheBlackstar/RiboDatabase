@@ -1,4 +1,0 @@
->b1345|167|200|1411999|1413235|-|intR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

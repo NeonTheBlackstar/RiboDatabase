@@ -1,4 +1,0 @@
->b2455|249|200|2570347|2571751|-|eutE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

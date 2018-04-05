@@ -1,4 +1,0 @@
->b1365|500|200|1425376|1425640|+|ynaK|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

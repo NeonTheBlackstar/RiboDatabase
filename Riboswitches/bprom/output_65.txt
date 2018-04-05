@@ -1,4 +1,0 @@
->b0119|500|200|134387|134750|+|yacL|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

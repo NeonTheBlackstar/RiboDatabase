@@ -1,4 +1,0 @@
->b1391|500|200|1455924|1456422|+|paaD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2637|417|200|2771147|2771615|+|yfjT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

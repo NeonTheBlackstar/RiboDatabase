@@ -1,4 +1,0 @@
->b0927|500|200|983649|984297|+|ycbL|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

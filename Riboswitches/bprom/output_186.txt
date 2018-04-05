@@ -1,4 +1,0 @@
->b0405|500|200|425010|426081|+|queA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

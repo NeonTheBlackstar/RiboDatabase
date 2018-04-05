@@ -1,4 +1,0 @@
->b3677|500|200|3856414|3856864|+|yidI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

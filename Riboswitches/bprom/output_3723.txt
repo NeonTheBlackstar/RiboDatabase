@@ -1,4 +1,0 @@
->b0489|500|200|514855|515773|-|qmcA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

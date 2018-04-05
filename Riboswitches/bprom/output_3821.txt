@@ -1,4 +1,0 @@
->b0241|500|200|259044|260100|-|phoE|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

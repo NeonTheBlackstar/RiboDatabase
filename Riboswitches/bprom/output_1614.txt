@@ -1,4 +1,0 @@
->b3786|500|200|3970132|3971263|+|wecB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

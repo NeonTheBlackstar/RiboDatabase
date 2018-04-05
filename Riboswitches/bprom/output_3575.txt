@@ -1,4 +1,0 @@
->b0844|500|200|885315|886131|-|ybjI|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

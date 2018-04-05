@@ -1,4 +1,0 @@
->b0895|500|200|943413|944031|+|dmsB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

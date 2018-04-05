@@ -1,4 +1,0 @@
->b1051|500|200|1113806|1114181|-|msyB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

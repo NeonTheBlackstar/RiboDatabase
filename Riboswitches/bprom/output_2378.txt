@@ -1,4 +1,0 @@
->b3356|500|200|3485413|3485818|-|yhfA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

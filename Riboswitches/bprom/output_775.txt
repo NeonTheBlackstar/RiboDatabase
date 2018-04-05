@@ -1,4 +1,0 @@
->b1635|500|200|1714376|1714982|+|gstA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

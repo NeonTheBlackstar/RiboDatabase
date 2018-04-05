@@ -1,4 +1,0 @@
->b1625|348|200|1704948|1705164|+|cnu|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

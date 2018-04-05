@@ -1,4 +1,0 @@
->b0607|500|200|641438|641867|-|uspG|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2784|500|200|2911416|2913651|-|relA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

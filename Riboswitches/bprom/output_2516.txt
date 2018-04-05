@@ -1,4 +1,0 @@
->b3082|261|200|3233727|3234144|-|higA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

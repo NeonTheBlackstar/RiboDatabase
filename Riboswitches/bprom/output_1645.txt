@@ -1,4 +1,0 @@
->b3839|468|200|4022735|4023512|+|tatC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

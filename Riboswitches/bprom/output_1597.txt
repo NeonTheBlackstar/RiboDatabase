@@ -1,4 +1,0 @@
->b3749|377|200|3933777|3935283|+|rbsA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

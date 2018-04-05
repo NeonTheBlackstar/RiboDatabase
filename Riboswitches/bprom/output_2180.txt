@@ -1,4 +1,0 @@
->b3734|496|200|3918315|3919857|-|atpA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

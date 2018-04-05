@@ -1,4 +1,0 @@
->b1610|500|200|1684258|1685188|+|tus|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

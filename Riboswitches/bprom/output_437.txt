@@ -1,4 +1,0 @@
->b0939|500|200|998489|999191|+|elfD|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

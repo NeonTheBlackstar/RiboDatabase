@@ -1,4 +1,0 @@
->b3302|457|200|3444542|3444722|-|rpmD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

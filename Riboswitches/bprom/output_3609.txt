@@ -1,4 +1,0 @@
->b0766|500|200|797612|798431|-|ybhA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

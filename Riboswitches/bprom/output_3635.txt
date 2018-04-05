@@ -1,4 +1,0 @@
->b0684|500|200|710934|711465|-|fldA|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

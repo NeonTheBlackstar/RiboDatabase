@@ -1,4 +1,0 @@
->b3143|500|200|3288089|3288785|+|yraI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

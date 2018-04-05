@@ -1,4 +1,0 @@
->b1270|500|200|1327766|1328357|-|btuR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

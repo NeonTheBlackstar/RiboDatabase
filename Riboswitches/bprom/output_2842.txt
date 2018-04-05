@@ -1,4 +1,0 @@
->b2405|500|200|2521592|2522477|-|xapR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

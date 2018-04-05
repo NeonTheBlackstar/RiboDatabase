@@ -1,4 +1,0 @@
->b0909|500|200|960263|961028|+|ycaL|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

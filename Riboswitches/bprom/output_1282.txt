@@ -1,4 +1,0 @@
->b2963|290|200|3104432|3105512|+|mltC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

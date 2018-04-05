@@ -1,4 +1,0 @@
->b1132|500|200|1191989|1192631|-|hflD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

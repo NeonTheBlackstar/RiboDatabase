@@ -1,4 +1,0 @@
->b0427|500|200|445301|446666|-|yajR|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

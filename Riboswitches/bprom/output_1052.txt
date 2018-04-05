@@ -1,4 +1,0 @@
->b2394|500|200|2514330|2515443|+|insL1|chromosome|NC_000913.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

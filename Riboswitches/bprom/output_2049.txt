@@ -1,4 +1,0 @@
->b4089|500|200|4312100|4312991|-|alsR|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

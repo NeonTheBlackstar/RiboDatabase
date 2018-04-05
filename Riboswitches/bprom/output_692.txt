@@ -1,4 +1,0 @@
->b1438|172|200|1509507|1509924|+|hicB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

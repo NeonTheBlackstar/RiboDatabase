@@ -1,4 +1,0 @@
->b0486|500|200|512575|513868|+|ybaT|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

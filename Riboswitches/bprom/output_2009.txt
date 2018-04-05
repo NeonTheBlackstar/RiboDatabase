@@ -1,4 +1,0 @@
->b4151|356|200|4379006|4379366|-|frdD|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

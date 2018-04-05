@@ -1,4 +1,0 @@
->b1189|500|200|1237570|1238869|+|dadA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

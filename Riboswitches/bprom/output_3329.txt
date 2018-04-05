@@ -1,4 +1,0 @@
->b1464|500|200|1534964|1535858|-|yddE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

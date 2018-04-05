@@ -1,4 +1,0 @@
->b3938|500|200|4128077|4128395|-|metJ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

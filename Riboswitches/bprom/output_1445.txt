@@ -1,4 +1,0 @@
->b3367|402|200|3497002|3497809|+|nirC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

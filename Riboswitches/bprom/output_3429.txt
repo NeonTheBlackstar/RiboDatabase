@@ -1,4 +1,0 @@
->b1202|500|200|1253084|1255952|-|ycgV|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

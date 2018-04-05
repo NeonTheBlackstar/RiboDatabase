@@ -1,4 +1,0 @@
->b1115|500|200|1174091|1175165|-|ycfT|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

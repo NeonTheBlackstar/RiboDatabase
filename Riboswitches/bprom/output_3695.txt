@@ -1,4 +1,0 @@
->b0579|263|200|605517|605886|-|ybdF|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2147|500|200|2235264|2236500|+|preA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

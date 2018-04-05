@@ -1,4 +1,0 @@
->b3992|500|200|4192820|4193576|-|thiF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

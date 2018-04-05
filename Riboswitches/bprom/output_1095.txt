@@ -1,4 +1,0 @@
->b2490|500|200|2611456|2611870|+|hyfJ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b2461|298|200|2574977|2575457|-|eutP|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

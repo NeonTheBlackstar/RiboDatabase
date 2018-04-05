@@ -1,4 +1,0 @@
->b4423|500|200|1270237|1270345|-|ldrC|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

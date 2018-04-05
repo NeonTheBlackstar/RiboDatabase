@@ -1,4 +1,0 @@
->b0228|500|200|247636|248134|+|rayT|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

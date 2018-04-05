@@ -1,4 +1,0 @@
->b2282|500|200|2396464|2397442|-|nuoH|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

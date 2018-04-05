@@ -1,4 +1,0 @@
->b3358|500|200|3486790|3488893|+|yhfK|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

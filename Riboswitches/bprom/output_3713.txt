@@ -1,4 +1,0 @@
->b0525|500|200|553942|554437|-|ppiB|chromosome|NC_000913.3                      
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b3833|500|200|4018854|4019610|+|ubiE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

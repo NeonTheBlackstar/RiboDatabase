@@ -1,4 +1,0 @@
->b4596|500|200|1344435|1344609|-|yciZ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

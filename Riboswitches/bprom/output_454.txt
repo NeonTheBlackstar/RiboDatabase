@@ -1,4 +1,0 @@
->b0965|500|200|1027945|1028359|+|yccU|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

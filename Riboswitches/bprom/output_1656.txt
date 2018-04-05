@@ -1,4 +1,0 @@
->b3861|500|200|4044198|4045629|+|yihF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

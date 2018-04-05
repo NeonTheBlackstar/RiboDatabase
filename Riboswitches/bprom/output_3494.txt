@@ -1,4 +1,0 @@
->b1027|500|200|1095137|1095437|-|insE1|chromosome|NC_000913.3                   
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b0003|500|200|2800|3733|+|thrB|chromosome|NC_000913.3                          
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

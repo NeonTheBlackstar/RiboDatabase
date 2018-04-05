@@ -1,0 +1,70 @@
+Shine-Dalgarno:
+	- tuż przed SD występuje silna jednoniciowość (the more singe-stranded is the region of SD, the higher is expression)
+	- sprawdzić formy suboptymalne mając znane promotory z bazy danych i wtedy przetestować działanie tej metody
+	- SD sequence differs, it tends to be weaker or stronger, but weak SD does not correlate with weak expression velocity
+	- Ogarnąć tę pracę doktorską, gdzie facet napisał jak on identyfikował SD.
+
+
+Struktura drugorzędowa:
+	- some sequences might not fold to equilibrium, that happens in riboswitches
+	- dynamic programming is an approach in predicting secondary structure (nearest neighbour model for free-energy, partition function)
+	- article: "The structures of the FMN riboswitch, Candero & Das"
+	- Rsample method - it can model structures that can populate multiple structures (FMN riboswitch), it uses SHAPE mapping
+	- TurboFold for structure prediction
+	- RNAstructure - C++ classes with Python bindings
+
+
+Promotory:
+	- ogarnięcie jak największego zbioru testowego promotorów dla różnych bakterii
+	- ogarnięcie metod poszukiwania promotorów (bazujące na energii, na motywach, na jednoniciowości) i algorytmów (uczenie maszynowe, losowe lasy [ponoć najlepsze])
+	- uczenie na zbiorach testowych
+	- przeprowadzenie testów statystycznych dla różnych bakterii
+
+
+DO ZROBIENIA:
+	1. Zrobić wykresy ROC. Tymczasowo wprowadzić do metody BRpom lub Prompredict, potem zastąpić to własnym algorytmem.
+	2. Zrobić więcej zbiorów testowych (promotory, aptamery, może terminatory?). BEZ Wdrożenie testów automatycznych.
+	3. Przetestować metodą szukającą terminatorów. Coś było nie tak z nią - pozwalała na znalezienie terminatora przed aptamerem.
+		4. Zlikwidować duplikujące się aptamery (podobna klasa, np. SAM i SAMI-IV)
+	5. Automatyczne ściąganie danych z NCBI.
+		6. Wdrożenie identyfikacji SD.
+		- Użyć RNAmotif
+		- Znaleźć deskryptory na trzonku od strony 5' i 3' spinki w pętlą.
+		Potok działania:
+		- Przy pomocy MEME szukam motywu w sekwencjach
+		- Przy pomocy znalezionego motywu, szukasz sekwencji SD i ich pozycji w ramkach przeszukiwania przed wszystkimi genami (ATG)
+		- Dla każdej ramki (dla każdego genu) uruchamiasz RNAmotif, w deskryptorze podajesz sekwencję SD znalezioną dla tego genu i w ten sposób sprawdzasz,
+		czy ta sekwencja występuje w konteście sparowania z innymi nukleotydami trzonka spinki
+		- Parametry dla deskryptora znajdują się na Trello. To one:
+			Deskryptor musi uwzględniać:
+			długość helisy min. 6
+			długość pętli: 4-40
+			sekwencja SD w ramieniu 5' lub 3'
+			niesparowanie trzonu: 20%
+			dopuszczamy pary GU
+			przeszukanie tylko jednej nici
+		Dla RNAMotif:
+		- Trzeba było zainstalować flex i bison i ustawić zmienną środowiskową: export EFNDATA="/home/blackstar/Desktop/Github/RiboDatabase/Riboswitches/Programs/rnamotif-3.1.1/efndata/"
+
+	7. Optymalizacja działania metody (operacje w RAMie, numpy, Biopython).
+
+	8. Ogarnąć ile w NCBI jest genomów gotowych do identyfikacji, ile jest genomów bakterii gram-dodatnich, a ile gram-ujemnych.
+		9. Przeprowadzić identyfikację aptamerów w genomach bakteryjnych z różnych rodzin taksonomicznych, żeby sprawdzić jaki jest rozkład jakich klas przełączników w różnych taksonach. Potencjalna analiza filogenetyczna? Automatycznie zidentyfikować w ontologiach procesy, które regulują geny regulowane przez ryboprzełączniki w danych taksonach, które klasy aptamerów regulują jakie procesy, czy zmienia się to wraz z odległością ewolucyjną. Liczba ryboprzełączników a odległość ewolucyjna (A)
+		- Dlaczego w bakteriach gram-ujemnych jest więcej przypadków mechanizmu inhibicji translacji niż w gram-dodatnich? Analiza jednoniciowości SD?
+	10. Wykresy korelacji pozycji przewidzianych vs eksperymentalne.
+	11. Artykuł publikujący bazę danych?
+
+
+
+GRANT:
+	- 30 listopada ogłoszenie konkursu, dwa miesiące od ogłoszenia trzeba złożyć wniosek
+	- Max wysokość grantu: Do 220 tys. zł, w tym wynagrodzenie nie może przekraczać 2,5 tys. zł miesięcznie.
+	- Corocznie, terminy przyjmowania wniosków ogłaszane są na stronie MNiSW oraz w newsletterze. Okres realizacji: maksymalnie 48 miesięcy.
+	- Program przeznaczony jest dla absolwentów studiów licencjackich lub studentów po trzecim roku jednolitych studiów magisterskich, którzy prowadzą badania naukowe.
+	Dodatkowo te osoby muszą spełnić następujące przesłanki: 
+	- znają przynajmniej jeden język na poziomie nie niższym niż B2 (wymagane zaświadczenie)
+	- prowadzą zaawansowane badania naukowe i mają osiągnięcia naukowe
+
+
+Magisterka:
+	- napisać po angielsku

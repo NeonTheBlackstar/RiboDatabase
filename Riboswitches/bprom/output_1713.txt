@@ -1,4 +1,0 @@
->b3984|382|200|4178878|4179583|+|rplA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

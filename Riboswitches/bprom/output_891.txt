@@ -1,4 +1,0 @@
->b1941|500|200|2016553|2017927|+|fliI|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

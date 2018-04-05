@@ -1,4 +1,0 @@
->b4075|500|200|4293162|4293546|+|nrfF|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

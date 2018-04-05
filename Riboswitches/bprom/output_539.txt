@@ -1,4 +1,0 @@
->b1136|500|200|1195122|1196373|+|icd|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

@@ -1,4 +1,0 @@
->b4411|186|200|4376552|4376699|+|ecnB|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

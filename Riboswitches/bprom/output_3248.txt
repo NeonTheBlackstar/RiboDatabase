@@ -1,4 +1,0 @@
->b1617|500|200|1694259|1696071|-|uidA|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

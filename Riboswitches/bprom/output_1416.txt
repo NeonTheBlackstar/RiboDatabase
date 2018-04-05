@@ -1,4 +1,0 @@
->b3271|500|200|3422435|3423194|+|yhdZ|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

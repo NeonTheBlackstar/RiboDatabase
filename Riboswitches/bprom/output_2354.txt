@@ -1,4 +1,0 @@
->b3397|500|200|3525588|3526149|-|nudE|chromosome|NC_000913.3                    
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0

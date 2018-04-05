@@ -1,4 +1,0 @@
->b2552|500|200|2685834|2687025|+|hmp|chromosome|NC_000913.3                     
- Length of sequence-        80
- Threshold for promoters -  0.20
- Number of predicted promoters -      0
