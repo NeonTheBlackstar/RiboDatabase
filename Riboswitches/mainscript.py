@@ -13,7 +13,9 @@ from datetime import datetime, timedelta
 from time import sleep, localtime, strftime
 ### HOW TO USE ###
 # python3 mainscript.py NC_000964.3
-# python3 mainscript.py all
+# python3 mainscript.py all GCF_000005845.2_ASM584v2_genomic
+# python3 mainscript.py NC_000964.3 GCF_000005845.2_ASM584v2_genomic
+# 
 
 ### HELPER FUNCTIONS ###
 
@@ -490,9 +492,24 @@ def test_promoters( # Test dla Bacillusa
 	#aptamer_list = createAptamersFilter("./Results/{0}.result.csv".format(genome))
 	#filterWindows(aptamer_list, "aptamer_windows.fasta", "promoter_windows.fasta")
 
-	tablesToLoad = ["table_output_bsub.txt", "table_output_ecoli2_converted.txt"]
+	#tablesToLoad = ["bsub_all_genes_converted.txt", "ecoli_all_genes_converted.txt"]
+	tablesToLoad = ["ecoli_all_genes_converted.txt"]
 	for id, genome in enumerate(genome_id):
 		print("Testing {}...\n".format(genome))
+
+		### PREPARE TESTING DICTIONARY ###
+		roca_dictionary = {}	# Dictionary of locus tags as keys and presence of prom as value
+		promList = [] 	# List of locus tags
+		with open(tablesToLoad[id]) as conf_h:
+			for line in conf_h:
+				line = line.strip().split('\t')
+				roca_dictionary[line[0]] = {
+						'confirmed': True if line[1] != "\"\"" else False,
+						'bprom': False,
+						'ppred': False,
+						'btss': False,
+						}
+		promList = list(roca_dictionary)
 	
 		# Sorted by strand
 		os.system("sort -t \"\t\" -k7,7 -k4,4n ./Genomes/{0}.gff > ./Genomes/byStrand.gff".format(genome))
@@ -512,14 +529,19 @@ def test_promoters( # Test dla Bacillusa
 			"-biotype", "protein_coding",
 			"-exhead", True, 
 			"-intervals", True,
+			"-filterPR", promList,
 			)
+
+		# Remove from filter genes which were not found in annotation file
+		for locusTag in promList:
+			del roca_dictionary[locusTag]
 
 		os.system("mv aptamer_windows.fasta promoter_windows.fasta")
 		os.system('rm ./Genomes/byStrand.gff')
 		os.system('rm ./Genomes/{0}_sorted.gff'.format(genome))
 
 		############# LOAD ALL GENES ##############
-		roca_dictionary = {}
+		'''roca_dictionary = {}
 
 		handle = open('./Genomes/{}.gff'.format(genome))
 
@@ -533,11 +555,11 @@ def test_promoters( # Test dla Bacillusa
 						'bprom': False,
 						'ppred': False,
 						'btss': False,
-					}
+					}'''
 
 		############# LOAD CONFIRMED PROMOTERS ############## confirmed_promoters.txt
 	
-		counter = 0
+		'''counter = 0
 		with open(tablesToLoad[id]) as conf_h:
 			#next(conf_h) # Skip header line
 			for line in conf_h:
@@ -570,7 +592,7 @@ def test_promoters( # Test dla Bacillusa
 				elif id == 1: # E coli
 					if line[0] in roca_dictionary:
 						roca_dictionary[line[0]]['confirmed'] = True # nie wszystkie locus tagi znajduje!
-
+		'''
 
 		if "prompredict" in programs:
 			######### RUN PROMPREDICT #########
@@ -615,6 +637,7 @@ def test_promoters( # Test dla Bacillusa
 		if "bprom" in programs:
 			############# BPROM ################ ma ograniczenie co do wielkości fasta. Nie pójdzie na całym genomie. W przypadku multifasta bierze tylko pierwszy header i dalej nie idzie!
 			os.system('export TSS_DATA=./Programs/lin/data > /dev/null 2>&1')
+			os.system('rm -r bprom')
 
 			counter = 1
 			temp_window = ''
@@ -640,7 +663,6 @@ def test_promoters( # Test dla Bacillusa
 				prom_windows.close()
 
 			### COLLECT DATA FOR ROC FOR BPROM ###
-
 			for file in os.listdir('./bprom'):
 				if file.startswith('output'):
 					with open('./bprom/{}'.format(file)) as file_h:
@@ -687,7 +709,7 @@ def test_promoters( # Test dla Bacillusa
 
 			os.system('export bTSSfinder_Data=./Programs/BTSSFINDER/Data')
 			#os.system('Programs/BTSSFINDER/bTSSfinder -i promoter_windows.fasta -o testbTSS -h 1 -t e -c 1')
-			a = datetime.now()
+			'''a = datetime.now()
 			os.system('Programs/BTSSFINDER/bTSSfinder -i promoter_windows.fasta -o testbTSS70 -h 1 -t e -c 70 -n {}'.format(nuc_content))
 			b = datetime.now()
 			c = b - a
@@ -715,7 +737,7 @@ def test_promoters( # Test dla Bacillusa
 			os.system('Programs/BTSSFINDER/bTSSfinder -i promoter_windows.fasta -o testbTSS24 -h 1 -t e -c 24 -n {}'.format(nuc_content))
 			b = datetime.now()
 			c = b - a
-			print("sigma24: {}".format(round(c.seconds + c.microseconds / 1000000, 1)))
+			print("sigma24: {}".format(round(c.seconds + c.microseconds / 1000000, 1)))'''
 
 			a = datetime.now()
 			os.system('Programs/BTSSFINDER/bTSSfinder -i promoter_windows.fasta -o testbTSSall -h 1 -t e -c 1 -n {}'.format(nuc_content))
@@ -780,7 +802,7 @@ for genome in genomes_list:
 	### Identification methods ###
 	#temp_dic = aptamers(genome)
 	#terminators(genome)
-	test_promoters(programs = ["prompredict", "bprom", "btssfinder"])
+	test_promoters(programs = ["prompredict","bprom", "btssfinder"]) #"prompredict"
 
 	b = datetime.now()
 	c = b - a

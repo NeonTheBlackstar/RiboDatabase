@@ -144,6 +144,7 @@ def getFasta(*arg):
 	handle = None
 	h_fasta = None
 	previous_gene = None
+	promFilterFoundGenes = []
 
 	### CHECK CONDITIONS ###
 	if gff_path != None:
@@ -258,6 +259,8 @@ def getFasta(*arg):
 					for lt in prom_filter:
 						if lt == feature.qualifiers['locus_tag'][0]:
 							filterFound = True
+							prom_filter.remove(lt)
+							promFilterFoundGenes.append(lt)
 							break
 					if filterFound == False: # If not found in filter, then don't add it to output file
 						continue
@@ -298,4 +301,5 @@ def getFasta(*arg):
 	return {
 		'sc_name': scientificName,
 		'tax': taxonomy,
+		'promFilter': promFilterFoundGenes,
 	}
