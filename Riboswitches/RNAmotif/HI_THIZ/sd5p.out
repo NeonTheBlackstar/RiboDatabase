@@ -1,0 +1,85 @@
+#RM scored
+#RM descr h5 ss h3
+#RM dfile sd5p_m.descr
+>BME_THID:150:154 
+BME_THID:150:154    0.000 0      25   21 gaggct gagagacgc attctc
+>BME_THID:150:154 
+BME_THID:150:154    0.000 0      25   21 gaggctg agagacg cattctc
+>BU_THIO:155:160 
+BU_THIO:155:160    0.000 0      33   19 gaggct gagagag accctt
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      83   55 tttgaggc tcttctcaagtcctttgccactcttttttgaggtgcaaa gtgttaaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      83   55 tttgaggct cttctcaagtcctttgccactcttttttgaggtgcaa agtgttaaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      83   55 tttgaggctct tctcaagtcctttgccactcttttttgaggtgc aaagtgttaaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      83   47 tttgaggctc ttctcaagtcctttgccactctttttt gaggtgcaaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      84   53 ttgaggc tcttctcaagtcctttgccactcttttttgaggtgcaaa gtgttaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      84   53 ttgaggct cttctcaagtcctttgccactcttttttgaggtgcaa agtgttaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      84   53 ttgaggctct tctcaagtcctttgccactcttttttgaggtgc aaagtgttaa
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      85   51 tgaggc tcttctcaagtcctttgccactcttttttgaggtgcaaa gtgtta
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      85   51 tgaggct cttctcaagtcctttgccactcttttttgaggtgcaa agtgtta
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      86   49 gaggct cttctcaagtcctttgccactcttttttgaggtgcaa agtgtt
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      86   30 gaggct cttctcaagtcctttgcc actctt
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      86   20 gaggct cttctcaa gtcctt
+>EC_THIB:120:125 
+EC_THIB:120:125    0.000 0      86   19 gaggct cttctca agtcct
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      83   57 tttgaggct acctctcaagtcctttgccactctttaactgaggtgcaa agtgttaaa
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      84   55 ttgaggct acctctcaagtcctttgccactctttaactgaggtgcaa agtgttaa
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      85   53 tgaggct acctctcaagtcctttgccactctttaactgaggtgcaa agtgtta
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      86   51 gaggct acctctcaagtcctttgccactctttaactgaggtgcaa agtgtt
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      86   31 gaggct acctctcaagtcctttgcc actctt
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      86   21 gaggct acctctcaa gtcctt
+>TY_THIB:122:127 
+TY_THIB:122:127    0.000 0      86   20 gaggct acctctca agtcct
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggc tgagatggcgcacgaanccctttgaacctgatctgg gtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggct gagatggcgcacgaanccctttgaacctgatctg ggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggctga gatggcgcacgaanccctttgaacctgatc tgggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggctgag atggcgcacgaanccctttgaacctgat ctgggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggctgaga tggcgcacgaanccctttgaacctga tctgggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggctgagat ggcgcacgaanccctttgaacctg atctgggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      22   50 gtgaggctgagatgg cgcacgaanccctttgaacc tgatctgggtcatgc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      23   48 tgaggc tgagatggcgcacgaanccctttgaacctgatctgg gtcatg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      23   48 tgaggct gagatggcgcacgaanccctttgaacctgatctg ggtcatg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      23   48 tgaggctgag atggcgcacgaanccctttgaacctgat ctgggtcatg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      23   48 tgaggctgaga tggcgcacgaanccctttgaacctga tctgggtcatg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      23   48 tgaggctgagat ggcgcacgaanccctttgaacctg atctgggtcatg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      24   46 gaggct gagatggcgcacgaanccctttgaacctgatctg ggtcat
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      24   46 gaggctgaga tggcgcacgaanccctttgaacctga tctgggtcat
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      24   46 gaggctgagat ggcgcacgaanccctttgaacctg atctgggtcat
+>HI_THIZ:123:128 
+HI_THIZ:123:128    0.000 0     121   34 ttgaggc gagcaatggtgcgtattcaa gatttga
+>HI_THIZ:123:128 
+HI_THIZ:123:128    0.000 0     122   32 tgaggc gagcaatggtgcgtattcaa gatttg
+>HI_THIZ:123:128 
+HI_THIZ:123:128    0.000 0     123   22 gaggcg agcaatggtg cgtatt

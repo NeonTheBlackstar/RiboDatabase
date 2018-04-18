@@ -1,0 +1,59 @@
+#RM scored
+#RM descr h5 ss h3
+#RM dfile sd5p_m.descr
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     137   29 gaggag atacccgtgcgccgtcg tctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     137   27 gaggag atacccgtgcgccgt cgtctt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     137   27 gaggaga tacccgtgcgccg tcgtctt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     137   27 gaggagat acccgtgcgcc gtcgtctt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     138   28 aggaga tacccgtgcgccgtcg tctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     138   28 aggagat acccgtgcgccgtc gtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     138   28 aggagatacc cgtgcgcc gtcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     138   25 aggaga tacccgtgcgccg tcgtct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0     138   25 aggagat acccgtgcgcc gtcgtct
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0      24   39 cgaggag ctgagataccgcacgaccgcggtga ccctttg
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0      24   39 cgaggagctg agataccgcacgaccgcgg tgaccctttg
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0      25   37 gaggag ctgagataccgcacgaccgcggtga cccttt
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      93   27 gccaggag tcactctcctg ctccttgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      93   27 gccaggagt cactctcct gctccttgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      93   21 gccaggag tcact ctcctgct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      94   25 ccaggag tcactctcctg ctccttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      94   25 ccaggagt cactctcct gctccttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      95   24 caggag tcactctcctgc tccttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      95   17 caggag tcact ctcctg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      96   31 aggagt cactctcctgctccttgcg gcactt
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      96   31 aggagtc actctcctgctccttgc ggcactt
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      96   21 aggagt cactctcct gctcct
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     134   31 aaggag tgcaaagtgtttaaacaca ttattt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     134   31 aaggagt gcaaagtgtttaaacac attattt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     134   31 aaggagtg caaagtgtttaaaca cattattt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     135   29 aggagt gcaaagtgtttaaacac attatt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     135   29 aggagtg caaagtgtttaaaca cattatt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0     135   17 aggagt gcaaa gtgttt

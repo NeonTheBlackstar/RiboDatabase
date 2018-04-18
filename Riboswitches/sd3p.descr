@@ -3,4 +3,4 @@ parms
 descr
 	h5 
 		ss( minlen=4, maxlen=40 ) 
-	h3( minlen=6, seq="GGAG", pair+=gu, pairfrac=0.8 )
+	h3 ( minlen=6, seq="", pair+=gu, pairfrac=0.8 )

@@ -1,0 +1,453 @@
+#RM scored
+#RM descr h5 ss h3
+#RM dfile sd5p_m.descr
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      84   57 cggcggaggg attagacggcttaaaggcaagcggctactccttctcg tcttttgagg
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      84   54 cggcggaggg attagacggcttaaaggcaagcggctactccttc tcgtcttttg
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      84   47 cggcggaggg attagacggcttaaaggcaagcggcta ctccttctcg
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      85   51 ggcggaggga ttagacggcttaaaggcaagcggctactcct tctcgtcttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      85   48 ggcggaggg attagacggcttaaaggcaagcggctactc cttctcgtc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      85   47 ggcggaggga ttagacggcttaaaggcaagcggctac tccttctcgt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      86   46 gcggaggg attagacggcttaaaggcaagcggctactc cttctcgt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      86   44 gcggaggg attagacggcttaaaggcaagcggctac tccttctc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      86   44 gcggagggat tagacggcttaaaggcaagcggct actccttctc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      87   51 cggaggg attagacggcttaaaggcaagcggctactccttctcg tcttttg
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      87   44 cggaggg attagacggcttaaaggcaagcggctactc cttctcg
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   49 ggaggg attagacggcttaaaggcaagcggctactccttctcg tctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   46 ggaggg attagacggcttaaaggcaagcggctactccttc tcgtct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   45 ggaggg attagacggcttaaaggcaagcggctactcctt ctcgtc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   45 ggaggga ttagacggcttaaaggcaagcggctactcct tctcgtc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   42 ggaggg attagacggcttaaaggcaagcggctactc cttctc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggaggg attagacggcttaaaggcaagcggctact ccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggaggga ttagacggcttaaaggcaagcggctac tccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggagggatt agacggcttaaaggcaagcggct actccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggagggatta gacggcttaaaggcaagcggc tactccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggagggattag acggcttaaaggcaagcgg ctactccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggagggattagac ggcttaaaggcaagc ggctactccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   41 ggagggattagacg gcttaaaggcaag cggctactccttct
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   40 ggaggg attagacggcttaaaggcaagcggctac tccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   40 ggagggat tagacggcttaaaggcaagcggct actccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   39 ggaggg attagacggcttaaaggcaagcggcta ctcctt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      88   37 ggaggg attagacggcttaaaggcaagcggc tactcc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gaggga ttagacggcttaaaggcaagcggctactccttctcg tctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggat tagacggcttaaaggcaagcggctactccttctc gtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggatta gacggcttaaaggcaagcggctactccttc tcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggattag acggcttaaaggcaagcggctactcctt ctcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggattaga cggcttaaaggcaagcggctactcct tctcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggattagacg gcttaaaggcaagcggctactc cttctcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   48 gagggattagacgg cttaaaggcaagcggctact ccttctcgtctttt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   43 gaggga ttagacggcttaaaggcaagcggctactcct tctcgt
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gaggga ttagacggcttaaaggcaagcggctac tccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gagggatt agacggcttaaaggcaagcggct actccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gagggatta gacggcttaaaggcaagcggc tactccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gagggattag acggcttaaaggcaagcgg ctactccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gagggattagac ggcttaaaggcaagc ggctactccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   39 gagggattagacg gcttaaaggcaag cggctactccttc
+>AU_THIB:138:143 
+AU_THIB:138:143    0.000 0      89   38 gagggat tagacggcttaaaggcaagcggct actcctt
+>AU_THIX:157:161 
+AU_THIX:157:161    0.000 0       7   52 tccgaggg gagcaccagacggtgctgagatggtggtgaaccgga cccttgaa
+>AU_THIX:157:161 
+AU_THIX:157:161    0.000 0       9   48 cgaggg gagcaccagacggtgctgagatggtggtgaaccgga cccttg
+>SM_THID:134:139 
+SM_THID:134:139    0.000 0       7   52 tccgaggg gagcactagacggtgctgagatggcgttgagccgga cccttgaa
+>SM_THID:134:139 
+SM_THID:134:139    0.000 0       9   48 cgaggg gagcactagacggtgctgagatggcgttgagccgga cccttg
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      77   51 cggcggaggg attagaagcgatcggaccgatacgcgctttt cccattgcag
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      77   51 cggcggaggga ttagaagcgatcggaccgatacgcgcttt tcccattgcag
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      77   48 cggcggaggg attagaagcgatcggaccgatacgcgct tttcccattg
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      77   48 cggcggaggga ttagaagcgatcggaccgatacgcgc ttttcccattg
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      78   46 ggcggaggga ttagaagcgatcggaccgatacgcgc ttttcccatt
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      79   47 gcggaggg attagaagcgatcggaccgatacgcgctttt cccattgc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      79   47 gcggaggga ttagaagcgatcggaccgatacgcgcttt tcccattgc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      79   42 gcggaggg attagaagcgatcggaccgatacgcg cttttccc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      80   45 cggaggg attagaagcgatcggaccgatacgcgctttt cccattg
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      80   45 cggaggga ttagaagcgatcggaccgatacgcgcttt tcccattg
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   43 ggaggg attagaagcgatcggaccgatacgcgctttt cccatt
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   43 ggaggga ttagaagcgatcggaccgatacgcgcttt tcccatt
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   40 ggaggg attagaagcgatcggaccgatacgcgct tttccc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   40 ggaggga ttagaagcgatcggaccgatacgcgc ttttccc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   39 ggaggg attagaagcgatcggaccgatacgcgc ttttcc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   39 ggagggat tagaagcgatcggaccgatacgc gcttttcc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   38 ggaggg attagaagcgatcggaccgatacgcg cttttc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      81   36 ggaggg attagaagcgatcggaccgatacg cgcttt
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      82   41 gaggga ttagaagcgatcggaccgatacgcgcttt tcccat
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      82   39 gaggga ttagaagcgatcggaccgatacgcgct tttccc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      82   38 gaggga ttagaagcgatcggaccgatacgcgc ttttcc
+>SM_THIB:142:146 
+SM_THIB:142:146    0.000 0      82   37 gagggat tagaagcgatcggaccgatacgc gcttttc
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0       5   62 gttccgagggg ggctccgacgaggagctgagataccgcacgaccgcggtga ccctttgaacc
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0       5   61 gttccgaggggggct ccgacgaggagctgagataccgcacgaccgc ggtgaccctttgaac
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0       7   58 tccgagggg ggctccgacgaggagctgagataccgcacgaccgcggtga ccctttgaa
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0       9   54 cgagggg ggctccgacgaggagctgagataccgcacgaccgcggtga ccctttg
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0      10   52 gagggg ggctccgacgaggagctgagataccgcacgaccgcggtga cccttt
+>RPA_THIO:137:141 
+RPA_THIO:137:141    0.000 0      10   51 gaggggggct ccgacgaggagctgagataccgcacgaccgc ggtgaccctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   43 cggaggg attagacgctcgatgaacggcgctcgatc ctcttgg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggaggg attagacgctcgatgaacggcgctcgat cctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggaggga ttagacgctcgatgaacggcgctcga tcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggat tagacgctcgatgaacggcgctcg atcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggatt agacgctcgatgaacggcgctc gatcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggattag acgctcgatgaacggcgc tcgatcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggattagacg ctcgatgaacgg cgctcgatcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggattagacgc tcgatgaacg gcgctcgatcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      83   42 cggagggattagacgct cgatgaac ggcgctcgatcctcttg
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggaggg attagacgctcgatgaacggcgctcgat cctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggaggga ttagacgctcgatgaacggcgctcga tcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggagggat tagacgctcgatgaacggcgctcg atcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggagggatt agacgctcgatgaacggcgctc gatcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggagggattag acgctcgatgaacggcgc tcgatcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggagggattagacgc tcgatgaacg gcgctcgatcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   40 ggagggattagacgct cgatgaac ggcgctcgatcctctt
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   39 ggaggg attagacgctcgatgaacggcgctcga tcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   39 ggagggat tagacgctcgatgaacggcgctc gatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   39 ggagggatta gacgctcgatgaacggcgc tcgatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      84   39 ggagggattag acgctcgatgaacggcg ctcgatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   38 gaggga ttagacgctcgatgaacggcgctcga tcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   38 gagggat tagacgctcgatgaacggcgctcg atcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   38 gagggatt agacgctcgatgaacggcgctc gatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   38 gagggattag acgctcgatgaacggcgc tcgatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   38 gagggattagacgct cgatgaac ggcgctcgatcctct
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   37 gagggat tagacgctcgatgaacggcgctc gatcctc
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0      85   37 gagggattag acgctcgatgaacggcg ctcgatcctc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      73   48 cggcggaggg aaggtgcatggctcctcatcccgttccg ttccgcgtcg
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      74   39 ggcggaggg aaggtgcatggctcctcatcc cgttccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      74   34 ggcggaggga aggtgcatggctcc tcatcccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      75   42 gcggaggg aaggtgcatggctcctcatcccgttc cgttccgc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      75   42 gcggagggaa ggtgcatggctcctcatcccgt tccgttccgc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      75   42 gcggagggaag gtgcatggctcctcatcccg ttccgttccgc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      75   37 gcggaggg aaggtgcatggctcctcatcc cgttccgt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      76   40 cggaggg aaggtgcatggctcctcatcccgttc cgttccg
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      76   40 cggagggaag gtgcatggctcctcatcccg ttccgttccg
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      76   35 cggaggg aaggtgcatggctcctcatcc cgttccg
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   38 ggaggg aaggtgcatggctcctcatcccgttc cgttcc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   37 ggaggg aaggtgcatggctcctcatcccgtt ccgttc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   37 ggaggga aggtgcatggctcctcatcccgt tccgttc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   37 ggagggaa ggtgcatggctcctcatcccg ttccgttc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   37 ggagggaagg tgcatggctcctcatcc cgttccgttc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   36 ggaggg aaggtgcatggctcctcatcccgt tccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   36 ggaggga aggtgcatggctcctcatcccg ttccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   36 ggagggaagg tgcatggctcctcatc ccgttccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   33 ggaggg aaggtgcatggctcctcatcc cgttcc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   32 ggaggg aaggtgcatggctcctcatc ccgttc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   31 ggaggg aaggtgcatggctcctcat cccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   31 ggaggga aggtgcatggctcctca tcccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   31 ggagggaagg tgcatggctcc tcatcccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   27 ggaggg aaggtgcatggctcc tcatcc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   26 ggaggg aaggtgcatggctc ctcatc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      77   23 ggaggg aaggtgcatgg ctcctc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      78   39 gaggga aggtgcatggctcctcatcccgttccg ttccgc
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      78   35 gaggga aggtgcatggctcctcatcccgt tccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      78   35 gagggaa ggtgcatggctcctcatcccg ttccgtt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      78   34 gaggga aggtgcatggctcctcatcccg ttccgt
+>RS_THIB:123:128 
+RS_THIB:123:128    0.000 0      78   29 gaggga aggtgcatggctcctca tcccgt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      86   46 gggaggg aacgcggacgacagcgtgcacgcacgtccggg tctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      87   45 ggaggg aacgcggacgacagcgtgcacgcacgtccgggt ctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      87   45 ggaggga acgcggacgacagcgtgcacgcacgtccggg tctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      87   44 ggaggg aacgcggacgacagcgtgcacgcacgtccggg tctcct
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaa cgcggacgacagcgtgcacgcacgtccggg tctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaac gcggacgacagcgtgcacgcacgtccgg gtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgc ggacgacagcgtgcacgcacgtcc gggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgcg gacgacagcgtgcacgcacgtc cgggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgcgg acgacagcgtgcacgcacgt ccgggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgcgga cgacagcgtgcacgcacg tccgggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgcggac gacagcgtgcacgcac gtccgggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   44 gagggaacgcggacg acagcgtgcacgca cgtccgggtctcctt
+>CO_THIC:140:145 
+CO_THIC:140:145    0.000 0      88   43 gaggga acgcggacgacagcgtgcacgcacgtccggg tctcct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      82   41 gccggaggg aagccaggagtcactctcctgct ccttgcggc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      82   41 gccggaggga agccaggagtcactctcctgc tccttgcggc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      82   31 gccggaggg aagccaggagtca ctctcctgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      83   39 ccggaggg aagccaggagtcactctcctgct ccttgcgg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      83   39 ccggaggga agccaggagtcactctcctgc tccttgcgg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      83   29 ccggaggg aagccaggagtca ctctcctg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   45 cggaggg aagccaggagtcactctcctgctccttgcgg cactttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   37 cggaggg aagccaggagtcactctcctgct ccttgcg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   37 cggaggga agccaggagtcactctcctgc tccttgcg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   35 cggaggg aagccaggagtcactctcctg ctccttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   35 cggagggaag ccaggagtcactctc ctgctccttg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      84   28 cggaggg aagccaggagtcac tctcctg
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   43 ggaggg aagccaggagtcactctcctgctccttgcgg cacttt
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   35 ggaggg aagccaggagtcactctcctgct ccttgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   35 ggaggga agccaggagtcactctcctgc tccttgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   33 ggaggg aagccaggagtcactctcctg ctcctt
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   31 ggaggg aagccaggagtcactctcc tgctcc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   29 ggaggg aagccaggagtcactct cctgct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   29 ggaggga agccaggagtcactc tcctgct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   28 ggaggg aagccaggagtcactc tcctgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   26 ggaggg aagccaggagtcac tctcct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   25 ggaggg aagccaggagtca ctctcc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   25 ggagggaagc cagga gtcactctcc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   23 ggaggg aagccaggagt cactct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      85   23 ggaggga agccaggag tcactct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      86   27 gaggga agccaggagtcactc tcctgc
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      86   25 gaggga agccaggagtcac tctcct
+>NE_THIC:128:133 
+NE_THIC:128:133    0.000 0      86   21 gaggga agccaggag tcactc
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       8   45 ccgaggg gtgtcccgtgaggctgagatggcgcacgaan ccctttg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       9   44 cgaggg gtgtcccgtgaggctgagatggcgcacgaanc cctttg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       9   44 cgagggg tgtcccgtgaggctgagatggcgcacgaan ccctttg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       9   44 cgaggggtgt cccgtgaggctgagatggcgcacg aanccctttg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       9   44 cgaggggtgtc ccgtgaggctgagatggcgcac gaanccctttg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0       9   16 cgaggg gtgt cccgtg
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      10   42 gagggg tgtcccgtgaggctgagatggcgcacgaan cccttt
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      10   42 gaggggtgtc ccgtgaggctgagatggcgcac gaancccttt
+>KP_TENA:132:137 
+KP_TENA:132:137    0.000 0      10   41 gaggggt gtcccgtgaggctgagatggcgcacga anccctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggaggga tttgagaatgataacgactactaccgcctcaga tacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggat ttgagaatgataacgactactaccgcctcag atacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggatt tgagaatgataacgactactaccgcctca gatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggattt gagaatgataacgactactaccgcctc agatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggatttg agaatgataacgactactaccgcct cagatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggatttga gaatgataacgactactaccgcc tcagatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggatttgag aatgataacgactactaccgc ctcagatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   53 ggcggagggatttgagaatg ataacgactacta ccgcctcagatacctttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      69   38 ggcggaggga tttgagaatgataacgac tactaccgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggaggga tttgagaatgataacgactactaccgcctcaga tacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggat ttgagaatgataacgactactaccgcctcag atacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggatt tgagaatgataacgactactaccgcctca gatacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggattt gagaatgataacgactactaccgcctc agatacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggatttg agaatgataacgactactaccgcct cagatacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggatttga gaatgataacgactactaccgcc tcagatacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      70   51 gcggagggatttgag aatgataacgactactaccgc ctcagatacctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggaggga tttgagaatgataacgactactaccgcctcaga tacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggat ttgagaatgataacgactactaccgcctcag atacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggatt tgagaatgataacgactactaccgcctca gatacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggattt gagaatgataacgactactaccgcctc agatacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggatttg agaatgataacgactactaccgcct cagatacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggatttga gaatgataacgactactaccgcc tcagatacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      71   49 cggagggatttgag aatgataacgactactaccgc ctcagatacctttg
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   50 ggaggg atttgagaatgataacgactactaccgcctcagatacc tttgcc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   49 ggaggg atttgagaatgataacgactactaccgcctcagatac ctttgc
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggaggga tttgagaatgataacgactactaccgcctcaga taccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggat ttgagaatgataacgactactaccgcctcag ataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggatt tgagaatgataacgactactaccgcctca gataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggattt gagaatgataacgactactaccgcctc agataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggatttg agaatgataacgactactaccgcct cagataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggatttga gaatgataacgactactaccgcc tcagataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      72   47 ggagggatttgag aatgataacgactactaccgc ctcagataccttt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gaggga tttgagaatgataacgactactaccgcctcaga tacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggat ttgagaatgataacgactactaccgcctcag atacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggatt tgagaatgataacgactactaccgcctca gatacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggattt gagaatgataacgactactaccgcctc agatacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggatttg agaatgataacgactactaccgcct cagatacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggatttga gaatgataacgactactaccgcc tcagatacctt
+>YP_THIB:135:140 
+YP_THIB:135:140    0.000 0      73   45 gagggatttgag aatgataacgactactaccgc ctcagatacctt
+>PA_THIC:140:145 
+PA_THIC:140:145    0.000 0      25   36 cgaggg gctgagatcggatagttccggatc ccgttg
+>PA_THIC:140:145 
+PA_THIC:140:145    0.000 0      25   36 cgagggg ctgagatcggatagttccggat cccgttg
+>PA_THIC:140:145 
+PA_THIC:140:145    0.000 0      26   34 gagggg ctgagatcggatagttccggat cccgtt
+>PA_THIC:140:145 
+PA_THIC:140:145    0.000 0      26   33 gagggg ctgagatcggatagttccgga tcccgt

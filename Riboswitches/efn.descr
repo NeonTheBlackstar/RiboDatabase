@@ -1,6 +1,0 @@
-parms
-	chk_both_strs = 0;
-descr
-	h5( minlen=4, maxlen=6 )
-		ss( seq="^uucg$" )
-	h3

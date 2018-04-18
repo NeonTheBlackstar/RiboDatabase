@@ -1,0 +1,101 @@
+#RM scored
+#RM descr h5 ss h3
+#RM dfile sd3p_m.descr
+>SM_THID:134:139 
+SM_THID:134:139    0.000 0     120   20 gccctc gtgcgaag gaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtactt ttttgcgtaattacaaga gaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtacttt tttgcgtaattacaag agaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtactttt ttgcgtaattacaa gagaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtacttttt tgcgtaattaca agagaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtactttttt gcgtaattac aagagaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtacttttttg cgtaatta caagagaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      91   42 tgctgtgtacttttttgcg taat tacaagagaggacacaatg
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtactt ttttgcgtaattacaaga gaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtacttt tttgcgtaattacaag agaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtactttt ttgcgtaattacaa gagaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtacttttt tgcgtaattaca agagaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtactttttt gcgtaattac aagagaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtacttttttg cgtaatta caagagaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      92   40 gctgtgtacttttttgcg taat tacaagagaggacacaat
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtactt ttttgcgtaattacaaga gaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtacttt tttgcgtaattacaag agaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtactttt ttgcgtaattacaa gagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtacttttt tgcgtaattaca agagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtactttttt gcgtaattac aagagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtacttttttg cgtaatta caagagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   36 tgtgtacttttttgcg taat tacaagagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   34 tgtgtacttt tttgcgtaattaca agagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      94   34 tgtgtactttt ttgcgtaattac aagagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtactt ttttgcgtaattacaaga gaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtacttt tttgcgtaattacaag agaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtactttt ttgcgtaattacaa gagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtacttttt tgcgtaattaca agagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtactttttt gcgtaattac aagagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtacttttttg cgtaatta caagagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   34 gtgtacttttttgcg taat tacaagagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      95   32 gtgtactttt ttgcgtaattac aagagaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   34 tgtacttttt tgcgtaattacaag agaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   34 tgtactttttt gcgtaattacaa gagaggacaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtactt ttttgcgtaattacaaga gaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtacttt tttgcgtaattacaag agaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtactttt ttgcgtaattacaa gagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtacttttt tgcgtaattaca agagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtactttttt gcgtaattac aagagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtacttttttg cgtaatta caagagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      96   32 tgtacttttttgcg taat tacaagagaggaca
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   32 gtactttttt gcgtaattacaa gagaggacac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtactt ttttgcgtaattacaaga gaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtacttt tttgcgtaattacaag agaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtactttt ttgcgtaattacaa gagaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtacttttt tgcgtaattaca agagaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtactttttt gcgtaattac aagagaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtacttttttg cgtaatta caagagaggac
+>VK_THIB:121:127 
+VK_THIB:121:127    0.000 0      97   30 gtacttttttgcg taat tacaagagaggac

@@ -1,0 +1,13 @@
+#RM scored
+#RM descr h5 ss h3
+#RM dfile sd3p_m.descr
+>BME_THIB:136:142 
+BME_THIB:136:142    0.000 0     118   24 cctctt ggaataaacgaa aggaag
+>RS_THIM:131:136 
+RS_THIM:131:136    0.000 0      42   42 gcaccctttg aacctgaaccaggtcatgctgg cggaggaagt
+>PP_THIC:156:161 
+PP_THIC:156:161    0.000 0     102   50 gccttct ccgcgcgtttcaggttcaccccgacattccactgct aggaagc
+>PP_THIC:156:161 
+PP_THIC:156:161    0.000 0     103   48 ccttct ccgcgcgtttcaggttcaccccgacattccactgct aggaag
+>PP_THIC:156:161 
+PP_THIC:156:161    0.000 0     104   47 cttctccgcg cgtttcaggttcaccccgacattccac tgctaggaag
