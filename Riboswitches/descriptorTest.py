@@ -20,6 +20,11 @@ with open(seqsFile) as s:
 				isHarpin = False
 				diry = "RNAmotif/{}".format(mName)
 				os.system("mkdir " + diry + " > /dev/null 2>&1")
+
+				with open("seqFile.fasta", 'w') as sF:
+					sF.write(headerLine)
+					sF.write(seq + '\n')
+
 				for f in descriptorsList:
 					newDesc = "{}_m.descr".format(f.split(".")[0])
 					with open(f) as h, open(newDesc,'w') as o:
@@ -29,27 +34,33 @@ with open(seqsFile) as s:
 								line = "{} seq=\"{}\"{}".format(sp[0], motif, sp[1])
 							o.write(line)
 					os.system("rm desc.out")					
-					os.system("Programs/rnamotif-3.1.1/src/rnamotif -descr {} {} > desc.out".format(newDesc, seqsFile))					
+					os.system("Programs/rnamotif-3.1.1/src/rnamotif -descr {} {} > desc.out".format(newDesc, "seqFile.fasta"))			
 					
 					### Save found structures ###
-					os.system("rm {}/{}".format(diry, "{}.out".format(f.split(".")[0])))
-					os.system("cp {} {}/{}".format("desc.out", diry, "{}.out".format(f.split(".")[0])))
+					os.system("rm ./{}/{} > /dev/null 2>&1".format(diry, "{}.out".format(f.split(".")[0])))
+					os.system("cp {} ./{}/{}".format("desc.out", diry, "{}.out".format(f.split(".")[0])))
 					
 					with open("desc.out") as descOut:
 						for ln in descOut:
 							if ln.startswith("#"):
 								isHarpin = True
+					print("########", mName, motif, mStart, mEnd, isHarpin, f, diry, "{}.out".format(f.split(".")[0]))					
+				os.system("rm seqFile.fasta")
 				if isHarpin == True:
-					print(mName, motif, mStart, mEnd)
+					#print(mName, motif, mStart, mEnd)
+					print("!!! !!! FOUND !!! !!!")
 					found += 1
-				else:
-					print("########", mName, motif, mStart, mEnd)
-					
+				#else:
+				#	print("########", mName, motif, mStart, mEnd)
+				print("\n\n")				
+	
 			temp = l.split(":")
 			mName = temp[0][1:]
 			mStart = int(temp[1]) - 1
 			mEnd = int(temp[2]) - 1
+			headerLine = l + "\n"
 		elif not l.startswith(">"):
 			seq = l
+			
 
 print("Total:", total, "Found:", found, "Percent:", found * 100 / total, "%")

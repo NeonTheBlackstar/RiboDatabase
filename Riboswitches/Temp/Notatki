@@ -327,4 +327,10 @@ Zrobić klucz główny dla ryboprzełącznika RS00000001
 # Wyszukiwarka
 
 '''
-'''_______________________________________________________________________'''
+'''
+
+############## 19.04.18 #################
+
+Ze wszystkich sekwencji z terminacją translacyjną, nie znaleziono motywu SD związnegi w trzonku spinki w sekwencji:
+######## PP_THI21P AGGA 148 152 False sd3p.descr RNAmotif/PP_THI21P sd3p.out
+######## PP_THI21P AGGA 148 152 False sd5p.descr RNAmotif/PP_THI21P sd5p.out

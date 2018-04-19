@@ -1,30 +1,6 @@
 #RM scored
 #RM descr h5 ss h3
 #RM dfile sd5p_m.descr
->SM_THIB:142:146 
-SM_THIB:142:146    0.000 0     142   22 gaggtg ccagaatgtc cagttc
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     110   35 actcttttttgaggt gcaaa gtgttaaaaaaatgt
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     114   27 ttttttgaggt gcaaa gtgttaaaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     115   27 tttttgaggt gcaaagt gttaaaaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     115   27 tttttgaggtg caaag tgttaaaaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     115   25 tttttgaggt gcaaa gtgttaaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     116   25 ttttgaggtg caaag tgttaaaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     116   23 ttttgaggt gcaaa gtgttaaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     117   21 tttgaggt gcaaa gtgttaaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     118   19 ttgaggt gcaaa gtgttaa
->EC_THIB:120:125 
-EC_THIB:120:125    0.000 0     119   17 tgaggt gcaaa gtgtta
->TY_THIB:122:127 
-TY_THIB:122:127    0.000 0     121   17 tgaggt gcaaa gtgtta
 >KP_TENA:132:137 
 KP_TENA:132:137    0.000 0     130   23 tggaggt cctgtgatc gttcccg
 >KP_TENA:132:137 
@@ -35,9 +11,3 @@ KP_TENA:132:137    0.000 0     131   18 ggaggt cctgtg atcgtt
 KP_TENA:132:137    0.000 0     131   18 ggaggtc ctgt gatcgtt
 >KP_TENA:132:137 
 KP_TENA:132:137    0.000 0     132   16 gaggtc ctgt gatcgt
->PP_THIC:156:161 
-PP_THIC:156:161    0.000 0      39   46 gcagaggtgc ggatcccgttgaacctgatcaggtta gcgcctgcgt
->PP_THIC:156:161 
-PP_THIC:156:161    0.000 0      39   46 gcagaggtgcggatc ccgttgaacctgatca ggttagcgcctgcgt
->SH_OMR2:141:145 
-SH_OMR2:141:145    0.000 0     140   17 tgaggt cctat gtctaa
