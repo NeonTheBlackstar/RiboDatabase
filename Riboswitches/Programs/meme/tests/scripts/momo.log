@@ -1,0 +1,68 @@
+*******************************************************************************
+Test momo1 ...
+momo simple --oc results/momo1 momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo2 ...
+momo simple --oc results/momo2 --protein-database momo/small-yeast.fasta momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo3 ...
+momo simple --oc results/momo3 --single-motif-per-mass T momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo4 ...
+momo simple --oc results/momo4 --protein-database momo/small-yeast.fasta --hash-fasta 0 momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo5 ...
+momo simple --oc results/momo5 --eliminate-repeats 3 momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo6 ...
+momo simple --oc results/momo6 --eliminate-repeats 0 momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo7 ...
+momo simple --oc results/momo7 --filter "xcorr rank,le,3" momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo8 ...
+momo simple --oc results/momo8 --fg-filetype prealigned momo/small-tide-mod-phospho.txt &> log
+PASSED!
+*******************************************************************************
+Test momo9 ...
+momo simple --oc results/momo9 --fg-filetype fasta momo/small-tide-mod-phospho.fasta &> log
+PASSED!
+*******************************************************************************
+Test momo10 ...
+momo simple --oc results/momo10 momo/small-tide-mod-1-out-of-2.txt momo/small-tide-mod-2-out-of-2.txt &> log
+PASSED!
+*******************************************************************************
+Test momo11 ...
+momo motifx --oc results/momo11 --protein-database momo/small-yeast.fasta --score-threshold 0.05 --count-threshold 1 momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo12 ...
+momo motifx --oc results/momo12 --protein-database momo/small-yeast.fasta --score-threshold 0.05 --count-threshold 1 --single-motif-per-mass T momo/small-tide-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo13 ...
+momo motifx --oc results/momo13 --protein-database momo/small-yeast.fasta --score-threshold 0.05 --count-threshold 1 --fg-filetype prealigned momo/small-tide-mod-phospho.txt &> log
+PASSED!
+*******************************************************************************
+Test momo14 ...
+momo motifx --oc results/momo14 --protein-database momo/small-yeast-prealigned-no-unknowns.txt --score-threshold 0.05 --count-threshold 1 --fg-filetype prealigned --bg-filetype prealigned momo/small-tide-mod-phospho.txt &> log
+PASSED!
+*******************************************************************************
+Test momo15 ...
+momo simple --oc results/momo15 --sequence-column Peptide momo/small-msgf-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo16 ...
+momo simple --oc results/momo16 --sequence-column "modified sequence" momo/small-comet-mod.txt &> log
+PASSED!
+*******************************************************************************
+Test momo17 ...
+momo modl --oc results/momo17 --protein-database momo/small-yeast.fasta momo/small-tide-mod.txt &> log
+PASSED!

@@ -1,0 +1,349 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 4.12.0 (Release date: Tue Jun 27 16:22:50 2017 -0700)
+
+For further information on how to interpret these results or to get
+a copy of the MEME software please access http://meme-suite.org .
+
+This file may be used as input to the MAST algorithm for searching
+sequence databases for matches to groups of motifs.  MAST is available
+for interactive use and downloading at http://meme-suite.org .
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+DATAFILE= inputSeqsMEME.fasta
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+AU_THIC:146:150|157|ATG  1.0000     25  AU_THIB:138:143|149|GTG  1.0000     25  
+AU_THIX:157:161|169|ATG  1.0000     25  SM_THID:134:139|145|ATG  1.0000     25  
+SM_THIB:142:146|153|ATG  1.0000     25  RPA_THIO:137:141|148|GTG 1.0000     25  
+BME_THIB:136:142|149|ATG 1.0000     25  BME_THID:150:154|163|ATG 1.0000     25  
+RS_THIM:131:136|140|ATG  1.0000     25  RS_THIB:123:128|135|ATG  1.0000     25  
+CO_THIC:140:145|154|ATG  1.0000     25  BU_THIC:145:149|155|ATG  1.0000     25  
+BU_THIO:155:160|171|GTG  1.0000     25  NE_THIC:128:133|140|ATG  1.0000     25  
+EC_THIB:120:125|141|ATG  1.0000     25  TY_THIB:122:127|132|GTG  1.0000     25  
+KP_TENA:132:137|140|GTG  1.0000     25  YP_THIB:135:140|146|GTG  1.0000     25  
+HI_THIM:131:136|141|ATG  1.0000     25  HI_THIB:122:126|133|ATG  1.0000     25  
+HI_THIZ:123:128|133|ATG  1.0000     25  VK_THIB:121:127|130|ATG  1.0000     25  
+PQ_THIM:142:147|153|ATG  1.0000     25  PQ_CYTX:136:140|148|ATG  1.0000     25  
+AB_THIB:121:126|130|ATG  1.0000     25  VC_THIC:140:145|150|ATG  1.0000     25  
+VC_THID:135:140|145|ATG  1.0000     25  VC_THIB:149:154|162|TTG  1.0000     25  
+VFI_THIC:152:156|164|ATG 1.0000     25  VFI_THIB:140:145|158|ATG 1.0000     25  
+PA_THIC:140:145|153|ATG  1.0000     25  PP_THIC:156:161|169|ATG  1.0000     25  
+PP_THI21P:149:153|160|AT 1.0000     25  SH_OMR2:141:145|149|ATG  1.0000     25  
+CJ_THIC:138:142|149|ATG  1.0000     25  EC_THIM:120:125|132|ATG  1.0000     25  
+TY_THIM:116:121|129|ATG  1.0000     25  BAC_ZY_THIY:145:150|159| 1.0000     25  
+KP_THIM:123:127|133|ATG  1.0000     25  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme inputSeqsMEME.fasta -w 6 -mod oops -dna -maxsize 200000 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+object function=  E-value of product of p-values
+width:  minw=            6    maxw=            6
+width:  wg=             11    ws=              1    endgaps=       yes
+nsites: minsites=       39    maxsites=       39    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+global: substring=     yes    branching=      no    wbranch=        no
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+data:   n=             975    N=              39    shuffle=        -1
+strands: +
+sample: seed=            0    ctfrac=         -1    maxwords=       -1
+Letter frequencies in dataset:
+A 0.280 C 0.213 G 0.253 T 0.253 
+Background letter frequencies (from dataset with add-one prior applied):
+A 0.280 C 0.213 G 0.253 T 0.253 
+********************************************************************************
+
+
+********************************************************************************
+MOTIF RAGGAG MEME-1	width =   6  sites =  39  llr = 176  E-value = 8.8e-014
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  59::82
+pos.-specific     C  2:::12
+probability       G  3:9a:6
+matrix            T  11::11
+
+         bits    2.2       
+                 2.0    *  
+                 1.8    *  
+                 1.6   **  
+Relative         1.3   **  
+Entropy          1.1  **** 
+(6.5 bits)       0.9  **** 
+                 0.7  **** 
+                 0.4  *****
+                 0.2 ******
+                 0.0 ------
+
+Multilevel           AAGGAG
+consensus            G     
+sequence                   
+                           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value             Site 
+-------------             ----- ---------            ------
+VC_THIB:149:154|162|TTG      12  3.55e-04 GCCGCTCATT AAGGAG AGCGAGCC  
+YP_THIB:135:140|146|GTG      14  3.55e-04 CTTTATGTTC AAGGAG TGCAAA    
+RS_THIM:131:136|140|ATG      16  3.55e-04 TCCGTCACGG AAGGAG AGCG      
+SM_THID:134:139|145|ATG      12  3.55e-04 CCCTCGTGCG AAGGAG GACTGCGC  
+NE_THIC:128:133|140|ATG      14  6.77e-04 GCGGCACTTT GAGGAG CATAGC    
+CO_THIC:140:145|154|ATG      12  6.77e-04 TTGGAAGCTT GAGGAG CGCCCGAA  
+RS_THIB:123:128|135|ATG      14  6.77e-04 CCGCGTCGAA GAGGAG GATGAG    
+AU_THIB:138:143|149|GTG      14  6.77e-04 CTCGTCTTTT GAGGAG ATACCC    
+TY_THIM:116:121|129|ATG      13  9.47e-04 TTCACGCGGG CAGGAG CTGAACC   
+EC_THIM:120:125|132|ATG      14  9.47e-04 CACGTTATGG CAGGAG CAAACT    
+PP_THIC:156:161|169|ATG      12  9.47e-04 AGGAAGCCGT CAGGAG AGCCTGTG  
+PA_THIC:140:145|153|ATG      12  9.47e-04 GACAATCACC CAGGAG AGCCATCG  
+VC_THID:135:140|145|ATG      15  9.47e-04 CCTGTTTTCA CAGGAG CTTTT     
+PP_THI21P:149:153|160|AT     14  1.25e-03 CACCCTCATC AAGGAC AGCAAC    
+VFI_THIB:140:145|158|ATG      7  1.25e-03     GCTCAA AAGGAC GAAAGAGCGC
+RPA_THIO:137:141|148|GTG     14  1.25e-03 GGACCTGCGC AAGGAC GCGCCG    
+VFI_THIC:152:156|164|ATG     13  1.91e-03 TATTTTTATC AAGGAA TTTTGCT   
+VC_THIC:140:145|150|ATG      15  1.91e-03 TCTTATTAAA AAGGAA ATGCT     
+PQ_THIM:142:147|153|ATG      14  1.91e-03 CAATCATATT AAGGAA TAAACG    
+VK_THIB:121:127|130|ATG      17  1.91e-03 AATTACAAGA GAGGAC ACA       
+HI_THIM:131:136|141|ATG      15  1.91e-03 TATTCAACAC AAGGAA TGCTT     
+BME_THIB:136:142|149|ATG     12  1.91e-03 GAATAAACGA AAGGAA GTGCCGTG  
+BAC_ZY_THIY:145:150|159|     13  2.27e-03 TAAATGGATG GAGGAA TTTTTTT   
+TY_THIB:122:127|132|GTG      16  2.88e-03 CTCTTTAACT GAGGTG CAAA      
+EC_THIB:120:125|141|ATG       5  2.88e-03       TTTT GAGGTG CAAAGTGTTA
+SM_THIB:142:146|153|ATG      15  2.88e-03 AACAAAGGGA GAGGTG CCAGA     
+CJ_THIC:138:142|149|ATG      14  3.78e-03 AAATTTTTTA AAGGAT AAATTT    
+HI_THIB:122:126|133|ATG      14  3.78e-03 AATCATAAAT AAGGAT GTAATA    
+PQ_CYTX:136:140|148|ATG      14  4.40e-03 AGCATATTAT GAGGAT TTTGCG    
+KP_TENA:132:137|140|GTG      15  4.72e-03 CCCTGAATAA ATGGAG GTCCT     
+BU_THIC:145:149|155|ATG      14  4.72e-03 TAGCTTTGCA ATGGAG ATACGC    
+HI_THIZ:123:128|133|ATG      16  5.77e-03 TTTAATCATT GAGGCG AGCA      
+SH_OMR2:141:145|149|ATG      18  6.91e-03 ACGTATATTT GAGGTC CT        
+AB_THIB:121:126|130|ATG      14  7.43e-03 TTTGTAAATA ACGGAG GGCGTG    
+BME_THID:150:154|163|ATG     10  1.01e-02  TCCGTTCGG AATGAG AGACGTCGAA
+AU_THIX:157:161|169|ATG      14  1.31e-02 GTTTGCGTCT GAGGCC CGGCTC    
+KP_THIM:123:127|133|ATG      14  1.58e-02 CCTCGTCTGG CGGGAG CAAACT    
+AU_THIC:146:150|157|ATG      13  1.71e-02 CAGTCAAACT TTGGAG CCTCAAG   
+BU_THIO:155:160|171|GTG      13  5.68e-02 TCGTCCTGGG TACGTG CGTTTTT   
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+VC_THIB:149:154|162|TTG           0.00036  11_[+1]_8
+YP_THIB:135:140|146|GTG           0.00036  13_[+1]_6
+RS_THIM:131:136|140|ATG           0.00036  15_[+1]_4
+SM_THID:134:139|145|ATG           0.00036  11_[+1]_8
+NE_THIC:128:133|140|ATG           0.00068  13_[+1]_6
+CO_THIC:140:145|154|ATG           0.00068  11_[+1]_8
+RS_THIB:123:128|135|ATG           0.00068  13_[+1]_6
+AU_THIB:138:143|149|GTG           0.00068  13_[+1]_6
+TY_THIM:116:121|129|ATG           0.00095  12_[+1]_7
+EC_THIM:120:125|132|ATG           0.00095  13_[+1]_6
+PP_THIC:156:161|169|ATG           0.00095  11_[+1]_8
+PA_THIC:140:145|153|ATG           0.00095  11_[+1]_8
+VC_THID:135:140|145|ATG           0.00095  14_[+1]_5
+PP_THI21P:149:153|160|AT           0.0012  13_[+1]_6
+VFI_THIB:140:145|158|ATG           0.0012  6_[+1]_13
+RPA_THIO:137:141|148|GTG           0.0012  13_[+1]_6
+VFI_THIC:152:156|164|ATG           0.0019  12_[+1]_7
+VC_THIC:140:145|150|ATG            0.0019  14_[+1]_5
+PQ_THIM:142:147|153|ATG            0.0019  13_[+1]_6
+VK_THIB:121:127|130|ATG            0.0019  16_[+1]_3
+HI_THIM:131:136|141|ATG            0.0019  14_[+1]_5
+BME_THIB:136:142|149|ATG           0.0019  11_[+1]_8
+BAC_ZY_THIY:145:150|159|           0.0023  12_[+1]_7
+TY_THIB:122:127|132|GTG            0.0029  15_[+1]_4
+EC_THIB:120:125|141|ATG            0.0029  4_[+1]_15
+SM_THIB:142:146|153|ATG            0.0029  14_[+1]_5
+CJ_THIC:138:142|149|ATG            0.0038  13_[+1]_6
+HI_THIB:122:126|133|ATG            0.0038  13_[+1]_6
+PQ_CYTX:136:140|148|ATG            0.0044  13_[+1]_6
+KP_TENA:132:137|140|GTG            0.0047  14_[+1]_5
+BU_THIC:145:149|155|ATG            0.0047  13_[+1]_6
+HI_THIZ:123:128|133|ATG            0.0058  15_[+1]_4
+SH_OMR2:141:145|149|ATG            0.0069  17_[+1]_2
+AB_THIB:121:126|130|ATG            0.0074  13_[+1]_6
+BME_THID:150:154|163|ATG             0.01  9_[+1]_10
+AU_THIX:157:161|169|ATG             0.013  13_[+1]_6
+KP_THIM:123:127|133|ATG             0.016  13_[+1]_6
+AU_THIC:146:150|157|ATG             0.017  12_[+1]_7
+BU_THIO:155:160|171|GTG             0.057  12_[+1]_7
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF RAGGAG width=6 seqs=39
+VC_THIB:149:154|162|TTG  (   12) AAGGAG  1 
+YP_THIB:135:140|146|GTG  (   14) AAGGAG  1 
+RS_THIM:131:136|140|ATG  (   16) AAGGAG  1 
+SM_THID:134:139|145|ATG  (   12) AAGGAG  1 
+NE_THIC:128:133|140|ATG  (   14) GAGGAG  1 
+CO_THIC:140:145|154|ATG  (   12) GAGGAG  1 
+RS_THIB:123:128|135|ATG  (   14) GAGGAG  1 
+AU_THIB:138:143|149|GTG  (   14) GAGGAG  1 
+TY_THIM:116:121|129|ATG  (   13) CAGGAG  1 
+EC_THIM:120:125|132|ATG  (   14) CAGGAG  1 
+PP_THIC:156:161|169|ATG  (   12) CAGGAG  1 
+PA_THIC:140:145|153|ATG  (   12) CAGGAG  1 
+VC_THID:135:140|145|ATG  (   15) CAGGAG  1 
+PP_THI21P:149:153|160|AT (   14) AAGGAC  1 
+VFI_THIB:140:145|158|ATG (    7) AAGGAC  1 
+RPA_THIO:137:141|148|GTG (   14) AAGGAC  1 
+VFI_THIC:152:156|164|ATG (   13) AAGGAA  1 
+VC_THIC:140:145|150|ATG  (   15) AAGGAA  1 
+PQ_THIM:142:147|153|ATG  (   14) AAGGAA  1 
+VK_THIB:121:127|130|ATG  (   17) GAGGAC  1 
+HI_THIM:131:136|141|ATG  (   15) AAGGAA  1 
+BME_THIB:136:142|149|ATG (   12) AAGGAA  1 
+BAC_ZY_THIY:145:150|159| (   13) GAGGAA  1 
+TY_THIB:122:127|132|GTG  (   16) GAGGTG  1 
+EC_THIB:120:125|141|ATG  (    5) GAGGTG  1 
+SM_THIB:142:146|153|ATG  (   15) GAGGTG  1 
+CJ_THIC:138:142|149|ATG  (   14) AAGGAT  1 
+HI_THIB:122:126|133|ATG  (   14) AAGGAT  1 
+PQ_CYTX:136:140|148|ATG  (   14) GAGGAT  1 
+KP_TENA:132:137|140|GTG  (   15) ATGGAG  1 
+BU_THIC:145:149|155|ATG  (   14) ATGGAG  1 
+HI_THIZ:123:128|133|ATG  (   16) GAGGCG  1 
+SH_OMR2:141:145|149|ATG  (   18) GAGGTC  1 
+AB_THIB:121:126|130|ATG  (   14) ACGGAG  1 
+BME_THID:150:154|163|ATG (   10) AATGAG  1 
+AU_THIX:157:161|169|ATG  (   14) GAGGCC  1 
+KP_THIM:123:127|133|ATG  (   14) CGGGAG  1 
+AU_THIC:146:150|157|ATG  (   13) TTGGAG  1 
+BU_THIO:155:160|171|GTG  (   13) TACGTG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 6 n= 780 bayes= 4.24793 E= 8.8e-014 
+    72    -47     40   -230 
+   164   -305   -330   -172 
+ -1193   -305    190   -330 
+ -1193  -1193    198  -1193 
+   155   -206  -1193    -98 
+   -86    -47    128   -172 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 6 nsites= 39 E= 8.8e-014 
+ 0.461538  0.153846  0.333333  0.051282 
+ 0.871795  0.025641  0.025641  0.076923 
+ 0.000000  0.025641  0.948718  0.025641 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.820513  0.051282  0.000000  0.128205 
+ 0.153846  0.153846  0.615385  0.076923 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif RAGGAG MEME-1 regular expression
+--------------------------------------------------------------------------------
+[AG]AGGAG
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.04 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+AU_THIC:146:150|157|ATG          2.92e-01  25
+AU_THIB:138:143|149|GTG          1.34e-02  25
+AU_THIX:157:161|169|ATG          2.32e-01  25
+SM_THID:134:139|145|ATG          7.09e-03  25
+SM_THIB:142:146|153|ATG          5.60e-02  25
+RPA_THIO:137:141|148|GTG         2.46e-02  25
+BME_THIB:136:142|149|ATG         3.75e-02  25
+BME_THID:150:154|163|ATG         1.83e-01  25
+RS_THIM:131:136|140|ATG          7.09e-03  25
+RS_THIB:123:128|135|ATG          1.34e-02  25
+CO_THIC:140:145|154|ATG          1.34e-02  25
+BU_THIC:145:149|155|ATG          9.03e-02  25
+BU_THIO:155:160|171|GTG          6.90e-01  25
+NE_THIC:128:133|140|ATG          1.34e-02  25
+EC_THIB:120:125|141|ATG          5.60e-02  25
+TY_THIB:122:127|132|GTG          5.60e-02  25
+KP_TENA:132:137|140|GTG          9.03e-02  25
+YP_THIB:135:140|146|GTG          7.09e-03  25
+HI_THIM:131:136|141|ATG          3.75e-02  25
+HI_THIB:122:126|133|ATG          7.30e-02  25
+HI_THIZ:123:128|133|ATG          1.09e-01  25
+VK_THIB:121:127|130|ATG          3.75e-02  25
+PQ_THIM:142:147|153|ATG          3.75e-02  25
+PQ_CYTX:136:140|148|ATG          8.45e-02  25
+AB_THIB:121:126|130|ATG          1.39e-01  25
+VC_THIC:140:145|150|ATG          3.75e-02  25
+VC_THID:135:140|145|ATG          1.88e-02  25
+VC_THIB:149:154|162|TTG          7.09e-03  25
+VFI_THIC:152:156|164|ATG         3.75e-02  25
+VFI_THIB:140:145|158|ATG         2.46e-02  25
+PA_THIC:140:145|153|ATG          1.88e-02  25
+PP_THIC:156:161|169|ATG          1.88e-02  25
+PP_THI21P:149:153|160|AT         2.46e-02  25
+SH_OMR2:141:145|149|ATG          1.30e-01  25
+CJ_THIC:138:142|149|ATG          7.30e-02  25
+EC_THIM:120:125|132|ATG          1.88e-02  25
+TY_THIM:116:121|129|ATG          1.88e-02  25
+BAC_ZY_THIY:145:150|159|         4.44e-02  25
+KP_THIM:123:127|133|ATG          2.73e-01  25
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: alcedo-X555LD
+
+********************************************************************************

@@ -1,0 +1,4 @@
+*******************************************************************************
+Test ame1 ...
+ame --oc results/ame1 --silent --verbose 1 --bgformat 0 --xalph common/alphabet_rna.txt --control common/Klf1-200-100-shuffled.s common/Klf1-200-100.s common/Jaspar-subset.meme &> log
+PASSED!

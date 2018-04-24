@@ -1,0 +1,28 @@
+*******************************************************************************
+Test meme1 ...
+meme common/crp0.s -oc results/meme1 -mod oops -dna -revcomp -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme2 ...
+meme common/crp0.s -oc results/meme2 -mod zoops -dna -revcomp -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme3 ...
+meme common/crp0.s -oc results/meme3 -mod tcm -dna -revcomp -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme4 ...
+meme common/adh.s -oc results/meme4 -mod oops -protein -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme5 ...
+meme common/adh.s -oc results/meme5 -mod zoops -protein -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme6 ...
+meme common/adh.s -oc results/meme6 -mod tcm -protein -nmotifs 2 -minw 8 -nostatus &> log
+PASSED!
+*******************************************************************************
+Test meme_psp ...
+meme common/psp_test.s -psp common/psp_test.psp -minsites 5 -dna -revcomp -minw 7 -maxw 12 -nostatus -text 1> results/meme7/meme_ALh59_stdout 2> log
+PASSED!

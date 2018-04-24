@@ -1,0 +1,1 @@
+../../../doc/js/simple-shared-doc.js

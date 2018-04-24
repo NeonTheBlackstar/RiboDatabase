@@ -1,0 +1,8 @@
+*******************************************************************************
+Test meme-chip1 ...
+meme-chip -oc results/meme-chip1 -db meme-chip/JASPAR_CORE_2014_vertebrates.meme meme-chip/Klf1.100.s &> log
+Can't locate XML/Simple.pm in @INC (you may need to install the XML::Simple module) (@INC contains: /home/alcedo/Desktop/Github/RiboDatabase/Riboswitches/Programs/meme_4.12.0/scripts /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /home/alcedo/Desktop/Github/RiboDatabase/Riboswitches/Programs/meme_4.12.0/scripts/meme-chip line 112.
+BEGIN failed--compilation aborted at /home/alcedo/Desktop/Github/RiboDatabase/Riboswitches/Programs/meme_4.12.0/scripts/meme-chip line 112.
+-------------------------------------------------------------------------------
+meme-chip exited with value 2 indicating failure.
+FAILED!

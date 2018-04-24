@@ -1,0 +1,70 @@
+*******************************************************************************
+Test tomtom_allr ...
+tomtom -verbosity 1 -dist allr -oc results/tomtom1 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_ed ...
+tomtom -verbosity 1 -dist ed -oc results/tomtom2 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_kullback ...
+tomtom -verbosity 1 -dist kullback -oc results/tomtom3 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_pearson ...
+tomtom -verbosity 1 -dist pearson -oc results/tomtom4 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_sandelin ...
+tomtom -verbosity 1 -dist sandelin -oc results/tomtom5 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_blic1 ...
+tomtom -verbosity 1 -dist blic1 -oc results/tomtom6 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_blic5 ...
+tomtom -verbosity 1 -dist blic5 -oc results/tomtom7 -incomplete-scores common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_allr_cs ...
+tomtom -verbosity 1 -dist allr -oc results/tomtom8 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_ed_cs ...
+tomtom -verbosity 1 -dist ed -oc results/tomtom9 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_kullback_cs ...
+tomtom -verbosity 1 -dist kullback -oc results/tomtom10 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_pearson_cs ...
+tomtom -verbosity 1 -dist pearson -oc results/tomtom11 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_sandelin_cs ...
+tomtom -verbosity 1 -dist sandelin -oc results/tomtom12 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_blic1_cs ...
+tomtom -verbosity 1 -dist blic1 -oc results/tomtom13 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
+*******************************************************************************
+Test tomtom_blic5_cs ...
+tomtom -verbosity 1 -dist blic5 -oc results/tomtom14 common/sample.meme common/sample.meme &> log
+Warning: Target database size too small (5). Provide at least 50 motifs for accurate p-value computation
+PASSED!
